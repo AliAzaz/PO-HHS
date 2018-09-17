@@ -1070,28 +1070,21 @@
                     android:textColor="@android:color/white" />
 
 
-                <RadioGroup
-                    android:id="@+id/tg12"
+                <EditText
+                    android:id="@+id/tg12a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="@string/tg12a"
+                    />
 
-                    <RadioButton
-                        android:id="@+id/tg12a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/tg12a" />
-
-                    <RadioButton
-                        android:id="@+id/tg12b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/tg12b" />
-
-
-                </RadioGroup>
+                <EditText
+                    android:id="@+id/tg12b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="@string/tg12b"
+                    />
             </LinearLayout>
 
             <!--Q13-->
