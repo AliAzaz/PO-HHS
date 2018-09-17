@@ -175,19 +175,19 @@ public class SectionGActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-//        DatabaseHelper db = new DatabaseHelper(this);
-//
-//        int updcount = db.updateSG();
-//
-//        if (updcount == 1) {
-//            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-//            return true;
-//        } else {
-//            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        return true;
+        int updcount = db.updateSG();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+//        return true;
 
     }
 

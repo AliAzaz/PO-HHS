@@ -105,7 +105,7 @@ public class SyncDeceasedChild extends AsyncTask<Void, Void, String> {
         }
     }
 
-    private String downloadUrl(String myurl) {
+    private String downloadUrl(String myurl) throws IOException{
         String line = "No Response";
         // Only display the first 500 characters of the retrieved
         // web page content.
