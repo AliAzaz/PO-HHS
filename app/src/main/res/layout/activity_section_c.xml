@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="horizontal"
-    tools:context="edu.aku.hassannaqvi.uen_tmk.activities.SectionCActivity">
+    tools:context="edu.aku.hassannaqvi.uen_po_hhs.activities.SectionCActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
