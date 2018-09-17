@@ -51,13 +51,9 @@ public class SyncMwras extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String... strings) {
         String line = "No Response";
-        try {
-            String url = MainApp._HOST_URL + MWRAContract.MWRATable._URL;
-            Log.d(TAG, "doInBackground: URL " + url);
-            return downloadUrl(url);
-        } catch (IOException e) {
-            return "Unable to upload data. Server may be down.";
-        }
+        String url = MainApp._HOST_URL + MWRAContract.MWRATable._URL;
+        Log.d(TAG, "doInBackground: URL " + url);
+        return downloadUrl(url);
     }
 
     @Override

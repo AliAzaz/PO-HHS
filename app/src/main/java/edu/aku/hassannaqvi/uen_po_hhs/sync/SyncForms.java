@@ -63,18 +63,14 @@ public class SyncForms extends AsyncTask<Void, Void, String> {
 
     @Override
     protected String doInBackground(Void... params) {
-        try {
-            String url;
-            if (flag) {
-                url = MainApp._HOST_URL + FormsContract.FormsTable._URL;
-            } else {
-                url = MainApp._HOST_URL + "_" + FormsContract.FormsTable._URL;
-            }
-            Log.d(TAG, "doInBackground: URL " + url);
-            return downloadUrl(url);
-        } catch (IOException e) {
-            return "Unable to upload data. Server may be down.";
+        String url;
+        if (flag) {
+            url = MainApp._HOST_URL + FormsContract.FormsTable._URL;
+        } else {
+            url = MainApp._HOST_URL + "_" + FormsContract.FormsTable._URL;
         }
+        Log.d(TAG, "doInBackground: URL " + url);
+        return downloadUrl(url);
     }
 
     private String downloadUrl(String myurl) {
