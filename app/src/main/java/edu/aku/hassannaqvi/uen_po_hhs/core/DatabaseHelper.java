@@ -68,9 +68,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleUser.FULL_NAME + " TEXT"
 //            + singleUser.REGION_DSS + " TEXT"
             + " );";
-    public static final String DATABASE_NAME = "uentmk.db";
-    public static final String DB_NAME = "uentmk_copy.db";
-    public static final String PROJECT_NAME = "DMU-UENTMK";
+    public static final String DATABASE_NAME = "po_hhs.db";
+    public static final String DB_NAME = "po_hhs_copy.db";
+    public static final String PROJECT_NAME = "DMU-PO-HHS";
     private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
