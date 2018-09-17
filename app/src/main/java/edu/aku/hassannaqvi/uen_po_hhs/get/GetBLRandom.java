@@ -62,7 +62,7 @@ public class GetBLRandom extends AsyncTask<Void, Void, String> {
         String line = "No Response";
         try {
             return downloadUrl(MainApp._HOST_URL + singleChild._URIGET);
-        } catch (IOException e) {
+        } catch (Exception e) {
             return "Unable to upload data. Server may be down.";
         }
 

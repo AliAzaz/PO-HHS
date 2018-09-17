@@ -72,7 +72,7 @@ public class SyncForms extends AsyncTask<Void, Void, String> {
             }
             Log.d(TAG, "doInBackground: URL " + url);
             return downloadUrl(url);
-        } catch (IOException e) {
+        } catch (Exception e) {
             return "Unable to upload data. Server may be down.";
         }
     }

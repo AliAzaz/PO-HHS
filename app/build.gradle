@@ -1,9 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
+
     def versionPropsFile = file('version.properties')
 
+    dataBinding {
+        enabled = true
+    }
     if (versionPropsFile.canRead()) {
         Properties versionProps = new Properties()
 
@@ -17,7 +21,7 @@ android {
         defaultConfig {
             applicationId "edu.aku.hassannaqvi.uen_po_hhs"
             minSdkVersion 22
-            targetSdkVersion 28
+            targetSdkVersion 22
             versionCode code
             versionName "0.1"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -31,6 +35,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+
+
 }
 
 dependencies {
@@ -40,6 +48,8 @@ dependencies {
     })
 
     implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.3.3'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
