@@ -279,8 +279,8 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("po08o", bi.tg08o.isChecked()? "16" : "0");
         sG.put("po08p", bi.tg08p.isChecked()? "17" : "0");
         sG.put("po08q", bi.tg08q.isChecked()? "18" : "0");
-        sG.put("po08qx", bi.tg08qx.getText().toString());
-        sG.put("po08r", bi.tg08r.isChecked()? "19" : "0");
+//        sG.put("po08qx", bi.tg08qx.getText().toString());
+        sG.put("po08r", bi.tg08r.isChecked()? "97" : "0");
 
         sG.put("po09", bi.tg09a.isChecked() ? "1" : bi.tg09b.isChecked() ? "2" : "0");
 
@@ -394,11 +394,6 @@ public class SectionGActivity extends AppCompatActivity {
             }
             if (!validatorClass.EmptyCheckBox(this, bi.fldGrptg08, bi.tg08a, getString(R.string.tg08))) {
                 return false;
-            }
-            if (bi.tg08q.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg08qx, getString(R.string.tg08))) {
-                    return false;
-                }
             }
 
             if (!validatorClass.EmptyRadioButton(this, bi.tg09, bi.tg09a, getString(R.string.tg09))) {

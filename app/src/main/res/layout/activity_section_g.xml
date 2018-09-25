@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
-            android:layoutDirection="ltr"
+            android:layoutDirection="rtl"
             android:orientation="vertical">
 
             <TextView
@@ -685,7 +685,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg08a" />
+                    android:text="@string/tg08c" />
 
                 <CheckBox
                     android:id="@+id/tg08d"
@@ -714,7 +714,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg08f" />
+                    android:text="@string/tg08g" />
 
                 <CheckBox
                     android:id="@+id/tg08h"
@@ -785,16 +785,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/tg08q" />
-
-                <EditText
-                    android:id="@+id/tg08qx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:hint="Other"
-                    android:text='@{tg08q.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg08q.checked? View.VISIBLE : View.GONE}' />
-
 
                 <CheckBox
                     android:id="@+id/tg08r"
