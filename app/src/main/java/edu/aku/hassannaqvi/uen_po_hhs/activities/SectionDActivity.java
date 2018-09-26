@@ -191,19 +191,20 @@ public class SectionDActivity extends Activity {
 
                     finish();
 
-                    if (MainApp.TotalDeceasedMotherCount > 0) {
+                   /* if (MainApp.TotalDeceasedMotherCount > 0) {
                         Intent secNext = new Intent(this, SectionEActivity.class);
                         startActivity(secNext);
-                    } else if (MainApp.TotalDeceasedChildCount > 0) {
+                    } else */
+                        if (MainApp.TotalDeceasedChildCount > 0) {
                         Intent secNext = new Intent(this, SectionFActivity.class);
                         startActivity(secNext);
                     } else {
-                        Intent secNext = new Intent(this, SectionGActivity.class);
+                        Intent secNext = new Intent(this, SectionHAActivity.class);
                         startActivity(secNext);
                     }
                 } else {
-                    /*Intent secNext = new Intent(this, SectionDActivity.class);
-                    startActivity(secNext);*/
+                    Intent secNext = new Intent(this, SectionDActivity.class);
+                    startActivity(secNext);
 
                     clearFields();
 

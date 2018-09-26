@@ -156,17 +156,8 @@ public class SectionGActivity extends AppCompatActivity {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
                 finish();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
 
-//                if (MainApp.TotalChildCount > 0) {
-//                    Intent secNext = new Intent(this, SectionHAActivity.class);
-//                    startActivity(secNext);
-//                } else if (MainApp.totalImsCount > 0) {
-//                    Intent secNext = new Intent(this, SectionIActivity.class);
-//                    startActivity(secNext);
-//                } else {
-//                    Intent secNext = new Intent(this, SectionKActivity.class);
-//                    startActivity(secNext);
-//                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

@@ -267,7 +267,6 @@
                         android:paddingStart="4dp"
                         android:singleLine="true"
                         android:textSize="18sp">
-
                         <requestFocus />
                     </EditText>
 
@@ -325,7 +324,9 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:layoutDirection="rtl"
-                android:popupBackground="#3d3d3d" />
+                android:popupBackground="#3d3d3d"
+                android:visibility="gone"
+                />
 
             <Spinner
                 android:id="@+id/spUCs"
@@ -335,7 +336,8 @@
                 android:layout_marginTop="14dp"
                 android:gravity="center"
                 android:layoutDirection="rtl"
-                android:popupBackground="#3d3d3d" />
+                android:popupBackground="#3d3d3d"
+                android:visibility="gone"/>
 
 
             <LinearLayout

@@ -43,6 +43,7 @@ public class MainApp extends Application {
     public static final String _IP = "43.245.131.159"; // Test PHP server
     public static final Integer _PORT = 8080; // Port - with colon (:)
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/api/";
+//    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/tmk/api/";
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/app/app-debug.apk";
 
     /*
@@ -81,8 +82,8 @@ public class MainApp extends Application {
     public static int mwraCount = 1;
     public static int TotalMWRACount = 0;
     public static int TotalChildCount = 0;
-    public static int TotalDeceasedMotherCount = 0;
-    public static int CounterDeceasedMother = 0;
+//    public static int TotalDeceasedMotherCount = 0;
+//    public static int CounterDeceasedMother = 0;
     public static int TotalDeceasedChildCount = 0;
     public static int CounterDeceasedChild = 0;
     public static int counter = 0;

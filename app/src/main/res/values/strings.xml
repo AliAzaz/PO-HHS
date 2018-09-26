@@ -1,6 +1,6 @@
 <resources>
     <!--new Strings-->
-    <string name="app_name">Umeed-e-Nau: Community Mobilization, Tando Muhammad Khan</string>
+    <string name="app_name">Pulse Oximetry</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -59,6 +59,9 @@
     ons Below -->
 
     <string name="checkHHpresent"> Selected Head name present (A/C Line listing) </string>
+    <string name="pof01"> ڇا اوهان جي گهر ۾ پوئين 5 سالن جي دوران (ڪوئي 5 سالن کان گھٽ عمرجوٻار) مري ويو آھي؟</string>
+    <string name="pof02">جيڪڏهن ها ته ڪيتراٻار مري ويا آھن؟</string>
+    <string name="pof02hint">مري ويل ٻارن جو تعداد</string>
     <string name="ta01"> Cluster Number </string>
     <string name="ta02"> Cluster type </string>
     <string name="ta02a"> LHW Covered </string>

@@ -510,7 +510,7 @@ public class SectionAActivity extends Activity {
         }
 
 //        06
-        if (ta06.getText().toString().equals("N/A")) {
+      /*  if (ta06.getText().toString().equals("N/A")) {
             Toast.makeText(this, "ERROR(invalid): " + getString(R.string.ta06), Toast.LENGTH_SHORT).show();
             ta06.setError("Change cluster no! ");    // Set Error on last radio button
             ta06.requestFocus();
@@ -519,7 +519,7 @@ public class SectionAActivity extends Activity {
         } else {
             ta06.setError(null);
         }
-
+*/
 //        07
 
 /*        if (ta07.getText().toString().isEmpty()) {

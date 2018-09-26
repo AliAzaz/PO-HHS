@@ -1084,23 +1084,23 @@ public class SectionHBActivity extends Activity {
     void SaveData() {
 
         if (formValidation()) {
-            /*try {
+            try {
                 SaveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
 
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
                 finish();
 
-                /*if (MainApp.totalImsCount > 0) {
+                if (MainApp.totalImsCount > 0) {
                     Intent secNext = new Intent(this, SectionIActivity.class);
                     startActivity(secNext);
-                } else {*/
+                } else {
                 startActivity(new Intent(this, SectionKActivity.class));
-//                }
+                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

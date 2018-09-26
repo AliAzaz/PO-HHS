@@ -98,9 +98,9 @@ public class SectionEActivity extends AppCompatActivity {
         te04.setMaxDate(dateToday);
         te04.setMinDate(maxDate5Years);
 
-        MainApp.CounterDeceasedMother++;
-
-        counterDec.setText("Deceased Women " + MainApp.CounterDeceasedMother + " out of " + MainApp.TotalDeceasedMotherCount);
+//        MainApp.CounterDeceasedMother++;
+//
+//        counterDec.setText("Deceased Women " + MainApp.CounterDeceasedMother + " out of " + MainApp.TotalDeceasedMotherCount);
 
 
         te0588.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -143,22 +143,22 @@ public class SectionEActivity extends AppCompatActivity {
 
                 finish();
 
-                if (MainApp.CounterDeceasedMother >= MainApp.TotalDeceasedMotherCount) {
+//                if (MainApp.CounterDeceasedMother >= MainApp.TotalDeceasedMotherCount) {
 
                     // Reset Counter
-                    MainApp.CounterDeceasedMother = 0;
+//                    MainApp.CounterDeceasedMother = 0;
 
                     if (MainApp.TotalDeceasedChildCount > 0) {
                         Intent secNext = new Intent(this, SectionFActivity.class);
                         startActivity(secNext);
                     } else {
-                        Intent secNext = new Intent(this, SectionGActivity.class);
+                        Intent secNext = new Intent(this, SectionHAActivity.class);
                         startActivity(secNext);
                     }
-                } else {
+               /* } else {
                     Intent secNext = new Intent(this, SectionEActivity.class);
                     startActivity(secNext);
-                }
+                }*/
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
