@@ -60,6 +60,7 @@
 
         </RadioGroup>
 
+        <!--Q1-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,6 +106,7 @@
             android:visibility="gone"
             tools:visibility="visible">
 
+            <!--Q2-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -126,6 +128,7 @@
         </LinearLayout>
 
 
+        <!--Q3-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -171,6 +174,7 @@
             android:visibility="gone"
             tools:visibility="visible">
 
+            <!--Q4-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,6 +194,7 @@
                 android:inputType="number" />
 
 
+            <!--Q5-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -215,6 +220,7 @@
                 android:layout_marginTop="10dp"></Spinner>
 
 
+            <!--Q6-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -233,7 +239,83 @@
                 android:hint="@string/thb06"
                 android:inputType="number" />
 
+            <!--Q37-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/thb37"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
 
+            <RadioGroup
+                android:id="@+id/thb37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/thb37a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/thb37a" />
+
+                <RadioButton
+                    android:id="@+id/thb37b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/thb37b" />
+
+                <RadioButton
+                    android:id="@+id/thb37c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/thb37c" />
+
+            </RadioGroup>
+
+            <!--Q38-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/thb38"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
+            <RadioGroup
+                android:id="@+id/thb38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/thb38a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/thb38b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/no" />
+
+                <RadioButton
+                    android:id="@+id/thb3898"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/dkn" />
+
+            </RadioGroup>
+
+            <!--Q7-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -379,6 +461,7 @@
                 android:visibility="gone"
                 tools:visibility="visible">
 
+                <!--Q9-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -398,6 +481,7 @@
                     android:inputType="number" />
 
 
+                <!--Q10-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -442,7 +526,97 @@
 
                 </RadioGroup>
 
+                <!--Q39-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/thb39"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
 
+                <RadioGroup
+                    android:id="@+id/thb39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/thb39a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39a" />
+
+                    <RadioButton
+                        android:id="@+id/thb39b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39b" />
+
+                    <RadioButton
+                        android:id="@+id/thb39c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39c" />
+
+                    <RadioButton
+                        android:id="@+id/thb39d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39d" />
+
+                    <RadioButton
+                        android:id="@+id/thb39e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39e" />
+
+                    <RadioButton
+                        android:id="@+id/thb39f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39f" />
+
+                    <RadioButton
+                        android:id="@+id/thb39g"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39g" />
+
+                    <RadioButton
+                        android:id="@+id/thb39h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39h" />
+
+                    <RadioButton
+                        android:id="@+id/thb39i"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39i" />
+
+                    <EditText
+                        android:id="@+id/thb39ix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:hint="@string/thb39i"
+                        android:inputType="text" />
+
+
+                </RadioGroup>
+
+
+                <!--Q11-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -536,6 +710,8 @@
 
                 </RadioGroup>
 
+                <!--Q12-->
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -594,6 +770,7 @@
                     android:text="@string/thb12h" />
 
 
+                <!--Q13-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -628,6 +805,7 @@
 
                 </RadioGroup>
 
+                <!--Q14-->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -679,6 +857,8 @@
                         android:visibility="gone"
                         tools:visibility="visible">
 
+                        <!--Q15-->
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -716,6 +896,7 @@
 
                         </RadioGroup>
 
+                        <!--Q16-->
 
                         <TextView
                             android:layout_width="match_parent"
@@ -760,6 +941,7 @@
                             android:visibility="gone"
                             tools:visibility="visible">
 
+                            <!--Q17-->
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -831,6 +1013,7 @@
                                 android:inputType="textCapWords"
                                 android:visibility="gone" />
 
+                            <!--Q18-->
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -870,6 +1053,7 @@
 
                         </LinearLayout>
 
+                        <!--Q19-->
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -921,6 +1105,7 @@
 
                         </RadioGroup>
 
+                        <!--Q20-->
 
                         <TextView
                             android:layout_width="match_parent"
@@ -973,6 +1158,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/thb20g" />
 
+                        <!--Q21-->
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1039,6 +1225,7 @@
                             android:visibility="gone"
                             tools:visibility="visible">
 
+                            <!--Q22-->
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1081,6 +1268,7 @@
                                 android:visibility="gone"
                                 tools:visibility="visible">
 
+                                <!--Q23-->
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -1100,6 +1288,7 @@
                                     android:hint="@string/day"
                                     android:inputType="number" />
 
+                                <!--Q24-->
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -1142,6 +1331,8 @@
                                     android:orientation="vertical"
                                     android:visibility="gone"
                                     tools:visibility="visible">
+
+                                    <!--Q25-->
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -1201,6 +1392,8 @@
                         </LinearLayout>
 
                         <!--In new questionnaire it's on the position of 27 -->
+
+                        <!--Q29-->
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1227,6 +1420,7 @@
 
                     </LinearLayout>
 
+                    <!--Q27-->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1251,6 +1445,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/dkn" />
 
+                    <!--Q28-->
 
                     <TextView
                         android:layout_width="match_parent"
@@ -1357,6 +1552,8 @@
                         android:inputType="textCapWords"
                         android:visibility="gone" />
 
+                    <!--Q30-->
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1380,6 +1577,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/dkn" />
+
+                    <!--Q31-->
 
                     <TextView
                         android:layout_width="match_parent"
@@ -1415,9 +1614,10 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/dkn" />
-
                     </RadioGroup>
 
+
+                    <!--Q32-->
 
                     <TextView
                         android:layout_width="match_parent"

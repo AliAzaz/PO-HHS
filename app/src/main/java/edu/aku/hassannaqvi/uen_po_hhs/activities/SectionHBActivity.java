@@ -298,16 +298,12 @@ public class SectionHBActivity extends Activity {
     EditText thb2888x;
     @BindView(R.id.thb29)
     EditText thb29;
-
     @BindView(R.id.thb29888)
     CheckBox thb29888;
-
     @BindView(R.id.thb30)
     EditText thb30;
-
     @BindView(R.id.thb30888)
     CheckBox thb30888;
-
     @BindView(R.id.thb31)
     RadioGroup thb31;
     @BindView(R.id.thb31a)
@@ -334,10 +330,8 @@ public class SectionHBActivity extends Activity {
     RadioButton thb3388;
     @BindView(R.id.thb34)
     EditText thb34;
-
     @BindView(R.id.thb34888)
     CheckBox thb34888;
-
     @BindView(R.id.thb35)
     RadioGroup thb35;
     @BindView(R.id.thb35a)
@@ -372,43 +366,74 @@ public class SectionHBActivity extends Activity {
     CheckBox thb3688;
     @BindView(R.id.thb3688x)
     EditText thb3688x;
-
     @BindView(R.id.fldGrpthb02)
     LinearLayout fldGrpthb02;
-
     @BindView(R.id.fldGrpthb04)
     LinearLayout fldGrpthb04;
-
     @BindView(R.id.fldGrpth08)
     LinearLayout fldGrpth08;
-
     @BindView(R.id.fldGrpth15)
     LinearLayout fldGrpth15;
-
     @BindView(R.id.fldGrpth22)
     LinearLayout fldGrpth22;
-
     @BindView(R.id.fldGrpth23)
     LinearLayout fldGrpth23;
-
     @BindView(R.id.fldGrpth25)
     LinearLayout fldGrpth25;
-
     @BindView(R.id.fldGrpth15a)
     LinearLayout fldGrpth15a;
-
     @BindView(R.id.fldGrpth17)
     LinearLayout fldGrpth17;
-
     @BindView(R.id.fldGrpth08a)
     LinearLayout fldGrpth08a;
-
     @BindView(R.id.thb00)
     RadioGroup thb00;
     @BindView(R.id.thb00a)
     RadioButton thb00a;
     @BindView(R.id.thb00b)
     RadioButton thb00b;
+
+    @BindView(R.id.thb37)
+    RadioGroup thb37;
+    @BindView(R.id.thb37a)
+    RadioButton thb37a;
+    @BindView(R.id.thb37b)
+    RadioButton thb37b;
+    @BindView(R.id.thb37c)
+    RadioButton thb37c;
+
+    @BindView(R.id.thb38)
+    RadioGroup thb38;
+    @BindView(R.id.thb38a)
+    RadioButton thb38a;
+    @BindView(R.id.thb38b)
+    RadioButton thb38b;
+    @BindView(R.id.thb3898)
+    RadioButton thb3898;
+
+    @BindView(R.id.thb39)
+    RadioGroup thb39;
+    @BindView(R.id.thb39a)
+    RadioButton thb39a;
+    @BindView(R.id.thb39b)
+    RadioButton thb39b;
+    @BindView(R.id.thb39c)
+    RadioButton thb39c;
+    @BindView(R.id.thb39d)
+    RadioButton thb39d;
+    @BindView(R.id.thb39e)
+    RadioButton thb39e;
+    @BindView(R.id.thb39f)
+    RadioButton thb39f;
+    @BindView(R.id.thb39g)
+    RadioButton thb39g;
+    @BindView(R.id.thb39h)
+    RadioButton thb39h;
+    @BindView(R.id.thb39i)
+    RadioButton thb39i;
+
+    @BindView(R.id.thb39ix)
+    EditText thb39ix;
 
 
     Map<String, String> childsMap;
@@ -521,6 +546,8 @@ public class SectionHBActivity extends Activity {
                     thb04.setText(null);
                     /*thb05.getChildAt(0).toString();*/
                     thb06.setText(null);
+                    thb37.clearCheck();
+                    thb38.clearCheck();
 
                     thb07.clearCheck();
 
@@ -539,6 +566,8 @@ public class SectionHBActivity extends Activity {
 
                     thb09.setText(null);
                     thb10.clearCheck();
+                    thb39.clearCheck();
+                    thb39ix.setText(null);
                     thb11.clearCheck();
 
                     thb12a.setChecked(false);
@@ -649,6 +678,8 @@ public class SectionHBActivity extends Activity {
 
                     thb09.setText(null);
                     thb10.clearCheck();
+                    thb39.clearCheck();
+                    thb39ix.setText(null);
                     thb11.clearCheck();
 
                     thb12a.setChecked(false);
@@ -1242,8 +1273,6 @@ public class SectionHBActivity extends Activity {
             } else {
                 thb06.setError(null);
             }
-
-
             if (thb06.getText().toString().isEmpty()) {
 
                 if (Integer.parseInt(thb06.getText().toString()) < 0) {
@@ -1256,6 +1285,33 @@ public class SectionHBActivity extends Activity {
                     thb06.setError(null);
                 }
 
+            }
+
+
+//            Q37
+            if (thb37.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.thb37), Toast.LENGTH_SHORT).show();
+                thb37a.setError("This data is Required!");    // Set Error on last radio button
+                Log.i(TAG, "thb07: This data is Required!");
+                thb37a.setFocusable(true);
+                thb37a.setFocusableInTouchMode(true);
+                thb37a.requestFocus();
+                return false;
+            } else {
+                thb37a.setError(null);
+            }
+
+//            Q38
+            if (thb38.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.thb38), Toast.LENGTH_SHORT).show();
+                thb38a.setError("This data is Required!");    // Set Error on last radio button
+                Log.i(TAG, "thb07: This data is Required!");
+                thb38a.setFocusable(true);
+                thb38a.setFocusableInTouchMode(true);
+                thb38a.requestFocus();
+                return false;
+            } else {
+                thb38a.setError(null);
             }
 
 
@@ -1336,6 +1392,32 @@ public class SectionHBActivity extends Activity {
                     return false;
                 } else {
                     thb10a.setError(null);
+                }
+
+//                Q39
+                if (thb39.getCheckedRadioButtonId() == -1) {
+                    Toast.makeText(this, "ERROR(empty): " + getString(R.string.thb38), Toast.LENGTH_SHORT).show();
+                    thb39a.setError("This data is Required!");    // Set Error on last radio button
+                    Log.i(TAG, "thb07: This data is Required!");
+                    thb39a.setFocusable(true);
+                    thb39a.setFocusableInTouchMode(true);
+                    thb39a.requestFocus();
+                    return false;
+                } else {
+                    thb39a.setError(null);
+                }
+                if (thb39i.isChecked()) {
+                    if (thb39ix.getText().toString().isEmpty()) {
+                        Toast.makeText(this, "ERROR(empty): " + getString(R.string.thb39), Toast.LENGTH_SHORT).show();
+                        thb39ix.setError("This data is Required!");    // Set Error on last radio button
+                        Log.i(TAG, "thb09: This data is Required!");
+                        thb39ix.requestFocus();
+                        return false;
+                    } else {
+                        thb39ix.setError(null);
+                    }
+
+
                 }
 
 
@@ -2037,6 +2119,25 @@ public class SectionHBActivity extends Activity {
         sHB.put("thb36k", thb36k.isChecked() ? "11" : "0");
         sHB.put("thb3688", thb3688.isChecked() ? "88" : "0");
         sHB.put("thb3688x", thb3688x.getText().toString());
+        sHB.put("thb37", thb37a.isChecked()? "1"
+                : thb37b.isChecked()? "2"
+                : thb37c.isChecked()? "3"
+                : "0" );
+        sHB.put("thb38", thb38a.isChecked()? "1"
+                : thb38b.isChecked()? "2"
+                : thb3898.isChecked()? "98"
+                : "0" );
+        sHB.put("thb39",thb39a.isChecked()? "1"
+                : thb39b.isChecked()? "2"
+                : thb39c.isChecked()? "3"
+                : thb39d.isChecked()? "4"
+                : thb39e.isChecked()? "5"
+                : thb39f.isChecked()? "6"
+                : thb39g.isChecked()? "7"
+                : thb39h.isChecked()? "8"
+                : thb39i.isChecked()? "96"
+                : "0");
+        sHB.put("thb3996", thb39ix.getText().toString());
         sHB.put("appver", MainApp.versionName + "." + MainApp.versionCode);
 
         MainApp.fc.setsHB(String.valueOf(sHB));
