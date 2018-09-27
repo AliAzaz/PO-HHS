@@ -1,27 +1,15 @@
 package edu.aku.hassannaqvi.uen_po_hhs.activities;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
@@ -122,13 +110,19 @@ public class SectionGActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
+                if(i == R.id.tg13a){
+                    bi.fldGrptg14.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.fldGrptg14, true);
+                    bi.fldGrptg15.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldGrptg15, false);
+                }
                 if (i == R.id.tg13b) {
                     bi.fldGrptg14.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldGrptg14, false);
-                } else {
-                    bi.fldGrptg14.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.fldGrptg14, true);
+                    bi.fldGrptg15.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.fldGrptg15, true);
                 }
+
             }
         });
 
@@ -436,9 +430,7 @@ public class SectionGActivity extends AppCompatActivity {
 
             }
 
-            if (!validatorClass.EmptyTextBox(this, bi.tg15x, getString(R.string.tg15))) {
-                return false;
-            }
+            return validatorClass.EmptyTextBox(this, bi.tg15x, getString(R.string.tg15));
 
 
         }
