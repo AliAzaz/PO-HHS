@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -90,14 +92,14 @@ public class EndingActivity extends Activity {
 
         Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
-            /*try {
+            try {
                 SaveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
             if (UpdateDB()) {
 
-                /*MainApp.familyMembersList.clear();
+                MainApp.familyMembersList.clear();
                 MainApp.memFlag = 0;
 
                 MainApp.TotalMembersCount = 0;
@@ -107,7 +109,7 @@ public class EndingActivity extends Activity {
                 MainApp.imsCount = 1;
                 MainApp.totalImsCount = 0;
 
-                MainApp.CounterDeceasedMother = 0;
+//                MainApp.CounterDeceasedMother = 0;
                 MainApp.CounterDeceasedChild = 0;
 
                 MainApp.lstChild.clear();
@@ -122,7 +124,7 @@ public class EndingActivity extends Activity {
                 MainApp.isRsvp = false;
                 MainApp.isHead = false;
 
-                MainApp.flag = true;*/
+                MainApp.flag = true;
 
                 finish();
 
@@ -134,7 +136,7 @@ public class EndingActivity extends Activity {
         }
     }
 
-    private void SaveDraft() {
+    private void SaveDraft() throws JSONException {
         Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         MainApp.fc.setIstatus(istatus1.isChecked() ? "1"
@@ -156,16 +158,16 @@ public class EndingActivity extends Activity {
     private boolean UpdateDB() {
         DatabaseHelper db = new DatabaseHelper(this);
 
-        /*int updcount = db.updateEnding();
+        int updcount = db.updateEnding();
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
+        }
 
-        return true;
+//        return true;
 
     }
 

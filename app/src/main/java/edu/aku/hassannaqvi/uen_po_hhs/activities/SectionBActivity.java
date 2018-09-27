@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -25,6 +26,7 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -33,6 +35,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
 import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
@@ -176,6 +179,7 @@ public class SectionBActivity extends AppCompatActivity {
     @BindView(R.id.txtRsn)
     TextView txtRsn;
 
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     DatabaseHelper db;
     long ageInyears = 0;
@@ -216,6 +220,7 @@ public class SectionBActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_b);
         ButterKnife.bind(this);
+        MainApp.familyMembersList = new ArrayList<>();
 
 //        Counter for serial no
         MainApp.counter++;
@@ -514,11 +519,16 @@ public class SectionBActivity extends AppCompatActivity {
     private boolean UpdateCount() {
 
         DatabaseHelper db = new DatabaseHelper(this);
+        Long updcount1 = db.addForm(MainApp.fc);
+        MainApp.fc.set_ID(String.valueOf(updcount1));
 
-        int updcount = db.updateCount();
-
-        if (updcount == 1) {
+        if (updcount1 != 0) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+
+            MainApp.fc.setUID(
+                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
+            db.updateFormID();
+            db.updateCount();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -612,6 +622,14 @@ public class SectionBActivity extends AppCompatActivity {
         }
         // TOTAL MEMBERS
         MainApp.TotalMembersCount++;
+        MainApp.fc = new FormsContract();
+        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+
+        MainApp.fc.setDevicetagID(sharedPref.getString("tagName", null));
+        MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setUser(MainApp.userName);
+        MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID));
 
         JSONObject count = new JSONObject();
         count.put("tb13", MainApp.TotalMembersCount);
@@ -621,7 +639,7 @@ public class SectionBActivity extends AppCompatActivity {
 
         MainApp.fc.setsB(String.valueOf(count));
 
-        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+//        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
 
         MainApp.fmc = new FamilyMembersContract();
 
@@ -697,15 +715,10 @@ public class SectionBActivity extends AppCompatActivity {
             MainApp.fmc.set_UID(
                     (MainApp.fc.getDeviceID() + MainApp.fmc.get_ID()));
             db.updateFamilyMemberID();
-
-            MainApp.familyMembersList.add(new FamilyMembersContract(tb02.getText().toString(),
-                    ageInyears < 2 ? "3" : ageInyears < 5 ? "1" :
-                            (tb11b.isChecked() && tb04b.isChecked()
-                                    && (ageInyears > 15 && ageInyears < 49) ? "2" : "0")
-                    , String.valueOf(MainApp.counter),
-                    tb07.getText().toString().isEmpty() ?
-                            tb08m.getText().toString() + "-" + tb08y.getText().toString() :
-                            tb07.getText().toString()));
+            FamilyMembersContract fmc = new FamilyMembersContract(tb02.getText().toString(),
+                    ageInyears < 2 ? "3" : ageInyears < 5 ? "1" : (tb11b.isChecked() && tb04b.isChecked() && (ageInyears > 15 && ageInyears < 49) ? "2" : "0")
+                    , String.valueOf(MainApp.counter), tb07.getText().toString().isEmpty() ? tb08m.getText().toString() + "-" + tb08y.getText().toString() : tb07.getText().toString());
+            MainApp.familyMembersList.add(fmc);
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();

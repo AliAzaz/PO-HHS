@@ -358,11 +358,11 @@ public class SectionKActivity extends Activity {
     void onBtnContinueClick() {
 
         if (ValidateForm()) {
-            /*try {
+            try {
                 SaveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 

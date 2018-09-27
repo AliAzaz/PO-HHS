@@ -105,6 +105,8 @@ public class SectionFActivity extends AppCompatActivity {
         tf06.setMinDate(maxDate5Years);
         tf06.setMaxDate(dateToday);
 
+
+
         tf0788.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -150,8 +152,17 @@ public class SectionFActivity extends AppCompatActivity {
                     // Reset Counter
                     MainApp.CounterDeceasedChild = 0;
 
-                    Intent secNext = new Intent(this, SectionGActivity.class);
-                    startActivity(secNext);
+
+                    if (MainApp.TotalChildCount > 0) {
+                        Intent secNext = new Intent(this, SectionHAActivity.class);
+                        startActivity(secNext);
+                    } else if (MainApp.totalImsCount > 0) {
+                        Intent secNext = new Intent(this, SectionIActivity.class);
+                        startActivity(secNext);
+                    } else {
+                        Intent secNext = new Intent(this, SectionKActivity.class);
+                        startActivity(secNext);
+                    }
                 } else {
                     Intent secNext = new Intent(this, SectionFActivity.class);
                     startActivity(secNext);

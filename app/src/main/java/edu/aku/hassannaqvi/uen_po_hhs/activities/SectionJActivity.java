@@ -545,7 +545,7 @@ public class SectionJActivity extends Activity {
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
-                /*if (MainApp.mm < MainApp.TotalChildCount) {
+                if (MainApp.mm < MainApp.TotalChildCount) {
 
                     clearFields();
 
@@ -564,10 +564,10 @@ public class SectionJActivity extends Activity {
                     MainApp.mm = 1;
 
                     startActivity(new Intent(this, SectionKActivity.class));
-                }*/
+                }
 
                 finish();
-                startActivity(new Intent(this, SectionKActivity.class));
+//                startActivity(new Intent(this, SectionKActivity.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -638,7 +638,7 @@ public class SectionJActivity extends Activity {
 
     private boolean UpdateDB() {
 
-        /*DatabaseHelper db = new DatabaseHelper(this);
+        DatabaseHelper db = new DatabaseHelper(this);
 
         Long updcount = db.addChild(MainApp.ims);
         MainApp.ims.set_ID(String.valueOf(updcount));
@@ -654,8 +654,8 @@ public class SectionJActivity extends Activity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
+        }
+/*
         DatabaseHelper db = new DatabaseHelper(this);
 
         int updcount = db.updateSJ();
@@ -666,7 +666,7 @@ public class SectionJActivity extends Activity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
 
     }
 

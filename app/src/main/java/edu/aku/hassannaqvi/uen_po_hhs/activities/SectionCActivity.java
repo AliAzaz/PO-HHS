@@ -439,8 +439,6 @@ public class SectionCActivity extends Activity {
     EditText tc19;
 
 
-
-
     @BindView(R.id.tc20)
     RadioGroup tc20;
     @BindView(R.id.tc20a)
@@ -462,7 +460,7 @@ public class SectionCActivity extends Activity {
 
 
         MainApp.TotalDeceasedChildCount = 0;
-        MainApp.TotalDeceasedMotherCount = 0;
+//        MainApp.TotalDeceasedMotherCount = 0;
 
 //        05
         tc0588.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -640,11 +638,11 @@ public class SectionCActivity extends Activity {
 
         Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
-            /*try {
+            try {
                 SaveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
@@ -659,8 +657,19 @@ public class SectionCActivity extends Activity {
                 } else {
                     startActivity(new Intent(this, SectionGActivity.class));
                 }*/
-
-                startActivity(new Intent(this, SectionHAActivity.class));
+                if (MainApp.TotalDeceasedChildCount > 0) {
+                    Intent secNext = new Intent(this, SectionFActivity.class);
+                    startActivity(secNext);
+                } else if (MainApp.TotalChildCount > 0) {
+                    Intent secNext = new Intent(this, SectionHAActivity.class);
+                    startActivity(secNext);
+                } else if (MainApp.totalImsCount > 0) {
+                    Intent secNext = new Intent(this, SectionIActivity.class);
+                    startActivity(secNext);
+                } else {
+                    Intent secNext = new Intent(this, SectionKActivity.class);
+                    startActivity(secNext);
+                }
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -673,7 +682,7 @@ public class SectionCActivity extends Activity {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
-        /*int updcount = db.updateSC();
+        int updcount = db.updateSC();
 
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
@@ -681,8 +690,8 @@ public class SectionCActivity extends Activity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+//        return true;
 
     }
 
@@ -1528,7 +1537,7 @@ public class SectionCActivity extends Activity {
                 td07.setError(null);
             }
         }*/
-/*18*/
+        /*18*/
         if (tc18.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc18), Toast.LENGTH_SHORT).show();
             tc18b.setError("This data is Required!");    // Set Error on last radio button
@@ -1540,7 +1549,7 @@ public class SectionCActivity extends Activity {
         } else {
             tc18b.setError(null);
         }
-/*19*/
+        /*19*/
         if (tc18a.isChecked()) {
             if (tc19.getText().toString().isEmpty()) {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc19), Toast.LENGTH_SHORT).show();
