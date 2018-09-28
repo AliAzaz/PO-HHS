@@ -13,6 +13,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
+import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -42,7 +43,7 @@ public class MainApp extends Application {
 
     public static final String _IP = "43.245.131.159"; // Test PHP server
     public static final Integer _PORT = 8080; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/api/";
+    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";
 //    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/tmk/api/";
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/app/app-debug.apk";
 
@@ -94,6 +95,11 @@ public class MainApp extends Application {
     public static boolean flag = true;
     public static int versionCode;
     public static String versionName;
+    public static String hh01txt = "0000";
+    public static String hh02txt;
+    public static int hh03txt = 1;
+
+    public static SharedPreferences sharedPref;
 
     public static Map<String, FamilyMembersContract> childsMap = new HashMap<>();
     public static ArrayList<String> lstChild = new ArrayList<>();
@@ -109,6 +115,7 @@ public class MainApp extends Application {
     public static DeceasedChildContract dcC;
     public static MWRAContract mw;
     public static SectionIIMContract ims;
+    public static String TAG = "AppMain";
 
     public static int memFlag = 0;
 
@@ -125,8 +132,12 @@ public class MainApp extends Application {
     public static BLRandomContract selectedHead;
     public static int BLRandomSize;
     protected static LocationManager locationManager;
+    public static String lhwCode;
+    public static String lhwName;
+    public static String hh04txt;
 
-
+    public static String villageName;
+    public static String villageCode;
     public static int monthsBetweenDates(Date startDate, Date endDate) {
 
         Calendar start = Calendar.getInstance();
@@ -293,7 +304,7 @@ public class MainApp extends Application {
 
 //        Initialize Dead Member List
 //        deadMembers = new ArrayList<String>();
-
+        sharedPref = getSharedPreferences("PSUCodes", Context.MODE_PRIVATE);
     }
 
     protected void showCurrentLocation() {
@@ -310,7 +321,24 @@ public class MainApp extends Application {
         }
 
     }
+    public static Boolean LHWExist(String lhwCode, String villageCode) {
+        Log.d(TAG, "LHWExist: " + lhwCode + " - villagecode " + villageCode);
 
+
+
+        MainApp.hh03txt = Integer.valueOf(sharedPref.getString(lhwCode, "0"));
+        Log.d(TAG, "LHWExist (Test): " + sharedPref.getString(lhwCode, "0"));
+
+        if (MainApp.hh03txt == 0) {
+            Log.d(TAG, "LHWExist (False): " + MainApp.hh03txt);
+
+            return false;
+        } else {
+            Log.d(TAG, "LHWExist (True): " + MainApp.hh03txt);
+
+            return true;
+        }
+    }
     protected boolean isBetterLocation(Location location, Location currentBestLocation) {
         if (currentBestLocation == null) {
             // A new location is always better than no location

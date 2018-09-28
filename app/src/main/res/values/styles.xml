@@ -18,6 +18,7 @@
         <item name="android:buttonStyle">@style/buttons</item>
         <item name="android:checkboxStyle">@style/checkbox</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
+        <item name="actionBarStyle">@style/CustomShowcaseTheme</item>
         <!-- Customize your theme here. -->
     </style>
 

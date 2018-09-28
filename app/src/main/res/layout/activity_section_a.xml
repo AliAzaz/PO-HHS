@@ -69,6 +69,7 @@
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
             android:text="@string/ta01"
+            android:visibility="gone"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
 
@@ -78,6 +79,7 @@
             android:layout_height="wrap_content"
             android:digits="0123456789"
             android:enabled="false"
+            android:visibility="gone"
             android:inputType="number"
             android:maxLength="9" />
 
@@ -87,6 +89,8 @@
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
             android:text="@string/ta05"
+            android:visibility="gone"
+
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
 
@@ -94,6 +98,7 @@
             android:id="@+id/ta05h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-"
             android:hint="@string/ta05h"
             android:inputType="text" />
@@ -103,6 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:visibility="gone"
             android:orientation="horizontal">
 
             <TextView
@@ -137,7 +143,9 @@
                 android:id="@+id/fldGrpt03a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
 
                 <TextView
                     android:layout_width="match_parent"
@@ -366,32 +374,110 @@
 
             </RadioGroup>
 
-            <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/checkVillage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="40"
+                        android:onClick="openForm"
+                        android:text="CHECK" />
+
+                    <EditText
+                        android:id="@+id/villageCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="80"
+                        android:hint="Village Code"
+                        android:inputType="number"
+                        android:maxLength="4" />
+
+                </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            >
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:text="@string/talukaname" />
 
-                <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/red"
-                    android:text="@string/end_interview"
-                    android:textColor="#ff1e1e"
-                    android:visibility="gone" />
+            <Spinner
+                android:id="@+id/MN00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-                <Button
-                    android:id="@+id/btn_Continue"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/green"
-                    android:text="@string/start_interview"
-                    android:textColor="#1ed61e" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ucname" />
 
-            </LinearLayout>
+            <Spinner
+                android:id="@+id/MN01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/lhwname" />
+
+            <Spinner
+                android:id="@+id/MN03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/villagename" />
+
+            <Spinner
+                android:id="@+id/MN02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_End"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/red"
+                android:text="@string/end_interview"
+                android:textColor="#ff1e1e"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_Continue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="openForm"
+                android:backgroundTint="@color/green"
+                android:text="@string/start_interview"
+                android:textColor="#1ed61e" />
 
         </LinearLayout>
 

@@ -246,7 +246,7 @@ public class MainActivity extends Activity {
 //        if (spAreas.getSelectedItemPosition() != 0) {
 
             if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
-                Intent oF = new Intent(MainActivity.this, SectionBActivity.class);
+                Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
                 startActivity(oF);
             } else {
 
@@ -269,7 +269,7 @@ public class MainActivity extends Activity {
                             editor.commit();
 
                             if (!MainApp.userName.equals("0000")) {
-                                Intent oF = new Intent(MainActivity.this, SectionBActivity.class);
+                                Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
                                 startActivity(oF);
                             }
                         }

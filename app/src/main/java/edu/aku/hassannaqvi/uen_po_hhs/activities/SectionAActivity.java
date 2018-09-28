@@ -1,7 +1,9 @@
 package edu.aku.hassannaqvi.uen_po_hhs.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -33,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -41,6 +44,10 @@ import butterknife.OnClick;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract.lhwEntry;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.TalukasContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
@@ -49,6 +56,15 @@ public class SectionAActivity extends Activity {
 
     private static final String TAG = SectionAActivity.class.getName();
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+
+    @BindView(R.id.MN00)
+    Spinner mN00;
+    @BindView(R.id.MN01)
+    Spinner mN01;
+    @BindView(R.id.MN02)
+    Spinner mN02;
+    @BindView(R.id.MN03)
+    Spinner MN03;
 
     @BindView(R.id.ta01)
     EditText ta01;
@@ -99,7 +115,8 @@ public class SectionAActivity extends Activity {
     CheckBox checkHHHeadpresent;
     @BindView(R.id.fldGrpt03)
     LinearLayout fldGrpt03;
-
+    public List<String> psuName, districtNames, villageNames, lhwNames;
+    public List<String> psuCode, districtCodes, villageCodes, lhwCodes;
     Collection<BLRandomContract> selected;
 
     DatabaseHelper db;
@@ -150,11 +167,12 @@ public class SectionAActivity extends Activity {
         db = new DatabaseHelper(this);
 
         MainApp.familyMembersList = new ArrayList<>();
+        populateSpinner(this);
 
         lablesSubVillages = new ArrayList<>();
         SubVillagesMap = new HashMap<>();
         lablesSubVillages.add("Select Sub Village..");
-
+/*
         SubVillagesList = db.getVillage(String.valueOf(MainApp.areaCode));
 
         if (SubVillagesList.size() != 0) {
@@ -194,7 +212,7 @@ public class SectionAActivity extends Activity {
             }
         });
 
-
+*/
         ta09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -244,6 +262,208 @@ public class SectionAActivity extends Activity {
 
 
     }
+    public void populateSpinner(final Context context) {
+        // Spinner Drop down elements
+        districtNames = new ArrayList<>();
+        districtCodes = new ArrayList<>();
+
+        districtNames.add("....");
+        districtCodes.add("....");
+
+        Collection<TalukasContract> dc = db.getAllTalukas();
+        Log.d(TAG, "onCreate: " + dc.size());
+        for (TalukasContract d : dc) {
+            districtNames.add(d.getTaluka());
+            districtCodes.add(d.getTalukacode());
+        }
+
+       /* // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context,
+                android.R.layout.simple_spinner_dropdown_item, districtNames);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);*/
+
+        mN00.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtNames));
+
+        // attaching data adapter to spinner
+        //mN00.setAdapter(dataAdapter);
+
+        mN00.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                MainApp.hh01txt = districtCodes.get(position);
+
+                psuCode = new ArrayList<>();
+                psuName = new ArrayList<>();
+
+
+                psuCode.add("....");
+                psuName.add("....");
+
+                Collection<UCsContract> pc = db.getAllUCsbyTaluka(districtCodes.get(position));
+                for (UCsContract p : pc) {
+                    psuCode.add(p.getUccode());
+                    psuName.add(p.getUcs());
+                }
+
+                mN01.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, psuName));
+
+                /*ArrayAdapter<String> psuAdapter = new ArrayAdapter<>(context,
+                        android.R.layout.simple_spinner_dropdown_item, psuName);
+
+                psuAdapter
+                        .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                mN01.setAdapter(psuAdapter);*/
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        mN01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                MainApp.hh02txt = psuCode.get(position);
+
+                villageCodes = new ArrayList<>();
+                villageNames = new ArrayList<>();
+
+                lhwCodes = new ArrayList<>();
+                lhwNames = new ArrayList<>();
+
+                final List<String> villageNames1 = new ArrayList<>();
+
+                villageCodes.add("....");
+                villageNames.add("....");
+                villageNames1.add("....");
+
+                Collection<VillagesContract> pc = db.getAllPSUsByDistrict(MainApp.hh01txt, MainApp.hh02txt);
+                for (VillagesContract p : pc) {
+                    villageCodes.add(p.getVillagecode());
+                    villageNames.add(p.getVillagename());
+                    //villageNames1.add(p.getVillagename().split("\\|")[2]);
+                }
+
+                mN02.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageNames));
+
+
+                lhwCodes.add("....");
+                lhwNames.add("....");
+
+                Collection<LHWContract> lhw = db.getAllLHWsByDistrict(MainApp.hh01txt, MainApp.hh02txt);
+                for (LHWContract p : lhw) {
+                    lhwCodes.add(p.getLhwcode());
+                    lhwNames.add(p.getLhwname());
+                    //villageNames1.add(p.getVillagename().split("\\|")[2]);
+                }
+
+                MN03.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, lhwNames));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        MN03.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (MN03.getSelectedItemPosition() != 0) {
+                    MainApp.lhwCode = lhwCodes.get(i);
+                    MainApp.lhwName = lhwNames.get(i);
+
+                    //String[] st = villageNames.get(i).split("\\|");
+
+                    /*districtN.setText(AppMain.hh01txt);
+                    ucN.setText(AppMain.hh02txt);
+                    psuN.setText(AppMain.lhwName);*/
+
+                    //districtN.setText(st[0]);
+                    //ucN.setText(st[1]);
+                    //psuN.setText(st[2]);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        mN02.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (mN02.getSelectedItemPosition() != 0) {
+                    MainApp.hh04txt = villageCodes.get(i);
+                    MainApp.villageCode = villageCodes.get(i);
+                    MainApp.villageName = villageNames.get(i);
+
+                    //String[] st = villageNames.get(i).split("\\|");
+
+                    //districtN.setText(st[0]);
+                    //ucN.setText(st[1]);
+                    //psuN.setText(st[2]);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+    }
+    public void openForm(View view) {
+
+
+        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
+
+            Intent oF = new Intent(this, SectionBActivity.class);
+
+            if (MainApp.LHWExist(MainApp.lhwCode, MainApp.villageCode)) {
+                Toast.makeText(SectionAActivity.this, "LHW data exist!", Toast.LENGTH_LONG).show();
+                alertPSU();
+            } else {
+                startActivity(oF);
+            }
+        } else {
+            Toast.makeText(this, "Select values from dropdown", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void alertPSU() {
+
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        Intent oF = new Intent(SectionAActivity.this, SectionBActivity.class);
+                        startActivity(oF);
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+
+                        break;
+                }
+            }
+
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Do you want to continue?");
+        builder.setMessage("LHW data already exist.").setPositiveButton("Yes", dialogClickListener)
+                .setNegativeButton("Cancel", dialogClickListener).show();
+    }
+
+
+
 
     @OnClick(R.id.checkHH)
     void onCheckHHClick() {
@@ -424,7 +644,7 @@ public class SectionAActivity extends Activity {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
 //        01
-        if (ta01.getText().toString().isEmpty()) {
+       /* if (ta01.getText().toString().isEmpty()) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta01), Toast.LENGTH_SHORT).show();
             ta01.setError("This data is Required! ");    // Set Error on last radio button
             ta01.requestFocus();
@@ -432,7 +652,7 @@ public class SectionAActivity extends Activity {
             return false;
         } else {
             ta01.setError(null);
-        }
+        }*/
 
 //        03
 /*        if (ta03.getCheckedRadioButtonId() == -1) {
@@ -457,7 +677,7 @@ public class SectionAActivity extends Activity {
             return false;
         } else {
             ((TextView) ta04.getSelectedView()).setError(null);
-        }*/
+        }
 
 //        05
         if (ta05h.getText().toString().isEmpty()) {
@@ -542,7 +762,7 @@ public class SectionAActivity extends Activity {
             return false;
         } else {
             ta08.setError(null);
-        }*/
+        }
 
 //        09
         if (ta09.getCheckedRadioButtonId() == -1) {
@@ -556,7 +776,7 @@ public class SectionAActivity extends Activity {
         } else {
             ta09c.setError(null);
         }
-
+*/
         return true;
     }
 
