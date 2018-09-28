@@ -20,6 +20,15 @@
             android:gravity="center"
             android:text="@string/secBLabel"
             android:textSize="40sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/secBinstruction"
+            android:textSize="40sp" />
 
         <View
             android:layout_width="match_parent"
@@ -103,6 +112,15 @@
             android:text="@string/tb02"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/pink_100"
+            android:text="@string/tb02ins"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark" />
 
         <EditText
             android:id="@+id/tb02"

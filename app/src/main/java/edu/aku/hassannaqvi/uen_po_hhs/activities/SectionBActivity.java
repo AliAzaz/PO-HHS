@@ -591,13 +591,18 @@ public class SectionBActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
-                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+            if (MainApp.TotalChildCount == 0) {
+                Toast.makeText(this, "Please Enter a child under 5", Toast.LENGTH_SHORT).show();
+            } else {
+                if (UpdateDB()) {
+                    Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
-                finish();
+                    finish();
 
+                }
+                startActivity(new Intent(this, SectionBActivity.class));
             }
-            startActivity(new Intent(this, SectionBActivity.class));
+
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
