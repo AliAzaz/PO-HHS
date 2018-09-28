@@ -68,6 +68,7 @@ import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs.get.GetAreas;
 import edu.aku.hassannaqvi.uen_po_hhs.get.GetBLRandom;
+import edu.aku.hassannaqvi.uen_po_hhs.get.GetLHW;
 import edu.aku.hassannaqvi.uen_po_hhs.get.GetTalukas;
 import edu.aku.hassannaqvi.uen_po_hhs.get.GetUCs;
 import edu.aku.hassannaqvi.uen_po_hhs.get.GetUsers;
@@ -645,15 +646,21 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         new GetTalukas(mContext).execute();
                         Toast.makeText(LoginActivity.this, "Sync UC's", Toast.LENGTH_LONG).show();
                         new GetUCs(mContext).execute();
+                        Toast.makeText(LoginActivity.this, "Sync LHW", Toast.LENGTH_LONG).show();
+                        new GetLHW(mContext).execute();
+                        /*
                         Toast.makeText(LoginActivity.this, "Sync Areas", Toast.LENGTH_LONG).show();
-                        new GetAreas(mContext).execute();
+                        new GetAreas(mContext).execute();*/
                         Toast.makeText(LoginActivity.this, "Sync Villages", Toast.LENGTH_LONG).show();
                         new GetVillages(mContext).execute();
                         Toast.makeText(LoginActivity.this, "Sync User", Toast.LENGTH_LONG).show();
                         new GetUsers(mContext).execute();
-                    } else {
                         Toast.makeText(LoginActivity.this, "Sync BL Random", Toast.LENGTH_LONG).show();
                         new GetBLRandom(mContext).execute();
+
+                    } else {
+                       /* Toast.makeText(LoginActivity.this, "Sync BL Random", Toast.LENGTH_LONG).show();
+                        new GetBLRandom(mContext).execute();*/
                     }
                 }
             });
