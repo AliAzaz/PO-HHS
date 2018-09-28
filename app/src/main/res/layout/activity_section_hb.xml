@@ -369,6 +369,7 @@
                 android:visibility="gone"
                 tools:visibility="visible">
 
+                <!--Q8-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -524,6 +525,24 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/thb10d" />
 
+                    <RadioButton
+                        android:id="@+id/thb1096"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb10e" />
+
+
+                    <EditText
+                        android:id="@+id/thb1096x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:hint="@string/thb10e"
+                        android:inputType="textCapWords"
+                        android:visibility="gone" />
+
                 </RadioGroup>
 
                 <!--Q39-->
@@ -605,6 +624,7 @@
                         android:text="@string/thb39i" />
 
                     <EditText
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
                         android:id="@+id/thb39ix"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -707,6 +727,24 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
                         android:text="@string/thb11k" />
+
+                    <RadioButton
+                        android:id="@+id/thb1196"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb11l" />
+
+
+                    <EditText
+                        android:id="@+id/thb1196x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:hint="@string/thb11l"
+                        android:inputType="textCapWords"
+                        android:visibility="gone" />
 
                 </RadioGroup>
 
@@ -894,6 +932,24 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/thb15c" />
 
+                            <RadioButton
+                                android:id="@+id/thb1596"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/thb10e" />
+
+
+                            <EditText
+                                android:id="@+id/thb1596x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                android:hint="@string/thb10e"
+                                android:inputType="textCapWords"
+                                android:visibility="gone" />
+
                         </RadioGroup>
 
                         <!--Q16-->
@@ -1049,6 +1105,25 @@
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/thb18c" />
 
+                                <RadioButton
+                                    android:id="@+id/thb1896"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/thb10e" />
+
+
+                                <EditText
+                                    android:id="@+id/thb1896x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                    android:hint="@string/thb10e"
+                                    android:inputType="textCapWords"
+                                    android:visibility="gone" />
+
+
                             </RadioGroup>
 
                         </LinearLayout>
@@ -1102,6 +1177,24 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/thb19e" />
+
+                            <RadioButton
+                                android:id="@+id/thb1996"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/thb1996" />
+
+
+                            <EditText
+                                android:id="@+id/thb1996x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                android:hint="@string/thb1996"
+                                android:inputType="textCapWords"
+                                android:visibility="gone" />
 
                         </RadioGroup>
 
