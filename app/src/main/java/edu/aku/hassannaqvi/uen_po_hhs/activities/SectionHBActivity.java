@@ -835,6 +835,21 @@ public class SectionHBActivity extends Activity {
             }
         });
 
+        thb39.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.thb39i) {
+
+                    thb39ix.setVisibility(View.VISIBLE);
+                } else {
+
+                    thb39ix.setVisibility(View.GONE);
+                    thb39ix.setText(null);
+                }
+            }
+        });
+
         thb11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -2151,7 +2166,9 @@ public class SectionHBActivity extends Activity {
                 : thb11i.isChecked() ? "8"
                 : thb11j.isChecked() ? "9"
                 : thb11k.isChecked() ? "10"
+                : thb1196.isChecked() ? "96"
                 : "0");
+        sHB.put("thb1196", thb1196x.getText().toString());
 
 
         sHB.put("thb12a", thb12a.isChecked() ? "1" : "0");
@@ -2165,7 +2182,8 @@ public class SectionHBActivity extends Activity {
 
         sHB.put("thb13", thb13a.isChecked() ? "1" : thb13b.isChecked() ? "2" : "0");
         sHB.put("thb14", thb14a.isChecked() ? "1" : thb14b.isChecked() ? "2" : "0");
-        sHB.put("thb15", thb15a.isChecked() ? "1" : thb15b.isChecked() ? "2" : thb15c.isChecked() ? "3" : "0");
+        sHB.put("thb15", thb15a.isChecked() ? "1" : thb15b.isChecked() ? "2" : thb15c.isChecked() ? "3" : thb1596.isChecked() ? "96" :"0");
+        sHB.put("thb1596", thb1596x.getText().toString());
         sHB.put("thb16", thb16a.isChecked() ? "1" : thb16b.isChecked() ? "2" : "0");
 
 
@@ -2176,14 +2194,21 @@ public class SectionHBActivity extends Activity {
                 : "0");
 
 
-        sHB.put("thb18", thb18a.isChecked() ? "1" : thb18b.isChecked() ? "2" : thb18c.isChecked() ? "3" : "0");
+        sHB.put("thb18", thb18a.isChecked() ? "1"
+                : thb18b.isChecked() ? "2"
+                : thb18c.isChecked() ? "3"
+                : thb1896.isChecked() ? "96"
+                : "0");
+        sHB.put("thb1896", thb1896x.getText().toString());
 
 
         sHB.put("thb19", thb19a.isChecked() ? "1" : thb19b.isChecked() ? "2"
                 : thb19c.isChecked() ? "3"
                 : thb19d.isChecked() ? "4"
                 : thb19e.isChecked() ? "5"
+                : thb1996.isChecked() ? "96"
                 : "0");
+        sHB.put("thb1996", thb1996x.getText().toString());
 
 
         sHB.put("thb20a", thb20a.isChecked() ? "1" : "0");

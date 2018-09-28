@@ -624,6 +624,7 @@
                         android:text="@string/thb39i" />
 
                     <EditText
+                        android:visibility="gone"
                         android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
                         android:id="@+id/thb39ix"
                         android:layout_width="match_parent"
