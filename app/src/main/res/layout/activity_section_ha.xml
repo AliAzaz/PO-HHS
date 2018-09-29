@@ -12,7 +12,6 @@
     </data>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -34,6 +33,15 @@
                 android:gravity="center"
                 android:text="@string/secHALabel"
                 android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/secHAins"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
 
             <View
                 android:layout_width="match_parent"
@@ -197,6 +205,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="2"
                     android:id="@+id/tha04"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -409,6 +418,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="2"
                     android:id="@+id/tha08"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -469,23 +479,16 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/tha09d" />
 
-                    <RadioButton
-                        android:id="@+id/tha0996"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/other" />
-
                     <EditText
+                        android:hint="@string/tha09e"
                         android:id="@+id/tha0996x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/other"
+                        android:visibility="gone"
                         android:inputType="textCapWords"
-                        android:text='@{tha0996.checked ? tha0996x.getText.toString : ""}'
-                        android:visibility='@{tha0996.checked ? View.VISIBLE : View.GONE}' />
+                        />
 
                 </RadioGroup>
 
@@ -575,23 +578,16 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/tha10i" />
 
-                    <RadioButton
-                        android:id="@+id/tha1096"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/tha10j" />
-
                     <EditText
+                        android:hint="@string/name"
                         android:id="@+id/tha1096x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/tha10j"
+                        android:visibility="gone"
                         android:inputType="textCapWords"
-                        android:text='@{tha1096.checked ? tha1096x.getText.toString : ""}'
-                        android:visibility='@{tha1096.checked ? View.VISIBLE : View.GONE}' />
+                         />
 
 
                 </RadioGroup>
@@ -618,12 +614,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/tha11k"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/tha11k" />
+
 
                     <RadioButton
                         android:id="@+id/tha11a"
@@ -696,23 +687,23 @@
                         android:text="@string/tha11j" />
 
                     <RadioButton
-                        android:id="@+id/tha11l"
+                        android:id="@+id/tha11k"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
-                        android:text="@string/tha11l" />
+                        android:text="@string/tha11k" />
 
 
                     <EditText
+                        android:hint="@string/name"
                         android:id="@+id/tha1196x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/tha10j"
+                        android:visibility="gone"
                         android:inputType="textCapWords"
-                        android:text='@{tha11l.checked ? tha1196x.getText.toString : ""}'
-                        android:visibility='@{tha11l.checked ? View.VISIBLE : View.GONE}' />
+                        />
 
 
                 </RadioGroup>
@@ -884,13 +875,6 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/tha14c" />
 
-                    <RadioButton
-                        android:id="@+id/tha1496"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/other" />
-
 
                     <EditText
                         android:id="@+id/tha1496x"
@@ -898,10 +882,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/other"
-                        android:inputType="textCapWords"
-                        android:text='@{tha1496.checked ? tha1496x.getText.toString : ""}'
-                        android:visibility='@{tha1496.checked ? View.VISIBLE : View.GONE}' />
+                        android:hint="@string/name"
+                        android:inputType="textCapWords" />
 
                 </RadioGroup>
 
@@ -965,23 +947,16 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/tha15e" />
 
-                    <RadioButton
-                        android:id="@+id/tha1596"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/other" />
-
                     <EditText
                         android:id="@+id/tha1596x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/other"
+                        android:hint="@string/name"
                         android:inputType="textCapWords"
-                        android:text='@{tha1496.checked ? tha1496x.getText.toString : ""}'
-                        android:visibility='@{tha1496.checked ? View.VISIBLE : View.GONE}' />
+                        android:text='@{tha15a.checked ? tha1596x.getText.toString : ""}'
+                        android:visibility='@{tha15a.checked ? View.VISIBLE : View.GONE}' />
 
                 </RadioGroup>
 
@@ -1036,6 +1011,7 @@
                     android:text="@string/tha16e" />
 
                 <CheckBox
+                    android:fontFamily="serif"
                     android:id="@+id/tha16f"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1086,6 +1062,7 @@
                         android:text="@string/tha17a" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/tha17hr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1103,6 +1080,7 @@
                         android:text="@string/tha17b" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/tha17d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1185,6 +1163,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="2"
                     android:id="@+id/tha19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1372,6 +1351,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="2"
                     android:id="@+id/tha23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1517,6 +1497,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="2"
                     android:id="@+id/tha25"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1588,6 +1569,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="6"
                     android:id="@+id/tha27"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1857,23 +1839,16 @@
                         android:layout_weight="1"
                         android:text="@string/tha31k" />
 
-                    <RadioButton
-                        android:id="@+id/tha3196"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/other" />
 
                     <EditText
+                        android:hint="@string/name"
                         android:id="@+id/tha3196x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
-                        android:hint="@string/other"
+                        android:visibility="gone"
                         android:inputType="text"
-                        android:text='@{tha3196.checked? tha3196x.getText.toString : ""}'
-                        android:visibility='@{tha3196.checked? View.VISIBLE : View.GONE}' />
+                        />
 
 
 
