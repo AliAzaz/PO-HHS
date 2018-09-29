@@ -2070,7 +2070,7 @@ public class SectionHAActivity extends Activity {
                 : "0");
         sHA.put("tha3196x", bi.tha3196x.getText().toString());
 
-        //MainApp.fc.setsHA(String.valueOf(sHA));
+        MainApp.fc.setsHA(String.valueOf(sHA));
     }
 
 
