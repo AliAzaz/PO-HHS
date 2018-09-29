@@ -262,7 +262,8 @@ public class SectionBActivity extends AppCompatActivity {
                     tb10a.setEnabled(true);
 
                     if (tb11b.isChecked()) {
-                        fldGrptb11.setVisibility(View.VISIBLE);
+//                        fldGrptb11.setVisibility(View.VISIBLE);
+                        fldGrptb11.setVisibility(View.GONE);
                     } else {
                         tb12.clearCheck();
                         fldGrptb11.setVisibility(View.GONE);
@@ -493,7 +494,8 @@ public class SectionBActivity extends AppCompatActivity {
                             fldGrptb11.setVisibility(View.GONE);
                             tb12.clearCheck();
                         } else {
-                            fldGrptb11.setVisibility(View.VISIBLE);
+//                            fldGrptb11.setVisibility(View.VISIBLE);
+                            fldGrptb11.setVisibility(View.GONE);
                         }
                     } else {
                         tb12.clearCheck();
@@ -696,7 +698,7 @@ public class SectionBActivity extends AppCompatActivity {
         sB.put("tb11", tb11a.isChecked() ? "1" : tb11b.isChecked() ? "2"
                 : tb11d.isChecked() ? "3" : tb11e.isChecked() ? "4" : "0");
 
-        sB.put("tb12", tb12a.isChecked() ? "1" : tb12b.isChecked() ? "2" : "0");
+        //sB.put("tb12", tb12a.isChecked() ? "1" : tb12b.isChecked() ? "2" : "0");
         sB.put("appver", MainApp.versionName + "." + MainApp.versionCode);
 
         if (tb12a.isChecked()) {
@@ -952,7 +954,7 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
 
-        if (tb04b.isChecked() && tb11b.isChecked() && !MainApp.isRsvp) {
+       /* if (tb04b.isChecked() && tb11b.isChecked() && !MainApp.isRsvp) {
             if (tb12.getCheckedRadioButtonId() == -1) {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tiRespondentMother), Toast.LENGTH_SHORT).show();
                 tb12a.setError("This data is Required!");    // Set Error on last radio button
@@ -964,7 +966,7 @@ public class SectionBActivity extends AppCompatActivity {
             } else {
                 tb12a.setError(null);
             }
-        }
+        }*/
 
 
         return true;

@@ -18,6 +18,14 @@
     <string name="lhwname"> ليڊي هيلٿ ورڪر جو نالو</string>
     <string name="villagename"> ڳوٺ جو نالو </string>
     <string name="lhwcode"> ليڊي هيلٿ ورڪر جو کوڈ </string>
+    <string name="household"> Household number</string>
+    <string name="householdhint">XXX-X</string>
+    <string name="location">Location</string>
+    <string name="urban">Urban</string>
+    <string name="rural">Rural</string>
+    <string name="mixed">Mixed</string>
+    <string name="block">Block/ Muhalla</string>
+    <string name="street">Street</string>
 
     <string name="end_interview"> اختتام </string>
     <string name="start_interview"> انٽرويو شروع ڪريو </string>
@@ -163,7 +171,7 @@
     <string name="tb11a"> 	غير شادي شده </string>
     <string name="tb11b"> 	شادي شده </string>
     <string name="tb11c"> 	بيواه </string>
-    <string name="tb11d"> 4.	طلاقيافته / عليحدگي </string>
+    <string name="tb11d"> طلاقيافته / عليحدگي </string>
     <string name="tb11e"> Divorced/Separate </string>
     <string name="tb12"> مڪمل گھر ڀاتين جو تعداد </string>
     <string name="tb13"> گھر ۾ مڪمل شادي شده عورتن جو تعداد </string>

@@ -108,7 +108,8 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".FormsList" />
-        <activity android:name=".activities.SectionMActivity"></activity>
+        <activity android:name=".activities.SectionMActivity"
+            ></activity>
 
         <service android:name=".DownloadFileService" />
 

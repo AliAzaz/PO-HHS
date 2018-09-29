@@ -261,9 +261,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_DECEASED_CHILD);
         db.execSQL(SQL_CREATE_MWRA);
         db.execSQL(SQL_CREATE_SEC_I_IM);
-        db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
+        db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_LHW_TABLE);
         db.execSQL(SQL_CREATE_BL_RANDOM);

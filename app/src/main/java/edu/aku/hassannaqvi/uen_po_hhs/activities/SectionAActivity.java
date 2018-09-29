@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.IdRes;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -51,19 +52,20 @@ import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
+import edu.aku.hassannaqvi.uen_po_hhs.validator.validatorClass;
 
 public class SectionAActivity extends Activity {
 
     private static final String TAG = SectionAActivity.class.getName();
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
-    @BindView(R.id.MN00)
+    @BindView(R.id.pobtaluka)
     Spinner mN00;
-    @BindView(R.id.MN01)
+    @BindView(R.id.pobuc)
     Spinner mN01;
-    @BindView(R.id.MN02)
+    @BindView(R.id.poblhw)
     Spinner mN02;
-    @BindView(R.id.MN03)
+    @BindView(R.id.pobhouse)
     Spinner MN03;
 
     @BindView(R.id.ta01)
@@ -76,6 +78,15 @@ public class SectionAActivity extends Activity {
     RadioButton ta02b;
     @BindView(R.id.ta02c)
     RadioButton ta02c;
+
+    @BindView(R.id.poblocation)
+    RadioGroup poblocation;
+    @BindView(R.id.poblocation01)
+    RadioButton poblocation01;
+    @BindView(R.id.poblocation02)
+    RadioButton poblocation02;
+    @BindView(R.id.poblocation03)
+    RadioButton poblocation03;
     /*    @BindView(R.id.ta03)
         RadioGroup ta03;
         @BindView(R.id.ta03a)
@@ -86,6 +97,10 @@ public class SectionAActivity extends Activity {
         RadioButton ta03c;
         @BindView(R.id.ta04)
         Spinner ta04;*/
+    @BindView(R.id.street)
+    EditText street;
+    @BindView(R.id.block)
+    EditText block;
     @BindView(R.id.ta05h)
     EditText ta05h;
     @BindView(R.id.ta05u)
@@ -106,6 +121,10 @@ public class SectionAActivity extends Activity {
     RadioButton ta09c;
     @BindView(R.id.btn_Continue)
     Button btn_Continue;
+    @BindView(R.id.checkHHBtn)
+    Button checkHHBtn;
+    @BindView(R.id.pobhh)
+    EditText pobhh;
     @BindView(R.id.btn_End)
     Button btn_End;
 
@@ -157,6 +176,7 @@ public class SectionAActivity extends Activity {
 
     @BindView(R.id.fldGrpt03a)
     LinearLayout fldGrpt03a;
+    int length = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -213,6 +233,39 @@ public class SectionAActivity extends Activity {
         });
 
 */
+
+/*
+        pobhh.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                pobhh.setInputType(InputType.TYPE_CLASS_NUMBER);
+                length = charSequence.toString().length();
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                if (!pobhh.getText().toString().isEmpty() && pobhh.getText().toString().length() == 4) {
+                    if (pobhh.getText().toString().substring(0, 3).matches("[0-9]+")) {
+                        if (length < 5) {
+                            pobhh.setText(pobhh.getText().toString() + "-");
+                            pobhh.setSelection(pobhh.getText().length());
+                        }
+
+                    }
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+
+            }
+        });
+        */
         ta09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -225,7 +278,12 @@ public class SectionAActivity extends Activity {
                 }
             }
         });
-
+        checkHHBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SectionAActivity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
+            }
+        });
         ta05h.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -561,12 +619,18 @@ public class SectionAActivity extends Activity {
         MainApp.hhno = ta05h.getText().toString();
         MainApp.billno = ta05u.getText().toString();
 
+        sa.put("block", block.getText());
+        sa.put("street", street.getText());
+        sa.put("household",pobhh.getText());
+        sa.put("poblocation", poblocation01.isChecked() ? "1" : poblocation02.isChecked() ? "2" : poblocation03.isChecked() ? "3" : "0");
+    /*
         sa.put("rndid", MainApp.selectedHead.get_ID());
         sa.put("luid", MainApp.selectedHead.getLUID());
         sa.put("randDT", MainApp.selectedHead.getRandomDT());
         sa.put("hh03", MainApp.selectedHead.getStructure());
         sa.put("hh07", MainApp.selectedHead.getExtension());
         sa.put("hhhead", MainApp.selectedHead.getHhhead());
+        */
         sa.put("hhheadpresent", checkHHHeadpresent.isChecked() ? "1" : "2");
         sa.put("hhheadpresentnew", newHHheadname.getText().toString());
 
@@ -643,6 +707,19 @@ public class SectionAActivity extends Activity {
     public boolean formValidation() {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
+
+        if (!validatorClass.EmptySpinner(this,mN00,getString(R.string.talukaname))) {
+        return false;
+        }
+        if (!validatorClass.EmptySpinner(this,mN01,getString(R.string.ucname))) {
+        return false;
+        }
+        if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.lhwname))) {
+        return false;
+        }
+        if (!validatorClass.EmptySpinner(this,MN03,getString(R.string.villagename))) {
+        return false;
+        }
 //        01
        /* if (ta01.getText().toString().isEmpty()) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta01), Toast.LENGTH_SHORT).show();

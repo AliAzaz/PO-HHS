@@ -46,9 +46,9 @@
                 android:layout_weight="3"
                 android:background="@android:color/transparent"
                 android:text="SubVillages: "
-                android:visibility="gone"
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <Spinner
                 android:id="@+id/spSubVillages"
@@ -57,9 +57,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="35"
-                android:visibility="gone"
                 android:gravity="center"
-                android:popupBackground="#ffffff" />
+                android:popupBackground="#ffffff"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -69,9 +69,9 @@
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
             android:text="@string/ta01"
-            android:visibility="gone"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/ta01"
@@ -79,9 +79,9 @@
             android:layout_height="wrap_content"
             android:digits="0123456789"
             android:enabled="false"
-            android:visibility="gone"
             android:inputType="number"
-            android:maxLength="9" />
+            android:maxLength="9"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="match_parent"
@@ -89,27 +89,27 @@
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
             android:text="@string/ta05"
-            android:visibility="gone"
-
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/ta05h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-"
             android:hint="@string/ta05h"
-            android:inputType="text" />
+            android:inputType="text"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:visibility="gone"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/hh_name"
@@ -144,8 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone"
-                >
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -374,41 +373,42 @@
 
             </RadioGroup>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/checkVillage"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="40"
+                    android:onClick="openForm"
+                    android:text="CHECK" />
 
-                    <Button
-                        android:id="@+id/checkVillage"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="40"
-                        android:onClick="openForm"
-                        android:text="CHECK" />
+                <EditText
+                    android:id="@+id/villageCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:hint="Village Code"
+                    android:inputType="number"
+                    android:maxLength="4" />
 
-                    <EditText
-                        android:id="@+id/villageCode"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="80"
-                        android:hint="Village Code"
-                        android:inputType="number"
-                        android:maxLength="4" />
-
-                </LinearLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="@dimen/activity_horizontal_margin"
-            >
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -416,7 +416,7 @@
                 android:text="@string/talukaname" />
 
             <Spinner
-                android:id="@+id/MN00"
+                android:id="@+id/pobtaluka"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -427,7 +427,7 @@
                 android:text="@string/ucname" />
 
             <Spinner
-                android:id="@+id/MN01"
+                android:id="@+id/pobuc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -438,7 +438,7 @@
                 android:text="@string/lhwname" />
 
             <Spinner
-                android:id="@+id/MN03"
+                android:id="@+id/poblhw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -449,10 +449,132 @@
                 android:text="@string/villagename" />
 
             <Spinner
-                android:id="@+id/MN02"
+                android:id="@+id/pobhouse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/location"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
+
+                <RadioGroup
+                    android:id="@+id/poblocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/poblocation01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/urban" />
+
+                    <RadioButton
+                        android:id="@+id/poblocation02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/rural" />
+
+                    <RadioButton
+                        android:id="@+id/poblocation03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/mixed" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/block"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
+
+                <EditText
+                    android:id="@+id/block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/block" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/street"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
+
+                <EditText
+                    android:id="@+id/street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/street" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/household"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pobhh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:digits="0123456789-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="@string/householdhint"
+                    android:inputType="textCapWords"
+                    android:maxLength="6" />
+
+                <Button
+                    android:id="@+id/checkHHBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:elevation="5dp"
+                    android:text="CHECK"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -474,8 +596,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="openForm"
                 android:backgroundTint="@color/green"
+                android:onClick="openForm"
                 android:text="@string/start_interview"
                 android:textColor="#1ed61e" />
 
