@@ -12,12 +12,14 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +40,7 @@ import edu.aku.hassannaqvi.uen_po_hhs.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
+import edu.aku.hassannaqvi.uen_po_hhs.validator.validatorClass;
 import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
 public class SectionBActivity extends AppCompatActivity {
@@ -96,9 +99,9 @@ public class SectionBActivity extends AppCompatActivity {
     @BindView(R.id.tb04b)
     RadioButton tb04b;
     @BindView(R.id.tb05)
-    EditText tb05;
+    Spinner tb05;
     @BindView(R.id.tb06)
-    EditText tb06;
+    Spinner tb06;
     @BindView(R.id.tbdob)
     RadioGroup tbdob;
     @BindView(R.id.tbdob01)
@@ -219,7 +222,20 @@ public class SectionBActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_b);
         ButterKnife.bind(this);
+
         MainApp.familyMembersList = new ArrayList<>();
+
+
+
+
+        tb05.setAdapter(new ArrayAdapter<>(this, R.layout.item_style,  MainApp.fatherList));
+        tb06.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.motherList));
+        if(MainApp.TotalMembersCount == 0){
+            tb05.setSelection(1);
+            tb06.setSelection(1);
+        }
+
+
 
 //        Counter for serial no
         MainApp.counter++;
@@ -452,6 +468,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
 
+
             }
         });
 
@@ -554,6 +571,11 @@ public class SectionBActivity extends AppCompatActivity {
 
                                 Toast.makeText(SectionBActivity.this, "Processing This Section", Toast.LENGTH_SHORT).show();
                                 if (formValidation()) {
+                                    if(tb04a.isChecked() && tb11b.isChecked()){
+                                        MainApp.fatherList.add(tb02.getText().toString());
+                                    }else if(tb04b.isChecked() && tb11b.isChecked()){
+                                        MainApp.motherList.add(tb02.getText().toString());
+                                    }
                                     try {
                                         SaveDraft();
                                     } catch (JSONException e) {
@@ -594,6 +616,11 @@ public class SectionBActivity extends AppCompatActivity {
         //TODO implement
         Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
+            if(tb04a.isChecked() && tb11b.isChecked()){
+                MainApp.fatherList.add(tb02.getText().toString());
+            }else if(tb04b.isChecked() && tb11b.isChecked()){
+                MainApp.motherList.add(tb02.getText().toString());
+            }
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -682,8 +709,8 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
         sB.put("tb04", tb04a.isChecked() ? "1" : tb04b.isChecked() ? "2" : "0");
-        sB.put("tb05", tb05.getText().toString());
-        sB.put("tb06", tb06.getText().toString());
+        sB.put("tb05", tb05.getSelectedItem().toString());
+        sB.put("tb06", tb06.getSelectedItem().toString());
 
         if (tbdob01.isChecked()) {
             sB.put("tb07", tb07.getText().toString());
@@ -788,26 +815,15 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
 //        05
-        if (tb05.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tb05), Toast.LENGTH_SHORT).show();
-            tb05.setError("This data is Required! ");    // Set Error on last radio button
-            tb05.requestFocus();
-            Log.i(TAG, "tb05: This data is Required!");
+        if(!validatorClass.EmptySpinner(this,tb05,getString(R.string.tb05))){
             return false;
-        } else {
-            tb05.setError(null);
         }
 
-//        06
-        if (tb06.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tb06), Toast.LENGTH_SHORT).show();
-            tb06.setError("This data is Required! ");    // Set Error on last radio button
-            tb06.requestFocus();
-            Log.i(TAG, "tb06: This data is Required!");
+////        06
+        if(!validatorClass.EmptySpinner(this,tb06,getString(R.string.tb06))){
             return false;
-        } else {
-            tb06.setError(null);
         }
+
 
 //        07 & 08
         if (tbdob.getCheckedRadioButtonId() == -1) {

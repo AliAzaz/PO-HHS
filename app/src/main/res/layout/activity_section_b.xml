@@ -296,13 +296,12 @@
             android:text="@string/tb05"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <EditText
+        <Spinner
             android:id="@+id/tb05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-            android:hint="@string/tb05" />
+           />
 
         <TextView
             android:layout_width="match_parent"
@@ -312,12 +311,12 @@
             android:text="@string/tb06"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <EditText
+        <Spinner
             android:id="@+id/tb06"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " />
+            />
 
         <TextView
             android:layout_width="match_parent"

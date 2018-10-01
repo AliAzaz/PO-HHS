@@ -44,7 +44,7 @@ public class MainApp extends Application {
     public static final String _IP = "43.245.131.159"; // Test PHP server
     public static final Integer _PORT = 8080; // Port - with colon (:)
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";
-//    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/tmk/api/";
+    //    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/tmk/api/";
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/app/app-debug.apk";
 
     /*
@@ -83,7 +83,7 @@ public class MainApp extends Application {
     public static int mwraCount = 1;
     public static int TotalMWRACount = 0;
     public static int TotalChildCount = 0;
-//    public static int TotalDeceasedMotherCount = 0;
+    //    public static int TotalDeceasedMotherCount = 0;
 //    public static int CounterDeceasedMother = 0;
     public static int TotalDeceasedChildCount = 0;
     public static int CounterDeceasedChild = 0;
@@ -105,6 +105,13 @@ public class MainApp extends Application {
     public static ArrayList<String> lstChild = new ArrayList<>();
 
     public static int ageRdo = 0;
+
+    public static ArrayList<String> motherList = new ArrayList<>();
+    public static ArrayList<String> motherSerial = new ArrayList<>();
+    public static HashMap<String, String> motherMap = new HashMap<>();
+    public static ArrayList<String> fatherList = new ArrayList<>();
+    public static ArrayList<String> fatherSerial = new ArrayList<>();
+    public static HashMap<String, String> fatherMap = new HashMap<>();
 
 
     //    Ali
@@ -138,6 +145,7 @@ public class MainApp extends Application {
 
     public static String villageName;
     public static String villageCode;
+
     public static int monthsBetweenDates(Date startDate, Date endDate) {
 
         Calendar start = Calendar.getInstance();
@@ -321,9 +329,9 @@ public class MainApp extends Application {
         }
 
     }
+
     public static Boolean LHWExist(String lhwCode, String villageCode) {
         Log.d(TAG, "LHWExist: " + lhwCode + " - villagecode " + villageCode);
-
 
 
         MainApp.hh03txt = Integer.valueOf(sharedPref.getString(lhwCode, "0"));
@@ -339,6 +347,7 @@ public class MainApp extends Application {
             return true;
         }
     }
+
     protected boolean isBetterLocation(Location location, Location currentBestLocation) {
         if (currentBestLocation == null) {
             // A new location is always better than no location

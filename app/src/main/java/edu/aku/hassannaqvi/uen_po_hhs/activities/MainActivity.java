@@ -89,12 +89,20 @@ public class MainActivity extends Activity {
     private Boolean exit = false;
     private String rSumText = "";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ButterKnife.bind(this);
+
+        MainApp.fatherList.add(0,"....");
+        MainApp.fatherList.add(1,"N/A");
+        MainApp.motherList.add(0,"....");
+        MainApp.motherList.add(1,"N/A");
+        MainApp.motherMap.put("N/A_0","0");
+        MainApp.fatherMap.put("N/A_0","0");
+
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
