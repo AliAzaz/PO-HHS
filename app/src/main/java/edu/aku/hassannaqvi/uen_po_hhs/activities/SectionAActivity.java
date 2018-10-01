@@ -63,9 +63,9 @@ public class SectionAActivity extends Activity {
     Spinner mN00;
     @BindView(R.id.pobuc)
     Spinner mN01;
-    @BindView(R.id.poblhw)
+    @BindView(R.id.povillage)
     Spinner mN02;
-    @BindView(R.id.pobhouse)
+    @BindView(R.id.polhw)
     Spinner MN03;
 
     @BindView(R.id.ta01)
@@ -79,14 +79,6 @@ public class SectionAActivity extends Activity {
     @BindView(R.id.ta02c)
     RadioButton ta02c;
 
-    @BindView(R.id.poblocation)
-    RadioGroup poblocation;
-    @BindView(R.id.poblocation01)
-    RadioButton poblocation01;
-    @BindView(R.id.poblocation02)
-    RadioButton poblocation02;
-    @BindView(R.id.poblocation03)
-    RadioButton poblocation03;
     /*    @BindView(R.id.ta03)
         RadioGroup ta03;
         @BindView(R.id.ta03a)
@@ -97,10 +89,7 @@ public class SectionAActivity extends Activity {
         RadioButton ta03c;
         @BindView(R.id.ta04)
         Spinner ta04;*/
-    @BindView(R.id.street)
-    EditText street;
-    @BindView(R.id.block)
-    EditText block;
+
     @BindView(R.id.ta05h)
     EditText ta05h;
     @BindView(R.id.ta05u)
@@ -619,10 +608,6 @@ public class SectionAActivity extends Activity {
         MainApp.hhno = ta05h.getText().toString();
         MainApp.billno = ta05u.getText().toString();
 
-        sa.put("block", block.getText());
-        sa.put("street", street.getText());
-        sa.put("household",pobhh.getText());
-        sa.put("poblocation", poblocation01.isChecked() ? "1" : poblocation02.isChecked() ? "2" : poblocation03.isChecked() ? "3" : "0");
     /*
         sa.put("rndid", MainApp.selectedHead.get_ID());
         sa.put("luid", MainApp.selectedHead.getLUID());
@@ -840,8 +825,8 @@ public class SectionAActivity extends Activity {
         } else {
             ta08.setError(null);
         }
-
-//        09
+*/
+//     09
         if (ta09.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta09), Toast.LENGTH_SHORT).show();
             ta09c.setError("This data is Required!");    // Set Error on last radio button
@@ -853,7 +838,7 @@ public class SectionAActivity extends Activity {
         } else {
             ta09c.setError(null);
         }
-*/
+
         return true;
     }
 
