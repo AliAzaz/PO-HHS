@@ -153,12 +153,11 @@ public class SectionBActivity extends AppCompatActivity {
     RadioButton tb11a;
     @BindView(R.id.tb11b)
     RadioButton tb11b;
-    /*    @BindView(R.id.tb11c)
-        RadioButton tb11c;*/
+    @BindView(R.id.tb11c)
+    RadioButton tb11c;
     @BindView(R.id.tb11d)
     RadioButton tb11d;
-    @BindView(R.id.tb11e)
-    RadioButton tb11e;
+
 
     @BindView(R.id.btn_ContNextSec)
     Button btn_ContNextSec;
@@ -363,8 +362,8 @@ public class SectionBActivity extends AppCompatActivity {
                         tb11a.setChecked(false);
                     }
                     tb11b.setEnabled(true);
+                    tb11c.setEnabled(true);
                     tb11d.setEnabled(true);
-                    tb11e.setEnabled(true);
                 }
                 //}
             }
@@ -442,8 +441,8 @@ public class SectionBActivity extends AppCompatActivity {
                             tb11a.setChecked(false);
                         }
                         tb11b.setEnabled(true);
+                        tb11c.setEnabled(true);
                         tb11d.setEnabled(true);
-                        tb11e.setEnabled(true);
                     }
                     //}
 
@@ -564,13 +563,12 @@ public class SectionBActivity extends AppCompatActivity {
 
                                         Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
-                                        finish();
-
                                         if (MainApp.TotalChildCount == 0) {
                                             Toast.makeText(SectionBActivity.this, "Please Enter a child under 5", Toast.LENGTH_SHORT).show();
                                         } else {
 
-                                                startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
+                                            finish();
+                                            startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
 
 
                                         }
@@ -602,13 +600,13 @@ public class SectionBActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-                if (UpdateDB()) {
-                    Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+            if (UpdateDB()) {
+                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
-                    finish();
-                    startActivity(new Intent(this, SectionBActivity.class));
+                finish();
+                startActivity(new Intent(this, SectionBActivity.class));
 
-                }
+            }
 
 
         } else {
@@ -702,7 +700,7 @@ public class SectionBActivity extends AppCompatActivity {
                 : tb10k.isChecked() ? "11" : tb10l.isChecked() ? "12" : tb10999.isChecked() ? "999"
                 : "0");
         sB.put("tb11", tb11a.isChecked() ? "1" : tb11b.isChecked() ? "2"
-                : tb11d.isChecked() ? "3" : tb11e.isChecked() ? "4" : "0");
+                : tb11c.isChecked() ? "3" : tb11d.isChecked() ? "4" : "0");
 
         //sB.put("tb12", tb12a.isChecked() ? "1" : tb12b.isChecked() ? "2" : "0");
         sB.put("appver", MainApp.versionName + "." + MainApp.versionCode);
@@ -948,14 +946,14 @@ public class SectionBActivity extends AppCompatActivity {
 //        11
             if (tb11.getCheckedRadioButtonId() == -1) {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tb11), Toast.LENGTH_SHORT).show();
-                tb11e.setError("This data is Required!");    // Set Error on last radio button
+                tb11d.setError("This data is Required!");    // Set Error on last radio button
                 tb11a.setFocusableInTouchMode(true);
                 tb11a.setFocusable(true);
                 tb11a.requestFocus();
                 Log.i(TAG, "tb11: This data is Required!");
                 return false;
             } else {
-                tb11e.setError(null);
+                tb11d.setError(null);
             }
         }
 

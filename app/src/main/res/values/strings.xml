@@ -35,8 +35,8 @@
     <string name="complete"> مکمل</string>
     <string name="incomplete">نا مکمل</string>
     <!-- String related to section headings -->
-    <string name="secALabel">A: HH Identification, Introduction And Consent</string>
-    <string name="secBLabel">B:  گهرڀاتين جي متعلق معلومات </string>
+    <string name="secALabel">گھرن جي نشاندهي، تعارف ۽ رضامندي</string>
+    <string name="secBLabel">  سيڪشن ڊي:  گهرڀاتين جي متعلق معلومات</string>
     <string name="secBinstruction">هاڻي مان توهان کان توهان ۽ توهانجي گهر ڀاتين جي  متعلق معلومات جا سوال پڇندس جيڪي توهان سان گڏ گهر ۾ رهن ٿا ۽ ساڳيو بورچيخانو استعمال ڪن ٿا.  هيءَ معلومات توهان ۽ توهان جي گهرڀاتين جي آسپاس موجود صحت جي  ضرورتن ۽ سهولتن جي باري ۾ آگاهي ڏيندي</string>
     <string name="secCLabel">C: گھر جي سماجي ۽ اقتصادي معلومات </string>
     <string name="secDLabel">D: REPRODUCTIVE HEALTH, MATERNAL AND CHILD MORTALITY (Complete this section  for all married aged 15–49 years in the household)</string>
@@ -138,11 +138,11 @@
     <string name="tb03g">	والدين ساهرا  ( سسُ ۽ سهرو) </string>
     <string name="tb03h">	ڀاءُ / ڀيڻ  </string>
     <string name="tb03i">	سالو / سالي  </string>
-    <string name="tb03j">.	ڀائيٽي / ڀائيٽيو </string>
-    <string name="tb03k">.	ڏاڏو/ڏاڏي  </string>
-    <string name="tb03l">.	چاچو / چاچي </string>
-    <string name="tb03m">.	پاليل / سوٽيلو ٻار </string>
-    <string name="tb03n">.	گهريلو ملازم </string>
+    <string name="tb03j">	ڀائيٽي / ڀائيٽيو </string>
+    <string name="tb03k">	ڏاڏو/ڏاڏي  </string>
+    <string name="tb03l">	چاچو / چاچي </string>
+    <string name="tb03m">	پاليل / سوٽيلو ٻار </string>
+    <string name="tb03n">	گهريلو ملازم </string>
     <string name="tb04"> جنس </string>
     <string name="tb05"> پيءُ جو نالو </string>
     <string name="tb06">
@@ -161,11 +161,11 @@
     <string name="tb10f"> 	غير تربيت يافته مزدور</string>
     <string name="tb10g"> 	زراعت </string>
     <string name="tb10h"> 	واپار </string>
-    <string name="tb10ia">.	شاگرد اسڪول ۾l </string>
-    <string name="tb10ib">	شاگرد مدرسي ۾ </string>
-    <string name="tb10j"> .	بيروزگار </string>
-    <string name="tb10k"> .	ريٽائرڊ </string>
-    <string name="tb10l"> .	استاد </string>
+    <string name="tb10ia">شاگرد اسڪول ۾l </string>
+    <string name="tb10ib">شاگرد مدرسي ۾ </string>
+    <string name="tb10j"> بيروزگار </string>
+    <string name="tb10k"> ريٽائرڊ </string>
+    <string name="tb10l"> استاد </string>
     <string name="tb10999"> لاڳو نه ٿو ٿئي </string>
     <string name="tb11"> ازدواجي حيثيت </string>
     <string name="tb11a"> 	غير شادي شده </string>
@@ -218,8 +218,8 @@
     <string name="tc0303"> Finished Walls </string>
     <string name="tc03"> ڀتيون ڪهڙي قسم جون آهن؟ </string>
     <string name="tc03a"> ڀتيون نه آھن </string>
-    <string name="tc03b"> ڪکا / گاه. </string>
-    <string name="tc03c"> مٽي. </string>
+    <string name="tc03b"> ڪکا / گاه </string>
+    <string name="tc03c"> مٽي </string>
     <string name="tc03d"> مٽي سان پٿر </string>
     <string name="tc03e"> مٽي/ڪاٺيون/مٽي </string>
     <string name="tc03f"> ڪچيون سرون </string>
