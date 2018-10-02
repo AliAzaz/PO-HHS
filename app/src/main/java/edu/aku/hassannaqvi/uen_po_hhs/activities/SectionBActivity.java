@@ -683,15 +683,15 @@ public class SectionBActivity extends AppCompatActivity {
         }
         // TOTAL MEMBERS
         MainApp.TotalMembersCount++;
-        MainApp.fc = new FormsContract();
-        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
-
+       // MainApp.fc = new FormsContract();
+       SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+/*
         MainApp.fc.setDevicetagID(sharedPref.getString("tagName", null));
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID));
-
+*/
         JSONObject count = new JSONObject();
         count.put("tb13", MainApp.TotalMembersCount);
         count.put("tb14", MainApp.TotalMWRACount);
