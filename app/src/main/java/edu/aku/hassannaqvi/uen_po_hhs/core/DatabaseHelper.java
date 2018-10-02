@@ -61,6 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleChild.COLUMN_STRUCTURE_NO + " TEXT,"
             + singleChild.COLUMN_FAMILY_EXT_CODE + " TEXT,"
             + singleChild.COLUMN_HH_HEAD + " TEXT,"
+            + singleChild.COLUMN_HH_CONTACT + " TEXT,"
             + singleChild.COLUMN_RANDOMDT + " TEXT );";
 
     public static final String SQL_CREATE_USERS = "CREATE TABLE " + singleUser.TABLE_NAME + "("
@@ -723,7 +724,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleChild.COLUMN_HH,
                 singleChild.COLUMN_SUB_VILLAGE_CODE,
                 singleChild.COLUMN_RANDOMDT,
-                singleChild.COLUMN_HH_HEAD
+                singleChild.COLUMN_HH_HEAD,
+                singleChild.COLUMN_HH_CONTACT
         };
 
         String whereClause = singleChild.COLUMN_SUB_VILLAGE_CODE + "=? AND " +
@@ -782,6 +784,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(singleChild.COLUMN_SUB_VILLAGE_CODE, Vc.getSubVillageCode());
                 values.put(singleChild.COLUMN_RANDOMDT, Vc.getRandomDT());
                 values.put(singleChild.COLUMN_HH_HEAD, Vc.getHhhead());
+                values.put(singleChild.COLUMN_HH_CONTACT, Vc.gethhcontact());
 
                 db.insert(singleChild.TABLE_NAME, null, values);
             }

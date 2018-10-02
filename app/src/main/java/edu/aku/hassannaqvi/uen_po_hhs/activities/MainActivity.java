@@ -108,7 +108,8 @@ public class MainActivity extends Activity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        lblheader.setText("Welcome! You're assigned to block ' " + MainApp.regionDss + " '" + MainApp.userName);
+//        lblheader.setText("Welcome! You're assigned to block ' " + MainApp.regionDss + " '" + MainApp.userName);
+        lblheader.setText("Welcome!!");
 
         if (MainApp.admin) {
             adminsec.setVisibility(View.VISIBLE);
@@ -168,7 +169,7 @@ public class MainActivity extends Activity {
             rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
             rSumText += "--------------------------------------------------\r\n";
-            rSumText += "[ DSS_ID ] \t[Form Status] \t[Sync Status]----------\r\n";
+            rSumText += "[ FORM ID ] \t[Form Status] \t[Sync Status]----------\r\n";
             rSumText += "--------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {

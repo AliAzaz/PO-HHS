@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.IdRes;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -45,6 +46,7 @@ import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract.lhwEntry;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
@@ -66,6 +68,8 @@ public class SectionAActivity extends Activity {
     @BindView(R.id.polhw)
     Spinner MN03;
 
+    @BindView(R.id.pobhh)
+    EditText pobhh;
     @BindView(R.id.ta01)
     EditText ta01;
     @BindView(R.id.ta02)
@@ -110,10 +114,10 @@ public class SectionAActivity extends Activity {
     Button btn_Continue;
     @BindView(R.id.checkHHBtn)
     Button checkHHBtn;
-    @BindView(R.id.pobhh)
-    EditText pobhh;
     @BindView(R.id.btn_End)
     Button btn_End;
+    @BindView(R.id.navbuttons)
+    LinearLayout navbuttons;
 
     @BindView(R.id.hh_name)
     TextView hhName;
@@ -121,6 +125,17 @@ public class SectionAActivity extends Activity {
     CheckBox checkHHHeadpresent;
     @BindView(R.id.fldGrpt03)
     LinearLayout fldGrpt03;
+
+    @BindView(R.id.contactdetails)
+    LinearLayout contactdetails;
+    @BindView(R.id.hh08)
+    TextView hh08;//contact name
+    @BindView(R.id.labelcontact)
+    TextView labelcontact;//contact name
+    @BindView(R.id.hh09)
+    TextView hh09; // contact number
+
+
     public List<String> psuName, districtNames, villageNames, lhwNames;
     public List<String> psuCode, districtCodes, villageCodes, lhwCodes;
     Collection<BLRandomContract> selected;
@@ -268,8 +283,16 @@ public class SectionAActivity extends Activity {
         checkHHBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SectionAActivity.this, "This feature is under construction! ", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(SectionAActivity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
+
+                if (MainApp.lhwCode != "" && validatorClass.EmptyTextBox(SectionAActivity.this, pobhh, getString(R.string.household))) {
+                    setupViews();
+                }else{
+                    Toast.makeText(SectionAActivity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
+
+                }
             }
+
         });
         ta05h.addTextChangedListener(new TextWatcher() {
             @Override
@@ -306,6 +329,43 @@ public class SectionAActivity extends Activity {
         });
 
 
+    }
+
+    public void setupViews() {
+        selected = db.getAllBLRandom(MainApp.lhwCode, pobhh.getText().toString().toUpperCase());
+
+        if (selected.size() != 0) {
+
+            Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
+
+            for (BLRandomContract rnd : selected) {
+                MainApp.selectedHead = new BLRandomContract(rnd);
+            }
+            contactdetails.setVisibility(View.VISIBLE);
+            navbuttons.setVisibility(View.VISIBLE);
+            hh08.setText(MainApp.selectedHead.getHhhead().toUpperCase());
+            if (!MainApp.selectedHead.gethhcontact().equals("99")){
+                hh09.setVisibility(View.VISIBLE);
+                labelcontact.setVisibility(View.VISIBLE);
+                hh09.setText(MainApp.selectedHead.gethhcontact().toUpperCase());
+            }else {
+                hh09.setText(null);
+                hh09.setVisibility(View.GONE);
+                labelcontact.setVisibility(View.GONE);
+            }
+
+        } else {
+            clearFields();
+            Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void clearFields() {
+        contactdetails.setVisibility(View.GONE);
+        hh08.setText(null);
+        hh09.setText(null);
+        ta09.clearCheck();
+        navbuttons.setVisibility(View.GONE);
     }
 
     public void populateSpinner(final Context context) {
@@ -394,7 +454,7 @@ public class SectionAActivity extends Activity {
                     //villageNames1.add(p.getVillagename().split("\\|")[2]);
                 }
 
-                mN02.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageNames));
+//                mN02.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageNames));
 
 
                 lhwCodes.add("....");
@@ -443,7 +503,7 @@ public class SectionAActivity extends Activity {
             }
         });
 
-        mN02.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+/*        mN02.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -464,13 +524,14 @@ public class SectionAActivity extends Activity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
+        });*/
     }
 
     public void openForm(View view) {
 
-
-        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
+// removed village selection
+//        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
+        if (mN01.getSelectedItemPosition() != 0) {
 
             Intent oF = new Intent(this, SectionBActivity.class);
 
@@ -628,6 +689,9 @@ public class SectionAActivity extends Activity {
         sa.put("ta06", ta06.getText().toString());
         sa.put("ta07", ta07.getText().toString());
         sa.put("ta08", ta08.getText().toString());
+        sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : ta09c.isChecked() ? "3" : "0");
+        sa.put("lhw",MainApp.lhwName);
+        sa.put("hh",pobhh.getText().toString());
         sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
         sa.put("app_version", MainApp.versionName + "." + MainApp.versionCode);
 
@@ -698,9 +762,10 @@ public class SectionAActivity extends Activity {
         if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
             return false;
         }
-        if (!validatorClass.EmptySpinner(this, mN02, getString(R.string.lhwname))) {
-            return false;
-        }
+       /* if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.lhwname))) {
+        return false;
+        //removed village as told by hassan bhai
+        }*/
         if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.villagename))) {
             return false;
         }

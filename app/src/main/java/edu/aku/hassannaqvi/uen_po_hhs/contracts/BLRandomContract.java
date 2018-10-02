@@ -18,6 +18,7 @@ public class BLRandomContract {
     private String extension; // Extension
     private String hh;
     private String hhhead;
+    private String hhcontact;
     private String randomDT;
 
     public BLRandomContract() {
@@ -31,6 +32,7 @@ public class BLRandomContract {
         this.extension = rnd.getExtension();
         this.hh = rnd.getHh();
         this.hhhead = rnd.getHhhead();
+        this.hhcontact = rnd.gethhcontact();
         this.randomDT = rnd.getRandomDT();
     }
 
@@ -44,6 +46,7 @@ public class BLRandomContract {
                 + "-" + jsonObject.getString(singleChild.COLUMN_FAMILY_EXT_CODE);
         this.randomDT = jsonObject.getString(singleChild.COLUMN_RANDOMDT);
         this.hhhead = jsonObject.getString(singleChild.COLUMN_HH_HEAD);
+        this.hhcontact = jsonObject.getString(singleChild.COLUMN_HH_CONTACT);
 
         return this;
     }
@@ -57,6 +60,7 @@ public class BLRandomContract {
         this.hh = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_HH));
         this.randomDT = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_RANDOMDT));
         this.hhhead = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_HH_HEAD));
+        this.hhcontact = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_HH_CONTACT));
 
         return this;
     }
@@ -125,6 +129,14 @@ public class BLRandomContract {
         this.hhhead = hhhead;
     }
 
+    public String gethhcontact() {
+        return hhcontact;
+    }
+
+    public void sethhcontact(String hhcontact) {
+        this.hhcontact = hhcontact;
+    }
+
     public JSONObject toJSONObject() throws JSONException {
         JSONObject json = new JSONObject();
 
@@ -134,6 +146,7 @@ public class BLRandomContract {
         json.put(singleChild.COLUMN_HH, this.hh);
         json.put(singleChild.COLUMN_RANDOMDT, this.randomDT);
         json.put(singleChild.COLUMN_HH_HEAD, this.hhhead);
+        json.put(singleChild.COLUMN_HH_CONTACT, this.hhcontact);
 
         return json;
     }
@@ -149,6 +162,7 @@ public class BLRandomContract {
         public static final String COLUMN_FAMILY_EXT_CODE = "hh07";
         public static final String COLUMN_HH = "hh";
         public static final String COLUMN_HH_HEAD = "hh08";
+        public static final String COLUMN_HH_CONTACT = "hh09";
         public static String _URIGET = "bl_random.php";
     }
 
