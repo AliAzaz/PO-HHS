@@ -182,11 +182,11 @@ public class SectionGActivity extends AppCompatActivity {
 
         JSONObject sG = new JSONObject();
 
-        sG.put("po01", bi.tg01a.isChecked() ? "1" : bi.tg01b.isChecked() ? "2" : "0");
-        sG.put("po01x", bi.tg01bx.getText().toString());
+        sG.put("tg01", bi.tg01a.isChecked() ? "1" : bi.tg01b.isChecked() ? "2" : "0");
+        sG.put("tg01x", bi.tg01bx.getText().toString());
 
-        sG.put("po02", bi.tg02a.isChecked() ? "1" : bi.tg02b.isChecked() ? "2" : "0");
-        sG.put("po03",
+        sG.put("tg02", bi.tg02a.isChecked() ? "1" : bi.tg02b.isChecked() ? "2" : "0");
+        sG.put("tg03",
                 bi.tg03a.isChecked() ? "1"
                         : bi.tg03b.isChecked() ? "2"
                         : bi.tg03c.isChecked() ? "3"
@@ -196,89 +196,89 @@ public class SectionGActivity extends AppCompatActivity {
                         : bi.tg03f.isChecked() ? "6"
                         : bi.tg03g.isChecked() ? "7" : "0");
 
-        sG.put("po04a", bi.tg04a.isChecked()? "1" : "0");
-        sG.put("po04b", bi.tg04b.isChecked()? "2" : "0");
-        sG.put("po04c", bi.tg04c.isChecked()? "3" : "0");
-        sG.put("po04d", bi.tg04d.isChecked()? "4" : "0");
-        sG.put("po04e", bi.tg04e.isChecked()? "5" : "0");
-        sG.put("po04ex", bi.tg04ex.getText().toString());
-        sG.put("po04f", bi.tg04f.isChecked()? "6" : "0");
-        sG.put("po04fx", bi.tg04fx.getText().toString());
-        sG.put("po04g", bi.tg04f.isChecked()? "6" : "0");
-        sG.put("po04gx", bi.tg04gx.getText().toString());
-        sG.put("po04h", bi.tg04h.isChecked()? "6" : "0");
-        sG.put("po04hx", bi.tg04hx.getText().toString());
-        sG.put("po04i", bi.tg04i.isChecked()? "6" : "0");
+        sG.put("tg04a", bi.tg04a.isChecked()? "1" : "0");
+        sG.put("tg04b", bi.tg04b.isChecked()? "2" : "0");
+        sG.put("tg04c", bi.tg04c.isChecked()? "3" : "0");
+        sG.put("tg04d", bi.tg04d.isChecked()? "4" : "0");
+        sG.put("tg04e", bi.tg04e.isChecked()? "5" : "0");
+        sG.put("tg04ex", bi.tg04ex.getText().toString());
+        sG.put("tg04f", bi.tg04f.isChecked()? "6" : "0");
+        sG.put("tg04fx", bi.tg04fx.getText().toString());
+        sG.put("tg04g", bi.tg04f.isChecked()? "6" : "0");
+        sG.put("tg04gx", bi.tg04gx.getText().toString());
+        sG.put("tg04h", bi.tg04h.isChecked()? "6" : "0");
+        sG.put("tg04hx", bi.tg04hx.getText().toString());
+        sG.put("tg04i", bi.tg04i.isChecked()? "6" : "0");
 
-        sG.put("po05a", bi.tg05a.isChecked()? "1" : "0");
-        sG.put("po05b", bi.tg05b.isChecked()? "2" : "0");
-        sG.put("po05c", bi.tg05c.isChecked()? "3" : "0");
-        sG.put("po05d", bi.tg05d.isChecked()? "4" : "0");
-        sG.put("po05e", bi.tg05e.isChecked()? "5" : "0");
-        sG.put("po05f", bi.tg05f.isChecked()? "6" : "0");
-        sG.put("po05g", bi.tg05g.isChecked()? "7" : "0");
-        sG.put("po05h", bi.tg05h.isChecked()? "8" : "0");
-        sG.put("po05hx", bi.tg05hx.getText().toString());
-        sG.put("po05i", bi.tg05i.isChecked()? "9" : "0");
+        sG.put("tg05a", bi.tg05a.isChecked()? "1" : "0");
+        sG.put("tg05b", bi.tg05b.isChecked()? "2" : "0");
+        sG.put("tg05c", bi.tg05c.isChecked()? "3" : "0");
+        sG.put("tg05d", bi.tg05d.isChecked()? "4" : "0");
+        sG.put("tg05e", bi.tg05e.isChecked()? "5" : "0");
+        sG.put("tg05f", bi.tg05f.isChecked()? "6" : "0");
+        sG.put("tg05g", bi.tg05g.isChecked()? "7" : "0");
+        sG.put("tg05h", bi.tg05h.isChecked()? "8" : "0");
+        sG.put("tg05hx", bi.tg05hx.getText().toString());
+        sG.put("tg05i", bi.tg05i.isChecked()? "9" : "0");
 
-        sG.put("po06a", bi.tg06a.isChecked()? "1" : "0");
-        sG.put("po06b", bi.tg06b.isChecked()? "2" : "0");
-        sG.put("po06c", bi.tg06c.isChecked()? "3" : "0");
-        sG.put("po06d", bi.tg06d.isChecked()? "4" : "0");
-        sG.put("po06e", bi.tg06e.isChecked()? "5" : "0");
-        sG.put("po06f", bi.tg06f.isChecked()? "6" : "0");
-        sG.put("po06g", bi.tg06g.isChecked()? "7" : "0");
-        sG.put("po06h", bi.tg06h.isChecked()? "8" : "0");
-        sG.put("po06i", bi.tg06i.isChecked()? "9" : "0");
-        sG.put("po06j", bi.tg06j.isChecked()? "10" : "0");
-        sG.put("po06k", bi.tg06k.isChecked()? "12" : "0");
-        sG.put("po06l", bi.tg06l.isChecked()? "13" : "0");
-        sG.put("po06m", bi.tg06m.isChecked()? "14" : "0");
-        sG.put("po06n", bi.tg06n.isChecked()? "15" : "0");
-        sG.put("po06o", bi.tg06o.isChecked()? "16" : "0");
-        sG.put("po06p", bi.tg06p.isChecked()? "17" : "0");
-        sG.put("po06px", bi.tg06px.getText().toString());
-        sG.put("po06q", bi.tg06q.isChecked()? "18" : "0");
+        sG.put("tg06a", bi.tg06a.isChecked()? "1" : "0");
+        sG.put("tg06b", bi.tg06b.isChecked()? "2" : "0");
+        sG.put("tg06c", bi.tg06c.isChecked()? "3" : "0");
+        sG.put("tg06d", bi.tg06d.isChecked()? "4" : "0");
+        sG.put("tg06e", bi.tg06e.isChecked()? "5" : "0");
+        sG.put("tg06f", bi.tg06f.isChecked()? "6" : "0");
+        sG.put("tg06g", bi.tg06g.isChecked()? "7" : "0");
+        sG.put("tg06h", bi.tg06h.isChecked()? "8" : "0");
+        sG.put("tg06i", bi.tg06i.isChecked()? "9" : "0");
+        sG.put("tg06j", bi.tg06j.isChecked()? "10" : "0");
+        sG.put("tg06k", bi.tg06k.isChecked()? "12" : "0");
+        sG.put("tg06l", bi.tg06l.isChecked()? "13" : "0");
+        sG.put("tg06m", bi.tg06m.isChecked()? "14" : "0");
+        sG.put("tg06n", bi.tg06n.isChecked()? "15" : "0");
+        sG.put("tg06o", bi.tg06o.isChecked()? "16" : "0");
+        sG.put("tg06p", bi.tg06p.isChecked()? "17" : "0");
+        sG.put("tg06px", bi.tg06px.getText().toString());
+        sG.put("tg06q", bi.tg06q.isChecked()? "18" : "0");
 
-        sG.put("po07a", bi.tg07a.isChecked()? "1" : "0");
-        sG.put("po07b", bi.tg07b.isChecked()? "2" : "0");
-        sG.put("po07c", bi.tg07c.isChecked()? "3" : "0");
-        sG.put("po07d", bi.tg07d.isChecked()? "4" : "0");
-        sG.put("po07e", bi.tg07e.isChecked()? "5" : "0");
-        sG.put("po07ex", bi.tg07ex.getText().toString());
-        sG.put("po07f", bi.tg07f.isChecked()? "6" : "0");
+        sG.put("tg07a", bi.tg07a.isChecked()? "1" : "0");
+        sG.put("tg07b", bi.tg07b.isChecked()? "2" : "0");
+        sG.put("tg07c", bi.tg07c.isChecked()? "3" : "0");
+        sG.put("tg07d", bi.tg07d.isChecked()? "4" : "0");
+        sG.put("tg07e", bi.tg07e.isChecked()? "5" : "0");
+        sG.put("tg07ex", bi.tg07ex.getText().toString());
+        sG.put("tg07f", bi.tg07f.isChecked()? "6" : "0");
 
-        sG.put("po08a", bi.tg08a.isChecked()? "1" : "0");
-        sG.put("po08b", bi.tg08b.isChecked()? "2" : "0");
-        sG.put("po08c", bi.tg08c.isChecked()? "3" : "0");
-        sG.put("po08d", bi.tg08d.isChecked()? "4" : "0");
-        sG.put("po08e", bi.tg08e.isChecked()? "5" : "0");
-        sG.put("po08f", bi.tg08f.isChecked()? "6" : "0");
-        sG.put("po08g", bi.tg08g.isChecked()? "7" : "0");
-        sG.put("po08h", bi.tg08h.isChecked()? "8" : "0");
-        sG.put("po08i", bi.tg08i.isChecked()? "9" : "0");
-        sG.put("po08j", bi.tg08j.isChecked()? "10" : "0");
-        sG.put("po08k", bi.tg08k.isChecked()? "12" : "0");
-        sG.put("po08l", bi.tg08l.isChecked()? "13" : "0");
-        sG.put("po08m", bi.tg08m.isChecked()? "14" : "0");
-        sG.put("po08n", bi.tg08n.isChecked()? "15" : "0");
-        sG.put("po08o", bi.tg08o.isChecked()? "16" : "0");
-        sG.put("po08p", bi.tg08p.isChecked()? "17" : "0");
-        sG.put("po08q", bi.tg08q.isChecked()? "18" : "0");
+        sG.put("tg08a", bi.tg08a.isChecked()? "1" : "0");
+        sG.put("tg08b", bi.tg08b.isChecked()? "2" : "0");
+        sG.put("tg08c", bi.tg08c.isChecked()? "3" : "0");
+        sG.put("tg08d", bi.tg08d.isChecked()? "4" : "0");
+        sG.put("tg08e", bi.tg08e.isChecked()? "5" : "0");
+        sG.put("tg08f", bi.tg08f.isChecked()? "6" : "0");
+        sG.put("tg08g", bi.tg08g.isChecked()? "7" : "0");
+        sG.put("tg08h", bi.tg08h.isChecked()? "8" : "0");
+        sG.put("tg08i", bi.tg08i.isChecked()? "9" : "0");
+        sG.put("tg08j", bi.tg08j.isChecked()? "10" : "0");
+        sG.put("tg08k", bi.tg08k.isChecked()? "12" : "0");
+        sG.put("tg08l", bi.tg08l.isChecked()? "13" : "0");
+        sG.put("tg08m", bi.tg08m.isChecked()? "14" : "0");
+        sG.put("tg08n", bi.tg08n.isChecked()? "15" : "0");
+        sG.put("tg08o", bi.tg08o.isChecked()? "16" : "0");
+        sG.put("tg08p", bi.tg08p.isChecked()? "17" : "0");
+        sG.put("tg08q", bi.tg08q.isChecked()? "18" : "0");
 //        sG.put("po08qx", bi.tg08qx.getText().toString());
-        sG.put("po08r", bi.tg08r.isChecked()? "97" : "0");
+        sG.put("tg08r", bi.tg08r.isChecked()? "97" : "0");
 
-        sG.put("po09", bi.tg09a.isChecked() ? "1" : bi.tg09b.isChecked() ? "2" : "0");
+        sG.put("tg09", bi.tg09a.isChecked() ? "1" : bi.tg09b.isChecked() ? "2" : "0");
 
-        sG.put("po10a", bi.tg10a.isChecked()? "1" : "0");
-        sG.put("po10b", bi.tg10b.isChecked()? "2" : "0");
-        sG.put("po10c", bi.tg10c.isChecked()? "3" : "0");
-        sG.put("po10d", bi.tg10d.isChecked()? "4" : "0");
-        sG.put("po10e", bi.tg10e.isChecked()? "5" : "0");
-        sG.put("po10ex", bi.tg10ex.getText().toString());
-        sG.put("po10f", bi.tg10f.isChecked()? "6" : "0");
+        sG.put("tg10a", bi.tg10a.isChecked()? "1" : "0");
+        sG.put("tg10b", bi.tg10b.isChecked()? "2" : "0");
+        sG.put("tg10c", bi.tg10c.isChecked()? "3" : "0");
+        sG.put("tg10d", bi.tg10d.isChecked()? "4" : "0");
+        sG.put("tg10e", bi.tg10e.isChecked()? "5" : "0");
+        sG.put("tg10ex", bi.tg10ex.getText().toString());
+        sG.put("tg10f", bi.tg10f.isChecked()? "6" : "0");
 
-        sG.put("po11", bi.tg11a.isChecked() ? "1"
+        sG.put("tg11", bi.tg11a.isChecked() ? "1"
                 : bi.tg11b.isChecked() ? "2"
                 : bi.tg11c.isChecked() ? "3"
                 : bi.tg11d.isChecked() ? "4"
@@ -296,13 +296,13 @@ public class SectionGActivity extends AppCompatActivity {
 
         );
 
-        sG.put("po11x", bi.tg11nx.getText().toString());
-        sG.put("po12a", bi.tg12a.getText().toString());
-        sG.put("po12b", bi.tg12b.getText().toString());
+        sG.put("tg11x", bi.tg11nx.getText().toString());
+        sG.put("tg12a", bi.tg12a.getText().toString());
+        sG.put("tg12b", bi.tg12b.getText().toString());
 
-        sG.put("po13", bi.tg13a.isChecked() ? "1" : bi.tg13b.isChecked() ? "2" : "0");
-        sG.put("po14", bi.tg14x.getText().toString());
-        sG.put("po15", bi.tg15x.getText().toString());
+        sG.put("tg13", bi.tg13a.isChecked() ? "1" : bi.tg13b.isChecked() ? "2" : "0");
+        sG.put("tg14", bi.tg14x.getText().toString());
+        sG.put("tgpo15", bi.tg15x.getText().toString());
 
 
         MainApp.fc.setsG(String.valueOf(sG));
