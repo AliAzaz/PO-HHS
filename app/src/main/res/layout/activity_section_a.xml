@@ -486,12 +486,12 @@
                     android:layout_marginBottom="1dp"
                     android:text="@string/no" />
 
-                <RadioButton
-                    android:id="@+id/ta09c"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:text="@string/ta09c" />
+                <!--<RadioButton-->
+                    <!--android:id="@+id/ta09c"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="1dp"-->
+                    <!--android:text="@string/ta09c" />-->
 
             </RadioGroup>
 

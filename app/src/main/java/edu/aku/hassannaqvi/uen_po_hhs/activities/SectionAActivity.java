@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.IdRes;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -46,7 +45,6 @@ import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract;
-import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract.lhwEntry;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
@@ -106,8 +104,8 @@ public class SectionAActivity extends Activity {
     RadioButton ta09a;
     @BindView(R.id.ta09b)
     RadioButton ta09b;
-    @BindView(R.id.ta09c)
-    RadioButton ta09c;
+    //    @BindView(R.id.ta09c)
+//    RadioButton ta09c;
     @BindView(R.id.btn_Continue)
     Button btn_Continue;
     @BindView(R.id.checkHHBtn)
@@ -270,7 +268,7 @@ public class SectionAActivity extends Activity {
         checkHHBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SectionAActivity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SectionAActivity.this, "This feature is under construction! ", Toast.LENGTH_SHORT).show();
             }
         });
         ta05h.addTextChangedListener(new TextWatcher() {
@@ -309,6 +307,7 @@ public class SectionAActivity extends Activity {
 
 
     }
+
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
         districtNames = new ArrayList<>();
@@ -467,6 +466,7 @@ public class SectionAActivity extends Activity {
             }
         });
     }
+
     public void openForm(View view) {
 
 
@@ -484,6 +484,7 @@ public class SectionAActivity extends Activity {
             Toast.makeText(this, "Select values from dropdown", Toast.LENGTH_SHORT).show();
         }
     }
+
     public void alertPSU() {
 
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
@@ -508,8 +509,6 @@ public class SectionAActivity extends Activity {
         builder.setMessage("LHW data already exist.").setPositiveButton("Yes", dialogClickListener)
                 .setNegativeButton("Cancel", dialogClickListener).show();
     }
-
-
 
 
     @OnClick(R.id.checkHH)
@@ -629,7 +628,7 @@ public class SectionAActivity extends Activity {
         sa.put("ta06", ta06.getText().toString());
         sa.put("ta07", ta07.getText().toString());
         sa.put("ta08", ta08.getText().toString());
-        sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : ta09c.isChecked() ? "3" : "0");
+        sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
         sa.put("app_version", MainApp.versionName + "." + MainApp.versionCode);
 
 
@@ -693,17 +692,17 @@ public class SectionAActivity extends Activity {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
 
-        if (!validatorClass.EmptySpinner(this,mN00,getString(R.string.talukaname))) {
-        return false;
+        if (!validatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
+            return false;
         }
-        if (!validatorClass.EmptySpinner(this,mN01,getString(R.string.ucname))) {
-        return false;
+        if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
+            return false;
         }
-        if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.lhwname))) {
-        return false;
+        if (!validatorClass.EmptySpinner(this, mN02, getString(R.string.lhwname))) {
+            return false;
         }
-        if (!validatorClass.EmptySpinner(this,MN03,getString(R.string.villagename))) {
-        return false;
+        if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.villagename))) {
+            return false;
         }
 //        01
        /* if (ta01.getText().toString().isEmpty()) {
@@ -829,14 +828,14 @@ public class SectionAActivity extends Activity {
 //     09
         if (ta09.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta09), Toast.LENGTH_SHORT).show();
-            ta09c.setError("This data is Required!");    // Set Error on last radio button
-            ta09c.setFocusable(true);
-            ta09c.setFocusableInTouchMode(true);
-            ta09c.requestFocus();
+            ta09a.setError("This data is Required!");    // Set Error on last radio button
+            ta09a.setFocusable(true);
+            ta09a.setFocusableInTouchMode(true);
+            ta09a.requestFocus();
             Log.i(TAG, "ta09: This data is Required!");
             return false;
         } else {
-            ta09c.setError(null);
+            ta09a.setError(null);
         }
 
         return true;

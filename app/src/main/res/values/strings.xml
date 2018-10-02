@@ -14,7 +14,7 @@
     completions."
   </string>
     <string name="talukaname"> تعلقي جو نالو</string>
-    <string name="ucname"> يونين كائونسل جو نالو</string>
+    <string name="ucname">يونين ڪائونسل جو نالو</string>
     <string name="lhwname"> ليڊي هيلٿ ورڪر جو نالو</string>
     <string name="villagename"> ڳوٺ جو نالو </string>
     <string name="lhwcode"> ليڊي هيلٿ ورڪر جو کوڈ </string>
@@ -35,17 +35,17 @@
     <string name="complete"> مکمل</string>
     <string name="incomplete">نا مکمل</string>
     <!-- String related to section headings -->
-    <string name="secALabel">گھرن جي نشاندهي، تعارف ۽ رضامندي</string>
+    <string name="secALabel">سيڪشن بي : گھرن جي نشاندهي، تعارف ۽ رضامندي</string>
     <string name="secBLabel">  سيڪشن ڊي:  گهرڀاتين جي متعلق معلومات</string>
     <string name="secBinstruction">هاڻي مان توهان کان توهان ۽ توهانجي گهر ڀاتين جي  متعلق معلومات جا سوال پڇندس جيڪي توهان سان گڏ گهر ۾ رهن ٿا ۽ ساڳيو بورچيخانو استعمال ڪن ٿا.  هيءَ معلومات توهان ۽ توهان جي گهرڀاتين جي آسپاس موجود صحت جي  ضرورتن ۽ سهولتن جي باري ۾ آگاهي ڏيندي</string>
-    <string name="secCLabel">C: گھر جي سماجي ۽ اقتصادي معلومات </string>
+    <string name="secCLabel">سيڪشن اي : گھر جي سماجي ۽ اقتصادي معلومات </string>
     <string name="secDLabel">D: REPRODUCTIVE HEALTH, MATERNAL AND CHILD MORTALITY (Complete this section  for all married aged 15–49 years in the household)</string>
     <string name="secELabel">E: Deceased Mother Information</string>
     <string name="secFLabel">F: Deceased Child Information</string>
     <string name="secGLabel">G: ليڊي هيلٿ ورڪر </string>
-    <string name="secHALabel">ٻار جي صحت(دستن جي بيماري جي باري ۾)</string>
+    <string name="secHALabel">سيڪشن جي : ٻار جي صحت(دستن جي بيماري جي باري ۾)</string>
     <string name="secHAins">ھاڻي آءٌ توھان کان توھان جي 5 سالن کان گھٽ عمر واري ٻار جي باري ۾ ڪجھ سوال پڇا ڪندس جيڪي گذريل ٻن ھفتن دوران دستن جي بيماري جي حوالي سان ھوندا</string>
-    <string name="secHBLabel">HB: ٻار جي صحت(ساھ کڻڻ ۾ تڪليف)</string>
+    <string name="secHBLabel">سيڪشن ايڇ : ساھ کڻڻ ۾ تڪليف</string>
     <string name="secILabel">I: حفاظتي ٽڪن جي معلومات</string>
     <string name="secJLabel">J: BREAST FEEDING AND NUTRITION </string>
     <string name="secKLabel">K: پاڻي ۽ صفائي</string>
@@ -67,7 +67,7 @@
     <string name="year"> سال </string>
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
-    <string name="other"> ٻيو ڪو وضاحت ڪريو. </string>
+    <string name="other"> ٻيو ڪو وضاحت ڪريو</string>
     <string name="name"> نالو</string>
 
     <!-- Strings related to Sec
@@ -126,7 +126,7 @@
     <string name="tbAge02"> عمر </string>
     <string name="tbdob01"> تاريخ پيدائش </string>
     <string name="tb01"> گھر ڀاتيءَ جو سريل نمبر </string>
-    <string name="tb02"> نالو </string>
+    <string name="tb02"> نالوگھر جي سربراھ کان نالا لکڻ شروع ڪيو. </string>
     <string name="tb02ins"> مھرباني ڪري مون کي پنھنجي گھر ڀاتين جا نالا ٻڌايو جيڪي اڪثر ڪري ھن گھر ۾ رھن ٿا. </string>
     <string name="tb03"> گھر جي سربراھ سان رشتو </string>
     <string name="tb03a">	گهر جو سربراه </string>
@@ -171,7 +171,7 @@
     <string name="tb11a"> 	غير شادي شده </string>
     <string name="tb11b"> 	شادي شده </string>
     <string name="tb11c"> 	بيواه </string>
-    <string name="tb11d"> طلاقيافته / عليحدگي </string>
+    <string name="tb11d"> طلاق يافته / عليحدگي </string>
     <string name="tb11e"> Divorced/Separate </string>
     <string name="tb12"> مڪمل گھر ڀاتين جو تعداد </string>
     <string name="tb13"> گھر ۾ مڪمل شادي شده عورتن جو تعداد </string>
@@ -180,7 +180,7 @@
     <string name="tc0101"> Natural floor </string>
     <string name="tc0102"> Rudimentary floor </string>
     <string name="tc0103"> Finished floor </string>
-    <string name="tc01"> فرش ڪهڙي قسم جو آهي </string>
+    <string name="tc01"> فرش ڪهڙي قسم جو آهي مشاھدو ڪريو </string>
     <string name="tc01a"> زمين / واري / مٽي </string>
     <string name="tc01b"> ڇيڻن جو ٿلهو يا راڳوو  </string>
     <string name="tc01c"> ڪاٺين جو فرش </string>
@@ -196,8 +196,7 @@
     <string name="tc0201"> Natural roof </string>
     <string name="tc0202"> Rudimentary roofing </string>
     <string name="tc0203"> Finished roofing </string>
-    <string name="tc02"> ڇت ڪهڙي قسم جي آهي
-    </string>
+    <string name="tc02"> ڇت ڪهڙي قسم جي آهي مشاھدو ڪريو</string>
     <string name="tc02a"> ڇت ڪونهي </string>
     <string name="tc02b"> کجي جي ڦرن جي </string>
     <string name="tc02c"> ڪکا / گاه </string>
@@ -216,7 +215,7 @@
     <string name="tc0301"> Natural Walls </string>
     <string name="tc0302"> Rudimentary Walls </string>
     <string name="tc0303"> Finished Walls </string>
-    <string name="tc03"> ڀتيون ڪهڙي قسم جون آهن؟ </string>
+    <string name="tc03"> ڀتيون ڪهڙي قسم جون آهن؟ مشاھدو ڪريو </string>
     <string name="tc03a"> ڀتيون نه آھن </string>
     <string name="tc03b"> ڪکا / گاه </string>
     <string name="tc03c"> مٽي </string>
@@ -234,7 +233,7 @@
     <string name="tc03o"> سيمينٽ بلاڪ </string>
     <string name="tc03p"> مڪمل ڀت </string>
     <string name="tc03q"> ڪاٺ جي تختا </string>
-    <string name="tc04"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن؟ </string>
+    <string name="tc04"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن؟  </string>
     <string name="tc04a"> ڪمرن جو تعداد </string>
     <string name="tc05"> اوهان جنهن گهر ۾ رهو ٿا اهو ڪنهن جي ملڪيت آهي؟ </string>
     <string name="tc05a"> ذاتي </string>
@@ -258,7 +257,7 @@
     <string name="tc07j"> بوسو </string>
     <string name="tc07k"> جانورن جا ڇيڻا . </string>
     <string name="tc07l"> گھر ۾ رڌ پچاءُ نه ڪندا آھيون </string>
-    <string name="tc08"> توهان جي گھر ۾ هيٺن مان ڪهڙيون سهولتون موجود آهن: </string>
+    <string name="tc08">ڇا توهان جي گھر ۾ هيٺن مان ڪهڙيون سهولتون موجود آهن </string>
     <string name="tc08a"> بجلي </string>
     <string name="tc08b"> ريڊيو </string>
     <string name="tc08c"> ٽيليويزن </string>
@@ -279,7 +278,7 @@
     <string name="tc08r"> انٽرنيٽ ڪنيڪشن </string>
     <string name="tc08s"> موبائل انٽرنيٽ </string>
     <string name="tc09"> گھر جي ڪنهن به ميمبر وٽ هيٺيون شيون موجود آهن: </string>
-    <string name="tc09a"> واچ </string>
+    <string name="tc09a"> گھڙي  </string>
     <string name="tc09b"> موبائل فون </string>
     <string name="tc09c"> سائيڪل </string>
     <string name="tc09d"> موٽرسائيڪل/اسڪوٽر </string>
@@ -360,7 +359,7 @@
     <string name="tf05a"> گھر ۾ </string>
     <string name="tf05b"> سرڪاري صحت مرڪز </string>
     <string name="tf05c"> پرائيويٽ صحت مرڪز </string>
-    <string name="tf05d"> ين جي اوصحت مرڪ </string>
+    <string name="tf05d">  اين جي اوصحت مرڪ </string>
     <string name="tf05e"> صحت مرڪز ڏانھن ويندي رستي ۾ </string>
     <string name="tf06"> مرڻ جي تاريخ </string>
     <string name="tf07"> موت جو سبب </string>
@@ -370,7 +369,7 @@
     <string name="tf07d"> نمونيا (Pneumonia) </string>
     <string name="tf07e"> پيدائشي جھٽڪا لڳڻ </string>
     <string name="tf07f"> دست (Diarrhea) </string>
-    <string name="tf07g"> خار (Fever) </string>
+    <string name="tf07g"> بخار (Fever) </string>
     <string name="tf07h"> حادثاتي موت جو ٿيڻ </string>
 
     <string name="tha01"> ڇا گذريل ٻن ھفتن جي دوران توھان جي گھر ۾ 5 سالن کان گھٽ عمر جي ٻارن کي دستن جي بيماري ٿي؟ </string>
@@ -471,8 +470,8 @@
     <string name="tha19"> اسپتال مان موڪل ملڻ کان پوءِ ڇا توھان (نالو) کي ڪيترن ڏينهن بعد وڌيڪ فالواپ لا۽ ٻيهراچڻ جي صلاح ڏني وئي هئي؟ </string>
     <string name="tha20"> ڇا توھان (نالو) کي وڌيڪ فالواپ لا۽ ٻيهر اسپتال وٺي ويا هئيو </string>
     <string name="tha21"> ٻيهر اسپتال وڌيڪ فالواپ لا۽ وٺي نه وڃڻ جا سبب ڪهڙا هئا؟ </string>
-    <string name="tha21a"> فالواپ جو ڏينهن نهآيوآهي </string>
-    <string name="tha21b"> يڏو وڏو مسئلو نه ھو جو وڌيڪ فالواپ لا۽ ٻيهراچجي </string>
+    <string name="tha21a"> فالواپ جو ڏينهن نهآيوآهي</string>
+    <string name="tha21b"> ايڏو وڏو مسئلو نه ھو جو وڌيڪ فالواپ لا۽ ٻيهراچجي</string>
     <string name="tha21c"> پئسا نه ھئا </string>
     <string name="tha21d"> سواري نه ھئي </string>
     <string name="tha21e"> مرد جي غيرموجودگي جي ڪري </string>
@@ -512,7 +511,7 @@
     <string name="tha31d"> نرس </string>
     <string name="tha31e"> ڊسپينسر/ ڪمپائوڊر </string>
     <string name="tha31f"> ڪيمسٽ ميڊيڪل اسٽور </string>
-    <string name="tha31g"> يل ايڇ وي (ليڊي ھيلٿ وزيٽر) </string>
+    <string name="tha31g">ا يل ايڇ وي (ليڊي ھيلٿ وزيٽر) </string>
     <string name="tha31h"> ھوميوپيٿڪ / حڪيم </string>
     <string name="tha31i"> غير سرڪاري تنظيم ( اين جي او) جو عملو </string>
     <string name="tha31j"> سي ايم ڊبليو (ڪميونٽي مڊوائف) </string>

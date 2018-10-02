@@ -1494,16 +1494,15 @@ public class SectionCActivity extends Activity {
         } else {
             tc17888.setError(null);
         }
-        /*if (!tc17888.isChecked() && (Integer.valueOf(tc17.getText().toString()) < 1 ||
-                Integer.valueOf(tc17.getText().toString()) >= 1000)) {
+        if (!tc17888.isChecked() && (Integer.valueOf(tc17.getText().toString()) > 1999)) {
             Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc17), Toast.LENGTH_SHORT).show();
-            tc17.setError("Range from 0 to 1000!");    // Set Error on last radio button
+            tc17.setError("Range must be greater than 2000");    // Set Error on last radio button
 
             Log.i(TAG, "po17: Range from 0 to 1000!");
             return false;
         } else {
             tc17.setError(null);
-        }*/
+        }
 
        /* if (td06.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.td06), Toast.LENGTH_SHORT).show();
@@ -1560,9 +1559,9 @@ public class SectionCActivity extends Activity {
             } else {
                 tc19.setError(null);
             }
-            if (Integer.valueOf(tc19.getText().toString()) < 1) {
+            if (Integer.valueOf(tc19.getText().toString()) > MainApp.mwraCount) {
                 Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc19), Toast.LENGTH_SHORT).show();
-                tc19.setError("Greater then 0!");    // Set Error on last radio button
+                tc19.setError("could not greater than " + MainApp.mwraCount + "!");    // Set Error on last radio button
                 tc19.requestFocus();
                 Log.i(TAG, "po19: Greater then 0!");
                 return false;
@@ -1595,9 +1594,9 @@ public class SectionCActivity extends Activity {
             } else {
                 tc21.setError(null);
             }
-            if (Integer.valueOf(tc21.getText().toString()) < 1) {
+            if (Integer.valueOf(tc21.getText().toString()) < 1 && Integer.valueOf(tc21.getText().toString()) > 10) {
                 Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc21), Toast.LENGTH_SHORT).show();
-                tc21.setError("Greater then 0!");    // Set Error on last radio button
+                tc21.setError("value must be in between 1 to 9");    // Set Error on last radio button
                 tc21.requestFocus();
                 Log.i(TAG, "po21: Greater then 0!");
                 return false;

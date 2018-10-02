@@ -100,6 +100,7 @@ public class MainActivity extends Activity {
         MainApp.fatherList.add(1,"N/A");
         MainApp.motherList.add(0,"....");
         MainApp.motherList.add(1,"N/A");
+        MainApp.childList.add(0,"....");
         MainApp.motherMap.put("N/A_0","0");
         MainApp.fatherMap.put("N/A_0","0");
 

@@ -228,13 +228,12 @@ public class SectionBActivity extends AppCompatActivity {
 
 
 
-        tb05.setAdapter(new ArrayAdapter<>(this, R.layout.item_style,  MainApp.fatherList));
+        tb05.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.fatherList));
         tb06.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.motherList));
-        if(MainApp.TotalMembersCount == 0){
+        if (MainApp.TotalMembersCount == 0) {
             tb05.setSelection(1);
             tb06.setSelection(1);
         }
-
 
 
 //        Counter for serial no
@@ -334,6 +333,7 @@ public class SectionBActivity extends AppCompatActivity {
                     txtRsn.setText(ageInyears + " years");
                 }
                 if (ageInyears < 5) {
+
                     tb09.setText("NA");
                     tb09.setEnabled(false);
                     fldGrpOcc.setVisibility(View.GONE);
@@ -482,6 +482,7 @@ public class SectionBActivity extends AppCompatActivity {
                 } else {
                     tb0388x.setText(null);
                     tb0388x.setVisibility(View.GONE);
+                    tb0388x.clearFocus();
                 }
             }
         });
@@ -531,6 +532,9 @@ public class SectionBActivity extends AppCompatActivity {
     void onBtnEndClick() {
         //TODO implement
         MainApp.endActivity(this, this);
+        MainApp.motherList.clear();
+        MainApp.fatherList.clear();
+
     }
 
 
@@ -571,10 +575,13 @@ public class SectionBActivity extends AppCompatActivity {
 
                                 Toast.makeText(SectionBActivity.this, "Processing This Section", Toast.LENGTH_SHORT).show();
                                 if (formValidation()) {
-                                    if(tb04a.isChecked() && tb11b.isChecked()){
+                                    if (tb04a.isChecked() && tb11b.isChecked()) {
                                         MainApp.fatherList.add(tb02.getText().toString());
-                                    }else if(tb04b.isChecked() && tb11b.isChecked()){
+                                    } else if (tb04b.isChecked() && tb11b.isChecked()) {
                                         MainApp.motherList.add(tb02.getText().toString());
+                                    }
+                                    if(ageInyears < 5){
+                                        MainApp.childList.add(tb02.getText().toString());
                                     }
                                     try {
                                         SaveDraft();
@@ -616,10 +623,13 @@ public class SectionBActivity extends AppCompatActivity {
         //TODO implement
         Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
-            if(tb04a.isChecked() && tb11b.isChecked()){
+            if (tb04a.isChecked() && tb11b.isChecked()) {
                 MainApp.fatherList.add(tb02.getText().toString());
-            }else if(tb04b.isChecked() && tb11b.isChecked()){
+            } else if (tb04b.isChecked() && tb11b.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
+            }
+            if(ageInyears < 5){
+                MainApp.childList.add(tb02.getText().toString());
             }
             try {
                 SaveDraft();
@@ -815,12 +825,12 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
 //        05
-        if(!validatorClass.EmptySpinner(this,tb05,getString(R.string.tb05))){
+        if (!validatorClass.EmptySpinner(this, tb05, getString(R.string.tb05))) {
             return false;
         }
 
 ////        06
-        if(!validatorClass.EmptySpinner(this,tb06,getString(R.string.tb06))){
+        if (!validatorClass.EmptySpinner(this, tb06, getString(R.string.tb06))) {
             return false;
         }
 

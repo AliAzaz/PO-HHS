@@ -106,6 +106,7 @@ public class MainApp extends Application {
 
     public static int ageRdo = 0;
 
+    public static ArrayList<String> childList = new ArrayList<>();
     public static ArrayList<String> motherList = new ArrayList<>();
     public static ArrayList<String> motherSerial = new ArrayList<>();
     public static HashMap<String, String> motherMap = new HashMap<>();

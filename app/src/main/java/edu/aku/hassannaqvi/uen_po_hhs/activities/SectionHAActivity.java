@@ -13,7 +13,6 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +30,7 @@ public class SectionHAActivity extends Activity {
     ActivitySectionHaBinding bi;
 
     Map<String, String> childsMap;
-    ArrayList<String> lstChild;
+
 
     int count_child_5y = 0;
 
@@ -93,15 +92,13 @@ public class SectionHAActivity extends Activity {
         //        get data from sec B
 
         childsMap = new HashMap<>();
-        lstChild = new ArrayList<>();
-
         childsMap.put("....", "");
-        lstChild.add("....");
-
-        lstChild.add("Child 1 ");
-        lstChild.add("Child 2 ");
-        lstChild.add("Child 3 ");
-        lstChild.add("Child 4 ");
+//        lstChild.add("....");
+//
+//        lstChild.add("Child 1 ");
+//        lstChild.add("Child 2 ");
+//        lstChild.add("Child 3 ");
+//        lstChild.add("Child 4 ");
 
         /*for (byte i = 0; i < MainApp.familyMembersList.size(); i++) {
             if (MainApp.familyMembersList.get(i).getAgeLess5().equals("1") || MainApp.familyMembersList.get(i).getAgeLess5().equals("3")) {
@@ -112,7 +109,7 @@ public class SectionHAActivity extends Activity {
             }
         }*/
 
-        bi.tha03.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lstChild));
+        bi.tha03.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, MainApp.childList));
 
         bi.tha01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -132,14 +129,18 @@ public class SectionHAActivity extends Activity {
                     ClearClass.ClearAllFields(bi.fldgrptha06, false);
                     bi.fldgrptha07.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha07, false);
+                    bi.tha0796x.setText(null);
                     bi.fldgrptha08.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha08, false);
                     bi.fldgrptha09.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha09, false);
+                    bi.tha0996x.setText(null);
                     bi.fldgrptha10.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha10, false);
+                    bi.tha1096x.setText(null);
                     bi.fldgrptha11.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha11, false);
+                    bi.tha1196x.setText(null);
                     bi.fldgrptha12.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha12, false);
                     bi.fldgrptha13.setVisibility(View.GONE);
@@ -148,6 +149,7 @@ public class SectionHAActivity extends Activity {
                     ClearClass.ClearAllFields(bi.fldgrptha14, false);
                     bi.fldgrptha15.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha15, false);
+                    bi.tha1596x.setText(null);
                     bi.fldgrptha16.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha16, false);
                     bi.fldgrptha17.setVisibility(View.GONE);
@@ -156,6 +158,7 @@ public class SectionHAActivity extends Activity {
                     ClearClass.ClearAllFields(bi.fldgrptha18, false);
                     bi.fldgrptha19.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha19, false);
+
                     bi.fldgrptha20.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha20, false);
                     bi.fldgrptha21.setVisibility(View.GONE);
@@ -166,6 +169,7 @@ public class SectionHAActivity extends Activity {
                     ClearClass.ClearAllFields(bi.fldgrptha23, false);
                     bi.fldgrptha24.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha24, false);
+                    bi.tha2496x.setText(null);
                     bi.fldgrptha25.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha25, false);
                     bi.fldgrptha26.setVisibility(View.GONE);
@@ -1124,12 +1128,21 @@ public class SectionHAActivity extends Activity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i != R.id.tha09a) {
-
+                if(i == R.id.tha09a){
+                    bi.tha09ex.setVisibility(View.GONE);
+                    bi.tha0996x.setVisibility(View.GONE);
+                    bi.tha09ex.setText(null);
+                    bi.tha0996x.setText(null);
+                }
+                if (i == R.id.tha09b || i == R.id.tha09c || i == R.id.tha09d) {
                     bi.tha0996x.setVisibility(View.VISIBLE);
-                } else {
+                    bi.tha09ex.setVisibility(View.GONE);
+                    bi.tha09ex.setText(null);
+                }
+                if(i == R.id.tha09e){
                     bi.tha0996x.setVisibility(View.GONE);
                     bi.tha0996x.setText(null);
+                    bi.tha09ex.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -1168,6 +1181,7 @@ public class SectionHAActivity extends Activity {
 
                     bi.fldgrptha14.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha14, false);
+                    bi.tha1496x.setText(null);
                     bi.fldgrptha15.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha15, false);
                     bi.fldgrptha16.setVisibility(View.GONE);
@@ -1201,6 +1215,39 @@ public class SectionHAActivity extends Activity {
                     bi.fldgrptha21.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.fldgrptha21, true);
 
+                }
+            }
+        });
+
+        bi.tha14.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i != R.id.tha14d) {
+                    bi.tha14dx.setVisibility(View.GONE);
+                    bi.tha14dx.setText(null);
+                    bi.tha1496x.setVisibility(View.VISIBLE);
+                } else {
+                    bi.tha14dx.setVisibility(View.VISIBLE);
+                    bi.tha1496x.setVisibility(View.GONE);
+                    bi.tha1496x.setText(null);
+                }
+            }
+        });
+
+        bi.tha15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if(i == R.id.tha15a){
+                    bi.tha1596x.setVisibility(View.VISIBLE);
+                    bi.tha14dx.setVisibility(View.GONE);
+                    bi.tha14dx.setText(null);
+                }
+                if(i == R.id.tha15f){
+                    bi.tha14dx.setVisibility(View.VISIBLE);
+                    bi.tha1596x.setVisibility(View.GONE);
+                    bi.tha1596x.setText(null);
                 }
             }
         });
@@ -1940,8 +1987,10 @@ public class SectionHAActivity extends Activity {
                         : bi.tha09b.isChecked() ? "2"
                         : bi.tha09c.isChecked() ? "3"
                         : bi.tha09d.isChecked() ? "4"
+                        : bi.tha09e.isChecked() ? "96"
                         : "0");
         sHA.put("tha0996x", bi.tha0996x.getText().toString());
+        sHA.put("tha09ex", bi.tha09ex.getText().toString());
         sHA.put("tha10", bi.tha10a.isChecked() ? "1"
                 : bi.tha10b.isChecked() ? "2"
                 : bi.tha10c.isChecked() ? "3"
@@ -1982,15 +2031,19 @@ public class SectionHAActivity extends Activity {
         sHA.put("tha14", bi.tha14a.isChecked() ? "1"
                 : bi.tha14b.isChecked() ? "2"
                 : bi.tha14c.isChecked() ? "3"
+                : bi.tha14d.isChecked() ? "96"
                 : "0");
         sHA.put("tha1496x", bi.tha1496x.getText().toString());
+        sHA.put("tha14dx", bi.tha14dx.getText().toString());
 
         sHA.put("tha15", bi.tha15a.isChecked() ? "1"
                 : bi.tha15b.isChecked() ? "2"
                 : bi.tha15c.isChecked() ? "3"
                 : bi.tha15d.isChecked() ? "4"
                 : bi.tha15e.isChecked() ? "5"
+                : bi.tha15f.isChecked() ? "96"
                 : "0");
+        sHA.put("tha15fx", bi.tha15fx.getText().toString());
         sHA.put("tha1596x", bi.tha1596x.getText().toString());
 
         sHA.put("tha16a", bi.tha16a.isChecked() ? "1" : "0");
@@ -2112,8 +2165,13 @@ public class SectionHAActivity extends Activity {
             if (!validatorClass.EmptyTextBox(this, bi.tha02, getString(R.string.tha02))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.tha02, 1, 4, getString(R.string.tha02), "Number")) {
+            if (Integer.parseInt(bi.tha02.getText().toString()) > MainApp.TotalChildCount) {
+                bi.tha02.setError("Child could not be greater than " + MainApp.TotalChildCount + "!");
+                bi.tha02.requestFocus();
                 return false;
+            } else {
+                bi.tha02.setError(null);
+                bi.tha02.clearFocus();
             }
             if (!validatorClass.EmptySpinner(this, bi.tha03, getString(R.string.tha03))) {
                 return false;
@@ -2171,12 +2229,16 @@ public class SectionHAActivity extends Activity {
                     return false;
                 }
 
-                if (!bi.tha09a.isChecked()) {
+                if (bi.tha09b.isChecked() ||  bi.tha09c.isChecked() || bi.tha09d.isChecked()) {
                     if (!validatorClass.EmptyTextBox(this, bi.tha0996x, getString(R.string.tha09))) {
                         return false;
                     }
                 }
-
+                if(bi.tha09e.isChecked()){
+                    if (!validatorClass.EmptyTextBox(this, bi.tha09ex, getString(R.string.tha09))) {
+                        return false;
+                    }
+                }
                 if (!validatorClass.EmptyRadioButton(this, bi.tha10, bi.tha10a, getString(R.string.tha10))) {
                     return false;
                 }
@@ -2204,14 +2266,26 @@ public class SectionHAActivity extends Activity {
                     if (!validatorClass.EmptyRadioButton(this, bi.tha14, bi.tha14a, getString(R.string.tha14))) {
                         return false;
                     }
-                    if (!validatorClass.EmptyTextBox(this, bi.tha1496x, getString(R.string.tha14))) {
-                        return false;
+                    if (!bi.tha14d.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.tha1496x, getString(R.string.tha14))) {
+                            return false;
+                        }
+                    } else {
+                        if (!validatorClass.EmptyTextBox(this, bi.tha14dx, getString(R.string.tha14))) {
+                            return false;
+                        }
                     }
+
                     if (!validatorClass.EmptyRadioButton(this, bi.tha15, bi.tha15a, getString(R.string.tha15))) {
                         return false;
                     }
                     if (bi.tha15a.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.tha1596x, getString(R.string.tha15))) {
+                            return false;
+                        }
+                    }
+                    if (bi.tha15f.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.tha15fx, getString(R.string.tha15))) {
                             return false;
                         }
                     }
@@ -2291,6 +2365,10 @@ public class SectionHAActivity extends Activity {
                         if (!validatorClass.EmptyTextBox(this, bi.tha26, getString(R.string.tha26))) {
                             return false;
                         }
+                        if (!validatorClass.RangeTextBox(this, bi.tha26, 50, 200000, getString(R.string.tha26), "Number")) {
+                            return false;
+                        }
+
                     }
                     if (!bi.tha2798.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.tha27, getString(R.string.tha27))) {
@@ -2360,7 +2438,7 @@ public class SectionHAActivity extends Activity {
                     }
                 }
             }
-        }else{
+        } else {
             if (!validatorClass.EmptyRadioButton(this, bi.tha29, bi.tha29a, getString(R.string.tha29))) {
                 return false;
             }

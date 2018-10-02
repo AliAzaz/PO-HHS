@@ -31,6 +31,7 @@
             android:background="@color/colorPrimary" />
 
         <TextView
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -40,6 +41,7 @@
             android:textColor="@android:color/white" />
 
         <RadioGroup
+            android:visibility="gone"
             android:id="@+id/thb00"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -117,11 +119,12 @@
                 android:textColor="@android:color/white" />
 
             <EditText
+                android:digits="123456789"
                 android:id="@+id/thb02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
-                android:digits="0123456789"
+                android:maxLength="2"
                 android:hint="@string/thb02"
                 android:inputType="number" />
 
@@ -185,6 +188,7 @@
                 android:textColor="@android:color/white" />
 
             <EditText
+                android:maxLength="2"
                 android:id="@+id/thb04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -217,7 +221,7 @@
                 android:id="@+id/thb05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"></Spinner>
+                android:layout_marginTop="10dp"/>
 
 
             <!--Q6-->
@@ -231,6 +235,7 @@
                 android:textColor="@android:color/white" />
 
             <EditText
+                android:maxLength="2"
                 android:id="@+id/thb06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -473,6 +478,7 @@
                     android:textColor="@android:color/white" />
 
                 <EditText
+                    android:maxLength="2"
                     android:id="@+id/thb09"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -525,13 +531,23 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/thb10d" />
 
+
                     <RadioButton
-                        android:id="@+id/thb1096"
+                        android:id="@+id/thb10e"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
-                        android:text="@string/thb10e" />
+                        android:text="@string/other" />
 
+                    <EditText
+                        android:id="@+id/thb10ex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:hint="@string/other"
+                        android:inputType="textCapWords"
+                        android:visibility="gone" />
 
                     <EditText
                         android:id="@+id/thb1096x"
@@ -621,7 +637,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
-                        android:text="@string/thb39i" />
+                        android:text="@string/other" />
+
+                    <EditText
+                        android:id="@+id/thb3996"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:hint="@string/other"
+                        android:inputType="text"
+                        android:visibility="gone" />
 
                     <EditText
                         android:visibility="gone"
@@ -630,7 +656,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
-                        android:hint="@string/thb39i"
+                        android:hint="@string/name"
                         android:inputType="text" />
 
 
@@ -734,8 +760,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
-                        android:text="@string/thb11l" />
-
+                        android:text="@string/other" />
 
                     <EditText
                         android:id="@+id/thb1196x"
@@ -743,7 +768,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
                         android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
-                        android:hint="@string/thb11l"
+                        android:hint="@string/other"
+                        android:inputType="textCapWords"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/thb11name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:hint="@string/name"
                         android:inputType="textCapWords"
                         android:visibility="gone" />
 
@@ -938,7 +973,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/thb10e" />
+                                android:text="@string/other" />
 
 
                             <EditText
@@ -947,7 +982,17 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
-                                android:hint="@string/thb10e"
+                                android:hint="@string/other"
+                                android:inputType="textCapWords"
+                                android:visibility="gone" />
+
+                            <EditText
+                                android:id="@+id/thb15name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                android:hint="@string/name"
                                 android:inputType="textCapWords"
                                 android:visibility="gone" />
 
@@ -1111,7 +1156,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="1dp"
-                                    android:text="@string/thb10e" />
+                                    android:text="@string/other" />
 
 
                                 <EditText
@@ -1120,7 +1165,17 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="1dp"
                                     android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
-                                    android:hint="@string/thb10e"
+                                    android:hint="@string/other"
+                                    android:inputType="textCapWords"
+                                    android:visibility="gone" />
+
+                                <EditText
+                                    android:id="@+id/thb18name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                    android:hint="@string/name"
                                     android:inputType="textCapWords"
                                     android:visibility="gone" />
 
@@ -1184,7 +1239,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/thb1996" />
+                                android:text="@string/other" />
 
 
                             <EditText
@@ -1193,7 +1248,17 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
-                                android:hint="@string/thb1996"
+                                android:hint="@string/other"
+                                android:inputType="textCapWords"
+                                android:visibility="gone" />
+
+                            <EditText
+                                android:id="@+id/thb19name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                android:hint="@string/name"
                                 android:inputType="textCapWords"
                                 android:visibility="gone" />
 
