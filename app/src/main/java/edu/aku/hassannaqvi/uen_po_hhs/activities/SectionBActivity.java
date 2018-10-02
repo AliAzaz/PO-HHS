@@ -540,7 +540,7 @@ public class SectionBActivity extends AppCompatActivity {
 
     private boolean UpdateCount() {
 
-        DatabaseHelper db = new DatabaseHelper(this);
+       /* DatabaseHelper db = new DatabaseHelper(this);
         Long updcount1 = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount1));
 
@@ -555,7 +555,20 @@ public class SectionBActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
+        }*/
+
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        int updcount = db.updateCount();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
         }
+
 
 
     }
@@ -657,7 +670,7 @@ public class SectionBActivity extends AppCompatActivity {
         // children
         if (ageInyears < 5) {
             // u2
-            if (ageInyears < 2) {
+            if (ageInyears <= 2) {
                 MainApp.totalImsCount++;
             }
             // u5
@@ -764,7 +777,7 @@ public class SectionBActivity extends AppCompatActivity {
                     (MainApp.fc.getDeviceID() + MainApp.fmc.get_ID()));
             db.updateFamilyMemberID();
             FamilyMembersContract fmc = new FamilyMembersContract(tb02.getText().toString(),
-                    ageInyears < 2 ? "3" : ageInyears < 5 ? "1" : (tb11b.isChecked() && tb04b.isChecked() && (ageInyears > 15 && ageInyears < 49) ? "2" : "0")
+                    ageInyears <= 2 ? "3" : ageInyears < 5 ? "1" : (tb11b.isChecked() && tb04b.isChecked() && (ageInyears > 15 && ageInyears < 49) ? "2" : "0")
                     , String.valueOf(MainApp.counter), tb07.getText().toString().isEmpty() ? tb08m.getText().toString() + "-" + tb08y.getText().toString() : tb07.getText().toString());
             MainApp.familyMembersList.add(fmc);
             return true;

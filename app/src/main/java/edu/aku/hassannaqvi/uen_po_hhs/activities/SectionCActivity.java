@@ -700,108 +700,108 @@ public class SectionCActivity extends Activity {
 
         JSONObject sC = new JSONObject();
 
-        sC.put("po01", tc01a.isChecked() ? "1" : tc01b.isChecked() ? "2" : tc01c.isChecked() ? "3"
+        sC.put("tc01", tc01a.isChecked() ? "1" : tc01b.isChecked() ? "2" : tc01c.isChecked() ? "3"
                 : tc01d.isChecked() ? "4" : tc01e.isChecked() ? "5" : tc01f.isChecked() ? "6"
                 : tc01g.isChecked() ? "7" : tc01h.isChecked() ? "8" : tc01i.isChecked() ? "9" : tc01j.isChecked() ? "10"
                 : tc01k.isChecked() ? "11" : tc01l.isChecked() ? "12" : "0");
 
-        sC.put("po02", tc02a.isChecked() ? "1" : tc02b.isChecked() ? "2" : tc02c.isChecked() ? "3"
+        sC.put("tc02", tc02a.isChecked() ? "1" : tc02b.isChecked() ? "2" : tc02c.isChecked() ? "3"
                 : tc02d.isChecked() ? "4" : tc02e.isChecked() ? "5" : tc02f.isChecked() ? "6"
                 : tc02g.isChecked() ? "7" : tc02h.isChecked() ? "8" : tc02i.isChecked() ? "9" : tc02j.isChecked() ? "10"
                 : tc02k.isChecked() ? "11" : tc02l.isChecked() ? "12" : tc02m.isChecked() ? "13"
                 : tc02n.isChecked() ? "14" : tc02o.isChecked() ? "15" : "0");
 
-        sC.put("po03", tc03a.isChecked() ? "1" : tc03b.isChecked() ? "2" : tc03c.isChecked() ? "3"
+        sC.put("tc03", tc03a.isChecked() ? "1" : tc03b.isChecked() ? "2" : tc03c.isChecked() ? "3"
                 : tc03d.isChecked() ? "4" : tc03e.isChecked() ? "5" : tc03f.isChecked() ? "6"
                 : tc03g.isChecked() ? "7" : tc03h.isChecked() ? "8" : tc03i.isChecked() ? "9" : tc03j.isChecked() ? "10"
                 : tc03k.isChecked() ? "11" : tc03l.isChecked() ? "12" : tc03m.isChecked() ? "13"
                 : tc03n.isChecked() ? "14" : tc03o.isChecked() ? "15" : tc03p.isChecked() ? "16"
                 : tc03q.isChecked() ? "17" : "0");
 
-        sC.put("po04", tc04.getText().toString());
-        sC.put("po05", tc05a.isChecked() ? "1" : tc05b.isChecked() ? "2"
+        sC.put("tc04", tc04.getText().toString());
+        sC.put("tc05", tc05a.isChecked() ? "1" : tc05b.isChecked() ? "2"
                 : tc0588.isChecked() ? "88" : "0");
-        sC.put("po0588x", tc0588x.getText().toString());
-        sC.put("po06", tc06a.isChecked() ? "1" : tc06b.isChecked() ? "2"
+        sC.put("tc0588x", tc0588x.getText().toString());
+        sC.put("tc06", tc06a.isChecked() ? "1" : tc06b.isChecked() ? "2"
                 : tc06c.isChecked() ? "3" : tc06d.isChecked() ? "4"
                 : tc0688.isChecked() ? "88" : "0");
-        sC.put("po0688x", tc0688x.getText().toString());
-        sC.put("po07", tc07a.isChecked() ? "1" : tc07b.isChecked() ? "2" : tc07c.isChecked() ? "3"
+        sC.put("tc0688x", tc0688x.getText().toString());
+        sC.put("tc07", tc07a.isChecked() ? "1" : tc07b.isChecked() ? "2" : tc07c.isChecked() ? "3"
                 : tc07d.isChecked() ? "4" : tc07e.isChecked() ? "5" : tc07f.isChecked() ? "6"
                 : tc07g.isChecked() ? "7" : tc07h.isChecked() ? "8" : tc07i.isChecked() ? "9"
                 : tc07j.isChecked() ? "10" : tc07k.isChecked() ? "11" : tc07l.isChecked() ? "12"
                 : tc0788.isChecked() ? "88" : "0");
-        sC.put("po0788x", tc0788x.getText().toString());
+        sC.put("tc0788x", tc0788x.getText().toString());
 
-        sC.put("po08a", tc08aa.isChecked() ? "1" : tc08ab.isChecked() ? "2" : "0");
-        sC.put("po08b", tc08ba.isChecked() ? "1" : tc08bb.isChecked() ? "2" : "0");
-        sC.put("po08c", tc08ca.isChecked() ? "1" : tc08cb.isChecked() ? "2" : "0");
-        sC.put("po08d", tc08da.isChecked() ? "1" : tc08db.isChecked() ? "2" : "0");
-        sC.put("po08e", tc08ea.isChecked() ? "1" : tc08eb.isChecked() ? "2" : "0");
-        sC.put("po08f", tc08fa.isChecked() ? "1" : tc08fb.isChecked() ? "2" : "0");
-        sC.put("po08g", tc08ga.isChecked() ? "1" : tc08gb.isChecked() ? "2" : "0");
-        sC.put("po08h", tc08ha.isChecked() ? "1" : tc08hb.isChecked() ? "2" : "0");
-        sC.put("po08i", tc08ia.isChecked() ? "1" : tc08ib.isChecked() ? "2" : "0");
-        sC.put("po08j", tc08ja.isChecked() ? "1" : tc08jb.isChecked() ? "2" : "0");
-        sC.put("po08k", tc08ka.isChecked() ? "1" : tc08kb.isChecked() ? "2" : "0");
-        sC.put("po08l", tc08la.isChecked() ? "1" : tc08lb.isChecked() ? "2" : "0");
-        sC.put("po08m", tc08ma.isChecked() ? "1" : tc08mb.isChecked() ? "2" : "0");
-        sC.put("po08n", tc08na.isChecked() ? "1" : tc08nb.isChecked() ? "2" : "0");
-        sC.put("po08o", tc08oa.isChecked() ? "1" : tc08ob.isChecked() ? "2" : "0");
-        sC.put("po08p", tc08pa.isChecked() ? "1" : tc08pb.isChecked() ? "2" : "0");
-        sC.put("po08q", tc08qa.isChecked() ? "1" : tc08qb.isChecked() ? "2" : "0");
-        sC.put("po08r", tc08ra.isChecked() ? "1" : tc08rb.isChecked() ? "2" : "0");
-        sC.put("po08s", tc08sa.isChecked() ? "1" : tc08sb.isChecked() ? "2" : "0");
+        sC.put("tc08a", tc08aa.isChecked() ? "1" : tc08ab.isChecked() ? "2" : "0");
+        sC.put("tc08b", tc08ba.isChecked() ? "1" : tc08bb.isChecked() ? "2" : "0");
+        sC.put("tc08c", tc08ca.isChecked() ? "1" : tc08cb.isChecked() ? "2" : "0");
+        sC.put("tc08d", tc08da.isChecked() ? "1" : tc08db.isChecked() ? "2" : "0");
+        sC.put("tc08e", tc08ea.isChecked() ? "1" : tc08eb.isChecked() ? "2" : "0");
+        sC.put("tc08f", tc08fa.isChecked() ? "1" : tc08fb.isChecked() ? "2" : "0");
+        sC.put("tc08g", tc08ga.isChecked() ? "1" : tc08gb.isChecked() ? "2" : "0");
+        sC.put("tc08h", tc08ha.isChecked() ? "1" : tc08hb.isChecked() ? "2" : "0");
+        sC.put("tc08i", tc08ia.isChecked() ? "1" : tc08ib.isChecked() ? "2" : "0");
+        sC.put("tc08j", tc08ja.isChecked() ? "1" : tc08jb.isChecked() ? "2" : "0");
+        sC.put("tc08k", tc08ka.isChecked() ? "1" : tc08kb.isChecked() ? "2" : "0");
+        sC.put("tc08l", tc08la.isChecked() ? "1" : tc08lb.isChecked() ? "2" : "0");
+        sC.put("tc08m", tc08ma.isChecked() ? "1" : tc08mb.isChecked() ? "2" : "0");
+        sC.put("tc08n", tc08na.isChecked() ? "1" : tc08nb.isChecked() ? "2" : "0");
+        sC.put("tc08o", tc08oa.isChecked() ? "1" : tc08ob.isChecked() ? "2" : "0");
+        sC.put("tc08p", tc08pa.isChecked() ? "1" : tc08pb.isChecked() ? "2" : "0");
+        sC.put("tc08q", tc08qa.isChecked() ? "1" : tc08qb.isChecked() ? "2" : "0");
+        sC.put("tc08r", tc08ra.isChecked() ? "1" : tc08rb.isChecked() ? "2" : "0");
+        sC.put("tc08s", tc08sa.isChecked() ? "1" : tc08sb.isChecked() ? "2" : "0");
 
-        sC.put("po09a", tc09aa.isChecked() ? "1" : tc09ab.isChecked() ? "2" : "0");
-        sC.put("po09b", tc09ba.isChecked() ? "1" : tc09bb.isChecked() ? "2" : "0");
-        sC.put("po09c", tc09ca.isChecked() ? "1" : tc09cb.isChecked() ? "2" : "0");
-        sC.put("po09d", tc09da.isChecked() ? "1" : tc09db.isChecked() ? "2" : "0");
-        sC.put("po09e", tc09ea.isChecked() ? "1" : tc09eb.isChecked() ? "2" : "0");
-        sC.put("po09f", tc09fa.isChecked() ? "1" : tc09fb.isChecked() ? "2" : "0");
-        sC.put("po09g", tc09ga.isChecked() ? "1" : tc09gb.isChecked() ? "2" : "0");
-        sC.put("po09h", tc09ha.isChecked() ? "1" : tc09hb.isChecked() ? "2" : "0");
-        sC.put("po09i", tc09ia.isChecked() ? "1" : tc09ib.isChecked() ? "2" : "0");
+        sC.put("tc09a", tc09aa.isChecked() ? "1" : tc09ab.isChecked() ? "2" : "0");
+        sC.put("tc09b", tc09ba.isChecked() ? "1" : tc09bb.isChecked() ? "2" : "0");
+        sC.put("tc09c", tc09ca.isChecked() ? "1" : tc09cb.isChecked() ? "2" : "0");
+        sC.put("tc09d", tc09da.isChecked() ? "1" : tc09db.isChecked() ? "2" : "0");
+        sC.put("tc09e", tc09ea.isChecked() ? "1" : tc09eb.isChecked() ? "2" : "0");
+        sC.put("tc09f", tc09fa.isChecked() ? "1" : tc09fb.isChecked() ? "2" : "0");
+        sC.put("tc09g", tc09ga.isChecked() ? "1" : tc09gb.isChecked() ? "2" : "0");
+        sC.put("tc09h", tc09ha.isChecked() ? "1" : tc09hb.isChecked() ? "2" : "0");
+        sC.put("tc09i", tc09ia.isChecked() ? "1" : tc09ib.isChecked() ? "2" : "0");
 
-        sC.put("po10", tc10a.isChecked() ? "1" : tc10b.isChecked() ? "2" : "0");
-        sC.put("po11", tc11a.isChecked() ? "1" : tc11b.isChecked() ? "2" : "0");
+        sC.put("tc10", tc10a.isChecked() ? "1" : tc10b.isChecked() ? "2" : "0");
+        sC.put("tc11", tc11a.isChecked() ? "1" : tc11b.isChecked() ? "2" : "0");
 
-        sC.put("po12", tc12a.isChecked() ? "1" : tc12b.isChecked() ? "2"
+        sC.put("tc12", tc12a.isChecked() ? "1" : tc12b.isChecked() ? "2"
                 : tc12888.isChecked() ? "888" : "0");
-        sC.put("po12ac", tc12ac.getText().toString());
-        sC.put("po12kn", tc12kn.getText().toString());
+        sC.put("tc12ac", tc12ac.getText().toString());
+        sC.put("tc12kn", tc12kn.getText().toString());
 
-        sC.put("po13", tc13a.isChecked() ? "1" : tc13b.isChecked() ? "2" : "0");
+        sC.put("tc13", tc13a.isChecked() ? "1" : tc13b.isChecked() ? "2" : "0");
 
-        sC.put("po14a", tc14a.getText().toString());
-        sC.put("po14b", tc14b.getText().toString());
-        sC.put("po14c", tc14c.getText().toString());
-        sC.put("po14d", tc14d.getText().toString());
-        sC.put("po14e", tc14e.getText().toString());
-        sC.put("po14f", tc14f.getText().toString());
+        sC.put("tc14a", tc14a.getText().toString());
+        sC.put("tc14b", tc14b.getText().toString());
+        sC.put("tc14c", tc14c.getText().toString());
+        sC.put("tc14d", tc14d.getText().toString());
+        sC.put("tc14e", tc14e.getText().toString());
+        sC.put("tc14f", tc14f.getText().toString());
 
-        sC.put("po15", tc15a.isChecked() ? "1" : tc15b.isChecked() ? "2"
+        sC.put("tc15", tc15a.isChecked() ? "1" : tc15b.isChecked() ? "2"
                 : tc15888.isChecked() ? "888" : "0");
 
-        sC.put("po16", tc16a.isChecked() ? "1" : tc16b.isChecked() ? "2" : tc16c.isChecked() ? "3"
+        sC.put("tc16", tc16a.isChecked() ? "1" : tc16b.isChecked() ? "2" : tc16c.isChecked() ? "3"
                 : tc16d.isChecked() ? "4" : tc16e.isChecked() ? "5" : tc16f.isChecked() ? "6"
                 : tc16g.isChecked() ? "7" : tc16h.isChecked() ? "8" : tc1688.isChecked() ? "88"
                 : "0");
-        sC.put("po1688x", tc1688x.getText().toString());
+        sC.put("tc1688x", tc1688x.getText().toString());
 
-        sC.put("po17", tc17888.isChecked() ? "888" : tc17.getText().toString());
+        sC.put("tc17", tc17888.isChecked() ? "888" : tc17.getText().toString());
 
-        sC.put("po18", tc18a.isChecked() ? "1" : tc18b.isChecked() ? "2"
+        sC.put("tc18", tc18a.isChecked() ? "1" : tc18b.isChecked() ? "2"
                 : "0");
-        sC.put("po19", tc19.getText().toString());
+        sC.put("tc19", tc19.getText().toString());
 
       /*  if (td06a.isChecked()) {
             MainApp.TotalDeceasedMotherCount = Integer.valueOf(td07.getText().toString().isEmpty() ? "0" : td07.getText().toString());
         }
 */
-        sC.put("po20", tc20a.isChecked() ? "1" : tc20b.isChecked() ? "2"
+        sC.put("tc20", tc20a.isChecked() ? "1" : tc20b.isChecked() ? "2"
                 : "0");
-        sC.put("po21", tc21.getText().toString());
+        sC.put("tc21", tc21.getText().toString());
 
         if (tc20a.isChecked()) {
             MainApp.TotalDeceasedChildCount = Integer.valueOf(tc21.getText().toString().isEmpty() ? "0" : tc21.getText().toString());
@@ -820,7 +820,7 @@ public class SectionCActivity extends Activity {
             tc01b.setFocusable(true);
             tc01b.setFocusableInTouchMode(true);
             tc01b.requestFocus();
-            Log.i(TAG, "po01: This data is Required!");
+            Log.i(TAG, "tc01: This data is Required!");
             return false;
         } else {
             tc01b.setError(null);
@@ -833,7 +833,7 @@ public class SectionCActivity extends Activity {
             tc02b.setFocusable(true);
             tc02b.setFocusableInTouchMode(true);
             tc02b.requestFocus();
-            Log.i(TAG, "po02: This data is Required!");
+            Log.i(TAG, "tc02: This data is Required!");
             return false;
         } else {
             tc02b.setError(null);
@@ -846,7 +846,7 @@ public class SectionCActivity extends Activity {
             tc03b.setFocusable(true);
             tc03b.setFocusableInTouchMode(true);
             tc03b.requestFocus();
-            Log.i(TAG, "po03: This data is Required!");
+            Log.i(TAG, "tc03: This data is Required!");
             return false;
         } else {
             tc03b.setError(null);
@@ -857,7 +857,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc04), Toast.LENGTH_SHORT).show();
             tc04.setError("This data is Required! ");    // Set Error on last radio button
             tc04.requestFocus();
-            Log.i(TAG, "po04: This data is Required!");
+            Log.i(TAG, "tc04: This data is Required!");
             return false;
         } else {
             tc04.setError(null);
@@ -867,7 +867,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc04), Toast.LENGTH_SHORT).show();
             tc04.setError("Range is 1 to 30");    // Set Error on last radio button
             tc04.requestFocus();
-            Log.i(TAG, "po04: Range is 1 to 30");
+            Log.i(TAG, "tc04: Range is 1 to 30");
             return false;
         } else {
             tc04.setError(null);
@@ -880,7 +880,7 @@ public class SectionCActivity extends Activity {
             tc05a.setFocusable(true);
             tc05a.setFocusableInTouchMode(true);
             tc05a.requestFocus();
-            Log.i(TAG, "po05: This data is Required!");
+            Log.i(TAG, "tc05: This data is Required!");
             return false;
         } else {
             tc0588.setError(null);
@@ -889,7 +889,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
             tc0588x.setError("This data is Required! ");    // Set Error on last radio button
             tc0588x.requestFocus();
-            Log.i(TAG, "po05: This data is Required!");
+            Log.i(TAG, "tc05: This data is Required!");
             return false;
         } else {
             tc0588x.setError(null);
@@ -926,7 +926,7 @@ public class SectionCActivity extends Activity {
             tc07a.setFocusable(true);
             tc07a.setFocusableInTouchMode(true);
             tc07a.requestFocus();
-            Log.i(TAG, "po07: This data is Required!");
+            Log.i(TAG, "tc07: This data is Required!");
             return false;
         } else {
             tc0788.setError(null);
@@ -935,7 +935,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
             tc0788x.setError("This data is Required! ");    // Set Error on last radio button
             tc0788x.requestFocus();
-            Log.i(TAG, "po07: This data is Required!");
+            Log.i(TAG, "tc07: This data is Required!");
             return false;
         } else {
             tc0788x.setError(null);
@@ -949,7 +949,7 @@ public class SectionCActivity extends Activity {
             tc08ab.setFocusable(true);
             tc08ab.setFocusableInTouchMode(true);
             tc08ab.requestFocus();
-            Log.i(TAG, "po08a: This data is Required!");
+            Log.i(TAG, "tc08a: This data is Required!");
             return false;
         } else {
             tc08ab.setError(null);
@@ -961,7 +961,7 @@ public class SectionCActivity extends Activity {
             tc08bb.setFocusable(true);
             tc08bb.setFocusableInTouchMode(true);
             tc08bb.requestFocus();
-            Log.i(TAG, "po08b: This data is Required!");
+            Log.i(TAG, "tc08b: This data is Required!");
             return false;
         } else {
             tc08bb.setError(null);
@@ -973,7 +973,7 @@ public class SectionCActivity extends Activity {
             tc08cb.setFocusable(true);
             tc08cb.setFocusableInTouchMode(true);
             tc08cb.requestFocus();
-            Log.i(TAG, "po08c: This data is Required!");
+            Log.i(TAG, "tc08c: This data is Required!");
             return false;
         } else {
             tc08cb.setError(null);
@@ -985,7 +985,7 @@ public class SectionCActivity extends Activity {
             tc08db.setFocusable(true);
             tc08db.setFocusableInTouchMode(true);
             tc08db.requestFocus();
-            Log.i(TAG, "po08d: This data is Required!");
+            Log.i(TAG, "tc08d: This data is Required!");
             return false;
         } else {
             tc08db.setError(null);
@@ -997,7 +997,7 @@ public class SectionCActivity extends Activity {
             tc08eb.setFocusable(true);
             tc08eb.setFocusableInTouchMode(true);
             tc08eb.requestFocus();
-            Log.i(TAG, "po08e: This data is Required!");
+            Log.i(TAG, "tc08e: This data is Required!");
             return false;
         } else {
             tc08eb.setError(null);
@@ -1009,7 +1009,7 @@ public class SectionCActivity extends Activity {
             tc08fb.setFocusable(true);
             tc08fb.setFocusableInTouchMode(true);
             tc08fb.requestFocus();
-            Log.i(TAG, "po08f: This data is Required!");
+            Log.i(TAG, "tc08f: This data is Required!");
             return false;
         } else {
             tc08fb.setError(null);
@@ -1021,7 +1021,7 @@ public class SectionCActivity extends Activity {
             tc08gb.setFocusable(true);
             tc08gb.setFocusableInTouchMode(true);
             tc08gb.requestFocus();
-            Log.i(TAG, "po08g: This data is Required!");
+            Log.i(TAG, "tc08g: This data is Required!");
             return false;
         } else {
             tc08gb.setError(null);
@@ -1033,7 +1033,7 @@ public class SectionCActivity extends Activity {
             tc08hb.setFocusable(true);
             tc08hb.setFocusableInTouchMode(true);
             tc08hb.requestFocus();
-            Log.i(TAG, "po08h: This data is Required!");
+            Log.i(TAG, "tc08h: This data is Required!");
             return false;
         } else {
             tc08hb.setError(null);
@@ -1045,7 +1045,7 @@ public class SectionCActivity extends Activity {
             tc08ib.setFocusable(true);
             tc08ib.setFocusableInTouchMode(true);
             tc08ib.requestFocus();
-            Log.i(TAG, "po08i: This data is Required!");
+            Log.i(TAG, "tc08i: This data is Required!");
             return false;
         } else {
             tc08ib.setError(null);
@@ -1057,7 +1057,7 @@ public class SectionCActivity extends Activity {
             tc08jb.setFocusable(true);
             tc08jb.setFocusableInTouchMode(true);
             tc08jb.requestFocus();
-            Log.i(TAG, "po08j: This data is Required!");
+            Log.i(TAG, "tc08j: This data is Required!");
             return false;
         } else {
             tc08jb.setError(null);
@@ -1069,7 +1069,7 @@ public class SectionCActivity extends Activity {
             tc08kb.setFocusable(true);
             tc08kb.setFocusableInTouchMode(true);
             tc08kb.requestFocus();
-            Log.i(TAG, "po08k: This data is Required!");
+            Log.i(TAG, "tc08k: This data is Required!");
             return false;
         } else {
             tc08kb.setError(null);
@@ -1081,7 +1081,7 @@ public class SectionCActivity extends Activity {
             tc08lb.setFocusable(true);
             tc08lb.setFocusableInTouchMode(true);
             tc08lb.requestFocus();
-            Log.i(TAG, "po08l: This data is Required!");
+            Log.i(TAG, "tc08l: This data is Required!");
             return false;
         } else {
             tc08lb.setError(null);
@@ -1093,7 +1093,7 @@ public class SectionCActivity extends Activity {
             tc08mb.setFocusable(true);
             tc08mb.setFocusableInTouchMode(true);
             tc08mb.requestFocus();
-            Log.i(TAG, "po08m: This data is Required!");
+            Log.i(TAG, "tc08m: This data is Required!");
             return false;
         } else {
             tc08mb.setError(null);
@@ -1105,7 +1105,7 @@ public class SectionCActivity extends Activity {
             tc08nb.setFocusable(true);
             tc08nb.setFocusableInTouchMode(true);
             tc08nb.requestFocus();
-            Log.i(TAG, "po08n: This data is Required!");
+            Log.i(TAG, "tc08n: This data is Required!");
             return false;
         } else {
             tc08nb.setError(null);
@@ -1117,7 +1117,7 @@ public class SectionCActivity extends Activity {
             tc08ob.setFocusable(true);
             tc08ob.setFocusableInTouchMode(true);
             tc08ob.requestFocus();
-            Log.i(TAG, "po08o: This data is Required!");
+            Log.i(TAG, "tc08o: This data is Required!");
             return false;
         } else {
             tc08ob.setError(null);
@@ -1129,7 +1129,7 @@ public class SectionCActivity extends Activity {
             tc08pb.setFocusable(true);
             tc08pb.setFocusableInTouchMode(true);
             tc08pb.requestFocus();
-            Log.i(TAG, "po08p: This data is Required!");
+            Log.i(TAG, "tc08p: This data is Required!");
             return false;
         } else {
             tc08pb.setError(null);
@@ -1141,7 +1141,7 @@ public class SectionCActivity extends Activity {
             tc08qb.setFocusable(true);
             tc08qb.setFocusableInTouchMode(true);
             tc08qb.requestFocus();
-            Log.i(TAG, "po08q: This data is Required!");
+            Log.i(TAG, "tc08q: This data is Required!");
             return false;
         } else {
             tc08qb.setError(null);
@@ -1153,7 +1153,7 @@ public class SectionCActivity extends Activity {
             tc08rb.setFocusable(true);
             tc08rb.setFocusableInTouchMode(true);
             tc08rb.requestFocus();
-            Log.i(TAG, "po08r: This data is Required!");
+            Log.i(TAG, "tc08r: This data is Required!");
             return false;
         } else {
             tc08rb.setError(null);
@@ -1165,7 +1165,7 @@ public class SectionCActivity extends Activity {
             tc08sb.setFocusable(true);
             tc08sb.setFocusableInTouchMode(true);
             tc08sb.requestFocus();
-            Log.i(TAG, "po08s: This data is Required!");
+            Log.i(TAG, "tc08s: This data is Required!");
             return false;
         } else {
             tc08sb.setError(null);
@@ -1179,7 +1179,7 @@ public class SectionCActivity extends Activity {
             tc09ab.setFocusable(true);
             tc09ab.setFocusableInTouchMode(true);
             tc09ab.requestFocus();
-            Log.i(TAG, "po09a: This data is Required!");
+            Log.i(TAG, "tc09a: This data is Required!");
             return false;
         } else {
             tc09ab.setError(null);
@@ -1191,7 +1191,7 @@ public class SectionCActivity extends Activity {
             tc09bb.setFocusable(true);
             tc09bb.setFocusableInTouchMode(true);
             tc09bb.requestFocus();
-            Log.i(TAG, "po09b: This data is Required!");
+            Log.i(TAG, "tc09b: This data is Required!");
             return false;
         } else {
             tc09bb.setError(null);
@@ -1203,7 +1203,7 @@ public class SectionCActivity extends Activity {
             tc09cb.setFocusable(true);
             tc09cb.setFocusableInTouchMode(true);
             tc09cb.requestFocus();
-            Log.i(TAG, "po09c: This data is Required!");
+            Log.i(TAG, "tc09c: This data is Required!");
             return false;
         } else {
             tc09cb.setError(null);
@@ -1215,7 +1215,7 @@ public class SectionCActivity extends Activity {
             tc09db.setFocusable(true);
             tc09db.setFocusableInTouchMode(true);
             tc09db.requestFocus();
-            Log.i(TAG, "po09d: This data is Required!");
+            Log.i(TAG, "tc09d: This data is Required!");
             return false;
         } else {
             tc09db.setError(null);
@@ -1227,7 +1227,7 @@ public class SectionCActivity extends Activity {
             tc09eb.setFocusable(true);
             tc09eb.setFocusableInTouchMode(true);
             tc09eb.requestFocus();
-            Log.i(TAG, "po09e: This data is Required!");
+            Log.i(TAG, "tc09e: This data is Required!");
             return false;
         } else {
             tc09eb.setError(null);
@@ -1239,7 +1239,7 @@ public class SectionCActivity extends Activity {
             tc09fb.setFocusable(true);
             tc09fb.setFocusableInTouchMode(true);
             tc09fb.requestFocus();
-            Log.i(TAG, "po09f: This data is Required!");
+            Log.i(TAG, "tc09f: This data is Required!");
             return false;
         } else {
             tc09fb.setError(null);
@@ -1251,7 +1251,7 @@ public class SectionCActivity extends Activity {
             tc09gb.setFocusable(true);
             tc09gb.setFocusableInTouchMode(true);
             tc09gb.requestFocus();
-            Log.i(TAG, "po09g: This data is Required!");
+            Log.i(TAG, "tc09g: This data is Required!");
             return false;
         } else {
             tc09gb.setError(null);
@@ -1263,7 +1263,7 @@ public class SectionCActivity extends Activity {
             tc09hb.setFocusable(true);
             tc09hb.setFocusableInTouchMode(true);
             tc09hb.requestFocus();
-            Log.i(TAG, "po09h: This data is Required!");
+            Log.i(TAG, "tc09h: This data is Required!");
             return false;
         } else {
             tc09hb.setError(null);
@@ -1275,7 +1275,7 @@ public class SectionCActivity extends Activity {
             tc09ib.setFocusable(true);
             tc09ib.setFocusableInTouchMode(true);
             tc09ib.requestFocus();
-            Log.i(TAG, "po09i: This data is Required!");
+            Log.i(TAG, "tc09i: This data is Required!");
             return false;
         } else {
             tc09ib.setError(null);
@@ -1288,7 +1288,7 @@ public class SectionCActivity extends Activity {
             tc10b.setFocusable(true);
             tc10b.setFocusableInTouchMode(true);
             tc10b.requestFocus();
-            Log.i(TAG, "po10: This data is Required!");
+            Log.i(TAG, "tc10: This data is Required!");
             return false;
         } else {
             tc10b.setError(null);
@@ -1301,7 +1301,7 @@ public class SectionCActivity extends Activity {
             tc11b.setFocusable(true);
             tc11b.setFocusableInTouchMode(true);
             tc11b.requestFocus();
-            Log.i(TAG, "po11: This data is Required!");
+            Log.i(TAG, "tc11: This data is Required!");
             return false;
         } else {
             tc11b.setError(null);
@@ -1316,7 +1316,7 @@ public class SectionCActivity extends Activity {
                 tc12a.setFocusable(true);
                 tc12a.setFocusableInTouchMode(true);
                 tc12a.requestFocus();
-                Log.i(TAG, "po12: This data is Required!");
+                Log.i(TAG, "tc12: This data is Required!");
                 return false;
             } else {
                 tc12888.setError(null);
@@ -1326,7 +1326,7 @@ public class SectionCActivity extends Activity {
                     Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc12a), Toast.LENGTH_SHORT).show();
                     tc12ac.setError("This data is Required! ");    // Set Error on last radio button
                     tc12ac.requestFocus();
-                    Log.i(TAG, "po12ac: This data is Required!");
+                    Log.i(TAG, "tc12ac: This data is Required!");
                     return false;
                 } else {
                     tc12ac.setError(null);
@@ -1335,7 +1335,7 @@ public class SectionCActivity extends Activity {
                     Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc12a), Toast.LENGTH_SHORT).show();
                     tc12ac.setError("Greater then 0! ");    // Set Error on last radio button
                     tc12ac.requestFocus();
-                    Log.i(TAG, "po12ac: Greater then 0!");
+                    Log.i(TAG, "tc12ac: Greater then 0!");
                     return false;
                 } else {
                     tc12ac.setError(null);
@@ -1346,7 +1346,7 @@ public class SectionCActivity extends Activity {
                     Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc12b), Toast.LENGTH_SHORT).show();
                     tc12kn.setError("This data is Required! ");    // Set Error on last radio button
                     tc12kn.requestFocus();
-                    Log.i(TAG, "po12kn: This data is Required!");
+                    Log.i(TAG, "tc12kn: This data is Required!");
                     return false;
                 } else {
                     tc12kn.setError(null);
@@ -1355,7 +1355,7 @@ public class SectionCActivity extends Activity {
                     Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc12b), Toast.LENGTH_SHORT).show();
                     tc12kn.setError("Greater then 0! ");    // S et Error on last radio button
                     tc12kn.requestFocus();
-                    Log.i(TAG, "po12kn: Greater then 0!");
+                    Log.i(TAG, "tc12kn: Greater then 0!");
                     return false;
                 } else {
                     tc12kn.setError(null);
@@ -1372,7 +1372,7 @@ public class SectionCActivity extends Activity {
             tc13b.setFocusable(true);
             tc13b.setFocusableInTouchMode(true);
             tc13b.requestFocus();
-            Log.i(TAG, "po13: This data is Required!");
+            Log.i(TAG, "tc13: This data is Required!");
             return false;
         } else {
             tc13b.setError(null);
@@ -1386,7 +1386,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc14a), Toast.LENGTH_SHORT).show();
                 tc14a.setError("This data is Required! ");    // Set Error on last radio button
                 tc14a.requestFocus();
-                Log.i(TAG, "po14a: This data is Required!");
+                Log.i(TAG, "tc14a: This data is Required!");
                 return false;
             } else {
                 tc14a.setError(null);
@@ -1395,7 +1395,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc14b), Toast.LENGTH_SHORT).show();
                 tc14b.setError("This data is Required! ");    // Set Error on last radio button
                 tc14b.requestFocus();
-                Log.i(TAG, "po14b: This data is Required!");
+                Log.i(TAG, "tc14b: This data is Required!");
                 return false;
             } else {
                 tc14b.setError(null);
@@ -1404,7 +1404,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc14c), Toast.LENGTH_SHORT).show();
                 tc14c.setError("This data is Required! ");    // Set Error on last radio button
                 tc14c.requestFocus();
-                Log.i(TAG, "po14c: This data is Required!");
+                Log.i(TAG, "tc14c: This data is Required!");
                 return false;
             } else {
                 tc14c.setError(null);
@@ -1413,7 +1413,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc14d), Toast.LENGTH_SHORT).show();
                 tc14d.setError("This data is Required! ");    // Set Error on last radio button
                 tc14d.requestFocus();
-                Log.i(TAG, "po14d: This data is Required!");
+                Log.i(TAG, "tc14d: This data is Required!");
                 return false;
             } else {
                 tc14d.setError(null);
@@ -1422,7 +1422,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc14e), Toast.LENGTH_SHORT).show();
                 tc14e.setError("This data is Required! ");    // Set Error on last radio button
                 tc14e.requestFocus();
-                Log.i(TAG, "po14e: This data is Required!");
+                Log.i(TAG, "tc14e: This data is Required!");
                 return false;
             } else {
                 tc14e.setError(null);
@@ -1431,7 +1431,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc14f), Toast.LENGTH_SHORT).show();
                 tc14f.setError("This data is Required! ");    // Set Error on last radio button
                 tc14f.requestFocus();
-                Log.i(TAG, "po14f: This data is Required!");
+                Log.i(TAG, "tc14f: This data is Required!");
                 return false;
             } else {
                 tc14f.setError(null);
@@ -1456,7 +1456,7 @@ public class SectionCActivity extends Activity {
             tc15a.setFocusable(true);
             tc15a.setFocusableInTouchMode(true);
             tc15a.requestFocus();
-            Log.i(TAG, "po15: This data is Required!");
+            Log.i(TAG, "tc15: This data is Required!");
             return false;
         } else {
             tc15888.setError(null);
@@ -1469,7 +1469,7 @@ public class SectionCActivity extends Activity {
             tc16a.setFocusable(true);
             tc16a.setFocusableInTouchMode(true);
             tc16a.requestFocus();
-            Log.i(TAG, "po16: This data is Required!");
+            Log.i(TAG, "tc16: This data is Required!");
             return false;
         } else {
             tc1688.setError(null);
@@ -1478,7 +1478,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
             tc1688x.setError("This data is Required! ");    // Set Error on last radio button
             tc1688x.requestFocus();
-            Log.i(TAG, "po1688: This data is Required!");
+            Log.i(TAG, "tc1688: This data is Required!");
             return false;
         } else {
             tc1688x.setError(null);
@@ -1489,7 +1489,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc17), Toast.LENGTH_SHORT).show();
             tc17888.setError("This data is Required!");    // Set Error on last radio button
             tc17888.requestFocus();
-            Log.i(TAG, "po17: This data is Required!");
+            Log.i(TAG, "tc17: This data is Required!");
             return false;
         } else {
             tc17888.setError(null);
@@ -1498,7 +1498,7 @@ public class SectionCActivity extends Activity {
             Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc17), Toast.LENGTH_SHORT).show();
             tc17.setError("Range must be greater than 2000");    // Set Error on last radio button
 
-            Log.i(TAG, "po17: Range from 0 to 1000!");
+            Log.i(TAG, "tc17: Range from 0 to 1000!");
             return false;
         } else {
             tc17.setError(null);
@@ -1543,7 +1543,7 @@ public class SectionCActivity extends Activity {
             tc18b.setFocusable(true);
             tc18b.setFocusableInTouchMode(true);
             tc18b.requestFocus();
-            Log.i(TAG, "po18: This data is Required!");
+            Log.i(TAG, "tc18: This data is Required!");
             return false;
         } else {
             tc18b.setError(null);
@@ -1554,7 +1554,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc19), Toast.LENGTH_SHORT).show();
                 tc19.setError("This data is Required!");    // Set Error on last radio button
                 tc19.requestFocus();
-                Log.i(TAG, "po19: This data is Required!");
+                Log.i(TAG, "tc19: This data is Required!");
                 return false;
             } else {
                 tc19.setError(null);
@@ -1563,7 +1563,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc19), Toast.LENGTH_SHORT).show();
                 tc19.setError("could not greater than " + MainApp.mwraCount + "!");    // Set Error on last radio button
                 tc19.requestFocus();
-                Log.i(TAG, "po19: Greater then 0!");
+                Log.i(TAG, "tc19: Greater then 0!");
                 return false;
             } else {
                 tc19.setError(null);
@@ -1578,7 +1578,7 @@ public class SectionCActivity extends Activity {
             tc20b.setFocusable(true);
             tc20b.setFocusableInTouchMode(true);
             tc20b.requestFocus();
-            Log.i(TAG, "po20: This data is Required!");
+            Log.i(TAG, "tc20: This data is Required!");
             return false;
         } else {
             tc20b.setError(null);
@@ -1589,7 +1589,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc21), Toast.LENGTH_SHORT).show();
                 tc21.setError("This data is Required!");    // Set Error on last radio button
                 tc21.requestFocus();
-                Log.i(TAG, "po21: This data is Required!");
+                Log.i(TAG, "tc21: This data is Required!");
                 return false;
             } else {
                 tc21.setError(null);
@@ -1598,7 +1598,7 @@ public class SectionCActivity extends Activity {
                 Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc21), Toast.LENGTH_SHORT).show();
                 tc21.setError("value must be in between 1 to 9");    // Set Error on last radio button
                 tc21.requestFocus();
-                Log.i(TAG, "po21: Greater then 0!");
+                Log.i(TAG, "tc21: Greater then 0!");
                 return false;
             } else {
                 tc21.setError(null);

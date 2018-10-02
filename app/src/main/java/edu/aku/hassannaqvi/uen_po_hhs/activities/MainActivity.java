@@ -502,9 +502,9 @@ public class MainActivity extends Activity {
             Toast.makeText(getApplicationContext(), "Syncing MWRAs", Toast.LENGTH_SHORT).show();
             new SyncMwras(this).execute();
 
-            Toast.makeText(getApplicationContext(), "Syncing Deceased Mother", Toast.LENGTH_SHORT).show();
+           /* Toast.makeText(getApplicationContext(), "Syncing Deceased Mother", Toast.LENGTH_SHORT).show();
             new SyncDeceasedMother(this).execute();
-
+*/
             Toast.makeText(getApplicationContext(), "Syncing Deceased Child", Toast.LENGTH_SHORT).show();
             new SyncDeceasedChild(this).execute();
 
