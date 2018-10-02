@@ -1434,7 +1434,7 @@ public class SectionHBActivity extends Activity {
 
         if (thb03a.isChecked()) {
             //        04
-            if (!thb04.getText().toString().isEmpty()) {
+            if (thb04.getText().toString().isEmpty()) {
                 Toast.makeText(this, "ERROR(empty): " + getString(R.string.thb04), Toast.LENGTH_SHORT).show();
                 thb04.setError("This data is required");
                 Log.i(TAG, "thb04: This data is Required!");

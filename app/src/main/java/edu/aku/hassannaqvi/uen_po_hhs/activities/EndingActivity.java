@@ -108,6 +108,9 @@ public class EndingActivity extends Activity {
                 MainApp.TotalChildCount = 0;
                 MainApp.imsCount = 1;
                 MainApp.totalImsCount = 0;
+                MainApp.motherList.clear();
+                MainApp.fatherList.clear();
+                MainApp.childList.clear();
 
 //                MainApp.CounterDeceasedMother = 0;
                 MainApp.CounterDeceasedChild = 0;
@@ -136,7 +139,7 @@ public class EndingActivity extends Activity {
         }
     }
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
         Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         MainApp.fc.setIstatus(istatus1.isChecked() ? "1"

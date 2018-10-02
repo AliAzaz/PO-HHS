@@ -532,8 +532,7 @@ public class SectionBActivity extends AppCompatActivity {
     void onBtnEndClick() {
         //TODO implement
         MainApp.endActivity(this, this);
-        MainApp.motherList.clear();
-        MainApp.fatherList.clear();
+
 
     }
 
