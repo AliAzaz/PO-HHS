@@ -264,7 +264,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:hint="@string/name"
+                    android:hint="@string/tg04e"
                     android:text='@{tg04e.checked? tg01bx.getText.toString : ""}'
                     android:visibility='@{tg04e.checked? View.VISIBLE : View.GONE}' />
 
@@ -281,7 +281,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:hint="@string/name"
+                    android:hint="@string/tg04f"
                     android:text='@{tg04f.checked? tg01bx.getText.toString : ""}'
                     android:visibility='@{tg04f.checked? View.VISIBLE : View.GONE}' />
 
@@ -298,7 +298,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:hint="@string/name"
+                    android:hint="@string/tg04g"
                     android:text='@{tg04g.checked? tg01bx.getText.toString : ""}'
                     android:visibility='@{tg04g.checked? View.VISIBLE : View.GONE}' />
 
@@ -314,7 +314,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:hint="@string/other"
+                    android:hint="@string/tg04h"
                     android:text='@{tg04h.checked? tg01bx.getText.toString : ""}'
                     android:visibility='@{tg04h.checked? View.VISIBLE : View.GONE}' />
 
@@ -325,6 +325,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/tg04i" />
+
+                <EditText
+                    android:id="@+id/tg04ix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="@string/other"
+                    android:text='@{tg04i.checked? tg04ix.getText.toString : ""}'
+                    android:visibility='@{tg04i.checked? View.VISIBLE : View.GONE}' />
 
 
             </LinearLayout>
@@ -406,13 +415,13 @@
                     android:text="@string/tg05h" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/tg05hx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/other"
-                    android:text='@{tg05h.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg05h.checked? View.VISIBLE : View.GONE}' />
+                     />
 
 
                 <CheckBox
@@ -559,13 +568,13 @@
                     android:text="@string/tg06p" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/tg06px"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/other"
-                    android:text='@{tg06p.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg06p.checked? View.VISIBLE : View.GONE}' />
+                    />
 
 
                 <CheckBox
@@ -631,13 +640,13 @@
                     android:text="@string/tg07e" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/tg07ex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/other"
-                    android:text='@{tg07e.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg07e.checked? View.VISIBLE : View.GONE}' />
+                    />
 
 
                 <CheckBox
@@ -801,13 +810,13 @@
                     android:text="@string/other" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/tg0896x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/other"
-                    android:text='@{tg0896.checked? tg0896x.getText.toString : ""}'
-                    android:visibility='@{tg0896.checked? View.VISIBLE : View.GONE}' />
+                    />
 
 
                 <CheckBox
@@ -915,13 +924,13 @@
                     android:text="@string/other" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/tg10ex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/other"
-                    android:text='@{tg10e.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg10e.checked? View.VISIBLE : View.GONE}' />
+                   />
 
 
                 <CheckBox
