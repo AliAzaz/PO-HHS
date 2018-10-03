@@ -34,7 +34,6 @@ import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
-import edu.aku.hassannaqvi.uen_po_hhs.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.SectionIIMContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
@@ -1574,12 +1573,12 @@ public class SectionIActivity extends AppCompatActivity
 
 
             MainApp.childsMap.put("....", null);
-            MainApp.lstChild.add("....");
+
 
             for (byte i = 0; i < MainApp.familyMembersList.size(); i++) {
                 if (MainApp.familyMembersList.get(i).getAgeLess5().equals("3")) {
-                    MainApp.childsMap.put(MainApp.familyMembersList.get(i).getName(), new FamilyMembersContract(MainApp.familyMembersList.get(i)));
-                    MainApp.lstChild.add(MainApp.familyMembersList.get(i).getName());
+                    //MainApp.childsMap.put(MainApp.familyMembersList.get(i).getName(), new FamilyMembersContract(MainApp.familyMembersList.get(i)));
+                    //MainApp.lstChild.add(MainApp.familyMembersList.get(i).getName());
 
                 }
             }
