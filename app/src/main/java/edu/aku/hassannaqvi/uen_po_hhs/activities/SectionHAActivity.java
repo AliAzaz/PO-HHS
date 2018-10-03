@@ -1965,7 +1965,7 @@ public class SectionHAActivity extends Activity {
 
         sHA.put("tha01", bi.tha01a.isChecked() ? "1" : bi.tha01b.isChecked() ? "2" : bi.tha01888.isChecked() ? "98" : "0");
         sHA.put("tha02", bi.tha02.getText().toString());
-        sHA.put("tha03", bi.tha03.getSelectedItem().toString());
+        sHA.put("tha03", bi.tha03.getSelectedItem().toString().equalsIgnoreCase("....") ? "" : bi.tha03.getSelectedItem().toString());
         sHA.put("tha04", bi.tha04.getText().toString());
         sHA.put("tha05", bi.tha05a.isChecked() ? "1" : bi.tha05b.isChecked() ? "2" : bi.tha05888.isChecked() ? "98" : "0");
         sHA.put("tha06", bi.tha06a.isChecked() ? "1" : bi.tha06b.isChecked() ? "2" : bi.tha06888.isChecked() ? "98" : "0");

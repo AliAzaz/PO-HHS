@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -37,7 +36,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs.validator.validatorClass;
@@ -732,7 +730,7 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
         sB.put("tb04", tb04a.isChecked() ? "1" : tb04b.isChecked() ? "2" : "0");
-        sB.put("tb05", tb05.getSelectedItem().toString());
+        sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.counter);
         sB.put("tb06", tb06.getSelectedItem().toString());
 
         if (tbdob01.isChecked()) {

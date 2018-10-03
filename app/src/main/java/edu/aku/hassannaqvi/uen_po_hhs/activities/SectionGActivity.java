@@ -1100,7 +1100,6 @@ public class SectionGActivity extends AppCompatActivity {
                     }
                 }
             }
-
             if (!validatorClass.EmptyCheckBox(this, bi.fldGrptg06, bi.tg06a, getString(R.string.tg06))) {
                 return false;
             }
@@ -1111,7 +1110,6 @@ public class SectionGActivity extends AppCompatActivity {
                     }
                 }
             }
-
             if (!validatorClass.EmptyCheckBox(this, bi.fldGrptg07, bi.tg07a, getString(R.string.tg07))) {
                 return false;
             }

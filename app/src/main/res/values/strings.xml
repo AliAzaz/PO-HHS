@@ -26,10 +26,10 @@
     <string name="mixed">Mixed</string>
     <string name="block">Block/ Muhalla</string>
     <string name="street">Street</string>
-  <string name="cluster"> کلسٹر نمبر </string>
+    <string name="cluster"> کلسٹر نمبر </string>
 
 
-  <string name="end_interview"> اختتام </string>
+    <string name="end_interview"> اختتام </string>
     <string name="start_interview"> انٽرويو شروع ڪريو </string>
     <string name="nextSection"> اڳيون سيڪشن </string>
     <string name="addMember"> افراد کا اندراج </string>
@@ -1014,8 +1014,8 @@
     <string name="tg08a">پيراسيٽامول گوريون</string>
     <string name="tg08b">پيرا سيٽامول شربت </string>
     <string name="tg08c">زنڪ جون گوريون </string>
-    <string name="tg08d">زنڪ شربت. </string>
-    <string name="tg08e">پيٽ جي ڪيڙن جون گوريون. </string>
+    <string name="tg08d">زنڪ شربت </string>
+    <string name="tg08e">پيٽ جي ڪيڙن جون گوريون</string>
     <string name="tg08f">پيٽ جي ڪيڙن جو شربت </string>
     <string name="tg08g">نمڪول </string>
     <string name="tg08h">اکين جو مرهم </string>
