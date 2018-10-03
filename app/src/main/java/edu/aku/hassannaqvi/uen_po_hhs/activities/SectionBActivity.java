@@ -709,6 +709,7 @@ public class SectionBActivity extends AppCompatActivity {
         MainApp.fmc.setUser(MainApp.fc.getUser());
         MainApp.fmc.set_UUID(MainApp.fc.getUID());
         MainApp.fmc.setDevicetagID(sharedPref.getString("tagName", null));
+        MainApp.fmc.setSerialNo(String.valueOf(MainApp.counter));
 
         JSONObject sB = new JSONObject();
 

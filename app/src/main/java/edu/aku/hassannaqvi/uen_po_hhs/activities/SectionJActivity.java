@@ -637,25 +637,6 @@ public class SectionJActivity extends Activity {
     }
 
     private boolean UpdateDB() {
-
-        DatabaseHelper db = new DatabaseHelper(this);
-
-        Long updcount = db.addChild(MainApp.ims);
-        MainApp.ims.set_ID(String.valueOf(updcount));
-
-        if (updcount != 0) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-
-            MainApp.ims.setUID(
-                    (MainApp.fc.getDeviceID() + MainApp.ims.get_ID()));
-            db.updateChildID();
-
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-/*
         DatabaseHelper db = new DatabaseHelper(this);
 
         int updcount = db.updateSJ();
@@ -666,7 +647,7 @@ public class SectionJActivity extends Activity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
+        }
 
     }
 

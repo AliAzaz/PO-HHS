@@ -116,6 +116,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             familyMembers.COLUMN_DEVICEID + " TEXT," +
             familyMembers.COLUMN_USER + " TEXT," +
             familyMembers.COLUMN_SB + " TEXT," +
+            familyMembers.COLUMN_SERIAL_NO + " TEXT," +
             familyMembers.COLUMN_ISTATUS + " TEXT," +
             familyMembers.COLUMN_SYNCED + " TEXT," +
             familyMembers.COLUMN_SYNCED_DATE + " TEXT"
@@ -990,6 +991,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(familyMembers.COLUMN_USER, fmc.getUser());
         values.put(familyMembers.COLUMN_ISTATUS, fmc.getIstatus());
         values.put(familyMembers.COLUMN_SB, fmc.getsB());
+        values.put(familyMembers.COLUMN_SERIAL_NO, fmc.getsB());
         values.put(familyMembers.COLUMN_DEVICETAGID, fmc.getDevicetagID());
         values.put(familyMembers.COLUMN_DEVICEID, fmc.getDeviceId());
 
@@ -1514,6 +1516,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 familyMembers.COLUMN_DEVICEID,
                 familyMembers.COLUMN_USER,
                 familyMembers.COLUMN_SB,
+                familyMembers.COLUMN_SERIAL_NO,
                 familyMembers.COLUMN_DEVICETAGID
         };
         String whereClause = familyMembers.COLUMN_SYNCED + " is null";

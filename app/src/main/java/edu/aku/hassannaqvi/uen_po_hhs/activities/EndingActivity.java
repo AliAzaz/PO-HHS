@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.util.JsonReader;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -139,7 +140,7 @@ public class EndingActivity extends Activity {
         }
     }
 
-    private void SaveDraft() {
+    private void SaveDraft() throws JSONException{
         Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         MainApp.fc.setIstatus(istatus1.isChecked() ? "1"

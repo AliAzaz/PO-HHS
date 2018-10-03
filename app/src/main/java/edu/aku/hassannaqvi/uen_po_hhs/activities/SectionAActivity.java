@@ -690,8 +690,7 @@ public class SectionAActivity extends Activity {
         sa.put("ta08", ta08.getText().toString());
         sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
         sa.put("lhw",MainApp.lhwName);
-        sa.put("hh",pobhh.getText().toString());
-        sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
+        sa.put("hh_no",pobhh.getText().toString());
         sa.put("app_version", MainApp.versionName + "." + MainApp.versionCode);
 
 
@@ -761,13 +760,19 @@ public class SectionAActivity extends Activity {
         if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
             return false;
         }
-       /* if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.lhwname))) {
+        if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.lhwname))) {
         return false;
-        //removed village as told by hassan bhai
-        }*/
-        if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.villagename))) {
+        }
+        if(!validatorClass.EmptyTextBox(this,pobhh,getString(R.string.household))){
             return false;
         }
+        if(!validatorClass.Ra){
+
+        }
+       /* if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.villagename))) {
+            return false;
+            //removed village as told by hassan bhai
+        }*/
 //        01
        /* if (ta01.getText().toString().isEmpty()) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta01), Toast.LENGTH_SHORT).show();
@@ -890,7 +895,7 @@ public class SectionAActivity extends Activity {
         }
 */
 //     09
-        if (ta09.getCheckedRadioButtonId() == -1) {
+        /*if (ta09.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta09), Toast.LENGTH_SHORT).show();
             ta09a.setError("This data is Required!");    // Set Error on last radio button
             ta09a.setFocusable(true);
@@ -901,7 +906,7 @@ public class SectionAActivity extends Activity {
         } else {
             ta09a.setError(null);
         }
-
+*/
         return true;
     }
 

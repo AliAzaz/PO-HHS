@@ -474,7 +474,7 @@ public class FamilyMembersContract {
         this.rsvp = jsonObject.getString(familyMembers.COLUMN_RSVP);
         this.update_flag = jsonObject.getString(familyMembers.COLUMN_UPDATE_FLAG);*/
         this.sB = jsonObject.getString(familyMembers.COLUMN_SB);
-//        this.serialNo = jsonObject.getString(familyMembers.COLUMN_SERIAL_NO);
+        this.serialNo = jsonObject.getString(familyMembers.COLUMN_SERIAL_NO);
         this.synced = jsonObject.getString(familyMembers.COLUMN_SYNCED);
         this.syncedDate = jsonObject.getString(familyMembers.COLUMN_SYNCED_DATE);
 //        this.remarks = jsonObject.getString(familyMembers.COLUMN_REMARKS);
@@ -576,7 +576,7 @@ public class FamilyMembersContract {
 
             json.put(familyMembers.COLUMN_SB, this.sB.equals("") ? JSONObject.NULL : new JSONObject(this.sB));
         }
-//        json.put(familyMembers.COLUMN_SERIAL_NO, this.serialNo == null ? JSONObject.NULL : this.serialNo);
+        json.put(familyMembers.COLUMN_SERIAL_NO, this.serialNo == null ? JSONObject.NULL : this.serialNo);
 //        json.put(familyMembers.COLUMN_REMARKS, this.remarks == null ? JSONObject.NULL : this.remarks);
         json.put(familyMembers.COLUMN_PROJECT_NAME, this.projectName == null ? JSONObject.NULL : this.projectName);
         json.put(familyMembers.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
@@ -635,7 +635,7 @@ public class FamilyMembersContract {
         public static final String COLUMN_ISTATUS = "istatus";
 
         public static final String COLUMN_DEVICETAGID = "tagid";
-//        public static final String COLUMN_SERIAL_NO = "serial";
+        public static final String COLUMN_SERIAL_NO = "serial";
 
         public static String _URL = "familymembers.php";
     }
