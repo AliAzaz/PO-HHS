@@ -53,7 +53,6 @@ import edu.aku.hassannaqvi.uen_po_hhs.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncDeceasedChild;
-import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncDeceasedMother;
 import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncFamilyMembers;
 import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncForms;
 import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncIM;
@@ -96,6 +95,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        MainApp.fatherList.clear();
+        MainApp.motherList.clear();
         MainApp.fatherList.add(0,"....");
         MainApp.fatherList.add(1,"N/A");
         MainApp.motherList.add(0,"....");
