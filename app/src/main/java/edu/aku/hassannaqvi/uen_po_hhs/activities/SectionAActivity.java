@@ -69,16 +69,6 @@ public class SectionAActivity extends Activity {
 
     @BindView(R.id.pobhh)
     EditText pobhh;
-    @BindView(R.id.ta01)
-    EditText ta01;
-    @BindView(R.id.ta02)
-    RadioGroup ta02;
-    @BindView(R.id.ta02a)
-    RadioButton ta02a;
-    @BindView(R.id.ta02b)
-    RadioButton ta02b;
-    @BindView(R.id.ta02c)
-    RadioButton ta02c;
 
     /*    @BindView(R.id.ta03)
         RadioGroup ta03;
@@ -91,16 +81,7 @@ public class SectionAActivity extends Activity {
         @BindView(R.id.ta04)
         Spinner ta04;*/
 
-    @BindView(R.id.ta05h)
-    EditText ta05h;
-    @BindView(R.id.ta05u)
-    EditText ta05u;
-    @BindView(R.id.ta06)
-    EditText ta06;
-    @BindView(R.id.ta07)
-    EditText ta07;
-    @BindView(R.id.ta08)
-    EditText ta08;
+
     @BindView(R.id.ta09)
     RadioGroup ta09;
     @BindView(R.id.ta09a)
@@ -120,10 +101,6 @@ public class SectionAActivity extends Activity {
 
     @BindView(R.id.hh_name)
     TextView hhName;
-    @BindView(R.id.checkHHHeadpresent)
-    CheckBox checkHHHeadpresent;
-    @BindView(R.id.fldGrpt03)
-    LinearLayout fldGrpt03;
 
     @BindView(R.id.contactdetails)
     LinearLayout contactdetails;
@@ -172,11 +149,6 @@ public class SectionAActivity extends Activity {
     @BindView(R.id.spSubVillages)
     Spinner spSubVillages;
 
-    @BindView(R.id.newHHheadname)
-    EditText newHHheadname;
-
-    @BindView(R.id.fldGrpt03a)
-    LinearLayout fldGrpt03a;
     int length = 0;
 
     @Override
@@ -293,39 +265,7 @@ public class SectionAActivity extends Activity {
             }
 
         });
-        ta05h.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                fldGrpt03.setVisibility(View.GONE);
-
-                hhName.setText(null);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-//        Checkbox validate
-
-        checkHHHeadpresent.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    fldGrpt03a.setVisibility(View.GONE);
-                    newHHheadname.setText(null);
-                } else {
-                    fldGrpt03a.setVisibility(View.VISIBLE);
-                }
-            }
-        });
 
 
     }
@@ -570,6 +510,7 @@ public class SectionAActivity extends Activity {
                 .setNegativeButton("Cancel", dialogClickListener).show();
     }
 
+/*
 
     @OnClick(R.id.checkHH)
     void onCheckHHClick() {
@@ -601,6 +542,7 @@ public class SectionAActivity extends Activity {
         }
 
     }
+*/
 
     @OnClick(R.id.btn_End)
     void onBtnEndClick() {
@@ -663,9 +605,9 @@ public class SectionAActivity extends Activity {
 
         JSONObject sa = new JSONObject();
 
-        MainApp.cluster = ta01.getText().toString();
-        MainApp.hhno = ta05h.getText().toString();
-        MainApp.billno = ta05u.getText().toString();
+        MainApp.cluster = "";
+        MainApp.hhno = pobhh.getText().toString();
+//        MainApp.billno = ta05u.getText().toString();
 
     /*
         sa.put("rndid", MainApp.selectedHead.get_ID());
@@ -674,20 +616,20 @@ public class SectionAActivity extends Activity {
         sa.put("hh03", MainApp.selectedHead.getStructure());
         sa.put("hh07", MainApp.selectedHead.getExtension());
         sa.put("hhhead", MainApp.selectedHead.getHhhead());
-        */
+
         sa.put("hhheadpresent", checkHHHeadpresent.isChecked() ? "1" : "2");
         sa.put("hhheadpresentnew", newHHheadname.getText().toString());
 
         sa.put("ta01", ta01.getText().toString());
-        sa.put("ta02", ta02a.isChecked() ? "1" : ta02b.isChecked() ? "2" : ta02c.isChecked() ? "3" : "0");
+        sa.put("ta02", ta02a.isChecked() ? "1" : ta02b.isChecked() ? "2" : ta02c.isChecked() ? "3" : "0");*/
         sa.put("ta03", MainApp.talukaCode);
         sa.put("ta04", MainApp.ucCode);
         sa.put("ta04A", MainApp.areaCode);
-        sa.put("ta05h", ta05h.getText().toString());
+       /* sa.put("ta05h", ta05h.getText().toString());
         sa.put("ta05u", ta05u.getText().toString());
         sa.put("ta06", ta06.getText().toString());
         sa.put("ta07", ta07.getText().toString());
-        sa.put("ta08", ta08.getText().toString());
+        sa.put("ta08", ta08.getText().toString());*/
         sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
         sa.put("lhw",MainApp.lhwName);
         sa.put("hh_no",pobhh.getText().toString());
