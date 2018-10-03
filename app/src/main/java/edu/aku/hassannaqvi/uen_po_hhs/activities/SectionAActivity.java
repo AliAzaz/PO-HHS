@@ -99,8 +99,7 @@ public class SectionAActivity extends Activity {
     @BindView(R.id.navbuttons)
     LinearLayout navbuttons;
 
-    @BindView(R.id.hh_name)
-    TextView hhName;
+
 
     @BindView(R.id.contactdetails)
     LinearLayout contactdetails;
@@ -146,8 +145,6 @@ public class SectionAActivity extends Activity {
     Collection<VillagesContract> SubVillagesList;
     Map<String, String> SubVillagesMap;
 
-    @BindView(R.id.spSubVillages)
-    Spinner spSubVillages;
 
     int length = 0;
 
