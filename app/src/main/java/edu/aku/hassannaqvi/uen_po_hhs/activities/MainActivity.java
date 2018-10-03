@@ -97,13 +97,16 @@ public class MainActivity extends Activity {
 
         MainApp.fatherList.clear();
         MainApp.motherList.clear();
-        MainApp.fatherList.add(0,"....");
-        MainApp.fatherList.add(1,"N/A");
-        MainApp.motherList.add(0,"....");
-        MainApp.motherList.add(1,"N/A");
-        MainApp.childList.add(0,"....");
-        MainApp.motherMap.put("N/A_0","0");
-        MainApp.fatherMap.put("N/A_0","0");
+        MainApp.lstChild.clear();
+        MainApp.fatherList.add(0, "....");
+        MainApp.fatherList.add(1, "N/A");
+        MainApp.motherList.add(0, "....");
+        MainApp.motherList.add(1, "N/A");
+        MainApp.childList.add(0, "....");
+        MainApp.lstChild.add("....");
+        MainApp.lstChild.add("N/A");
+        MainApp.motherMap.put("N/A_0", "0");
+        MainApp.fatherMap.put("N/A_0", "0");
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -256,45 +259,45 @@ public class MainActivity extends Activity {
 
 //        if (spAreas.getSelectedItemPosition() != 0) {
 
-            if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
-                Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
-                startActivity(oF);
-            } else {
+        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
+            Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
+            startActivity(oF);
+        } else {
 
-                builder = new AlertDialog.Builder(MainActivity.this);
-                ImageView img = new ImageView(getApplicationContext());
-                img.setImageResource(R.drawable.tagimg);
-                img.setPadding(0, 15, 0, 15);
-                builder.setCustomTitle(img);
+            builder = new AlertDialog.Builder(MainActivity.this);
+            ImageView img = new ImageView(getApplicationContext());
+            img.setImageResource(R.drawable.tagimg);
+            img.setPadding(0, 15, 0, 15);
+            builder.setCustomTitle(img);
 
-                final EditText input = new EditText(MainActivity.this);
-                input.setInputType(InputType.TYPE_CLASS_TEXT);
-                builder.setView(input);
+            final EditText input = new EditText(MainActivity.this);
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
 
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        m_Text = input.getText().toString();
-                        if (!m_Text.equals("")) {
-                            editor.putString("tagName", m_Text);
-                            editor.commit();
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    m_Text = input.getText().toString();
+                    if (!m_Text.equals("")) {
+                        editor.putString("tagName", m_Text);
+                        editor.commit();
 
-                            if (!MainApp.userName.equals("0000")) {
-                                Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
-                                startActivity(oF);
-                            }
+                        if (!MainApp.userName.equals("0000")) {
+                            Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
+                            startActivity(oF);
                         }
                     }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
 
-                builder.show();
-            }
+            builder.show();
+        }
 //        } else {
 //            Toast.makeText(getApplicationContext(), "Please select data from combobox!!", Toast.LENGTH_LONG).show();
 //        }

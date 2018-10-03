@@ -587,6 +587,9 @@ public class SectionBActivity extends AppCompatActivity {
                                     } else if (tb04b.isChecked() && tb11b.isChecked()) {
                                         MainApp.motherList.add(tb02.getText().toString());
                                     }
+                                    if(ageInyears < 2){
+                                        MainApp.lstChild.add(tb02.getText().toString());
+                                    }
                                     if (ageInyears < 5) {
                                         MainApp.childList.add(tb02.getText().toString());
                                     }
@@ -634,6 +637,9 @@ public class SectionBActivity extends AppCompatActivity {
                 MainApp.fatherList.add(tb02.getText().toString());
             } else if (tb04b.isChecked() && tb11b.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
+            }
+            if(ageInyears < 2){
+                MainApp.lstChild.add(tb02.getText().toString());
             }
             if (ageInyears < 5) {
                 MainApp.childList.add(tb02.getText().toString());
