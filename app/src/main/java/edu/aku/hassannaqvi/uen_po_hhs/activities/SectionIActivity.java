@@ -34,7 +34,6 @@ import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
-import edu.aku.hassannaqvi.uen_po_hhs.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.SectionIIMContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
@@ -1576,13 +1575,13 @@ public class SectionIActivity extends AppCompatActivity
             MainApp.childsMap.put("....", null);
 
 
-            for (byte i = 0; i < MainApp.familyMembersList.size(); i++) {
-                if (MainApp.familyMembersList.get(i).getAgeLess5().equals("3")) {
-                    MainApp.childsMap.put(MainApp.familyMembersList.get(i).getName(), new FamilyMembersContract(MainApp.familyMembersList.get(i)));
-                    //MainApp.lstChild.add(MainApp.familyMembersList.get(i).getName());
-
-                }
-            }
+//            for (byte i = 0; i < MainApp.familyMembersList.size(); i++) {
+//                if (MainApp.familyMembersList.get(i).getAgeLess5().equals("3")) {
+//                    MainApp.childsMap.put(MainApp.familyMembersList.get(i).getName(), new FamilyMembersContract(MainApp.familyMembersList.get(i)));
+//                    MainApp.lstChild.add(MainApp.familyMembersList.get(i).getName());
+//
+//                }
+//            }
 
 
         }
@@ -2223,27 +2222,28 @@ public class SectionIActivity extends AppCompatActivity
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
+                Intent secNext = new Intent(this, SectionJActivity.class);
+                startActivity(secNext);
                 //finish();
 
-                if (MainApp.imsCount < MainApp.totalImsCount) {
-                    finish();
-
-                    MainApp.imsCount++;
-
-                    MainApp.lstChild.remove(MainApp.positionIm);
-                    MainApp.childsMap.remove(MainApp.positionIm);
-                    MainApp.flag = false;
-                    Intent secNext = new Intent(this, SectionIActivity.class);
-                    //tiname.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, MainApp.lstChild));
-                    startActivity(secNext);
-
-
-                } else {
-                    MainApp.imsCount = 0;
-
-                    Intent secNext = new Intent(this, SectionJActivity.class);
-                    startActivity(secNext);
-                }
+//                if (MainApp.imsCount < MainApp.totalImsCount) {
+//                    finish();
+//
+//                    MainApp.imsCount++;
+//
+//                    MainApp.lstChild.remove(MainApp.positionIm);
+//                    MainApp.childsMap.remove(MainApp.positionIm);
+//                    MainApp.flag = false;
+//                    Intent secNext = new Intent(this, SectionIActivity.class);
+//                    //tiname.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, MainApp.lstChild));
+//                    startActivity(secNext);
+//
+//
+//                } else {
+//                    MainApp.imsCount = 0;
+//
+//
+//                }
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -2293,8 +2293,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("ta05h", MainApp.hhno);
         sI.put("ta05u", MainApp.billno);
 
-        sI.put("tiImsSerial", MainApp.childsMap.get(tiname.getSelectedItem().toString()).getSerialNo());
-
+        sI.put("tiImsSerial", MainApp.positionIm);
         sI.put("tiname", tiname.getSelectedItem().toString());
         sI.put("ti00", ti00a.isChecked() ? "1" : ti00b.isChecked() ? "2" : "0");
         sI.put("ti01", ti01a.isChecked() ? "1" : ti01b.isChecked() ? "2" : ti01888.isChecked() ? "888" : "0");

@@ -105,6 +105,7 @@ public class EndingActivity extends Activity {
                 MainApp.motherList.clear();
                 MainApp.fatherList.clear();
                 MainApp.childList.clear();
+                MainApp.positionIm = 0;
 
 //                MainApp.CounterDeceasedMother = 0;
                 MainApp.CounterDeceasedChild = 0;

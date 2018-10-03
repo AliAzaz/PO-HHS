@@ -1169,14 +1169,17 @@ public class SectionGActivity extends AppCompatActivity {
                 return false;
             }
 
-            if (!bi.tg13b.isChecked()) {
+            if (bi.tg13a.isChecked()) {
                 if (!validatorClass.EmptyTextBox(this, bi.tg14x, getString(R.string.tg14))) {
                     return false;
                 }
 
             }
+            if(bi.tg13b.isChecked()){
+                return validatorClass.EmptyTextBox(this, bi.tg15x, getString(R.string.tg15));
+            }
 
-            return validatorClass.EmptyTextBox(this, bi.tg15x, getString(R.string.tg15));
+
 
 
         }

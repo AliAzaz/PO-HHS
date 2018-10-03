@@ -544,27 +544,29 @@ public class SectionJActivity extends Activity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SectionKActivity.class));
+                finish();
 
-                if (MainApp.mm < MainApp.TotalChildCount) {
-
-                    clearFields();
-
-                    MainApp.mm++;
-
-                    lstChild.remove(position);
-                    childsMap.remove(position);
-
-                    tj01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lstChild));
-
-                    scroll.setScrollY(0);
-
-                } else {
-                    finish();
-
-                    MainApp.mm = 1;
-
-                    startActivity(new Intent(this, SectionKActivity.class));
-                }
+//                if (MainApp.mm < MainApp.TotalChildCount) {
+//
+//                    clearFields();
+//
+//                    MainApp.mm++;
+//
+//                    lstChild.remove(position);
+//                    childsMap.remove(position);
+//
+//                    tj01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lstChild));
+//
+//                    scroll.setScrollY(0);
+//
+//                } else {
+//                    finish();
+//
+//                    MainApp.mm = 1;
+//
+//
+//                }
 
                 finish();
 //                startActivity(new Intent(this, SectionKActivity.class));
@@ -737,9 +739,12 @@ public class SectionJActivity extends Activity {
         sJ.put("tj13d", tj13d.getText().toString());
         sJ.put("tj13m", tj13m.getText().toString());
 
-        sJ.put("tj14", tj14a.isChecked() ? "1" : tj14b.isChecked() ? "2" : tj14c.isChecked() ? "3"
-                : tj14d.isChecked() ? "4" : tj14e.isChecked() ? "5" : tj14f.isChecked() ? "6"
-                : tj14g.isChecked() ? "7" : tj14h.isChecked() ? "8" : tj14i.isChecked() ? "9" : tj14j.isChecked() ? "10"
+        sJ.put("tj14", tj14a.isChecked() ? "1"
+                : tj14b.isChecked() ? "2" : tj14c.isChecked() ? "3"
+                : tj14d.isChecked() ? "4" : tj14e.isChecked() ? "5"
+                : tj14f.isChecked() ? "6"
+                : tj14g.isChecked() ? "7" : tj14h.isChecked() ? "8" : tj14i.isChecked() ? "9"
+                : tj14j.isChecked() ? "10"
                 : tj14k.isChecked() ? "11" : tj14l.isChecked() ? "12" : tj1488.isChecked() ? "88" : "0");
         sJ.put("tj1488x", tj1488x.getText().toString());
 
