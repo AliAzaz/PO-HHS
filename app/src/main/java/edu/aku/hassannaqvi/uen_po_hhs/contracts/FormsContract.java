@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 public class FormsContract {
 
-    private final String projectName = "UEN TMK";
+    private final String projectName = "Pulse Oximetry";
     //private final String surveyType = "SN";
     private String _ID = "";
     private String _UID = "";

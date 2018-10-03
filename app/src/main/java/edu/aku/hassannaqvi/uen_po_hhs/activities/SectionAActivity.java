@@ -45,6 +45,7 @@ import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.LHWContract.lhwEntry;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
@@ -529,7 +530,7 @@ public class SectionAActivity extends Activity {
 
 // removed village selection
 //        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
-        if (mN01.getSelectedItemPosition() != 0) {
+        if (MN03.getSelectedItemPosition() != 0 && !validatorClass.EmptyTextBox(this, pobhh,getString(R.string.household))) {
 
             Intent oF = new Intent(this, SectionBActivity.class);
 
@@ -752,16 +753,161 @@ public class SectionAActivity extends Activity {
     public boolean formValidation() {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
+
         if (!validatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
             return false;
         }
         if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
             return false;
         }
-//        if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.lhwname))) {
-//        return false;
-//        }
-        return validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household));
+      /*  if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.villagename))) {
+        return false;
+        }*/
+        if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.lhwname))) {
+            return false;
+        }
+        if (!validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, ta09, ta09a, getString(R.string.ta09))) {
+            return false;
+        }
+
+//        01
+       /* if (ta01.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta01), Toast.LENGTH_SHORT).show();
+            ta01.setError("This data is Required! ");    // Set Error on last radio button
+            ta01.requestFocus();
+            Log.i(TAG, "ta01: This data is Required!");
+            return false;
+        } else {
+            ta01.setError(null);
+        }*/
+
+//        03
+/*        if (ta03.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta03), Toast.LENGTH_SHORT).show();
+            ta03c.setError("This data is Required!");    // Set Error on last radio button
+            ta03c.setFocusableInTouchMode(true);
+            ta03c.setFocusable(true);
+            ta03c.requestFocus();
+            Log.i(TAG, "ta03: This data is Required!");
+            return false;
+        } else {
+            ta03c.setError(null);
+        }*/
+
+//        04
+/*        if (ta04.getSelectedItem() == "....") {
+            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.ta04), Toast.LENGTH_SHORT).show();
+            ((TextView) ta04.getSelectedView()).setText("This Data is Required");
+            ((TextView) ta04.getSelectedView()).setTextColor(Color.RED);
+            ta04.requestFocus();
+            Log.i(TAG, "ta04: This Data is Required!");
+            return false;
+        } else {
+            ((TextView) ta04.getSelectedView()).setError(null);
+        }
+
+//        05
+        if (ta05h.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta05h), Toast.LENGTH_SHORT).show();
+            ta05h.setError("This data is Required! ");    // Set Error on last radio button
+            ta05h.requestFocus();
+            Log.i(TAG, "ta05h: This data is Required!");
+            return false;
+        } else {
+            ta05h.setError(null);
+        }
+
+//        New HHHead
+
+        if (!checkHHHeadpresent.isChecked()) {
+            if (newHHheadname.getText().toString().isEmpty()) {
+                Toast.makeText(this, "ERROR(empty): New head name", Toast.LENGTH_SHORT).show();
+                newHHheadname.setError("This data is Required! ");    // Set Error on last radio button
+                newHHheadname.requestFocus();
+                Log.i(TAG, "newHHheadname: This data is Required!");
+                return false;
+            } else {
+                newHHheadname.setError(null);
+            }
+        }
+
+//        02
+        if (ta02.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta02), Toast.LENGTH_SHORT).show();
+            ta02c.setError("This data is Required!");    // Set Error on last radio button
+
+            ta02c.setFocusable(true);
+            ta02c.setFocusableInTouchMode(true);
+            ta02c.requestFocus();
+            Log.i(TAG, "ta02: This data is Required!");
+            return false;
+        } else {
+            ta02c.setError(null);
+        }
+
+
+        if (ta05u.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta05u), Toast.LENGTH_SHORT).show();
+            ta05u.setError("This data is Required! ");    // Set Error on last radio button
+            ta05u.requestFocus();
+            Log.i(TAG, "ta05u: This data is Required!");
+            return false;
+        } else {
+            ta05u.setError(null);
+        }
+
+//        06
+      /*  if (ta06.getText().toString().equals("N/A")) {
+            Toast.makeText(this, "ERROR(invalid): " + getString(R.string.ta06), Toast.LENGTH_SHORT).show();
+            ta06.setError("Change cluster no! ");    // Set Error on last radio button
+            ta06.requestFocus();
+            Log.i(TAG, "ta06: Change cluster no!");
+            return false;
+        } else {
+            ta06.setError(null);
+        }
+*/
+//        07
+
+/*        if (ta07.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta07), Toast.LENGTH_SHORT).show();
+            ta07.setError("This data is Required! ");    // Set Error on last radio button
+
+            Log.i(TAG, "ta07: This data is Required!");
+            return false;
+        } else {
+            ta07.setError(null);
+        } */
+
+//        08
+
+/*        if (ta08.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta08), Toast.LENGTH_SHORT).show();
+            ta08.setError("This data is Required! ");    // Set Error on last radio button
+
+            Log.i(TAG, "ta08: This data is Required!");
+            return false;
+        } else {
+            ta08.setError(null);
+        }
+*/
+//     09
+        /*if (ta09.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.ta09), Toast.LENGTH_SHORT).show();
+            ta09a.setError("This data is Required!");    // Set Error on last radio button
+            ta09a.setFocusable(true);
+            ta09a.setFocusableInTouchMode(true);
+            ta09a.requestFocus();
+            Log.i(TAG, "ta09: This data is Required!");
+            return false;
+        } else {
+            ta09a.setError(null);
+        }
+*/
+        return true;
     }
 
 }
