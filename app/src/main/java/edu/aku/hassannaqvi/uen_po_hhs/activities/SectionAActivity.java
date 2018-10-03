@@ -628,7 +628,8 @@ public class SectionAActivity extends Activity {
         sa.put("ta07", ta07.getText().toString());
         sa.put("ta08", ta08.getText().toString());*/
         sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
-        sa.put("lhw",MainApp.lhwName);
+        sa.put("lhw_name",MainApp.lhwName);
+        sa.put("lhw_code",MainApp.lhwCode);
         sa.put("hh_no",pobhh.getText().toString());
         sa.put("app_version", MainApp.versionName + "." + MainApp.versionCode);
 
