@@ -103,8 +103,6 @@ public class MainActivity extends Activity {
         MainApp.motherList.add(0, "....");
         MainApp.motherList.add(1, "N/A");
         MainApp.childList.add(0, "....");
-        MainApp.lstChild.add("....");
-        MainApp.lstChild.add("N/A");
         MainApp.motherMap.put("N/A_0", "0");
         MainApp.fatherMap.put("N/A_0", "0");
 
