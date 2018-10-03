@@ -98,6 +98,7 @@ public class MainActivity extends Activity {
         MainApp.fatherList.clear();
         MainApp.motherList.clear();
         MainApp.lstChild.clear();
+        MainApp.lstChild.add("....");
         MainApp.fatherList.add(0, "....");
         MainApp.fatherList.add(1, "N/A");
         MainApp.motherList.add(0, "....");
