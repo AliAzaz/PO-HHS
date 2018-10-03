@@ -224,8 +224,6 @@ public class SectionBActivity extends AppCompatActivity {
         MainApp.familyMembersList = new ArrayList<>();
 
 
-
-
         tb05.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.fatherList));
         tb06.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.motherList));
         if (MainApp.TotalMembersCount == 0) {
@@ -567,7 +565,6 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
 
-
     }
 
     @OnClick(R.id.btn_ContNextSec)
@@ -590,7 +587,7 @@ public class SectionBActivity extends AppCompatActivity {
                                     } else if (tb04b.isChecked() && tb11b.isChecked()) {
                                         MainApp.motherList.add(tb02.getText().toString());
                                     }
-                                    if(ageInyears < 5){
+                                    if (ageInyears < 5) {
                                         MainApp.childList.add(tb02.getText().toString());
                                     }
                                     try {
@@ -638,7 +635,7 @@ public class SectionBActivity extends AppCompatActivity {
             } else if (tb04b.isChecked() && tb11b.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
             }
-            if(ageInyears < 5){
+            if (ageInyears < 5) {
                 MainApp.childList.add(tb02.getText().toString());
             }
             try {
@@ -680,8 +677,8 @@ public class SectionBActivity extends AppCompatActivity {
         }
         // TOTAL MEMBERS
         MainApp.TotalMembersCount++;
-       // MainApp.fc = new FormsContract();
-       SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        // MainApp.fc = new FormsContract();
+        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
 /*
         MainApp.fc.setDevicetagID(sharedPref.getString("tagName", null));
         MainApp.fc.setFormDate(dtToday);
@@ -730,8 +727,17 @@ public class SectionBActivity extends AppCompatActivity {
         }
 
         sB.put("tb04", tb04a.isChecked() ? "1" : tb04b.isChecked() ? "2" : "0");
-        sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.counter);
-        sB.put("tb06", tb06.getSelectedItem().toString());
+        if (tb05.getSelectedItem().toString().equalsIgnoreCase("N/A")) {
+            sB.put("tb05", "00");
+        } else {
+            sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.counter);
+        }
+
+        if (tb06.getSelectedItem().toString().equalsIgnoreCase("N/A")) {
+            sB.put("tb06", "00");
+        } else {
+            sB.put("tb06", tb06.getSelectedItem().toString() + "_" + MainApp.counter);
+        }
 
         if (tbdob01.isChecked()) {
             sB.put("tb07", tb07.getText().toString());
