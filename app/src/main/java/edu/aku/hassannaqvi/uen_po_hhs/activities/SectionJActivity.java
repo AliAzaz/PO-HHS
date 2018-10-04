@@ -247,6 +247,7 @@ public class SectionJActivity extends Activity {
 
     int position;
     Long months;
+    int childSerial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -260,16 +261,24 @@ public class SectionJActivity extends Activity {
         lstChild = new ArrayList<>();
 
         childsMap.put("....", new FamilyMembersContract());
-        lstChild.add("....");
+       // lstChild.add("....");
 
-        for (byte i = 0; i < MainApp.familyMembersList.size(); i++) {
-            if (MainApp.familyMembersList.get(i).getAgeLess5().equals("3")) {
-                childsMap.put(MainApp.familyMembersList.get(i).getName(), new FamilyMembersContract(MainApp.familyMembersList.get(i)));
-                lstChild.add(MainApp.familyMembersList.get(i).getName());
+//        for (byte i = 0; i < MainApp.familyMembersList.size(); i++) {
+//            if (MainApp.familyMembersList.get(i).getAgeLess5().equals("3")) {
+//                childsMap.put(MainApp.familyMembersList.get(i).getName(), new FamilyMembersContract(MainApp.familyMembersList.get(i)));
+//                lstChild.add(MainApp.familyMembersList.get(i).getName());
+//            }
+//        }
+
+        tj01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, MainApp.lstChild));
+
+        tj01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                childSerial = i;
             }
-        }
-
-        tj01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lstChild));
+        });
 
         tj0288.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -668,7 +677,7 @@ public class SectionJActivity extends Activity {
 
         JSONObject sJ = new JSONObject();
 
-        sJ.put("tjchildSerial", childsMap.get(tj01.getSelectedItem().toString()).getSerialNo());
+        sJ.put("tjchildSerial", childSerial);
 //        sJ.put("tjchildName", tj01.getSelectedItem().toString());
 
         sJ.put("tj01", tj01.getSelectedItem().toString());
