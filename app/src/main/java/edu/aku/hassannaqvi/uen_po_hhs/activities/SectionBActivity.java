@@ -579,15 +579,13 @@ public class SectionBActivity extends AppCompatActivity {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,
                                                 int id) {
-
-                                Toast.makeText(SectionBActivity.this, "Processing This Section", Toast.LENGTH_SHORT).show();
                                 if (formValidation()) {
                                     if (tb04a.isChecked() && tb11b.isChecked()) {
                                         MainApp.fatherList.add(tb02.getText().toString());
                                     } else if (tb04b.isChecked() && tb11b.isChecked()) {
                                         MainApp.motherList.add(tb02.getText().toString());
                                     }
-                                    if(ageInyears <= 2){
+                                    if (ageInyears <= 2) {
                                         MainApp.lstChild.add(tb02.getText().toString());
                                     }
                                     if (ageInyears < 5) {
@@ -601,12 +599,10 @@ public class SectionBActivity extends AppCompatActivity {
                                     if (MainApp.TotalChildCount == 0) {
                                         Toast.makeText(SectionBActivity.this, "Please Enter a child under 5", Toast.LENGTH_SHORT).show();
                                     } else {
-                                    if (UpdateDB() && UpdateCount()) {
-
-                                        Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+                                        if (UpdateDB() && UpdateCount()) {
                                             finish();
                                             startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
-                                    }
+                                        }
                                     }
                                 } else {
                                     Toast.makeText(SectionBActivity.this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -627,37 +623,55 @@ public class SectionBActivity extends AppCompatActivity {
     @OnClick(R.id.btn_addMore)
     void onBtnAddMoreClick() {
         //TODO implement
-        Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
-        if (formValidation()) {
-            if (tb04a.isChecked() && tb11b.isChecked()) {
-                MainApp.fatherList.add(tb02.getText().toString());
-            } else if (tb04b.isChecked() && tb11b.isChecked()) {
-                MainApp.motherList.add(tb02.getText().toString());
-            }
-            if(ageInyears <= 2){
-                MainApp.lstChild.add(tb02.getText().toString());
-            }
-            if (ageInyears < 5) {
-                MainApp.childList.add(tb02.getText().toString());
-            }
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            if (UpdateDB()) {
-                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
-
-                finish();
-                startActivity(new Intent(this, SectionBActivity.class));
-
-            }
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                SectionBActivity.this);
+        alertDialogBuilder
+                .setMessage("Are you sure you want to add more members??")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int id) {
 
 
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
+                                if (formValidation()) {
+                                    if (tb04a.isChecked() && tb11b.isChecked()) {
+                                        MainApp.fatherList.add(tb02.getText().toString());
+                                    } else if (tb04b.isChecked() && tb11b.isChecked()) {
+                                        MainApp.motherList.add(tb02.getText().toString());
+                                    }
+                                    if (ageInyears <= 2) {
+                                        MainApp.lstChild.add(tb02.getText().toString());
+                                    }
+                                    if (ageInyears < 5) {
+                                        MainApp.childList.add(tb02.getText().toString());
+                                    }
+                                    try {
+                                        SaveDraft();
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                    if (UpdateDB()) {
+                                        finish();
+                                        startActivity(new Intent(SectionBActivity.this, SectionBActivity.class));
+                                    }
+
+                                } else {
+                                    Toast.makeText(SectionBActivity.this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+        alertDialogBuilder.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
     }
 
     private void SaveDraft() throws JSONException {

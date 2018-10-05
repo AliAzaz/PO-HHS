@@ -619,16 +619,15 @@ public class SectionAActivity extends Activity {
 
         sa.put("ta01", ta01.getText().toString());
         sa.put("ta02", ta02a.isChecked() ? "1" : ta02b.isChecked() ? "2" : ta02c.isChecked() ? "3" : "0");*/
-        sa.put("ta03", MainApp.talukaCode);
-        sa.put("ta04", MainApp.ucCode);
-        sa.put("ta04A", MainApp.areaCode);
+        sa.put("ta03", MainApp.hh01txt);
+        sa.put("ta04", MainApp.hh02txt);
+       // sa.put("ta04A", MainApp.areaCode);
        /* sa.put("ta05h", ta05h.getText().toString());
         sa.put("ta05u", ta05u.getText().toString());
         sa.put("ta06", ta06.getText().toString());
         sa.put("ta07", ta07.getText().toString());
         sa.put("ta08", ta08.getText().toString());*/
         sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
-        sa.put("lhw_name",MainApp.lhwName);
         sa.put("lhw_code",MainApp.lhwCode);
         sa.put("hh_no",pobhh.getText().toString());
         sa.put("app_version", MainApp.versionName + "." + MainApp.versionCode);
