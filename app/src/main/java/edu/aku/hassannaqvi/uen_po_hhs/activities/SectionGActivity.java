@@ -1033,7 +1033,7 @@ public class SectionGActivity extends AppCompatActivity {
 
         sG.put("tg13", bi.tg13a.isChecked() ? "1" : bi.tg13b.isChecked() ? "2" : "0");
         sG.put("tg14", bi.tg14x.getText().toString());
-        sG.put("tgpo15", bi.tg15x.getText().toString());
+        sG.put("tg15", bi.tg15x.getText().toString());
 
 
         MainApp.fc.setsG(String.valueOf(sG));
