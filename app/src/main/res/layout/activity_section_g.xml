@@ -1099,7 +1099,6 @@
                     android:id="@+id/tg12a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/tg12a"
                     />
 

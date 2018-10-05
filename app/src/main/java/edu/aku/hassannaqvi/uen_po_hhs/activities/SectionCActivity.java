@@ -1494,7 +1494,7 @@ public class SectionCActivity extends Activity {
         } else {
             tc17888.setError(null);
         }
-        if (!tc17888.isChecked() && (Integer.valueOf(tc17.getText().toString()) > 1999)) {
+        if (!tc17888.isChecked() && (Integer.valueOf(tc17.getText().toString()) < 1999)) {
             Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.tc17), Toast.LENGTH_SHORT).show();
             tc17.setError("Range must be greater than 2000");    // Set Error on last radio button
 

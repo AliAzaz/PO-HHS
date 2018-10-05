@@ -272,11 +272,16 @@ public class SectionJActivity extends Activity {
 
         tj01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, MainApp.lstChild));
 
-        tj01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        tj01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 childSerial = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
 
@@ -1082,13 +1087,13 @@ public class SectionJActivity extends Activity {
                 tj12m.setError(null);
             }
 
-            if (childsMap.get(tj01.getSelectedItem().toString()).getDob().length() == 10) {
-                months = MainApp.ageInMonthsByDOB(childsMap.get(tj01.getSelectedItem().toString()).getDob());
-            } else {
-                String[] dob = childsMap.get(tj01.getSelectedItem().toString()).getDob().split("-");
-
-                months = MainApp.ageInMonths(dob[1], dob[0]);
-            }
+//            if (childsMap.get(tj01.getSelectedItem().toString()).getDob().length() == 10) {
+//                months = MainApp.ageInMonthsByDOB(childsMap.get(tj01.getSelectedItem().toString()).getDob());
+//            } else {
+//                String[] dob = childsMap.get(tj01.getSelectedItem().toString()).getDob().split("-");
+//
+//                months = MainApp.ageInMonths(dob[1], dob[0]);
+//            }
 
 
             if (Long.valueOf(tj12m.getText().toString()) > months) {
@@ -1143,13 +1148,13 @@ public class SectionJActivity extends Activity {
                 tj13m.setError(null);
             }
 
-            if (childsMap.get(tj01.getSelectedItem().toString()).getDob().length() == 10) {
-                months = MainApp.ageInMonthsByDOB(childsMap.get(tj01.getSelectedItem().toString()).getDob());
-            } else {
-                String[] dob = childsMap.get(tj01.getSelectedItem().toString()).getDob().split("-");
-
-                months = MainApp.ageInMonths(dob[1], dob[0]);
-            }
+//            if (childsMap.get(tj01.getSelectedItem().toString()).getDob().length() == 10) {
+//                months = MainApp.ageInMonthsByDOB(childsMap.get(tj01.getSelectedItem().toString()).getDob());
+//            } else {
+//                String[] dob = childsMap.get(tj01.getSelectedItem().toString()).getDob().split("-");
+//
+//                months = MainApp.ageInMonths(dob[1], dob[0]);
+//            }
 
             if (Long.valueOf(tj13m.getText().toString()) > months) {
                 Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.month), Toast.LENGTH_SHORT).show();
