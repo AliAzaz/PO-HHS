@@ -370,8 +370,8 @@ public class SectionBActivity extends AppCompatActivity {
                     if (!tb10a.isChecked() || !tb03b.isChecked()) {
                         tb11a.setEnabled(true);
                     } else {
-                        tb11a.setEnabled(false);
-                        tb11a.setChecked(false);
+                        tb11a.setEnabled(true);
+                        tb11a.setChecked(true);
                     }
                     tb11b.setEnabled(true);
                     tb11c.setEnabled(true);
@@ -449,8 +449,8 @@ public class SectionBActivity extends AppCompatActivity {
                         if (!tb10a.isChecked() || !tb03b.isChecked()) {
                             tb11a.setEnabled(true);
                         } else {
-                            tb11a.setEnabled(false);
-                            tb11a.setChecked(false);
+                            tb11a.setEnabled(true);
+                            tb11a.setChecked(true);
                         }
                         tb11b.setEnabled(true);
                         tb11c.setEnabled(true);
@@ -488,7 +488,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 if (tb10a.isChecked()) {
-                    tb11a.setEnabled(false);
+                    tb11a.setEnabled(true);
                 } else {
                     tb11a.setEnabled(true);
                 }
@@ -632,6 +632,10 @@ public class SectionBActivity extends AppCompatActivity {
             if (tb04a.isChecked() && tb11b.isChecked()) {
                 MainApp.fatherList.add(tb02.getText().toString());
             } else if (tb04b.isChecked() && tb11b.isChecked()) {
+                MainApp.motherList.add(tb02.getText().toString());
+            }else if(tb04b.isChecked() && tb11c.isChecked()){
+                MainApp.motherList.add(tb02.getText().toString());
+            }else if(tb04b.isChecked() && tb11d.isChecked()){
                 MainApp.motherList.add(tb02.getText().toString());
             }
             if(ageInyears <= 2){

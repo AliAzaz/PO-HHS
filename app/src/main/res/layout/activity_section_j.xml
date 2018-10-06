@@ -757,132 +757,143 @@
 
         </RadioGroup>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/tj14" />
-
-        <RadioGroup
-            android:id="@+id/tj14"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/tj14a"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14a" />
-
-            <RadioButton
-                android:id="@+id/tj14b"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14b"/>
-
-            <RadioButton
-                android:id="@+id/tj14c"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14c"/>
-
-            <RadioButton
-                android:id="@+id/tj14d"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14d"/>
-
-            <RadioButton
-                android:id="@+id/tj14e"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14e"/>
-
-            <RadioButton
-                android:id="@+id/tj14f"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14f"/>
-
-            <RadioButton
-                android:id="@+id/tj14g"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14g"/>
-
-            <RadioButton
-                android:id="@+id/tj14h"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14h"/>
-
-            <RadioButton
-                android:id="@+id/tj14i"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14i"/>
-
-            <RadioButton
-                android:id="@+id/tj14j"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14j"/>
-
-            <RadioButton
-                android:id="@+id/tj14k"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14k"/>
-
-            <RadioButton
-                android:id="@+id/tj14l"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/tj14l"/>
-
-            <RadioButton
-                android:id="@+id/tj1488"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:text="@string/other"/>
-
-        </RadioGroup>
-
-        <EditText
-            android:id="@+id/tj1488x"
+        <LinearLayout
+            android:id="@+id/fldtj14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
-            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-            android:hint="@string/other"
-            android:inputType="textCapWords"
-            android:visibility="gone" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tj14" />
+
+            <RadioGroup
+                android:id="@+id/tj14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/tj14a"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14a" />
+
+                <RadioButton
+                    android:id="@+id/tj14b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14b"/>
+
+                <RadioButton
+                    android:id="@+id/tj14c"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14c"/>
+
+                <RadioButton
+                    android:id="@+id/tj14d"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14d"/>
+
+                <RadioButton
+                    android:id="@+id/tj14e"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14e"/>
+
+                <RadioButton
+                    android:id="@+id/tj14f"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14f"/>
+
+                <RadioButton
+                    android:id="@+id/tj14g"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14g"/>
+
+                <RadioButton
+                    android:id="@+id/tj14h"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14h"/>
+
+                <RadioButton
+                    android:id="@+id/tj14i"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14i"/>
+
+                <RadioButton
+                    android:id="@+id/tj14j"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14j"/>
+
+                <RadioButton
+                    android:id="@+id/tj14k"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14k"/>
+
+                <RadioButton
+                    android:id="@+id/tj14l"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/tj14l"/>
+
+                <RadioButton
+                    android:id="@+id/tj1488"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/other"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/tj1488x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                android:hint="@string/other"
+                android:inputType="textCapWords"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
 
 
         <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

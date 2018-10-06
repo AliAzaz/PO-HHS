@@ -241,6 +241,8 @@ public class SectionJActivity extends Activity {
     RadioButton tj1488;
     @BindView(R.id.tj1488x)
     EditText tj1488x;
+    @BindView(R.id.fldtj14)
+    LinearLayout fldtj14;
 
     Map<String, FamilyMembersContract> childsMap;
     ArrayList<String> lstChild;
@@ -507,20 +509,24 @@ public class SectionJActivity extends Activity {
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 if (i == R.id.tj13a) {
                     tj13d.setVisibility(View.VISIBLE);
+                    fldtj14.setVisibility(View.VISIBLE);
 
                     tj13m.setText(null);
                     tj13m.setVisibility(View.GONE);
                 } else if (i == R.id.tj13b) {
                     tj13d.setText(null);
                     tj13d.setVisibility(View.GONE);
+                    fldtj14.setVisibility(View.VISIBLE);
 
                     tj13m.setVisibility(View.VISIBLE);
                 } else {
                     tj13d.setText(null);
                     tj13d.setVisibility(View.GONE);
-
                     tj13m.setText(null);
                     tj13m.setVisibility(View.GONE);
+                    fldtj14.setVisibility(View.GONE);
+                    tj14.clearCheck();
+                    tj1488x.setText(null);
                 }
             }
         });
@@ -1096,15 +1102,15 @@ public class SectionJActivity extends Activity {
 //            }
 
 
-            if (Long.valueOf(tj12m.getText().toString()) > months) {
-                Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.month), Toast.LENGTH_SHORT).show();
-                tj12m.setError("Invalid Months!");    // Set Error on last radio button
-
-                Log.i(TAG, "tj12m: Invalid Months");
-                return false;
-            } else {
-                tj12m.setError(null);
-            }
+//            if (Integer.valueOf(tj12m.getText().toString()) > months) {
+//                Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.month), Toast.LENGTH_SHORT).show();
+//                tj12m.setError("Invalid Months!");    // Set Error on last radio button
+//
+//                Log.i(TAG, "tj12m: Invalid Months");
+//                return false;
+//            } else {
+//                tj12m.setError(null);
+//            }
 
         }
 
@@ -1156,37 +1162,41 @@ public class SectionJActivity extends Activity {
 //                months = MainApp.ageInMonths(dob[1], dob[0]);
 //            }
 
-            if (Long.valueOf(tj13m.getText().toString()) > months) {
-                Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.month), Toast.LENGTH_SHORT).show();
-                tj13m.setError("Invalid Months!");    // Set Error on last radio button
-
-                Log.i(TAG, "tj13m: Invalid Months");
-                return false;
-            } else {
-                tj13m.setError(null);
-            }
+//            if (Long.valueOf(tj13m.getText().toString()) > months) {
+//                Toast.makeText(this, "ERROR(Invalid): " + getString(R.string.month), Toast.LENGTH_SHORT).show();
+//                tj13m.setError("Invalid Months!");    // Set Error on last radio button
+//
+//                Log.i(TAG, "tj13m: Invalid Months");
+//                return false;
+//            } else {
+//                tj13m.setError(null);
+//            }
         }
 
 //        14
+        if(!tj13c.isChecked()){
+            if (tj14.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.tj14), Toast.LENGTH_SHORT).show();
+                tj14a.setError("This data is Required!");    // Set Error on last radio button
 
-        if (tj14.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tj14), Toast.LENGTH_SHORT).show();
-            tj1488.setError("This data is Required!");    // Set Error on last radio button
+                Log.i(TAG, "tj14: This data is Required!");
+                return false;
+            } else {
+                tj14a.setError(null);
+            }
+            if (tj1488.isChecked() && tj1488x.getText().toString().isEmpty()) {
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
+                tj1488x.setError("This data is Required! ");    // Set Error on last radio button
 
-            Log.i(TAG, "tj14: This data is Required!");
-            return false;
-        } else {
-            tj1488.setError(null);
+                Log.i(TAG, "tj1488: This data is Required!");
+                return false;
+            } else {
+                tj1488x.setError(null);
+            }
+
         }
-        if (tj1488.isChecked() && tj1488x.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
-            tj1488x.setError("This data is Required! ");    // Set Error on last radio button
 
-            Log.i(TAG, "tj1488: This data is Required!");
-            return false;
-        } else {
-            tj1488x.setError(null);
-        }
+
 
 
         return true;

@@ -65,6 +65,7 @@ public class SectionGActivity extends AppCompatActivity {
                     bi.fldGrptg15.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldGrptg15, false);
                 } else {
+
                     bi.fldGrptg04.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.fldGrptg04, true);
                     bi.fldGrptg05.setVisibility(View.VISIBLE);
