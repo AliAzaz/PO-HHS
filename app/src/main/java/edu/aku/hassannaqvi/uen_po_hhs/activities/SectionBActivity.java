@@ -449,8 +449,8 @@ public class SectionBActivity extends AppCompatActivity {
                         if (!tb10a.isChecked() || !tb03b.isChecked()) {
                             tb11a.setEnabled(true);
                         } else {
-                            tb11a.setEnabled(true);
-                            tb11a.setChecked(true);
+                            tb11a.setEnabled(false);
+                            tb11a.setChecked(false);
                         }
                         tb11b.setEnabled(true);
                         tb11c.setEnabled(true);
@@ -488,7 +488,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 if (tb10a.isChecked()) {
-                    tb11a.setEnabled(true);
+                    tb11a.setEnabled(false);
                 } else {
                     tb11a.setEnabled(true);
                 }
