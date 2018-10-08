@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:text="@string/ "
+                    android:text="@string/tg01"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/white" />
 
@@ -243,7 +243,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg04a" />
+                    android:text="@string/tg04c" />
 
                 <CheckBox
                     android:id="@+id/tg04d"
@@ -374,7 +374,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg05a" />
+                    android:text="@string/tg05c" />
 
                 <CheckBox
                     android:id="@+id/tg05d"
@@ -470,7 +470,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg06a" />
+                    android:text="@string/tg06c" />
 
                 <CheckBox
                     android:id="@+id/tg06d"
@@ -623,7 +623,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg07a" />
+                    android:text="@string/tg07c" />
 
                 <CheckBox
                     android:id="@+id/tg07d"
@@ -900,14 +900,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg08b" />
+                    android:text="@string/tg10b" />
 
                 <CheckBox
                     android:id="@+id/tg10c"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="@string/tg10a" />
+                    android:text="@string/tg10c" />
 
                 <CheckBox
                     android:id="@+id/tg10d"
