@@ -43,13 +43,16 @@
     <string name="secCLabel">سيڪشن اي : گھر جي سماجي ۽ اقتصادي معلومات </string>
     <string name="secDLabel">D: REPRODUCTIVE HEALTH, MATERNAL AND CHILD MORTALITY (Complete this section  for all married aged 15–49 years in the household)</string>
     <string name="secELabel">E: Deceased Mother Information</string>
-    <string name="secFLabel">F: Deceased Child Information</string>
+    <string name="secFLabel">سيڪشن ايف: ٻارن جي مرڻ جي باري ۾ معلومات</string>
     <string name="secGLabel">سيڪشن (N) ليڊي هيلٿ ورڪر </string>
     <string name="secHALabel">سيڪشن جي : ٻار جي صحت(دستن جي بيماري جي باري ۾)</string>
     <string name="secHAins">ھاڻي آءٌ توھان کان توھان جي 5 سالن کان گھٽ عمر واري ٻار جي باري ۾ ڪجھ سوال پڇا ڪندس جيڪي گذريل ٻن ھفتن دوران دستن جي بيماري جي حوالي سان ھوندا</string>
+    <string name="secHAins1"> هن سيڪشن ۾ سب کان ننڊي ٻار جي باري</string>
     <string name="secHBLabel">سيڪشن ايڇ : ساھ کڻڻ ۾ تڪليف</string>
-    <string name="secILabel">I: حفاظتي ٽڪن جي معلومات</string>
-    <string name="secJLabel">J: BREAST FEEDING AND NUTRITION </string>
+    <string name="secILabel">سيڪشن آء: حفاظتي ٽڪن جي معلومات</string>
+    <string name="secIins">ھي سيڪشن ٻار جي حفاظتي ٽڪن جي معلومات جي حوالي سان آھي. ٻار جي ٽڪن جي معلومات ريڪارڊ ڪريو، ٽڪن جي معلومات ٽڪن واري ڪارڊ تان ڏسو، جيڪڏھن ٽڪن وارو ڪارڊ موجود نه آھي ته پوءِ جواب ڏيندڙ کان زباني پڇا ڪريو. جيڪڏھن توھان کي ڪارڊ سمجھڻ ۾ ڏکيائي ٿي رھي آھي ته پوءِ ڪارڊ جي تصوير کڻو ۽ پنھنجي سپروائيزر سان پڇا ڪريو. گھر ڀاتين جي لسٽ مان 24 مھينن تائين وارا ٻار چونڊ ڪريو. </string>
+    <string name="secJLabel">سيڪشن جي: ماءُ جوکير ۽ غذا </string>
+    <string name="secJins">گھر ڀاتين جي لسٽ مان 24 مھينن تائين وارا ٻار چونڊ ڪريو </string>
     <string name="secKLabel">K: پاڻي ۽ صفائي</string>
     <string name="secLLabel">L: ھٿ ڌوئڻ</string>
     <string name="secMLabel">M: WASH (Spot Check) </string>
@@ -279,6 +282,8 @@
     <string name="tc08q"> ڪمپيوٽر/ ليپ ٽاپ </string>
     <string name="tc08r"> انٽرنيٽ ڪنيڪشن </string>
     <string name="tc08s"> موبائل انٽرنيٽ </string>
+    <string name="tc08t"> سولر سسٽم / يو پي ايس / جنريٽر </string>
+    <string name="tc08u"> هٿ وارو نلڪو </string>
     <string name="tc09"> گھر جي ڪنهن به ميمبر وٽ هيٺيون شيون موجود آهن: </string>
     <string name="tc09a"> گھڙي  </string>
     <string name="tc09b"> موبائل فون </string>
@@ -518,6 +523,7 @@
     <string name="tha31i"> غير سرڪاري تنظيم ( اين جي او) جو عملو </string>
     <string name="tha31j"> سي ايم ڊبليو (ڪميونٽي مڊوائف) </string>
     <string name="tha31k"> دائي / ٽي بي اي </string>
+    <string name="tha31l"> او آر ايس جي ساشي مان  </string>
     <string name="thb01"> ڇا توھان جي گھر ۾ 5 سالن کان گھٽ عمر وارن ٻارن کي گذريل ٻن ھفتن ۾ بخار ٿيو؟ </string>
     <string name="thb02"> گذريل ٻن ھفتن جي دوران ڪيترن ٻار کي بخار ٿيو؟ </string>
     <string name="thb02a"> ٻارن جو تعداد </string>
@@ -766,6 +772,7 @@
     <string name="tj10"> ڇا توھان (نالو) کي صرف ماءُ جو کير(Exclusive Beastfeeding) ئي ڏنو آھي؟ </string>
     <string name="tj11"> (نالو) ڪيترو وقت صرف ماءُ جي ٿڃ (Exclusive Beastfeeding) پيتي؟ </string>
     <string name="tj12"> توھان (نالو) کي ڪيترن مھينن يا ڏينھن تائين ماءُ جو کير پياريوآھي؟ </string>
+    <string name="tj12a">اڃا پياري رھي آھيان </string>
     <string name="tj13"> ڪهڙي عمر ۾ (نالو) کي توهان ٺوس/ نيم ٺوس غذائون ڏنيون؟ </string>
     <string name="tj13c"> اڃا ڪونه ڏني آھي </string>
     <string name="tj14"> (نالو) کي توهان سڀ کان پهرين ڪهڙي ٺوس/ نيم ٺوس غذا ڏني؟ </string>
@@ -979,7 +986,7 @@
     <string name="tg05a">ٻار جو جسماني معائنو </string>
     <string name="tg05b">	بخار جي چڪاس </string>
     <string name="tg05c">	ساهه جي رفتار ڳڻڻ  RR) ٽائيمر کانسواءِ)</string>
-    <string name="tg05d"> RR ٽائيمر سان ساهه جي رفتار ڳڻڻ  </string>
+    <string name="tg05d"> ٽائيمر سان ساهه جي رفتار ڳڻڻ RP   </string>
     <string name="tg05e"> 	ٻار جي ڏوري جا ماپ</string>
     <string name="tg05f"> 	وزن جي ماپ</string>
     <string name="tg05g"> 	قد ماپ ڪرڻ </string>

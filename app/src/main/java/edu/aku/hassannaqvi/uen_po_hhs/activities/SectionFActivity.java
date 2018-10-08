@@ -26,7 +26,6 @@ import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
-import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
 public class SectionFActivity extends AppCompatActivity {
 
@@ -60,8 +59,12 @@ public class SectionFActivity extends AppCompatActivity {
     RadioButton tf05d;
     @BindView(R.id.tf05e)
     RadioButton tf05e;
-    @BindView(R.id.tf06)
-    DatePickerInputEditText tf06;
+    @BindView(R.id.tf06d)
+    EditText tf06d;
+    @BindView(R.id.tf06m)
+    EditText tf06m;
+    @BindView(R.id.tf06y)
+    EditText tf06y;
     @BindView(R.id.tf07)
     RadioGroup tf07;
     @BindView(R.id.tf07a)
@@ -97,13 +100,13 @@ public class SectionFActivity extends AppCompatActivity {
         MainApp.CounterDeceasedChild++;
         counterDecChild.setText("Deceased Child " + MainApp.CounterDeceasedChild + " out of " + MainApp.TotalDeceasedChildCount);
 
-        tf06.setManager(getSupportFragmentManager());
+        //tf06.setManager(getSupportFragmentManager());
 
         String dateToday = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
         String maxDate5Years = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTimeInMillis() - ((MainApp.MILLISECONDS_IN_5Years) + MainApp.MILLISECONDS_IN_DAY));
 
-        tf06.setMinDate(maxDate5Years);
-        tf06.setMaxDate(dateToday);
+       // tf06.setMinDate(maxDate5Years);
+       // tf06.setMaxDate(dateToday);
 
 
 
@@ -153,10 +156,10 @@ public class SectionFActivity extends AppCompatActivity {
                     MainApp.CounterDeceasedChild = 0;
 
 
-                    if (MainApp.TotalChildCount > 0) {
+                    if (MainApp.TotalChildCount > 0 && MainApp.childList.size() > 0) {
                         Intent secNext = new Intent(this, SectionHAActivity.class);
                         startActivity(secNext);
-                    } else if (MainApp.totalImsCount > 0) {
+                    } else if (MainApp.totalImsCount > 0 && MainApp.childList.size() > 0) {
                         Intent secNext = new Intent(this, SectionIActivity.class);
                         startActivity(secNext);
                     } else {
@@ -224,7 +227,9 @@ public class SectionFActivity extends AppCompatActivity {
         sF.put("tf04y", tf04y.getText().toString());
         sF.put("tf05", tf05a.isChecked() ? "1" : tf05b.isChecked() ? "2" : tf05c.isChecked() ? "3"
                 : tf05d.isChecked() ? "4" : tf05e.isChecked() ? "5" : "0");
-        sF.put("tf06", tf06.getText().toString());
+        sF.put("tf06d", tf06d.getText().toString());
+        sF.put("tf06m", tf06m.getText().toString());
+        sF.put("tf06y", tf06y.getText().toString());
         sF.put("te07", tf07a.isChecked() ? "1" : tf07b.isChecked() ? "2" : tf07c.isChecked() ? "3"
                 : tf07d.isChecked() ? "4" : tf07e.isChecked() ? "5" : tf07f.isChecked() ? "6" : tf07g.isChecked() ? "7"
                 : tf07h.isChecked() ? "8" : tf0788.isChecked() ? "88" : "0");
@@ -273,7 +278,7 @@ public class SectionFActivity extends AppCompatActivity {
             tf03a.setError(null);
         }
 
-        if (tf04d.getText().toString().isEmpty() || tf04m.getText().toString().isEmpty() || tf04y.getText().toString().isEmpty()) {
+        if (tf04d.getText().toString().isEmpty()) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tf04), Toast.LENGTH_SHORT).show();
             tf04d.setError("This data is Required!");    // Set Error on last radio button
             tf04d.requestFocus();
@@ -281,6 +286,26 @@ public class SectionFActivity extends AppCompatActivity {
             return false;
         } else {
             tf04d.setError(null);
+        }
+
+        if (tf04m.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tf04), Toast.LENGTH_SHORT).show();
+            tf04m.setError("This data is Required!");    // Set Error on last radio button
+            tf04m.requestFocus();
+            Log.i(TAG, "tf04: This data is Required!");
+            return false;
+        } else {
+            tf04m.setError(null);
+        }
+
+        if (tf04y.getText().toString().isEmpty() ) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tf04), Toast.LENGTH_SHORT).show();
+            tf04y.setError("This data is Required!");    // Set Error on last radio button
+            tf04y.requestFocus();
+            Log.i(TAG, "tf04: This data is Required!");
+            return false;
+        } else {
+            tf04y.setError(null);
         }
 
 
@@ -326,14 +351,64 @@ public class SectionFActivity extends AppCompatActivity {
             tf05a.setError(null);
         }
 
-        if (tf06.getText().toString().isEmpty()) {
+        if (tf06d.getText().toString().isEmpty()) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tf06), Toast.LENGTH_SHORT).show();
-            tf06.setError("This data is Required!");    // Set Error on last radio button
-            tf06.requestFocus();
+            tf06d.setError("This data is Required!");    // Set Error on last radio button
+            tf06d.requestFocus();
             Log.i(TAG, "tf06: This data is Required!");
             return false;
         } else {
-            tf06.setError(null);
+            tf06d.setError(null);
+        }
+
+        if (Integer.parseInt(tf06d.getText().toString()) > 31) {
+            Toast.makeText(this, "ERROR: " + getString(R.string.tf06), Toast.LENGTH_SHORT).show();
+            tf06d.setError("Days must not be greater than 30!");    // Set Error on last radio button
+            tf06d.requestFocus();
+            Log.i(TAG, "tf06: This data is Required!");
+            return false;
+        } else {
+            tf06d.setError(null);
+        }
+
+        if (tf06m.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tf06), Toast.LENGTH_SHORT).show();
+            tf06m.setError("This data is Required!");    // Set Error on last radio button
+            tf06m.requestFocus();
+            Log.i(TAG, "tf06: This data is Required!");
+            return false;
+        } else {
+            tf06m.setError(null);
+        }
+
+        if (Integer.parseInt(tf06m.getText().toString()) > 12) {
+            Toast.makeText(this, "ERROR: " + getString(R.string.tf06), Toast.LENGTH_SHORT).show();
+            tf06m.setError("Month must not be greater than 12!");    // Set Error on last radio button
+            tf06m.requestFocus();
+            Log.i(TAG, "tf06: This data is Required!");
+            return false;
+        } else {
+            tf06m.setError(null);
+        }
+
+        if (tf06y.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tf06), Toast.LENGTH_SHORT).show();
+            tf06y.setError("This data is Required!");    // Set Error on last radio button
+            tf06y.requestFocus();
+            Log.i(TAG, "tf06: This data is Required!");
+            return false;
+        } else {
+            tf06y.setError(null);
+        }
+
+        if (Integer.parseInt(tf06y.getText().toString()) < 2013 && Integer.parseInt(tf06y.getText().toString()) > 2018) {
+            Toast.makeText(this, "ERROR: " + getString(R.string.tf06), Toast.LENGTH_SHORT).show();
+            tf06y.setError("Year must be in between 2013 to 2018");    // Set Error on last radio button
+            tf06y.requestFocus();
+            Log.i(TAG, "tf06: This data is Required!");
+            return false;
+        } else {
+            tf06y.setError(null);
         }
 
         if (tf07.getCheckedRadioButtonId() == -1) {

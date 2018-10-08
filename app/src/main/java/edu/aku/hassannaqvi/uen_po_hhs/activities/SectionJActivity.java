@@ -193,6 +193,8 @@ public class SectionJActivity extends Activity {
     RadioButton tj12a;
     @BindView(R.id.tj12b)
     RadioButton tj12b;
+    @BindView(R.id.tj12c)
+    RadioButton tj12c;
     @BindView(R.id.tj12888)
     RadioButton tj12888;
     @BindView(R.id.tj12d)
@@ -271,6 +273,24 @@ public class SectionJActivity extends Activity {
 //                lstChild.add(MainApp.familyMembersList.get(i).getName());
 //            }
 //        }
+
+        //Checking dix months Child condition
+        if(MainApp.sixMonthsCount > 0){
+            fldGrpti08.setVisibility(View.VISIBLE);
+        }else{
+            fldGrpti08.setVisibility(View.GONE);
+            tj08a.setChecked(false);
+            tj08b.setChecked(false);
+            tj08c.setChecked(false);
+            tj08d.setChecked(false);
+            tj08e.setChecked(false);
+            tj08f.setChecked(false);
+            tj08g.setChecked(false);
+            tj08h.setChecked(false);
+            tj08i.setChecked(false);
+            tj0888.setChecked(false);
+            tj0888x.setText(null);
+        }
 
         tj01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, MainApp.lstChild));
 
@@ -493,10 +513,15 @@ public class SectionJActivity extends Activity {
                     tj12d.setVisibility(View.GONE);
 
                     tj12m.setVisibility(View.VISIBLE);
-                } else {
+                } else if(i == R.id.tj12c){
                     tj12d.setText(null);
                     tj12d.setVisibility(View.GONE);
+                    tj12m.setText(null);
+                    tj12m.setVisibility(View.GONE);
 
+                }else{
+                    tj12d.setText(null);
+                    tj12d.setVisibility(View.GONE);
                     tj12m.setText(null);
                     tj12m.setVisibility(View.GONE);
                 }
@@ -750,7 +775,7 @@ public class SectionJActivity extends Activity {
         sJ.put("tj11m", tj11m.getText().toString());
 
         sJ.put("tj12", tj12a.isChecked() ? "1" : tj12b.isChecked() ? "2"
-                : tj12888.isChecked() ? "888" : "0");
+                : tj12888.isChecked() ? "888" : tj12c.isChecked() ? "3" : "0");
         sJ.put("tj12d", tj12d.getText().toString());
         sJ.put("tj12m", tj12m.getText().toString());
 
@@ -957,26 +982,31 @@ public class SectionJActivity extends Activity {
 
 
 //        08
-        if (!(tj08a.isChecked() || tj08b.isChecked() || tj08c.isChecked() || tj08d.isChecked() ||
-                tj08e.isChecked() || tj08f.isChecked() || tj08g.isChecked() ||
-                tj08h.isChecked() || tj08i.isChecked() || tj0888.isChecked())) {
-            Toast.makeText(this, "ERROR(empty): " + getString(R.string.tj08), Toast.LENGTH_SHORT).show();
-            tj08i.setError("This data is Required!");    // Set Error on last check box
+        if(MainApp.sixMonthsCount > 0){
 
-            Log.i(TAG, "tj08: This data is Required!");
-            return false;
-        } else {
-            tj08i.setError(null);
-        }
-        if (tj0888.isChecked() && tj0888x.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
-            tj0888x.setError("This data is Required! ");    // Set Error on last radio button
+            if (!(tj08a.isChecked() || tj08b.isChecked() || tj08c.isChecked() || tj08d.isChecked() ||
+                    tj08e.isChecked() || tj08f.isChecked() || tj08g.isChecked() ||
+                    tj08h.isChecked() || tj08i.isChecked() || tj0888.isChecked())) {
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.tj08), Toast.LENGTH_SHORT).show();
+                tj08i.setError("This data is Required!");    // Set Error on last check box
 
-            Log.i(TAG, "tj08: This data is Required!");
-            return false;
-        } else {
-            tj0888x.setError(null);
+                Log.i(TAG, "tj08: This data is Required!");
+                return false;
+            } else {
+                tj08i.setError(null);
+            }
+            if (tj0888.isChecked() && tj0888x.getText().toString().isEmpty()) {
+                Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
+                tj0888x.setError("This data is Required! ");    // Set Error on last radio button
+
+                Log.i(TAG, "tj08: This data is Required!");
+                return false;
+            } else {
+                tj0888x.setError(null);
+            }
+
         }
+
 
 //        09
         if (tj09.getCheckedRadioButtonId() == -1) {

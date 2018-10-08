@@ -2120,8 +2120,10 @@ public class SectionHAActivity extends Activity {
                 : bi.tha31i.isChecked() ? "9"
                 : bi.tha31j.isChecked() ? "10"
                 : bi.tha31k.isChecked() ? "11"
+                : bi.tha31l.isChecked() ? "12"
                 : "0");
         sHA.put("tha3196x", bi.tha3196x.getText().toString());
+
 
         MainApp.fc.setsHA(String.valueOf(sHA));
 

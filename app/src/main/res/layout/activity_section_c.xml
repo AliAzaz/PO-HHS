@@ -1310,6 +1310,66 @@
 
             </RadioGroup>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorHeading"
+                android:text="@string/tc08t"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <RadioGroup
+                android:id="@+id/tc08t"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tc08ta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/yes"/>
+
+                <RadioButton
+                    android:id="@+id/tc08tb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/no"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorHeading"
+                android:text="@string/tc08u"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <RadioGroup
+                android:id="@+id/tc08u"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tc08ua"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/yes"/>
+
+                <RadioButton
+                    android:id="@+id/tc08ub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/no"/>
+
+            </RadioGroup>
+
         </LinearLayout>
 
         <LinearLayout

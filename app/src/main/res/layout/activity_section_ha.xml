@@ -43,6 +43,16 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/secHAins1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
@@ -1887,6 +1897,14 @@
                         android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/tha31k" />
+
+                    <RadioButton
+                        android:id="@+id/tha31l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/tha31l" />
 
 
                     <EditText

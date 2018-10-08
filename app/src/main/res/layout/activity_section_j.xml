@@ -22,6 +22,25 @@
             android:text="@string/secJLabel"
             android:textSize="40sp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/secJins"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/secHAins1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -429,6 +448,7 @@
         <!--If child younger than 6 months-->
 
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/fldGrpti08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -687,6 +707,13 @@
                 android:inputType="number"
                 android:maxLength="2"
                 android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/tj12c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="@string/tj12a" />
 
 
             <RadioButton

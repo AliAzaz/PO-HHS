@@ -180,7 +180,7 @@ public class SectionBActivity extends AppCompatActivity {
     TextView txtRsn;
 
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-
+    public static int month;
     DatabaseHelper db;
     long ageInyears = 0;
 
@@ -189,6 +189,7 @@ public class SectionBActivity extends AppCompatActivity {
         Calendar cal = getCalendarDate(dateStr);
         Date dob = cal.getTime();
         Date today = new Date();
+        month = cal.get(Calendar.MONTH);
 
         Long diff = today.getTime() - dob.getTime();
 
@@ -406,7 +407,7 @@ public class SectionBActivity extends AppCompatActivity {
                     } else {
                         txtRsn.setText(ageInyears + " years");
                     }
-                    if (ageInyears < 5) {
+                    if (ageInyears < 3) {
 
                         tb09.setText("NA");
                         tb09.setEnabled(false);
@@ -415,7 +416,7 @@ public class SectionBActivity extends AppCompatActivity {
                         tb10.clearCheck();
                         tb11.clearCheck();
 
-                    } else if (ageInyears > 5 && ageInyears < 14) {
+                    } else if (ageInyears > 3 && ageInyears < 14) {
                         fldGrpOcc.setVisibility(View.VISIBLE);
                         fldGrpMarital.setVisibility(View.GONE);
                         tb09.setText(null);
@@ -449,8 +450,8 @@ public class SectionBActivity extends AppCompatActivity {
                         if (!tb10a.isChecked() || !tb03b.isChecked()) {
                             tb11a.setEnabled(true);
                         } else {
-                            tb11a.setEnabled(false);
-                            tb11a.setChecked(false);
+                            tb11a.setEnabled(true);
+                            tb11a.setChecked(true);
                         }
                         tb11b.setEnabled(true);
                         tb11c.setEnabled(true);
@@ -464,6 +465,27 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
 
+
+            }
+        });
+
+        tb08m.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                if(!tb08m.getText().toString().isEmpty()){
+
+                    month = Integer.parseInt(tb08m.getText().toString());
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
 
             }
         });
@@ -488,7 +510,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 if (tb10a.isChecked()) {
-                    tb11a.setEnabled(false);
+                    tb11a.setEnabled(true);
                 } else {
                     tb11a.setEnabled(true);
                 }
@@ -587,11 +609,14 @@ public class SectionBActivity extends AppCompatActivity {
                                     } else if (tb04b.isChecked() && tb11b.isChecked()) {
                                         MainApp.motherList.add(tb02.getText().toString());
                                     }
-                                    if(ageInyears <= 2){
+                                    if (ageInyears < 2) {
                                         MainApp.lstChild.add(tb02.getText().toString());
                                     }
                                     if (ageInyears < 5) {
                                         MainApp.childList.add(tb02.getText().toString());
+                                    }
+                                    if(month < 7){
+                                        MainApp.sixMonthsCount++;
                                     }
                                     try {
                                         SaveDraft();
@@ -601,12 +626,12 @@ public class SectionBActivity extends AppCompatActivity {
                                     if (MainApp.TotalChildCount == 0) {
                                         Toast.makeText(SectionBActivity.this, "Please Enter a child under 5", Toast.LENGTH_SHORT).show();
                                     } else {
-                                    if (UpdateDB() && UpdateCount()) {
+                                        if (UpdateDB() && UpdateCount()) {
 
-                                        Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
                                             finish();
                                             startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
-                                    }
+                                        }
                                     }
                                 } else {
                                     Toast.makeText(SectionBActivity.this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -627,22 +652,29 @@ public class SectionBActivity extends AppCompatActivity {
     @OnClick(R.id.btn_addMore)
     void onBtnAddMoreClick() {
         //TODO implement
-        Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
             if (tb04a.isChecked() && tb11b.isChecked()) {
                 MainApp.fatherList.add(tb02.getText().toString());
+            } else if (tb04a.isChecked() && tb11c.isChecked()) {
+                MainApp.fatherList.add(tb02.getText().toString());
+            } else if (tb04a.isChecked() && tb11d.isChecked()) {
+                MainApp.fatherList.add(tb02.getText().toString());
             } else if (tb04b.isChecked() && tb11b.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
-            }else if(tb04b.isChecked() && tb11c.isChecked()){
+            } else if (tb04b.isChecked() && tb11c.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
-            }else if(tb04b.isChecked() && tb11d.isChecked()){
+            } else if (tb04b.isChecked() && tb11d.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
             }
-            if(ageInyears <= 2){
+            if (ageInyears < 2) {
                 MainApp.lstChild.add(tb02.getText().toString());
             }
             if (ageInyears < 5) {
                 MainApp.childList.add(tb02.getText().toString());
+            }
+            if(month < 7){
+                MainApp.sixMonthsCount++;
             }
             try {
                 SaveDraft();
@@ -651,7 +683,7 @@ public class SectionBActivity extends AppCompatActivity {
             }
 
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
                 finish();
                 startActivity(new Intent(this, SectionBActivity.class));
@@ -665,7 +697,7 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
+        //  Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         // children
         if (ageInyears < 5) {
@@ -781,7 +813,7 @@ public class SectionBActivity extends AppCompatActivity {
         MainApp.fmc.set_ID(String.valueOf(updcount));
 
         if (updcount != 0) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
 
             MainApp.fmc.set_UID(
                     (MainApp.fc.getDeviceID() + MainApp.fmc.get_ID()));
@@ -798,7 +830,7 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-        Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
 //        01
         if (tb02.getText().toString().isEmpty()) {
@@ -959,6 +991,7 @@ public class SectionBActivity extends AppCompatActivity {
             }
 
         }
+
 
 
         if (!tb09.getText().toString().equals("NA")) {

@@ -91,6 +91,7 @@ public class MainApp extends Application {
     public static int mm = 1;
     public static int imsCount = 1;
     public static int totalImsCount = 0;
+    public static int sixMonthsCount = 0;
     public static int positionIm = 0;
     public static boolean flag = true;
     public static int versionCode;
