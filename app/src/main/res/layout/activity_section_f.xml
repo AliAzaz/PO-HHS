@@ -382,8 +382,6 @@
                 android:textColor="#ff1e1e" />
 
             <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
-
-
             <!--'onClick' for btn_Continue will call next section form e.g.: openSection2-->
         </LinearLayout>
 

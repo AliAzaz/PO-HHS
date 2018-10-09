@@ -2518,7 +2518,7 @@ public class SectionHBActivity extends Activity {
                 : "0");
         sHB.put("thb3996", thb3996.getText().toString());
         sHB.put("thb39ix", thb39ix.getText().toString());
-        sHB.put("appver", MainApp.versionName + "." + MainApp.versionCode);
+       // sHB.put("appver", MainApp.versionName + "." + MainApp.versionCode);
 
         MainApp.fc.setsHB(String.valueOf(sHB));
     }

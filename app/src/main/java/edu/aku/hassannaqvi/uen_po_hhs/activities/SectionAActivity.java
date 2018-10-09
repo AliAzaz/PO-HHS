@@ -95,7 +95,6 @@ public class SectionAActivity extends Activity {
     LinearLayout navbuttons;
 
 
-
     @BindView(R.id.contactdetails)
     LinearLayout contactdetails;
     @BindView(R.id.hh08)
@@ -247,17 +246,19 @@ public class SectionAActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(SectionAActivity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
+                if (validation()) {
+                    if (MainApp.lhwCode != "" && validatorClass.EmptyTextBox(SectionAActivity.this, pobhh, getString(R.string.household))) {
+                        setupViews();
+                    } else {
+                        Toast.makeText(SectionAActivity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
 
-                if (MainApp.lhwCode != "" && validatorClass.EmptyTextBox(SectionAActivity.this, pobhh, getString(R.string.household))) {
-                    setupViews();
-                }else{
-                    Toast.makeText(SectionAActivity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
-
+                    }
                 }
+
+
             }
 
         });
-
 
 
     }
@@ -275,11 +276,11 @@ public class SectionAActivity extends Activity {
             contactdetails.setVisibility(View.VISIBLE);
             navbuttons.setVisibility(View.VISIBLE);
             hh08.setText(MainApp.selectedHead.getHhhead().toUpperCase());
-            if (!MainApp.selectedHead.gethhcontact().equals("99")){
+            if (!MainApp.selectedHead.gethhcontact().equals("99")) {
                 hh09.setVisibility(View.VISIBLE);
                 labelcontact.setVisibility(View.VISIBLE);
                 hh09.setText(MainApp.selectedHead.gethhcontact().toUpperCase());
-            }else {
+            } else {
                 hh09.setText(null);
                 hh09.setVisibility(View.GONE);
                 labelcontact.setVisibility(View.GONE);
@@ -463,7 +464,7 @@ public class SectionAActivity extends Activity {
 
 // removed village selection
 //        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
-        if (MN03.getSelectedItemPosition() != 0 && !validatorClass.EmptyTextBox(this, pobhh,getString(R.string.household))) {
+        if (MN03.getSelectedItemPosition() != 0 && !validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
 
             Intent oF = new Intent(this, SectionBActivity.class);
 
@@ -617,15 +618,15 @@ public class SectionAActivity extends Activity {
         sa.put("ta02", ta02a.isChecked() ? "1" : ta02b.isChecked() ? "2" : ta02c.isChecked() ? "3" : "0");*/
         sa.put("ta03", MainApp.hh01txt);
         sa.put("ta04", MainApp.hh02txt);
-       // sa.put("ta04A", MainApp.areaCode);
+        // sa.put("ta04A", MainApp.areaCode);
        /* sa.put("ta05h", ta05h.getText().toString());
         sa.put("ta05u", ta05u.getText().toString());
         sa.put("ta06", ta06.getText().toString());
         sa.put("ta07", ta07.getText().toString());
         sa.put("ta08", ta08.getText().toString());*/
         sa.put("ta09", ta09a.isChecked() ? "1" : ta09b.isChecked() ? "2" : "0");
-        sa.put("lhw_code",MainApp.lhwCode);
-        sa.put("hh_no",pobhh.getText().toString());
+        sa.put("lhw_code", MainApp.lhwCode);
+        sa.put("hh_no", pobhh.getText().toString());
         sa.put("app_version", MainApp.versionName + "." + MainApp.versionCode);
 
 
@@ -705,6 +706,28 @@ public class SectionAActivity extends Activity {
             return false;
         }
         return validatorClass.EmptyRadioButton(this, ta09, ta09a, getString(R.string.ta09));
+    }
+
+    /*
+       responsible for validating fields before clicking on check button of household
+     */
+    public boolean validation() {
+       // Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
+
+
+        if (!validatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
+            return false;
+        }
+        if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
+            return false;
+        }
+      /*  if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.villagename))) {
+        return false;
+        }*/
+        if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.lhwname))) {
+            return false;
+        }
+        return validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household));
     }
 
 }
