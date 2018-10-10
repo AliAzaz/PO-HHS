@@ -1606,8 +1606,6 @@ public class SectionIActivity extends AppCompatActivity
         for (DatePickerInputEditText de : dates) {
             de.setManager(getSupportFragmentManager());
             de.setMaxDate(dateToday);
-
-
         }
 
 
@@ -1618,11 +1616,11 @@ public class SectionIActivity extends AppCompatActivity
                 if (ti03a.isChecked()) {
                     for (DatePickerInputEditText de : dates) {
                         de.setVisibility(View.VISIBLE);
-                        if (MainApp.ageRdo == 1 && (!tiname.getSelectedItem().equals("...."))) {
-                            de.setMinDate(MainApp.convertDateFormat(MainApp.childsMap.get(tiname.getSelectedItem()).getDob()));
-                        } else if (MainApp.ageRdo == 2 && (!tiname.getSelectedItem().equals("...."))) {
-                            de.setMinDate(maxDate2Years);
-                        }
+//                        if (MainApp.ageRdo == 1 && (!tiname.getSelectedItem().equals("...."))) {
+//                            de.setMinDate(MainApp.convertDateFormat(MainApp.childsMap.get(tiname.getSelectedItem()).getDob()));
+//                        } else if (MainApp.ageRdo == 2 && (!tiname.getSelectedItem().equals("...."))) {
+//                            de.setMinDate(maxDate2Years);
+//                        }
                     }
                     for (LinearLayout le : fldGrpCard) {
                         le.setVisibility(View.VISIBLE);

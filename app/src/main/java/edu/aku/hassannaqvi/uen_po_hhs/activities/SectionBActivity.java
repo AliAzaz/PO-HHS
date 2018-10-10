@@ -478,7 +478,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                if(!tb08m.getText().toString().isEmpty()){
+                if (!tb08m.getText().toString().isEmpty()) {
 
                     month = Integer.parseInt(tb08m.getText().toString());
                 }
@@ -611,11 +611,14 @@ public class SectionBActivity extends AppCompatActivity {
                                     }
                                     if (ageInyears < 2) {
                                         MainApp.lstChild.add(tb02.getText().toString());
+                                        MainApp.totalImsCount++;
                                     }
                                     if (ageInyears < 5) {
                                         MainApp.childList.add(tb02.getText().toString());
+                                        MainApp.TotalChildCount++;
                                     }
-                                    if(month < 7){
+//
+                                    if (month < 7) {
                                         MainApp.sixMonthsCount++;
                                     }
                                     try {
@@ -623,16 +626,22 @@ public class SectionBActivity extends AppCompatActivity {
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
-                                    if (MainApp.TotalChildCount == 0) {
-                                        Toast.makeText(SectionBActivity.this, "Please Enter a child under 5", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        if (UpdateDB() && UpdateCount()) {
+                                    if (UpdateDB() && UpdateCount()) {
 
-                                            Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
-                                            finish();
-                                            startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
-                                        }
+                                        Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
                                     }
+//                                    if (MainApp.TotalChildCount == 0) {
+//                                        Toast.makeText(SectionBActivity.this, "Please Enter a child under 5", Toast.LENGTH_SHORT).show();
+//                                    } else {
+//                                        if (UpdateDB() && UpdateCount()) {
+//
+//                                            Toast.makeText(SectionBActivity.this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+//                                            finish();
+//                                            startActivity(new Intent(getApplicationContext(), SectionCActivity.class));
+//                                        }
+//                                    }
                                 } else {
                                     Toast.makeText(SectionBActivity.this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
                                 }
@@ -669,11 +678,13 @@ public class SectionBActivity extends AppCompatActivity {
             }
             if (ageInyears < 2) {
                 MainApp.lstChild.add(tb02.getText().toString());
+                MainApp.totalImsCount++;
             }
             if (ageInyears < 5) {
                 MainApp.childList.add(tb02.getText().toString());
+                MainApp.TotalChildCount++;
             }
-            if(month < 7){
+            if (month < 7) {
                 MainApp.sixMonthsCount++;
             }
             try {
@@ -991,7 +1002,6 @@ public class SectionBActivity extends AppCompatActivity {
             }
 
         }
-
 
 
         if (!tb09.getText().toString().equals("NA")) {

@@ -155,11 +155,10 @@ public class SectionFActivity extends AppCompatActivity {
                     // Reset Counter
                     MainApp.CounterDeceasedChild = 0;
 
-
-                    if (MainApp.TotalChildCount > 0 && MainApp.childList.size() > 0) {
+                    if (MainApp.TotalChildCount > 0 || MainApp.totalImsCount > 0) {
                         Intent secNext = new Intent(this, SectionHAActivity.class);
                         startActivity(secNext);
-                    } else if (MainApp.totalImsCount > 0 && MainApp.childList.size() > 0) {
+                    } else if (MainApp.totalImsCount > 0) {
                         Intent secNext = new Intent(this, SectionIActivity.class);
                         startActivity(secNext);
                     } else {

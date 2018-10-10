@@ -103,6 +103,8 @@ public abstract class validatorClass {
         }
     }
 
+
+
     public static boolean EmptyRadioButton(Context context, RadioGroup rdGrp, RadioButton rdBtn, EditText txt, String msg) {
         if (rdGrp.getCheckedRadioButtonId() == -1) {
             Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_SHORT).show();

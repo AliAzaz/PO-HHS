@@ -84,6 +84,7 @@
             </RadioGroup>
 
             <EditText
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                 android:id="@+id/istatus888x"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
