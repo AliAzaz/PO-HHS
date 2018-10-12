@@ -234,7 +234,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                fatherIndex = i;
+                fatherIndex = i -1;
             }
 
             @Override
@@ -247,7 +247,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                motherIndex = i;
+                motherIndex = i - 1;
             }
 
             @Override
@@ -643,8 +643,22 @@ public class SectionBActivity extends AppCompatActivity {
                                 if (formValidation()) {
                                     if (tb04a.isChecked() && tb11b.isChecked()) {
                                         MainApp.fatherList.add(tb02.getText().toString());
+                                        MainApp.fatherSerial.add(MainApp.counter);
+                                    } else if (tb04a.isChecked() && tb11c.isChecked()) {
+                                        MainApp.fatherList.add(tb02.getText().toString());
+                                        MainApp.fatherSerial.add(MainApp.counter);
+                                    } else if (tb04a.isChecked() && tb11d.isChecked()) {
+                                        MainApp.fatherList.add(tb02.getText().toString());
+                                        MainApp.fatherSerial.add(MainApp.counter);
                                     } else if (tb04b.isChecked() && tb11b.isChecked()) {
                                         MainApp.motherList.add(tb02.getText().toString());
+                                        MainApp.motherSerial.add(MainApp.counter);
+                                    } else if (tb04b.isChecked() && tb11c.isChecked()) {
+                                        MainApp.motherList.add(tb02.getText().toString());
+                                        MainApp.motherSerial.add(MainApp.counter);
+                                    } else if (tb04b.isChecked() && tb11d.isChecked()) {
+                                        MainApp.motherList.add(tb02.getText().toString());
+                                        MainApp.motherSerial.add(MainApp.counter);
                                     }
                                     if (ageInyears < 2) {
                                         MainApp.lstChild.add(tb02.getText().toString());
