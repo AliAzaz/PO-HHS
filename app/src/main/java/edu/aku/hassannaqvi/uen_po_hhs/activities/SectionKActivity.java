@@ -159,8 +159,6 @@ public class SectionKActivity extends Activity {
     RadioButton tk09e;
     @BindView(R.id.tk09f)
     RadioButton tk09f;
-    @BindView(R.id.tk09g)
-    RadioButton tk09g;
     @BindView(R.id.tk0988)
     RadioButton tk0988;
     @BindView(R.id.tk0988x)
@@ -418,7 +416,7 @@ public class SectionKActivity extends Activity {
         sK.put("tk07", tk07a.isChecked() ? "1" : tk07b.isChecked() ? "2" : tk07888.isChecked() ? "888" : "0");
         sK.put("tk08", tk08a.isChecked() ? "1" : tk08b.isChecked() ? "2" : tk08888.isChecked() ? "888" : "0");
         sK.put("tk09", tk09a.isChecked() ? "1" : tk09b.isChecked() ? "2" : tk09c.isChecked() ? "3" : tk09d.isChecked() ? "4"
-                : tk09e.isChecked() ? "5" : tk09f.isChecked() ? "6" : tk09g.isChecked() ? "7" : tk0988.isChecked() ? "88" : "0");
+                : tk09e.isChecked() ? "5" : tk09f.isChecked() ? "6" :  tk0988.isChecked() ? "88" : "0");
         sK.put("tk0988x", tk0988x.getText().toString());
 
         sK.put("tk10", tk10a.isChecked() ? "1" : tk10b.isChecked() ? "2" : tk10c.isChecked() ? "3" : tk10d.isChecked() ? "4"

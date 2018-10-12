@@ -462,6 +462,8 @@ public class SectionHBActivity extends Activity {
     RadioButton thb39h;
     @BindView(R.id.thb39i)
     RadioButton thb39i;
+    @BindView(R.id.thb39j)
+    RadioButton thb39j;
 
     @BindView(R.id.thb39ix)
     EditText thb39ix;
@@ -2508,12 +2510,13 @@ public class SectionHBActivity extends Activity {
                 : "0");
         sHB.put("thb39", thb39a.isChecked() ? "1"
                 : thb39b.isChecked() ? "2"
-                : thb39c.isChecked() ? "3"
-                : thb39d.isChecked() ? "4"
-                : thb39e.isChecked() ? "5"
-                : thb39f.isChecked() ? "6"
-                : thb39g.isChecked() ? "7"
-                : thb39h.isChecked() ? "8"
+                : thb39j.isChecked() ? "3"
+                : thb39c.isChecked() ? "4"
+                : thb39d.isChecked() ? "5"
+                : thb39e.isChecked() ? "6"
+                : thb39f.isChecked() ? "7"
+                : thb39g.isChecked() ? "8"
+                : thb39h.isChecked() ? "9"
                 : thb39i.isChecked() ? "96"
                 : "0");
         sHB.put("thb3996", thb3996.getText().toString());

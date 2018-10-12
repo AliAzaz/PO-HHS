@@ -13,9 +13,9 @@
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="horizontal"
         tools:context="edu.aku.hassannaqvi.uen_po_hhs.activities.SectionGActivity">
 
         <LinearLayout
@@ -265,8 +265,7 @@
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/tg04e"
-                    android:text='@{tg04e.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg04e.checked? View.VISIBLE : View.GONE}' />
+                    android:visibility="gone" />
 
 
                 <CheckBox
@@ -282,8 +281,7 @@
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/tg04f"
-                    android:text='@{tg04f.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg04f.checked? View.VISIBLE : View.GONE}' />
+                    android:visibility="gone" />
 
 
                 <CheckBox
@@ -299,8 +297,7 @@
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/tg04g"
-                    android:text='@{tg04g.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg04g.checked? View.VISIBLE : View.GONE}' />
+                    android:visibility="gone" />
 
                 <CheckBox
                     android:id="@+id/tg04h"
@@ -315,8 +312,7 @@
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/tg04h"
-                    android:text='@{tg04h.checked? tg01bx.getText.toString : ""}'
-                    android:visibility='@{tg04h.checked? View.VISIBLE : View.GONE}' />
+                    android:visibility="gone" />
 
 
                 <CheckBox
@@ -332,9 +328,14 @@
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:hint="@string/other"
-                    android:text='@{tg04i.checked? tg04ix.getText.toString : ""}'
-                    android:visibility='@{tg04i.checked? View.VISIBLE : View.GONE}' />
+                    android:visibility="gone" />
 
+                <CheckBox
+                    android:id="@+id/tg0497"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/tg04j" />
 
             </LinearLayout>
 
@@ -871,7 +872,6 @@
             </LinearLayout>
 
             <!--Q10-->
-
             <LinearLayout
                 android:id="@+id/fldGrptg10"
                 android:layout_width="match_parent"

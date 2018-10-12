@@ -601,6 +601,13 @@
                         android:text="@string/thb39b" />
 
                     <RadioButton
+                        android:id="@+id/thb39j"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/thb39j" />
+
+                    <RadioButton
                         android:id="@+id/thb39c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

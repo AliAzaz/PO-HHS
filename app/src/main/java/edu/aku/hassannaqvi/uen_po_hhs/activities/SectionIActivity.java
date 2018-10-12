@@ -130,6 +130,7 @@ public class SectionIActivity extends AppCompatActivity
     LinearLayout fldGrpov1;
     @BindView(R.id.bcgPov)
     RadioGroup bcgPov;
+
     public RadioGroup.OnCheckedChangeListener bcg = new OnCheckedChangeListener()
     {
         @Override
@@ -191,6 +192,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton bcgPovg;
     @BindView(R.id.bcgPovh)
     RadioButton bcgPovh;
+    @BindView(R.id.bcgPovi)
+    RadioButton bcgPovi;
     @BindView(R.id.sc2)
     NestedScrollView sc2;
     @BindView(R.id.fldGrpOpv0M)
@@ -288,6 +291,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton opv0Povg;
     @BindView(R.id.opv0Povh)
     RadioButton opv0Povh;
+    @BindView(R.id.opv0Povi)
+    RadioButton opv0Povi;
     @BindView(R.id.sc6wks)
     NestedScrollView sc6wks;
     @BindView(R.id.sc3)
@@ -389,6 +394,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton opv1Povg;
     @BindView(R.id.opv1Povh)
     RadioButton opv1Povh;
+    @BindView(R.id.opv1Povi)
+    RadioButton opv1Povi;
     @BindView(R.id.sc4)
     NestedScrollView sc4;
     @BindView(R.id.fldGrpPenta1M)
@@ -487,6 +494,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton penta1Povg;
     @BindView(R.id.penta1Povh)
     RadioButton penta1Povh;
+    @BindView(R.id.penta1Povi)
+    RadioButton penta1Povi;
     @BindView(R.id.sc5)
     NestedScrollView sc5;
     @BindView(R.id.fldGrppcv1M)
@@ -587,6 +596,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton pcv1Povg;
     @BindView(R.id.pcv1Povh)
     RadioButton pcv1Povh;
+    @BindView(R.id.pcv1Povi)
+    RadioButton pcv1Povi;
     @BindView(R.id.sc10wks)
     NestedScrollView sc10wks;
     @BindView(R.id.sc6)
@@ -686,6 +697,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton opv2Povg;
     @BindView(R.id.opv2Povh)
     RadioButton opv2Povh;
+    @BindView(R.id.opv2Povi)
+    RadioButton opv2Povi;
     @BindView(R.id.sc7)
     NestedScrollView sc7;
     @BindView(R.id.fldGrppenta2M)
@@ -784,6 +797,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton penta2Povg;
     @BindView(R.id.penta2Povh)
     RadioButton penta2Povh;
+    @BindView(R.id.penta2Povi)
+    RadioButton penta2Povi;
     @BindView(R.id.sc8)
     NestedScrollView sc8;
     @BindView(R.id.fldGrppcv2M)
@@ -883,6 +898,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton pcv2Povg;
     @BindView(R.id.pcv2Povh)
     RadioButton pcv2Povh;
+    @BindView(R.id.pcv2Povi)
+    RadioButton pcv2Povi;
     @BindView(R.id.sc14wks)
     NestedScrollView sc14wks;
     @BindView(R.id.sc9)
@@ -982,6 +999,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton opv3Povg;
     @BindView(R.id.opv3Povh)
     RadioButton opv3Povh;
+    @BindView(R.id.opv3Povi)
+    RadioButton opv3Povi;
     @BindView(R.id.sc10)
     NestedScrollView sc10;
     @BindView(R.id.fldGrpPenta3M)
@@ -1081,6 +1100,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton penta3Povg;
     @BindView(R.id.penta3Povh)
     RadioButton penta3Povh;
+    @BindView(R.id.penta3Povi)
+    RadioButton penta3Povi;
     @BindView(R.id.sc11)
     NestedScrollView sc11;
     @BindView(R.id.fldGrppcv3M)
@@ -1181,6 +1202,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton pcv3Povg;
     @BindView(R.id.pcv3Povh)
     RadioButton pcv3Povh;
+    @BindView(R.id.pcv3Povi)
+    RadioButton pcv3Povi;
     @BindView(R.id.sc12)
     NestedScrollView sc12;
     @BindView(R.id.fldGrpipvM)
@@ -1281,6 +1304,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton ipvPovg;
     @BindView(R.id.ipvPovh)
     RadioButton ipvPovh;
+    @BindView(R.id.ipvPovi)
+    RadioButton ipvPovi;
     @BindView(R.id.sc9M)
     NestedScrollView sc9M;
     @BindView(R.id.sc13)
@@ -1385,6 +1410,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton measles1Povg;
     @BindView(R.id.measles1Povh)
     RadioButton measles1Povh;
+    @BindView(R.id.measles1Povi)
+    RadioButton measles1Povi;
     @BindView(R.id.sc15M)
     NestedScrollView sc15M;
     @BindView(R.id.sc14)
@@ -1489,6 +1516,8 @@ public class SectionIActivity extends AppCompatActivity
     RadioButton measles2Povg;
     @BindView(R.id.measles2Povh)
     RadioButton measles2Povh;
+    @BindView(R.id.measles2Povi)
+    RadioButton measles2Povi;
     @BindView(R.id.ti04)
     RadioGroup ti04;
     @BindView(R.id.ti04a)
@@ -1606,8 +1635,6 @@ public class SectionIActivity extends AppCompatActivity
         for (DatePickerInputEditText de : dates) {
             de.setManager(getSupportFragmentManager());
             de.setMaxDate(dateToday);
-
-
         }
 
 
@@ -1618,11 +1645,11 @@ public class SectionIActivity extends AppCompatActivity
                 if (ti03a.isChecked()) {
                     for (DatePickerInputEditText de : dates) {
                         de.setVisibility(View.VISIBLE);
-                        if (MainApp.ageRdo == 1 && (!tiname.getSelectedItem().equals("...."))) {
-                            de.setMinDate(MainApp.convertDateFormat(MainApp.childsMap.get(tiname.getSelectedItem()).getDob()));
-                        } else if (MainApp.ageRdo == 2 && (!tiname.getSelectedItem().equals("...."))) {
-                            de.setMinDate(maxDate2Years);
-                        }
+//                        if (MainApp.ageRdo == 1 && (!tiname.getSelectedItem().equals("...."))) {
+//                            de.setMinDate(MainApp.convertDateFormat(MainApp.childsMap.get(tiname.getSelectedItem()).getDob()));
+//                        } else if (MainApp.ageRdo == 2 && (!tiname.getSelectedItem().equals("...."))) {
+//                            de.setMinDate(maxDate2Years);
+//                        }
                     }
                     for (LinearLayout le : fldGrpCard) {
                         le.setVisibility(View.VISIBLE);
@@ -2325,7 +2352,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("opv0Date", opv0Date.getText().toString());
         sI.put("opv0Pov", opv0Pova.isChecked() ? "1" : opv0Povb.isChecked() ? "2" : opv0Povc.isChecked() ? "3"
                 : opv0Povd.isChecked() ? "4" : opv0Pove.isChecked() ? "5" : opv0Povf.isChecked() ? "6" : opv0Povg.isChecked() ? "7"
-                : opv0Povh.isChecked() ? "8" : "0");
+                : opv0Povh.isChecked() ? "8" : opv0Povi.isChecked() ? "9" : "0");
         //Polio At Birth
         sI.put("penta1M", penta1M01.isChecked() ? "1" : penta1M02.isChecked() ? "2" : "0");
         sI.put("penta1datenr", penta1datenr.isChecked() ? "1" : "0");
@@ -2336,7 +2363,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("penta1Date", penta1Date.getText().toString());
         sI.put("penta1Pov", penta1Pova.isChecked() ? "1" : penta1Povb.isChecked() ? "2" : penta1Povc.isChecked() ? "3"
                 : penta1Povd.isChecked() ? "4" : penta1Pove.isChecked() ? "5" : penta1Povf.isChecked() ? "6" : penta1Povg.isChecked() ? "7"
-                : penta1Povh.isChecked() ? "8" : "0");
+                : penta1Povh.isChecked() ? "8" : penta1Povi.isChecked() ? "9" : "0");
         // Penta 1 at 6 weeks
         sI.put("pcv1M", pcv1M01.isChecked() ? "1" : pcv1M02.isChecked() ? "2" : "0");
         sI.put("pcv1datenr", pcv1datenr.isChecked() ? "1" : "0");
@@ -2348,7 +2375,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("pcv1Date", pcv1Date.getText().toString());
         sI.put("pcv1Pov", pcv1Pova.isChecked() ? "1" : pcv1Povb.isChecked() ? "2" : pcv1Povc.isChecked() ? "3"
                 : pcv1Povd.isChecked() ? "4" : pcv1Pove.isChecked() ? "5" : pcv1Povf.isChecked() ? "6" : pcv1Povg.isChecked() ? "7"
-                : pcv1Povh.isChecked() ? "8" : "0");
+                : pcv1Povh.isChecked() ? "8" : pcv1Povi.isChecked() ? "9" : "0");
         //PCV 1 at 6 weeks
         sI.put("opv1M", opv1M01.isChecked() ? "1" : opv1M02.isChecked() ? "2" : "0");
         sI.put("opv1datenr", opv1datenr.isChecked() ? "1" : "0");
@@ -2359,7 +2386,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("opv1Date", opv1Date.getText().toString());
         sI.put("opv1Pov", opv1Pova.isChecked() ? "1" : opv1Povb.isChecked() ? "2" : opv1Povc.isChecked() ? "3"
                 : opv1Povd.isChecked() ? "4" : opv1Pove.isChecked() ? "5" : opv1Povf.isChecked() ? "6" : opv1Povg.isChecked() ? "7"
-                : opv1Povh.isChecked() ? "8" : "0");
+                : opv1Povh.isChecked() ? "8" : opv1Povi.isChecked() ? "9" : "0");
         // OPV 1 at 6 weeks
         sI.put("penta2M", penta2M01.isChecked() ? "1" : penta2M02.isChecked() ? "2" : "0");
         sI.put("penta2datenr", penta2datenr.isChecked() ? "1" : "0");
@@ -2371,7 +2398,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("penta2Date", penta2Date.getText().toString());
         sI.put("penta2Pov", penta2Pova.isChecked() ? "1" : penta2Povb.isChecked() ? "2" : penta2Povc.isChecked() ? "3"
                 : penta2Povd.isChecked() ? "4" : penta2Pove.isChecked() ? "5" : penta2Povf.isChecked() ? "6" : penta2Povg.isChecked() ? "7"
-                : penta2Povh.isChecked() ? "8" : "0");
+                : penta2Povh.isChecked() ? "8" : penta2Povi.isChecked() ? "9" : "0");
         // Penta 2 at 10 weeks
         sI.put("pcv2M", pcv2M01.isChecked() ? "1" : pcv2M02.isChecked() ? "2" : "0");
         sI.put("pcv2datenr", pcv2datenr.isChecked() ? "1" : "0");
@@ -2382,7 +2409,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("pcv2Date", pcv2Date.getText().toString());
         sI.put("pcv2Pov", pcv2Pova.isChecked() ? "1" : pcv2Povb.isChecked() ? "2" : pcv2Povc.isChecked() ? "3"
                 : pcv2Povd.isChecked() ? "4" : pcv2Pove.isChecked() ? "5" : pcv2Povf.isChecked() ? "6" : pcv2Povg.isChecked() ? "7"
-                : pcv2Povh.isChecked() ? "8" : "0");
+                : pcv2Povh.isChecked() ? "8" : pcv2Povi.isChecked() ? "9" : "0");
 
         sI.put("opv2M", opv2M01.isChecked() ? "1" : opv2M02.isChecked() ? "2" : "0");
         sI.put("opv2datenr", opv2datenr.isChecked() ? "1" : "0");
@@ -2394,7 +2421,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("opv2Date", opv2Date.getText().toString());
         sI.put("opv2Pov", opv2Pova.isChecked() ? "1" : opv2Povb.isChecked() ? "2" : opv2Povc.isChecked() ? "3"
                 : opv2Povd.isChecked() ? "4" : opv2Pove.isChecked() ? "5" : opv2Povf.isChecked() ? "6" : opv2Povg.isChecked() ? "7"
-                : opv2Povh.isChecked() ? "8" : "0");
+                : opv2Povh.isChecked() ? "8" : opv2Povi.isChecked() ? "9" : "0");
 
         // PCV 2 at 6 weeks
         sI.put("penta3M", penta3M01.isChecked() ? "1" : penta3M02.isChecked() ? "2" : "0");
@@ -2407,7 +2434,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("penta3Date", penta3Date.getText().toString());
         sI.put("penta3Pov", penta3Pova.isChecked() ? "1" : penta3Povb.isChecked() ? "2" : penta3Povc.isChecked() ? "3"
                 : penta3Povd.isChecked() ? "4" : penta3Pove.isChecked() ? "5" : penta3Povf.isChecked() ? "6" : penta3Povg.isChecked() ? "7"
-                : penta3Povh.isChecked() ? "8" : "0");
+                : penta3Povh.isChecked() ? "8" :  penta3Povi.isChecked() ? "9" : "0");
         // OPV 2 at 6 weeks
         sI.put("pcv3M", pcv3M01.isChecked() ? "1" : pcv3M02.isChecked() ? "2" : "0");
         sI.put("pcv3datenr", pcv3datenr.isChecked() ? "1" : "0");
@@ -2420,7 +2447,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("pcv3Date", pcv3Date.getText().toString());
         sI.put("pcv3Pov", pcv3Pova.isChecked() ? "1" : pcv3Povb.isChecked() ? "2" : pcv3Povc.isChecked() ? "3"
                 : pcv3Povd.isChecked() ? "4" : pcv3Pove.isChecked() ? "5" : pcv3Povf.isChecked() ? "6" : pcv3Povg.isChecked() ? "7"
-                : pcv3Povh.isChecked() ? "8" : "0");
+                : pcv3Povh.isChecked() ? "8" :  pcv3Povi.isChecked() ? "9" : "0");
 
         // Penta 3 at 14 weeks
         sI.put("opv3M", opv3M01.isChecked() ? "1" : opv3M02.isChecked() ? "2" : "0");
@@ -2433,7 +2460,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("opv3Date", opv3Date.getText().toString());
         sI.put("opv3Pov", opv3Pova.isChecked() ? "1" : opv3Povb.isChecked() ? "2" : opv3Povc.isChecked() ? "3"
                 : opv3Povd.isChecked() ? "4" : opv3Pove.isChecked() ? "5" : opv3Povf.isChecked() ? "6" : opv3Povg.isChecked() ? "7"
-                : opv3Povh.isChecked() ? "8" : "0");
+                : opv3Povh.isChecked() ? "8" : opv3Povi.isChecked() ? "9" :"0");
 
         // PCV 3 at 14 weeks
         sI.put("ipvM", ipvM01.isChecked() ? "1" : ipvM02.isChecked() ? "2" : "0");
@@ -2446,7 +2473,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("ipvDate", ipvDate.getText().toString());
         sI.put("ipvPov", ipvPova.isChecked() ? "1" : ipvPovb.isChecked() ? "2" : ipvPovc.isChecked() ? "3"
                 : ipvPovd.isChecked() ? "4" : ipvPove.isChecked() ? "5" : ipvPovf.isChecked() ? "6" : ipvPovg.isChecked() ? "7"
-                : ipvPovh.isChecked() ? "8" : "0");
+                : ipvPovh.isChecked() ? "8" : ipvPovi.isChecked() ? "9" : "0");
         // OPV 3 at 14 weeks
         sI.put("measles1M", measles1M01.isChecked() ? "1" : measles1M02.isChecked() ? "2" : "0");
         sI.put("measles1datenr", measles1datenr.isChecked() ? "1" : "0");
@@ -2458,7 +2485,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("measles1Date", measles1Date.getText().toString());
         sI.put("measles1Pov", measles1Pova.isChecked() ? "1" : measles1Povb.isChecked() ? "2" : measles1Povc.isChecked() ? "3"
                 : measles1Povd.isChecked() ? "4" : measles1Pove.isChecked() ? "5" : measles1Povf.isChecked() ? "6" : measles1Povg.isChecked() ? "7"
-                : measles1Povh.isChecked() ? "8" : "0");
+                : measles1Povh.isChecked() ? "8" : measles1Povi.isChecked() ? "9" : "0");
         // IPV at 14 weeks
         sI.put("measles2M", measles2M01.isChecked() ? "1" : measles2M02.isChecked() ? "2" : "0");
         sI.put("measles2datenr", measles2datenr.isChecked() ? "1" : "0");
@@ -2470,7 +2497,7 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("measles2Date", measles2Date.getText().toString());
         sI.put("measles2Pov", measles2Pova.isChecked() ? "1" : measles2Povb.isChecked() ? "2" : measles2Povc.isChecked() ? "3"
                 : measles2Povd.isChecked() ? "4" : measles2Pove.isChecked() ? "5" : measles2Povf.isChecked() ? "6"
-                : measles2Povg.isChecked() ? "7" : measles2Povh.isChecked() ? "8" : "0");
+                : measles2Povg.isChecked() ? "7" : measles2Povh.isChecked() ? "8" : measles2Povi.isChecked() ? "9" : "0");
 
         sI.put("ti04", ti04a.isChecked() ? "1" : ti04b.isChecked() ? "2" : ti04888.isChecked() ? "888" : "0");
         sI.put("ti05", ti05.getText().toString());

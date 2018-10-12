@@ -195,6 +195,8 @@ public class SectionJActivity extends Activity {
     RadioButton tj12b;
     @BindView(R.id.tj12c)
     RadioButton tj12c;
+    @BindView(R.id.tj1297)
+    RadioButton tj1297;
     @BindView(R.id.tj12888)
     RadioButton tj12888;
     @BindView(R.id.tj12d)
@@ -513,13 +515,9 @@ public class SectionJActivity extends Activity {
                     tj12d.setVisibility(View.GONE);
 
                     tj12m.setVisibility(View.VISIBLE);
-                } else if(i == R.id.tj12c){
-                    tj12d.setText(null);
-                    tj12d.setVisibility(View.GONE);
-                    tj12m.setText(null);
-                    tj12m.setVisibility(View.GONE);
 
-                }else{
+
+                } else{
                     tj12d.setText(null);
                     tj12d.setVisibility(View.GONE);
                     tj12m.setText(null);
@@ -775,7 +773,7 @@ public class SectionJActivity extends Activity {
         sJ.put("tj11m", tj11m.getText().toString());
 
         sJ.put("tj12", tj12a.isChecked() ? "1" : tj12b.isChecked() ? "2"
-                : tj12888.isChecked() ? "888" : tj12c.isChecked() ? "3" : "0");
+                : tj12888.isChecked() ? "888" : tj12c.isChecked() ? "3" :  tj1297.isChecked() ? "97" : "0");
         sJ.put("tj12d", tj12d.getText().toString());
         sJ.put("tj12m", tj12m.getText().toString());
 
