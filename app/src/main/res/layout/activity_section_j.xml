@@ -715,6 +715,12 @@
                 android:layout_marginBottom="1dp"
                 android:text="@string/tj12a" />
 
+            <RadioButton
+                android:id="@+id/tj1297"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="@string/tj12b" />
 
             <RadioButton
                 android:id="@+id/tj12888"

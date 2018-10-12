@@ -109,10 +109,10 @@ public class MainApp extends Application {
 
     public static ArrayList<String> childList = new ArrayList<>();
     public static ArrayList<String> motherList = new ArrayList<>();
-    public static ArrayList<String> motherSerial = new ArrayList<>();
+    public static ArrayList<Integer> motherSerial = new ArrayList<>();
     public static HashMap<String, String> motherMap = new HashMap<>();
     public static ArrayList<String> fatherList = new ArrayList<>();
-    public static ArrayList<String> fatherSerial = new ArrayList<>();
+    public static ArrayList<Integer> fatherSerial = new ArrayList<>();
     public static HashMap<String, String> fatherMap = new HashMap<>();
 
 

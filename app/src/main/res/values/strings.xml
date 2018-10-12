@@ -142,7 +142,7 @@
     <string name="tb03f">	    والدين ( ماءُ ۽ پيءُ)   </string>
     <string name="tb03g">	والدين ساهرا  ( سسُ ۽ سهرو) </string>
     <string name="tb03h">	ڀاءُ / ڀيڻ  </string>
-    <string name="tb03i">	سالو / سالي  </string>
+    <string name="tb03i">	سالو / سالي / ڀيڻيويو / ڀاڄائي  </string>
     <string name="tb03j">	ڀائيٽي / ڀائيٽيو </string>
     <string name="tb03k">	ڏاڏو/ڏاڏي  </string>
     <string name="tb03l">	چاچو / چاچي </string>
@@ -196,7 +196,7 @@
     <string name="tc01h"> سيمينٽ </string>
     <string name="tc01i"> قالين </string>
     <string name="tc01j"> سرن جو </string>
-    <string name="tc01k"> چتائي </string>
+    <string name="tc01k"> چن جو  </string>
     <string name="tc01l"> ماربل </string>
     <string name="tc0201"> Natural roof </string>
     <string name="tc0202"> Rudimentary roofing </string>
@@ -205,17 +205,17 @@
     <string name="tc02a"> ڇت ڪونهي </string>
     <string name="tc02b"> کجي جي ڦرن جي </string>
     <string name="tc02c"> ڪکا / گاه </string>
-    <string name="tc02d"> رسٽڪ ڇٽائي </string>
+    <string name="tc02d"> وڻ جو سڪل ٽاريون  </string>
     <string name="tc02e"> بانسن جي </string>
     <string name="tc02f"> ڪاٺين جون تختيون </string>
     <string name="tc02g"> ڪاغذن جي/ گتن جي </string>
-    <string name="tc02h"> لوهه جا پتر </string>
+    <string name="tc02h"> تين جون  شيٽون </string>
     <string name="tc02i"> پڪيون سرون/ RCC/ (پڪي سيمنٽ جي)  </string>
     <string name="tc02j"> لوهه جي </string>
     <string name="tc02k"> ڪاٺ/ٽي آئرن/مٽي </string>
     <string name="tc02l"> سيمينٽ فائبر/چادرون  </string>
     <string name="tc02m"> ٽائلس جي </string>
-    <string name="tc02n"> ڇت سازي (سيمنٽ جا سليب)  </string>
+    <string name="tc02n"> سيمينٽ يا ڪاٺين جون تختيون   </string>
     <string name="tc02o"> سرن جي </string>
     <string name="tc0301"> Natural Walls </string>
     <string name="tc0302"> Rudimentary Walls </string>
@@ -225,15 +225,15 @@
     <string name="tc03b"> ڪکا / گاه </string>
     <string name="tc03c"> مٽي </string>
     <string name="tc03d"> مٽي سان پٿر </string>
-    <string name="tc03e"> مٽي/ڪاٺيون/مٽي </string>
-    <string name="tc03f"> ڪچيون سرون </string>
+    <string name="tc03e"> مٽي/ بانس  </string>
+    <string name="tc03f"> ڪچين سرن جي ڀت </string>
     <string name="tc03g"> تختن جي ڀت </string>
     <string name="tc03h"> ڪاغذن جي/ گتن جي </string>
     <string name="tc03i"> استعمال شده ڪاٺ جي ڀت </string>
     <string name="tc03j"> تنبو/ڪپڙي </string>
     <string name="tc03k"> پلاسٽڪ جا گتا </string>
     <string name="tc03l"> سيمينٽ </string>
-    <string name="tc03m"> پٿر سيمينٽ سان لڳل </string>
+    <string name="tc03m"> پٿرچن سان لڳل </string>
     <string name="tc03n"> سرون </string>
     <string name="tc03o"> سيمينٽ بلاڪ </string>
     <string name="tc03p"> مڪمل ڀت </string>
@@ -377,7 +377,13 @@
     <string name="tf07e"> پيدائشي جھٽڪا لڳڻ </string>
     <string name="tf07f"> دست (Diarrhea) </string>
     <string name="tf07g"> بخار (Fever) </string>
-    <string name="tf07h"> حادثاتي موت جو ٿيڻ </string>
+    <string name="tf07h"> جيڪڏهن نه ته ڇو نه </string>
+
+  <string name="tf08"> گذاري وڃڻ کان پهريان ڇا توهان کي خبر پئي ته توهان جو ٻار شديد بيمار آهي </string>
+  <string name="tf09"> ڇا توهان ٻار کي ڪنهن صحت ڪارڪن ڏانهن وٺي ويا؟ </string>
+  <string name="tf10"> ڇا صحت ڪارڪن اسپتال ڏانهن رفرل ( وڃڻ ) جو چيو؟  </string>
+  <string name="tf11"> ڇا توهان ٻار کي اسپتال وٺي ويا؟  </string>
+  <string name="tf12"> جيڪڏهن نه ته ڇو نه  </string>
 
     <string name="tha01"> ڇا گذريل ٻن ھفتن جي دوران توھان جي گھر ۾ 5 سالن کان گھٽ عمر جي ٻارن کي دستن جي بيماري ٿي؟ </string>
     <string name="tha02"> گذريل ٻن ھفتن ۾ ڪيترن ٻارن کي دستن جي بيماري ٿي؟ </string>
@@ -499,6 +505,7 @@
     <string name="tha24f"> ايمبولنس </string>
     <string name="tha24g"> پنڌ </string>
     <string name="tha24h"> ڪجھ به نه (گھر۾علاج ڪيو) </string>
+    <string name="tha24i"> سائيڪل</string>
     <string name="tha25"> صحت مرڪز تي پھچڻ ۾ ڪيترو وقت لڳندو آهي ، جتان توھان (نالو) دستن جي بيماري دوران علاج ڪرايو؟ </string>
     <string name="tha25a"> منٽ </string>
     <string name="tha26"> (نالو) دستن جي بيماريءَ جي علاج لاءِ سواري تي توھانجا ڪيترا پئسا خرچ ٿيا؟ </string>
@@ -648,7 +655,7 @@
     <string name="thb35b"> اسپتال </string>
     <string name="thb35c"> اڌ اسپتال۽ اڌ پاڻ </string>
     <string name="thb36"> ڪڏھن ڪڏھن ٻارن کي شديد بيماري جي ڪري صحت مرڪز ڏانھن وٺي وڃڻو پوندو آھي، اھي ڪھڙيون علامتن/بيمارين جي ڪري توھان پنجن سالن کان گھٽ عمر وارن ٻار کي صحت مرڪز کڻي ويندا آھيو؟ </string>
-    <string name="thb36a"> ٻار ٿڃ پي نه سگھندو آھي </string>
+    <string name="thb36a"> ٻار ڪجهه به پي نه ٿو سگھي  </string>
     <string name="thb36b"> ٻار چڙ چڙو ھوندو آھي </string>
     <string name="thb36c"> ٻار کي بخار ھوندو آھي </string>
     <string name="thb36d"> ٻار کي تڪڙا ساھ کڻندو آھي </string>
@@ -674,6 +681,7 @@
     <string name="thb39g"> ھوميوپيٿڪ / حڪيم  </string>
     <string name="thb39h"> پنھنجو پاڻ </string>
     <string name="thb39i"> جيڪڏهن ڊاڪٽر يا ليڊي هيلٿ ورڪر آھي نالو لکيو  </string>
+    <string name="thb39j"> نرس   </string>
 
     <string name="tiRespondentMother">ڇا جواب ڏيندڙ هن ٻار جي ماء آهي</string>
     <string name="Respondent">ڇا هي عورت جواب ڏيندڙ آهي</string>
@@ -701,6 +709,7 @@
     <string name="place06"> Private Clinic </string>
     <string name="place07"> Private hospital </string>
     <string name="place08"> Home </string>
+    <string name="place09"> LUMHS / Civil Hospital Hyderabad  </string>
     <string name="date"> Date of Immunization </string>
     <string name="atbirth"> At Birth </string>
     <string name="bcg"> BCG </string>
@@ -773,6 +782,7 @@
     <string name="tj11"> (نالو) ڪيترو وقت صرف ماءُ جي ٿڃ (Exclusive Beastfeeding) پيتي؟ </string>
     <string name="tj12"> توھان (نالو) کي ڪيترن مھينن يا ڏينھن تائين ماءُ جو کير پياريوآھي؟ </string>
     <string name="tj12a">اڃا پياري رھي آھيان </string>
+    <string name="tj12b">ڪڏهن به نه      </string>
     <string name="tj13"> ڪهڙي عمر ۾ (نالو) کي توهان ٺوس/ نيم ٺوس غذائون ڏنيون؟ </string>
     <string name="tj13c"> اڃا ڪونه ڏني آھي </string>
     <string name="tj14"> (نالو) کي توهان سڀ کان پهرين ڪهڙي ٺوس/ نيم ٺوس غذا ڏني؟ </string>
@@ -803,7 +813,7 @@
     <string name="tk01l"> گڏهه گاڏي سان پاڻي جو ٽئنڪ </string>
     <string name="tk01m"> ندي، دريا جو وهندڙ پاڻي </string>
     <string name="tk01n"> بوتل وارو پاڻي </string>
-    <string name="tk02"> توهان جي گھر ۾ رڌ پچاءُ ۽ ھٿ ڌوئڻ لاءِ پاڻي جو مکيه ذريعو ڪھڙو آهي؟ </string>
+    <string name="tk02"> توهان جي گهر ۾ پيئڻ کان علاوه ٻين ڪمن ڪارين جهڙوڪ رڌپچاءُ ۽ هٿ ڌوئڻ جي لاءِ پاڻيءَ جو مکيه ذريعو ڪهڙو آهي؟ </string>
     <string name="tk02a"> گھر جي اندر پاڻي جي لائن اچي ٿي </string>
     <string name="tk02b"> گھر جي ٻاهر پاڻي جي لائن اچي ٿي </string>
     <string name="tk02c"> پاڙي ۾ اندر جي پاڻي جي لائن اچي ٿي </string>
@@ -842,8 +852,8 @@
     <string name="tk09b"> ڪلورين/بليچ جون گوريون شامل ڪرڻ  </string>
     <string name="tk09c"> ڪپڙي سان ڇاڻيندا آهيون </string>
     <string name="tk09d"> پاڻي جي فلٽر جو استعمال  </string>
-    <string name="tk09e"> سج جي روشني </string>
-    <string name="tk09f"> رکندا آهيون ۽ ڇڻي وڃي </string>
+    <string name="tk09e"> سج جي روشني  رکندا آهيون ۽ ڇڻي وڃي</string>
+    <string name="tk09f">  </string>
     <string name="tk09g"> ڦٽڪي جي ذريعي </string>
     <string name="tk10"> توهان پنهنجي گھر ۾ پاڻي ڪيئن جمع ڪندا آهيو؟ </string>
     <string name="tk10a"> جمع نه ڪندا آهيون </string>
@@ -1002,10 +1012,10 @@
     <string name="tg06g">ساهه جي رفتار تيز  </string>
     <string name="tg06h">	ساهه جي رفتار گهٽ  </string>
     <string name="tg06i">	پاسريون لڳڻ</string>
-    <string name="tg06j">.	دست </string>
-    <string name="tg06k">.	جسم ۾ پاڻياٺ جي کوٽ </string>
-    <string name="tg06l">	جسم جي چمڙي جو پوئتي وڃڻ </string>
-    <string name="tg06m">.	ڪمزوري</string>
+    <string name="tg06j">	دست </string>
+    <string name="tg06k">	جسم ۾ پاڻياٺ جي کوٽ </string>
+    <string name="tg06l">جسم جي چمڙي جو پوئتي وڃڻ </string>
+    <string name="tg06m">	ڪمزوري</string>
     <string name="tg06n"> 	گهٽ وزن </string>
     <string name="tg06o"> 	غذايت جي ڪمي  </string>
     <string name="tg06p"> 	ٻيو ڪجهه </string>

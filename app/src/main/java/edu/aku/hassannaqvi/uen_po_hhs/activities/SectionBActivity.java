@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -183,6 +184,7 @@ public class SectionBActivity extends AppCompatActivity {
     public static int month;
     DatabaseHelper db;
     long ageInyears = 0;
+    int fatherIndex,motherIndex;
 
     public static long ageInYears(String dateStr) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -227,6 +229,32 @@ public class SectionBActivity extends AppCompatActivity {
 
         tb05.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.fatherList));
         tb06.setAdapter(new ArrayAdapter<>(this, R.layout.item_style, MainApp.motherList));
+
+        tb05.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                fatherIndex = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        tb06.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                motherIndex = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         if (MainApp.TotalMembersCount == 0) {
             tb05.setSelection(1);
             tb06.setSelection(1);
@@ -407,22 +435,23 @@ public class SectionBActivity extends AppCompatActivity {
                     } else {
                         txtRsn.setText(ageInyears + " years");
                     }
-                    if (ageInyears < 3) {
-
-                        tb09.setText("NA");
-                        tb09.setEnabled(false);
-                        fldGrpOcc.setVisibility(View.GONE);
-                        fldGrpMarital.setVisibility(View.GONE);
-                        tb10.clearCheck();
-                        tb11.clearCheck();
-
-                    } else if (ageInyears > 3 && ageInyears < 14) {
-                        fldGrpOcc.setVisibility(View.VISIBLE);
-                        fldGrpMarital.setVisibility(View.GONE);
-                        tb09.setText(null);
-                        tb09.setEnabled(true);
-                        tb11.clearCheck();
-                    } else if (ageInyears > 14) {
+//                    if (ageInyears < 3) {
+//
+//                        tb09.setText("NA");
+//                        tb09.setEnabled(false);
+//                        fldGrpOcc.setVisibility(View.GONE);
+//                        fldGrpMarital.setVisibility(View.GONE);
+//                        tb10.clearCheck();
+//                        tb11.clearCheck();
+//
+//                    } else if (ageInyears > 3 && ageInyears < 14) {
+//                        fldGrpOcc.setVisibility(View.VISIBLE);
+//                        fldGrpMarital.setVisibility(View.GONE);
+//                        tb09.setText(null);
+//                        tb09.setEnabled(true);
+//                        tb11.clearCheck();
+//                    }
+                    if (ageInyears >= 5) {
                         fldGrpOcc.setVisibility(View.VISIBLE);
                         fldGrpMarital.setVisibility(View.VISIBLE);
                         tb09.setText(null);
@@ -456,6 +485,14 @@ public class SectionBActivity extends AppCompatActivity {
                         tb11b.setEnabled(true);
                         tb11c.setEnabled(true);
                         tb11d.setEnabled(true);
+                    }else{
+                        fldGrpOcc.setVisibility(View.GONE);
+                        fldGrpMarital.setVisibility(View.GONE);
+                        tb09.setText("NA");
+                        tb09.setEnabled(false);
+                        tb10.clearCheck();
+                        tb11.clearCheck();
+
                     }
                     //}
 
@@ -665,16 +702,22 @@ public class SectionBActivity extends AppCompatActivity {
         if (formValidation()) {
             if (tb04a.isChecked() && tb11b.isChecked()) {
                 MainApp.fatherList.add(tb02.getText().toString());
+                MainApp.fatherSerial.add(MainApp.counter);
             } else if (tb04a.isChecked() && tb11c.isChecked()) {
                 MainApp.fatherList.add(tb02.getText().toString());
+                MainApp.fatherSerial.add(MainApp.counter);
             } else if (tb04a.isChecked() && tb11d.isChecked()) {
                 MainApp.fatherList.add(tb02.getText().toString());
+                MainApp.fatherSerial.add(MainApp.counter);
             } else if (tb04b.isChecked() && tb11b.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
+                MainApp.motherSerial.add(MainApp.counter);
             } else if (tb04b.isChecked() && tb11c.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
+                MainApp.motherSerial.add(MainApp.counter);
             } else if (tb04b.isChecked() && tb11d.isChecked()) {
                 MainApp.motherList.add(tb02.getText().toString());
+                MainApp.motherSerial.add(MainApp.counter);
             }
             if (ageInyears < 2) {
                 MainApp.lstChild.add(tb02.getText().toString());
@@ -713,11 +756,11 @@ public class SectionBActivity extends AppCompatActivity {
         // children
         if (ageInyears < 5) {
             // u2
-            if (ageInyears <= 2) {
-                MainApp.totalImsCount++;
+            if (ageInyears < 2) {
+               // MainApp.totalImsCount++;
             }
             // u5
-            MainApp.TotalChildCount++;
+           // MainApp.TotalChildCount++;
         }
         // MWRA
         if (!tb11a.isChecked() && tb04b.isChecked()
@@ -779,13 +822,13 @@ public class SectionBActivity extends AppCompatActivity {
         if (tb05.getSelectedItem().toString().equalsIgnoreCase("N/A")) {
             sB.put("tb05", "00");
         } else {
-            sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.counter);
+            sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.fatherSerial.get(fatherIndex));
         }
 
         if (tb06.getSelectedItem().toString().equalsIgnoreCase("N/A")) {
             sB.put("tb06", "00");
         } else {
-            sB.put("tb06", tb06.getSelectedItem().toString() + "_" + MainApp.counter);
+            sB.put("tb06", tb06.getSelectedItem().toString() + "_" + MainApp.motherSerial.get(motherIndex));
         }
 
         if (tbdob01.isChecked()) {
@@ -799,8 +842,8 @@ public class SectionBActivity extends AppCompatActivity {
         sB.put("tb09", tb09.getText().toString().equals("NA") ? "999" : tb09.getText().toString());
         sB.put("tb10", tb10a.isChecked() ? "1" : tb10b.isChecked() ? "2" : tb10c.isChecked() ? "3"
                 : tb10d.isChecked() ? "4" : tb10e.isChecked() ? "5" : tb10f.isChecked() ? "6"
-                : tb10g.isChecked() ? "7" : tb10h.isChecked() ? "8" : tb10ia.isChecked() ? "9a" : tb10ib.isChecked() ? "9b" : tb10j.isChecked() ? "10"
-                : tb10k.isChecked() ? "11" : tb10l.isChecked() ? "12" : tb10999.isChecked() ? "999"
+                : tb10g.isChecked() ? "7" : tb10h.isChecked() ? "8" : tb10ia.isChecked() ? "9" : tb10ib.isChecked() ? "10" : tb10j.isChecked() ? "11"
+                : tb10k.isChecked() ? "12" : tb10l.isChecked() ? "13" : tb10999.isChecked() ? "999"
                 : "0");
         sB.put("tb11", tb11a.isChecked() ? "1" : tb11b.isChecked() ? "2"
                 : tb11c.isChecked() ? "3" : tb11d.isChecked() ? "4" : "0");

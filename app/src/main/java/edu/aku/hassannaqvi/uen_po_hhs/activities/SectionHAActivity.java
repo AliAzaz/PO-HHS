@@ -1241,11 +1241,11 @@ public class SectionHAActivity extends Activity {
 
                 if(i == R.id.tha15a){
                     bi.tha1596x.setVisibility(View.VISIBLE);
-                    bi.tha14dx.setVisibility(View.GONE);
-                    bi.tha14dx.setText(null);
+                    bi.tha15fx.setVisibility(View.GONE);
+                    bi.tha15fx.setText(null);
                 }
                 if(i == R.id.tha15f){
-                    bi.tha14dx.setVisibility(View.VISIBLE);
+                    bi.tha15fx.setVisibility(View.VISIBLE);
                     bi.tha1596x.setVisibility(View.GONE);
                     bi.tha1596x.setText(null);
                 }
@@ -2086,8 +2086,9 @@ public class SectionHAActivity extends Activity {
                 : bi.tha24d.isChecked() ? "4"
                 : bi.tha24e.isChecked() ? "5"
                 : bi.tha24f.isChecked() ? "6"
-                : bi.tha24g.isChecked() ? "7"
-                : bi.tha24h.isChecked() ? "8"
+                : bi.tha24i.isChecked() ? "7"
+                : bi.tha24g.isChecked() ? "8"
+                : bi.tha24h.isChecked() ? "9"
                 : bi.tha2496.isChecked() ? "96"
                 : "0");
         sHA.put("tha2496x", bi.tha2496x.getText().toString());

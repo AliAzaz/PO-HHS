@@ -33,6 +33,8 @@ public class SectionGActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_g);
         bi.setCallback(this);
 
+        validatorClass.setScrollViewFocus(bi.scrollView);
+
 
         bi.tg03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -90,6 +92,136 @@ public class SectionGActivity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.fldGrptg14, true);
                     bi.fldGrptg15.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.fldGrptg15, true);
+                }
+            }
+        });
+
+        bi.tg0497.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg04a.setChecked(false);
+                    bi.tg04b.setChecked(false);
+                    bi.tg04c.setChecked(false);
+                    bi.tg04d.setChecked(false);
+                    bi.tg04e.setChecked(false);
+                    bi.tg04f.setChecked(false);
+                    bi.tg04g.setChecked(false);
+                    bi.tg04h.setChecked(false);
+                    bi.tg04i.setChecked(false);
+                    bi.tg04ex.setText(null);
+                    bi.tg04fx.setText(null);
+                    bi.tg04gx.setText(null);
+                    bi.tg04hx.setText(null);
+                    bi.tg04ix.setText(null);
+                }
+            }
+        });
+
+        bi.tg04a.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg0497.setChecked(false);
+                }
+            }
+        });
+        bi.tg04b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg0497.setChecked(false);
+                }
+            }
+        });
+        bi.tg04c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg0497.setChecked(false);
+                }
+            }
+        });
+        bi.tg04d.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg0497.setChecked(false);
+                }
+            }
+        });
+        bi.tg04e.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg04ex.setVisibility(View.VISIBLE);
+                    bi.tg0497.setChecked(false);
+                }else{
+                    bi.tg04ex.setVisibility(View.GONE);
+                    bi.tg04ex.setText(null);
+
+                }
+            }
+        });
+        bi.tg04f.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg04fx.setVisibility(View.VISIBLE);
+                    bi.tg0497.setChecked(false);
+                }else{
+                    bi.tg04fx.setVisibility(View.GONE);
+                    bi.tg04fx.setText(null);
+
+                }
+            }
+        });
+        bi.tg04g.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg04gx.setVisibility(View.VISIBLE);
+                    bi.tg0497.setChecked(false);
+                }else{
+                    bi.tg04gx.setVisibility(View.GONE);
+                    bi.tg04gx.setText(null);
+
+                }
+            }
+        });
+        bi.tg04h.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg04hx.setVisibility(View.VISIBLE);
+                    bi.tg0497.setChecked(false);
+                }else{
+                    bi.tg04hx.setVisibility(View.GONE);
+                    bi.tg04hx.setText(null);
+
+                }
+            }
+        });
+        bi.tg04i.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    bi.tg04ix.setVisibility(View.VISIBLE);
+                    bi.tg0497.setChecked(false);
+                }else{
+                    bi.tg04ix.setVisibility(View.GONE);
+                    bi.tg04ix.setText(null);
+
                 }
             }
         });
@@ -754,6 +886,14 @@ public class SectionGActivity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.fldGrptg10, true);
 
                 }
+
+                if (i == R.id.tg09a) {
+                    bi.fldGrptg11.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldGrptg11, false);
+                } else {
+                    bi.fldGrptg11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.fldGrptg11, true);
+                }
             }
         });
 
@@ -938,6 +1078,7 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("tg04h", bi.tg04h.isChecked() ? "9" : "0");
         sG.put("tg04hx", bi.tg04hx.getText().toString());
         sG.put("tg04i", bi.tg04i.isChecked() ? "96" : "0");
+        sG.put("tg04j", bi.tg0497.isChecked() ? "97" : "0");
         sG.put("tg04ix", bi.tg04ix.getText().toString());
 
         sG.put("tg05a", bi.tg05a.isChecked() ? "1" : "0");
@@ -1065,32 +1206,35 @@ public class SectionGActivity extends AppCompatActivity {
             if (!validatorClass.EmptyCheckBox(this, bi.fldGrptg04, bi.tg04a, getString(R.string.tg04))) {
                 return false;
             }
-            if (bi.tg04e.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg04ex, getString(R.string.tg04))) {
-                    return false;
+            if(!bi.tg0497.isChecked()){
+                if (bi.tg04e.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.tg04ex, getString(R.string.tg04))) {
+                        return false;
+                    }
                 }
-            }
-            if (bi.tg04f.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg04fx, getString(R.string.tg04))) {
-                    return false;
+                if (bi.tg04f.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.tg04fx, getString(R.string.tg04))) {
+                        return false;
+                    }
                 }
-            }
-            if (bi.tg04g.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg04gx, getString(R.string.tg04))) {
-                    return false;
+                if (bi.tg04g.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.tg04gx, getString(R.string.tg04))) {
+                        return false;
+                    }
                 }
-            }
-            if (bi.tg04h.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg04hx, getString(R.string.tg04))) {
-                    return false;
+                if (bi.tg04h.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.tg04hx, getString(R.string.tg04))) {
+                        return false;
+                    }
+                }
+
+                if (bi.tg04i.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.tg04ix, getString(R.string.tg04))) {
+                        return false;
+                    }
                 }
             }
 
-            if (bi.tg04i.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg04ix, getString(R.string.tg04))) {
-                    return false;
-                }
-            }
             if (!validatorClass.EmptyCheckBox(this, bi.fldGrptg05, bi.tg05a, getString(R.string.tg05))) {
                 return false;
             }
@@ -1142,7 +1286,7 @@ public class SectionGActivity extends AppCompatActivity {
                 if (!validatorClass.EmptyCheckBox(this, bi.fldGrptg10, bi.tg10a, getString(R.string.tg10))) {
                     return false;
                 }
-                if(!bi.tg10f.isChecked()){
+                if (!bi.tg10f.isChecked()) {
                     if (bi.tg10e.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.tg10ex, getString(R.string.tg10))) {
                             return false;
@@ -1150,14 +1294,15 @@ public class SectionGActivity extends AppCompatActivity {
                     }
                 }
 
-
             }
-            if (!validatorClass.EmptyRadioButton(this, bi.tg11, bi.tg11a, getString(R.string.tg11))) {
-                return false;
-            }
-            if (bi.tg11n.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.tg11nx, getString(R.string.tg11))) {
+            if (bi.tg09b.isChecked()) {
+                if (!validatorClass.EmptyRadioButton(this, bi.tg11, bi.tg11a, getString(R.string.tg11))) {
                     return false;
+                }
+                if (bi.tg11n.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.tg11nx, getString(R.string.tg11))) {
+                        return false;
+                    }
                 }
             }
             if (!validatorClass.EmptyTextBox(this, bi.tg12a, getString(R.string.tg12a))) {
@@ -1176,11 +1321,9 @@ public class SectionGActivity extends AppCompatActivity {
                 }
 
             }
-            if(bi.tg13b.isChecked()){
+            if (bi.tg13b.isChecked()) {
                 return validatorClass.EmptyTextBox(this, bi.tg15x, getString(R.string.tg15));
             }
-
-
 
 
         }
