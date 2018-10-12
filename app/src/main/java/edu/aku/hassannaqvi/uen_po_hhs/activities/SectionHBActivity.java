@@ -2383,6 +2383,7 @@ public class SectionHBActivity extends Activity {
                 : thb17d.isChecked() ? "4"
                 : thb1788.isChecked() ? "88"
                 : "0");
+        sHB.put("thb1788x", thb1788x.getText().toString());
 
 
         sHB.put("thb18", thb18a.isChecked() ? "1"
@@ -2400,7 +2401,8 @@ public class SectionHBActivity extends Activity {
                 : thb19e.isChecked() ? "5"
                 : thb1996.isChecked() ? "96"
                 : "0");
-        sHB.put("thb1996", thb1996x.getText().toString());
+        sHB.put("thb1996x", thb1996x.getText().toString());
+        sHB.put("thb19name", thb19name.getText().toString());
 
 
         sHB.put("thb20a", thb20a.isChecked() ? "1" : "0");
