@@ -60,7 +60,7 @@ public class FormsContract {
         this.formDate = jsonObject.getString(FormsTable.COLUMN_FORMDATE);
         this.user = jsonObject.getString(FormsTable.COLUMN_USER);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
-        this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
+        this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
         this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.sC = jsonObject.getString(FormsTable.COLUMN_SC);
         this.sG = jsonObject.getString(FormsTable.COLUMN_SG);
@@ -89,7 +89,7 @@ public class FormsContract {
         this.formDate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMDATE));
         this.user = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_USER));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
-        this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
+        this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
         this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
         this.sC = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SC));
 
