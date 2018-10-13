@@ -184,7 +184,7 @@ public class SectionBActivity extends AppCompatActivity {
     public static int month;
     DatabaseHelper db;
     long ageInyears = 0;
-    int fatherIndex,motherIndex;
+    int fatherIndex, motherIndex;
 
     public static long ageInYears(String dateStr) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -234,7 +234,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                fatherIndex = i -1;
+                fatherIndex = i - 1;
             }
 
             @Override
@@ -485,7 +485,7 @@ public class SectionBActivity extends AppCompatActivity {
                         tb11b.setEnabled(true);
                         tb11c.setEnabled(true);
                         tb11d.setEnabled(true);
-                    }else{
+                    } else {
                         fldGrpOcc.setVisibility(View.GONE);
                         fldGrpMarital.setVisibility(View.GONE);
                         tb09.setText("NA");
@@ -771,10 +771,10 @@ public class SectionBActivity extends AppCompatActivity {
         if (ageInyears < 5) {
             // u2
             if (ageInyears < 2) {
-               // MainApp.totalImsCount++;
+                // MainApp.totalImsCount++;
             }
             // u5
-           // MainApp.TotalChildCount++;
+            // MainApp.TotalChildCount++;
         }
         // MWRA
         if (!tb11a.isChecked() && tb04b.isChecked()
@@ -836,13 +836,25 @@ public class SectionBActivity extends AppCompatActivity {
         if (tb05.getSelectedItem().toString().equalsIgnoreCase("N/A")) {
             sB.put("tb05", "00");
         } else {
-            sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.fatherSerial.get(fatherIndex));
+//            sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.fatherSerial.get(fatherIndex));
+            int fatherserial = 0;
+            if (tb05.getSelectedItemPosition() >= 1) {
+                fatherserial = tb05.getSelectedItemPosition() - 2;
+            }
+
+            sB.put("tb05", tb05.getSelectedItem().toString() + "_" + MainApp.fatherSerial.get(fatherserial));
         }
 
         if (tb06.getSelectedItem().toString().equalsIgnoreCase("N/A")) {
             sB.put("tb06", "00");
         } else {
-            sB.put("tb06", tb06.getSelectedItem().toString() + "_" + MainApp.motherSerial.get(motherIndex));
+//            sB.put("tb06", tb06.getSelectedItem().toString() + "_" + MainApp.motherSerial.get(motherIndex));
+            int motherserial = 0;
+            if (tb06.getSelectedItemPosition() >= 1) {
+                motherserial = tb06.getSelectedItemPosition() - 2;
+
+            }
+            sB.put("tb06", tb06.getSelectedItem().toString() + "_" + MainApp.motherSerial.get(motherserial));
         }
 
         if (tbdob01.isChecked()) {
