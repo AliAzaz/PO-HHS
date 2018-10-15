@@ -12,6 +12,9 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -44,6 +47,7 @@ public class EndingActivity extends Activity {
     RadioButton istatus8;
     @BindView(R.id.istatus888x)
     EditText istatus888x;
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,7 +152,7 @@ public class EndingActivity extends Activity {
                 : "0");
 
         MainApp.fc.setIstatus88x(istatus888x.getText().toString());
-
+        MainApp.fc.setendingdatetime(dtToday);
 
         Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
     }

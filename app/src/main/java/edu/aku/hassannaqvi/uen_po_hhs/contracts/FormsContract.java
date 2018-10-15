@@ -31,6 +31,7 @@ public class FormsContract {
     private String sJ = "";
     private String sK = "";
     private String sL = "";
+    private String endingdatetime = "";
 
 
     private String gpsLat = "";
@@ -61,6 +62,7 @@ public class FormsContract {
         this.user = jsonObject.getString(FormsTable.COLUMN_USER);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
+        this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
         this.sA = jsonObject.getString(FormsTable.COLUMN_SA);
         this.sC = jsonObject.getString(FormsTable.COLUMN_SC);
         this.sG = jsonObject.getString(FormsTable.COLUMN_SG);
@@ -90,6 +92,7 @@ public class FormsContract {
         this.user = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_USER));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
+        this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
         this.sA = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SA));
         this.sC = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SC));
 
@@ -124,6 +127,8 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
+        json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
+
         if (!this.sA.equals("")) {
 
             json.put(FormsTable.COLUMN_SA, this.sA.equals("") ? JSONObject.NULL : new JSONObject(this.sA));
@@ -244,6 +249,13 @@ public class FormsContract {
         this.istatus88x = istatus88x;
     }
 
+    public String getendingdatetime() {
+        return endingdatetime;
+    }
+
+    public void setendingdatetime(String endingdatetime) {
+        this.endingdatetime = endingdatetime;
+    }
 
     public String getsA() {
         return sA;
@@ -411,6 +423,7 @@ public class FormsContract {
         public static final String COLUMN_USER = "user";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
+        public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
         public static final String COLUMN_SA = "sa";
         public static final String COLUMN_SB = "sb";
         public static final String COLUMN_SC = "sc";
