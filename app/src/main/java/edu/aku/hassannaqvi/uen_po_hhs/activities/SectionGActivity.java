@@ -1060,7 +1060,6 @@ public class SectionGActivity extends AppCompatActivity {
                         : bi.tg03b.isChecked() ? "2"
                         : bi.tg03c.isChecked() ? "3"
                         : bi.tg03d.isChecked() ? "4"
-                        : bi.tg03d.isChecked() ? "5"
                         : bi.tg03e.isChecked() ? "5"
                         : bi.tg03f.isChecked() ? "6"
                         : bi.tg03g.isChecked() ? "7" : "0");
@@ -1071,15 +1070,15 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("tg04d", bi.tg04d.isChecked() ? "4" : "0");
         sG.put("tg04e", bi.tg04e.isChecked() ? "5" : "0");
         sG.put("tg04ex", bi.tg04ex.getText().toString());
-        sG.put("tg04f", bi.tg04f.isChecked() ? "7" : "0");
+        sG.put("tg04f", bi.tg04f.isChecked() ? "6" : "0");
         sG.put("tg04fx", bi.tg04fx.getText().toString());
-        sG.put("tg04g", bi.tg04f.isChecked() ? "8" : "0");
+        sG.put("tg04g", bi.tg04f.isChecked() ? "7" : "0");
         sG.put("tg04gx", bi.tg04gx.getText().toString());
-        sG.put("tg04h", bi.tg04h.isChecked() ? "9" : "0");
+        sG.put("tg04h", bi.tg04h.isChecked() ? "8" : "0");
         sG.put("tg04hx", bi.tg04hx.getText().toString());
-        sG.put("tg04i", bi.tg04i.isChecked() ? "96" : "0");
-        sG.put("tg04j", bi.tg0497.isChecked() ? "97" : "0");
-        sG.put("tg04ix", bi.tg04ix.getText().toString());
+        sG.put("tg0488", bi.tg04i.isChecked() ? "88" : "0");
+        sG.put("tg0497", bi.tg0497.isChecked() ? "97" : "0");
+        sG.put("tg0488x", bi.tg04ix.getText().toString());
 
         sG.put("tg05a", bi.tg05a.isChecked() ? "1" : "0");
         sG.put("tg05b", bi.tg05b.isChecked() ? "2" : "0");
@@ -1088,9 +1087,9 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("tg05e", bi.tg05e.isChecked() ? "5" : "0");
         sG.put("tg05f", bi.tg05f.isChecked() ? "6" : "0");
         sG.put("tg05g", bi.tg05g.isChecked() ? "7" : "0");
-        sG.put("tg05h", bi.tg05h.isChecked() ? "96" : "0");
-        sG.put("tg05hx", bi.tg05hx.getText().toString());
-        sG.put("tg05i", bi.tg05i.isChecked() ? "97" : "0");
+        sG.put("tg0588", bi.tg05h.isChecked() ? "88" : "0");
+        sG.put("tg0588x", bi.tg05hx.getText().toString());
+        sG.put("tg0597", bi.tg05i.isChecked() ? "97" : "0");
 
         sG.put("tg06a", bi.tg06a.isChecked() ? "1" : "0");
         sG.put("tg06b", bi.tg06b.isChecked() ? "2" : "0");
@@ -1102,22 +1101,22 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("tg06h", bi.tg06h.isChecked() ? "8" : "0");
         sG.put("tg06i", bi.tg06i.isChecked() ? "9" : "0");
         sG.put("tg06j", bi.tg06j.isChecked() ? "10" : "0");
-        sG.put("tg06k", bi.tg06k.isChecked() ? "12" : "0");
-        sG.put("tg06l", bi.tg06l.isChecked() ? "13" : "0");
-        sG.put("tg06m", bi.tg06m.isChecked() ? "14" : "0");
-        sG.put("tg06n", bi.tg06n.isChecked() ? "15" : "0");
-        sG.put("tg06o", bi.tg06o.isChecked() ? "16" : "0");
-        sG.put("tg06p", bi.tg06p.isChecked() ? "96" : "0");
-        sG.put("tg06px", bi.tg06px.getText().toString());
-        sG.put("tg06q", bi.tg06q.isChecked() ? "97" : "0");
+        sG.put("tg06k", bi.tg06k.isChecked() ? "11" : "0");
+        sG.put("tg06l", bi.tg06l.isChecked() ? "12" : "0");
+        sG.put("tg06m", bi.tg06m.isChecked() ? "13" : "0");
+        sG.put("tg06n", bi.tg06n.isChecked() ? "14" : "0");
+        sG.put("tg06o", bi.tg06o.isChecked() ? "15" : "0");
+        sG.put("tg0688", bi.tg06p.isChecked() ? "88" : "0");
+        sG.put("tg0688x", bi.tg06px.getText().toString());
+        sG.put("tg0697", bi.tg06q.isChecked() ? "97" : "0");
 
         sG.put("tg07a", bi.tg07a.isChecked() ? "1" : "0");
         sG.put("tg07b", bi.tg07b.isChecked() ? "2" : "0");
         sG.put("tg07c", bi.tg07c.isChecked() ? "3" : "0");
         sG.put("tg07d", bi.tg07d.isChecked() ? "4" : "0");
-        sG.put("tg07e", bi.tg07e.isChecked() ? "96" : "0");
-        sG.put("tg07ex", bi.tg07ex.getText().toString());
-        sG.put("tg07f", bi.tg07f.isChecked() ? "97" : "0");
+        sG.put("tg0788", bi.tg07e.isChecked() ? "88" : "0");
+        sG.put("tg0788x", bi.tg07ex.getText().toString());
+        sG.put("tg0797", bi.tg07f.isChecked() ? "97" : "0");
 
         sG.put("tg08a", bi.tg08a.isChecked() ? "1" : "0");
         sG.put("tg08b", bi.tg08b.isChecked() ? "2" : "0");
@@ -1129,16 +1128,16 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("tg08h", bi.tg08h.isChecked() ? "8" : "0");
         sG.put("tg08i", bi.tg08i.isChecked() ? "9" : "0");
         sG.put("tg08j", bi.tg08j.isChecked() ? "10" : "0");
-        sG.put("tg08k", bi.tg08k.isChecked() ? "12" : "0");
-        sG.put("tg08l", bi.tg08l.isChecked() ? "13" : "0");
-        sG.put("tg08m", bi.tg08m.isChecked() ? "14" : "0");
-        sG.put("tg08n", bi.tg08n.isChecked() ? "15" : "0");
-        sG.put("tg08o", bi.tg08o.isChecked() ? "16" : "0");
-        sG.put("tg08p", bi.tg08p.isChecked() ? "17" : "0");
-        sG.put("tg08q", bi.tg08q.isChecked() ? "18" : "0");
-        sG.put("tg08r", bi.tg08r.isChecked() ? "19" : "0");
-        sG.put("tg0896", bi.tg0896.isChecked() ? "96" : "0");
-        sG.put("tg0896x", bi.tg0896x.getText().toString());
+        sG.put("tg08k", bi.tg08k.isChecked() ? "11" : "0");
+        sG.put("tg08l", bi.tg08l.isChecked() ? "12" : "0");
+        sG.put("tg08m", bi.tg08m.isChecked() ? "13" : "0");
+        sG.put("tg08n", bi.tg08n.isChecked() ? "14" : "0");
+        sG.put("tg08o", bi.tg08o.isChecked() ? "15" : "0");
+        sG.put("tg08p", bi.tg08p.isChecked() ? "16" : "0");
+        sG.put("tg08q", bi.tg08q.isChecked() ? "17" : "0");
+        sG.put("tg08r", bi.tg08r.isChecked() ? "18" : "0");
+        sG.put("tg0888", bi.tg0896.isChecked() ? "88" : "0");
+        sG.put("tg0888x", bi.tg0896x.getText().toString());
         sG.put("tg0897", bi.tg0897.isChecked() ? "97" : "0");
 
         sG.put("tg09", bi.tg09a.isChecked() ? "1" : bi.tg09b.isChecked() ? "2" : "0");
@@ -1147,9 +1146,9 @@ public class SectionGActivity extends AppCompatActivity {
         sG.put("tg10b", bi.tg10b.isChecked() ? "2" : "0");
         sG.put("tg10c", bi.tg10c.isChecked() ? "3" : "0");
         sG.put("tg10d", bi.tg10d.isChecked() ? "4" : "0");
-        sG.put("tg10e", bi.tg10e.isChecked() ? "96" : "0");
-        sG.put("tg10ex", bi.tg10ex.getText().toString());
-        sG.put("tg10f", bi.tg10f.isChecked() ? "97" : "0");
+        sG.put("tg1088", bi.tg10e.isChecked() ? "88" : "0");
+        sG.put("tg1088x", bi.tg10ex.getText().toString());
+        sG.put("tg1097", bi.tg10f.isChecked() ? "97" : "0");
 
         sG.put("tg11", bi.tg11a.isChecked() ? "1"
                 : bi.tg11b.isChecked() ? "2"
@@ -1164,12 +1163,12 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.tg11k.isChecked() ? "11"
                 : bi.tg11l.isChecked() ? "12"
                 : bi.tg11m.isChecked() ? "13"
-                : bi.tg11n.isChecked() ? "96"
+                : bi.tg11n.isChecked() ? "88"
                 : "0"
 
         );
 
-        sG.put("tg11nx", bi.tg11nx.getText().toString());
+        sG.put("tg1188x", bi.tg11nx.getText().toString());
         sG.put("tg12a", bi.tg12a.getText().toString());
         sG.put("tg12b", bi.tg12b.getText().toString());
 

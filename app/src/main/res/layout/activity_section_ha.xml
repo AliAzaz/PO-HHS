@@ -838,8 +838,8 @@
                         android:id="@+id/tha13a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/yes" />
 
@@ -913,18 +913,17 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="textCapWords"
-                        android:visibility="gone"
-                         />
+                        android:visibility="gone" />
 
                     <EditText
-                        android:visibility="gone"
                         android:id="@+id/tha1496x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/name"
-                        android:inputType="textCapWords" />
+                        android:inputType="textCapWords"
+                        android:visibility="gone" />
 
                 </RadioGroup>
 
@@ -1003,11 +1002,9 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="textCapWords"
-                        android:visibility="gone"
-                        />
+                        android:visibility="gone" />
 
                     <EditText
-                        android:visibility="gone"
                         android:id="@+id/tha1596x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1015,7 +1012,7 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/name"
                         android:inputType="textCapWords"
-                       />
+                        android:visibility="gone" />
 
                 </RadioGroup>
 
@@ -1187,8 +1184,8 @@
                         android:id="@+id/tha18a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/yes" />
 
@@ -1259,8 +1256,8 @@
                         android:id="@+id/tha20a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/yes" />
 
@@ -1365,8 +1362,8 @@
                         android:id="@+id/tha22a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/tha22a" />
 
@@ -1453,8 +1450,8 @@
                         android:id="@+id/tha24a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/tha24a" />
 
@@ -1681,8 +1678,8 @@
                         android:id="@+id/tha28a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/tha28a" />
 
@@ -1733,8 +1730,8 @@
                         android:id="@+id/tha29a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/yes" />
 
@@ -1777,8 +1774,8 @@
                         android:id="@+id/tha30a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/yes" />
 
@@ -1821,8 +1818,8 @@
                         android:id="@+id/tha31a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight="1"
                         android:text="@string/tha31a" />
 
