@@ -93,6 +93,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_SL + " TEXT," +
             FormsTable.COLUMN_ISTATUS + " TEXT," +
             FormsTable.COLUMN_ISTATUS88x + " TEXT," +
+            FormsTable.COLUMN_ENDINGDATETIME + " TEXT," +
             FormsTable.COLUMN_GPSLAT + " TEXT," +
             FormsTable.COLUMN_GPSLNG + " TEXT," +
             FormsTable.COLUMN_GPSDATE + " TEXT," +
@@ -932,6 +933,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
+        values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getendingdatetime());
         values.put(FormsTable.COLUMN_SA, fc.getsA());
         values.put(FormsTable.COLUMN_SC, fc.getsC());
         values.put(FormsTable.COLUMN_SG, fc.getsG());
@@ -1639,6 +1641,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SC,
                 FormsTable.COLUMN_SG,
@@ -2096,6 +2099,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
+        values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getendingdatetime());
+
 
 // Which row to update, based on the ID
         String selection = FormsTable.COLUMN_ID + " =? ";
