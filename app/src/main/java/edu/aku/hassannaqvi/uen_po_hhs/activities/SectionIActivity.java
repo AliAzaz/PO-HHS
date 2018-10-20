@@ -2316,9 +2316,8 @@ public class SectionIActivity extends AppCompatActivity
 
         JSONObject sI = new JSONObject();
 
-        sI.put("ta01", MainApp.cluster);
+        sI.put("ta01", MainApp.lhwCode);
         sI.put("ta05h", MainApp.hhno);
-        sI.put("ta05u", MainApp.billno);
 
         sI.put("tiImsSerial", MainApp.positionIm);
         sI.put("tiname", tiname.getSelectedItem().toString());

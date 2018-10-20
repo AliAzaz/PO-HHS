@@ -814,9 +814,8 @@ public class SectionBActivity extends AppCompatActivity {
 
         JSONObject sB = new JSONObject();
 
-        sB.put("ta01", MainApp.cluster);
+        sB.put("ta01", MainApp.lhwCode);
         sB.put("ta05h", MainApp.hhno);
-        sB.put("ta05u", MainApp.billno);
 
         sB.put("tb01", MainApp.counter);
         sB.put("tb02", tb02.getText().toString());

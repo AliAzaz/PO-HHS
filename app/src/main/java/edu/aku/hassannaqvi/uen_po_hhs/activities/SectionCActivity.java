@@ -286,7 +286,7 @@ public class SectionCActivity extends Activity {
     RadioButton tc08ra;
     @BindView(R.id.tc08rb)
     RadioButton tc08rb;
-    @BindView(R.id.tc08s)
+   /* @BindView(R.id.tc08s)
     RadioGroup tc08s;
     @BindView(R.id.tc08sa)
     RadioButton tc08sa;
@@ -306,7 +306,7 @@ public class SectionCActivity extends Activity {
     RadioButton tc08ua;
     @BindView(R.id.tc08ub)
     RadioButton tc08ub;
-
+*/
     @BindView(R.id.tc09a)
     RadioGroup tc09a;
     @BindView(R.id.tc09aa)
@@ -766,9 +766,9 @@ public class SectionCActivity extends Activity {
         sC.put("tc08p", tc08pa.isChecked() ? "1" : tc08pb.isChecked() ? "2" : "0");
         sC.put("tc08q", tc08qa.isChecked() ? "1" : tc08qb.isChecked() ? "2" : "0");
         sC.put("tc08r", tc08ra.isChecked() ? "1" : tc08rb.isChecked() ? "2" : "0");
-        sC.put("tc08s", tc08sa.isChecked() ? "1" : tc08sb.isChecked() ? "2" : "0");
+      /*  sC.put("tc08s", tc08sa.isChecked() ? "1" : tc08sb.isChecked() ? "2" : "0");
         sC.put("tc08t", tc08ta.isChecked() ? "1" : tc08tb.isChecked() ? "2" : "0");
-        sC.put("tc08u", tc08ua.isChecked() ? "1" : tc08ub.isChecked() ? "2" : "0");
+        sC.put("tc08u", tc08ua.isChecked() ? "1" : tc08ub.isChecked() ? "2" : "0");*/
 
         sC.put("tc09a", tc09aa.isChecked() ? "1" : tc09ab.isChecked() ? "2" : "0");
         sC.put("tc09b", tc09ba.isChecked() ? "1" : tc09bb.isChecked() ? "2" : "0");
@@ -1176,7 +1176,7 @@ public class SectionCActivity extends Activity {
             tc08rb.setError(null);
         }
 
-        if (tc08s.getCheckedRadioButtonId() == -1) {
+      /*  if (tc08s.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc08s), Toast.LENGTH_SHORT).show();
             tc08sb.setError("This data is Required!");    // Set Error on last radio button
             tc08sb.setFocusable(true);
@@ -1210,7 +1210,7 @@ public class SectionCActivity extends Activity {
             return false;
         } else {
             tc08ub.setError(null);
-        }
+        }*/
 
 
 //        09a

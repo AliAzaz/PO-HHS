@@ -601,17 +601,16 @@ public class SectionAActivity extends Activity {
 
         MainApp.cluster = "";
         MainApp.hhno = pobhh.getText().toString();
-//        MainApp.billno = ta05u.getText().toString();
 
-    /*
         sa.put("rndid", MainApp.selectedHead.get_ID());
         sa.put("luid", MainApp.selectedHead.getLUID());
         sa.put("randDT", MainApp.selectedHead.getRandomDT());
         sa.put("hh03", MainApp.selectedHead.getStructure());
         sa.put("hh07", MainApp.selectedHead.getExtension());
         sa.put("hhhead", MainApp.selectedHead.getHhhead());
+        sa.put("hh02", MainApp.selectedHead.getSubVillageCode());
 
-        sa.put("hhheadpresent", checkHHHeadpresent.isChecked() ? "1" : "2");
+      /*  sa.put("hhheadpresent", checkHHHeadpresent.isChecked() ? "1" : "2");
         sa.put("hhheadpresentnew", newHHheadname.getText().toString());
 
         sa.put("ta01", ta01.getText().toString());
@@ -712,7 +711,7 @@ public class SectionAActivity extends Activity {
        responsible for validating fields before clicking on check button of household
      */
     public boolean validation() {
-       // Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
 
         if (!validatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
