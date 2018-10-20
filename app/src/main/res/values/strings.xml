@@ -2,6 +2,8 @@
     <!--new Strings-->
     <string name="app_name">Pulse Oximetry</string>
     <!-- Strings related to login -->
+  <string name="btnSync">Sync</string>
+  <string name="btnUpload">Upload</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login</string>

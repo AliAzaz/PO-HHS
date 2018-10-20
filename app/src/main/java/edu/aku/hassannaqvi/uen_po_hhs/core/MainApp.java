@@ -47,6 +47,8 @@ public class MainApp extends Application {
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";
     //    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/tmk/api/";
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/app/app-debug.apk";
+    public static final String _APP_UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/app/baseline/";
+
 
     //public static final String _IP = "f49461";
     /*
@@ -101,6 +103,8 @@ public class MainApp extends Application {
     public static String hh01txt = "0000";
     public static String hh02txt;
     public static int hh03txt = 1;
+    public static String DeviceURL = "devices.php";
+    public static String IMEI;
 
     public static SharedPreferences sharedPref;
 
@@ -139,7 +143,6 @@ public class MainApp extends Application {
     public static int areaCode = 0;
     public static String cluster = "";
     public static String hhno = "";
-    public static String billno = "";
     public static BLRandomContract selectedHead;
     public static int BLRandomSize;
     protected static LocationManager locationManager;

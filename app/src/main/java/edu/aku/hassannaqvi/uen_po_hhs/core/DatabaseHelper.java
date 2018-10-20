@@ -41,6 +41,8 @@ import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract.singleUCs;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.UsersContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.UsersContract.singleUser;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.VersionAppContract;
+import edu.aku.hassannaqvi.uen_po_hhs.contracts.VersionAppContract.VersionAppTable;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract.singleVillage;
 import edu.aku.hassannaqvi.uen_po_hhs.otherClasses.MotherLst;
@@ -74,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "po_hhs.db";
     public static final String DB_NAME = "po_hhs_copy.db";
     public static final String PROJECT_NAME = "DMU-PO-HHS";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
             + FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -176,6 +178,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             singleIm.COLUMN_SYNCED + " TEXT," +
             singleIm.COLUMN_SYNCED_DATE + " TEXT" +
             " );";
+    final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppTable.TABLE_NAME + " (" +
+            VersionAppTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            VersionAppTable.COLUMN_VERSION_CODE + " TEXT, " +
+            VersionAppTable.COLUMN_VERSION_NAME + " TEXT, " +
+            VersionAppTable.COLUMN_PATH_NAME + " TEXT " +
+            ");";
     private static final String SQL_DELETE_BL_RANDOM =
             "DROP TABLE IF EXISTS " + singleChild.TABLE_NAME;
     private static final String SQL_DELETE_USERS =
@@ -239,9 +247,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public DatabaseHelper(Context context) {
-
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-
     }
 
     @Override
@@ -258,11 +264,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_LHW_TABLE);
         db.execSQL(SQL_CREATE_BL_RANDOM);
+        db.execSQL(SQL_CREATE_VERSIONAPP);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL(SQL_DELETE_USERS);
+  /*      db.execSQL(SQL_DELETE_USERS);
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL(SQL_DELETE_FAMILYMEMBERS);
         db.execSQL(SQL_DELETE_DECEASED_CHILD);
@@ -272,7 +279,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_TALUKAS);
         db.execSQL(SQL_DELETE_UCS);
         db.execSQL(SQL_DELETE_AREAS);
-        db.execSQL(SQL_DELETE_BL_RANDOM);
+        db.execSQL(SQL_DELETE_BL_RANDOM);*/
+        switch (i) {
+            case 1:
+                db.execSQL(SQL_CREATE_VERSIONAPP);
+        }
     }
 
     public void syncVillages(JSONArray pcList) {
@@ -696,6 +707,71 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allAC;
+    }
+    public void syncVersionApp(JSONArray Versionlist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(VersionAppTable.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = Versionlist;
+            JSONObject jsonObjectCC = jsonArray.getJSONObject(0);
+
+            VersionAppContract Vc = new VersionAppContract();
+            Vc.Sync(jsonObjectCC);
+
+            ContentValues values = new ContentValues();
+
+            values.put(VersionAppTable.COLUMN_PATH_NAME, Vc.getPathname());
+            values.put(VersionAppTable.COLUMN_VERSION_CODE, Vc.getVersioncode());
+            values.put(VersionAppTable.COLUMN_VERSION_NAME, Vc.getVersionname());
+
+            db.insert(VersionAppTable.TABLE_NAME, null, values);
+        } catch (Exception e) {
+        } finally {
+            db.close();
+        }
+    }
+
+    public VersionAppContract getVersionApp() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                VersionAppContract.VersionAppTable._ID,
+                VersionAppTable.COLUMN_VERSION_CODE,
+                VersionAppTable.COLUMN_VERSION_NAME,
+                VersionAppTable.COLUMN_PATH_NAME
+        };
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = null;
+
+        VersionAppContract allVC = new VersionAppContract();
+        try {
+            c = db.query(
+                    VersionAppTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allVC.hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allVC;
     }
 
     public Collection<BLRandomContract> getAllBLRandom(String subAreaCode, String hh) {
@@ -2091,7 +2167,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
     public int updateEnding() {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -2112,7 +2187,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
         return count;
     }
-
 
 
     public int updateDeceasedChild() {
@@ -2151,6 +2225,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
         return count;
     }
+
     public void syncLHWs(JSONArray dcList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(lhwEntry.TABLE_NAME, null, null);

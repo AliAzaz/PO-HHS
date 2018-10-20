@@ -27,4 +27,7 @@
     <color name="title">#222222</color>
     <color name="green">#4caf50</color>
     <color name="red">#f44336</color>
+
+    <color name="darkRed">#D50000</color>
+    <color name="lightOrange">#FFE0B2</color>
 </resources>
