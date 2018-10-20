@@ -602,7 +602,7 @@ public class SectionAActivity extends Activity {
         MainApp.cluster = "";
         MainApp.hhno = pobhh.getText().toString();
 
-        sa.put("rndid", MainApp.selectedHead.get_ID());
+        //sa.put("rndid", MainApp.selectedHead.get_ID());
         sa.put("luid", MainApp.selectedHead.getLUID());
         sa.put("randDT", MainApp.selectedHead.getRandomDT());
         sa.put("hh03", MainApp.selectedHead.getStructure());
