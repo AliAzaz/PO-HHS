@@ -332,6 +332,7 @@ public class SectionFActivity extends AppCompatActivity {
 
         JSONObject sF = new JSONObject();
 
+        sF.put("serial_no", MainApp.CounterDeceasedChild);
         sF.put("ta01", MainApp.lhwCode);
         sF.put("ta05h", MainApp.hhno);
 
