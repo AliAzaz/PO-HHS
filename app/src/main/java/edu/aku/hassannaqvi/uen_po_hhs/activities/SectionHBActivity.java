@@ -2334,9 +2334,9 @@ public class SectionHBActivity extends Activity {
                         : thb10b.isChecked() ? "2"
                         : thb10c.isChecked() ? "3"
                         : thb10d.isChecked() ? "4"
-                        : thb10e.isChecked() ? "96"
+                        : thb10e.isChecked() ? "88"
                         : "0");
-        sHB.put("thb1096x", thb1096x.getText().toString());
+        sHB.put("thb1088x", thb1096x.getText().toString());
         sHB.put("thb10ex", thb10ex.getText().toString());
 
 
@@ -2350,9 +2350,9 @@ public class SectionHBActivity extends Activity {
                 : thb11i.isChecked() ? "8"
                 : thb11j.isChecked() ? "9"
                 : thb11k.isChecked() ? "10"
-                : thb1196.isChecked() ? "96"
+                : thb1196.isChecked() ? "88"
                 : "0");
-        sHB.put("thb1196", thb1196x.getText().toString());
+        sHB.put("thb1188x", thb1196x.getText().toString());
         sHB.put("thb11name", thb11name.getText().toString());
 
 
@@ -2371,7 +2371,7 @@ public class SectionHBActivity extends Activity {
                 thb15a.isChecked() ? "1"
                         : thb15b.isChecked() ? "2"
                         : thb15c.isChecked() ? "3"
-                        : thb1596.isChecked() ? "96"
+                        : thb1596.isChecked() ? "88"
                         : "0");
         sHB.put("thb1596", thb1596x.getText().toString());
         sHB.put("thb15name", thb15name.getText().toString());
@@ -2389,7 +2389,7 @@ public class SectionHBActivity extends Activity {
         sHB.put("thb18", thb18a.isChecked() ? "1"
                 : thb18b.isChecked() ? "2"
                 : thb18c.isChecked() ? "3"
-                : thb1896.isChecked() ? "96"
+                : thb1896.isChecked() ? "88"
                 : "0");
         sHB.put("thb1896", thb1896x.getText().toString());
         sHB.put("thb18name", thb18name.getText().toString());
@@ -2399,9 +2399,9 @@ public class SectionHBActivity extends Activity {
                 : thb19c.isChecked() ? "3"
                 : thb19d.isChecked() ? "4"
                 : thb19e.isChecked() ? "5"
-                : thb1996.isChecked() ? "96"
+                : thb1996.isChecked() ? "88"
                 : "0");
-        sHB.put("thb1996x", thb1996x.getText().toString());
+        sHB.put("thb1988x", thb1996x.getText().toString());
         sHB.put("thb19name", thb19name.getText().toString());
 
 
@@ -2508,7 +2508,7 @@ public class SectionHBActivity extends Activity {
                 : "0");
         sHB.put("thb38", thb38a.isChecked() ? "1"
                 : thb38b.isChecked() ? "2"
-                : thb3898.isChecked() ? "98"
+                : thb3898.isChecked() ? 88
                 : "0");
         sHB.put("thb39", thb39a.isChecked() ? "1"
                 : thb39b.isChecked() ? "2"
@@ -2519,9 +2519,9 @@ public class SectionHBActivity extends Activity {
                 : thb39f.isChecked() ? "7"
                 : thb39g.isChecked() ? "8"
                 : thb39h.isChecked() ? "9"
-                : thb39i.isChecked() ? "96"
+                : thb39i.isChecked() ? "88"
                 : "0");
-        sHB.put("thb3996", thb3996.getText().toString());
+        sHB.put("thb3988x", thb3996.getText().toString());
         sHB.put("thb39ix", thb39ix.getText().toString());
        // sHB.put("appver", MainApp.versionName + "." + MainApp.versionCode);
 
