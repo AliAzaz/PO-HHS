@@ -1977,7 +1977,6 @@ public class SectionHAActivity extends Activity {
         sHA.put("tha07f", bi.tha07f.isChecked() ? "6" : "0");
         sHA.put("tha07g", bi.tha07g.isChecked() ? "7" : "0");
         sHA.put("tha07h", bi.tha07h.isChecked() ? "8" : "0");
-        sHA.put("tha07a", bi.tha07a.isChecked() ? "9" : "0");
         sHA.put("tha0788", bi.tha0796.isChecked() ? "88" : "0");
         sHA.put("tha0788x", bi.tha0796x.getText().toString());
         sHA.put("tha08", bi.tha08.getText().toString());
@@ -1990,7 +1989,7 @@ public class SectionHAActivity extends Activity {
                         : bi.tha09e.isChecked() ? "88"
                         : "0");
         sHA.put("tha0988x", bi.tha0996x.getText().toString());
-        sHA.put("tha09ex", bi.tha09ex.getText().toString());
+        sHA.put("tha09x", bi.tha09ex.getText().toString());
         sHA.put("tha10", bi.tha10a.isChecked() ? "1"
                 : bi.tha10b.isChecked() ? "2"
                 : bi.tha10c.isChecked() ? "3"
@@ -2001,9 +2000,9 @@ public class SectionHAActivity extends Activity {
                 : bi.tha10h.isChecked() ? "8"
                 : bi.tha10i.isChecked() ? "9"
                 : "0");
-        sHA.put("tha1088x", bi.tha1096x.getText().toString());
+        sHA.put("tha10x", bi.tha1096x.getText().toString());
 
-        sHA.put("tha11", bi.tha10a.isChecked() ? "1"
+        sHA.put("tha11", bi.tha11a.isChecked() ? "1"
                 : bi.tha11b.isChecked() ? "2"
                 : bi.tha11c.isChecked() ? "3"
                 : bi.tha11d.isChecked() ? "4"
@@ -2043,7 +2042,7 @@ public class SectionHAActivity extends Activity {
                 : bi.tha15e.isChecked() ? "5"
                 : bi.tha15f.isChecked() ? "88"
                 : "0");
-        sHA.put("tha15fx", bi.tha15fx.getText().toString());
+        sHA.put("tha15x", bi.tha15fx.getText().toString());
         sHA.put("tha1588x", bi.tha1596x.getText().toString());
 
         sHA.put("tha16a", bi.tha16a.isChecked() ? "1" : "0");
@@ -2088,7 +2087,7 @@ public class SectionHAActivity extends Activity {
                 : bi.tha24f.isChecked() ? "6"
                 : bi.tha24i.isChecked() ? "7"
                 : bi.tha24g.isChecked() ? "8"
-                : bi.tha24h.isChecked() ? "9"
+                : bi.tha24h.isChecked() ? "888"
                 : bi.tha2496.isChecked() ? "88"
                 : "0");
         sHA.put("tha2488x", bi.tha2496x.getText().toString());
@@ -2123,7 +2122,7 @@ public class SectionHAActivity extends Activity {
                 : bi.tha31k.isChecked() ? "11"
                 : bi.tha31l.isChecked() ? "12"
                 : "0");
-        sHA.put("tha3188x", bi.tha3196x.getText().toString());
+        sHA.put("tha31x", bi.tha3196x.getText().toString());// name field
 
 
         MainApp.fc.setsHA(String.valueOf(sHA));

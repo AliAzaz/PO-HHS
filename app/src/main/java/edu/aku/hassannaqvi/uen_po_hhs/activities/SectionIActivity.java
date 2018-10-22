@@ -2338,9 +2338,16 @@ public class SectionIActivity extends AppCompatActivity
         sI.put("bcgC", bcgC01.isChecked() ? "1" : bcgC02.isChecked() ? "2" : "0");
         sI.put("bcgdatenp", bcgdatenp.isChecked() ? "1" : "0");
         sI.put("bcgDate", bcgDate.getText().toString());
-        sI.put("bcgPov", bcgPova.isChecked() ? "1" : bcgPovb.isChecked() ? "2" : bcgPovc.isChecked() ? "3"
-                : bcgPovd.isChecked() ? "4" : bcgPove.isChecked() ? "5" : bcgPovf.isChecked() ? "6" : bcgPovg.isChecked() ? "7"
-                : bcgPovh.isChecked() ? "8" : "0");
+        sI.put("bcgPov", bcgPova.isChecked() ? "1" :
+        bcgPovb.isChecked() ? "2" :
+        bcgPovc.isChecked() ? "3" :
+        bcgPovd.isChecked() ? "4" :
+        bcgPove.isChecked() ? "5" :
+        bcgPovf.isChecked() ? "6" :
+        bcgPovg.isChecked() ? "7"
+                : bcgPovh.isChecked() ? "8"
+                : bcgPovi.isChecked() ? "9"
+                : "0");
         // BCG At Birth
         sI.put("opv0M", opv0M01.isChecked() ? "1" : opv0M02.isChecked() ? "2" : "0");
         sI.put("opv0datenr", opv0datenr.isChecked() ? "1" : "0");

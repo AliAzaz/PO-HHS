@@ -498,39 +498,7 @@ public class MainActivity extends Activity {
         startActivity(iB);
     }
 
-    public void opendownload(View v) {
-/*
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                MainActivity.this);
-        alertDialogBuilder
-                .setMessage("Are you sure to download new app??")
-                .setCancelable(false)
-                .setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-                                // this is how you fire the downloader
-                                mProgressDialog = new ProgressDialog(MainActivity.this);
-                                mProgressDialog.setMessage("Downloading PO APK..");
-                                mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                                mProgressDialog.setIndeterminate(false);
-                                mProgressDialog.setProgress(0);
-                                mProgressDialog.show();
-                                Intent intent = new Intent(MainActivity.this, DownloadFileService.class);
-                                intent.putExtra("url", "url of the file to download");
-                                intent.putExtra("receiver", new DownloadReceiver(new Handler()));
-                                startService(intent);
-                            }
-                        });
-        alertDialogBuilder.setNegativeButton("No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();*/
-    }
+
 
 
     public void testGPS(View v) {

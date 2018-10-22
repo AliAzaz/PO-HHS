@@ -57,7 +57,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String SQL_CREATE_BL_RANDOM = "CREATE TABLE " + singleChild.TABLE_NAME + "("
             + singleChild.COLUMN_ID + " TEXT,"
-            + singleChild.COLUMN_SUB_VILLAGE_CODE + " TEXT,"
+            + singleChild.COLUMN_LHW_CODE + " TEXT,"
             + singleChild.COLUMN_LUID + " TEXT,"
             + singleChild.COLUMN_HH + " TEXT,"
             + singleChild.COLUMN_STRUCTURE_NO + " TEXT,"
@@ -783,13 +783,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleChild.COLUMN_STRUCTURE_NO,
                 singleChild.COLUMN_FAMILY_EXT_CODE,
                 singleChild.COLUMN_HH,
-                singleChild.COLUMN_SUB_VILLAGE_CODE,
+                singleChild.COLUMN_LHW_CODE,
                 singleChild.COLUMN_RANDOMDT,
                 singleChild.COLUMN_HH_HEAD,
                 singleChild.COLUMN_HH_CONTACT
         };
 
-        String whereClause = singleChild.COLUMN_SUB_VILLAGE_CODE + "=? AND " +
+        String whereClause = singleChild.COLUMN_LHW_CODE + "=? AND " +
                 singleChild.COLUMN_HH + "=?";
         String[] whereArgs = new String[]{subAreaCode, hh};
         String groupBy = null;
@@ -842,7 +842,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(singleChild.COLUMN_STRUCTURE_NO, Vc.getStructure());
                 values.put(singleChild.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
                 values.put(singleChild.COLUMN_HH, Vc.getHh());
-                values.put(singleChild.COLUMN_SUB_VILLAGE_CODE, Vc.getSubVillageCode());
+                values.put(singleChild.COLUMN_LHW_CODE, Vc.getLHWCode());
                 values.put(singleChild.COLUMN_RANDOMDT, Vc.getRandomDT());
                 values.put(singleChild.COLUMN_HH_HEAD, Vc.getHhhead());
                 values.put(singleChild.COLUMN_HH_CONTACT, Vc.gethhcontact());
