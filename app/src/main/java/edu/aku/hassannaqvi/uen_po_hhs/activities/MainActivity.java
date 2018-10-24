@@ -349,19 +349,21 @@ public class MainActivity extends Activity {
 //        if (spAreas.getSelectedItemPosition() != 0) {
 
         /*     if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {*/
-
-        if (sharedPrefDownload.getBoolean("flag", true) && file.exists()) {
+        if (versionAppContract.getVersioncode() != null) {
+            if (MainApp.versionCode < Integer.valueOf(versionAppContract.getVersioncode())) {
+                if (sharedPrefDownload.getBoolean("flag", true) && file.exists()) {
 //                    InstallNewApp(newVer, preVer);
-            showDialog(newVer, preVer);
+                    showDialog(newVer, preVer);
+                } else {
+                    OpenFormFunc();
+                }
+            }else {
+                OpenFormFunc();
+            }
         } else {
-            OpenFormFunc();
+            Toast.makeText(this, "Sync data!!", Toast.LENGTH_SHORT).show();
         }
-        if (!MainApp.userName.equals("0000")) {
-            Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
-            startActivity(oF);
-        } else {
-            Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
-        }
+
      /*   } else {
 
             builder = new AlertDialog.Builder(MainActivity.this);
@@ -404,7 +406,12 @@ public class MainActivity extends Activity {
     }
 
     private void OpenFormFunc() {
-
+        if (!MainApp.userName.equals("0000")) {
+            Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
+            startActivity(oF);
+        } else {
+            Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
+        }
     }
 
 
