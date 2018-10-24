@@ -586,6 +586,11 @@ public class MainActivity extends Activity {
         startActivity(cluster_list);
 
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(broadcastReceiver);
+    }
 
     public void syncServer(View view) {
 
