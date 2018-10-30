@@ -1054,8 +1054,12 @@
     <string name="tg10"> اگر ها ته پوءِ توهان ڇا ڪندا آهيو   </string>
     <string name="tg10a">	دوائون شروع يا جاري رکيوسين   </string>
     <string name="tg10b">	غذائي دوائون استعمال يا جاري رکيوسين.  </string>
-    <string name="tg10c">	اسپتال / صحت ڪارڪن ڏانهن  </string>
-    <string name="tg10d">	اسپتال / صحت ڪارڪن ڏانهن  </string>
+    <string name="tg10c">اسپتال / صحت ڪارڪن ڏانهن
+معائني لاءِ وياسين نالو
+ </string>
+    <string name="tg10d">	اسپتال / صحت ڪارڪن ڏانهن
+ٽڪن لاءِ وياسين نالو
+</string>
     <string name="tg10e">	ٻيو ڪجهه </string>
     <string name="tg10f">	ڪجهه به نه </string>
     <string name="tg11"> جيڪڏهن هدايت / صلاح تي عمل نه ڪيو ته ڇو نه ڪيو؟</string>

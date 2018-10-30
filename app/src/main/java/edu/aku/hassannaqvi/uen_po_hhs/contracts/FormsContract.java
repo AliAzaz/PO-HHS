@@ -110,7 +110,6 @@ public class FormsContract {
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
 
-        // TODO:
 
         return this;
 
