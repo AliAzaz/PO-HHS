@@ -286,7 +286,7 @@ public class SectionCActivity extends Activity {
     RadioButton tc08ra;
     @BindView(R.id.tc08rb)
     RadioButton tc08rb;
-   /* @BindView(R.id.tc08s)
+    @BindView(R.id.tc08s)
     RadioGroup tc08s;
     @BindView(R.id.tc08sa)
     RadioButton tc08sa;
@@ -306,7 +306,7 @@ public class SectionCActivity extends Activity {
     RadioButton tc08ua;
     @BindView(R.id.tc08ub)
     RadioButton tc08ub;
-*/
+
     @BindView(R.id.tc09a)
     RadioGroup tc09a;
     @BindView(R.id.tc09aa)
@@ -766,9 +766,9 @@ public class SectionCActivity extends Activity {
         sC.put("tc08p", tc08pa.isChecked() ? "1" : tc08pb.isChecked() ? "2" : "0");
         sC.put("tc08q", tc08qa.isChecked() ? "1" : tc08qb.isChecked() ? "2" : "0");
         sC.put("tc08r", tc08ra.isChecked() ? "1" : tc08rb.isChecked() ? "2" : "0");
-      /*  sC.put("tc08s", tc08sa.isChecked() ? "1" : tc08sb.isChecked() ? "2" : "0");
+        sC.put("tc08s", tc08sa.isChecked() ? "1" : tc08sb.isChecked() ? "2" : "0");
         sC.put("tc08t", tc08ta.isChecked() ? "1" : tc08tb.isChecked() ? "2" : "0");
-        sC.put("tc08u", tc08ua.isChecked() ? "1" : tc08ub.isChecked() ? "2" : "0");*/
+        sC.put("tc08u", tc08ua.isChecked() ? "1" : tc08ub.isChecked() ? "2" : "0");
 
         sC.put("tc09a", tc09aa.isChecked() ? "1" : tc09ab.isChecked() ? "2" : "0");
         sC.put("tc09b", tc09ba.isChecked() ? "1" : tc09bb.isChecked() ? "2" : "0");
@@ -1176,41 +1176,41 @@ public class SectionCActivity extends Activity {
             tc08rb.setError(null);
         }
 
-      /*  if (tc08s.getCheckedRadioButtonId() == -1) {
+       if (tc08s.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc08s), Toast.LENGTH_SHORT).show();
-            tc08sb.setError("This data is Required!");    // Set Error on last radio button
-            tc08sb.setFocusable(true);
-            tc08sb.setFocusableInTouchMode(true);
-            tc08sb.requestFocus();
+            tc08sa.setError("This data is Required!");    // Set Error on last radio button
+            tc08sa.setFocusable(true);
+            tc08sa.setFocusableInTouchMode(true);
+            tc08sa.requestFocus();
             Log.i(TAG, "tc08s: This data is Required!");
             return false;
         } else {
-            tc08sb.setError(null);
+            tc08sa.setError(null);
         }
 
         if (tc08t.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc08s), Toast.LENGTH_SHORT).show();
-            tc08tb.setError("This data is Required!");    // Set Error on last radio button
-            tc08tb.setFocusable(true);
-            tc08tb.setFocusableInTouchMode(true);
-            tc08tb.requestFocus();
+            tc08ta.setError("This data is Required!");    // Set Error on last radio button
+            tc08ta.setFocusable(true);
+            tc08ta.setFocusableInTouchMode(true);
+            tc08ta.requestFocus();
             Log.i(TAG, "tc08s: This data is Required!");
             return false;
         } else {
-            tc08tb.setError(null);
+            tc08ta.setError(null);
         }
 
         if (tc08u.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "ERROR(empty): " + getString(R.string.tc08s), Toast.LENGTH_SHORT).show();
-            tc08ub.setError("This data is Required!");    // Set Error on last radio button
-            tc08ub.setFocusable(true);
-            tc08ub.setFocusableInTouchMode(true);
-            tc08ub.requestFocus();
+            tc08ua.setError("This data is Required!");    // Set Error on last radio button
+            tc08ua.setFocusable(true);
+            tc08ua.setFocusableInTouchMode(true);
+            tc08ua.requestFocus();
             Log.i(TAG, "tc08s: This data is Required!");
             return false;
         } else {
-            tc08ub.setError(null);
-        }*/
+            tc08ua.setError(null);
+        }
 
 
 //        09a

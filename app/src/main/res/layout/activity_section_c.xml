@@ -1278,7 +1278,7 @@
                 android:text="@string/no" />
 
         </RadioGroup>
-<!--
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -1368,7 +1368,7 @@
                     android:layout_weight="1"
                     android:text="@string/no"/>
 
-            </RadioGroup>-->
+            </RadioGroup>
 
         </LinearLayout>
 
