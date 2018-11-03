@@ -2,8 +2,8 @@
     <!--new Strings-->
     <string name="app_name">Pulse Oximetry</string>
     <!-- Strings related to login -->
-  <string name="btnSync">Sync</string>
-  <string name="btnUpload">Upload</string>
+    <string name="btnSync">Sync</string>
+    <string name="btnUpload">Upload</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login</string>
@@ -223,23 +223,23 @@
     <string name="tc0302"> Rudimentary Walls </string>
     <string name="tc0303"> Finished Walls </string>
     <string name="tc03"> ڀتيون ڪهڙي قسم جون آهن؟ مشاھدو ڪريو </string>
-      <string name="tc03a"> ڀتيون نه آھن </string>
-      <string name="tc03b"> ڪکا / گاه </string>
-      <string name="tc03c"> مٽي </string>
-      <string name="tc03d"> مٽي سان پٿر </string>
-      <string name="tc03e"> مٽي/ بانس  </string>
-      <string name="tc03f"> ڪچين سرن جي ڀت </string>
-      <string name="tc03g"> تختن جي ڀت </string>
-      <string name="tc03h"> ڪاغذن جي/ گتن جي </string>
-      <string name="tc03i"> استعمال شده ڪاٺ جي ڀت </string>
-      <string name="tc03j"> تنبو/ڪپڙي </string>
-      <string name="tc03k"> پلاسٽڪ جا گتا </string>
-      <string name="tc03l"> سيمينٽ </string>
-      <string name="tc03m"> پٿرچن سان لڳل </string>
-      <string name="tc03n"> سرون </string>
-      <string name="tc03o"> سيمينٽ بلاڪ </string>
-      <string name="tc03p"> مڪمل ڀت </string>
-      <string name="tc03q"> ڪاٺ جي تختا </string>
+    <string name="tc03a"> ڀتيون نه آھن </string>
+    <string name="tc03b"> ڪکا / گاه </string>
+    <string name="tc03c"> مٽي </string>
+    <string name="tc03d"> مٽي سان پٿر </string>
+    <string name="tc03e"> مٽي/ بانس  </string>
+    <string name="tc03f"> ڪچين سرن جي ڀت </string>
+    <string name="tc03g"> تختن جي ڀت </string>
+    <string name="tc03h"> ڪاغذن جي/ گتن جي </string>
+    <string name="tc03i"> استعمال شده ڪاٺ جي ڀت </string>
+    <string name="tc03j"> تنبو/ڪپڙي </string>
+    <string name="tc03k"> پلاسٽڪ جا گتا </string>
+    <string name="tc03l"> سيمينٽ </string>
+    <string name="tc03m"> پٿرچن سان لڳل </string>
+    <string name="tc03n"> سرون </string>
+    <string name="tc03o"> سيمينٽ بلاڪ </string>
+    <string name="tc03p"> مڪمل ڀت </string>
+    <string name="tc03q"> ڪاٺ جي تختا </string>
     <string name="tc04"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن؟  </string>
     <string name="tc04a"> ڪمرن جو تعداد </string>
     <string name="tc05"> اوهان جنهن گهر ۾ رهو ٿا اهو ڪنهن جي ملڪيت آهي؟ </string>
@@ -380,12 +380,13 @@
     <string name="tf07f"> دست (Diarrhea) </string>
     <string name="tf07g"> بخار (Fever) </string>
     <string name="tf07h"> جيڪڏهن نه ته ڇو نه </string>
+    <string name="tf07i"> حادثاتي موت جو ٿيڻ </string>
 
-  <string name="tf08"> گذاري وڃڻ کان پهريان ڇا توهان کي خبر پئي ته توهان جو ٻار شديد بيمار آهي </string>
-  <string name="tf09"> ڇا توهان ٻار کي ڪنهن صحت ڪارڪن ڏانهن وٺي ويا؟ </string>
-  <string name="tf10"> ڇا صحت ڪارڪن اسپتال ڏانهن رفرل ( وڃڻ ) جو چيو؟  </string>
-  <string name="tf11"> ڇا توهان ٻار کي اسپتال وٺي ويا؟  </string>
-  <string name="tf12"> جيڪڏهن نه ته ڇو نه  </string>
+    <string name="tf08"> گذاري وڃڻ کان پهريان ڇا توهان کي خبر پئي ته توهان جو ٻار شديد بيمار آهي </string>
+    <string name="tf09"> ڇا توهان ٻار کي ڪنهن صحت ڪارڪن ڏانهن وٺي ويا؟ </string>
+    <string name="tf10"> ڇا صحت ڪارڪن اسپتال ڏانهن رفرل ( وڃڻ ) جو چيو؟  </string>
+    <string name="tf11"> ڇا توهان ٻار کي اسپتال وٺي ويا؟  </string>
+    <string name="tf12"> جيڪڏهن نه ته ڇو نه  </string>
 
     <string name="tha01"> ڇا گذريل ٻن ھفتن جي دوران توھان جي گھر ۾ 5 سالن کان گھٽ عمر جي ٻارن کي دستن جي بيماري ٿي؟ </string>
     <string name="tha02"> گذريل ٻن ھفتن ۾ ڪيترن ٻارن کي دستن جي بيماري ٿي؟ </string>

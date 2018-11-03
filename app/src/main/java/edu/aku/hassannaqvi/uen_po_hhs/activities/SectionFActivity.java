@@ -84,6 +84,8 @@ public class SectionFActivity extends AppCompatActivity {
     RadioButton tf07g;
     @BindView(R.id.tf07h)
     RadioButton tf07h;
+    @BindView(R.id.tf07i)
+    RadioButton tf07i;
     @BindView(R.id.tf0788)
     RadioButton tf0788;
     @BindView(R.id.tf0788x)
@@ -349,7 +351,7 @@ public class SectionFActivity extends AppCompatActivity {
         sF.put("tf06y", tf06y.getText().toString());
         sF.put("tf07", tf07a.isChecked() ? "1" : tf07b.isChecked() ? "2" : tf07c.isChecked() ? "3"
                 : tf07d.isChecked() ? "4" : tf07e.isChecked() ? "5" : tf07f.isChecked() ? "6" : tf07g.isChecked() ? "7"
-                : tf07h.isChecked() ? "8" : tf0788.isChecked() ? "88" : "0");
+                : tf07h.isChecked() ? "8" :  tf07i.isChecked() ? "9" : tf0788.isChecked() ? "88" : "0");
         sF.put("tf0788x", tf0788x.getText().toString());
         sF.put("tf08", tf08a.isChecked() ? "1" : tf08b.isChecked() ? "2" : "0");
         sF.put("tf09", tf09a.isChecked() ? "1" : tf09b.isChecked() ? "2" : "0");

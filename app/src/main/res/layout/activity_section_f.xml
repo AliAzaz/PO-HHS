@@ -327,12 +327,20 @@
                 android:layout_marginBottom="1dp"
                 android:text="@string/tf07g" />
 
+
             <RadioButton
                 android:id="@+id/tf07h"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:text="@string/tf07h" />
+
+            <RadioButton
+                android:id="@+id/tf07i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="@string/tf07i" />
 
             <RadioButton
                 android:id="@+id/tf0788"
