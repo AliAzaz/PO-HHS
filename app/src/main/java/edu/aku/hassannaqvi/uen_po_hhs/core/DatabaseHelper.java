@@ -2189,7 +2189,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public int updateDeceasedChild() {
+  /*  public int updateDeceasedChild() {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
@@ -2206,9 +2206,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
         return count;
-    }
+    }*/
 
-    public int updateIM() {
+    /*public int updateIM() {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
@@ -2224,7 +2224,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
         return count;
-    }
+    }*/
 
     public void syncLHWs(JSONArray dcList) {
         SQLiteDatabase db = this.getWritableDatabase();
