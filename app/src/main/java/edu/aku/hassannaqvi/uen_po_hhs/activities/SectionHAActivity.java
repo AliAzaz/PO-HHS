@@ -1196,6 +1196,8 @@ public class SectionHAActivity extends Activity {
                     ClearClass.ClearAllFields(bi.fldgrptha20, false);
                     bi.fldgrptha21.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrptha21, false);
+                    //                  tha22 should be skip as observed by uzair.
+
 
                 } else {
                     bi.fldgrptha14.setVisibility(View.VISIBLE);
@@ -1214,6 +1216,7 @@ public class SectionHAActivity extends Activity {
                     ClearClass.ClearAllFields(bi.fldgrptha20, true);
                     bi.fldgrptha21.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.fldgrptha21, true);
+                    //                  tha22 should be skip as observed by uzair.
 
                 }
             }
@@ -2393,6 +2396,7 @@ public class SectionHAActivity extends Activity {
                         if (!validatorClass.EmptyTextBox(this, bi.tha23, getString(R.string.tha23))) {
                             return false;
                         }
+//                        no need to add kilometers limit!
                     }
                     if (!validatorClass.EmptyRadioButton(this, bi.tha24, bi.tha24a, getString(R.string.tha24))) {
                         return false;
