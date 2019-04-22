@@ -129,6 +129,28 @@
     <string name="ta09"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
     <string name="ta09c"> گھرو آف / اجازت دستياب ناهي. </string>
 
+  <!--01-->
+  <string name="pocfh1"> سيڪشن01. گھر جي سڃاڻپ واري معلومات </string>
+  <string name="pocfa01"> تعلقو </string>
+  <string name="pocfa02"> يونين ڪائونسل </string>
+  <string name="pocfa03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو</string>
+  <string name="pocfa04"> ڳوٺ/محلي جو نالو </string>
+  <string name="pocfa05"> گھر جو پتو(ايڊريس) </string>
+  <string name="pocfa06"> گھر جو سڃاڻپ نمبر </string>
+  <string name="pocfa07"> جواب ڏيندڙ جو ٻار سان رشتو. </string>
+  <string name="pocfa07a"> ماءُ </string>
+  <string name="pocfa07b"> پيءُ </string>
+  <string name="pocfa07c"> ڏاڏي / ناني </string>
+  <string name="pocfa07d"> ڏاڏو / نانو </string>
+  <string name="pocfa07e"> چاچي / مامي / پڦي / ماسي </string>
+  <string name="pocfa07f"> ڀاءُ / ڀيڻ </string>
+  <string name="pocfa08"> رفرل آءِ ڊي </string>
+  <string name="pocfa09"> ٻار جو نالو </string>
+  <string name="pocfa10"> ٻار جي جنس </string>
+  <string name="pocfa10a"> مرد </string>
+  <string name="pocfa10b"> عورت </string>
+  <string name="pocfa11"> ٻار جي ڄمڻ جي تاريخ </string>
+  <string name="pocfa12"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
 
     <!--Section 02-->
     <string name="pocfbHeading">سيڪشن 02: گھر جي معلومات </string>
@@ -510,8 +532,6 @@
   <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
   <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
   <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
-
-
 
 
 </resources>

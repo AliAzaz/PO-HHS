@@ -53,7 +53,7 @@ public class Section01Activity extends Activity {
     private static final String TAG = Section01Activity.class.getName();
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
-    @BindView(R.id.pobtaluka)
+    @BindView(R.id.pocfa01)
     Spinner mN00;
     @BindView(R.id.pobuc)
     Spinner mN01;
