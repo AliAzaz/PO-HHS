@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.activities;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -373,7 +373,7 @@ public class MainActivity extends Activity {
                         editor.commit();
 
                         if (!MainApp.userName.equals("0000")) {
-                            Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
+                            Intent oF = new Intent(MainActivity.this, Section01Activity.class);
                             startActivity(oF);
                         }
                     }
@@ -395,7 +395,7 @@ public class MainActivity extends Activity {
 
     private void OpenFormFunc() {
         if (!MainApp.userName.equals("0000")) {
-            Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
+            Intent oF = new Intent(MainActivity.this, Section01Activity.class);
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
@@ -437,7 +437,7 @@ public class MainActivity extends Activity {
     };
 
     public void openA(View v) {
-        Intent iA = new Intent(this, SectionAActivity.class);
+        Intent iA = new Intent(this, Section01Activity.class);
         startActivity(iA);
     }
 

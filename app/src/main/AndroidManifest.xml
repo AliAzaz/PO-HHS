@@ -21,9 +21,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Section02_03Activity"></activity>
+        <activity android:name=".ui.Section02_03Activity"></activity>
         <activity
-            android:name=".activities.SplashscreenActivity"
+            android:name=".ui.SplashscreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,16 +32,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".ui.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".activities.SectionAActivity"
+            android:name=".ui.Section01Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
@@ -50,11 +50,11 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".activities.EndingActivity"
+            android:name=".ui.EndingActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".activities.SyncActivity"
+            android:name=".ui.SyncActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".FormsList" />

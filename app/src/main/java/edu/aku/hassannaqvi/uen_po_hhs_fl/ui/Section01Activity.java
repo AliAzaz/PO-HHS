@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.activities;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -48,9 +48,9 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class SectionAActivity extends Activity {
+public class Section01Activity extends Activity {
 
-    private static final String TAG = SectionAActivity.class.getName();
+    private static final String TAG = Section01Activity.class.getName();
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @BindView(R.id.pobtaluka)
@@ -145,7 +145,7 @@ public class SectionAActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_a);
+        setContentView(R.layout.activity_section_01);
         ButterKnife.bind(this);
 
         db = new DatabaseHelper(this);
@@ -245,12 +245,12 @@ public class SectionAActivity extends Activity {
         checkHHBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(SectionAActivity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Section01Activity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
                 if (validation()) {
-                    if (MainApp.lhwCode != "" && ValidatorClass.EmptyTextBox(SectionAActivity.this, pobhh, getString(R.string.household))) {
+                    if (MainApp.lhwCode != "" && ValidatorClass.EmptyTextBox(Section01Activity.this, pobhh, getString(R.string.household))) {
                         setupViews();
                     } else {
-                        Toast.makeText(SectionAActivity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Section01Activity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
 
                     }
                 }
@@ -469,7 +469,7 @@ public class SectionAActivity extends Activity {
             Intent oF = new Intent(this, EndingActivity.class);
 
             if (MainApp.LHWExist(MainApp.lhwCode, MainApp.villageCode)) {
-                Toast.makeText(SectionAActivity.this, "LHW data exist!", Toast.LENGTH_LONG).show();
+                Toast.makeText(Section01Activity.this, "LHW data exist!", Toast.LENGTH_LONG).show();
                 alertPSU();
             } else {
                 startActivity(oF);
@@ -486,7 +486,7 @@ public class SectionAActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case DialogInterface.BUTTON_POSITIVE:
-                        Intent oF = new Intent(SectionAActivity.this, EndingActivity.class);
+                        Intent oF = new Intent(Section01Activity.this, EndingActivity.class);
                         startActivity(oF);
                         break;
 

@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import edu.aku.hassannaqvi.uen_po_hhs_fl.activities.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.EndingActivity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.DeceasedChildContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.DeceasedMotherContract;
