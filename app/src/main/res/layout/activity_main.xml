@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="72dp"
-    tools:context="edu.aku.hassannaqvi.uen_po_hhs.activities.MainActivity">
+    tools:context="edu.aku.hassannaqvi.uen_po_hhs_fl.activities.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

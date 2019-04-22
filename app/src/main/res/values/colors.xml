@@ -23,6 +23,7 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="dullWhileOverlay">#99d6d6d6</color>
+    <color name="dullWhile">#d6d6d6</color>
 
     <color name="year">#999999</color>
     <color name="title">#222222</color>
