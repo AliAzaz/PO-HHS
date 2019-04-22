@@ -46,7 +46,7 @@ import edu.aku.hassannaqvi.uen_po_hhs.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs.validator.validatorClass;
+import edu.aku.hassannaqvi.uen_po_hhs.validator.ValidatorClass;
 
 public class SectionAActivity extends Activity {
 
@@ -247,7 +247,7 @@ public class SectionAActivity extends Activity {
             public void onClick(View view) {
 //                Toast.makeText(SectionAActivity.this,"This feature is under construction! ",Toast.LENGTH_SHORT).show();
                 if (validation()) {
-                    if (MainApp.lhwCode != "" && validatorClass.EmptyTextBox(SectionAActivity.this, pobhh, getString(R.string.household))) {
+                    if (MainApp.lhwCode != "" && ValidatorClass.EmptyTextBox(SectionAActivity.this, pobhh, getString(R.string.household))) {
                         setupViews();
                     } else {
                         Toast.makeText(SectionAActivity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
@@ -464,7 +464,7 @@ public class SectionAActivity extends Activity {
 
 // removed village selection
 //        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
-        if (MN03.getSelectedItemPosition() != 0 && !validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
+        if (MN03.getSelectedItemPosition() != 0 && !ValidatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
 
             Intent oF = new Intent(this, EndingActivity.class);
 
@@ -689,22 +689,22 @@ public class SectionAActivity extends Activity {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
 
-        if (!validatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
+        if (!ValidatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
             return false;
         }
-        if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
+        if (!ValidatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
             return false;
         }
-      /*  if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.villagename))) {
+      /*  if (!ValidatorClass.EmptySpinner(this,mN02,getString(R.string.villagename))) {
         return false;
         }*/
-        if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.lhwname))) {
+        if (!ValidatorClass.EmptySpinner(this, MN03, getString(R.string.lhwname))) {
             return false;
         }
-        if (!validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
+        if (!ValidatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
             return false;
         }
-        return validatorClass.EmptyRadioButton(this, ta09, ta09a, getString(R.string.ta09));
+        return ValidatorClass.EmptyRadioButton(this, ta09, ta09a, getString(R.string.ta09));
     }
 
     /*
@@ -714,19 +714,19 @@ public class SectionAActivity extends Activity {
         // Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
 
-        if (!validatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
+        if (!ValidatorClass.EmptySpinner(this, mN00, getString(R.string.talukaname))) {
             return false;
         }
-        if (!validatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
+        if (!ValidatorClass.EmptySpinner(this, mN01, getString(R.string.ucname))) {
             return false;
         }
-      /*  if (!validatorClass.EmptySpinner(this,mN02,getString(R.string.villagename))) {
+      /*  if (!ValidatorClass.EmptySpinner(this,mN02,getString(R.string.villagename))) {
         return false;
         }*/
-        if (!validatorClass.EmptySpinner(this, MN03, getString(R.string.lhwname))) {
+        if (!ValidatorClass.EmptySpinner(this, MN03, getString(R.string.lhwname))) {
             return false;
         }
-        return validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household));
+        return ValidatorClass.EmptyTextBox(this, pobhh, getString(R.string.household));
     }
 
 }
