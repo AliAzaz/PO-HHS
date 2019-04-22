@@ -96,7 +96,6 @@ public class EndingActivity extends Activity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-
                 MainApp.familyMembersList.clear();
                 MainApp.memFlag = 0;
 

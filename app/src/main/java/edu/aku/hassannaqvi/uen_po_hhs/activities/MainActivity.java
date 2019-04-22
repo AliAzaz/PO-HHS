@@ -24,21 +24,15 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.StrictMode;
-import android.support.v4.os.ResultReceiver;
-import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -56,7 +50,6 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import edu.aku.hassannaqvi.uen_po_hhs.DownloadFileService;
 import edu.aku.hassannaqvi.uen_po_hhs.FormsList;
 import edu.aku.hassannaqvi.uen_po_hhs.R;
 import edu.aku.hassannaqvi.uen_po_hhs.contracts.AreasContract;
@@ -65,11 +58,6 @@ import edu.aku.hassannaqvi.uen_po_hhs.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_po_hhs.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_po_hhs.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncDeceasedChild;
-import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncFamilyMembers;
-import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncForms;
-import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncIM;
-import edu.aku.hassannaqvi.uen_po_hhs.sync.SyncMwras;
 
 public class MainActivity extends Activity {
 
@@ -451,58 +439,6 @@ public class MainActivity extends Activity {
     public void openA(View v) {
         Intent iA = new Intent(this, SectionAActivity.class);
         startActivity(iA);
-    }
-
-    public void openB(View v) {
-        Intent iB = new Intent(this, SectionBActivity.class);
-        startActivity(iB);
-    }
-
-    public void openC(View v) {
-        Intent iC = new Intent(this, SectionCActivity.class);
-        startActivity(iC);
-    }
-
-
-    public void openF(View v) {
-        Intent iF = new Intent(this, SectionFActivity.class);
-        startActivity(iF);
-    }
-
-    public void openG(View v) {
-        Intent iG = new Intent(this, SectionGActivity.class);
-        startActivity(iG);
-    }
-
-    public void openI(View v) {
-        Intent iI = new Intent(this, SectionIActivity.class);
-        startActivity(iI);
-    }
-
-    public void openJ(View v) {
-        Intent iJ = new Intent(this, SectionJActivity.class);
-        startActivity(iJ);
-    }
-
-    public void openK(View v) {
-        Intent iK = new Intent(this, SectionKActivity.class);
-        startActivity(iK);
-    }
-
-    public void openL(View v) {
-        Intent iL = new Intent(this, SectionLActivity.class);
-        startActivity(iL);
-    }
-
-
-    public void openHA(View v) {
-        Intent iB = new Intent(this, SectionHAActivity.class);
-        startActivity(iB);
-    }
-
-    public void openHB(View v) {
-        Intent iB = new Intent(this, SectionHBActivity.class);
-        startActivity(iB);
     }
 
 

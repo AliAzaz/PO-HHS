@@ -466,7 +466,7 @@ public class SectionAActivity extends Activity {
 //        if (mN01.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0 && mN02.getSelectedItemPosition() != 0) {
         if (MN03.getSelectedItemPosition() != 0 && !validatorClass.EmptyTextBox(this, pobhh, getString(R.string.household))) {
 
-            Intent oF = new Intent(this, SectionBActivity.class);
+            Intent oF = new Intent(this, EndingActivity.class);
 
             if (MainApp.LHWExist(MainApp.lhwCode, MainApp.villageCode)) {
                 Toast.makeText(SectionAActivity.this, "LHW data exist!", Toast.LENGTH_LONG).show();
@@ -486,7 +486,7 @@ public class SectionAActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case DialogInterface.BUTTON_POSITIVE:
-                        Intent oF = new Intent(SectionAActivity.this, SectionBActivity.class);
+                        Intent oF = new Intent(SectionAActivity.this, EndingActivity.class);
                         startActivity(oF);
                         break;
 
@@ -576,7 +576,7 @@ public class SectionAActivity extends Activity {
 
                 finish();
 
-                startActivity(new Intent(this, SectionBActivity.class));
+                startActivity(new Intent(this, EndingActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

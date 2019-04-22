@@ -128,7 +128,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,7 +143,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openMembers"
                 android:text="Section Members" />
 
             <Button
@@ -153,7 +151,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openA"
                 android:text="Section A" />
 
             <Button
@@ -162,7 +159,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openB"
                 android:text="Section B" />
 
             <Button
@@ -171,7 +167,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openC"
                 android:text="Section C" />
 
             <Button
@@ -180,7 +175,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openF"
 
                 android:text="Section F" />
 
@@ -190,7 +184,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openG"
                 android:text="Section G" />
 
             <Button
@@ -199,7 +192,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openHA"
                 android:text="Section HA" />
 
             <Button
@@ -208,7 +200,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openHB"
                 android:text="Section HB" />
 
             <Button
@@ -217,7 +208,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openI"
                 android:text="Section I" />
 
             <Button
@@ -226,7 +216,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openJ"
                 android:text="Section J" />
 
             <Button
@@ -235,7 +224,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openK"
                 android:text="Section K" />
 
             <Button
@@ -244,7 +232,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
-                android:onClick="openL"
                 android:text="Section L" />
 
 
@@ -255,7 +242,6 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/red"
-                android:onClick="opendownload"
                 android:text="DOWNLOAD APP"
                 android:textColor="@color/white"
                 android:visibility="gone" />
