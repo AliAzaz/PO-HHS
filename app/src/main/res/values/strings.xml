@@ -76,6 +76,7 @@
     <string name="min"> منٽ </string>
     <string name="other"> ٻيو ڪو وضاحت ڪريو</string>
     <string name="kg"> ڪلوگرام</string>
+    <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
 
     <!-- Strings related to Sec
@@ -130,28 +131,28 @@
     <string name="ta09"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
     <string name="ta09c"> گھرو آف / اجازت دستياب ناهي. </string>
 
-  <!--01-->
-  <string name="pocfh1"> سيڪشن01. گھر جي سڃاڻپ واري معلومات </string>
-  <string name="pocfa01"> تعلقو </string>
-  <string name="pocfa02"> يونين ڪائونسل </string>
-  <string name="pocfa03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو</string>
-  <string name="pocfa04"> ڳوٺ/محلي جو نالو </string>
-  <string name="pocfa05"> گھر جو پتو(ايڊريس) </string>
-  <string name="pocfa06"> گھر جو سڃاڻپ نمبر </string>
-  <string name="pocfa07"> جواب ڏيندڙ جو ٻار سان رشتو. </string>
-  <string name="pocfa07a"> ماءُ </string>
-  <string name="pocfa07b"> پيءُ </string>
-  <string name="pocfa07c"> ڏاڏي / ناني </string>
-  <string name="pocfa07d"> ڏاڏو / نانو </string>
-  <string name="pocfa07e"> چاچي / مامي / پڦي / ماسي </string>
-  <string name="pocfa07f"> ڀاءُ / ڀيڻ </string>
-  <string name="pocfa08"> رفرل آءِ ڊي </string>
-  <string name="pocfa09"> ٻار جو نالو </string>
-  <string name="pocfa10"> ٻار جي جنس </string>
-  <string name="pocfa10a"> مرد </string>
-  <string name="pocfa10b"> عورت </string>
-  <string name="pocfa11"> ٻار جي ڄمڻ جي تاريخ </string>
-  <string name="pocfa12"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
+    <!--01-->
+    <string name="pocfh1"> سيڪشن01. گھر جي سڃاڻپ واري معلومات </string>
+    <string name="pocfa01"> تعلقو </string>
+    <string name="pocfa02"> يونين ڪائونسل </string>
+    <string name="pocfa03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو</string>
+    <string name="pocfa04"> ڳوٺ/محلي جو نالو </string>
+    <string name="pocfa05"> گھر جو پتو(ايڊريس) </string>
+    <string name="pocfa06"> گھر جو سڃاڻپ نمبر </string>
+    <string name="pocfa07"> جواب ڏيندڙ جو ٻار سان رشتو. </string>
+    <string name="pocfa07a"> ماءُ </string>
+    <string name="pocfa07b"> پيءُ </string>
+    <string name="pocfa07c"> ڏاڏي / ناني </string>
+    <string name="pocfa07d"> ڏاڏو / نانو </string>
+    <string name="pocfa07e"> چاچي / مامي / پڦي / ماسي </string>
+    <string name="pocfa07f"> ڀاءُ / ڀيڻ </string>
+    <string name="pocfa08"> رفرل آءِ ڊي </string>
+    <string name="pocfa09"> ٻار جو نالو </string>
+    <string name="pocfa10"> ٻار جي جنس </string>
+    <string name="pocfa10a"> مرد </string>
+    <string name="pocfa10b"> عورت </string>
+    <string name="pocfa11"> ٻار جي ڄمڻ جي تاريخ </string>
+    <string name="pocfa12"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
 
     <!--Section 02-->
     <string name="pocfbHeading">سيڪشن 02: گھر جي معلومات </string>
@@ -359,61 +360,61 @@
     <string name="istatus7"> مڪمل نه ٿيو </string>
 
 
-  <string name="pocfd01"> ڇا توهان ھٿ ڌوئڻ لاءِ صابڻ يا پائوڊر / صرف استعمال ڪندا آهيو </string>
+    <string name="pocfd01"> ڇا توهان ھٿ ڌوئڻ لاءِ صابڻ يا پائوڊر / صرف استعمال ڪندا آهيو </string>
 
-  <string name="pocfd02"> جيڪڏهن ها ته ڪهڙو صابڻ يا ڊيٽرجنٽ استعمال ڪندا آهيون؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
-  <string name="pocfd02a"> صابڻ </string>
-  <string name="pocfd02b"> ڊيٽرجنٽ(پائوڊر/صرف) </string>
-  <string name="pocfd02c"> ملائم صابڻ </string>
-  <string name="pocfd02d"> رک/ مٽي / واري </string>
-  <string name="pocf97"> ڪجھ به نه </string>
+    <string name="pocfd02"> جيڪڏهن ها ته ڪهڙو صابڻ يا ڊيٽرجنٽ استعمال ڪندا آهيون؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pocfd02a"> صابڻ </string>
+    <string name="pocfd02b"> ڊيٽرجنٽ(پائوڊر/صرف) </string>
+    <string name="pocfd02c"> ملائم صابڻ </string>
+    <string name="pocfd02d"> رک/ مٽي / واري </string>
+    <string name="pocf97"> ڪجھ به نه </string>
 
-  <string name="pocfd03"> ڪهڙي ڪم ڪار کان پوءِ توهان پنهنجا هٿ صابڻ سان ڌوئيندا آهيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
-  <string name="pocfd03a"> رڌ پچاءُ کان پهريان </string>
-  <string name="pocfd03b"> ماني کائن کان اڳ ۾ </string>
-  <string name="pocfd03c"> ٻار کي ٿڃ پيارڻ کان پهريان </string>
-  <string name="pocfd03d"> ٻارجا ڊائپر مٽائڻ کان بعد يا صاف ڪرڻ کان پوءِ </string>
-  <string name="pocfd03e"> ٽوائلٽ استعمال ڪرڻ کان پوءِ </string>
-  <string name="pocfd03ot"> ٻيو ڪجھ وضاحت ڪريو </string>
+    <string name="pocfd03"> ڪهڙي ڪم ڪار کان پوءِ توهان پنهنجا هٿ صابڻ سان ڌوئيندا آهيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pocfd03a"> رڌ پچاءُ کان پهريان </string>
+    <string name="pocfd03b"> ماني کائن کان اڳ ۾ </string>
+    <string name="pocfd03c"> ٻار کي ٿڃ پيارڻ کان پهريان </string>
+    <string name="pocfd03d"> ٻارجا ڊائپر مٽائڻ کان بعد يا صاف ڪرڻ کان پوءِ </string>
+    <string name="pocfd03e"> ٽوائلٽ استعمال ڪرڻ کان پوءِ </string>
+    <string name="pocfd03ot"> ٻيو ڪجھ وضاحت ڪريو </string>
 
-  <string name="pocfh5"> سيڪشن 05. گھر جو ماحول </string>
-  <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
-  <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
-  <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
-  <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
-  <string name="pocfe04a"> گھر ۾ </string>
-  <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
-  <string name="pocfe04c"> گھر کان ٻاهر </string>
-  <string name="pocfe05"> ڇا رڌ پچاءُ واري ڪمري ۾ ڪا دري آهي؟ </string>
-  <string name="pocfe06"> رڌ پچاءُ واري ڪمري ۾ ڪيتريون دريون آهن؟ </string>
-  <string name="pocfe07"> گھر ۾ رڌ پچاءُ لاءِ ڪهڙي قسم جو ٻارڻ اڪثر استعمال ڪندا آهيو؟ </string>
-  <string name="pocfe07a"> بجلي </string>
-  <string name="pocfe07b"> سئلنڊر واري گئس </string>
-  <string name="pocfe07c"> قدرتي گئس </string>
-  <string name="pocfe07d"> بايو گئس </string>
-  <string name="pocfe07e"> گاسليٽ </string>
-  <string name="pocfe07f"> ڪوئلو/ چمني </string>
-  <string name="pocfe07g"> اڱار </string>
-  <string name="pocfe07h"> ڪاٺ </string>
-  <string name="pocfe07i"> گاھ / ديويون/ بوسو </string>
-  <string name="pocfe07j"> جانورن جا ڇيڻا </string>
-  <string name="pocfe08"> ڇا ٻار (چونڊيل ڪيس) ان ساڳي ڪمري ۾ سمهي ٿو جيڪو رڌ پچاءَ لاءِ استعمال ٿئي ٿو؟ </string>
-  <string name="pocfe09"> ڇا ٻار (چونڊيل ڪيس) توهان سان گڏ رڌ پچاءُ واري جاءِ تي هوندو آهي جنهن مهل توهان رڌپچاءُ ڪندا آهيو </string>
-  <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
-  <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
-  <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
-  <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
-  <string name="pocfe15a"> صرف ٻاهر(گھر کان) </string>
-  <string name="pocfe15b"> صرف اندر (گھر ۾) </string>
-  <string name="pocfe15c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
-  <string name="pocfe16"> ڇا گھر جو ٻيو ڪو ڀاتي سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe17"> هڪ ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe18"> هي / هوءَ سگريٽ ڪٿي پئي ٿو / ٿي؟ </string>
-  <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
-  <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
-  <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+    <string name="pocfh5"> سيڪشن 05. گھر جو ماحول </string>
+    <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
+    <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
+    <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
+    <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
+    <string name="pocfe04a"> گھر ۾ </string>
+    <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
+    <string name="pocfe04c"> گھر کان ٻاهر </string>
+    <string name="pocfe05"> ڇا رڌ پچاءُ واري ڪمري ۾ ڪا دري آهي؟ </string>
+    <string name="pocfe06"> رڌ پچاءُ واري ڪمري ۾ ڪيتريون دريون آهن؟ </string>
+    <string name="pocfe07"> گھر ۾ رڌ پچاءُ لاءِ ڪهڙي قسم جو ٻارڻ اڪثر استعمال ڪندا آهيو؟ </string>
+    <string name="pocfe07a"> بجلي </string>
+    <string name="pocfe07b"> سئلنڊر واري گئس </string>
+    <string name="pocfe07c"> قدرتي گئس </string>
+    <string name="pocfe07d"> بايو گئس </string>
+    <string name="pocfe07e"> گاسليٽ </string>
+    <string name="pocfe07f"> ڪوئلو/ چمني </string>
+    <string name="pocfe07g"> اڱار </string>
+    <string name="pocfe07h"> ڪاٺ </string>
+    <string name="pocfe07i"> گاھ / ديويون/ بوسو </string>
+    <string name="pocfe07j"> جانورن جا ڇيڻا </string>
+    <string name="pocfe08"> ڇا ٻار (چونڊيل ڪيس) ان ساڳي ڪمري ۾ سمهي ٿو جيڪو رڌ پچاءَ لاءِ استعمال ٿئي ٿو؟ </string>
+    <string name="pocfe09"> ڇا ٻار (چونڊيل ڪيس) توهان سان گڏ رڌ پچاءُ واري جاءِ تي هوندو آهي جنهن مهل توهان رڌپچاءُ ڪندا آهيو </string>
+    <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
+    <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
+    <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
+    <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
+    <string name="pocfe15a"> صرف ٻاهر(گھر کان) </string>
+    <string name="pocfe15b"> صرف اندر (گھر ۾) </string>
+    <string name="pocfe15c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+    <string name="pocfe16"> ڇا گھر جو ٻيو ڪو ڀاتي سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe17"> هڪ ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe18"> هي / هوءَ سگريٽ ڪٿي پئي ٿو / ٿي؟ </string>
+    <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
+    <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
+    <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
 
 
     <!--Section 06-->
@@ -474,6 +475,80 @@
     <string name="pocff10e"> ٺوس غذا </string>
     <string name="pocff11"> گذريل 24 ڪلاڪن اندر ٻار(چونڊيل ڪيس) کي ڪيترا دفعا کاڌو کارايو پياريو؟ </string>
 
+    <!--Section 08-->
+    <string name="pocfsec8"> سيڪشن08. اينٿروپوميٽري </string>
+    <string name="pocfh01"> ٻار جو وزن (ڪلوگرام) </string>
+    <string name="pocfh02"> ٻار جو قد(سينٽي ميٽر) </string>
+    <string name="pocfh03"> مواڪ (سينٽي ميٽر) </string>
+
+
+    <!--Section 09-->
+    <string name="pocfsec9"> سيڪشن09. غذائي قلت جي معلومات </string>
+
+    <string name="pocfi01">شديد غذائي قلت عمر 6 مهينن کان گھٽ: پيرن جي مٿاڇري تي سوڄ ها= 01، نه=02
+قد مطابق وزن (3SD ¬– کان وڌيڪ) ها = 01، نه= 02 (بعد ۾ داخل ڪيو ويندو) عمر 6 مهينن کان وڌيڪ : پيرن جي مٿاڇري تي سوڄ ها= 01، نه=02 يا مواڪ 11.5 سينٽي ميٽر کان گھٽ ها= 01، نه=02
+</string>
+    <string name="pocfi02">وچولي غذائي قلت عمر 6 مهينن کان گھٽ : قد مطابق وزن2SD- ۽ 3SD- جي وچ ۾ ها= 01،  نه= 02 (بعد ۾ داخل ڪيو ويندو) عمر 6 مهينن کان وڌيڪ : مواڪ 11.5 سينٽي ميٽر کان12.5 سينٽي ميٽر جي وچ ۾ ها= 01، نه=02
+</string>
+
+    <!--Section 10-->
+    <string name="pocfsec10"> سيڪشن10.ٻي ڪنهن بيماري جي ڇنڊڇاڻ </string>
+
+    <string name="pocfj01"> ڇا ٻار کي هيٺين مان ڪنهن به بيماريءَ جي شڪايت آهي؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pocfj01a"> سوڄ </string>
+    <string name="pocfj01b"> بخار </string>
+    <string name="pocfj01c"> سائي </string>
+    <string name="pocfj01d"> زڪام </string>
+    <string name="pocfj01e"> وهندڙ نڪ </string>
+    <string name="pocfj01f"> نڪ بند </string>
+    <string name="pocfj01g"> دست </string>
+    <string name="pocfj01h"> پيٽ ۾ ڪيڙا </string>
+    <string name="pocfj01i"> رت جي ڪمي </string>
+    <string name="pocfj01j"> پاڻياٺ جي ڪمي </string>
+    <string name="pocfj01k"> چمڙي جو آهستي پوئتي وڃڻ </string>
+    <string name="pocfj01l"> ڪن جي ڪا بيماري </string>
+    <string name="pocfj01m"> اکين جي ڪا بيماري </string>
+    <string name="pocfj01n"> وات ۾ ٿرش </string>
+    <string name="pocfj02"> ڇا توهان جو ٻار موجوده بيماري لاءِ ڪا دوا وٺي رهيو آهي؟ </string>
+
+
+    <!--Section 11-->
+    <string name="pocfsec11"> سيڪشن11. نمونيا جي معلومات </string>
+    <string name="pocfk01"> چڪاس ڪرڻ جي جڳھ. </string>
+    <string name="pocfk01a"> ٻار جو گھر </string>
+    <string name="pocfk01b"> ليڊي هيلٿ ورڪر جو هيلٿ هائوس </string>
+    <string name="pocfk01c"> عوامي صحت جي سهولت(نالو) </string>
+    <string name="pocfk01d"> پرائيويٽ (نجي) صحت جي سهولت(نالو) </string>
+    <string name="pocfk02"> کنگھ يا ٿڌ </string>
+    <string name="pocfk03"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ
+ </string>
+
+    <string name="pocfk04"> پاسيريون لڳڻ </string>
+    <string name="pocfk05"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو) (SpO2) </string>
+    <string name="pocfk06"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
+    <string name="pocfk07"> کر کر جو آواز </string>
+    <string name="pocfk08"> خطرناڪ نشانيون(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pocfk08a"> ماءُ جي ٿڃ يا ڪجھ به پي نه سگھڻ </string>
+    <string name="pocfk08b"> لڳاتار اُلٽي </string>
+    <string name="pocfk08c"> غنودگي / بيهوشي </string>
+    <string name="pocfk08d"> جھٽڪا لڳڻ </string>
+    <string name="pocfk09"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي. </string>
+    <string name="pocfk09h1"> نمونيه ناهي </string>
+    <string name="pocfk09a"> کنگھ ۽ ٿڌ </string>
+    <string name="pocfk09h2"> نمونيه </string>
+    <string name="pocfk09b"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+    <string name="pocfk09c"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
+    <string name="pocfk09h3"> شديد نمونيه </string>
+    <string name="pocfk09d"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+    <string name="pocfk09e"> 7ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+    <string name="pocfk10"> ڇا آڪسيجن جي ريڊنگ ورتي وئي ليڊي هيلٿ ورڪر پاران ريفرل مهيا ڪرڻ کان اڳ ۾؟ </string>
+    <string name="pocfk11"> جيڪڏهن نه ته ڇو؟ </string>
+    <string name="pocfk11a"> ليڊي هليٿ ورڪر نه ورتي </string>
+    <string name="pocfk11b"> خاندان جي طرفان اجازت نه ملي </string>
+    <string name="pocfk12"> جيڪڏهن ها ته ريڊنگ ڇا هئي؟ </string>
+    <string name="pocfk12a"> غيرمعمولي </string>
+    <string name="pocfk12b"> معمولي </string>
+    <string name="pocfk13"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
 
 
 </resources>
