@@ -74,8 +74,9 @@
     <string name="year"> سال </string>
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
-    <string name="other"> ٻيو ڪو وضاحت ڪريو</string>
+    <string name="other"> ٻيو ڪجھ وضاحت ڪريو</string>
     <string name="name"> نالو</string>
+    <string name="none">ڪجهه به نه</string>
 
     <!-- Strings related to Sec
     ons Below -->
@@ -498,6 +499,9 @@
   <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
   <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
   <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
+  <string name="pocfe12a"> صرف ٻاهر(گھر کان) </string>
+  <string name="pocfe12b"> صرف اندر (گھر ۾) </string>
+  <string name="pocfe12c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
   <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
   <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
   <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
