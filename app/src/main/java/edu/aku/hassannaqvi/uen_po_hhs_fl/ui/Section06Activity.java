@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs.activities;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
