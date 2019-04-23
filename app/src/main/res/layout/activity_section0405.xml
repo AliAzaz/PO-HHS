@@ -24,7 +24,7 @@
 
             <TextView
                 style="@style/textview_fm_lst_h"
-                android:text="@string/secLLabel" />
+                android:text="@string/pocfd" />
 
             <!--pocfd01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -161,7 +161,7 @@
 
             <TextView
                 style="@style/textview_fm_lst_h"
-                android:text="@string/pocfh5" />
+                android:text="@string/pocfe" />
 
             <!--pocfe01-->
             <android.support.v7.widget.CardView style="@style/cardView">

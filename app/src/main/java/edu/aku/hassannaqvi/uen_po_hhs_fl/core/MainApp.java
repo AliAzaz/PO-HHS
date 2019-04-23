@@ -257,7 +257,7 @@ public class MainApp extends Application {
         alert.show();
     }
 
-    public static void endActivity(final Context context, final Activity activity) {
+    public static void endActivity(final Context context, final Class<EndingActivity> activity) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 context);
         alertDialogBuilder
