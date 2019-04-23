@@ -481,6 +481,7 @@
 
   <!--07-->
   <string name="nc3response"> Response </string>
+  <string name="nc3doi"> Date of Immunization </string>
   <string name="nc3heading"> سیکشن سی 3: حفاظتی ٹیکہ جات کی معلومات </string>
   <string name="nc3info"> اس سیکشن میں صرف ان بچوں کا اندراج ہوگا جو 5 سال سے چھوٹے ہیں </string>
   <string name="nc301">۔C302 - کیاآپ کے پاس قومی حفاظتی ٹیکوں کاکارڈ یا کسی نجی ادارے کی طرف سے دیاگیا حفاظتی ٹیکوں کا ریکارڈ موجود ہے ؟</string>

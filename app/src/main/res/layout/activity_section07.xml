@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.Section07Activityy">
 
@@ -60,10 +61,7 @@
                 </RadioGroup>
 
                 <LinearLayout
-                    android:id="@+id/fldGrpnc303parent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    style="@style/linearlayout_view_wt_bound"
                     android:visibility="@{nc301b.checked? View.GONE : View.VISIBLE}">
                     <!-- 2-->
                     <TextView
@@ -186,6 +184,57 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3bcga.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3bcgdt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3bcga.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3bcgdt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:tag="fas02c2496"
+                                        android:text='@{nc3bcgdt98.checked ? "" : nc3bcgdt.getText.toString}'
+                                        android:textColor="@android:color/black"
+                                        android:visibility='@{nc3bcgdt98.checked ? View.GONE : View.VISIBLE}'
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                         <!-- opv0 -->
                         <TextView

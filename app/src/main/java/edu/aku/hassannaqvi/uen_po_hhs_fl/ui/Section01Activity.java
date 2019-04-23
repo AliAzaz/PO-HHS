@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection01Binding;
@@ -44,7 +45,8 @@ public class Section01Activity extends Activity {
         return true;
     }
 
-    private void SaveDraft() {
+    private void SaveDraft() throws JSONException {
+        JSONObject sA = new JSONObject();
     }
 
     private boolean formValidation() {

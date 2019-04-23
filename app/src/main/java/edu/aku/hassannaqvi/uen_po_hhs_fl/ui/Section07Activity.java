@@ -14,7 +14,6 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection07Binding;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class Section07Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
@@ -52,7 +51,7 @@ public class Section07Activity extends AppCompatActivity implements RadioGroup.O
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId != bi.nc302b.getId())
-                    ClearClass.ClearAllFields(bi.fldGrpnc303parent, null);
+                    bi.nc302.clearCheck();
             }
         });
     }
@@ -76,14 +75,12 @@ public class Section07Activity extends AppCompatActivity implements RadioGroup.O
     }
 
     public void BtnEnd() {
-        finish();
         MainApp.endActivity(this, this);
     }
 
     private boolean formValidation() {
         return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpnc30A);
     }
-
 
     @Override
     public void onBackPressed() {
