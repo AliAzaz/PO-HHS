@@ -74,10 +74,12 @@
     <string name="year"> سال </string>
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
+    <string name="other"> ٻيو ڪجھ وضاحت ڪريو</string>
     <string name="other"> ٻيو ڪو وضاحت ڪريو</string>
     <string name="kg"> ڪلوگرام</string>
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
+    <string name="none">ڪجهه به نه</string>
 
     <!-- Strings related to Sec
     ons Below -->
@@ -377,44 +379,47 @@
     <string name="pocfd03e"> ٽوائلٽ استعمال ڪرڻ کان پوءِ </string>
     <string name="pocfd03ot"> ٻيو ڪجھ وضاحت ڪريو </string>
 
-    <string name="pocfh5"> سيڪشن 05. گھر جو ماحول </string>
-    <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
-    <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
-    <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
-    <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
-    <string name="pocfe04a"> گھر ۾ </string>
-    <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
-    <string name="pocfe04c"> گھر کان ٻاهر </string>
-    <string name="pocfe05"> ڇا رڌ پچاءُ واري ڪمري ۾ ڪا دري آهي؟ </string>
-    <string name="pocfe06"> رڌ پچاءُ واري ڪمري ۾ ڪيتريون دريون آهن؟ </string>
-    <string name="pocfe07"> گھر ۾ رڌ پچاءُ لاءِ ڪهڙي قسم جو ٻارڻ اڪثر استعمال ڪندا آهيو؟ </string>
-    <string name="pocfe07a"> بجلي </string>
-    <string name="pocfe07b"> سئلنڊر واري گئس </string>
-    <string name="pocfe07c"> قدرتي گئس </string>
-    <string name="pocfe07d"> بايو گئس </string>
-    <string name="pocfe07e"> گاسليٽ </string>
-    <string name="pocfe07f"> ڪوئلو/ چمني </string>
-    <string name="pocfe07g"> اڱار </string>
-    <string name="pocfe07h"> ڪاٺ </string>
-    <string name="pocfe07i"> گاھ / ديويون/ بوسو </string>
-    <string name="pocfe07j"> جانورن جا ڇيڻا </string>
-    <string name="pocfe08"> ڇا ٻار (چونڊيل ڪيس) ان ساڳي ڪمري ۾ سمهي ٿو جيڪو رڌ پچاءَ لاءِ استعمال ٿئي ٿو؟ </string>
-    <string name="pocfe09"> ڇا ٻار (چونڊيل ڪيس) توهان سان گڏ رڌ پچاءُ واري جاءِ تي هوندو آهي جنهن مهل توهان رڌپچاءُ ڪندا آهيو </string>
-    <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
-    <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
-    <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
-    <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
-    <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
-    <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
-    <string name="pocfe15a"> صرف ٻاهر(گھر کان) </string>
-    <string name="pocfe15b"> صرف اندر (گھر ۾) </string>
-    <string name="pocfe15c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
-    <string name="pocfe16"> ڇا گھر جو ٻيو ڪو ڀاتي سگريٽ پئي ٿو؟ </string>
-    <string name="pocfe17"> هڪ ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
-    <string name="pocfe18"> هي / هوءَ سگريٽ ڪٿي پئي ٿو / ٿي؟ </string>
-    <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
-    <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
-    <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+
+  <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
+  <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
+  <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
+  <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
+  <string name="pocfe04a"> گھر ۾ </string>
+  <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
+  <string name="pocfe04c"> گھر کان ٻاهر </string>
+  <string name="pocfe05"> ڇا رڌ پچاءُ واري ڪمري ۾ ڪا دري آهي؟ </string>
+  <string name="pocfe06"> رڌ پچاءُ واري ڪمري ۾ ڪيتريون دريون آهن؟ </string>
+  <string name="pocfe07"> گھر ۾ رڌ پچاءُ لاءِ ڪهڙي قسم جو ٻارڻ اڪثر استعمال ڪندا آهيو؟ </string>
+  <string name="pocfe07a"> بجلي </string>
+  <string name="pocfe07b"> سئلنڊر واري گئس </string>
+  <string name="pocfe07c"> قدرتي گئس </string>
+  <string name="pocfe07d"> بايو گئس </string>
+  <string name="pocfe07e"> گاسليٽ </string>
+  <string name="pocfe07f"> ڪوئلو/ چمني </string>
+  <string name="pocfe07g"> اڱار </string>
+  <string name="pocfe07h"> ڪاٺ </string>
+  <string name="pocfe07i"> گاھ / ديويون/ بوسو </string>
+  <string name="pocfe07j"> جانورن جا ڇيڻا </string>
+  <string name="pocfe08"> ڇا ٻار (چونڊيل ڪيس) ان ساڳي ڪمري ۾ سمهي ٿو جيڪو رڌ پچاءَ لاءِ استعمال ٿئي ٿو؟ </string>
+  <string name="pocfe09"> ڇا ٻار (چونڊيل ڪيس) توهان سان گڏ رڌ پچاءُ واري جاءِ تي هوندو آهي جنهن مهل توهان رڌپچاءُ ڪندا آهيو </string>
+  <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
+  <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
+  <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
+  <string name="pocfe12a"> صرف ٻاهر(گھر کان) </string>
+  <string name="pocfe12b"> صرف اندر (گھر ۾) </string>
+  <string name="pocfe12c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+  <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
+  <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
+  <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
+  <string name="pocfe15a"> صرف ٻاهر(گھر کان) </string>
+  <string name="pocfe15b"> صرف اندر (گھر ۾) </string>
+  <string name="pocfe15c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+  <string name="pocfe16"> ڇا گھر جو ٻيو ڪو ڀاتي سگريٽ پئي ٿو؟ </string>
+  <string name="pocfe17"> هڪ ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
+  <string name="pocfe18"> هي / هوءَ سگريٽ ڪٿي پئي ٿو / ٿي؟ </string>
+  <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
+  <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
+  <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
 
 
     <!--Section 06-->

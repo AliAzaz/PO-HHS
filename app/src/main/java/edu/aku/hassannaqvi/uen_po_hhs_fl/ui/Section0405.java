@@ -13,6 +13,8 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection0405Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
+import static edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp.fc;
+
 
 public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -36,7 +38,7 @@ public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheck
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Starting Section 0405", Toast.LENGTH_SHORT).show();
 //                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
@@ -73,23 +75,49 @@ public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheck
 
         JSONObject qoc1 = new JSONObject();
 
-        /*qoc1.put("qa0101a", bi.qa0101aa.isChecked() ? "1" : bi.qa0101ab.isChecked() ? "2" : bi.qa0101a97.isChecked() ? "97" : "0");
-        qoc1.put("qa0101b", bi.qa0101b.getText().toString().trim().length() > 0 ? bi.qa0101b.getText().toString() : "0");
-        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
+        qoc1.put("pocfd01", bi.pocfd01a.isChecked() ? "1" : bi.pocfd01b.isChecked() ? "2" : "0");
+        qoc1.put("pocfd02", bi.pocfd02a.isChecked() ? "1" : bi.pocfd02b.isChecked() ? "2" : bi.pocfd02c.isChecked() ? "3" : bi.pocfd02d.isChecked() ? "4" : bi.pocfd0297.isChecked() ? "97" : "0");
+        qoc1.put("pocfd03", bi.pocfd03a.isChecked() ? "1" : bi.pocfd03b.isChecked() ? "2" : bi.pocfd03c.isChecked() ? "3" : bi.pocfd03d.isChecked() ? "4" : bi.pocfd03e.isChecked() ? "5" : bi.pocfd0396.isChecked() ? "96" : "0");
+        qoc1.put("pocfd0396x", bi.pocfd0396x.getText().toString().trim().length() > 0 ? bi.pocfd0396x.getText().toString() : "0");
 
-        fc.setSqoc1(String.valueOf(qoc1));*/
+        qoc1.put("pocfe01", bi.pocfe01.getText().toString().trim().length() > 0 ? bi.pocfe01.getText().toString() : "0");
+        qoc1.put("pocfe02", bi.pocfe02.getText().toString().trim().length() > 0 ? bi.pocfe02.getText().toString() : "0");
+        qoc1.put("pocfe03", bi.pocfe02.getText().toString().trim().length() > 0 ? bi.pocfe03.getText().toString() : "0");
+        qoc1.put("pocfe04", bi.pocfe04a.isChecked() ? "1" : bi.pocfe04b.isChecked() ? "2" : bi.pocfe04c.isChecked() ? "3" : bi.pocfe0496.isChecked() ? "96" : "0");
+        qoc1.put("pocfe0496x", bi.pocfe0496x.getText().toString().trim().length() > 0 ? bi.pocfe0496x.getText().toString() : "0");
+        qoc1.put("pocfe05", bi.pocfe05a.isChecked() ? "1" : bi.pocfe05b.isChecked() ? "2" : "0");
+        qoc1.put("pocfe06", bi.pocfe06.getText().toString().trim().length() > 0 ? bi.pocfe06.getText().toString() : "0");
+        qoc1.put("pocfe07", bi.pocfe07a.isChecked() ? "1" : bi.pocfe07b.isChecked() ? "2" : bi.pocfe07c.isChecked() ? "3" : bi.pocfe07d.isChecked() ? "4" : bi.pocfe07e.isChecked() ? "5" : bi.pocfe07f.isChecked() ? "6" : bi.pocfe07g.isChecked() ? "7" : bi.pocfe07h.isChecked() ? "8" : bi.pocfe07i.isChecked() ? "9" : bi.pocfe07j.isChecked() ? "10" : bi.pocfe0796.isChecked() ? "96" : "0");
+        qoc1.put("pocfe0796x", bi.pocfe0796x.getText().toString().trim().length() > 0 ? bi.pocfe0796x.getText().toString() : "0");
+        qoc1.put("pocfe08", bi.pocfe08a.isChecked() ? "1" : bi.pocfe08b.isChecked() ? "2" : "0");
+        qoc1.put("pocfe09", bi.pocfe09a.isChecked() ? "1" : bi.pocfe09b.isChecked() ? "2" : "0");
+        qoc1.put("pocfe10", bi.pocfe10a.isChecked() ? "1" : bi.pocfe10b.isChecked() ? "2" : "0");
+        qoc1.put("pocfe11", bi.pocfe11.getText().toString().trim().length() > 0 ? bi.pocfe11.getText().toString() : "0");
+        qoc1.put("pocfe12", bi.pocfe12a.isChecked() ? "1" : bi.pocfe12b.isChecked() ? "2" : bi.pocfe12c.isChecked() ? "3" : "0");
+        qoc1.put("pocfe13", bi.pocfe13a.isChecked() ? "1" : bi.pocfe13b.isChecked() ? "2" : "0");
+        qoc1.put("pocfe14", bi.pocfe14.getText().toString().trim().length() > 0 ? bi.pocfe14.getText().toString() : "0");
+        qoc1.put("pocfe15", bi.pocfe15a.isChecked() ? "1" : bi.pocfe15b.isChecked() ? "2" : bi.pocfe15c.isChecked() ? "3" : "0");
+        qoc1.put("pocfe16", bi.pocfe16a.isChecked() ? "1" : bi.pocfe16b.isChecked() ? "2" : "0");
+        qoc1.put("pocfe17", bi.pocfe17.getText().toString().trim().length() > 0 ? bi.pocfe17.getText().toString() : "0");
+        qoc1.put("pocfe18", bi.pocfe18a.isChecked() ? "1" : bi.pocfe18b.isChecked() ? "2" : bi.pocfe18c.isChecked() ? "3" : "0");
+
+        //fc.setSqoc1(String.valueOf(qoc1));
 
     }
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-/*
-        if (!bi.qa0101ab.isChecked()) {
-            bi.qa0101b.setEnabled(false);
-        } else {
-            bi.qa0101b.setEnabled(true);
+
+        if (!bi.pocfd01a.isChecked()) {
+            bi.pocfd02.clearCheck();
         }
-        */
+
+        if (bi.pocfe04b.isChecked()) {
+            bi.pocfe05.clearCheck();
+            bi.pocfe06.setEnabled(false);
+        } else {
+            bi.pocfe06.setEnabled(true);
+        }
     }
 
     void events_call() {

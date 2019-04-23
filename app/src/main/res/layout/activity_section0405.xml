@@ -32,12 +32,8 @@
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfd01"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfd01"/>
 
                     <RadioGroup
                         android:id="@+id/pocfd01"
@@ -60,57 +56,44 @@
             </android.support.v7.widget.CardView>
 
             <!--pocfd02-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfd01b.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfd02"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfd02"/>
 
                     <RadioGroup
                         android:id="@+id/pocfd02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/i_radiogroup">
 
                         <RadioButton
                             android:id="@+id/pocfd02a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd02a" />
 
                         <RadioButton
                             android:id="@+id/pocfd02b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd02b" />
 
                         <RadioButton
                             android:id="@+id/pocfd02c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd02c" />
 
                         <RadioButton
                             android:id="@+id/pocfd02d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd02d" />
 
                         <RadioButton
-                            android:id="@+id/pocfd02e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pocf97" />
+                            android:id="@+id/pocfd0297"
+                            style="@style/i_radiobutton"
+                            android:text="@string/none" />
 
                     </RadioGroup>
 
@@ -124,68 +107,52 @@
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfd03"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfd03"/>
 
                     <RadioGroup
                         android:id="@+id/pocfd03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/i_radiogroup">
 
                         <RadioButton
                             android:id="@+id/pocfd03a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd03a" />
 
                         <RadioButton
                             android:id="@+id/pocfd03b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd03b" />
 
                         <RadioButton
                             android:id="@+id/pocfd03c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd03c" />
 
                         <RadioButton
                             android:id="@+id/pocfd03d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd03d" />
 
                         <RadioButton
                             android:id="@+id/pocfd03e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfd03e" />
 
                         <RadioButton
-                            android:id="@+id/pocfd03f"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pocfd03ot" />
+                            android:id="@+id/pocfd0396"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/pocfd0396x"
+                            style="@style/EditText"
+                            android:hint="@string/other"
+                            android:tag="pocfd0396"
+                            android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
+                            android:visibility='@{pocfd0396.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
-
-                    <EditText
-                        android:id="@+id/pocfd03ot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/pocfd03ot" />
 
                 </LinearLayout>
 
@@ -202,21 +169,14 @@
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfe01"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfe01"/>
 
                     <EditText
                         android:id="@+id/pocfe01"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/pocfe01"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe01" />
 
                 </LinearLayout>
 
@@ -228,21 +188,14 @@
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfe02"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfe02"/>
 
                     <EditText
                         android:id="@+id/pocfe02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/pocfe02"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe02" />
 
                 </LinearLayout>
 
@@ -254,21 +207,14 @@
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfe03"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfe03"/>
 
                     <EditText
                         android:id="@+id/pocfe03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/pocfe03"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe03" />
 
                 </LinearLayout>
 
@@ -280,89 +226,70 @@
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfe04"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfe04"/>
 
                     <RadioGroup
                         android:id="@+id/pocfe04"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/i_radiogroup">
 
                         <RadioButton
                             android:id="@+id/pocfe04a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfe04a" />
 
                         <RadioButton
                             android:id="@+id/pocfe04b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfe04b" />
 
                         <RadioButton
                             android:id="@+id/pocfe04c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfe04c" />
 
                         <RadioButton
-                            android:id="@+id/pocfe04d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:id="@+id/pocfe0496"
+                            style="@style/i_radiobutton"
                             android:text="@string/other" />
 
-                    </RadioGroup>
+                        <EditText
+                            android:id="@+id/pocfe0496x"
+                            style="@style/EditText"
+                            android:hint="@string/other"
+                            android:tag="pocfe0496"
+                            android:text='@{pocfe0496.checked? pocfe0496x.getText.toString : "" }'
+                            android:visibility='@{pocfe0496.checked? View.VISIBLE : View.GONE}' />
 
-                    <EditText
-                        android:id="@+id/pocfe04ot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/other" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
             <!--pocfe05-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe04c.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfe05"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfe05"/>
 
                     <RadioGroup
                         android:id="@+id/pocfe05"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/i_radiogroup">
 
                         <RadioButton
                             android:id="@+id/pocfe05a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/pocfe05b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/no" />
 
                     </RadioGroup>
@@ -372,26 +299,21 @@
             </android.support.v7.widget.CardView>
 
             <!--pocfe06-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe04c.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pocfe06"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white" />
+                        style="@style/i_textview"
+                        android:text="@string/pocfe06"/>
 
                     <EditText
                         android:id="@+id/pocfe06"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/pocfe06"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe06" />
 
                 </LinearLayout>
 
@@ -480,6 +402,322 @@
 
                     </RadioGroup>
 
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe08-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe08"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe08"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe08a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe08b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe09-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe09"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe09"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe09a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe09b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe10-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe10"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe10"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe10a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe10b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe11-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe10b.checked? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe11"/>
+
+                    <EditText
+                        android:id="@+id/pocfe11"
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe11" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe12-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe10b.checked? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe12"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe12"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe12a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe12a" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe12b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe12b" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe12c"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe12c" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe13-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe13"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe13"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe13a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe13b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe14-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe13b.checked? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe14"/>
+
+                    <EditText
+                        android:id="@+id/pocfe14"
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe14" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe15-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe13b.checked? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe15"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe15"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe15a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe15a" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe15b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe15b" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe15c"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe15c" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe16-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe16"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe16"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe16a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe16b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe17-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe16b.checked? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe17"/>
+
+                    <EditText
+                        android:id="@+id/pocfe17"
+                        style="@style/EditText_number"
+                        android:maxLength="2"
+                        android:hint="@string/pocfe17" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--pocfe18-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:visibility='@{!pocfe16b.checked? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout style="@style/linearlayout_view">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfe18"/>
+
+                    <RadioGroup
+                        android:id="@+id/pocfe18"
+                        style="@style/i_radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/pocfe18a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe18a" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe18b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe18b" />
+
+                        <RadioButton
+                            android:id="@+id/pocfe18c"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfe18c" />
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
