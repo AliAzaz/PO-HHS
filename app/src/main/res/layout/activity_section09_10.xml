@@ -300,8 +300,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <Button
                     android:id="@+id/btn_End"
@@ -310,7 +311,9 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/red"
                     android:text="@string/end_interview"
-                    android:textColor="#ff1e1e" />
+                    android:onClick='@{() -> callback.BtnEnd()}'
+                    android:textColor="#ff1e1e"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_Continue"
@@ -318,10 +321,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/green"
+                    android:onClick='@{() -> callback.BtnContinue()}'
                     android:text="@string/start_interview"
                     android:textColor="#1ed61e" />
 
             </LinearLayout>
+
 
         </LinearLayout>
 

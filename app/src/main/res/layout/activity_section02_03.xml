@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -667,7 +667,6 @@
                         android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}' />
 
 
-
                 </RadioGroup>
 
 
@@ -706,7 +705,7 @@
                     android:id="@+id/pocfc1198"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/dkn"/>
+                    android:text="@string/dkn" />
 
 
             </LinearLayout>
@@ -728,14 +727,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:hint="@string/pocfc12"
-                     />
-
-
+                    android:hint="@string/pocfc12" />
 
 
             </LinearLayout>
-
 
 
             <!--========================================================================================================-->
@@ -746,7 +741,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <Button
                     android:id="@+id/btn_End"
@@ -755,7 +752,9 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/red"
                     android:text="@string/end_interview"
-                    android:textColor="#ff1e1e" />
+                    android:onClick='@{() -> callback.BtnEnd()}'
+                    android:textColor="#ff1e1e"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_Continue"
@@ -763,10 +762,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/green"
+                    android:onClick='@{() -> callback.BtnContinue()}'
                     android:text="@string/start_interview"
                     android:textColor="#1ed61e" />
 
             </LinearLayout>
+
 
         </LinearLayout>
 

@@ -274,6 +274,7 @@
                     android:backgroundTint="@color/red"
                     android:text="@string/end_interview"
                     android:textColor="#ff1e1e"
+                    android:onClick='@{() -> callback.BtnEnd()}'
                     android:visibility="gone" />
 
                 <Button
@@ -282,7 +283,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/green"
-                    android:onClick="openForm"
+                    android:onClick='@{() -> callback.BtnContinue()}'
                     android:text="@string/start_interview"
                     android:textColor="#1ed61e" />
 
