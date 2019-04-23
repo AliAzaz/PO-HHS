@@ -75,7 +75,6 @@
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
     <string name="other"> ٻيو ڪجھ وضاحت ڪريو</string>
-    <string name="other"> ٻيو ڪو وضاحت ڪريو</string>
     <string name="kg"> ڪلوگرام</string>
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
@@ -361,16 +360,14 @@
     <string name="istatus6"> گھر خالي ھو </string>
     <string name="istatus7"> مڪمل نه ٿيو </string>
 
-
+    <string name="pocfd"> سيڪشن 04.ھٿ ڌوئڻ </string>
     <string name="pocfd01"> ڇا توهان ھٿ ڌوئڻ لاءِ صابڻ يا پائوڊر / صرف استعمال ڪندا آهيو </string>
-
     <string name="pocfd02"> جيڪڏهن ها ته ڪهڙو صابڻ يا ڊيٽرجنٽ استعمال ڪندا آهيون؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfd02a"> صابڻ </string>
     <string name="pocfd02b"> ڊيٽرجنٽ(پائوڊر/صرف) </string>
     <string name="pocfd02c"> ملائم صابڻ </string>
     <string name="pocfd02d"> رک/ مٽي / واري </string>
     <string name="pocf97"> ڪجھ به نه </string>
-
     <string name="pocfd03"> ڪهڙي ڪم ڪار کان پوءِ توهان پنهنجا هٿ صابڻ سان ڌوئيندا آهيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfd03a"> رڌ پچاءُ کان پهريان </string>
     <string name="pocfd03b"> ماني کائن کان اڳ ۾ </string>
@@ -380,6 +377,7 @@
     <string name="pocfd03ot"> ٻيو ڪجھ وضاحت ڪريو </string>
 
 
+  <string name="pocfe"> سيڪشن 05. گھر جو ماحول  </string>
   <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
   <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
   <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>

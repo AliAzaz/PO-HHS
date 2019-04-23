@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection0203Binding;
 
@@ -25,7 +23,7 @@ public class Section02_03Activity extends AppCompatActivity {
         if (formValidation()) {
             try {
                 SaveDraft();
-            } catch (JSONException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             if (UpdateDB()) {

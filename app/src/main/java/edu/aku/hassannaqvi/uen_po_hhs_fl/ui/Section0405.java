@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,10 +11,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection0405Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
-
-import static edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp.fc;
 
 
 public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
@@ -39,7 +39,10 @@ public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheck
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Section 0405", Toast.LENGTH_SHORT).show();
-//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
+                Intent ii = new Intent(this, Section06Activity.class);
+                startActivity(ii);
+
+                //MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -48,7 +51,7 @@ public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     public void BtnEnd() {
-//        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+       MainApp.endActivity(this, EndingActivity.class);
     }
 
     private boolean UpdateDB() {
@@ -112,17 +115,50 @@ public class Section0405 extends AppCompatActivity implements RadioGroup.OnCheck
             bi.pocfd02.clearCheck();
         }
 
-        if (bi.pocfe04b.isChecked()) {
+        if (bi.pocfe04c.isChecked()) {
             bi.pocfe05.clearCheck();
             bi.pocfe06.setEnabled(false);
         } else {
             bi.pocfe06.setEnabled(true);
         }
+
+        if (!bi.pocfe05a.isChecked()) {
+            bi.pocfe06.setEnabled(false);
+        } else {
+            bi.pocfe06.setEnabled(true);
+        }
+
+
+        if (!bi.pocfe10a.isChecked()) {
+            bi.pocfe11.setEnabled(false);
+            bi.pocfe12.clearCheck();
+        } else {
+            bi.pocfe11.setEnabled(true);
+        }
+
+        if (!bi.pocfe13a.isChecked()) {
+            bi.pocfe14.setEnabled(false);
+            bi.pocfe15.clearCheck();
+        } else {
+            bi.pocfe14.setEnabled(true);
+        }
+
+        if (!bi.pocfe16a.isChecked()) {
+            bi.pocfe17.setEnabled(false);
+            bi.pocfe18.clearCheck();
+        } else {
+            bi.pocfe17.setEnabled(true);
+        }
     }
 
     void events_call() {
 
-//        bi.qa0101a.setOnCheckedChangeListener(this);
+        bi.pocfd01.setOnCheckedChangeListener(this);
+        bi.pocfe04.setOnCheckedChangeListener(this);
+        bi.pocfe05.setOnCheckedChangeListener(this);
+        bi.pocfe10.setOnCheckedChangeListener(this);
+        bi.pocfe13.setOnCheckedChangeListener(this);
+        bi.pocfe16.setOnCheckedChangeListener(this);
 
     }
 }
