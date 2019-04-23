@@ -8,17 +8,17 @@ import android.widget.Toast;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection0203Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection08Binding;
 
-public class Section02_03Activity extends AppCompatActivity {
+public class Section08Activity extends AppCompatActivity {
 
-    ActivitySection0203Binding bi;
+    ActivitySection08Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this,R.layout.activity_section02_03);
+         bi = DataBindingUtil.setContentView(this,R.layout.activity_section08);
     }
 
     public void BtnContinue() {
