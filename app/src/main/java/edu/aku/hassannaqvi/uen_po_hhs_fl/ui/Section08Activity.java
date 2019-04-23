@@ -48,4 +48,28 @@ public class Section08Activity extends AppCompatActivity {
 
         return true;
     }
+
+    public void BtnEnd() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
+//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
+
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }
