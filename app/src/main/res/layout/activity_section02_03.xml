@@ -3,9 +3,12 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.Section02_03Activity" />
+
     </data>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -720,7 +723,7 @@
                     android:text="@string/pocfc12" />
 
                 <EditText
-                    android:id="@+id/pocfc11"
+                    android:id="@+id/pocfc12"
                     style="@style/textInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
