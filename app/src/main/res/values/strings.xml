@@ -75,6 +75,7 @@
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
     <string name="other"> ٻيو ڪو وضاحت ڪريو</string>
+    <string name="kg"> ڪلوگرام</string>
     <string name="name"> نالو</string>
 
     <!-- Strings related to Sec
@@ -358,125 +359,6 @@
     <string name="istatus7"> مڪمل نه ٿيو </string>
 
 
-    <string name="tg01"> ڇا توهان ڄاڻو ٿا ته توهان جي علائقي جي ليڊي هيلٿ ورڪر ڪير آهي؟</string>
-    <string name="tg01a"> Yes </string>
-    <string name="tg01b"> No </string>
-    <string name="tg02"> ڇا ليڊي هيلٿ ورڪر توهان جي گهر ايندي آهي؟ </string>
-    <string name="tg02a"> Yes </string>
-    <string name="tg02b"> No </string>
-    <!--<string name="tg02c"> Monthly </string>-->
-    <!--<string name="tg02d"> Need based </string>-->
-    <string name="tg03"> ڪڏهن ڪڏهن ايندي آهي؟ </string>
-    <string name="tg03a">	روزانو </string>
-    <string name="tg03b"> 	هفتي ۾ هڪ چڪر</string>
-    <string name="tg03c"> 	پندرهن ڏينهن ۾ </string>
-    <string name="tg03d"> 	مهيني ۾ </string>
-    <string name="tg03e"> 	ڪڏهن ڪڏهن </string>
-    <string name="tg03f"> 	تمام گهٽ </string>
-    <string name="tg03g"> 	ڪڏهن به نه </string>
-    <string name="tg04"> ليڊي هيلٿ ورڪر دوري دوران ٻارن لاءِ ڇا ڪندي آهي؟ </string>
-    <string name="tg04a"> 	صرف پوليو جا ڦڙا پياريندي آهي </string>
-    <string name="tg04b"> 	صرف مشورو </string>
-    <string name="tg04c"> 	صحت جو معائنو </string>
-    <string name="tg04d"> 	غذايت جي ڪمي جو معائنو </string>
-    <string name="tg04e"> 	ٽڪن لاءِ موڪليو نالا</string>
-    <string name="tg04f"> 	ٻارن کي ٽڪا هڻڻ / ٽڪن جا   </string>
-    <string name="tg04g"> 	ٻارن کي دوا ڏيندي آهي / دوا جا     </string>
-    <string name="tg04h"> 	غذايت واريون دوا ڏيندي آهي  </string>
-    <string name="tg04i"> 	ٻيو ڪجهه </string>
-    <string name="tg04j"> 	ڪجهه به نه </string>
-    <string name="tg05"> ليڊي هيلٿ ورڪر پنهنجن دورن جي دوران ڇا ڪڏهن ٻارن جا لاءِ هنن مان ڪجهه ڪيو؟</string>
-    <string name="tg05a">ٻار جو جسماني معائنو </string>
-    <string name="tg05b">	بخار جي چڪاس </string>
-    <string name="tg05c">	ساهه جي رفتار ڳڻڻ  RR) ٽائيمر کانسواءِ)</string>
-    <string name="tg05d"> ٽائيمر سان ساهه جي رفتار ڳڻڻ RP   </string>
-    <string name="tg05e"> 	ٻار جي ڏوري جا ماپ</string>
-    <string name="tg05f"> 	وزن جي ماپ</string>
-    <string name="tg05g"> 	قد ماپ ڪرڻ </string>
-    <string name="tg05h">ٻيو ڪجهه</string>
-    <string name="tg05i">	ڪجهه به نه</string>
-    <string name="tg06"> ڇا ليڊي هيلٿ ورڪر ڪڏهن ٻار ۾ ڪا بيماري يا صحت جو ڪو مسئلو ٻڌايو؟  </string>
-    <string name="tg06a">	رت جي ڪمي.  </string>
-    <string name="tg06b">	بخار  </string>
-    <string name="tg06c">زڪام </string>
-    <string name="tg06d">	کنگهه</string>
-    <string name="tg06e">	وهندڙ نڪ </string>
-    <string name="tg06f">	نڪ بند </string>
-    <string name="tg06g">ساهه جي رفتار تيز  </string>
-    <string name="tg06h">	ساهه جي رفتار گهٽ  </string>
-    <string name="tg06i">	پاسريون لڳڻ</string>
-    <string name="tg06j">	دست </string>
-    <string name="tg06k">	جسم ۾ پاڻياٺ جي کوٽ </string>
-    <string name="tg06l">جسم جي چمڙي جو پوئتي وڃڻ </string>
-    <string name="tg06m">	ڪمزوري</string>
-    <string name="tg06n"> 	گهٽ وزن </string>
-    <string name="tg06o"> 	غذايت جي ڪمي  </string>
-    <string name="tg06p"> 	ٻيو ڪجهه </string>
-    <string name="tg06q"> 	ڪجهه به نه  </string>
-    <string name="tg07"> ڇا هنن ڳالهين مان ڪا صلاح  ڏني؟ </string>
-    <string name="tg07a"> 	دوا شروع ڪرڻ جو چيو  </string>
-    <string name="tg07b"> 	ڏنل دوائون استعمال / جاري رکو </string>
-    <string name="tg07c"> 	صحت ڪارڪن يا اسپتال ڏانهن موڪليو   </string>
-    <string name="tg07d"> 	ٽڪن لاءِ موڪليو نالو  </string>
-    <string name="tg07e"> 	ٻيو ڪجهه</string>
-    <string name="tg07f"> 	ڪجهه به نه</string>
-    <string name="tg08">ڇا هيلٿ ورڪر هنن مان ڪڏهن به ڪا دوا مهيا ڪئي </string>
-    <string name="tg08a">پيراسيٽامول گوريون</string>
-    <string name="tg08b">پيرا سيٽامول شربت </string>
-    <string name="tg08c">زنڪ جون گوريون </string>
-    <string name="tg08d">زنڪ شربت </string>
-    <string name="tg08e">پيٽ جي ڪيڙن جون گوريون</string>
-    <string name="tg08f">پيٽ جي ڪيڙن جو شربت </string>
-    <string name="tg08g">نمڪول </string>
-    <string name="tg08h">اکين جو مرهم </string>
-    <string name="tg08i">ايماڪسل شربت</string>
-    <string name="tg08j">	ايماڪسل گوريون </string>
-    <string name="tg08k">	آئرن / فولڪ ايسڊ جون گوريون</string>
-    <string name="tg08l">	جراثيم ڪش لوشن </string>
-    <string name="tg08m">	خارش جو لوشن </string>
-    <string name="tg08n">	خوراڪ جون دوائون </string>
-    <string name="tg08o">	طاقت جي دوا (بي ڪامپليڪس) </string>
-    <string name="tg08p">	غذائي پڙيون </string>
-    <string name="tg08q">	غذآئي چاڪليٽ </string>
-    <string name="tg08r">	ڪلور هيگزڊين ٽيوب</string>
-    <string name="tg0897">	ڪجهه به نه</string>
-    <string name="tg09"> ڇا توهان هن جي صلاح  /هدايتن تي عمل ڪندا آهيو؟ </string>
-
-    <string name="tg10"> اگر ها ته پوءِ توهان ڇا ڪندا آهيو   </string>
-    <string name="tg10a">	دوائون شروع يا جاري رکيوسين   </string>
-    <string name="tg10b">	غذائي دوائون استعمال يا جاري رکيوسين.  </string>
-    <string name="tg10c">اسپتال / صحت ڪارڪن ڏانهن
-معائني لاءِ وياسين نالو
- </string>
-    <string name="tg10d">	اسپتال / صحت ڪارڪن ڏانهن
-ٽڪن لاءِ وياسين نالو
-</string>
-    <string name="tg10e">	ٻيو ڪجهه </string>
-    <string name="tg10f">	ڪجهه به نه </string>
-    <string name="tg11"> جيڪڏهن هدايت / صلاح تي عمل نه ڪيو ته ڇو نه ڪيو؟</string>
-    <string name="tg11a">	والدين مطابق ٻار کي دوا يا غذائي دوا جي ضرورت نه هئي</string>
-    <string name="tg11b">	هيلٿ ورڪر دوا نه ڏني </string>
-    <string name="tg11c">	هيلٿ ورڪر غذائي دوا نه ڏني </string>
-    <string name="tg11d">	غير معياري دوا</string>
-    <string name="tg11e">	غير معياري غذائي دوا</string>
-    <string name="tg11f">	مسئلي جي ضرورت نه هئي  </string>
-    <string name="tg11g">	صحت مرڪز / ڪارڪن کي ڏيڻ لاءِ پيسا نه هئا  </string>
-    <string name="tg11h">	سواري موجود نه هئي </string>
-    <string name="tg11i">	گهر جو مرد موجود نه هوجيڪو گڏجي صحت مرڪز وٺي وڃي ها </string>
-    <string name="tg11j">	گهر جي سربراهه مڙس / سس جي اجازت نه هئي </string>
-    <string name="tg11k">	صحت مرڪز ڏاڍو پري هو </string>
-    <string name="tg11l">	صحت مرڪز بند هو </string>
-    <string name="tg11m">	غير معياري صحت جون سهولتون.</string>
-    <string name="tg11n"> Others </string>
-    <string name="tg12">آخري دفعو ڪڏهن معانو ڪرڻ آئي هئي توهان جي گهر؟ </string>
-    <string name="tg12a">ينهن ۾ لکو </string>
-    <string name="tg12b">دوري جو مقصد </string>
-    <string name="tg13">جيڪڏهن ليڊي هيلٿ ورڪر توهان جي ٻار کي شديد بيماري ۾ داخلا لاءِ اسپتال ڏانهن موڪلي ته ڇا توهان ويندو؟ </string>
-    <string name="tg13a">Yes  </string>
-    <string name="tg13b">No  </string>
-    <string name="tg14">اگر ها ته توهان ڪهڙي اسپتال ڏانهن وڃڻ پسند ڪندو؟</string>
-    <string name="tg15">اگر نه ويندو ته سبب ٻڌايو</string>
-
   <string name="pocfd01"> ڇا توهان ھٿ ڌوئڻ لاءِ صابڻ يا پائوڊر / صرف استعمال ڪندا آهيو </string>
 
   <string name="pocfd02"> جيڪڏهن ها ته ڪهڙو صابڻ يا ڊيٽرجنٽ استعمال ڪندا آهيون؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
@@ -532,6 +414,66 @@
   <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
   <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
   <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+
+
+    <!--Section 06-->
+    <string name="pocfh6"> سيڪشن 6: صحت جي بنيادي معلومات </string>
+    <string name="pocff01"> ٻار (چونڊيل ڪيس) جي پيدائش ڪنهن ڪرائي؟(فرد جي بابت پڇو ۽ ڏنل جواب لکو) </string>
+    <string name="pocff01h1"> صحت ڪارڪن </string>
+    <string name="pocff01a"> ڊاڪٽر </string>
+    <string name="pocff01b"> نرس / مڊوائف </string>
+    <string name="pocff01h2"> ٻيا </string>
+    <string name="pocff01c"> دائي </string>
+    <string name="pocff01d"> ليڊي هيلٿ ورڪر </string>
+    <string name="pocff01e"> رشتيدار / دوست </string>
+
+    <string name="pocff02"> ٻار(چونڊيل ڪيس) جي پيدائش ڪٿي ٿي؟ </string>
+    <string name="pocff02h1"> گھر </string>
+    <string name="pocff02a"> جواب ڏيندڙ جي گھر ۾ </string>
+    <string name="pocff02b"> ٻئي ڪنهن جي گھر ۾ </string>
+    <string name="pocff02h2"> سرڪاري صحت جو شعبو </string>
+    <string name="pocff02c"> سرڪاري اسپتال </string>
+    <string name="pocff02d"> سرڪاري ڪلنڪ </string>
+    <string name="pocff02e"> صحت جو مرڪز </string>
+    <string name="pocff02f"> سرڪاري صحت پوسٽ </string>
+    <string name="pocff02g"> ٻيو ڪو سرڪاري شعبو </string>
+    <string name="pocff02h3"> پرائيويٽ صحت جو شعبو </string>
+    <string name="pocff02h"> پرائيوٽ اسپتال </string>
+    <string name="pocff02i"> پرائيوٽ ڪلنڪ </string>
+    <string name="pocff02j"> پرائيوٽ ميٽرنٽي هوم </string>
+    <string name="pocff02k"> ٻيو پرائيوٽ صحت جو شعبو (وضاحت ڪريو) </string>
+    <string name="pocff02l"> ٻيو ڪجھ وضاحت ڪريو </string>
+    <string name="pocff02m"> جڳھ جو نالو </string>
+    <string name="pocff03"> ڇا ٻار(چونڊيل ڪيس) پيٽ جي مڪمل مهينن (مڪمل 9 مهينن) ۾ ڄائو. </string>
+    <string name="pocff04"> جيڪڏهن نه ته ٻار(چونڊيل ڪيس) پيدائش وقت پيٽ جي ڪيترن مهينن ۾ ڄائو هو؟ </string>
+    <string name="pocff04a"> 6کان 6.5 مهينا </string>
+    <string name="pocff04b"> 7کان 7.5 مهينا </string>
+    <string name="pocff04c"> 8کان 8.5مهينا </string>
+    <string name="pocff04d"> 8.5کان 9مهينا </string>
+    <string name="pocff05"> جڏهن ٻار (چونڊيل ڪيس) پيدا ٿيو ته هي / هو تمام وڏو ، سراسري کان وڏو، سراسري ، سراسري کان ننڍو يا تمام ننڍو؟ </string>
+    <string name="pocff05a"> تمام وڏو </string>
+    <string name="pocff05b"> سراسري کان وڏو </string>
+    <string name="pocff05c"> سراسري </string>
+    <string name="pocff05d"> سراسري کان ننڍو </string>
+    <string name="pocff05e"> تمام ننڍو </string>
+    <string name="pocff06"> ڇا ڄمڻ وقت ٻار(چونڊيل ڪيس) جو وزن ڪيو ويو هو؟ </string>
+    <string name="pocff07"> ٻار(چونڊيل ڪيس) جو وزن ڪيترو هو؟ جيڪڏهن ڪارڊ موجود آهي ته ڪارد تان ڏسي لکو </string>
+    <string name="pocff07a"> ڪارڊ تان (kg ڪلوگرام) </string>
+    <string name="pocff07b"> يادائشت جي ذريعي (kg ڪلوگرام) </string>
+    <string name="pocff08"> ٻار(چونڊيل ڪيس) جي پيدائش کان پوءِ ڪيتري دير بعد توهان ٻار کي پهريون دفعو ٿڃ پياري؟ </string>
+    <string name="pocff08a"> هڪ ڪلاڪ اندر </string>
+    <string name="pocff08b"> 24ڪلاڪن اندر </string>
+    <string name="pocff08c"> 24ڪلاڪن کان پوءِ </string>
+    <string name="pocff08d"> ڪڏهن به ٿڃ ناهي پياري </string>
+    <string name="pocff09"> ٻار (چونڊيل ڪيس) ڪيترو وقت صرف ماءُ جي ٿڃ پيتي؟ </string>
+    <string name="pocff10"> هن وقت توهان ٻار (چونڊيل ڪيس) کي ڇا کارائي پياري رهيا آهيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pocff10a"> صرف ماءُ جي ٿڃ </string>
+    <string name="pocff10b"> ماءُ جي ٿڃ </string>
+    <string name="pocff10c"> جانور جو کير </string>
+    <string name="pocff10d"> فارمولا وارو کير </string>
+    <string name="pocff10e"> ٺوس غذا </string>
+    <string name="pocff11"> گذريل 24 ڪلاڪن اندر ٻار(چونڊيل ڪيس) کي ڪيترا دفعا کاڌو کارايو پياريو؟ </string>
+
 
 
 </resources>
