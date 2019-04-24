@@ -180,7 +180,7 @@
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:drawableRight">?android:attr/listChoiceIndicatorMultiple</item>
-        <item name="android:background">#d6d6d6</item>
+        <item name="android:background">@color/white</item>
         <item name="android:padding">4dp</item>
 
 
