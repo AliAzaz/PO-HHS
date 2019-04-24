@@ -12,18 +12,18 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection0405Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0405BindingImpl;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 
-public class Section04_05Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class F1Section04_05Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
-    ActivitySection0405Binding bi;
+    ActivityF1Section0405BindingImpl bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section0405);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04_05);
         bi.setCallback(this);
         this.setTitle("Command AND Control Centre");
         events_call();
@@ -39,7 +39,7 @@ public class Section04_05Activity extends AppCompatActivity implements RadioGrou
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Section 0405", Toast.LENGTH_SHORT).show();
-                Intent ii = new Intent(this, Section06Activity.class);
+                Intent ii = new Intent(this, F1Section06Activity.class);
                 startActivity(ii);
 
                 //MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);

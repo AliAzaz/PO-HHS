@@ -13,18 +13,18 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection07Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section07Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class Section07Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class F1Section07Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
-    ActivitySection07Binding bi;
+    ActivityF1Section07Binding bi;
     DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section07);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section07);
 
         this.setTitle(getResources().getString(R.string.nc3heading));
 
@@ -65,7 +65,7 @@ public class Section07Activity extends AppCompatActivity implements RadioGroup.O
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, Section08Activity.class));
+                startActivity(new Intent(this, F1Section08Activity.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
