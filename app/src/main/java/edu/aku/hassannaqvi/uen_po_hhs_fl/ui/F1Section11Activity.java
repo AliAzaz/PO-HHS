@@ -9,17 +9,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection11Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section11Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class Section11Activity extends AppCompatActivity {
+public class F1Section11Activity extends AppCompatActivity {
 
-    ActivitySection11Binding bi;
+    ActivityF1Section11Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section11);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section11);
     }
 
     public void BtnContinue() {
