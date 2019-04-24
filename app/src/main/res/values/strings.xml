@@ -68,7 +68,7 @@
     <string name="female"> عورت </string>
     <string name="yes"> ھا </string>
     <string name="no"> نه </string>
-  <string name="na"> لاڳو نٿو ٿئي </string>
+    <string name="na"> لاڳو نٿو ٿئي </string>
     <string name="dkn"> خبر نه آھي </string>
     <string name="day"> ڏينهن </string>
     <string name="month"> مهينو </string>
@@ -378,47 +378,47 @@
     <string name="pocfd03ot"> ٻيو ڪجھ وضاحت ڪريو </string>
 
 
-  <string name="pocfe"> سيڪشن 05. گھر جو ماحول  </string>
-  <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
-  <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
-  <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
-  <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
-  <string name="pocfe04a"> گھر ۾ </string>
-  <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
-  <string name="pocfe04c"> گھر کان ٻاهر </string>
-  <string name="pocfe05"> ڇا رڌ پچاءُ واري ڪمري ۾ ڪا دري آهي؟ </string>
-  <string name="pocfe06"> رڌ پچاءُ واري ڪمري ۾ ڪيتريون دريون آهن؟ </string>
-  <string name="pocfe07"> گھر ۾ رڌ پچاءُ لاءِ ڪهڙي قسم جو ٻارڻ اڪثر استعمال ڪندا آهيو؟ </string>
-  <string name="pocfe07a"> بجلي </string>
-  <string name="pocfe07b"> سئلنڊر واري گئس </string>
-  <string name="pocfe07c"> قدرتي گئس </string>
-  <string name="pocfe07d"> بايو گئس </string>
-  <string name="pocfe07e"> گاسليٽ </string>
-  <string name="pocfe07f"> ڪوئلو/ چمني </string>
-  <string name="pocfe07g"> اڱار </string>
-  <string name="pocfe07h"> ڪاٺ </string>
-  <string name="pocfe07i"> گاھ / ديويون/ بوسو </string>
-  <string name="pocfe07j"> جانورن جا ڇيڻا </string>
-  <string name="pocfe08"> ڇا ٻار (چونڊيل ڪيس) ان ساڳي ڪمري ۾ سمهي ٿو جيڪو رڌ پچاءَ لاءِ استعمال ٿئي ٿو؟ </string>
-  <string name="pocfe09"> ڇا ٻار (چونڊيل ڪيس) توهان سان گڏ رڌ پچاءُ واري جاءِ تي هوندو آهي جنهن مهل توهان رڌپچاءُ ڪندا آهيو </string>
-  <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
-  <string name="pocfe12a"> صرف ٻاهر(گھر کان) </string>
-  <string name="pocfe12b"> صرف اندر (گھر ۾) </string>
-  <string name="pocfe12c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
-  <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
-  <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
-  <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
-  <string name="pocfe15a"> صرف ٻاهر(گھر کان) </string>
-  <string name="pocfe15b"> صرف اندر (گھر ۾) </string>
-  <string name="pocfe15c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
-  <string name="pocfe16"> ڇا گھر جو ٻيو ڪو ڀاتي سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe17"> هڪ ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
-  <string name="pocfe18"> هي / هوءَ سگريٽ ڪٿي پئي ٿو / ٿي؟ </string>
-  <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
-  <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
-  <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+    <string name="pocfe"> سيڪشن 05. گھر جو ماحول  </string>
+    <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
+    <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
+    <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
+    <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
+    <string name="pocfe04a"> گھر ۾ </string>
+    <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
+    <string name="pocfe04c"> گھر کان ٻاهر </string>
+    <string name="pocfe05"> ڇا رڌ پچاءُ واري ڪمري ۾ ڪا دري آهي؟ </string>
+    <string name="pocfe06"> رڌ پچاءُ واري ڪمري ۾ ڪيتريون دريون آهن؟ </string>
+    <string name="pocfe07"> گھر ۾ رڌ پچاءُ لاءِ ڪهڙي قسم جو ٻارڻ اڪثر استعمال ڪندا آهيو؟ </string>
+    <string name="pocfe07a"> بجلي </string>
+    <string name="pocfe07b"> سئلنڊر واري گئس </string>
+    <string name="pocfe07c"> قدرتي گئس </string>
+    <string name="pocfe07d"> بايو گئس </string>
+    <string name="pocfe07e"> گاسليٽ </string>
+    <string name="pocfe07f"> ڪوئلو/ چمني </string>
+    <string name="pocfe07g"> اڱار </string>
+    <string name="pocfe07h"> ڪاٺ </string>
+    <string name="pocfe07i"> گاھ / ديويون/ بوسو </string>
+    <string name="pocfe07j"> جانورن جا ڇيڻا </string>
+    <string name="pocfe08"> ڇا ٻار (چونڊيل ڪيس) ان ساڳي ڪمري ۾ سمهي ٿو جيڪو رڌ پچاءَ لاءِ استعمال ٿئي ٿو؟ </string>
+    <string name="pocfe09"> ڇا ٻار (چونڊيل ڪيس) توهان سان گڏ رڌ پچاءُ واري جاءِ تي هوندو آهي جنهن مهل توهان رڌپچاءُ ڪندا آهيو </string>
+    <string name="pocfe10"> ڇا ٻار جو والد سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe11"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe12"> سگريٽ ڪٿي پئي ٿو؟ </string>
+    <string name="pocfe12a"> صرف ٻاهر(گھر کان) </string>
+    <string name="pocfe12b"> صرف اندر (گھر ۾) </string>
+    <string name="pocfe12c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+    <string name="pocfe13"> ڇا ٻار جي ماءُ سگريٽ پئي ٿي؟ </string>
+    <string name="pocfe14"> هڪ ئي ڏينهن ۾ ڪيترا سگريٽ پئي ٿي؟ </string>
+    <string name="pocfe15"> هوءَ سگريٽ ڪٿي پئي ٿي؟ </string>
+    <string name="pocfe15a"> صرف ٻاهر(گھر کان) </string>
+    <string name="pocfe15b"> صرف اندر (گھر ۾) </string>
+    <string name="pocfe15c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
+    <string name="pocfe16"> ڇا گھر جو ٻيو ڪو ڀاتي سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe17"> هڪ ڏينهن ۾ ڪيترا سگريٽ پئي ٿو؟ </string>
+    <string name="pocfe18"> هي / هوءَ سگريٽ ڪٿي پئي ٿو / ٿي؟ </string>
+    <string name="pocfe18a"> صرف ٻاهر(گھر کان) </string>
+    <string name="pocfe18b"> صرف اندر (گھر ۾) </string>
+    <string name="pocfe18c"> گھر جي اندر ۽ گھر کان ٻاهر ٻئي </string>
 
 
     <!--Section 06-->
@@ -479,68 +479,68 @@
     <string name="pocff10e"> ٺوس غذا </string>
     <string name="pocff11"> گذريل 24 ڪلاڪن اندر ٻار(چونڊيل ڪيس) کي ڪيترا دفعا کاڌو کارايو پياريو؟ </string>
 
-  <!--07-->
-  <string name="nc3response"> Response </string>
-  <string name="nc3doi"> Date of Immunization </string>
-  <string name="nc3heading"> سیکشن سی 3: حفاظتی ٹیکہ جات کی معلومات </string>
-  <string name="nc3info"> اس سیکشن میں صرف ان بچوں کا اندراج ہوگا جو 5 سال سے چھوٹے ہیں </string>
-  <string name="nc301">۔C302 - کیاآپ کے پاس قومی حفاظتی ٹیکوں کاکارڈ یا کسی نجی ادارے کی طرف سے دیاگیا حفاظتی ٹیکوں کا ریکارڈ موجود ہے ؟</string>
-  <string name="nc302">۔C303 - کیا میں کارڈ یا دوسرے دستاویزات دیکھ سکتا ہوں؟</string>
-  <string name="nc302a"> ہاں ،صرف کارڈ دیکھاہے </string>
-  <string name="nc302b"> ہاں ،صرف دستاویزات دیکھے ہیں </string>
-  <string name="nc302c"> ہاں ، کارڈ اور دستاویزات  دونوں دیکھےہیں</string>
-  <string name="nc302d"> کوئی کارڈ یا دستاویزات نہیں دیکھے </string>
-  <string name="nc303info">۔C303 - دی گئی ہر کارڈ یا پرچہ سے ویکسین کی تاریخ نوٹ کریں؟ (c) اگردن کے کالم میں 44 لکھیں اگر کارڈ میں ویکسین دینے کی تاریخ نہ لکھی ہو</string>
-  <string name="atbirth"> پیدائش پر </string>
-  <string name="nc3bcg"> بی سی جی </string>
-  <string name="nc3bcgdt"> DD-MM-YYYY </string>
-  <string name="nc3opv0">۔OPV  پولیو پیدائش کے وقت  </string>
-  <string name="nc3opv0dt"> DD-MM-YYYY </string>
-  <string name="at6wks">  6 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3opv1"> ۔OPV 1۔ 6 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3opv1dt"> DD-MM-YYYY </string>
-  <string name="nc3p1"> ۔Pentavalent 1۔ 6 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3p1dt"> DD-MM-YYYY </string>
-  <string name="nc3pcv1"> ۔Pneumococcal 1۔ 6 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3pcv1dt"> DD-MM-YYYY </string>
-  <string name="at10wks"> ۔10 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3opv2"> ۔OPV 2۔ 10 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3opv2dt"> DD-MM-YYYY </string>
-  <string name="nc3p2"> ۔Pentavalent 2۔ 10 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3p2dt"> DD-MM-YYYY </string>
-  <string name="nc3pcv2"> ۔Pneumococcal 2۔ 10 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3pcv2dt"> DD-MM-YYYY </string>
-  <string name="at14wks"> ۔14 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3opv3"> ۔OPV 3۔ 14 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3opv3dt"> DD-MM-YYYY </string>
-  <string name="nc3p3"> ۔Pentavalent 3۔ 14 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3p3dt"> DD-MM-YYYY </string>
-  <string name="nc3pcv3"> ۔Pneumococcal 3۔ 14 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3pcv3dt"> DD-MM-YYYY </string>
-  <string name="nc3ipv"> ۔IPV۔ 14 ہفتوں کی عمر کے وقت </string>
-  <string name="nc3ipvdt"> DD-MM-YYYY </string>
-  <string name="at9m"> 9 مہینے کی عمر کے وقت </string>
-  <string name="nc3m1"> ۔Measles 1۔ 9 مہینے کی عمر کے وقت </string>
-  <string name="nc3m1dt"> DD-MM-YYYY </string>
-  <string name="at15m">      15 مہینے کی عمر کے وقت </string>
-  <string name="nc3m2"> ۔Measles 2۔ 15 مہینے کی عمر کے وقت </string>
-  <string name="nc3m2dt"> DD-MM-YYYY </string>
-  <string name="nc305">۔C305- کیا بچہ(۔Name) نےکبھی پولیو مہم کے دوران پولیو سے بچاؤ کے قطر ے پیئے ہیں؟ </string>
-  <string name="nc306">۔C306- کیابچے (۔Name) کو پچھلی  پولیو مہم میں پولیو کے قطرے پلائے گئے تھے؟</string>
+    <!--07-->
+    <string name="nc3response"> Response </string>
+    <string name="nc3doi"> Date of Immunization </string>
+    <string name="nc3heading"> سیکشن سی 3: حفاظتی ٹیکہ جات کی معلومات </string>
+    <string name="nc3info"> اس سیکشن میں صرف ان بچوں کا اندراج ہوگا جو 5 سال سے چھوٹے ہیں </string>
+    <string name="nc301">۔C302 - کیاآپ کے پاس قومی حفاظتی ٹیکوں کاکارڈ یا کسی نجی ادارے کی طرف سے دیاگیا حفاظتی ٹیکوں کا ریکارڈ موجود ہے ؟</string>
+    <string name="nc302">۔C303 - کیا میں کارڈ یا دوسرے دستاویزات دیکھ سکتا ہوں؟</string>
+    <string name="nc302a"> ہاں ،صرف کارڈ دیکھاہے </string>
+    <string name="nc302b"> ہاں ،صرف دستاویزات دیکھے ہیں </string>
+    <string name="nc302c"> ہاں ، کارڈ اور دستاویزات  دونوں دیکھےہیں</string>
+    <string name="nc302d"> کوئی کارڈ یا دستاویزات نہیں دیکھے </string>
+    <string name="nc303info">۔C303 - دی گئی ہر کارڈ یا پرچہ سے ویکسین کی تاریخ نوٹ کریں؟ (c) اگردن کے کالم میں 44 لکھیں اگر کارڈ میں ویکسین دینے کی تاریخ نہ لکھی ہو</string>
+    <string name="atbirth"> پیدائش پر </string>
+    <string name="nc3bcg"> بی سی جی </string>
+    <string name="nc3bcgdt"> DD-MM-YYYY </string>
+    <string name="nc3opv0">۔OPV  پولیو پیدائش کے وقت  </string>
+    <string name="nc3opv0dt"> DD-MM-YYYY </string>
+    <string name="at6wks">  6 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3opv1"> ۔OPV 1۔ 6 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3opv1dt"> DD-MM-YYYY </string>
+    <string name="nc3p1"> ۔Pentavalent 1۔ 6 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3p1dt"> DD-MM-YYYY </string>
+    <string name="nc3pcv1"> ۔Pneumococcal 1۔ 6 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3pcv1dt"> DD-MM-YYYY </string>
+    <string name="at10wks"> ۔10 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3opv2"> ۔OPV 2۔ 10 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3opv2dt"> DD-MM-YYYY </string>
+    <string name="nc3p2"> ۔Pentavalent 2۔ 10 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3p2dt"> DD-MM-YYYY </string>
+    <string name="nc3pcv2"> ۔Pneumococcal 2۔ 10 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3pcv2dt"> DD-MM-YYYY </string>
+    <string name="at14wks"> ۔14 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3opv3"> ۔OPV 3۔ 14 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3opv3dt"> DD-MM-YYYY </string>
+    <string name="nc3p3"> ۔Pentavalent 3۔ 14 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3p3dt"> DD-MM-YYYY </string>
+    <string name="nc3pcv3"> ۔Pneumococcal 3۔ 14 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3pcv3dt"> DD-MM-YYYY </string>
+    <string name="nc3ipv"> ۔IPV۔ 14 ہفتوں کی عمر کے وقت </string>
+    <string name="nc3ipvdt"> DD-MM-YYYY </string>
+    <string name="at9m"> 9 مہینے کی عمر کے وقت </string>
+    <string name="nc3m1"> ۔Measles 1۔ 9 مہینے کی عمر کے وقت </string>
+    <string name="nc3m1dt"> DD-MM-YYYY </string>
+    <string name="at15m">      15 مہینے کی عمر کے وقت </string>
+    <string name="nc3m2"> ۔Measles 2۔ 15 مہینے کی عمر کے وقت </string>
+    <string name="nc3m2dt"> DD-MM-YYYY </string>
+    <string name="nc305">۔C305- کیا بچہ(۔Name) نےکبھی پولیو مہم کے دوران پولیو سے بچاؤ کے قطر ے پیئے ہیں؟ </string>
+    <string name="nc306">۔C306- کیابچے (۔Name) کو پچھلی  پولیو مہم میں پولیو کے قطرے پلائے گئے تھے؟</string>
 
-  <string name="nc307a"> پہلے دو ہفتے </string>
-  <string name="nc307b"> بعد میں </string>
-  <string name="nc308"> ۔C308- کیا بچے کو PENTA کے ٹیکے لگوائے جو کہ انجکشن کی صورت میں ران یا کولہوں میں لگائےجاتے ہیں اور اکثرپولیو کے قطروں کے ساتھ دئے جاتے ہیں </string>
-  <string name="nc309">۔C309 - ۔ PENTA۔ کے ٹیکے کتنی دفعہ لگوائے تھے۔ </string>
-  <string name="nc310"> ۔ C310 - کیا بچے کو PCV کے ٹیکے لگوائے جو کہ انجکشن کی صورت میں ران یا کولہوں میں لگائےجاتے ہیں اور اکثرپولیو کے قطروں کے ساتھ دئے جاتے ہیں </string>
+    <string name="nc307a"> پہلے دو ہفتے </string>
+    <string name="nc307b"> بعد میں </string>
+    <string name="nc308"> ۔C308- کیا بچے کو PENTA کے ٹیکے لگوائے جو کہ انجکشن کی صورت میں ران یا کولہوں میں لگائےجاتے ہیں اور اکثرپولیو کے قطروں کے ساتھ دئے جاتے ہیں </string>
+    <string name="nc309">۔C309 - ۔ PENTA۔ کے ٹیکے کتنی دفعہ لگوائے تھے۔ </string>
+    <string name="nc310"> ۔ C310 - کیا بچے کو PCV کے ٹیکے لگوائے جو کہ انجکشن کی صورت میں ران یا کولہوں میں لگائےجاتے ہیں اور اکثرپولیو کے قطروں کے ساتھ دئے جاتے ہیں </string>
 
-  <string name="nc312">  ۔C312- کیابچے (۔Name) کو Measles کا ا نجکشن لگوایا جو خسرہ سے بچاؤ کے لیے ہوتا ہے جو کہ بازو میں 9 مہینے یا اس سے بڑی عمر میں لگایا جاتا ہے </string>
-  <string name="nc313">۔C313- ۔ Mesasles۔ کے ٹیکے کتنی دفعہ لگوائے تھے۔ </string>
+    <string name="nc312">  ۔C312- کیابچے (۔Name) کو Measles کا ا نجکشن لگوایا جو خسرہ سے بچاؤ کے لیے ہوتا ہے جو کہ بازو میں 9 مہینے یا اس سے بڑی عمر میں لگایا جاتا ہے </string>
+    <string name="nc313">۔C313- ۔ Mesasles۔ کے ٹیکے کتنی دفعہ لگوائے تھے۔ </string>
 
-  <string name="nc315">۔C315- کیا بچہ(۔Name) نےکبھی پولیو سے بچاؤ کے قطر ے پیے ہیں </string>
+    <string name="nc315">۔C315- کیا بچہ(۔Name) نےکبھی پولیو سے بچاؤ کے قطر ے پیے ہیں </string>
 
 
-  <!--Section 08-->
+    <!--Section 08-->
     <string name="pocfsec8"> سيڪشن08. اينٿروپوميٽري </string>
     <string name="pocfh01"> ٻار جو وزن (ڪلوگرام) </string>
     <string name="pocfh02"> ٻار جو قد(سينٽي ميٽر) </string>
@@ -658,5 +658,72 @@
     <string name="pofi13b"> اجازت نامو رد ڪيو </string>
 
 
+
+    <!--Section 01 Follow Up-->
+
+    <string name="pofpsec01"> سيڪشن1. فالواپ </string>
+    <string name="pofpa01"> موجوده دوري جي تاريخ ڏينهن-مهينو-سال </string>
+    <string name="pofpa01a">  </string>
+    <string name="pofpa02"> فالواپ ڪيو ويو؟ </string>
+    <string name="pofpa02a"> ٻار جو گھر </string>
+    <string name="pofpa02b"> ليڊي هيلٿ ورڪر جو هيلٿ هائوس </string>
+    <string name="pofpa02c"> عوامي صحت جي سهولت(نالو) </string>
+    <string name="pofpa02d"> پرائيوٽ(نجي) صحت جي سهولت(نالو) </string>
+    <string name="pofpa03"> جيڪڏهن رفرل قبول ڪيو ويو، ته ٻار اسپتال ۾ ڪيترا ڏينهن رهيو؟ </string>
+    <string name="pofpa03a">  </string>
+    <string name="pofpa04"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائديمند ثابت ٿيون؟ </string>
+    <string name="pofpa05"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pofpa05a"> اينٽي بائيوٽڪ /شربت نالو </string>
+    <string name="pofpa05b"> وزن(ڪيترا دفعا ڏينهن ۾) </string>
+    <string name="pofpa05c"> آڪسيجن ٿيراپي </string>
+    <string name="pofpa06"> جيڪڏهن رفرل کان انڪار ڪيو ته ٻار گھر ۾ ڪهڙو علاج حاصل ڪيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pofpa06a"> ينٽي بائيوٽڪ /شربت نالو </string>
+    <string name="pofpa06b"> وزن(ڪيترا دفعا ڏينهن ۾) </string>
+    <string name="pofpa07"> ٻار جي موجوده حالت؟ </string>
+    <string name="pofpa07a"> بلڪل ٺيڪ </string>
+    <string name="pofpa07b"> بهتر </string>
+    <string name="pofpa07c"> ساڳي </string>
+    <string name="pofpa07d"> خراب </string>
+    <string name="pofpa07e"> وفات ڪري ويو </string>
+    <string name="pofpa08"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pofpa08a"> دست </string>
+    <string name="pofpa08b"> لڳا تار اُلٽي </string>
+    <string name="pofpa08c"> چمڙي تي داڻ داڻ </string>
+    <string name="pofpa09"> جيڪڏهن علاج ۾ ڪا تبديلي آهي ، ته موجوده علاج لکو </string>
+    <string name="pofpa10"> جيڪڏهن ها ته، علاج ۾ ڪنهن تبديلي ڪئي؟ </string>
+    <string name="pofpa10a"> ڊاڪٽر </string>
+    <string name="pofpa10b"> پاڻ </string>
+    <string name="pofpa10c"> ليڊي هليٿ ورڪر </string>
+    <string name="pofpa11"> نئي علاج جي وضاحت ڪريو. </string>
+    <string name="pofpa11a"> اينٽي بائيوٽڪ (نالو) </string>
+    <string name="pofpa11b"> ڪيترا دفعا ڏينهن ۾ </string>
+    <string name="pofpa11c"> وات /رڳ ذريعي </string>
+    <string name="pofpa11d"> وزن </string>
+
+
+    <!--Section 02 Screening For Pneumonia-->
+    <string name="pofpsec02"> سيڪشن2. نمونيا جي معلومات </string>
+    <string name="pofpb01"> کنگھ يا ٿڌ </string>
+    <string name="pofpb02"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+    <string name="pofpb02a"> Respiratory Rate (01): </string>
+    <string name="pofpb02b"> Respiratory Rate (02): </string>
+    <string name="pofpb03"> پاسيريون لڳڻ </string>
+    <string name="pofpb04"> (SpO2) پلس آڪسيميٽري جي ريڊنگ (في سيڪڙو) </string>
+    <string name="pofpb05"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
+    <string name="pofpb06"> کر کر جو آواز </string>
+    <string name="pofpb07"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pofpb07a"> ماءُ جي ٿڃ يا ڪجھ به پي نه سگھڻ </string>
+    <string name="pofpb07b"> لڳاتار اُلٽي </string>
+    <string name="pofpb07c"> غنودگي / بيهوشي </string>
+    <string name="pofpb07d"> جھٽڪا لڳڻ </string>
+    <string name="pofpb08"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي </string>
+    <string name="pofpb08a"> نمونيه ناهي </string>
+    <string name="pofpb08b"> کنگھ ۽ ٿڌ </string>
+    <string name="pofpb08c"> نمونيه </string>
+    <string name="pofpb08d"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+    <string name="pofpb08e"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
+    <string name="pofpb08f"> شديد نمونيه </string>
+    <string name="pofpb08g"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+    <string name="pofpb08h"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
 
 </resources>
