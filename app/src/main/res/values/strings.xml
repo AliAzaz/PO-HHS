@@ -615,5 +615,47 @@
     <string name="pocfk12b"> معمولي </string>
     <string name="pocfk13"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
 
+    <!--FORM THREE 03-->
+    <string name="pofisec1"> سيڪشن1. رفرل جي معلومات </string>
+    <string name="pofi01"> موجوده دوري جي تاريخ ڏينهن-مهينو-سال </string>
+    <string name="pofi02"> ڇا توهان رفرل سلپ ورتي؟ </string>
+    <string name="pofi02bx"> جيڪڏهن نه، ته ڇو نه </string>
+    <string name="pofi03"> ڇا توهان ايماڪسل جو هڪڙو دوا جو وزن ورتو؟ </string>
+    <string name="pofi04"> ڇا توهان ايل ايڇ ڊبليو جي رفرل کان اڳ ۾ ڪا دوا ورتي؟ </string>
+    <string name="pofi05"> ڇا آڪسيجن جي ريڊنگ ورتي وئي ليڊي هيلٿ ورڪر پاران ريفرل مهيا ڪرڻ کان اڳ ۾؟ </string>
+    <string name="pofi06"> جيڪڏهن نه ته ڇو؟ </string>
+    <string name="pofi06a"> ليڊي هيلٿ ورڪر نه ورتي </string>
+    <string name="pofi06b"> خاندان جي طرفان اجازت نه ملي </string>
+    <string name="pofi07"> جيڪڏهن ها ته ريڊنگ ڇا هئي؟ </string>
+    <string name="pofi07a"> غيرمعمولي </string>
+    <string name="pofi07b"> معمولي </string>
+    <string name="pofi08"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
+    <string name="pofi09"> ڇا توهان ٻار کي رفرل اسپتال ڏانهن وٺي ويا؟ </string>
+    <string name="pofi10"> تاريخ جنهن تي ٻار اسپتال ويو. </string>
+    <string name="pofi10a"> ڏينهن </string>
+    <string name="pofi10b"> مهينا </string>
+    <string name="pofi10c"> سال </string>
+    <string name="pofi11"> ليڊي هيلٿ ورڪر پاران اسپتال ڏانهن ڏنل ريفرل قبول ڪرڻ تي ڪھڙي عنصر اثر ڪيو؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pofi11a"> شديد نمونيا جون نشانيون ۽ علامتون موجود هجڻ </string>
+    <string name="pofi11b"> عام خطرناڪ نشانين جو موجود هجڻ </string>
+    <string name="pofi11c"> پلس آڪسيميٽري جي استعمال </string>
+    <string name="pofi11d"> پلس آڪسيميٽري جو غير معمولي نتيجو </string>
+    <string name="pofi11e"> خاندان جي طرف کان تعاون </string>
+    <string name="pofi11f"> ريفرل واري سهولت ويجهو آهي </string>
+    <string name="pofi12"> ليڊي هيلٿ ورڪر پاران اسپتال ڏانهن ڏنل ريفرل کان انڪار ڪرڻ لاءِ ڪھڙي عنصر اثر ڪيو؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pofi12a"> شديد نمونيا جي نشانين ۽ علامتن جي غير موجود گي جي ڪري </string>
+    <string name="pofi12b"> عام خطرناڪ نشانين جي غير موجود گي جي ڪري </string>
+    <string name="pofi12c"> پلس آڪسيميٽري جي استعمال </string>
+    <string name="pofi12d"> پلس آڪسيميٽري جي معمولي نتيجي </string>
+    <string name="pofi12e"> مالي مشڪلاتون </string>
+    <string name="pofi12f"> خاندان جي طرف کان تعاون نه هجڻ ڪري </string>
+    <string name="pofi12g"> ٻار جي پيءُ جو تعاون نه هجڻ ڪري </string>
+    <string name="pofi12h"> سرڪاري صحت جي سهولتن تي ڀروسو نه هجڻ ڪري </string>
+    <string name="pofi12i"> ريفرل واري سهولت گھڻو پري آهي </string>
+    <string name="pofi13"> وڌيڪ تفصيلي انٽرويو لاءِ راضي نامو وٺو ته جيئن (رفرل) قبول يا انڪار جي سببن جو تجزيو ڪري سگھجي. (جيڪڏهن راضي نامو مليو ته مهرباني ڪري وڌيڪ تفصيلي فارم ڀريو) </string>
+    <string name="pofi13a"> اجازت نامو قبول ڪيو </string>
+    <string name="pofi13b"> اجازت نامو رد ڪيو </string>
+
+
 
 </resources>
