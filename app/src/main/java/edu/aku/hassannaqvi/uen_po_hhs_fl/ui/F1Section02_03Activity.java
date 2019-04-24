@@ -10,18 +10,18 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection0203Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0203Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class Section02_03Activity extends AppCompatActivity {
+public class F1Section02_03Activity extends AppCompatActivity {
 
-    ActivitySection0203Binding bi;
+    ActivityF1Section0203Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section02_03);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section02_03);
     }
 
     public void BtnContinue() {

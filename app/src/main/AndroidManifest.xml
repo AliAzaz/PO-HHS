@@ -21,11 +21,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Section07Activity"></activity>
-        <activity android:name=".ui.Section11Activity" />
-        <activity android:name=".ui.Section09_10Activity" />
-        <activity android:name=".ui.Section08Activity" />
-        <activity android:name=".ui.Section02_03Activity" />
+        <activity android:name=".ui.F1Section07Activity"></activity>
+        <activity android:name=".ui.F1Section11Activity" />
+        <activity android:name=".ui.F1Section09_10Activity" />
+        <activity android:name=".ui.F1Section08Activity" />
+        <activity android:name=".ui.F1Section02_03Activity" />
         <activity
             android:name=".ui.SplashscreenActivity"
             android:screenOrientation="portrait">
@@ -45,12 +45,12 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".ui.Section01Activity"
+            android:name=".ui.F1Section01Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".ui.Section04_05Activity"
+            android:name=".ui.F1Section04_05Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
