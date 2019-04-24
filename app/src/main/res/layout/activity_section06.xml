@@ -18,6 +18,7 @@
         tools:context=".activities.Section06Activity">
 
         <LinearLayout
+            android:id="@+id/ll06"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -67,7 +68,7 @@
                             android:text="@string/pocff01a" />
 
                         <RadioButton
-                            android:id="@+id/pocfc01b"
+                            android:id="@+id/pocff01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -82,11 +83,11 @@
                             android:text="@string/pocff01h2" />
 
                         <RadioButton
-                            android:id="@+id/pocfc01c"
+                            android:id="@+id/pocff01c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/pocfc01c" />
+                            android:text="@string/pocff01c" />
 
                         <RadioButton
                             android:id="@+id/pocff01d"

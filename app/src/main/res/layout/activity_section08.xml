@@ -18,6 +18,7 @@
 
 
         <LinearLayout
+            android:id="@+id/ll08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -100,7 +101,7 @@
                         android:text="@string/pocfh03" />
 
                     <EditText
-                        android:id="@+id/pocff0196x"
+                        android:id="@+id/pocfh03"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

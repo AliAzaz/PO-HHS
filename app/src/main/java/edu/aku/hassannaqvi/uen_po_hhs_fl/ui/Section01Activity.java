@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection01Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class Section01Activity extends Activity {
 
@@ -45,13 +46,13 @@ public class Section01Activity extends Activity {
         return true;
     }
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
         JSONObject sA = new JSONObject();
     }
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.ll01);
     }
 
     public void BtnEnd() {

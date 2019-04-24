@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySection06Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class Section06Activity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class Section06Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this,R.layout.activity_section06);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section06);
 
     }
 
@@ -46,12 +47,79 @@ public class Section06Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject sA = new JSONObject();
+        JSONObject sF = new JSONObject();
+
+        sF.put("pocff01", bi.pocff01a.isChecked() ? "1"
+                : bi.pocff01b.isChecked() ? "2"
+                : bi.pocff01d.isChecked() ? "3"
+                : bi.pocff01e.isChecked() ? "4"
+                : bi.pocff0196.isChecked() ? "96" : "0");
+
+
+        sF.put("pocff02", bi.pocff02a.isChecked() ? "1"
+                : bi.pocff02b.isChecked() ? "2"
+                : bi.pocff02d.isChecked() ? "3"
+                : bi.pocff02e.isChecked() ? "4"
+                : bi.pocff02f.isChecked() ? "5"
+                : bi.pocff02g.isChecked() ? "6"
+                : bi.pocff02h.isChecked() ? "7"
+                : bi.pocff02i.isChecked() ? "8"
+                : bi.pocff02j.isChecked() ? "9"
+                : bi.pocff02k.isChecked() ? "10"
+                : bi.pocff02l.isChecked() ? "11"
+                : bi.pocff02m.isChecked() ? "12"
+                : "0");
+        sF.put("pocff02gx", bi.pocff02gx.getText().toString());
+        sF.put("pocff02kx", bi.pocff02kx.getText().toString());
+        sF.put("pocff02mx", bi.pocff02mx.getText().toString());
+
+        sF.put("pocff03", bi.pocff03a.isChecked() ? "1"
+                : bi.pocff03b.isChecked() ? "2"
+                : "0");
+        sF.put("pocff04", bi.pocff04a.isChecked() ? "1"
+                : bi.pocff04b.isChecked() ? "2"
+                : bi.pocff04c.isChecked() ? "3"
+                : bi.pocff04d.isChecked() ? "4"
+                : "0");
+
+        sF.put("pocff05", bi.pocff05a.isChecked() ? "1"
+                : bi.pocff05b.isChecked() ? "2"
+                : bi.pocff05d.isChecked() ? "3"
+                : bi.pocff05e.isChecked() ? "4"
+                : bi.pocff0598.isChecked() ? "98"
+                : "0");
+
+        sF.put("pocff06", bi.pocff06a.isChecked() ? "1"
+                : bi.pocff06b.isChecked() ? "2"
+                : "0");
+
+        sF.put("pocff07", bi.pocff07a.isChecked() ? "1"
+                : bi.pocff07b.isChecked() ? "2"
+                : bi.pocff0798.isChecked() ? "98"
+                : "0");
+        sF.put("pocff07ax", bi.pocff07ax.getText().toString());
+        sF.put("pocff07bx", bi.pocff07bx.getText().toString());
+
+        sF.put("pocff08", bi.pocff08a.isChecked() ? "1"
+                : bi.pocff08b.isChecked() ? "2"
+                : bi.pocff08c.isChecked() ? "3"
+                : bi.pocff08d.isChecked() ? "4"
+                : "0");
+        sF.put("pocff09", bi.pocff09.getText().toString());
+
+        sF.put("pocff10", bi.pocff10a.isChecked() ? "1"
+                : bi.pocff10b.isChecked() ? "2"
+                : bi.pocff10c.isChecked() ? "3"
+                : bi.pocff10d.isChecked() ? "4"
+                : "0");
+        sF.put("pocff11", bi.pocff11.getText().toString());
+
+
     }
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.ll06);
     }
 
     public void BtnEnd() {
