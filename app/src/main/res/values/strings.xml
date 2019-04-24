@@ -130,8 +130,6 @@
     <string name="ta06"> Village </string>
     <string name="ta07"> Block/mohalla </string>
     <string name="ta08"> Street </string>
-    <string name="ta09"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
-    <string name="ta09c"> گھرو آف / اجازت دستياب ناهي. </string>
 
     <!--01-->
     <string name="pocfh1"> سيڪشن01. گھر جي سڃاڻپ واري معلومات </string>
@@ -154,7 +152,12 @@
     <string name="pocfa10a"> مرد </string>
     <string name="pocfa10b"> عورت </string>
     <string name="pocfa11"> ٻار جي ڄمڻ جي تاريخ </string>
-    <string name="pocfa12"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
+  <string name="pocfa11a"> تاريخ </string>
+  <string name="pocfa11b"> عمر </string>
+  <string name="pocfa12"> ٻار جي ڄمڻ جي تاريخ </string>
+  <string name="pocfa13"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
+  <string name="pocfa14"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
+  <string name="pocfa14c"> گھرو آف / اجازت دستياب ناهي. </string>
 
     <!--Section 02-->
     <string name="pocfbHeading">سيڪشن 02: گھر جي معلومات </string>

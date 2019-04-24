@@ -270,6 +270,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocfc0196"
                             android:text='@{pocfc0196.checked? pocfc0196x.getText.toString : "" }'
                             android:visibility='@{pocfc0196.checked? View.VISIBLE : View.GONE}' />
 
@@ -363,6 +364,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocfc0296"
                             android:text='@{pocfc0296.checked? pocfc0296x.getText.toString : "" }'
                             android:visibility='@{pocfc0296.checked? View.VISIBLE : View.GONE}' />
 
@@ -746,7 +748,6 @@
                             android:hint="@string/other"
                             android:text='@{pocfc10a.checked? pocfc10ax.getText.toString : "" }'
                             android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}' />
-
 
                     </RadioGroup>
 

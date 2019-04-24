@@ -23,11 +23,11 @@ public class FormsContract {
     private String istatus = ""; // Interview Status
     private String istatus88x = ""; // Interview Status
     private String sA = "";
-    private String sC = ""; // Commented out for Deceased
+    private String sB = "";
+    private String sC = "";
     private String sG = "";
     private String sHA = "";
     private String sHB = "";
-    private String sB = ""; //Count
     private String sJ = "";
     private String sK = "";
     private String sL = "";

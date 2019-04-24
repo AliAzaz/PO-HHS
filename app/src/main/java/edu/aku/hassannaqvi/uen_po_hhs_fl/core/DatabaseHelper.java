@@ -319,7 +319,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<VillagesContract> getAllPSUsByDistrict(String district_code, String uc_code) {
+    public Collection<VillagesContract> getAllPSUsByTaluka(String taluka_code, String uc_code) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -335,7 +335,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String whereClause = singleVillage.COLUMN_TALUKA_CODE + " =? AND " + singleVillage.COLUMN_UC_CODE + " =?";
 
-        String[] whereArgs = {district_code, uc_code};
+        String[] whereArgs = {taluka_code, uc_code};
         String groupBy = null;
         String having = null;
 
@@ -369,7 +369,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<LHWContract> getAllLHWsByDistrict(String district_code, String uc_code) {
+    public Collection<LHWContract> getAllLHWsByTaluka(String district_code, String uc_code) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {

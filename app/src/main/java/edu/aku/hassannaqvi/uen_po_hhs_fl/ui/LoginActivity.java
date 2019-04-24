@@ -67,12 +67,6 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.get.GetBLRandom;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.get.GetLHW;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.get.GetTalukas;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.get.GetUCs;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.get.GetUsers;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.get.GetVillages;
 
 import static java.lang.Thread.sleep;
 
