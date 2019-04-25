@@ -143,6 +143,7 @@
                                     android:digits="-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                                     android:textColor="@color/colorPrimary"
                                     app:pattern="[0-9]{3,3}-[^0-9]{1,1}"
+                                    app:mask="XXX-X"
                                     app:required="true"
                                     app:type="equal" />
 
