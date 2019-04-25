@@ -141,7 +141,7 @@
                                     android:layout_height="wrap_content"
                                     android:digits="-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                                     android:hint="XXX-X"
-                                    android:inputType="textCapWords"
+                                    android:inputType="textCapCharacters"
                                     android:textColor="@color/colorPrimary"
                                     app:mask="XXX-X"
                                     app:pattern="[0-9]{3,3}-[^0-9]{1,1}"
