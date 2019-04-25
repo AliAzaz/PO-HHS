@@ -17,7 +17,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section07Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class F1Section07Activity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class F1Section07Activity extends AppCompatActivity {
 
     ActivityF1Section07Binding bi;
     DatabaseHelper db;
@@ -27,31 +27,185 @@ public class F1Section07Activity extends AppCompatActivity implements CompoundBu
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section07);
 
-        this.setTitle(getResources().getString(R.string.nc3heading));
+        this.setTitle(getResources().getString(R.string.pocfgheading));
 
         db = new DatabaseHelper(this);
         bi.setCallback(this);
 
-        bi.nc3bcgdt98.setOnCheckedChangeListener(this);
-        bi.nc3opv0dt98.setOnCheckedChangeListener(this);
-        bi.nc3opv1dt98.setOnCheckedChangeListener(this);
-        bi.nc3p1dt98.setOnCheckedChangeListener(this);
-        bi.nc3pcv1dt98.setOnCheckedChangeListener(this);
-        bi.nc3opv2dt98.setOnCheckedChangeListener(this);
-        bi.nc3p2dt98.setOnCheckedChangeListener(this);
-        bi.nc3pcv2dt98.setOnCheckedChangeListener(this);
-        bi.nc3opv3dt98.setOnCheckedChangeListener(this);
-        bi.nc3p3dt98.setOnCheckedChangeListener(this);
-        bi.nc3pcv3dt98.setOnCheckedChangeListener(this);
-        bi.nc3ipvdt98.setOnCheckedChangeListener(this);
-        bi.nc3m1dt98.setOnCheckedChangeListener(this);
-        bi.nc3m2dt98.setOnCheckedChangeListener(this);
+        bi.pocfgbcgdt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgbcgdt.setText(null);
+                    bi.pocfgbcgdt.setEnabled(false);
+                } else {
+                    bi.pocfgbcgdt.setEnabled(true);
+                    bi.pocfgbcgdt.setError(null);
+                }
+            }
+        });
+        bi.pocfgopv0dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgopv0dt.setText(null);
+                    bi.pocfgopv0dt.setEnabled(false);
+                } else {
+                    bi.pocfgopv0dt.setEnabled(true);
+                    bi.pocfgopv0dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgopv1dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgopv1dt.setText(null);
+                    bi.pocfgopv1dt.setEnabled(false);
+                } else {
+                    bi.pocfgopv1dt.setEnabled(true);
+                    bi.pocfgopv1dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgp1dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgp1dt.setText(null);
+                    bi.pocfgp1dt.setEnabled(false);
+                } else {
+                    bi.pocfgp1dt.setEnabled(true);
+                    bi.pocfgp1dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgpcv1dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgpcv1dt.setText(null);
+                    bi.pocfgpcv1dt.setEnabled(false);
+                } else {
+                    bi.pocfgpcv1dt.setEnabled(true);
+                    bi.pocfgpcv1dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgopv2dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgopv2dt.setText(null);
+                    bi.pocfgopv2dt.setEnabled(false);
+                } else {
+                    bi.pocfgopv2dt.setEnabled(true);
+                    bi.pocfgopv2dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgp2dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgp2dt.setText(null);
+                    bi.pocfgp2dt.setEnabled(false);
+                } else {
+                    bi.pocfgp2dt.setEnabled(true);
+                    bi.pocfgp2dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgpcv2dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgpcv2dt.setText(null);
+                    bi.pocfgpcv2dt.setEnabled(false);
+                } else {
+                    bi.pocfgpcv2dt.setEnabled(true);
+                    bi.pocfgpcv2dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgopv3dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgopv3dt.setText(null);
+                    bi.pocfgopv3dt.setEnabled(false);
+                } else {
+                    bi.pocfgopv3dt.setEnabled(true);
+                    bi.pocfgopv3dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgp3dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgp3dt.setText(null);
+                    bi.pocfgp3dt.setEnabled(false);
+                } else {
+                    bi.pocfgp3dt.setEnabled(true);
+                    bi.pocfgp3dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgpcv3dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgpcv3dt.setText(null);
+                    bi.pocfgpcv3dt.setEnabled(false);
+                } else {
+                    bi.pocfgpcv3dt.setEnabled(true);
+                    bi.pocfgpcv3dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgipvdt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgipvdt.setText(null);
+                    bi.pocfgipvdt.setEnabled(false);
+                } else {
+                    bi.pocfgipvdt.setEnabled(true);
+                    bi.pocfgipvdt.setError(null);
+                }
+            }
+        });
+        bi.pocfgm1dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgm1dt.setText(null);
+                    bi.pocfgm1dt.setEnabled(false);
+                } else {
+                    bi.pocfgm1dt.setEnabled(true);
+                    bi.pocfgm1dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgm2dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgm2dt.setText(null);
+                    bi.pocfgm2dt.setEnabled(false);
+                } else {
+                    bi.pocfgm2dt.setEnabled(true);
+                    bi.pocfgm2dt.setError(null);
+                }
+            }
+        });
 
-        bi.nc302.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pocfg02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId != bi.nc302b.getId())
-                    bi.nc302.clearCheck();
+                if (checkedId != bi.pocfg02b.getId())
+                    bi.pocfg02.clearCheck();
             }
         });
     }
@@ -79,7 +233,7 @@ public class F1Section07Activity extends AppCompatActivity implements CompoundBu
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpnc30A);
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrppocfgA);
     }
 
     @Override
@@ -91,111 +245,137 @@ public class F1Section07Activity extends AppCompatActivity implements CompoundBu
 
         JSONObject sG = new JSONObject();
 
-//        nc301
-        sG.put("nc301", bi.nc301a.isChecked() ? "1"
-                : bi.nc301b.isChecked() ? "2"
+//        pocfg01
+        sG.put("pocfg01", bi.pocfg01a.isChecked() ? "1"
+                : bi.pocfg01b.isChecked() ? "2"
                 : "0");
 
-//        nc302
-        sG.put("nc302", bi.nc302a.isChecked() ? "1"
-                : bi.nc302b.isChecked() ? "2"
-                : bi.nc302c.isChecked() ? "3"
-                : bi.nc302d.isChecked() ? "4"
+//        pocfg02
+        sG.put("pocfg02", bi.pocfg02a.isChecked() ? "1"
+                : bi.pocfg02b.isChecked() ? "2"
+                : bi.pocfg02c.isChecked() ? "3"
+                : bi.pocfg02d.isChecked() ? "4"
                 : "0");
 //at birth
-//          nc3bcg
-        sG.put("nc3bcg", bi.nc3bcga.isChecked() ? "1"
-                : bi.nc3bcgb.isChecked() ? "2"
-                : bi.nc3bcg97.isChecked() ? "97"
+//          pocfgbcg
+        sG.put("pocfgbcg", bi.pocfgbcga.isChecked() ? "1"
+                : bi.pocfgbcgb.isChecked() ? "2"
+                : bi.pocfgbcg97.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgbcgdt98", bi.pocfgbcgdt98.isChecked() ? "1" : "0");
+        sG.put("pocfgbcgdt", bi.pocfgbcgdt.getText().toString());
 
-//          nc3opv0
-        sG.put("nc3opv0", bi.nc3opv0a.isChecked() ? "1"
-                : bi.nc3opv0b.isChecked() ? "2"
-                : bi.nc3opv097.isChecked() ? "97"
+//          pocfgopv0
+        sG.put("pocfgopv0", bi.pocfgopv0a.isChecked() ? "1"
+                : bi.pocfgopv0b.isChecked() ? "2"
+                : bi.pocfgopv097.isChecked() ? "97"
                 : "0");
-        sG.put("nc3opv0dt98", bi.nc3opv0dt98.isChecked() ? "1" : "0");
-        sG.put("nc3opv0dt", bi.nc3opv0dt.getText().toString());
+        sG.put("pocfgopv0dt98", bi.pocfgopv0dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgopv0dt", bi.pocfgopv0dt.getText().toString());
 
 //       at age of 6
 
-//          nc3opv1
-        sG.put("nc3opv1", bi.nc3opv1a.isChecked() ? "1"
-                : bi.nc3opv1b.isChecked() ? "2"
-                : bi.nc3opv197.isChecked() ? "97"
+//          pocfgopv1
+        sG.put("pocfgopv1", bi.pocfgopv1a.isChecked() ? "1"
+                : bi.pocfgopv1b.isChecked() ? "2"
+                : bi.pocfgopv197.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgopv1dt98", bi.pocfgopv1dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgopv1dt", bi.pocfgopv1dt.getText().toString());
 
-//          nc3p1
-        sG.put("nc3p1", bi.nc3p1a.isChecked() ? "1"
-                : bi.nc3p1b.isChecked() ? "2"
-                : bi.nc3p197.isChecked() ? "97"
+//          pocfgp1
+        sG.put("pocfgp1", bi.pocfgp1a.isChecked() ? "1"
+                : bi.pocfgp1b.isChecked() ? "2"
+                : bi.pocfgp197.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgp1dt98", bi.pocfgp1dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgp1dt", bi.pocfgp1dt.getText().toString());
 
-//          nc3pcv1
-        sG.put("nc3pcv1", bi.nc3pcv1a.isChecked() ? "1"
-                : bi.nc3pcv1b.isChecked() ? "2"
-                : bi.nc3pcv197.isChecked() ? "97"
+//          pocfgpcv1
+        sG.put("pocfgpcv1", bi.pocfgpcv1a.isChecked() ? "1"
+                : bi.pocfgpcv1b.isChecked() ? "2"
+                : bi.pocfgpcv197.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgpcv1dt98", bi.pocfgpcv1dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgpcv1dt", bi.pocfgpcv1dt.getText().toString());
 
 //       at age of 10 weeks
 
-//          nc3opv2
-        sG.put("nc3opv2", bi.nc3opv2a.isChecked() ? "1"
-                : bi.nc3opv2b.isChecked() ? "2"
-                : bi.nc3opv297.isChecked() ? "97"
+//          pocfgopv2
+        sG.put("pocfgopv2", bi.pocfgopv2a.isChecked() ? "1"
+                : bi.pocfgopv2b.isChecked() ? "2"
+                : bi.pocfgopv297.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgopv2dt98", bi.pocfgopv2dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgopv2dt", bi.pocfgopv2dt.getText().toString());
 
-//          nc3p2
-        sG.put("nc3p2", bi.nc3p2a.isChecked() ? "1"
-                : bi.nc3p2b.isChecked() ? "2"
-                : bi.nc3p297.isChecked() ? "97"
+//          pocfgp2
+        sG.put("pocfgp2", bi.pocfgp2a.isChecked() ? "1"
+                : bi.pocfgp2b.isChecked() ? "2"
+                : bi.pocfgp297.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgp2dt98", bi.pocfgp2dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgp2dt", bi.pocfgp2dt.getText().toString());
 
-//          nc3pcv2
-        sG.put("nc3pcv2", bi.nc3pcv2a.isChecked() ? "1"
-                : bi.nc3pcv2b.isChecked() ? "2"
-                : bi.nc3pcv297.isChecked() ? "97"
+//          pocfgpcv2
+        sG.put("pocfgpcv2", bi.pocfgpcv2a.isChecked() ? "1"
+                : bi.pocfgpcv2b.isChecked() ? "2"
+                : bi.pocfgpcv297.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgpcv2dt98", bi.pocfgpcv2dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgpcv2dt", bi.pocfgpcv2dt.getText().toString());
 
 //       at age of 14 weeks
 
-//          nc3opv3
-        sG.put("nc3opv3", bi.nc3opv3a.isChecked() ? "1"
-                : bi.nc3opv3b.isChecked() ? "2"
-                : bi.nc3opv397.isChecked() ? "97"
+//          pocfgopv3
+        sG.put("pocfgopv3", bi.pocfgopv3a.isChecked() ? "1"
+                : bi.pocfgopv3b.isChecked() ? "2"
+                : bi.pocfgopv397.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgopv3dt98", bi.pocfgopv3dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgopv3dt", bi.pocfgopv3dt.getText().toString());
 
-//          nc3p3
-        sG.put("nc3p3", bi.nc3p3a.isChecked() ? "1"
-                : bi.nc3p3b.isChecked() ? "2"
-                : bi.nc3p397.isChecked() ? "97"
+//          pocfgp3
+        sG.put("pocfgp3", bi.pocfgp3a.isChecked() ? "1"
+                : bi.pocfgp3b.isChecked() ? "2"
+                : bi.pocfgp397.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgp3dt98", bi.pocfgp3dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgp3dt", bi.pocfgp3dt.getText().toString());
 
-//          nc3pcv3
-        sG.put("nc3pcv3", bi.nc3pcv3a.isChecked() ? "1"
-                : bi.nc3pcv3b.isChecked() ? "2"
-                : bi.nc3pcv397.isChecked() ? "97"
+//          pocfgpcv3
+        sG.put("pocfgpcv3", bi.pocfgpcv3a.isChecked() ? "1"
+                : bi.pocfgpcv3b.isChecked() ? "2"
+                : bi.pocfgpcv397.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgpcv3dt98", bi.pocfgpcv3dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgpcv3dt", bi.pocfgpcv3dt.getText().toString());
 
-//          nc3ipv
-        sG.put("nc3ipv", bi.nc3ipva.isChecked() ? "1"
-                : bi.nc3ipvb.isChecked() ? "2"
-                : bi.nc3ipv97.isChecked() ? "97"
+//          pocfgipv
+        sG.put("pocfgipv", bi.pocfgipva.isChecked() ? "1"
+                : bi.pocfgipvb.isChecked() ? "2"
+                : bi.pocfgipv97.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgipvdt98", bi.pocfgipvdt98.isChecked() ? "1" : "0");
+        sG.put("pocfgipvdt", bi.pocfgipvdt.getText().toString());
 
 //at the age of 9 months
-//          nc3m1
-        sG.put("nc3m1", bi.nc3m1a.isChecked() ? "1"
-                : bi.nc3m1b.isChecked() ? "2"
-                : bi.nc3m197.isChecked() ? "97"
+//          pocfgm1
+        sG.put("pocfgm1", bi.pocfgm1a.isChecked() ? "1"
+                : bi.pocfgm1b.isChecked() ? "2"
+                : bi.pocfgm197.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgm1dt98", bi.pocfgm1dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgm1dt", bi.pocfgm1dt.getText().toString());
 
 //at age of 15 months
-//          nc3m2
-        sG.put("nc3m2", bi.nc3m2a.isChecked() ? "1"
-                : bi.nc3m2b.isChecked() ? "2"
-                : bi.nc3m297.isChecked() ? "97"
+//          pocfgm2
+        sG.put("pocfgm2", bi.pocfgm2a.isChecked() ? "1"
+                : bi.pocfgm2b.isChecked() ? "2"
+                : bi.pocfgm297.isChecked() ? "97"
                 : "0");
+        sG.put("pocfgm2dt98", bi.pocfgm2dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgm2dt", bi.pocfgm2dt.getText().toString());
 
         MainApp.fc.setsG(String.valueOf(sG));
 
@@ -204,21 +384,6 @@ public class F1Section07Activity extends AppCompatActivity implements CompoundBu
     private boolean UpdateDB() {
 
         return true;
-
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-        if (compoundButton.isChecked()) {
-            bi.nc3bcgdt.setText(null);
-            bi.nc3bcgdt.setEnabled(false);
-            return;
-        } else {
-            bi.nc3bcgdt.setEnabled(true);
-            bi.nc3bcgdt.setError(null);
-            return;
-        }
 
     }
 }
