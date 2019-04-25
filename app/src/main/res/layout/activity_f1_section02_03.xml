@@ -21,6 +21,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pocfbHeading" />
+
             <android.support.v7.widget.CardView
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -178,20 +182,16 @@
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="2dp"
-                android:background="@color/colorPrimaryDark"
-                android:gravity="center"
-                android:text="@string/pocfchHeading"
-                android:textSize="40sp" />
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pocfchHeading" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
                 android:text="@string/pocfch1" />
 
             <android.support.v7.widget.CardView
