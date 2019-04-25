@@ -12,13 +12,13 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0405BindingImpl;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0405Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 
 public class F1Section04_05Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
-    ActivityF1Section0405BindingImpl bi;
+    ActivityF1Section0405Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

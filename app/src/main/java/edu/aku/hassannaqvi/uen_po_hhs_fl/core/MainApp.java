@@ -17,6 +17,7 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,8 +25,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
@@ -103,10 +102,11 @@ public class MainApp extends Application {
     public static int hh03txt = 1;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
+    public static String formtype;
 
     public static SharedPreferences sharedPref;
 
-    public static Map<String, FamilyMembersContract> childsMap = new HashMap<>();
+//    public static Map<String, FamilyMembersContract> childsMap = new HashMap<>();
     public static ArrayList<String> lstChild = new ArrayList<>();
 
     public static int ageRdo = 0;
@@ -122,12 +122,12 @@ public class MainApp extends Application {
 
     //    Ali
     public static String regionDss = "";
-    public static List<FamilyMembersContract> familyMembersList;
-    public static FamilyMembersContract fmc;
-    public static DeceasedMotherContract dcM;
-    public static DeceasedChildContract dcC;
+//    public static List<FamilyMembersContract> familyMembersList;
+//    public static FamilyMembersContract fmc;
+//    public static DeceasedMotherContract dcM;
+//    public static DeceasedChildContract dcC;
     public static MWRAContract mw;
-    public static SectionIIMContract ims;
+//    public static SectionIIMContract ims;
     public static String TAG = "AppMain";
 
     public static int memFlag = 0;
@@ -186,6 +186,40 @@ public class MainApp extends Application {
 //        long ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30;
 //        return ageInMonths;
 //    }
+
+    public static void setGPS(Activity activity) {
+        SharedPreferences GPSPref = activity.getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
+
+//        String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
+
+        try {
+            String lat = GPSPref.getString("Latitude", "0");
+            String lang = GPSPref.getString("Longitude", "0");
+            String acc = GPSPref.getString("Accuracy", "0");
+            String dt = GPSPref.getString("Time", "0");
+
+            if (lat == "0" && lang == "0") {
+                Toast.makeText(activity, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();
+            }
+
+            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
+
+            MainApp.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
+            MainApp.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
+            MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
+//            AppMain.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
+            MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
+
+            Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
+            Log.e("GPS", "setGPS: " + e.getMessage());
+        }
+
+
+    }
 
     public static long ageInMonths(String year, String month) {
         long ageInMonths = (Integer.valueOf(year) * 12) + Integer.valueOf(month);

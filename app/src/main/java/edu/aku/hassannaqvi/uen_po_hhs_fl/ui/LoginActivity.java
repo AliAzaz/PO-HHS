@@ -149,6 +149,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             e.printStackTrace();
         }
 
+
         // Set up the login form.
 //        mEmailView = findViewById(R.id.email);
         populateAutoComplete();
@@ -180,7 +181,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             public void onClick(View view) {
 
 //                if (spUCs.getSelectedItemPosition() != 0 && spTalukas.getSelectedItemPosition() != 0) {
-                    attemptLogin();
+                attemptLogin();
                 /*} else {
                     Toast.makeText(getApplicationContext(), "Please Sync Data or select from combobox!!", Toast.LENGTH_LONG).show();
                 }*/
@@ -195,6 +196,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         dbBackup();
     }
+
     private void gettingDeviceIMEI() {
         MainApp.IMEI = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
 
@@ -341,7 +343,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            startActivity(new Intent(this,SyncActivity.class));
+            startActivity(new Intent(this, SyncActivity.class));
 ////            if (TalukasList.size() == 0) {
 //                new syncData(this, true).execute();
 ////            } else {
@@ -575,7 +577,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         (mEmail.equals("guest@aku") && mPassword.equals("aku1234")) || db.Login(mEmail, mPassword)
                         || (mEmail.equals("test1234") && mPassword.equals("test1234"))) {
                     MainApp.userName = mEmail;
-                    MainApp.admin =  mEmail.contains("@");
+                    MainApp.admin = mEmail.contains("@");
 
                     Intent iLogin = new Intent(LoginActivity.this, F1Section04_05Activity.class);
                     startActivity(iLogin);
