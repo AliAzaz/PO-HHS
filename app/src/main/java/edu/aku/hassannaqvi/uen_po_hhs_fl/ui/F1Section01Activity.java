@@ -51,6 +51,7 @@ public class F1Section01Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section_01);
+        bi.setCallback(this);
 
         settingListeners();
         initializingComponents();
