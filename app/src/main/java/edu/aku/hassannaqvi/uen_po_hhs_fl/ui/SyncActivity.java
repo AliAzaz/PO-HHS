@@ -317,6 +317,7 @@ public class SyncActivity extends AppCompatActivity {
 
     }
     public void syncServer() {
+        if(true) return;
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
         ConnectivityManager connMgr = (ConnectivityManager)

@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -28,10 +29,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -48,8 +45,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.FormsList;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract;
@@ -58,27 +53,15 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityMainBinding;
 
 public class MainActivity extends Activity {
+
+    ActivityMainBinding bi;
 
     private final String TAG = "MainActivity";
 
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-    @BindView(R.id.adminsec)
-    LinearLayout adminsec;
-    @BindView(R.id.lblheader)
-    TextView lblheader;
-    @BindView(R.id.recordSummary)
-    TextView recordSummary;
-
-    @BindView(R.id.syncDevice)
-    Button syncDevice;
-
-    @BindView(R.id.spAreas)
-    Spinner spAreas;
-    @BindView(R.id.lblAppVersion)
-    TextView lblAppVersion;
-
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
     AlertDialog.Builder builder;
@@ -98,12 +81,57 @@ public class MainActivity extends Activity {
     DatabaseHelper db;
     static File file;
     Long refID;
+    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
+
+                DownloadManager.Query query = new DownloadManager.Query();
+                query.setFilterById(sharedPrefDownload.getLong("refID", 0));
+
+                downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                Cursor cursor = downloadManager.query(query);
+                if (cursor.moveToFirst()) {
+                    int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
+                    if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
+
+                        editorDownload.putBoolean("flag", true);
+                        editorDownload.commit();
+
+                        Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
+                        bi.lblAppVersion.setText("PO APP New Version " + newVer + "  Downloaded.");
+
+                        ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+                        List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
+
+                        if (taskInfo.get(0).topActivity.getClassName().equals(MainActivity.class.getName())) {
+//                                InstallNewApp(newVer, preVer);
+                            showDialog(newVer, preVer);
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    void showDialog(String newVer, String preVer) {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        ft.addToBackStack(null);
+
+        DialogFragment newFragment = MyDialogFragment.newInstance(newVer, preVer);
+        newFragment.show(ft, "dialog");
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
         db = new DatabaseHelper(this);
         MainApp.fatherList.clear();
         MainApp.motherList.clear();
@@ -122,18 +150,16 @@ public class MainActivity extends Activity {
             StrictMode.setThreadPolicy(policy);
         }
 //        lblheader.setText("Welcome! You're assigned to block ' " + MainApp.regionDss + " '" + MainApp.userName);
-        lblheader.setText("Welcome!!");
+        bi.lblheader.setText("Welcome!!");
 
         if (MainApp.admin) {
-            adminsec.setVisibility(View.VISIBLE);
+            bi.adminsec.setVisibility(View.VISIBLE);
         } else {
-            adminsec.setVisibility(View.GONE);
+            bi.adminsec.setVisibility(View.GONE);
         }
         /*Download File*/
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
-
-
 
 
 //        Version Checking
@@ -144,20 +170,20 @@ public class MainActivity extends Activity {
             newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
 
             if (MainApp.versionCode < Integer.valueOf(versionAppContract.getVersioncode())) {
-                lblAppVersion.setVisibility(View.VISIBLE);
+                bi.lblAppVersion.setVisibility(View.VISIBLE);
 
                 String fileName = DatabaseHelper.DATABASE_NAME.replace(".db", "-New-Apps");
                 file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
 
                 if (file.exists()) {
-                    lblAppVersion.setText("PO APP New Version " + newVer + "  Downloaded.");
+                    bi.lblAppVersion.setText("PO APP New Version " + newVer + "  Downloaded.");
 //                    InstallNewApp(newVer, preVer);
                     showDialog(newVer, preVer);
                 } else {
                     NetworkInfo networkInfo = ((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
                     if (networkInfo != null && networkInfo.isConnected()) {
 
-                        lblAppVersion.setText("PO APP New Version " + newVer + " Downloading..");
+                        bi.lblAppVersion.setText("PO APP New Version " + newVer + " Downloading..");
                         downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
                         Uri uri = Uri.parse(MainApp._APP_UPDATE_URL + versionAppContract.getPathname());
                         DownloadManager.Request request = new DownloadManager.Request(uri);
@@ -171,13 +197,13 @@ public class MainActivity extends Activity {
                         editorDownload.commit();
 
                     } else {
-                        lblAppVersion.setText("PO APP New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
+                        bi.lblAppVersion.setText("PO APP New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
                     }
                 }
 
             } else {
-                lblAppVersion.setVisibility(View.GONE);
-                lblAppVersion.setText(null);
+                bi.lblAppVersion.setVisibility(View.GONE);
+                bi.lblAppVersion.setText(null);
             }
         }
 
@@ -221,7 +247,6 @@ public class MainActivity extends Activity {
         }
         */
         /*TagID End*/
-
 
 
         Collection<FormsContract> todaysForms = db.getTodayForms();
@@ -274,7 +299,7 @@ public class MainActivity extends Activity {
 
 
         if (MainApp.admin) {
-            adminsec.setVisibility(View.VISIBLE);
+            bi.adminsec.setVisibility(View.VISIBLE);
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
             rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
             rSumText += "\r\n";
@@ -285,7 +310,7 @@ public class MainActivity extends Activity {
             rSumText += "\r\n";
         }
         Log.d(TAG, "onCreate: " + rSumText);
-        recordSummary.setText(rSumText);
+        bi.recordSummary.setText(rSumText);
 
 
 //        Fill spinner
@@ -300,14 +325,14 @@ public class MainActivity extends Activity {
             AreasMap.put(Areas.getArea(), Areas.getAreacode());
         }
 
-        spAreas.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lablesAreas));
+        bi.spAreas.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lablesAreas));
 
-        spAreas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.spAreas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                if (spAreas.getSelectedItemPosition() != 0) {
-                    MainApp.areaCode = Integer.valueOf(AreasMap.get(spAreas.getSelectedItem().toString()));
+                if (bi.spAreas.getSelectedItemPosition() != 0) {
+                    MainApp.areaCode = Integer.valueOf(AreasMap.get(bi.spAreas.getSelectedItem().toString()));
                 }
             }
 
@@ -316,19 +341,6 @@ public class MainActivity extends Activity {
 
             }
         });
-
-    }
-
-    void showDialog(String newVer, String preVer) {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
-        if (prev != null) {
-            ft.remove(prev);
-        }
-        ft.addToBackStack(null);
-
-        DialogFragment newFragment = MyDialogFragment.newInstance(newVer, preVer);
-        newFragment.show(ft, "dialog");
 
     }
 
@@ -343,10 +355,10 @@ public class MainActivity extends Activity {
 //                    InstallNewApp(newVer, preVer);
                     showDialog(newVer, preVer);
                 } else {
-                    OpenFormFunc();
+                    OpenFormFunc(v.getId());
                 }
-            }else {
-                OpenFormFunc();
+            } else {
+                OpenFormFunc(v.getId());
             }
         } else {
             Toast.makeText(this, "Sync data!!", Toast.LENGTH_SHORT).show();
@@ -393,55 +405,36 @@ public class MainActivity extends Activity {
 //        }
     }
 
-    private void OpenFormFunc() {
+    private void OpenFormFunc(int id) {
+        Intent oF = new Intent();
         if (!MainApp.userName.equals("0000")) {
-            Intent oF = new Intent(MainActivity.this, F1Section01Activity.class);
+            switch (id) {
+                case R.id.form01:
+                    oF = new Intent(MainActivity.this, F1Section01Activity.class);
+                    MainApp.formtype = "form01";
+                    break;
+                case R.id.form02:
+                    oF = new Intent(MainActivity.this, F2Section01Activity.class);
+                    MainApp.formtype = "form02";
+                    break;
+                case R.id.form03:
+                    oF = new Intent(MainActivity.this, F3Section01Activity.class);
+                    MainApp.formtype = "form03";
+                    break;
+
+            }
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
         }
+
+
     }
-
-
-    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
-
-                DownloadManager.Query query = new DownloadManager.Query();
-                query.setFilterById(sharedPrefDownload.getLong("refID", 0));
-
-                downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                Cursor cursor = downloadManager.query(query);
-                if (cursor.moveToFirst()) {
-                    int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
-                    if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
-
-                        editorDownload.putBoolean("flag", true);
-                        editorDownload.commit();
-
-                        Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
-                        lblAppVersion.setText("PO APP New Version " + newVer + "  Downloaded.");
-
-                        ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-                        List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
-
-                        if (taskInfo.get(0).topActivity.getClassName().equals(MainActivity.class.getName())) {
-//                                InstallNewApp(newVer, preVer);
-                            showDialog(newVer, preVer);
-                        }
-                    }
-                }
-            }
-        }
-    };
 
     public void openA(View v) {
         Intent iA = new Intent(this, F1Section01Activity.class);
         startActivity(iA);
     }
-
-
 
 
     public void testGPS(View v) {
@@ -522,6 +515,7 @@ public class MainActivity extends Activity {
         startActivity(cluster_list);
 
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

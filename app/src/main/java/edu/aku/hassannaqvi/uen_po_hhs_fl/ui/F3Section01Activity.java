@@ -41,7 +41,7 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Form 03", Toast.LENGTH_SHORT).show();
-                Intent ii = new Intent(this, F1Section06Activity.class);
+                Intent ii = new Intent(this, F1Section02_03Activity.class);
                 startActivity(ii);
 
                 //MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);

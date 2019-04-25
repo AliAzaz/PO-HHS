@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,6 +8,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,12 +17,15 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.UCsContract;
@@ -33,7 +36,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.otherClasses.SnackUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class F1Section01Activity extends Activity {
+public class F1Section01Activity extends AppCompatActivity {
 
     ActivityF1Section01Binding bi;
 
@@ -41,6 +44,8 @@ public class F1Section01Activity extends Activity {
     public List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
     Collection<BLRandomContract> selected;
     DatabaseHelper db;
+
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -222,12 +227,32 @@ public class F1Section01Activity extends Activity {
     }
 
     private boolean UpdateDB() {
-        return true;
+
+        long updcount = db.addForm(MainApp.fc);
+
+        MainApp.fc.set_ID(String.valueOf(updcount));
+
+        if (updcount != 0) {
+            MainApp.fc.set_UID(
+                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
+            db.updateFormID();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject form01_01 = new JSONObject();
 
+        MainApp.fc = new FormsContract();
+        MainApp.fc.setDeviceID(MainApp.deviceId);
+        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        MainApp.fc.setFormType(MainApp.formtype);
+        MainApp.fc.setFormDate(dtToday);
+
+
+        JSONObject form01_01 = new JSONObject();
         form01_01.put("Taluka", bi.pocfa01.getSelectedItem());
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
         form01_01.put("UC", bi.pocfa02.getSelectedItem());
@@ -257,6 +282,11 @@ public class F1Section01Activity extends Activity {
         form01_01.put("pocfa12", bi.pocfa12.getText().toString());
         form01_01.put("pocfa13", bi.pocfa12.getText().toString());
         form01_01.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");
+
+        MainApp.fc.setsA(String.valueOf(form01_01));
+        MainApp.setGPS(this);
+
+
     }
 
     private boolean formValidation() {

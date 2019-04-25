@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.Section07Activityy">
+<layout >
 
     <data>
 
@@ -14,6 +11,10 @@
     </data>
 
     <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.Section07Activityy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -1123,7 +1124,7 @@
 
                         <android.support.v7.widget.CardView
                             style="@style/cardView"
-                            android:visibility="@{pocfgp3.checked ? View.VISIBLE : View.GONE}">
+                            android:visibility="@{pocfgp3a.checked ? View.VISIBLE : View.GONE}">
 
                             <LinearLayout style="@style/linearlayout_view_wt_bound">
 

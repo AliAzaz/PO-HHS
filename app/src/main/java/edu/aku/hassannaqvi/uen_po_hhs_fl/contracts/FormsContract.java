@@ -22,7 +22,7 @@ public class FormsContract {
     private String istatus = ""; // Interview Status
     private String istatus88x = ""; // Interview Status
     private String sA = "";
-    private String sB = "";
+    private String sB = ""; // for section 02 and 03
     private String sC = "";
     private String sD = "";
     private String sE = "";
@@ -42,6 +42,15 @@ public class FormsContract {
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
+    private String appversion = "";
+
+    public String getAppversion() {
+        return appversion;
+    }
+
+    public void setAppversion(String appversion) {
+        this.appversion = appversion;
+    }
 
     public FormsContract() {
     }
@@ -73,6 +82,8 @@ public class FormsContract {
         this.devicetagID = jsonObject.getString(FormsTable.COLUMN_DEVICETAGID);
         this.synced = jsonObject.getString(FormsTable.COLUMN_SYNCED);
         this.synced_date = jsonObject.getString(FormsTable.COLUMN_SYNCED_DATE);
+        this.appversion = jsonObject.getString(FormsTable.COLUMN_SYNCED_DATE);
+        this.formType = jsonObject.getString(FormsTable.COLUMN_FORMTYPE);
 
         return this;
 
@@ -103,6 +114,8 @@ public class FormsContract {
         this.gpsAcc = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSACC));
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
+        this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
+        this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
 
         return this;
     }
@@ -160,6 +173,8 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_GPSACC, this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put(FormsTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put(FormsTable.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
+        json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
 
         return json;
     }
@@ -392,6 +407,7 @@ public class FormsContract {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_FORMDATE = "formdate";
+        public static final String COLUMN_FORMTYPE = "formtype";
         public static final String COLUMN_USER = "user";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS88x = "istatus88x";
@@ -415,7 +431,8 @@ public class FormsContract {
         public static final String COLUMN_DEVICETAGID = "tagid";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
+        public static final String COLUMN_APPVERSION = "appversion";
 
-        public static String _URL = "forms.php";
+        public static String _URL = "form.php";
     }
 }

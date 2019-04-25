@@ -2,12 +2,9 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
-        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <item name="android:textViewStyle">@style/labels</item>
-        <item name="android:editTextStyle">@style/textInput</item>
-        <item name="android:buttonStyle">@style/buttons</item>
-        <item name="android:checkboxStyle">@style/checkbox</item>
-        <item name="android:radioButtonStyle">@style/radiobutton</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -18,13 +15,18 @@
         <item name="android:buttonStyle">@style/buttons</item>
         <item name="android:checkboxStyle">@style/checkbox</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
-        <!--<item name="actionBarStyle">@style/CustomShowcaseTheme</item>-->
+        <item name="android:toolbarStyle">@style/ActionBar</item>
+        <item name="actionBarStyle">@style/ActionBar</item>
         <!-- Customize your theme here. -->
     </style>
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
         <item name="android:background">#efefef</item>
         <item name="android:padding">18dp</item>
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
     <style name="SpinnerItem">
@@ -36,10 +38,10 @@
         <item name="android:typeface">serif</item>
     </style>
 
-    <style name="ActionBarTheme" parent="Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@drawable/background_grad</item>
-        <item name="background">@drawable/background_grad</item>
-    </style>
+    <!--<style name="ActionBarTheme" parent="Widget.AppCompat.Light.ActionBar">-->
+        <!--<item name="android:background">@drawable/background_grad</item>-->
+        <!--<item name="background">@drawable/background_grad</item>-->
+    <!--</style>-->
 
 
     <!-- Form Styles -->
@@ -47,7 +49,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
-        <item name="android:background">@color/colorPrimary</item>
+        <!--<item name="android:background">@color/colorPrimary</item>-->
         <item name="android:drawable">@drawable/textview_background_grad</item>
         <item name="android:padding">5dp</item>
         <item name="android:textColor">#ffffff</item>

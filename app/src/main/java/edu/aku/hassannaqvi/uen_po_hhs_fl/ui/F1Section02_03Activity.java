@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,7 +33,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
 //                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
@@ -105,6 +106,9 @@ public class F1Section02_03Activity extends AppCompatActivity {
         sBC.put("pocfc11", !bi.pocfc1198.isChecked() ? bi.pocfc11.getText().toString() : "98");
 
         sBC.put("pocfc12", bi.pocfc12.getText().toString());
+
+
+        MainApp.fc.setsB(String.valueOf(sBC)); //form 02 and 03
 
 
     }

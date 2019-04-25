@@ -96,7 +96,6 @@ public class EndingActivity extends Activity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                MainApp.familyMembersList.clear();
                 MainApp.memFlag = 0;
 
                 MainApp.TotalMembersCount = 0;
@@ -114,7 +113,7 @@ public class EndingActivity extends Activity {
                 MainApp.CounterDeceasedChild = 0;
 
                 MainApp.lstChild.clear();
-                MainApp.childsMap.clear();
+
 
                 MainApp.counter = 0;
 
@@ -151,7 +150,7 @@ public class EndingActivity extends Activity {
                 : "0");
 
         MainApp.fc.setIstatus88x(istatus888x.getText().toString());
-        MainApp.fc.setendingdatetime(dtToday);
+        MainApp.fc.setEndingdatetime(dtToday);
 
         Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
     }
