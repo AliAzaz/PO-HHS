@@ -10,7 +10,9 @@
             type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F1Section08Activity" />
 
     </data>
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layoutDirection="rtl"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,9 +33,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfh01" />
 
                     <EditText
@@ -57,9 +57,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfh02" />
 
                     <EditText
@@ -84,9 +82,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfh03" />
 
                     <EditText

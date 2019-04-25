@@ -11,7 +11,9 @@
 
     </data>
 
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layoutDirection="rtl"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -54,9 +56,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb01" />
 
 
@@ -96,9 +96,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb02" />
 
 
@@ -163,9 +161,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb03" />
 
 
@@ -204,9 +200,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb04" />
 
                     <EditText
@@ -240,9 +234,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb05" />
 
 
@@ -281,9 +273,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb06" />
 
 
@@ -322,9 +312,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+
                         android:text="@string/pofpb07" />
 
                     <LinearLayout
@@ -382,9 +370,6 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:text="@string/pofpb08" />
 
 

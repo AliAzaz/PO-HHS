@@ -10,7 +10,9 @@
             type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F1Section11Activity" />
 
     </data>
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layoutDirection="rtl"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,9 +43,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk01" />
 
                     <RadioGroup
@@ -113,9 +113,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk02" />
 
                     <RadioGroup
@@ -151,9 +149,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk03" />
 
                     <RadioGroup
@@ -213,9 +209,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk04" />
 
                     <RadioGroup
@@ -251,9 +245,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk05" />
 
                     <EditText
@@ -288,9 +280,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk06" />
 
                     <RadioGroup
@@ -327,9 +317,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk07" />
 
                     <RadioGroup
@@ -366,9 +354,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk08" />
 
                     <RadioGroup
@@ -425,15 +411,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk09" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/pocfk09h1" />
@@ -451,9 +433,7 @@
                             android:text="@string/pocfk09a" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/pocfk09h2" />
@@ -474,9 +454,7 @@
                             android:text="@string/pocfk09c" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/pocfk09h3" />
@@ -510,9 +488,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk10" />
 
                     <RadioGroup
@@ -551,9 +527,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk11" />
 
                     <RadioGroup
@@ -607,9 +581,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk12" />
 
                     <RadioGroup
@@ -645,9 +617,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfk12" />
 
                     <RadioGroup

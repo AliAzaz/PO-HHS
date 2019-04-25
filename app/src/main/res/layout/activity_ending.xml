@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     tools:context="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.EndingActivity">
 
+
     <ScrollView
+        android:layoutDirection="rtl"
         android:id="@+id/scrollView01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

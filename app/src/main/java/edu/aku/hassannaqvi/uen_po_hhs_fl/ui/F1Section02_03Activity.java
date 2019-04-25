@@ -112,7 +112,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
         sBC.put("pocfc10", bi.pocfc10a.isChecked() ? "1"
                 : bi.pocfc10b.isChecked() ? "2"
                 : "0");
-        sBC.put("pocfc10ax", bi.pocfc10ax.getText().toString());
+        sBC.put("pocfc1096x", bi.pocfc10ax.getText().toString());
 
         sBC.put("pocfc11", !bi.pocfc1198.isChecked() ? bi.pocfc11.getText().toString() : "98");
 

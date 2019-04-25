@@ -11,10 +11,12 @@
 
     </data>
 
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layoutDirection="rtl"
         tools:context=".ui.F1Section09_10Activity">
 
         <LinearLayout
@@ -41,9 +43,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfi01" />
 
                     <RadioGroup
@@ -81,9 +81,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfi02" />
 
                     <RadioGroup
@@ -131,9 +129,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfj01" />
 
                     <LinearLayout
@@ -261,9 +257,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfj02" />
 
                     <RadioGroup
@@ -292,7 +286,6 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

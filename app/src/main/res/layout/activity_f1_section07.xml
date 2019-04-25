@@ -13,7 +13,9 @@
             type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F1Section07Activity" />
     </data>
 
+
     <ScrollView
+        android:layoutDirection="rtl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -219,6 +221,7 @@
                                         android:id="@+id/pocfgbcgdt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -316,6 +319,7 @@
                                         android:id="@+id/pocfgopv0dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -439,6 +443,7 @@
                                         android:id="@+id/pocfgopv1dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -536,6 +541,7 @@
                                         android:id="@+id/pocfgp1dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -633,6 +639,7 @@
                                         android:id="@+id/pocfgpcv1dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -730,6 +737,7 @@
                                         android:id="@+id/pocfgrt1dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -846,6 +854,7 @@
                                         android:id="@+id/pocfgopv2dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -943,6 +952,7 @@
                                         android:id="@+id/pocfgp2dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1040,6 +1050,7 @@
                                         android:id="@+id/pocfgpcv2dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1137,6 +1148,7 @@
                                         android:id="@+id/pocfgrt2dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1252,6 +1264,7 @@
                                         android:id="@+id/pocfgopv3dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1349,6 +1362,7 @@
                                         android:id="@+id/pocfgp3dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1446,6 +1460,7 @@
                                         android:id="@+id/pocfgpcv3dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1543,6 +1558,7 @@
                                         android:id="@+id/pocfgipvdt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1658,6 +1674,7 @@
                                         android:id="@+id/pocfgm1dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1773,6 +1790,7 @@
                                         android:id="@+id/pocfgm2dt"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
@@ -1795,26 +1813,12 @@
             </LinearLayout>
 
 
-
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="32dp">
-
-                <Button
-                    android:id="@+id/btnEnd"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/holo_red_light"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btnNext"
@@ -1829,6 +1833,18 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
+                <Button
+                    android:id="@+id/btnEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

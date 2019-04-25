@@ -11,7 +11,9 @@
 
     </data>
 
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layoutDirection="rtl"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,15 +33,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff01" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/pocff01h1" />
@@ -64,9 +62,7 @@
                             android:text="@string/pocff01b" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/pocff01h2" />
@@ -126,15 +122,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff02" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:text="@string/pocff02h1" />
@@ -159,9 +151,7 @@
                             android:text="@string/pocff02b" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/pocff02h2" />
@@ -213,9 +203,7 @@
                             android:visibility='@{pocff02g.checked? View.VISIBLE : View.GONE}' />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:text="@string/pocff02h3" />
@@ -305,9 +293,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff03" />
 
 
@@ -347,9 +333,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff04" />
 
 
@@ -401,9 +385,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff05" />
 
 
@@ -469,9 +451,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff06" />
 
 
@@ -511,9 +491,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff07" />
 
 
@@ -580,9 +558,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff08" />
 
 
@@ -636,9 +612,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff09" />
 
 
@@ -663,9 +637,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff10" />
 
 
@@ -719,9 +691,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocff11" />
 
 

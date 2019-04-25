@@ -11,9 +11,11 @@
 
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
 
         <LinearLayout
             android:id="@+id/ll0203"
@@ -37,9 +39,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:text="@string/pocfb01" />
 
                         <EditText
@@ -58,9 +58,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            style="@style/i_textview"
                             android:text="@string/pocfb02" />
 
                         <EditText
@@ -86,9 +84,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfb03" />
 
                     <EditText
@@ -121,9 +117,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfb04" />
 
                     <EditText
@@ -155,9 +149,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfb05" />
 
                     <EditText
@@ -178,13 +170,11 @@
                 android:text="@string/pocfchHeading" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                style="@style/i_textview"
                 android:gravity="center"
+                android:text="@string/pocfch1"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:text="@string/pocfch1" />
+                android:textSize="20sp" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -196,9 +186,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc01" />
 
                     <RadioGroup
@@ -268,9 +256,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc02" />
 
                     <RadioGroup
@@ -336,12 +322,10 @@
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                style="@style/i_textview"
                 android:gravity="center"
-                android:textSize="20sp"
-                android:text="@string/pocfch2" />
+                android:text="@string/pocfch2"
+                android:textSize="20sp" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -353,9 +337,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc03" />
 
                     <RadioGroup
@@ -389,9 +371,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc04" />
 
                     <RadioGroup
@@ -425,9 +405,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc05" />
 
                     <RadioGroup
@@ -461,9 +439,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc06" />
 
                     <RadioGroup
@@ -497,9 +473,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc07" />
 
                     <RadioGroup
@@ -533,9 +507,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc08" />
 
                     <RadioGroup
@@ -569,9 +541,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc09" />
 
                     <RadioGroup
@@ -596,12 +566,10 @@
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                style="@style/i_textview"
                 android:gravity="center"
-                android:textSize="20sp"
-                android:text="@string/pocfch3" />
+                android:text="@string/pocfch3"
+                android:textSize="20sp" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -613,9 +581,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc10" />
 
                     <RadioGroup
@@ -650,12 +616,10 @@
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                style="@style/i_textview"
                 android:gravity="center"
-                android:textSize="20sp"
-                android:text="@string/pocfch4" />
+                android:text="@string/pocfch4"
+                android:textSize="20sp" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -667,9 +631,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc11" />
 
                     <EditText
@@ -703,9 +665,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        style="@style/i_textview"
                         android:text="@string/pocfc12" />
 
                     <EditText

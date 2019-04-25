@@ -202,10 +202,10 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="72dp"
             android:layout_marginLeft="72dp"
-            android:layout_marginRight="72dp"
             android:layout_marginTop="70dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginBottom="72dp"
             android:layoutDirection="rtl"
             android:orientation="vertical">
 
@@ -263,10 +263,11 @@
                         android:imeOptions="actionUnspecified"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:paddingEnd="4dp"
                         android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
                         android:singleLine="true"
                         android:textSize="18sp">
+
                         <requestFocus />
                     </EditText>
 
@@ -305,10 +306,10 @@
                         android:imeOptions="actionUnspecified"
                         android:inputType="textPassword"
                         android:maxLines="1"
-                        android:paddingEnd="4dp"
                         android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
                         android:singleLine="true"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <!--android:text="aku?dmu"-->
 
@@ -323,10 +324,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
+
+
                 android:layoutDirection="rtl"
                 android:popupBackground="#3d3d3d"
-                android:visibility="gone"
-                />
+                android:visibility="gone" />
 
             <Spinner
                 android:id="@+id/spUCs"
@@ -335,9 +337,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:gravity="center"
+
+
                 android:layoutDirection="rtl"
                 android:popupBackground="#3d3d3d"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
 
             <LinearLayout
