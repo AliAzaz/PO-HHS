@@ -456,36 +456,40 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--========================================================================================================-->
 
 
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
-                android:id="@+id/navbuttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="32dp">
 
                 <Button
-                    android:id="@+id/btn_End"
+                    android:id="@+id/btnEnd"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/red"
-                    android:onClick='@{() -> callback.BtnEnd()}'
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview"
-                    android:textColor="#ff1e1e"
-                    android:visibility="gone" />
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/btn_Continue"
+                    android:id="@+id/btnNext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/green"
-                    android:onClick='@{() -> callback.BtnContinue()}'
-                    android:text="@string/start_interview"
-                    android:textColor="#1ed61e" />
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
