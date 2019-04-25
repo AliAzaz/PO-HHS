@@ -579,7 +579,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     MainApp.userName = mEmail;
                     MainApp.admin = mEmail.contains("@");
 
-                    Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent iLogin = new Intent(LoginActivity.this, F1Section04_05Activity.class);
                     startActivity(iLogin);
 
                 } else {
