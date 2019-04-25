@@ -30,10 +30,7 @@ import java.util.List;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.DeceasedChildContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.SectionIIMContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivitySyncBinding;
@@ -346,59 +343,6 @@ public class SyncActivity extends AppCompatActivity {
                     db.getUnsyncedForms(),0,uploadListAdapter,uploadlist
             ).execute();
             bi.noDataItem.setVisibility(View.GONE);
-
-//  *******************************************     Familymembers      *********************************
-
-            Toast.makeText(getApplicationContext(), "Syncing Family Members", Toast.LENGTH_SHORT).show();
-            if (uploadlistActivityCreated){
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "FamilyMembers",
-                    "updateFamilyMember",
-                    FamilyMembersContract.class,
-                    MainApp._HOST_URL + FamilyMembersContract.familyMembers._URL,
-                    db.getUnsyncedFamilyMembers(),1,uploadListAdapter,uploadlist
-            ).execute();
-
- //  *******************************************     DeceasedChild      *********************************
-
-            Toast.makeText(getApplicationContext(), "Syncing Deceased Child", Toast.LENGTH_SHORT).show();
-            if (uploadlistActivityCreated){
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "DeceasedChild",
-                    "updateDeceasedChild",
-                    DeceasedChildContract.class,
-                    MainApp._HOST_URL + DeceasedChildContract.DeceasedChild._URL,
-                    db.getUnsyncedDeceasedChild(),2,uploadListAdapter,uploadlist
-            ).execute();
-
-
- //  *******************************************     IIM      *********************************
-
-            Toast.makeText(getApplicationContext(), "Syncing Section IIM", Toast.LENGTH_SHORT).show();
-            if (uploadlistActivityCreated){
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "IM",
-                    "updateIM",
-                    SectionIIMContract.class,
-                    MainApp._HOST_URL + SectionIIMContract.singleIm._URL,
-                    db.getUnsyncedIM(),3,uploadListAdapter,uploadlist
-            ).execute();
-
 
             uploadlistActivityCreated = false;
 
