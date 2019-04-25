@@ -23,6 +23,9 @@ public class F1Section11Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section11);
+        bi.setCallback(this);
+
+        this.setTitle(R.string.pocfsec11);
     }
 
     public void BtnContinue() {
@@ -34,7 +37,6 @@ public class F1Section11Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

@@ -16,22 +16,11 @@
         android:layout_height="match_parent"
         tools:context=".ui.F1Section08Activity">
 
-
         <LinearLayout
             android:id="@+id/ll08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="2dp"
-                android:background="@color/colorPrimaryDark"
-                android:gravity="center"
-                android:text="@string/pocfsec8"
-                android:textSize="40sp" />
 
 
             <android.support.v7.widget.CardView style="@style/cardView">
