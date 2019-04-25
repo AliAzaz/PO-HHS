@@ -24,6 +24,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section02_03);
+        bi.setCallback(this);
     }
 
     public void BtnContinue() {
@@ -34,9 +35,8 @@ public class F1Section02_03Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+                finish();
                 startActivity(new Intent(this, F1Section04_05Activity.class));
-//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
-
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

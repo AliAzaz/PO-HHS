@@ -8,15 +8,15 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme1" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <item name="android:textViewStyle">@style/labels</item>
+        <item name="android:textViewStyle">@style/i_textview</item>
         <item name="android:editTextStyle">@style/textInput</item>
         <item name="android:buttonStyle">@style/buttons</item>
         <item name="android:checkboxStyle">@style/checkbox</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
-        <item name="android:toolbarStyle">@style/ActionBar</item>
-        <item name="actionBarStyle">@style/ActionBar</item>
+        <!--<item name="android:toolbarStyle">@style/ActionBar</item>
+        <item name="actionBarStyle">@style/ActionBar</item>-->
         <!-- Customize your theme here. -->
     </style>
 
@@ -52,7 +52,7 @@
         <!--<item name="android:background">@color/colorPrimary</item>-->
         <item name="android:drawable">@drawable/textview_background_grad</item>
         <item name="android:padding">5dp</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">#000000</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:paddingTop">16dp</item>
@@ -293,6 +293,7 @@
         <item name="android:paddingTop">16dp</item>
         <item name="android:elevation">1dp</item>
         <item name="android:paddingStart">8dp</item>
+        <item name="android:layout_marginRight">10dp</item>
     </style>
 
 
