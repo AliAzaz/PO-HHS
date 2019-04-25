@@ -12,7 +12,12 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF3Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
@@ -21,13 +26,17 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 public class F3Section01Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     ActivityF3Section01Binding bi;
+    DatabaseHelper db;
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section01);
         bi.setCallback(this);
-        this.setTitle("F3 Section 01");
+        this.setTitle(R.string.pofisec1);
+
+        db = new DatabaseHelper(this);
         events_call();
     }
 
@@ -40,12 +49,8 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Form 03", Toast.LENGTH_SHORT).show();
-                Intent ii = new Intent(this, F1Section02_03Activity.class);
-                startActivity(ii);
-
-                //MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
-
+                finish();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -57,18 +62,18 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
     }
 
     private boolean UpdateDB() {
-       /* try {
-            Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
-            return longID == 1;
+        long updcount = db.addForm(MainApp.fc);
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }*/
-
-        return true;
-
+        MainApp.fc.set_ID(String.valueOf(updcount));
+        if (updcount != 0) {
+            MainApp.fc.set_UID(
+                    (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));
+            db.updateFormID();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     public boolean formValidation() {
@@ -77,6 +82,12 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
     }
 
     private void SaveDraft() throws JSONException {
+
+        MainApp.fc = new FormsContract();
+        MainApp.fc.setDeviceID(MainApp.deviceId);
+        MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        MainApp.fc.setFormType(MainApp.formtype);
+        MainApp.fc.setFormDate(dtToday);
 
         JSONObject form03_01 = new JSONObject();
 
@@ -127,8 +138,8 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
 
         form03_01.put("pofi13", bi.pofi13a.isChecked() ? "1" : bi.pofi13b.isChecked() ? "2" : "0");
 
-        //fc.setSqoc1(String.valueOf(form03_01));
-
+        MainApp.fc.setsA(String.valueOf(form03_01));
+        MainApp.setGPS(this);
     }
 
     @Override
@@ -140,10 +151,10 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
 
         if (bi.pofi09b.isChecked()) {
             bi.pofi10.setEnabled(false);
-            for(int a = 0; a < bi.pofi11cv.getChildCount(); i++) {
+            for (int a = 0; a < bi.pofi11cv.getChildCount(); i++) {
                 View v = bi.pofi11cv.getChildAt(a);
-                if(v instanceof CheckBox) {
-                    ((CheckBox)v).setChecked(false);
+                if (v instanceof CheckBox) {
+                    ((CheckBox) v).setChecked(false);
                 }
             }
         } else {

@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF2Section02Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
@@ -18,13 +19,11 @@ public class F2Section02Activity extends AppCompatActivity {
 
     ActivityF2Section02Binding bi;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section02);
+        bi.setCallback(this);
     }
 
     public void BtnContinue() {
@@ -35,9 +34,8 @@ public class F2Section02Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete",true));
-//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
-
+                finish();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -45,8 +43,17 @@ public class F2Section02Activity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        return true;
+        int updcount = db.updateSB();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -88,6 +95,7 @@ public class F2Section02Activity extends AppCompatActivity {
                 : bi.pofpb08h.isChecked() ? "8"
                 : "0");
 
+        MainApp.fc.setsB(String.valueOf(f02));
     }
 
     private boolean formValidation() {

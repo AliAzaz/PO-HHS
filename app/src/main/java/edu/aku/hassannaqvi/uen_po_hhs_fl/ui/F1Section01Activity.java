@@ -255,7 +255,6 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
 
-
         JSONObject form01_01 = new JSONObject();
         form01_01.put("Taluka", bi.pocfa01.getSelectedItem());
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
@@ -289,7 +288,6 @@ public class F1Section01Activity extends AppCompatActivity {
 
         MainApp.fc.setsA(String.valueOf(form01_01));
         MainApp.setGPS(this);
-
 
     }
 

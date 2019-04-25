@@ -411,15 +411,19 @@ public class MainActivity extends Activity {
             switch (id) {
                 case R.id.form01:
                     oF = new Intent(MainActivity.this, F1Section01Activity.class);
-                    MainApp.formtype = "form01";
+                    MainApp.formtype = "f1";
                     break;
                 case R.id.form02:
-                    oF = new Intent(MainActivity.this, F2Section01Activity.class);
-                    MainApp.formtype = "form02";
+                    oF = new Intent(MainActivity.this, F2Section01Activity.class).putExtra("day", "7");
+                    MainApp.formtype = "f2";
+                    break;
+                case R.id.form02_b:
+                    oF = new Intent(MainActivity.this, F2Section01Activity.class).putExtra("day", "14");
+                    MainApp.formtype = "f2";
                     break;
                 case R.id.form03:
                     oF = new Intent(MainActivity.this, F3Section01Activity.class);
-                    MainApp.formtype = "form03";
+                    MainApp.formtype = "f3";
                     break;
 
             }

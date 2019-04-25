@@ -109,7 +109,16 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 02 (Follow Ups)" />
+                android:text="Form 02 (Follow Ups - 7 Day)" />
+
+            <Button
+                android:id="@+id/form02_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="openForm"
+                android:text="Form 02 (Follow Ups - 14 Day)" />
 
             <Button
                 android:id="@+id/form03"
