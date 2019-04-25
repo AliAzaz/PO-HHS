@@ -326,7 +326,7 @@
                             <EditText
                                 android:id="@+id/pocfa08"
                                 style="@style/EditTextAlphaNumeric"
-                                android:inputType="textCapWords"
+                                android:inputType="textCapCharacters"
                                 android:hint="@string/pocfa08" />
 
                         </LinearLayout>
