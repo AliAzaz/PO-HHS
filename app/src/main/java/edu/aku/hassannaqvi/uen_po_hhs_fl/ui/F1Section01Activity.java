@@ -215,9 +215,13 @@ public class F1Section01Activity extends AppCompatActivity {
 
     }
 
-    public void BtnContinue() throws JSONException {
+    public void BtnContinue() {
         if (formValidation()) {
-            SaveDraft();
+            try {
+                SaveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             if (UpdateDB()) {
                 startActivity(new Intent(this, F1Section02_03Activity.class));
             } else {
@@ -231,7 +235,6 @@ public class F1Section01Activity extends AppCompatActivity {
         long updcount = db.addForm(MainApp.fc);
 
         MainApp.fc.set_ID(String.valueOf(updcount));
-
         if (updcount != 0) {
             MainApp.fc.set_UID(
                     (MainApp.fc.getDeviceID() + MainApp.fc.get_ID()));

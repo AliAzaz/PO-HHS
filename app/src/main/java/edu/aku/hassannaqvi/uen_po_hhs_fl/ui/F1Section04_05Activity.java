@@ -11,6 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0405Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
@@ -55,17 +56,18 @@ public class F1Section04_05Activity extends AppCompatActivity implements RadioGr
     }
 
     private boolean UpdateDB() {
-        /*try {
-            Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
-            return longID == 1;
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }*/
+        int updcount = db.updateSC();
 
-        return true;
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
 
     }
 
@@ -104,6 +106,7 @@ public class F1Section04_05Activity extends AppCompatActivity implements RadioGr
         s0405.put("pocfe17", bi.pocfe17.getText().toString());
         s0405.put("pocfe18", bi.pocfe18a.isChecked() ? "1" : bi.pocfe18b.isChecked() ? "2" : bi.pocfe18c.isChecked() ? "3" : "0");
 
+        MainApp.fc.setsC(String.valueOf(s0405));
         //fc.setSqoc1(String.valueOf(s0405));
 
     }

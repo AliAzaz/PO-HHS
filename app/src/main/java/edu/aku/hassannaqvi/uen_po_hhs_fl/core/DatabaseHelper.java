@@ -101,7 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_SYNCED + " TEXT," +
             FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
-//    private static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE "
+    //    private static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE "
 //            + familyMembers.TABLE_NAME + "("
 //            + familyMembers.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
 //            + familyMembers.COLUMN_PROJECT_NAME + " TEXT," +
@@ -159,7 +159,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             MWRATable.COLUMN_SYNCED_DATE + " TEXT" +
 
             " );";
-//    private static final String SQL_DELETE_FAMILYMEMBERS =
+    //    private static final String SQL_DELETE_FAMILYMEMBERS =
 //            "DROP TABLE IF EXISTS " + familyMembers.TABLE_NAME;
 //    private static final String SQL_DELETE_DECEASED_CHILD =
 //            "DROP TABLE IF EXISTS " + DeceasedChild.TABLE_NAME;
@@ -173,7 +173,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "DROP TABLE IF EXISTS " + singleUser.TABLE_NAME;
     private static final String SQL_DELETE_FORMS =
             "DROP TABLE IF EXISTS " + FormsTable.TABLE_NAME;
-//    private static final String SQL_CREATE_SEC_I_IM = "CREATE TABLE "
+    //    private static final String SQL_CREATE_SEC_I_IM = "CREATE TABLE "
 //            + singleIm.TABLE_NAME + "("
 //            + singleIm.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
 //            singleIm.COLUMN_PROJECT_NAME + " TEXT," +
@@ -704,6 +704,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allAC;
     }
+
     public void syncVersionApp(JSONArray Versionlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(VersionAppTable.TABLE_NAME, null, null);
@@ -1874,6 +1875,118 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_SA, MainApp.fc.getsA());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSB() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SB, MainApp.fc.getsB());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSC() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SC, MainApp.fc.getsC());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSD() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SD, MainApp.fc.getsD());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSE() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SE, MainApp.fc.getsE());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSF() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SF, MainApp.fc.getsF());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSG() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SG, MainApp.fc.getsG());
+
+        String selection = FormsTable.COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSH() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SH, MainApp.fc.getsH());
 
         String selection = FormsTable.COLUMN_ID + " = ?";
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};

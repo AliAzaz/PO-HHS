@@ -417,13 +417,23 @@ public class F1Section07Activity extends AppCompatActivity {
         sG.put("pocfgm2dt98", bi.pocfgm2dt98.isChecked() ? "1" : "0");
         sG.put("pocfgm2dt", bi.pocfgm2dt.getText().toString());
 
-        MainApp.fc.setsG(String.valueOf(sG));
+        MainApp.fc.setsE(String.valueOf(sG));
 
     }
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        int updcount = db.updateSE();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
     }
 }
