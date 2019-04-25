@@ -331,12 +331,5 @@ public class F1Section01Activity extends AppCompatActivity {
                 .show();
 
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
 }
 
