@@ -92,6 +92,18 @@ public class F1Section07Activity extends AppCompatActivity {
                 }
             }
         });
+        bi.pocfgrt1dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgrt1dt.setText(null);
+                    bi.pocfgrt1dt.setEnabled(false);
+                } else {
+                    bi.pocfgrt1dt.setEnabled(true);
+                    bi.pocfgrt1dt.setError(null);
+                }
+            }
+        });
         bi.pocfgopv2dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -125,6 +137,18 @@ public class F1Section07Activity extends AppCompatActivity {
                 } else {
                     bi.pocfgpcv2dt.setEnabled(true);
                     bi.pocfgpcv2dt.setError(null);
+                }
+            }
+        });
+        bi.pocfgrt2dt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfgrt2dt.setText(null);
+                    bi.pocfgrt2dt.setEnabled(false);
+                } else {
+                    bi.pocfgrt2dt.setEnabled(true);
+                    bi.pocfgrt2dt.setError(null);
                 }
             }
         });
@@ -299,6 +323,14 @@ public class F1Section07Activity extends AppCompatActivity {
         sG.put("pocfgpcv1dt98", bi.pocfgpcv1dt98.isChecked() ? "1" : "0");
         sG.put("pocfgpcv1dt", bi.pocfgpcv1dt.getText().toString());
 
+//          pocfgrt1
+        sG.put("pocfgrt1", bi.pocfgrt1a.isChecked() ? "1"
+                : bi.pocfgrt1b.isChecked() ? "2"
+                : bi.pocfgrt197.isChecked() ? "97"
+                : "0");
+        sG.put("pocfgrt1dt98", bi.pocfgrt1dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgrt1dt", bi.pocfgrt1dt.getText().toString());
+
 //       at age of 10 weeks
 
 //          pocfgopv2
@@ -324,6 +356,14 @@ public class F1Section07Activity extends AppCompatActivity {
                 : "0");
         sG.put("pocfgpcv2dt98", bi.pocfgpcv2dt98.isChecked() ? "1" : "0");
         sG.put("pocfgpcv2dt", bi.pocfgpcv2dt.getText().toString());
+
+//          pocfgrt2
+        sG.put("pocfgrt2", bi.pocfgrt2a.isChecked() ? "1"
+                : bi.pocfgrt2b.isChecked() ? "2"
+                : bi.pocfgrt297.isChecked() ? "97"
+                : "0");
+        sG.put("pocfgrt2dt98", bi.pocfgrt2dt98.isChecked() ? "1" : "0");
+        sG.put("pocfgrt2dt", bi.pocfgrt2dt.getText().toString());
 
 //       at age of 14 weeks
 
