@@ -17,7 +17,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0405Bindin
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 
-public class F1Section04_05Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class F1Section04_05Activity extends AppCompatActivity {
 
     ActivityF1Section0405Binding bi;
 
@@ -111,57 +111,75 @@ public class F1Section04_05Activity extends AppCompatActivity implements RadioGr
 
     }
 
-    @Override
-    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-        if (!bi.pocfd01a.isChecked()) {
-            bi.pocfd02.clearCheck();
-        }
-
-        if (bi.pocfe04c.isChecked()) {
-            bi.pocfe05.clearCheck();
-            bi.pocfe06.setEnabled(false);
-        } else {
-            bi.pocfe06.setEnabled(true);
-        }
-
-        if (!bi.pocfe05a.isChecked()) {
-            bi.pocfe06.setEnabled(false);
-        } else {
-            bi.pocfe06.setEnabled(true);
-        }
-
-
-        if (!bi.pocfe10a.isChecked()) {
-            bi.pocfe11.setEnabled(false);
-            bi.pocfe12.clearCheck();
-        } else {
-            bi.pocfe11.setEnabled(true);
-        }
-
-        if (!bi.pocfe13a.isChecked()) {
-            bi.pocfe14.setEnabled(false);
-            bi.pocfe15.clearCheck();
-        } else {
-            bi.pocfe14.setEnabled(true);
-        }
-
-        if (!bi.pocfe16a.isChecked()) {
-            bi.pocfe17.setEnabled(false);
-            bi.pocfe18.clearCheck();
-        } else {
-            bi.pocfe17.setEnabled(true);
-        }
-    }
-
     void events_call() {
 
-        bi.pocfd01.setOnCheckedChangeListener(this);
-        bi.pocfe04.setOnCheckedChangeListener(this);
-        bi.pocfe05.setOnCheckedChangeListener(this);
-        bi.pocfe10.setOnCheckedChangeListener(this);
-        bi.pocfe13.setOnCheckedChangeListener(this);
-        bi.pocfe16.setOnCheckedChangeListener(this);
+        bi.pocfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!bi.pocfd01a.isChecked()) {
+                    bi.pocfd02.clearCheck();
+                }
+            }
+        });
+
+        bi.pocfe04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (bi.pocfe04c.isChecked()) {
+                    bi.pocfe05.clearCheck();
+                    bi.pocfe06.setEnabled(false);
+                } else {
+                    bi.pocfe06.setEnabled(true);
+                }
+            }
+        });
+
+        bi.pocfe05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!bi.pocfe05a.isChecked()) {
+                    bi.pocfe06.setEnabled(false);
+                } else {
+                    bi.pocfe06.setEnabled(true);
+                }
+            }
+        });
+
+        bi.pocfe10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!bi.pocfe10a.isChecked()) {
+                    bi.pocfe11.setEnabled(false);
+                    bi.pocfe12.clearCheck();
+                } else {
+                    bi.pocfe11.setEnabled(true);
+                }
+            }
+        });
+
+        bi.pocfe13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!bi.pocfe13a.isChecked()) {
+                    bi.pocfe14.setEnabled(false);
+                    bi.pocfe15.clearCheck();
+                } else {
+                    bi.pocfe14.setEnabled(true);
+                }
+            }
+        });
+
+        bi.pocfe16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!bi.pocfe16a.isChecked()) {
+                    bi.pocfe17.setEnabled(false);
+                    bi.pocfe18.clearCheck();
+                } else {
+                    bi.pocfe17.setEnabled(true);
+                }
+            }
+        });
 
     }
 
