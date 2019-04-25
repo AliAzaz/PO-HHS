@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -25,7 +27,7 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section01);
         bi.setCallback(this);
-        this.setTitle("Form Three 03");
+        this.setTitle("F3 Section 01");
         events_call();
     }
 
@@ -55,7 +57,7 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
     }
 
     private boolean UpdateDB() {
-        /*try {
+       /* try {
             Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
@@ -128,18 +130,23 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-        if (bi.pofi05a.isChecked()) {
+        if (!bi.pofi05a.isChecked()) {
             bi.pofi06.clearCheck();
         }
 
-        /*if (bi.pofi09b.isChecked()) {
-            bi.pocfe05.clearCheck();
-            bi.pocfe10.setEnabled(false);
+        if (bi.pofi09b.isChecked()) {
+            bi.pofi10.setEnabled(false);
+            for(int a = 0; a < bi.pofi11cv.getChildCount(); i++) {
+                View v = bi.pofi11cv.getChildAt(a);
+                if(v instanceof CheckBox) {
+                    ((CheckBox)v).setChecked(false);
+                }
+            }
         } else {
-            bi.pocfe06.setEnabled(true);
+            bi.pofi10.setEnabled(true);
         }
 
-        if (!bi.pocfe05a.isChecked()) {
+        /*if (!bi.pocfe05a.isChecked()) {
             bi.pocfe06.setEnabled(false);
         } else {
             bi.pocfe06.setEnabled(true);
@@ -170,8 +177,8 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
 
     void events_call() {
 
-        /*bi.pocfd01.setOnCheckedChangeListener(this);
-        bi.pocfe04.setOnCheckedChangeListener(this);
+        bi.pofi05.setOnCheckedChangeListener(this);
+       /* bi.pocfe04.setOnCheckedChangeListener(this);
         bi.pocfe05.setOnCheckedChangeListener(this);
         bi.pocfe10.setOnCheckedChangeListener(this);
         bi.pocfe13.setOnCheckedChangeListener(this);
