@@ -53,6 +53,8 @@ public class F1Section01Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section_01);
         bi.setCallback(this);
 
+        this.setTitle(R.string.pocfh1);
+
         settingListeners();
         initializingComponents();
     }
