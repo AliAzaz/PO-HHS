@@ -78,52 +78,56 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject form03 = new JSONObject();
+        JSONObject form03_01 = new JSONObject();
 
-        form03.put("pofi02", bi.pofi02a.isChecked() ? "1" : bi.pofi02b.isChecked() ? "2" : "0");
-        form03.put("pofi02bx", bi.pofi02bx.getText().toString());
-        
-        form03.put("pofi03", bi.pofi03a.isChecked() ? "1" : bi.pofi03b.isChecked() ? "2" : "0");
-        form03.put("pofi03bx", bi.pofi03bx.getText().toString());
-        
-        form03.put("pofi04", bi.pofi04a.isChecked() ? "1" : bi.pofi04b.isChecked() ? "2" : "0");
-        form03.put("pofi04ax", bi.pofi04ax.getText().toString());
-        
-        form03.put("pofi05", bi.pofi05a.isChecked() ? "1" : bi.pofi05b.isChecked() ? "2" : "0");
-        
-        form03.put("pofi06", bi.pofi06a.isChecked() ? "1" : bi.pofi06b.isChecked() ? "2" : bi.pofi0696.isChecked() ? "96" : "0");
-        form03.put("pofi0696x", bi.pofi0696x.getText().toString());
+        form03_01.put("pofi01", bi.pofi01.getText().toString());
 
-        form03.put("pofi07", bi.pofi07a.isChecked() ? "1" : bi.pofi07b.isChecked() ? "2" : "0");
+        form03_01.put("pofi02", bi.pofi02a.isChecked() ? "1" : bi.pofi02b.isChecked() ? "2" : "0");
+        form03_01.put("pofi02bx", bi.pofi02bx.getText().toString());
 
-        form03.put("pofi08", bi.pofi08a.isChecked() ? "1" : bi.pofi08b.isChecked() ? "2" : "0");
+        form03_01.put("pofi03", bi.pofi03a.isChecked() ? "1" : bi.pofi03b.isChecked() ? "2" : "0");
+        form03_01.put("pofi03bx", bi.pofi03bx.getText().toString());
 
-        form03.put("pofi09", bi.pofi09a.isChecked() ? "1" : bi.pofi09b.isChecked() ? "2" : "0");
+        form03_01.put("pofi04", bi.pofi04a.isChecked() ? "1" : bi.pofi04b.isChecked() ? "2" : "0");
+        form03_01.put("pofi04ax", bi.pofi04ax.getText().toString());
 
-        form03.put("pofi11a", bi.pofi11a.isChecked() ? "1" : "0");
-        form03.put("pofi11b", bi.pofi11b.isChecked() ? "2" : "0");
-        form03.put("pofi11c", bi.pofi11c.isChecked() ? "3" : "0");
-        form03.put("pofi11d", bi.pofi11d.isChecked() ? "4" : "0");
-        form03.put("pofi11e", bi.pofi11e.isChecked() ? "5" : "0");
-        form03.put("pofi11f", bi.pofi11f.isChecked() ? "6" : "0");
-        form03.put("pofi1196", bi.pofi1196.isChecked() ? "96" : "0");
-        form03.put("pofi1196x", bi.pofi1196x.getText().toString());
+        form03_01.put("pofi05", bi.pofi05a.isChecked() ? "1" : bi.pofi05b.isChecked() ? "2" : "0");
 
-        form03.put("pofi12a", bi.pofi12a.isChecked() ? "1" : "0");
-        form03.put("pofi12b", bi.pofi12b.isChecked() ? "2" : "0");
-        form03.put("pofi12c", bi.pofi12c.isChecked() ? "3" : "0");
-        form03.put("pofi12d", bi.pofi12d.isChecked() ? "4" : "0");
-        form03.put("pofi12e", bi.pofi12e.isChecked() ? "5" : "0");
-        form03.put("pofi12f", bi.pofi12f.isChecked() ? "6" : "0");
-        form03.put("pofi12g", bi.pofi12g.isChecked() ? "7" : "0");
-        form03.put("pofi12h", bi.pofi12h.isChecked() ? "8" : "0");
-        form03.put("pofi12i", bi.pofi12i.isChecked() ? "9" : "0");
-        form03.put("pofi1296", bi.pofi1296.isChecked() ? "96" : "0");
-        form03.put("pofi1296x", bi.pofi1296x.getText().toString());
+        form03_01.put("pofi06", bi.pofi06a.isChecked() ? "1" : bi.pofi06b.isChecked() ? "2" : bi.pofi0696.isChecked() ? "96" : "0");
+        form03_01.put("pofi0696x", bi.pofi0696x.getText().toString());
 
-        form03.put("pofi13", bi.pofi13a.isChecked() ? "1" : bi.pofi13b.isChecked() ? "2" : "0");
+        form03_01.put("pofi07", bi.pofi07a.isChecked() ? "1" : bi.pofi07b.isChecked() ? "2" : "0");
 
-        //fc.setSqoc1(String.valueOf(form03));
+        form03_01.put("pofi08", bi.pofi08a.isChecked() ? "1" : bi.pofi08b.isChecked() ? "2" : "0");
+
+        form03_01.put("pofi09", bi.pofi09a.isChecked() ? "1" : bi.pofi09b.isChecked() ? "2" : "0");
+
+        form03_01.put("pofi10", bi.pofi10.getText().toString());
+
+        form03_01.put("pofi11a", bi.pofi11a.isChecked() ? "1" : "0");
+        form03_01.put("pofi11b", bi.pofi11b.isChecked() ? "2" : "0");
+        form03_01.put("pofi11c", bi.pofi11c.isChecked() ? "3" : "0");
+        form03_01.put("pofi11d", bi.pofi11d.isChecked() ? "4" : "0");
+        form03_01.put("pofi11e", bi.pofi11e.isChecked() ? "5" : "0");
+        form03_01.put("pofi11f", bi.pofi11f.isChecked() ? "6" : "0");
+        form03_01.put("pofi1196", bi.pofi1196.isChecked() ? "96" : "0");
+        form03_01.put("pofi1196x", bi.pofi1196x.getText().toString());
+
+        form03_01.put("pofi12a", bi.pofi12a.isChecked() ? "1" : "0");
+        form03_01.put("pofi12b", bi.pofi12b.isChecked() ? "2" : "0");
+        form03_01.put("pofi12c", bi.pofi12c.isChecked() ? "3" : "0");
+        form03_01.put("pofi12d", bi.pofi12d.isChecked() ? "4" : "0");
+        form03_01.put("pofi12e", bi.pofi12e.isChecked() ? "5" : "0");
+        form03_01.put("pofi12f", bi.pofi12f.isChecked() ? "6" : "0");
+        form03_01.put("pofi12g", bi.pofi12g.isChecked() ? "7" : "0");
+        form03_01.put("pofi12h", bi.pofi12h.isChecked() ? "8" : "0");
+        form03_01.put("pofi12i", bi.pofi12i.isChecked() ? "9" : "0");
+        form03_01.put("pofi1296", bi.pofi1296.isChecked() ? "96" : "0");
+        form03_01.put("pofi1296x", bi.pofi1296x.getText().toString());
+
+        form03_01.put("pofi13", bi.pofi13a.isChecked() ? "1" : bi.pofi13b.isChecked() ? "2" : "0");
+
+        //fc.setSqoc1(String.valueOf(form03_01));
 
     }
 
