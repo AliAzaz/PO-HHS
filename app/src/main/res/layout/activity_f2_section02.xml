@@ -53,6 +53,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -94,6 +95,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -160,6 +162,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -200,6 +203,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -235,6 +239,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -275,6 +280,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -315,6 +321,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -374,6 +381,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/i_textview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -456,9 +464,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                tools:visibility="visible">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_End"

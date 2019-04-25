@@ -260,13 +260,13 @@ public class F1Section01Activity extends AppCompatActivity {
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
         form01_01.put("UC", bi.pocfa02.getSelectedItem());
         form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-        form01_01.put("LHW Name", bi.pocfa03.getSelectedItem());
+        form01_01.put("LHWName", bi.pocfa03.getSelectedItem());
         form01_01.put("pocfa03", lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
         form01_01.put("Village", bi.pocfa04.getSelectedItem());
         form01_01.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
 
-        form01_01.put("Address", bi.pocfa05.getText().toString());
-        form01_01.put("HouseID", bi.pocfa06.getText().toString());
+        form01_01.put("pocfa05", bi.pocfa05.getText().toString());
+        form01_01.put("pocfa06", bi.pocfa06.getText().toString());
 
         form01_01.put("pocfa07", bi.pocfa07a.isChecked() ? "1"
                 : bi.pocfa07b.isChecked() ? "2"

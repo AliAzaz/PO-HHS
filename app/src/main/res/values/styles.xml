@@ -8,7 +8,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme1" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
         <item name="android:textViewStyle">@style/labels</item>
         <item name="android:editTextStyle">@style/textInput</item>
@@ -107,6 +107,7 @@
         <item name="android:layout_margin">10dp</item>
         <item name="android:background">@drawable/et_style</item>
         <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:padding">10dp</item>
     </style>
 
