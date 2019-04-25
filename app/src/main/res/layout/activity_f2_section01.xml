@@ -648,7 +648,6 @@
                     android:text="@string/end_interview"
                     android:textColor="@color/white"
                     android:textSize="24sp"
-                    android:visibility="gone"
                     android:textStyle="bold" />
 
                 <Button
@@ -665,8 +664,10 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
+
 </layout>
 
