@@ -222,10 +222,7 @@
                                         android:layout_weight="70"
                                         android:focusable="false"
                                         android:hint="DD/MM/YYYY"
-                                        android:tag="fas02c2496"
-                                        android:text='@{nc3bcgdt98.checked ? "" : nc3bcgdt.getText.toString}'
                                         android:textColor="@android:color/black"
-                                        android:visibility='@{nc3bcgdt98.checked ? View.GONE : View.VISIBLE}'
                                         app:dateFormat="dd-MM-yyyy"
                                         app:maxDate="CR_DATE"
                                         app:minDate="01/01/1981" />
@@ -284,6 +281,54 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3opv0a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3opv0dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3opv0a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3opv0dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                     </LinearLayout>
 
@@ -360,6 +405,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3opv1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3opv1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3opv1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3opv1dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                         <!-- Penta - 1 -->
                         <TextView
                             android:layout_width="match_parent"
@@ -409,6 +502,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3p1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3p1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3p1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3p1dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                         <!-- PCV - 1 -->
                         <TextView
                             android:layout_width="match_parent"
@@ -457,6 +598,54 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3pcv1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3pcv1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3pcv1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3pcv1dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                     </LinearLayout>
 
@@ -526,6 +715,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3opv2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3opv2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3opv2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3opv2dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                         <!-- Penta - 2 -->
                         <TextView
                             android:layout_width="match_parent"
@@ -575,6 +812,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3p2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3p2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3p2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3p2dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                         <!-- PVC - 2 -->
                         <TextView
                             android:layout_width="match_parent"
@@ -623,6 +908,54 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3pcv2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3pcv2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3pcv2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3pcv2dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                     </LinearLayout>
 
@@ -691,6 +1024,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3opv3a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3opv3dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3opv3a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3opv3dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                         <!-- Penta - 3 -->
                         <TextView
                             android:layout_width="match_parent"
@@ -739,6 +1120,54 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3p3.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3p3dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3p3a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3p3dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                         <!-- PCV - 3 -->
                         <TextView
@@ -789,6 +1218,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3pcv3a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3pcv3dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3pcv3a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3pcv3dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                         <!-- IPV  -->
                         <TextView
                             android:layout_width="match_parent"
@@ -837,6 +1314,54 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3ipva.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3ipvdt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3ipva.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3ipvdt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                     </LinearLayout>
 
@@ -905,6 +1430,54 @@
 
                         </RadioGroup>
 
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3m1a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3m1dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3m1a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3m1dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
                     </LinearLayout>
 
                     <!-- At age of 15 months-->
@@ -971,6 +1544,54 @@
                                 android:text="@string/na" />
 
                         </RadioGroup>
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardView"
+                            android:visibility="@{nc3m2a.checked ? View.VISIBLE : View.GONE}">
+
+                            <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/pink_100"
+                                    android:text="@string/nc3doi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <LinearLayout
+                                    style="@style/linearlayout_view_wt_bound"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/nc3m2dt98"
+                                        style="@style/checkbox"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="30"
+                                        android:checked="@{nc3m2a.checked ? false : false}"
+                                        android:padding="8dp"
+                                        android:tag="-1"
+                                        android:text="@string/dkn" />
+
+                                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                        android:id="@+id/nc3m2dt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="70"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:textColor="@android:color/black"
+                                        app:dateFormat="dd-MM-yyyy"
+                                        app:maxDate="CR_DATE"
+                                        app:minDate="01/01/1981" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
 
                     </LinearLayout>
 

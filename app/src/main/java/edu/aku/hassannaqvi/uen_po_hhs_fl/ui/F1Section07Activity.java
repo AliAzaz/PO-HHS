@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -16,7 +17,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section07Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
-public class F1Section07Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class F1Section07Activity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     ActivityF1Section07Binding bi;
     DatabaseHelper db;
@@ -31,21 +32,20 @@ public class F1Section07Activity extends AppCompatActivity implements RadioGroup
         db = new DatabaseHelper(this);
         bi.setCallback(this);
 
-        bi.nc302.setOnCheckedChangeListener(this);
-        bi.nc3bcg.setOnCheckedChangeListener(this);
-        bi.nc3opv0.setOnCheckedChangeListener(this);
-        bi.nc3opv1.setOnCheckedChangeListener(this);
-        bi.nc3p1.setOnCheckedChangeListener(this);
-        bi.nc3pcv1.setOnCheckedChangeListener(this);
-        bi.nc3opv2.setOnCheckedChangeListener(this);
-        bi.nc3p2.setOnCheckedChangeListener(this);
-        bi.nc3pcv2.setOnCheckedChangeListener(this);
-        bi.nc3opv3.setOnCheckedChangeListener(this);
-        bi.nc3p3.setOnCheckedChangeListener(this);
-        bi.nc3pcv3.setOnCheckedChangeListener(this);
-        bi.nc3ipv.setOnCheckedChangeListener(this);
-        bi.nc3m1.setOnCheckedChangeListener(this);
-        bi.nc3m2.setOnCheckedChangeListener(this);
+        bi.nc3bcgdt98.setOnCheckedChangeListener(this);
+        bi.nc3opv0dt98.setOnCheckedChangeListener(this);
+        bi.nc3opv1dt98.setOnCheckedChangeListener(this);
+        bi.nc3p1dt98.setOnCheckedChangeListener(this);
+        bi.nc3pcv1dt98.setOnCheckedChangeListener(this);
+        bi.nc3opv2dt98.setOnCheckedChangeListener(this);
+        bi.nc3p2dt98.setOnCheckedChangeListener(this);
+        bi.nc3pcv2dt98.setOnCheckedChangeListener(this);
+        bi.nc3opv3dt98.setOnCheckedChangeListener(this);
+        bi.nc3p3dt98.setOnCheckedChangeListener(this);
+        bi.nc3pcv3dt98.setOnCheckedChangeListener(this);
+        bi.nc3ipvdt98.setOnCheckedChangeListener(this);
+        bi.nc3m1dt98.setOnCheckedChangeListener(this);
+        bi.nc3m2dt98.setOnCheckedChangeListener(this);
 
         bi.nc302.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -88,7 +88,6 @@ public class F1Section07Activity extends AppCompatActivity implements RadioGroup
     }
 
     private void SaveDraft() throws JSONException {
-        //Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         JSONObject sG = new JSONObject();
 
@@ -115,6 +114,8 @@ public class F1Section07Activity extends AppCompatActivity implements RadioGroup
                 : bi.nc3opv0b.isChecked() ? "2"
                 : bi.nc3opv097.isChecked() ? "97"
                 : "0");
+        sG.put("nc3opv0dt98", bi.nc3opv0dt98.isChecked() ? "1" : "0");
+        sG.put("nc3opv0dt", bi.nc3opv0dt.getText().toString());
 
 //       at age of 6
 
@@ -202,18 +203,22 @@ public class F1Section07Activity extends AppCompatActivity implements RadioGroup
 
     private boolean UpdateDB() {
 
-        int updcount = db.updateSG();
-        if (updcount == 1) {
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
+        return true;
 
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        formValidation();
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+        if (compoundButton.isChecked()) {
+            bi.nc3bcgdt.setText(null);
+            bi.nc3bcgdt.setEnabled(false);
+            return;
+        } else {
+            bi.nc3bcgdt.setEnabled(true);
+            bi.nc3bcgdt.setError(null);
+            return;
+        }
+
     }
 }

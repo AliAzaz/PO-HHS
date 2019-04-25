@@ -262,7 +262,7 @@ public class MainActivity extends Activity {
                     iStatus = "\tN/A";
                 }
 
-                rSumText += fc.getDSSID();
+                rSumText += fc.getsH();
 
                 rSumText += " " + iStatus + " ";
 

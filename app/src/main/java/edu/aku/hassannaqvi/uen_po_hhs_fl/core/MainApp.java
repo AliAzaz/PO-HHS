@@ -28,12 +28,8 @@ import java.util.List;
 import java.util.Map;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.DeceasedChildContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.DeceasedMotherContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.MWRAContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.SectionIIMContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.EndingActivity;
 
 

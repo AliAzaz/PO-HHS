@@ -22,7 +22,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -619,71 +618,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         protected void onCancelled() {
             mAuthTask = null;
             showProgress(false);
-        }
-    }
-
-    public class syncData extends AsyncTask<String, String, String> {
-
-        Boolean flag = false;
-        private Context mContext;
-
-        public syncData(Context mContext, Boolean flag) {
-            this.mContext = mContext;
-            this.flag = flag;
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-            runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-
-                    if (flag) {
-                        Toast.makeText(LoginActivity.this, "Sync Talukas", Toast.LENGTH_LONG).show();
-                        new GetTalukas(mContext).execute();
-                        Toast.makeText(LoginActivity.this, "Sync UC's", Toast.LENGTH_LONG).show();
-                        new GetUCs(mContext).execute();
-                        Toast.makeText(LoginActivity.this, "Sync LHW", Toast.LENGTH_LONG).show();
-                        new GetLHW(mContext).execute();
-                        /*
-                        Toast.makeText(LoginActivity.this, "Sync Areas", Toast.LENGTH_LONG).show();
-                        new GetAreas(mContext).execute();*/
-                        Toast.makeText(LoginActivity.this, "Sync Villages", Toast.LENGTH_LONG).show();
-                        new GetVillages(mContext).execute();
-                        Toast.makeText(LoginActivity.this, "Sync User", Toast.LENGTH_LONG).show();
-                        new GetUsers(mContext).execute();
-                        Toast.makeText(LoginActivity.this, "Sync BL Random", Toast.LENGTH_LONG).show();
-                        new GetBLRandom(mContext).execute();
-
-                    } else {
-                       /* Toast.makeText(LoginActivity.this, "Sync BL Random", Toast.LENGTH_LONG).show();
-                        new GetBLRandom(mContext).execute();*/
-                    }
-                }
-            });
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-
-                    if (flag) {
-                        populateSpinner(mContext);
-                    }
-                    editor.putBoolean("flag", true);
-                    editor.commit();
-
-                    dbBackup();
-
-                }
-            }, 1200);
         }
     }
 
