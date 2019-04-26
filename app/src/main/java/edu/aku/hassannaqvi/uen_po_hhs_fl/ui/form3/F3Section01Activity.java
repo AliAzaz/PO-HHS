@@ -23,6 +23,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF3Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 
@@ -51,8 +52,8 @@ public class F3Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                bi.f3Section01.setVisibility(View.VISIBLE);
-                ClearClass.ClearAllFields(bi.f3Section01, true);
+                bi.llform03.setVisibility(View.VISIBLE);
+                ClearClass.ClearAllFields(bi.llform03, true);
             }
         });
 
@@ -65,8 +66,8 @@ public class F3Section01Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                bi.f3Section01.setVisibility(View.GONE);
-                ClearClass.ClearAllFields(bi.f3Section01, false);
+                bi.llform03.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.llform03, false);
             }
 
             @Override
