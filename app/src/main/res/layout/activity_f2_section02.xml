@@ -114,6 +114,7 @@
 
 
                         <EditText
+                            android:tag="pofpb02a"
                             android:id="@+id/pofpb02a01"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -126,6 +127,7 @@
 
 
                         <EditText
+                            android:tag="pofpb02a"
                             android:id="@+id/pofpb02a02"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -316,6 +318,7 @@
                         android:text="@string/pofpb07" />
 
                     <LinearLayout
+                        android:id="@+id/fldgrppofpb07"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">

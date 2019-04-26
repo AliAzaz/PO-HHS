@@ -24,6 +24,14 @@ public class F2Section02Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section02);
         bi.setCallback(this);
+
+        settingListeners();
+
+    }
+
+    private void settingListeners() {
+
+
     }
 
     public void BtnContinue() {

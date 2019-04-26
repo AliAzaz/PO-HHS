@@ -88,6 +88,7 @@
                         android:text="@string/pocfb03" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pocfb03a"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -96,6 +97,7 @@
                         android:inputType="number" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pocfb03b"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -121,6 +123,7 @@
                         android:text="@string/pocfb04" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pocfb04a"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -129,6 +132,7 @@
                         android:inputType="number" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pocfb04b"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -153,6 +157,7 @@
                         android:text="@string/pocfb05" />
 
                     <EditText
+                        android:maxLength="11"
                         android:id="@+id/pocfb05"
                         style="@style/textInput"
                         android:layout_width="match_parent"

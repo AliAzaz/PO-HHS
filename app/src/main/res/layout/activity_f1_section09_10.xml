@@ -228,6 +228,7 @@
                             android:text="@string/other" />
 
                         <EditText
+                            android:tag="pocfj0196"
                             android:id="@+id/pocfj0196x"
                             style="@style/textInput"
                             android:layout_width="match_parent"

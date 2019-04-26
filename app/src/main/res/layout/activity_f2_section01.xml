@@ -128,6 +128,7 @@
 
 
                         <EditText
+                            android:tag="pofpa0296"
                             android:id="@+id/pofpa0296x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -222,50 +223,60 @@
                         android:text="@string/pofpa05" />
 
 
-                    <CheckBox
-                        android:id="@+id/pofpa05a"
-                        android:layout_width="match_parent"
+                    <LinearLayout
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa05a" />
-
-
-                    <EditText
-                        android:id="@+id/pofpa05ax"
-                        style="@style/textInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/pofpa05a"
-                        android:text='@{pofpa05a.checked? pofpa05ax.getText.toString : "" }'
-                        android:visibility='@{pofpa05a.checked? View.VISIBLE : View.GONE}' />
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/pofpa05a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa05a" />
 
 
-                    <CheckBox
-                        android:id="@+id/pofpa05b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa05b" />
+                        <EditText
+                            android:id="@+id/pofpa05ax"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/pofpa05a"
+                            android:tag="pofpa05a"
+                            android:text='@{pofpa05a.checked? pofpa05ax.getText.toString : "" }'
+                            android:visibility='@{pofpa05a.checked? View.VISIBLE : View.GONE}' />
 
 
-                    <EditText
-                        android:id="@+id/pofpa05bx"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pofpa05b"
-                        android:inputType="number"
-                        android:text='@{pofpa05b.checked? pofpa05bx.getText.toString : "" }'
-                        android:visibility='@{pofpa05b.checked? View.VISIBLE : View.GONE}' />
+                        <CheckBox
+                            android:id="@+id/pofpa05b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa05b" />
 
 
-                    <CheckBox
-                        android:id="@+id/pofpa05c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa05c" />
+                        <EditText
+                            android:id="@+id/pofpa05bx"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pofpa05b"
+                            android:inputType="number"
+                            android:tag="pofpa05b"
+                            android:text='@{pofpa05b.checked? pofpa05bx.getText.toString : "" }'
+                            android:visibility='@{pofpa05b.checked? View.VISIBLE : View.GONE}' />
+
+
+                        <CheckBox
+                            android:id="@+id/pofpa05c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa05c" />
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
@@ -284,42 +295,51 @@
                         android:text="@string/pofpa06" />
 
 
-                    <CheckBox
-                        android:id="@+id/pofpa06a"
-                        android:layout_width="match_parent"
+                    <LinearLayout
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa06a" />
-
-
-                    <EditText
-                        android:id="@+id/pofpa06ax"
-                        style="@style/textInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/pofpa05a"
-                        android:text='@{pofpa06a.checked? pofpa06ax.getText.toString : "" }'
-                        android:visibility='@{pofpa06a.checked? View.VISIBLE : View.GONE}' />
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/pofpa06a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa06a" />
 
 
-                    <CheckBox
-                        android:id="@+id/pofpa06b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa06b" />
+                        <EditText
+                            android:id="@+id/pofpa06ax"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/pofpa05a"
+                            android:tag="pofpa06a"
+                            android:text='@{pofpa06a.checked? pofpa06ax.getText.toString : "" }'
+                            android:visibility='@{pofpa06a.checked? View.VISIBLE : View.GONE}' />
 
 
-                    <EditText
-                        android:id="@+id/pofpa06bx"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pofpa06b"
-                        android:inputType="number"
-                        android:text='@{pofpa06b.checked? pofpa06bx.getText.toString : "" }'
-                        android:visibility='@{pofpa06b.checked? View.VISIBLE : View.GONE}' />
+                        <CheckBox
+                            android:id="@+id/pofpa06b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa06b" />
+
+
+                        <EditText
+                            android:id="@+id/pofpa06bx"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pofpa06b"
+                            android:inputType="number"
+                            android:tag="pofpa06b"
+                            android:text='@{pofpa06b.checked? pofpa06bx.getText.toString : "" }'
+                            android:visibility='@{pofpa06b.checked? View.VISIBLE : View.GONE}' />
+                    </LinearLayout>
+
 
 
                 </LinearLayout>
@@ -398,47 +418,53 @@
 
                     <TextView
                         style="@style/i_textview"
-
                         android:text="@string/pofpa08" />
-
-                    <CheckBox
-                        android:id="@+id/pofpa08a"
-                        android:layout_width="match_parent"
+                    <LinearLayout
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa08a" />
-
-                    <CheckBox
-                        android:id="@+id/pofpa08b"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa08b" />
+                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/pofpa08a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa08a" />
 
-                    <CheckBox
-                        android:id="@+id/pofpa08c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/pofpa08c" />
+                        <CheckBox
+                            android:id="@+id/pofpa08b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa08b" />
 
-                    <CheckBox
-                        android:id="@+id/pofpa0896"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="@string/other" />
+                        <CheckBox
+                            android:id="@+id/pofpa08c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pofpa08c" />
+
+                        <CheckBox
+                            android:id="@+id/pofpa0896"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/other" />
 
 
-                    <EditText
-                        android:id="@+id/pofpa0896x"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/other"
-                        android:text='@{pofpa0896.checked? pofpa0896x.getText.toString : "" }'
-                        android:visibility='@{pofpa0896.checked? View.VISIBLE : View.GONE}' />
+                        <EditText
+                            android:id="@+id/pofpa0896x"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:tag="pofpa0896"
+                            android:text='@{pofpa0896.checked? pofpa0896x.getText.toString : "" }'
+                            android:visibility='@{pofpa0896.checked? View.VISIBLE : View.GONE}' />
+                    </LinearLayout>
+
+
 
 
                 </LinearLayout>
@@ -471,6 +497,7 @@
                             android:text="@string/yes" />
 
                         <EditText
+                            android:tag="pofpa09a"
                             android:id="@+id/pofpa09ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -542,6 +569,7 @@
                             android:text="@string/other" />
 
                         <EditText
+                            android:tag="pofpa1096"
                             android:id="@+id/pofpa1096x"
                             style="@style/textInput"
                             android:layout_width="match_parent"

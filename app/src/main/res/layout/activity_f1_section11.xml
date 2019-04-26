@@ -90,6 +90,7 @@
 
 
                         <EditText
+                            android:tag="pocfk0196"
                             android:id="@+id/pocfk0196x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -557,6 +558,7 @@
                             android:text="@string/other" />
 
                         <EditText
+                            android:tag="pocfk1196"
                             android:id="@+id/pocfk1196x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
