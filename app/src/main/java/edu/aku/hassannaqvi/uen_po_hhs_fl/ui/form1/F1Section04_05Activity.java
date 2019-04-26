@@ -183,6 +183,11 @@ public class F1Section04_05Activity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
+
 }
 
 

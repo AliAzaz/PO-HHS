@@ -260,11 +260,6 @@ public class F1Section07Activity extends AppCompatActivity {
         return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrppocfgA);
     }
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back.", Toast.LENGTH_SHORT).show();
-    }
-
     private void SaveDraft() throws JSONException {
 
         JSONObject sG = new JSONObject();
@@ -435,5 +430,10 @@ public class F1Section07Activity extends AppCompatActivity {
             return false;
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 }
