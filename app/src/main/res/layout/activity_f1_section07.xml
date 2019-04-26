@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.F1Section07Activity">
+    tools:context=".ui.form1.F1Section07Activity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F1Section07Activity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section07Activity" />
     </data>
 
 
@@ -71,22 +71,22 @@
 
                         <RadioButton
                             android:id="@+id/pocfg02a"
-                            style="@style/radiobutton"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02a" />
 
                         <RadioButton
                             android:id="@+id/pocfg02b"
-                            style="@style/radiobutton"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02b" />
 
                         <RadioButton
                             android:id="@+id/pocfg02c"
-                            style="@style/radiobutton"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02c" />
 
                         <RadioButton
                             android:id="@+id/pocfg02d"
-                            style="@style/radiobutton"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02d" />
 
                     </RadioGroup>

@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -25,10 +25,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.StrictMode;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -54,6 +57,10 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2.F2Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form3.F3Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.sync.SyncActivity;
 
 public class MainActivity extends Activity {
 
@@ -127,6 +134,46 @@ public class MainActivity extends Activity {
 
     }
 
+    private void loadTagDialog() {
+
+        sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        editor = sharedPref.edit();
+        if (!sharedPref.contains("tagName") && sharedPref.getString("tagName", null) == null) {
+
+            builder = new AlertDialog.Builder(MainActivity.this);
+            ImageView img = new ImageView(getApplicationContext());
+            img.setImageResource(R.drawable.tagimg);
+            img.setPadding(0, 15, 0, 15);
+            builder.setCustomTitle(img);
+
+            final EditText input = new EditText(MainActivity.this);
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    m_Text = input.getText().toString();
+                    if (!m_Text.equals("")) {
+                        editor.putString("tagName", m_Text);
+                        editor.commit();
+                        dialog.dismiss();
+
+                    }
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +192,8 @@ public class MainActivity extends Activity {
         MainApp.motherMap.put("N/A_0", "0");
         MainApp.fatherMap.put("N/A_0", "0");
 
+        loadTagDialog();
+
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
@@ -160,6 +209,7 @@ public class MainActivity extends Activity {
         /*Download File*/
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
+
 
 
 //        Version Checking

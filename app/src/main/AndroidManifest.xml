@@ -23,7 +23,7 @@
         android:windowSoftInputMode="adjustResize|stateHidden">
 
         <activity
-            android:name=".ui.SplashscreenActivity"
+            android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -35,78 +35,79 @@
         </activity>
 
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="stateVisible|adjustPan" />
 
         <activity
-            android:name=".ui.MainActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
-        <activity
-            android:name=".ui.F1Section01Activity"
+            android:name=".ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section02_03Activity"
+            android:name=".ui.form1.F1Section01Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section04_05Activity"
+            android:name=".ui.form1.F1Section02_03Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section06Activity"
+            android:name=".ui.form1.F1Section04_05Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section07Activity"
+            android:name=".ui.form1.F1Section06Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section08Activity"
+            android:name=".ui.form1.F1Section07Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section09_10Activity"
+            android:name=".ui.form1.F1Section08Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F1Section11Activity"
+            android:name=".ui.form1.F1Section09_10Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F2Section01Activity"
+            android:name=".ui.form1.F1Section11Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F2Section02Activity"
+            android:name=".ui.form2.F2Section01Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.F3Section01Activity"
+            android:name=".ui.form2.F2Section02Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".ui.form3.F3Section01Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
@@ -115,13 +116,14 @@
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".ui.EndingActivity"
+            android:name=".ui.other.EndingActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".ui.SyncActivity"
+            android:name=".ui.sync.SyncActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".FormsList" />

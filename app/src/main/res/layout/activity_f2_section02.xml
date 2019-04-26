@@ -7,17 +7,17 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F2Section02Activity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2.F2Section02Activity" />
 
     </data>
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layoutDirection="rtl"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.F2Section02Activity">
+        android:layoutDirection="rtl"
+        tools:context=".ui.form2.F2Section02Activity">
 
 
         <LinearLayout
@@ -121,6 +121,7 @@
                             android:hint="Respiratory Rate 01"
                             android:inputType="number"
                             android:maxLength="2"
+                            android:tag="pofpb02a"
                             android:text='@{pofpb02a.checked? pofpb02a01.getText.toString : "" }'
                             android:visibility='@{pofpb02a.checked? View.VISIBLE : View.GONE}' />
 
@@ -133,6 +134,7 @@
                             android:hint="Respiratory Rate 02"
                             android:inputType="number"
                             android:maxLength="2"
+                            android:tag="pofpb02a"
                             android:text='@{pofpb02a.checked? pofpb02a02.getText.toString : "" }'
                             android:visibility='@{pofpb02a.checked? View.VISIBLE : View.GONE}' />
 
@@ -316,9 +318,11 @@
                         android:text="@string/pofpb07" />
 
                     <LinearLayout
+                        android:id="@+id/fldgrppofpb07"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/pofpb07a"
@@ -354,6 +358,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
+                        android:tag="-1"
                         android:text="@string/none" />
 
 
@@ -442,13 +447,25 @@
             </android.support.v7.widget.CardView>
 
 
-
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="32dp">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btnEnd"
@@ -463,18 +480,6 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/holo_green_light"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 

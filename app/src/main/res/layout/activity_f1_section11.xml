@@ -7,7 +7,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F1Section11Activity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section11Activity" />
 
     </data>
 
@@ -16,7 +16,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.F1Section11Activity">
+        tools:context=".ui.form1.F1Section11Activity">
 
         <LinearLayout
             android:id="@+id/ll11"
@@ -90,6 +90,7 @@
 
 
                         <EditText
+                            android:tag="pocfk0196"
                             android:id="@+id/pocfk0196x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -557,6 +558,7 @@
                             android:text="@string/other" />
 
                         <EditText
+                            android:tag="pocfk1196"
                             android:id="@+id/pocfk1196x"
                             style="@style/textInput"
                             android:layout_width="match_parent"

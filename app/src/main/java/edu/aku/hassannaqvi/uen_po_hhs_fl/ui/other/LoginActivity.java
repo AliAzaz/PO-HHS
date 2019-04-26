@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -66,6 +66,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.sync.SyncActivity;
 
 import static java.lang.Thread.sleep;
 

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.F3Section01Activity">
+    tools:context=".ui.form3.F3Section01Activity">
 
     <data>
 
@@ -10,16 +10,16 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F3Section01Activity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form3.F3Section01Activity" />
 
     </data>
 
 
     <ScrollView
-        android:layoutDirection="rtl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dullWhile">
+        android:background="@color/dullWhile"
+        android:layoutDirection="rtl">
 
         <LinearLayout
             android:id="@+id/llform03"
@@ -368,48 +368,54 @@
                         style="@style/i_textview"
                         android:text="@string/pofi11" />
 
-                    <CheckBox
-                        android:id="@+id/pofi11a"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi11a" />
+                    <LinearLayout
+                        style="@style/linearlayout_view"
+                        android:tag="0">
 
-                    <CheckBox
-                        android:id="@+id/pofi11b"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi11b" />
+                        <CheckBox
+                            android:id="@+id/pofi11a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi11a" />
 
-                    <CheckBox
-                        android:id="@+id/pofi11c"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi11c" />
+                        <CheckBox
+                            android:id="@+id/pofi11b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi11b" />
 
-                    <CheckBox
-                        android:id="@+id/pofi11d"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi11d" />
+                        <CheckBox
+                            android:id="@+id/pofi11c"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi11c" />
 
-                    <CheckBox
-                        android:id="@+id/pofi11e"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi11e" />
+                        <CheckBox
+                            android:id="@+id/pofi11d"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi11d" />
 
-                    <CheckBox
-                        android:id="@+id/pofi11f"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi11f" />
+                        <CheckBox
+                            android:id="@+id/pofi11e"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi11e" />
 
-                    <CheckBox
-                        android:id="@+id/pofi1196"
-                        style="@style/i_radiobutton"
-                        android:text="@string/other" />
+                        <CheckBox
+                            android:id="@+id/pofi11f"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi11f" />
 
-                    <EditText
-                        android:id="@+id/pofi1196x"
-                        style="@style/i_radiobutton"
-                        android:hint="@string/other"
-                        android:tag="pofi1196"
-                        android:text='@{pofi1196.checked? pofi1196x.getText.toString : "" }'
-                        android:visibility='@{pofi1196.checked? View.VISIBLE : View.GONE}' />
+                        <CheckBox
+                            android:id="@+id/pofi1196"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/pofi1196x"
+                            style="@style/i_radiobutton"
+                            android:hint="@string/other"
+                            android:tag="pofi1196"
+                            android:text='@{pofi1196.checked? pofi1196x.getText.toString : "" }'
+                            android:visibility='@{pofi1196.checked? View.VISIBLE : View.GONE}' />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -426,63 +432,69 @@
                         style="@style/i_textview"
                         android:text="@string/pofi12" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12a"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12a" />
+                    <LinearLayout
+                        style="@style/linearlayout_view"
+                        android:tag="0">
 
-                    <CheckBox
-                        android:id="@+id/pofi12b"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12b" />
+                        <CheckBox
+                            android:id="@+id/pofi12a"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12a" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12c"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12c" />
+                        <CheckBox
+                            android:id="@+id/pofi12b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12b" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12d"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12d" />
+                        <CheckBox
+                            android:id="@+id/pofi12c"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12c" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12e"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12e" />
+                        <CheckBox
+                            android:id="@+id/pofi12d"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12d" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12f"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12f" />
+                        <CheckBox
+                            android:id="@+id/pofi12e"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12e" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12g"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12g" />
+                        <CheckBox
+                            android:id="@+id/pofi12f"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12f" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12h"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12h" />
+                        <CheckBox
+                            android:id="@+id/pofi12g"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12g" />
 
-                    <CheckBox
-                        android:id="@+id/pofi12i"
-                        style="@style/i_radiobutton"
-                        android:text="@string/pofi12i" />
+                        <CheckBox
+                            android:id="@+id/pofi12h"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12h" />
 
-                    <CheckBox
-                        android:id="@+id/pofi1296"
-                        style="@style/i_radiobutton"
-                        android:text="@string/other" />
+                        <CheckBox
+                            android:id="@+id/pofi12i"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pofi12i" />
 
-                    <EditText
-                        android:id="@+id/pofi1296x"
-                        style="@style/i_radiobutton"
-                        android:hint="@string/other"
-                        android:tag="pofi1296"
-                        android:text='@{pofi1296.checked? pofi1296x.getText.toString : "" }'
-                        android:visibility='@{pofi1296.checked? View.VISIBLE : View.GONE}' />
+                        <CheckBox
+                            android:id="@+id/pofi1296"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/pofi1296x"
+                            style="@style/i_radiobutton"
+                            android:hint="@string/other"
+                            android:tag="pofi1296"
+                            android:text='@{pofi1296.checked? pofi1296x.getText.toString : "" }'
+                            android:visibility='@{pofi1296.checked? View.VISIBLE : View.GONE}' />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

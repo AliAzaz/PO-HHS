@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -76,6 +76,7 @@ public class F2Section01Activity extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName",MODE_PRIVATE).getString("tagName",""));
 
         JSONObject f02 = new JSONObject();
         f02.put("pofp_survey", DAY);
