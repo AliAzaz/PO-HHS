@@ -115,6 +115,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                             android:id="@+id/pofpa01"
+
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
