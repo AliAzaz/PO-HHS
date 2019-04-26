@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF2Section01Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
@@ -54,7 +55,7 @@ public class F2Section01Activity extends AppCompatActivity {
             }
         });
 
-        bi.pocfa06.addTextChangedListener(new TextWatcher() {
+        bi.pofpa00.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -116,6 +117,7 @@ public class F2Section01Activity extends AppCompatActivity {
 
         JSONObject f02 = new JSONObject();
         f02.put("pofp_survey", DAY);
+        f02.put("pofpa00", bi.pofpa00.getText().toString());
         f02.put("pofpa01", bi.pofpa01.getText().toString());
         f02.put("pofpa02", bi.pofpa02a.isChecked() ? "1"
                 : bi.pofpa02b.isChecked() ? "2"
@@ -174,7 +176,20 @@ public class F2Section01Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
+
+        if (!ValidatorClass.EmptyTextBox(this, bi.pofpa00, getString(R.string.pocfa06))) return;
+
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

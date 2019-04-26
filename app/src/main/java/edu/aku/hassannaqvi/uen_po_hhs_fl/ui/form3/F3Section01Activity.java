@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -57,7 +56,7 @@ public class F3Section01Activity extends AppCompatActivity {
             }
         });
 
-        bi.pocfa06.addTextChangedListener(new TextWatcher() {
+        bi.pofi00.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -95,7 +94,21 @@ public class F3Section01Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this);
+
+        if (!ValidatorClass.EmptyTextBox(this, bi.pofi00, getString(R.string.pocfa06))) return;
+
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private boolean UpdateDB() {
@@ -125,10 +138,11 @@ public class F3Section01Activity extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName",MODE_PRIVATE).getString("tagName",""));
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
         JSONObject form03_01 = new JSONObject();
 
+        form03_01.put("pofi00", bi.pofi00.getText().toString());
         form03_01.put("pofi01", bi.pofi01.getText().toString());
 
         form03_01.put("pofi02", bi.pofi02a.isChecked() ? "1" : bi.pofi02b.isChecked() ? "2" : "0");
@@ -196,23 +210,10 @@ public class F3Section01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (bi.pofi09b.isChecked()) {
-                    bi.pofi10.setEnabled(false);
-                    for (int a = 0; a < bi.pofi11cv.getChildCount(); i++) {
-                        View v = bi.pofi11cv.getChildAt(a);
-                        if (v instanceof CheckBox) {
-                            ((CheckBox) v).setChecked(false);
-                        }
-                    }
-                } else {
-                    bi.pofi10.setEnabled(true);
+                    ClearClass.ClearAllFields(bi.fldGrppofi11, null);
                 }
             }
         });
-
-       /* bi.pocfe05.setOnCheckedChangeListener(this);
-        bi.pocfe10.setOnCheckedChangeListener(this);
-        bi.pocfe13.setOnCheckedChangeListener(this);
-        bi.pocfe16.setOnCheckedChangeListener(this);*/
 
     }
 
