@@ -478,6 +478,7 @@
                                 android:id="@+id/pocfa13"
                                 style="@style/EditText_number"
                                 android:hint="@string/pocfa13"
+                                android:maxLength="2"
                                 android:text='@{pocfa11b.checked ? pocfa13.getText.toString : ""}' />
 
                         </LinearLayout>
