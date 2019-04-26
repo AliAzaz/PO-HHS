@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -17,6 +20,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF2Section01Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F2Section01Activity extends AppCompatActivity {
@@ -36,6 +40,38 @@ public class F2Section01Activity extends AppCompatActivity {
         bi.dayHeading.setText("DAY " + (DAY.equals("7") ? "07" : "14"));
 
         db = new DatabaseHelper(this);
+
+        clickListener();
+    }
+
+    private void clickListener() {
+        bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                bi.f2Section01.setVisibility(View.VISIBLE);
+                ClearClass.ClearAllFields(bi.f2Section01, true);
+            }
+        });
+
+        bi.pocfa06.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                bi.f2Section01.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.f2Section01, false);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -76,7 +112,7 @@ public class F2Section01Activity extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName",MODE_PRIVATE).getString("tagName",""));
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
         JSONObject f02 = new JSONObject();
         f02.put("pofp_survey", DAY);

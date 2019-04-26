@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
@@ -21,6 +23,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF3Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 
@@ -39,6 +42,39 @@ public class F3Section01Activity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
         events_call();
+
+        clickListener();
+    }
+
+
+    private void clickListener() {
+        bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                bi.llform03.setVisibility(View.VISIBLE);
+                ClearClass.ClearAllFields(bi.llform03, true);
+            }
+        });
+
+        bi.pocfa06.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                bi.llform03.setVisibility(View.GONE);
+                ClearClass.ClearAllFields(bi.llform03, false);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
 
