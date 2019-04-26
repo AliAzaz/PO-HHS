@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.F1Section07Activity">
+    tools:context=".ui.form1.F1Section07Activity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F1Section07Activity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section07Activity" />
     </data>
 
 
@@ -38,20 +38,16 @@
 
                 <RadioGroup
                     android:id="@+id/pocfg01"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    style="@style/i_radiogroup">
 
                     <RadioButton
                         android:id="@+id/pocfg01a"
-                        style="@style/i_radiobutton"
-                        android:layout_weight="1"
+                        style="@style/radiobutton"
                         android:text="@string/yes" />
 
                     <RadioButton
                         android:id="@+id/pocfg01b"
-                        style="@style/i_radiobutton"
-                        android:layout_weight="1"
+                        style="@style/radiobutton"
                         android:text="@string/no" />
 
                 </RadioGroup>
@@ -71,8 +67,7 @@
 
                     <RadioGroup
                         android:id="@+id/pocfg02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/i_radiogroup">
 
                         <RadioButton
                             android:id="@+id/pocfg02a"
@@ -93,7 +88,9 @@
                             android:id="@+id/pocfg02d"
                             style="@style/i_radiobutton"
                             android:text="@string/pocfg02d" />
+
                     </RadioGroup>
+
                 </LinearLayout>
 
                 <!-- skip pattern layout-->

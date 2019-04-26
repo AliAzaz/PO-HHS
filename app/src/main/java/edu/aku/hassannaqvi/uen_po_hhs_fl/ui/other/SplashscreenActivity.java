@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;

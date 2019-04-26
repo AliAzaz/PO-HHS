@@ -5,7 +5,7 @@
         <import type="android.view.View" />
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.SyncActivity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.sync.SyncActivity" />
     </data>
 
     <ScrollView

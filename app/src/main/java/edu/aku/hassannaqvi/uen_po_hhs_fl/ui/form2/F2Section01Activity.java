@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;

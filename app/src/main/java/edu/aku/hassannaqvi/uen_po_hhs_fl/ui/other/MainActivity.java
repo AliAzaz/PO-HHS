@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -57,6 +57,10 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2.F2Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form3.F3Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.sync.SyncActivity;
 
 public class MainActivity extends Activity {
 
