@@ -225,10 +225,10 @@ public class F1Section07Activity extends AppCompatActivity {
             }
         });
 
-        bi.pocfg02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pocfg01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId != bi.pocfg02b.getId())
+                if (checkedId == bi.pocfg01b.getId())
                     bi.pocfg02.clearCheck();
             }
         });

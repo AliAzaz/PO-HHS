@@ -11,7 +11,6 @@
 
     </data>
 
-
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -163,7 +162,6 @@
                             style="@style/i_radiobutton"
                             android:text="@string/pocff02g" />
 
-
                         <EditText
                             android:id="@+id/pocff02gx"
                             style="@style/textInput"
@@ -246,9 +244,9 @@
 
 
                     </RadioGroup>
-                    
+
                 </LinearLayout>
-                
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -279,9 +277,9 @@
 
 
                     </RadioGroup>
-                    
+
                 </LinearLayout>
-                
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -324,9 +322,9 @@
 
 
                     </RadioGroup>
-                    
+
                 </LinearLayout>
-                
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -377,9 +375,9 @@
 
 
                     </RadioGroup>
-                    
+
                 </LinearLayout>
-                
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView style="@style/cardView">

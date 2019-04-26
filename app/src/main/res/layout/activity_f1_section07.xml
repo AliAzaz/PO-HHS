@@ -44,19 +44,13 @@
 
                     <RadioButton
                         android:id="@+id/pocfg01a"
-                        style="@style/radiobutton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
+                        style="@style/i_radiobutton"
                         android:layout_weight="1"
                         android:text="@string/yes" />
 
                     <RadioButton
                         android:id="@+id/pocfg01b"
-                        style="@style/radiobutton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
+                        style="@style/i_radiobutton"
                         android:layout_weight="1"
                         android:text="@string/no" />
 
@@ -82,34 +76,22 @@
 
                         <RadioButton
                             android:id="@+id/pocfg02a"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02a" />
 
                         <RadioButton
                             android:id="@+id/pocfg02b"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02b" />
 
                         <RadioButton
                             android:id="@+id/pocfg02c"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02c" />
 
                         <RadioButton
                             android:id="@+id/pocfg02d"
-                            style="@style/radiobutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            style="@style/i_radiobutton"
                             android:text="@string/pocfg02d" />
                     </RadioGroup>
                 </LinearLayout>
