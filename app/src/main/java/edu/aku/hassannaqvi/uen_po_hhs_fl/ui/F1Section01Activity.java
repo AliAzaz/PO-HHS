@@ -256,6 +256,7 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName",MODE_PRIVATE).getString("tagName",""));
 
         JSONObject form01_01 = new JSONObject();
         form01_01.put("Taluka", bi.pocfa01.getSelectedItem());

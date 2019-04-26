@@ -604,6 +604,7 @@
                             android:text="@string/no" />
 
                         <EditText
+                            android:tag="pocfc10a"
                             android:id="@+id/pocfc10ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -640,6 +641,7 @@
                         android:text="@string/pocfc11" />
 
                     <EditText
+                        android:tag="pocfc1198"
                         android:id="@+id/pocfc11"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -651,6 +653,7 @@
 
 
                     <CheckBox
+                        android:tag="-1"
                         android:id="@+id/pocfc1198"
                         style="@style/i_checkbox"
                         android:text="@string/dkn" />

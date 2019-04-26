@@ -88,6 +88,7 @@ public class F3Section01Activity extends AppCompatActivity implements RadioGroup
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName",MODE_PRIVATE).getString("tagName",""));
 
         JSONObject form03_01 = new JSONObject();
 
