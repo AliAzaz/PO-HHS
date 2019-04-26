@@ -116,10 +116,9 @@ public class F2Section02Activity extends AppCompatActivity {
         MainApp.endActivity(this, this);
     }
 
+
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 }
