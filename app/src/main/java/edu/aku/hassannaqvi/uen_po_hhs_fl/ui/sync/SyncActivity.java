@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.sync;
 
 import android.content.Context;
 import android.content.SharedPreferences;

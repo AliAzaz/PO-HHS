@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.uen_po_hhs_fl.ui;
+package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -13,6 +13,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section11Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F1Section11Activity extends AppCompatActivity {

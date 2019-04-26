@@ -29,7 +29,7 @@ import java.util.HashMap;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.MWRAContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
 
 
 /**

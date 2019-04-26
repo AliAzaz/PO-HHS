@@ -7,18 +7,18 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.F2Section01Activity" />
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2.F2Section01Activity" />
 
     </data>
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layoutDirection="rtl"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.F2Section01Activity">
+        android:layoutDirection="rtl"
+        tools:context=".ui.form2.F2Section01Activity">
 
         <LinearLayout
             android:id="@+id/f2Section01"
@@ -128,13 +128,13 @@
 
 
                         <EditText
-                            android:tag="pofpa0296"
                             android:id="@+id/pofpa0296x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pofpa0296"
                             android:text='@{pofpa0296.checked? pofpa0296x.getText.toString : "" }'
                             android:visibility='@{pofpa0296.checked? View.VISIBLE : View.GONE}' />
 
@@ -224,9 +224,10 @@
 
 
                     <LinearLayout
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/pofpa05a"
@@ -291,14 +292,14 @@
 
                     <TextView
                         style="@style/i_textview"
-
                         android:text="@string/pofpa06" />
 
 
                     <LinearLayout
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/pofpa06a"
@@ -339,7 +340,6 @@
                             android:text='@{pofpa06b.checked? pofpa06bx.getText.toString : "" }'
                             android:visibility='@{pofpa06b.checked? View.VISIBLE : View.GONE}' />
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -419,10 +419,13 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/pofpa08" />
+
                     <LinearLayout
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:tag="0"
                         android:orientation="vertical">
+
                         <CheckBox
                             android:id="@+id/pofpa08a"
                             android:layout_width="match_parent"
@@ -465,8 +468,6 @@
                     </LinearLayout>
 
 
-
-
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -497,13 +498,13 @@
                             android:text="@string/yes" />
 
                         <EditText
-                            android:tag="pofpa09a"
                             android:id="@+id/pofpa09ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pofpa09a"
                             android:text='@{pofpa09a.checked? pofpa09ax.getText.toString : "" }'
                             android:visibility='@{pofpa09a.checked? View.VISIBLE : View.GONE}' />
 
@@ -569,13 +570,13 @@
                             android:text="@string/other" />
 
                         <EditText
-                            android:tag="pofpa1096"
                             android:id="@+id/pofpa1096x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pofpa1096"
                             android:text='@{pofpa1096.checked? pofpa1096x.getText.toString : "" }'
                             android:visibility='@{pofpa1096.checked? View.VISIBLE : View.GONE}' />
 
@@ -645,6 +646,19 @@
                 android:paddingTop="32dp">
 
                 <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
                     android:id="@+id/btnEnd"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -657,18 +671,6 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/holo_green_light"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 
