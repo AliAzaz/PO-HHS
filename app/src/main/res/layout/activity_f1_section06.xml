@@ -13,10 +13,10 @@
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layoutDirection="rtl"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layoutDirection="rtl"
         tools:context=".activities.Section06Activity">
 
         <LinearLayout
@@ -103,6 +103,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocff0196"
                             android:text='@{pocff0196.checked? pocff0196x.getText.toString : "" }'
                             android:visibility='@{pocff0196.checked? View.VISIBLE : View.GONE}' />
 
@@ -199,6 +200,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocff02g"
                             android:text='@{pocff02g.checked? pocff02gx.getText.toString : "" }'
                             android:visibility='@{pocff02g.checked? View.VISIBLE : View.GONE}' />
 
@@ -243,6 +245,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocff02k"
                             android:text='@{pocff02k.checked? pocff02kx.getText.toString : "" }'
                             android:visibility='@{pocff02k.checked? View.VISIBLE : View.GONE}' />
 
@@ -260,6 +263,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocff02l"
                             android:text='@{pocff02l.checked? pocff02lx.getText.toString : "" }'
                             android:visibility='@{pocff02l.checked? View.VISIBLE : View.GONE}' />
 
@@ -277,6 +281,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
+                            android:tag="pocff02m"
                             android:text='@{pocff02m.checked? pocff02mx.getText.toString : "" }'
                             android:visibility='@{pocff02m.checked? View.VISIBLE : View.GONE}' />
 
@@ -515,6 +520,7 @@
                             android:hint="@string/kg"
                             android:inputType="number"
                             android:maxLength="5"
+                            android:tag="pocff07a"
                             android:text='@{pocff07a.checked? pocff07ax.getText.toString : "" }'
                             android:visibility='@{pocff07a.checked? View.VISIBLE : View.GONE}' />
 
@@ -533,6 +539,7 @@
                             android:hint="@string/kg"
                             android:inputType="number"
                             android:maxLength="5"
+                            android:tag="pocff07b"
                             android:text='@{pocff07b.checked? pocff07bx.getText.toString : "" }'
                             android:visibility='@{pocff07b.checked? View.VISIBLE : View.GONE}' />
 
