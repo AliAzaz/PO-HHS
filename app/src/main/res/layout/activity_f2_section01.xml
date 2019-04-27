@@ -42,16 +42,10 @@
                                 android:text="Case ID" />
 
                             <EditText
-
-                                android:id="@+id/pocfa06"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                                android:id="@+id/pofpa00"
+                                style="@style/EditText_number"
                                 android:hint="XXXX"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:textColor="@color/colorPrimary" />
+                                android:maxLength="4" />
 
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -76,7 +70,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -731,7 +726,6 @@
 
             </LinearLayout>
         </LinearLayout>
-
 
 
     </ScrollView>
