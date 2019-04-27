@@ -643,8 +643,6 @@
                     <EditText
                         android:id="@+id/pocfc11"
                         style="@style/EditText_number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:hint="@string/pocfc11"
                         android:maxLength="6"
                         android:tag="pocfc1198"

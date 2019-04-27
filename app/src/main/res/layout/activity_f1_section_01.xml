@@ -475,6 +475,7 @@
                                 android:textColor="@android:color/white" />
 
                             <EditText
+                                android:maxLength="2"
                                 android:id="@+id/pocfa13"
                                 style="@style/EditText_number"
                                 android:hint="@string/pocfa13"
