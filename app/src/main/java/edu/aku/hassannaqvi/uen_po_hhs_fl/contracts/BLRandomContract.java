@@ -14,6 +14,7 @@ public class BLRandomContract {
     private String _ID;
     private String LUID;
     private String LHWCode; // hh02
+    private String villageCode;
     private String structure;  // Structure
     private String extension; // Extension
     private String hh;
@@ -28,6 +29,7 @@ public class BLRandomContract {
         this._ID = rnd.get_ID();
         this.LUID = rnd.getLUID();
         this.LHWCode = rnd.getLHWCode();
+        this.villageCode = rnd.getVillageCode();
         this.structure = rnd.getStructure();
         this.extension = rnd.getExtension();
         this.hh = rnd.getHh();
@@ -37,10 +39,13 @@ public class BLRandomContract {
     }
 
     public BLRandomContract Sync(JSONObject jsonObject) throws JSONException {
-        this._ID = jsonObject.getString(singleChild.COLUMN_ID);
         this.LUID = jsonObject.getString(singleChild.COLUMN_LUID);
         this.LHWCode = jsonObject.getString(singleChild.COLUMN_LHW_CODE);
+        this.villageCode = jsonObject.getString(singleChild.COLUMN_VILLAGE_CODE);
         this.structure = jsonObject.getString(singleChild.COLUMN_STRUCTURE_NO);
+
+        this.structure = String.format("%04d", Integer.valueOf(this.structure));
+
         this.extension = jsonObject.getString(singleChild.COLUMN_FAMILY_EXT_CODE);
         this.hh = jsonObject.getString(singleChild.COLUMN_STRUCTURE_NO)
                 + "-" + jsonObject.getString(singleChild.COLUMN_FAMILY_EXT_CODE);
@@ -55,6 +60,7 @@ public class BLRandomContract {
         this._ID = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_ID));
         this.LUID = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_LUID));
         this.LHWCode = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_LHW_CODE));
+        this.villageCode = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_VILLAGE_CODE));
         this.structure = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_STRUCTURE_NO));
         this.extension = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_FAMILY_EXT_CODE));
         this.hh = cursor.getString(cursor.getColumnIndex(singleChild.COLUMN_HH));
@@ -137,18 +143,12 @@ public class BLRandomContract {
         this.hhcontact = hhcontact;
     }
 
-    public JSONObject toJSONObject() throws JSONException {
-        JSONObject json = new JSONObject();
+    public String getVillageCode() {
+        return villageCode;
+    }
 
-        json.put(singleChild.COLUMN_ID, this._ID);
-        json.put(singleChild.COLUMN_LUID, this.LUID);
-        json.put(singleChild.COLUMN_LHW_CODE, this.LHWCode);
-        json.put(singleChild.COLUMN_HH, this.hh);
-        json.put(singleChild.COLUMN_RANDOMDT, this.randomDT);
-        json.put(singleChild.COLUMN_HH_HEAD, this.hhhead);
-        json.put(singleChild.COLUMN_HH_CONTACT, this.hhcontact);
-
-        return json;
+    public void setVillageCode(String villageCode) {
+        this.villageCode = villageCode;
     }
 
     public static abstract class singleChild implements BaseColumns {
@@ -156,14 +156,16 @@ public class BLRandomContract {
         public static final String TABLE_NAME = "BLRandom";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_RANDOMDT = "randDT";
-        public static final String COLUMN_LUID = "UID";
-        public static final String COLUMN_LHW_CODE = "hh02";
+        public static final String COLUMN_LUID = "uid";
+        public static final String COLUMN_LHW_CODE = "lhwcode";
+        public static final String COLUMN_VILLAGE_CODE = "hh04village";
         public static final String COLUMN_STRUCTURE_NO = "hh03";
         public static final String COLUMN_FAMILY_EXT_CODE = "hh07";
         public static final String COLUMN_HH = "hh";
         public static final String COLUMN_HH_HEAD = "hh08";
         public static final String COLUMN_HH_CONTACT = "hh09";
-        public static String _URIGET = "bl_random.php";
+        //        public static String _URIGET = "bl_random.php";
+        public static String _URIGET = "gethh.php";
     }
 
 }

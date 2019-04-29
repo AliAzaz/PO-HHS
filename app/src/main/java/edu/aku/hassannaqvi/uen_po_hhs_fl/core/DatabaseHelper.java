@@ -48,7 +48,8 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.otherClasses.MotherLst;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String SQL_CREATE_BL_RANDOM = "CREATE TABLE " + singleChild.TABLE_NAME + "("
-            + singleChild.COLUMN_ID + " TEXT,"
+            + singleChild.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + singleChild.COLUMN_VILLAGE_CODE + " TEXT,"
             + singleChild.COLUMN_LHW_CODE + " TEXT,"
             + singleChild.COLUMN_LUID + " TEXT,"
             + singleChild.COLUMN_HH + " TEXT,"
@@ -771,7 +772,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allVC;
     }
 
-    public Collection<BLRandomContract> getAllBLRandom(String subAreaCode, String hh) {
+    public Collection<BLRandomContract> getAllBLRandom(String lhwCode, String villageCode, String hh) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -781,14 +782,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleChild.COLUMN_FAMILY_EXT_CODE,
                 singleChild.COLUMN_HH,
                 singleChild.COLUMN_LHW_CODE,
+                singleChild.COLUMN_VILLAGE_CODE,
                 singleChild.COLUMN_RANDOMDT,
                 singleChild.COLUMN_HH_HEAD,
                 singleChild.COLUMN_HH_CONTACT
         };
 
-        String whereClause = singleChild.COLUMN_LHW_CODE + "=? AND " +
-                singleChild.COLUMN_HH + "=?";
-        String[] whereArgs = new String[]{subAreaCode, hh};
+        String whereClause = singleChild.COLUMN_LHW_CODE + "=? AND " + singleChild.COLUMN_VILLAGE_CODE + "=? AND " + singleChild.COLUMN_HH + "=?";
+        String[] whereArgs = {lhwCode, villageCode, hh};
         String groupBy = null;
         String having = null;
 
@@ -834,11 +835,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(singleChild.COLUMN_ID, Vc.get_ID());
                 values.put(singleChild.COLUMN_LUID, Vc.getLUID());
                 values.put(singleChild.COLUMN_STRUCTURE_NO, Vc.getStructure());
                 values.put(singleChild.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
                 values.put(singleChild.COLUMN_HH, Vc.getHh());
+                values.put(singleChild.COLUMN_VILLAGE_CODE, Vc.getVillageCode());
                 values.put(singleChild.COLUMN_LHW_CODE, Vc.getLHWCode());
                 values.put(singleChild.COLUMN_RANDOMDT, Vc.getRandomDT());
                 values.put(singleChild.COLUMN_HH_HEAD, Vc.getHhhead());

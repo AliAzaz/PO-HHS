@@ -26,7 +26,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.MWRAContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
@@ -141,7 +140,6 @@ public class MainApp extends Application {
     public static int areaCode = 0;
     public static String cluster = "";
     public static String hhno = "";
-    public static BLRandomContract selectedHead;
     public static int BLRandomSize;
     protected static LocationManager locationManager;
     public static String lhwCode;

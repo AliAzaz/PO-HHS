@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,12 +42,12 @@ public class F1Section01Activity extends AppCompatActivity {
 
     ActivityF1Section01Binding bi;
 
-    public List<String> ucName, talukaNames, villageNames, lhwNames;
-    public List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
-    Collection<BLRandomContract> selected;
-    DatabaseHelper db;
-
-    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    private List<String> ucName, talukaNames, villageNames, lhwNames;
+    private List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
+    private Collection<BLRandomContract> selected;
+    private DatabaseHelper db;
+    private BLRandomContract selectedHead;
+    private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,44 +71,60 @@ public class F1Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                final Snackbar snackbar = SnackUtils.showLoadingSnackbar(F1Section01Activity.this, "This feature is under construction!!");
+                if (!ValidatorClass.EmptyCheckingContainer(F1Section01Activity.this, bi.fldGrpSecA02))
+                    return;
+
+                final Snackbar snackbar = SnackUtils.showLoadingSnackbar(F1Section01Activity.this, "Searching HouseHold..");
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         snackbar.dismiss();
+                        setupViews();
                     }
                 }, 3000);
 
-                /*if (validation()) {
-                    if (MainApp.lhwCode != "" && ValidatorClass.EmptyTextBox(Section01Activity.this, pobhh, getString(R.string.household))) {
-                        setupViews();
-                    } else {
-                        Toast.makeText(F1Section01Activity.this, "Please Enter Correct Household", Toast.LENGTH_SHORT).show();
-
-                    }
-                }*/
             }
 
+        });
+
+        bi.pocfa05.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                clearFields();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
         });
     }
 
     public void setupViews() {
-        selected = db.getAllBLRandom(MainApp.lhwCode, bi.pocfa06.getText().toString().toUpperCase());
+        selected = db.getAllBLRandom(
+                lhwCodes.get(bi.pocfa03.getSelectedItemPosition()),
+                villageCodes.get(bi.pocfa04.getSelectedItemPosition()),
+                bi.pocfa05.getText().toString().toUpperCase());
 
         if (selected.size() != 0) {
 
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
 
             for (BLRandomContract rnd : selected) {
-                MainApp.selectedHead = new BLRandomContract(rnd);
+                selectedHead = new BLRandomContract(rnd);
             }
             bi.contactdetails.setVisibility(View.VISIBLE);
             bi.navbuttons.setVisibility(View.VISIBLE);
-            bi.hh08.setText(MainApp.selectedHead.getHhhead().toUpperCase());
-            if (!MainApp.selectedHead.gethhcontact().equals("99")) {
+            bi.hh08.setText(selectedHead.getHhhead().toUpperCase());
+            if (!selectedHead.gethhcontact().equals("99")) {
                 bi.hh09.setVisibility(View.VISIBLE);
                 bi.labelcontact.setVisibility(View.VISIBLE);
-                bi.hh09.setText(MainApp.selectedHead.gethhcontact().toUpperCase());
+                bi.hh09.setText(selectedHead.gethhcontact().toUpperCase());
             } else {
                 bi.hh09.setText(null);
                 bi.hh09.setVisibility(View.GONE);
@@ -120,9 +138,9 @@ public class F1Section01Activity extends AppCompatActivity {
     }
 
     public void clearFields() {
-        bi.contactdetails.setVisibility(View.GONE);
         bi.hh08.setText(null);
         bi.hh09.setText(null);
+        bi.contactdetails.setVisibility(View.GONE);
         bi.navbuttons.setVisibility(View.GONE);
     }
 
@@ -256,21 +274,23 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
         MainApp.fc.setFormDate(dtToday);
-        MainApp.fc.setDevicetagID(getSharedPreferences("tagName",MODE_PRIVATE).getString("tagName",""));
-
+        MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         JSONObject form01_01 = new JSONObject();
-        form01_01.put("Taluka", bi.pocfa01.getSelectedItem());
-        form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
-        form01_01.put("UC", bi.pocfa02.getSelectedItem());
-        form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-        form01_01.put("LHWName", bi.pocfa03.getSelectedItem());
-        form01_01.put("pocfa03", lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
-        form01_01.put("Village", bi.pocfa04.getSelectedItem());
-        form01_01.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
 
+        form01_01.put("luid", selectedHead.getLUID());
+        form01_01.put("randDT", selectedHead.getRandomDT());
+        form01_01.put("hh03", selectedHead.getStructure());
+        form01_01.put("hh07", selectedHead.getExtension());
+        form01_01.put("hhhead", selectedHead.getHhhead());
+        form01_01.put("hh04village", selectedHead.getVillageCode());
+        form01_01.put("lhwcode", selectedHead.getLHWCode());
+
+        form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
+        form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
+        form01_01.put("pocfa03", lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
+        form01_01.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
         form01_01.put("pocfa05", bi.pocfa05.getText().toString());
         form01_01.put("pocfa06", bi.pocfa06.getText().toString());
-
         form01_01.put("pocfa07", bi.pocfa07a.isChecked() ? "1"
                 : bi.pocfa07b.isChecked() ? "2"
                 : bi.pocfa07c.isChecked() ? "3"
@@ -280,7 +300,6 @@ public class F1Section01Activity extends AppCompatActivity {
                 : bi.pocfa0796.isChecked() ? "96"
                 : "0");
         form01_01.put("pocfa0796x", bi.pocfa0796x.getText().toString());
-
         form01_01.put("pocfa08", bi.pocfa08.getText().toString());
         form01_01.put("pocfa09", bi.pocfa09.getText().toString());
         form01_01.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
@@ -333,5 +352,6 @@ public class F1Section01Activity extends AppCompatActivity {
                 .show();
 
     }
+
 }
 
