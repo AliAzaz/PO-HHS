@@ -123,8 +123,7 @@
                                 android:textColor="@color/colorPrimary"
                                 app:mask="####-#"
                                 app:pattern="[0-9]{4,4}-[^0-9]{1,1}"
-                                app:required="true"
-                                app:type="equal" />
+                                app:required="true" />
 
                         </LinearLayout>
                     </android.support.v7.widget.CardView>

@@ -316,8 +316,8 @@ public abstract class ValidatorClass {
                     if (!((EditTextPicker) view).isEmptyTextBox())
                         return false;
 
-                    /*if (!((EditTextPicker) view).isRangeTextValidate())
-                        return false;*/
+                    if (!((EditTextPicker) view).isRangeTextValidate())
+                        return false;
 
                     if (!((EditTextPicker) view).isTextEqualToPattern())
                         return false;
