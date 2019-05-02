@@ -538,14 +538,15 @@
                         android:text="@string/pocff09" />
 
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocff09"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditText_number"
                         android:hint="@string/month"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="1"
+                        app:maxValue="59"
+                        app:minValue="1"
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -605,12 +606,9 @@
                         style="@style/i_textview"
                         android:text="@string/pocff11" />
 
-
                     <EditText
                         android:id="@+id/pocff11"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditText_number"
                         android:hint="@string/pocff11"
                         android:inputType="number"
                         android:maxLength="2" />
