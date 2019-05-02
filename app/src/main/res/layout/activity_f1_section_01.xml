@@ -473,12 +473,32 @@
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
-                            <EditText
-                                android:id="@+id/pocfa13"
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pocfa13y"
                                 style="@style/EditText_number"
-                                android:hint="@string/pocfa13"
-                                android:maxLength="2"
-                                android:text='@{pocfa11b.checked ? pocfa13.getText.toString : ""}' />
+                                android:hint="@string/year"
+                                android:text='@{pocfa11b.checked ? pocfa13y.getText.toString : ""}'
+                                app:maxValue="5"
+                                app:minValue="0"
+                                app:type="range" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pocfa13m"
+                                style="@style/EditText_number"
+                                android:hint="@string/month"
+                                android:text='@{pocfa11b.checked ? pocfa13m.getText.toString : ""}'
+                                app:maxValue="11"
+                                app:minValue="0"
+                                app:type="range" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pocfa13d"
+                                style="@style/EditText_number"
+                                android:hint="@string/day"
+                                android:text='@{pocfa11b.checked ? pocfa13d.getText.toString : ""}'
+                                app:maxValue="29"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 

@@ -207,8 +207,31 @@ public abstract class ValidatorClass {
                     for (int j = 0; j < container.getChildCount(); j++) {
                         View innerV = container.getChildAt(j);
                         if (innerV instanceof EditText) {
-                            if (getIDComponent(cb).equals(innerV.getTag()))
+                            if (getIDComponent(cb).equals(innerV.getTag())) {
                                 flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+
+                                if (innerV instanceof EditTextPicker) {
+
+                                    if (!((EditTextPicker) innerV).isEmptyTextBox()) {
+                                        flag = false;
+                                        break;
+                                    }
+
+                                    if (!((EditTextPicker) innerV).isRangeTextValidate()) {
+                                        flag = false;
+                                        break;
+                                    }
+
+                                    if (!((EditTextPicker) innerV).isTextEqualToPattern()) {
+                                        flag = false;
+                                        break;
+                                    }
+
+                                } else
+                                    flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+
+                            }
+
                         }
                     }
 

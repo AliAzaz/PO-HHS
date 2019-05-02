@@ -305,7 +305,9 @@ public class F1Section01Activity extends AppCompatActivity {
         form01_01.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
         form01_01.put("pocfa11", bi.pocfa11a.isChecked() ? "1" : bi.pocfa11b.isChecked() ? "2" : "0");
         form01_01.put("pocfa12", bi.pocfa12.getText().toString());
-        form01_01.put("pocfa13", bi.pocfa12.getText().toString());
+        form01_01.put("pocfa13y", bi.pocfa13y.getText().toString());
+        form01_01.put("pocfa13m", bi.pocfa13m.getText().toString());
+        form01_01.put("pocfa13d", bi.pocfa13d.getText().toString());
         form01_01.put("pocfa14", bi.pocfa14a.isChecked() ? "1" : bi.pocfa14b.isChecked() ? "2" : bi.pocfa14c.isChecked() ? "3" : "0");
 
         MainApp.fc.setsA(String.valueOf(form01_01));

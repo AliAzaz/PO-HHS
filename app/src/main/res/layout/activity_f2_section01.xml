@@ -307,16 +307,17 @@
                                 android:text="@string/pofpa05b" />
 
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa05bx"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="@string/pofpa05b"
-                                android:inputType="number"
+                                android:maxLength="2"
                                 android:tag="pofpa05b"
                                 android:text='@{pofpa05b.checked? pofpa05bx.getText.toString : "" }'
-                                android:visibility='@{pofpa05b.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility='@{pofpa05b.checked? View.VISIBLE : View.GONE}'
+                                app:maxValue="99"
+                                app:minValue="1"
+                                app:type="range" />
 
 
                             <CheckBox
@@ -379,16 +380,18 @@
                                 android:text="@string/pofpa06b" />
 
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa06bx"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="@string/pofpa06b"
-                                android:inputType="number"
+                                android:maxLength="2"
                                 android:tag="pofpa06b"
                                 android:text='@{pofpa06b.checked? pofpa06bx.getText.toString : "" }'
-                                android:visibility='@{pofpa06b.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility='@{pofpa06b.checked? View.VISIBLE : View.GONE}'
+                                app:maxValue="99"
+                                app:minValue="1"
+                                app:type="range" />
+
                         </LinearLayout>
 
 
