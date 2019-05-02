@@ -456,7 +456,7 @@
                             style="@style/i_radiobutton"
                             android:text="@string/pocff07b" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocff07bx"
                             style="@style/EditText_number"
                             android:digits="0123456789."
