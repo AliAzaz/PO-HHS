@@ -563,17 +563,6 @@
                 tools:visibility="visible">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/holo_red_light"
-                    android:onClick='@{() -> callback.BtnEnd()}'
-                    android:text="@string/end_interview"
-                    android:textColor="@color/white"
-                    android:visibility="@{!pocfa14a.checked ? View.VISIBLE : View.GONE}" />
-
-                <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -583,6 +572,17 @@
                     android:text="@string/start_interview"
                     android:textColor="@color/white"
                     android:visibility="@{pocfa14a.checked ? View.VISIBLE : View.GONE}" />
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick='@{() -> callback.BtnEnd()}'
+                    android:text="@string/end_interview"
+                    android:textColor="@color/white"
+                    android:visibility="@{!pocfa14a.checked ? View.VISIBLE : View.GONE}" />
 
             </LinearLayout>
 
