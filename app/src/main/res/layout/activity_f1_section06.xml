@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -436,17 +436,20 @@
                             style="@style/i_radiobutton"
                             android:text="@string/pocff07a" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocff07ax"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/kg"
-                            android:inputType="number"
-                            android:maxLength="5"
+                            style="@style/EditText_number"
+                            android:digits="0123456789."
+                            android:hint="##.##"
+                            android:layoutDirection="ltr"
                             android:tag="pocff07a"
                             android:text='@{pocff07a.checked? pocff07ax.getText.toString : "" }'
-                            android:visibility='@{pocff07a.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{pocff07a.checked? View.VISIBLE : View.GONE}'
+                            app:mask="##.##"
+                            app:maxValue="40.0"
+                            app:minValue="0.5"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
 
                         <RadioButton
                             android:id="@+id/pocff07b"
@@ -455,15 +458,18 @@
 
                         <EditText
                             android:id="@+id/pocff07bx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/kg"
-                            android:inputType="number"
-                            android:maxLength="5"
+                            style="@style/EditText_number"
+                            android:digits="0123456789."
+                            android:hint="##.##"
+                            android:layoutDirection="ltr"
                             android:tag="pocff07b"
                             android:text='@{pocff07b.checked? pocff07bx.getText.toString : "" }'
-                            android:visibility='@{pocff07b.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{pocff07b.checked? View.VISIBLE : View.GONE}'
+                            app:mask="##.##"
+                            app:maxValue="40.0"
+                            app:minValue="0.5"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
 
                         <RadioButton
                             android:id="@+id/pocff0798"

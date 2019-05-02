@@ -48,6 +48,32 @@ public abstract class ValidatorClass {
 
     }
 
+    private static boolean EmptyEditTextPicker(Context context, EditText txt, String msg) {
+        String messageConv = "";
+        boolean flag = true;
+        if (!((EditTextPicker) txt).isEmptyTextBox()) {
+            flag = false;
+            messageConv = "ERROR(empty)";
+        } else if (!((EditTextPicker) txt).isRangeTextValidate()) {
+            flag = false;
+            messageConv = "ERROR(range)";
+        } else if (!((EditTextPicker) txt).isTextEqualToPattern()) {
+            flag = false;
+            messageConv = "ERROR(pattern)";
+        }
+
+        if (!flag) {
+            FancyToast.makeText(context, messageConv + ": " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": " + messageConv);
+            return false;
+        } else {
+            txt.setError(null);
+            txt.clearFocus();
+            return true;
+        }
+
+    }
+
     public static boolean EmptyCardCheckBox(Context context, CardView container, CheckBox cbx, String msg) {
 
         Boolean flag = false;
@@ -157,7 +183,10 @@ public abstract class ValidatorClass {
                 View innerV = rdGrp.getChildAt(j);
                 if (innerV instanceof EditText) {
                     if (getIDComponent(rdGrp.findViewById(rdGrp.getCheckedRadioButtonId())).equals(innerV.getTag()))
-                        rdbFlag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                        if (innerV instanceof EditTextPicker)
+                            rdbFlag = EmptyEditTextPicker(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                        else
+                            rdbFlag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
                 }
             }
 
@@ -208,33 +237,13 @@ public abstract class ValidatorClass {
                         View innerV = container.getChildAt(j);
                         if (innerV instanceof EditText) {
                             if (getIDComponent(cb).equals(innerV.getTag())) {
-                                flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
-
-                                if (innerV instanceof EditTextPicker) {
-
-                                    if (!((EditTextPicker) innerV).isEmptyTextBox()) {
-                                        flag = false;
-                                        break;
-                                    }
-
-                                    if (!((EditTextPicker) innerV).isRangeTextValidate()) {
-                                        flag = false;
-                                        break;
-                                    }
-
-                                    if (!((EditTextPicker) innerV).isTextEqualToPattern()) {
-                                        flag = false;
-                                        break;
-                                    }
-
-                                } else
+                                if (innerV instanceof EditTextPicker)
+                                    flag = EmptyEditTextPicker(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                                else
                                     flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
-
                             }
-
                         }
                     }
-
 //                    break;
                 }
             }
@@ -333,18 +342,9 @@ public abstract class ValidatorClass {
                     return false;
                 }
             } else if (view instanceof EditText) {
-
                 if (view instanceof EditTextPicker) {
-
-                    if (!((EditTextPicker) view).isEmptyTextBox())
+                    if (!EmptyEditTextPicker(context, (EditText) view, getString(context, getIDComponent(view))))
                         return false;
-
-                    if (!((EditTextPicker) view).isRangeTextValidate())
-                        return false;
-
-                    if (!((EditTextPicker) view).isTextEqualToPattern())
-                        return false;
-
                 } else {
                     if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
                         return false;

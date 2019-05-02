@@ -98,8 +98,8 @@
                         android:hint="##.##"
                         android:layoutDirection="ltr"
                         app:mask="##.##"
-                        app:maxValue="5.0"
-                        app:minValue="25.0"
+                        app:maxValue="25.0"
+                        app:minValue="5.0"
                         app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                         app:type="range" />
 
