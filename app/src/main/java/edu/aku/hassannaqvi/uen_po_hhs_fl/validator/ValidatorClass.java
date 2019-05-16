@@ -230,6 +230,13 @@ public abstract class ValidatorClass {
             if (v instanceof CheckBox) {
                 CheckBox cb = (CheckBox) v;
                 cb.setError(null);
+
+                if (!cb.isEnabled()) {
+                    flag = true;
+                    continue;
+                } else
+                    flag = false;
+
                 if (cb.isChecked()) {
                     flag = true;
 
