@@ -36,17 +36,6 @@
                 android:text="@string/pofpsec02"
                 android:textSize="40sp" />
 
-            <TextView
-                android:id="@+id/dayHeading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="2dp"
-                android:background="@color/colorPrimary"
-                android:gravity="center"
-                android:text="Day 07"
-                android:textSize="30sp" />
-
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
