@@ -27,7 +27,7 @@ public class F1Section04_05Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04_05);
         bi.setCallback(this);
         this.setTitle("Command AND Control Centre");
-        events_call();
+        EventsCall();
     }
 
 
@@ -111,7 +111,7 @@ public class F1Section04_05Activity extends AppCompatActivity {
 
     }
 
-    void events_call() {
+    void EventsCall() {
 
         bi.pocfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
