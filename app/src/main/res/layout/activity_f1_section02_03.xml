@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -49,6 +50,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/pocfb01" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -68,6 +70,7 @@
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/pocfb02" />
+
                     </LinearLayout>
 
 
@@ -87,23 +90,29 @@
                         style="@style/i_textview"
                         android:text="@string/pocfb03" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb03a"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pocfb03a"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb03b"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pocfb03b"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="10"
+                        app:minValue="0"
+                        app:type="range"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -122,23 +131,29 @@
                         style="@style/i_textview"
                         android:text="@string/pocfb04" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb04a"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pocfb04a"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="9"
+                        app:minValue="0"
+                        app:type="range"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb04b"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pocfb04b"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="9"
+                        app:minValue="0"
+                        app:type="range"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -173,6 +188,13 @@
             <TextView
                 style="@style/textview_fm_lst_h"
                 android:text="@string/pocfchHeading" />
+
+            <TextView
+                style="@style/i_textview"
+                android:gravity="center"
+                android:text="@string/pocfchHeading2"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 style="@style/i_textview"
@@ -603,13 +625,16 @@
                             style="@style/i_radiobutton"
                             android:text="@string/no" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfc10ax"
-                            style="@style/textInput"
+                            style="@style/EditText_number"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                            android:hint="@string/other"
+                            android:hint="@string/pocfc101"
+                            android:maxLength="2"
+                            app:maxValue="16"
+                            app:minValue="1"
+                            app:type="range"
                             android:tag="pocfc10a"
                             android:text='@{pocfc10a.checked? pocfc10ax.getText.toString : "" }'
                             android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}' />
@@ -673,10 +698,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfc12" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfc12"
-                        style="@style/EditText"
-                        android:hint="@string/pocfc12" />
+                        style="@style/EditText_number"
+                        android:hint="@string/pocfc12"
+                        android:maxLength="3"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:type="range"/>
 
 
                 </LinearLayout>
@@ -722,4 +751,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </layout>

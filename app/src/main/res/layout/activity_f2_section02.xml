@@ -45,7 +45,6 @@
 
                     <TextView
                         style="@style/i_textview"
-
                         android:text="@string/pofpb01" />
 
 
@@ -152,7 +151,6 @@
 
                     <TextView
                         style="@style/i_textview"
-
                         android:text="@string/pofpb03" />
 
 

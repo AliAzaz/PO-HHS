@@ -446,8 +446,8 @@
                             android:text='@{pocff07a.checked? pocff07ax.getText.toString : "" }'
                             android:visibility='@{pocff07a.checked? View.VISIBLE : View.GONE}'
                             app:mask="##.##"
-                            app:maxValue="40.0"
-                            app:minValue="0.5"
+                            app:maxValue="6.00"
+                            app:minValue="0.90"
                             app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                             app:type="range" />
 

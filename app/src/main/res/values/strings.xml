@@ -324,6 +324,7 @@
 
     <!--Section 03-->
     <string name="pocfchHeading">سيڪشن 03: گھر جو وامي اسڪور</string>
+  <string name="pocfchHeading2">هدايتون:- هي سيڪشن گھر جي سربراه کان ڀريو ويندو يا گھر جي معلومات رکندڙ فرد جنهن جي عمر 18 سال هجي.</string>
     <string name="pocfch1"> پاڻي ۽ صفائي </string>
     <string name="pocfc01"> توهان جي گھر جا ڀاتي ڪهڙي قسم جو ٽوا.ئلٽ استعمال ڪندا آهن؟ </string>
     <string name="pocfc01a"> ڪا به سهولت نه آهي/جھنگ۾/ کليل ميدان ۾ </string>
@@ -350,6 +351,7 @@
     <string name="pocfc09"> ڇا توهان جي گھر ۾ رڌپچاءُ لاءِ الـڳ ڪمرو آهي؟ </string>
     <string name="pocfch3"> ماءُ جي تعليم </string>
     <string name="pocfc10"> ڇا ماءُ ڪڏهن به اسڪول وئي آهي؟جيڪڏهن ها ته ڪيترا سال </string>
+  <string name="pocfc101"> جيڪڏهن ها ته ڪيترا سال </string>
     <string name="pocfch4"> آمدني </string>
     <string name="pocfc11"> گھر جي تقريبآ مهيني جي آمدني ڪيتري آهي؟ </string>
     <string name="pocfc12"> آ خري وامي اسڪور </string>

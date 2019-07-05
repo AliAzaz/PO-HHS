@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.form1.F1Section04_05Activity">
 
     <data>
@@ -174,11 +175,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe01"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe01"
                         style="@style/EditText_number"
                         android:maxLength="2"
-                        android:hint="@string/pocfe01" />
+                        android:hint="@string/pocfe01"
+                        app:maxValue="50"
+                        app:minValue="2"
+                        app:type="range"/>
 
                 </LinearLayout>
 
@@ -193,11 +197,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe02"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe02"
                         style="@style/EditText_number"
                         android:maxLength="2"
-                        android:hint="@string/pocfe02" />
+                        android:hint="@string/pocfe02"
+                        app:maxValue="15"
+                        app:minValue="1"
+                        app:type="range"/>
 
                 </LinearLayout>
 
@@ -212,11 +219,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe03"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe03"
                         style="@style/EditText_number"
                         android:maxLength="2"
-                        android:hint="@string/pocfe03" />
+                        android:hint="@string/pocfe03"
+                        app:maxValue="50"
+                        app:minValue="1"
+                        app:type="range"/>
 
                 </LinearLayout>
 
@@ -311,11 +321,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe06"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe06"
                         style="@style/EditText_number"
-                        android:maxLength="2"
+                        android:maxLength="1"
                         android:hint="@string/pocfe06"
+                        app:maxValue="4"
+                        app:minValue="1"
+                        app:type="range"
                         android:text='@{pocfe04c.checked || pocfe05b.checked ? "" : pocfe06.getText.toString }'
                         android:visibility='@{pocfe04c.checked || pocfe05b.checked ? View.GONE : View.VISIBLE}' />
 
@@ -509,11 +522,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe11"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe11"
                         style="@style/EditText_number"
                         android:maxLength="2"
                         android:hint="@string/pocfe11"
+                        app:maxValue="40"
+                        app:minValue="1"
+                        app:type="range"
                         android:text='@{pocfe10a.checked ? pocfe11.getText.toString : "" }'/>
 
                 </LinearLayout>
@@ -596,11 +612,14 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe14"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe14"
                         style="@style/EditText_number"
                         android:maxLength="2"
                         android:hint="@string/pocfe14"
+                        app:maxValue="40"
+                        app:minValue="1"
+                        app:type="range"
                         android:text='@{pocfe13a.checked ? pocfe14.getText.toString : "" }'/>
 
                 </LinearLayout>
@@ -683,12 +702,15 @@
                         style="@style/i_textview"
                         android:text="@string/pocfe17"/>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe17"
                         style="@style/EditText_number"
                         android:maxLength="2"
                         android:hint="@string/pocfe17"
-                        android:text='@{pocfe16a.checked ? pocfe17.getText.toString : "" }'/> />
+                        app:maxValue="40"
+                        app:minValue="1"
+                        app:type="range"
+                        android:text='@{pocfe16a.checked ? pocfe17.getText.toString : "" }'/>
 
                 </LinearLayout>
 
