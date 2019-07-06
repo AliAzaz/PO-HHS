@@ -103,6 +103,7 @@ public class F1Section09_10Activity extends AppCompatActivity {
                 : bi.pocfj0196.isChecked() ? "96"
                 : "0");
 
+        sIJ.put("pocfj01bx", bi.pocfj01bx.getText().toString());
         sIJ.put("pocfj0196x", bi.pocfj0196x.getText().toString());
         sIJ.put("pocfj0198", bi.pocfj0198.isChecked() ? "98" : "0");
 

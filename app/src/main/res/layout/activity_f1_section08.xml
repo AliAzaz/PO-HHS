@@ -43,8 +43,8 @@
                         android:hint="##.##"
                         android:layoutDirection="ltr"
                         app:mask="##.##"
-                        app:maxValue="40.0"
-                        app:minValue="0.5"
+                        app:maxValue="40.00"
+                        app:minValue="00.90"
                         app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                         app:type="range" />
 
@@ -67,12 +67,12 @@
                         android:id="@+id/pocfh02"
                         style="@style/EditText_number"
                         android:digits="0123456789."
-                        android:hint="##.##"
+                        android:hint="###.##."
                         android:layoutDirection="ltr"
-                        app:mask="##.##"
-                        app:maxValue="140.0"
-                        app:minValue="10.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                        app:mask="###.##."
+                        app:maxValue="140"
+                        app:minValue="15.0"
+                        app:pattern="^(\\d{2,2,2}\\.\\d{2,2})$"
                         app:type="range" />
 
 
