@@ -124,6 +124,7 @@ public class F1Section06Activity extends AppCompatActivity {
                 : bi.pocff10b.isChecked() ? "2"
                 : bi.pocff10c.isChecked() ? "3"
                 : bi.pocff10d.isChecked() ? "4"
+                : bi.pocff10e.isChecked() ? "5"
                 : "0");
         sF.put("pocff11", bi.pocff11.getText().toString());
 

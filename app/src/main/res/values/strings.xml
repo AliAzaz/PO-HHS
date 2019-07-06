@@ -496,8 +496,8 @@
     <string name="pocfg02c"> ها،  ڪارڊ ۽ ٻيا ڪي ڪاغذ ڏٺا </string>
     <string name="pocfg02d"> نه،   ڪارڊ ۽ ٻيا ڪي ڪاغذ نه ڏٺا  </string>
     <string name="pocfg03info"> ڪارڊ تان هر ٽڪي جي تاريخ لکو۔ڏينهن واري ڪالم ۾ “44” لکو جيڪڏهن ڪارڊ ڏيکاري ٿو ته ٽڪو لڳايو ويو هو پر تاريخ ڏنل نه هئي</string>
-    <string name="atbirth"> پیدائش پر </string>
-    <string name="pocfgbcg"> بی سی جی </string>
+    <string name="atbirth"> پيدائش جي وقت </string>
+    <string name="pocfgbcg"> بي سي جي </string>
     <string name="pocfgbcgdt"> DD-MM-YYYY </string>
     <string name="pocfgopv0">پوليو جا ڦڙا 0 ڊوز </string>
     <string name="pocfgopv0dt"> DD-MM-YYYY </string>
@@ -508,7 +508,7 @@
     <string name="pocfgp1dt"> DD-MM-YYYY </string>
     <string name="pocfgpcv1"> ۔نيموڪوڪل -1Pneumococcal-1 </string>
     <string name="pocfgpcv1dt"> DD-MM-YYYY </string>
-    <string name="pocfgrt1"> Rota virus-1. روٽا وائرس-1 </string>
+    <string name="pocfgrt1"> Rota virus-1. روٽا وائرس-1</string>
     <string name="pocfgrt1dt"> DD-MM-YYYY </string>
     <string name="at10wks"> ۔10هفتن جي عمر ۾ </string>
     <string name="pocfgopv2"> پوليو جا ڦڙا-2 OPV-2 </string>

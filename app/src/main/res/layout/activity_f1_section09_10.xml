@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -118,7 +118,7 @@
                 android:layout_marginTop="2dp"
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:text="@string/pocfsec9"
+                android:text="@string/pocfsec10"
                 android:textSize="40sp" />
 
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -150,6 +150,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pocfj01b" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pocfj01bx"
+                            android:visibility="@{pocfj01b.checked ? View.VISIBLE : View.GONE}"
+                            style="@style/EditText_number"
+                            android:maxLength="3"
+                            android:hint="@string/pocfj01b"
+                            app:maxValue="105.0"
+                            app:minValue="90.0"
+                            app:type="range" />
 
                         <CheckBox
                             android:id="@+id/pocfj01c"
@@ -227,7 +237,7 @@
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/other" />
+                            android:text="@string/none" />
 
                         <EditText
                             android:id="@+id/pocfj0196x"

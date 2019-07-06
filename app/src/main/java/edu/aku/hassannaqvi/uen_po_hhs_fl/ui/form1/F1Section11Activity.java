@@ -66,8 +66,11 @@ public class F1Section11Activity extends AppCompatActivity {
         sK.put("pocfk01", bi.pocfk01a.isChecked() ? "1"
                 : bi.pocfk01b.isChecked() ? "2"
                 : bi.pocfk01c.isChecked() ? "3"
+                : bi.pocfk01d.isChecked() ? "4"
                 : bi.pocfk0196.isChecked() ? "96" : "0");
 
+        sK.put("pocfk01cx", bi.pocfk01cx.getText().toString());
+        sK.put("pocfk01dx", bi.pocfk01dx.getText().toString());
         sK.put("pocfk0196x", bi.pocfk0196x.getText().toString());
 
         sK.put("pocfk02", bi.pocfk02a.isChecked() ? "1"
