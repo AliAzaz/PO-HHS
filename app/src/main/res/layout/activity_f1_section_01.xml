@@ -451,7 +451,7 @@
                                 android:textColor="@android:color/black"
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE"
-                                app:minDate="01/01/1981" />
+                                app:minDate="01/01/2014" />
 
                         </LinearLayout>
 
@@ -480,6 +480,7 @@
                                 android:text='@{pocfa11b.checked ? pocfa13y.getText.toString : ""}'
                                 app:maxValue="4"
                                 app:minValue="0"
+
                                 app:type="range" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker

@@ -68,6 +68,9 @@ public class F1Section11Activity extends AppCompatActivity {
                 : bi.pocfk01c.isChecked() ? "3"
                 : bi.pocfk0196.isChecked() ? "96" : "0");
 
+        sK.put("pocfk01cx", bi.pocfk01cx.getText().toString());
+        sK.put("pocfk01dx", bi.pocfk01dx.getText().toString());
+
         sK.put("pocfk0196x", bi.pocfk0196x.getText().toString());
 
         sK.put("pocfk02", bi.pocfk02a.isChecked() ? "1"
@@ -92,12 +95,18 @@ public class F1Section11Activity extends AppCompatActivity {
         sK.put("pocfk07", bi.pocfk07a.isChecked() ? "1"
                 : bi.pocfk07b.isChecked() ? "2"
                 : "0");
-        sK.put("pocfk08", bi.pocfk08a.isChecked() ? "1"
-                : bi.pocfk08b.isChecked() ? "2"
-                : bi.pocfk08c.isChecked() ? "3"
-                : bi.pocfk08d.isChecked() ? "4"
-                : bi.pocfk0898.isChecked() ? "98"
-                : "0");
+
+
+        sK.put("pocfk08a", bi.pocfk08a.isChecked() ? "1" :"0");
+        sK.put("pocfk08b", bi.pocfk08b.isChecked() ? "1" :"0");
+        sK.put("pocfk08c", bi.pocfk08c.isChecked() ? "1" :"0");
+        sK.put("pocfk08d", bi.pocfk08d.isChecked() ? "1" :"0");
+
+        sK.put("pocfk0898", bi.pocfk0898.isChecked() ? "98" :"0");
+
+
+
+
         sK.put("pocfk09", bi.pocfk09a.isChecked() ? "1"
                 : bi.pocfk09b.isChecked() ? "2"
                 : bi.pocfk09c.isChecked() ? "3"

@@ -526,7 +526,7 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardView"
-                android:visibility='@{pocff08d.checked? View.VISIBLE : View.GONE}'>
+                android:visibility='@{pocff08d.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -563,31 +563,29 @@
                         style="@style/i_textview"
                         android:text="@string/pocff10" />
 
-                    <RadioGroup
-                        android:id="@+id/pocff10"
-                        style="@style/i_radiogroup">
 
-                        <RadioButton
+
+                        <CheckBox
                             android:id="@+id/pocff10a"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocff10a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocff10b"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocff10b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocff10c"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocff10c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocff10d"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocff10d" />
 
-                    </RadioGroup>
+
 
                 </LinearLayout>
 

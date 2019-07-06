@@ -69,36 +69,44 @@
                         style="@style/i_textview"
                         android:text="@string/pocfd02"/>
 
-                    <RadioGroup
-                        android:id="@+id/pocfd02"
-                        style="@style/i_radiogroup">
+                <LinearLayout
+                    android:id="@+id/fldgrppocfd02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:tag="0">
 
-                        <RadioButton
+
+                        <CheckBox
                             android:id="@+id/pocfd02a"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd02a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd02b"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd02b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd02c"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd02c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd02d"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd02d" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd0297"
-                            style="@style/i_radiobutton"
-                            android:text="@string/none" />
 
-                    </RadioGroup>
+
+                </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/pocfd0298"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:tag="-1"
+                        android:text="@string/none" />
 
                 </LinearLayout>
 
@@ -117,34 +125,34 @@
                         android:id="@+id/pocfd03"
                         style="@style/i_radiogroup">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd03a"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd03a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd03b"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd03b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd03c"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd03c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd03d"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd03d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd03e"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/pocfd03e" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd0396"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
                             android:text="@string/other" />
 
                         <EditText

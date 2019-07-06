@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -29,6 +30,34 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (formValidation()) {
+
+            if(bi.pocfb03a.getText().toString().equals("0") && bi.pocfb03b.getText().toString().equals("0") )
+            {
+                Toast.makeText(this, "Q2.3a: Number of boyes + girls cann't be zero  ", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if(bi.pocfb04a.getText().toString().equals("0") && bi.pocfb04b.getText().toString().equals("0") )
+            {
+                Toast.makeText(this, "Q2.4: Number of boyes + girls cann't be zero  ", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if(!TextUtils.isEmpty(bi.pocfb03a.getText()) && !TextUtils.isEmpty(bi.pocfb04a.getText()) )
+            {
+                if(Integer.parseInt(bi.pocfb04a.getText().toString())>Integer.parseInt(bi.pocfb03a.getText().toString()))
+
+                    Toast.makeText(this, "Q2.4a: Can not be greater then Q2.3a  ", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if(!TextUtils.isEmpty(bi.pocfb03b.getText()) && !TextUtils.isEmpty(bi.pocfb04b.getText()) )
+            {
+                if(Integer.parseInt(bi.pocfb04b.getText().toString())>Integer.parseInt(bi.pocfb03b.getText().toString()))
+
+                    Toast.makeText(this, "Q2.4b: Can not be greater then Q2.3b  ", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             try {
                 SaveDraft();
             } catch (Exception e) {
