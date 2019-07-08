@@ -73,7 +73,6 @@
 
                     </LinearLayout>
 
-
                 </LinearLayout>
 
 
@@ -115,6 +114,7 @@
                         app:type="range"/>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
 

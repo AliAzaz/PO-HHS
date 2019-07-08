@@ -47,6 +47,7 @@
                                 android:padding="20dp" />
 
                         </LinearLayout>
+
                     </android.support.v7.widget.CardView>
 
                     <!--pocfa02-->
@@ -103,7 +104,7 @@
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
 
-                    <!--pocfa06-->
+                    <!--pocfa05-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
@@ -112,7 +113,7 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="@string/pocfa06" />
+                                android:text="@string/pocfa05" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pocfa05"
@@ -182,6 +183,7 @@
                             android:gravity="left"
                             android:padding="5dp"
                             android:text="Name of Household" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -210,23 +212,25 @@
                             android:gravity="left"
                             android:padding="5dp"
                             android:text="Contact Number" />
+
                     </LinearLayout>
 
-                    <!--pocfa05-->
+                    <!--pocfa06-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="@string/pocfa05" />
+                                android:text="@string/pocfa06" />
 
                             <EditText
                                 android:id="@+id/pocfa06"
                                 style="@style/EditText"
-                                android:hint="@string/pocfa05" />
+                                android:hint="@string/pocfa06" />
 
                         </LinearLayout>
+
                     </android.support.v7.widget.CardView>
 
                     <!--pocfa07-->
@@ -451,7 +455,7 @@
                                 android:textColor="@android:color/black"
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE"
-                                app:minDate="01/01/1981" />
+                                app:minDate="01/08/2014" />
 
                         </LinearLayout>
 
@@ -591,4 +595,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </layout>
