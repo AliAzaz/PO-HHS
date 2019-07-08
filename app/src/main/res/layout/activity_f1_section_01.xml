@@ -117,9 +117,7 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pocfa05"
                                 style="@style/textInput"
-                                android:digits="-ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                                 android:hint="###-#"
-                                android:inputType="textCapCharacters"
                                 android:textColor="@color/colorPrimary"
                                 app:mask="###-#"
                                 app:pattern="[0-9]{3,3}-[^0-9]{1,1}" />
