@@ -119,8 +119,10 @@
                                 style="@style/textInput"
                                 android:hint="###-#"
                                 android:textColor="@color/colorPrimary"
+                                app:defaultValue=""
                                 app:mask="###-#"
-                                app:pattern="[0-9]{3,3}-[^0-9]{1,1}" />
+                                app:pattern="[0-9]{3,3}-[^0-9]{1,1}"
+                                app:type="equal" />
 
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
