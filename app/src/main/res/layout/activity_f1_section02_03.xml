@@ -99,7 +99,7 @@
                         android:maxLength="2"
                         app:maxValue="10"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb03b"
@@ -111,7 +111,7 @@
                         android:maxLength="2"
                         app:maxValue="10"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -141,7 +141,7 @@
                         android:maxLength="2"
                         app:maxValue="9"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb04b"
@@ -153,7 +153,7 @@
                         android:maxLength="2"
                         app:maxValue="9"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -632,12 +632,12 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/pocfc101"
                             android:maxLength="2"
-                            app:maxValue="16"
-                            app:minValue="1"
-                            app:type="range"
                             android:tag="pocfc10a"
                             android:text='@{pocfc10a.checked? pocfc10ax.getText.toString : "" }'
-                            android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}'
+                            app:maxValue="16"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </RadioGroup>
 
@@ -665,14 +665,17 @@
                         style="@style/i_textview"
                         android:text="@string/pocfc11" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfc11"
                         style="@style/EditText_number"
                         android:hint="@string/pocfc11"
                         android:maxLength="6"
                         android:tag="pocfc1198"
                         android:text='@{!pocfc1198.checked? pocfc11.getText.toString : "" }'
-                        android:visibility='@{!pocfc1198.checked? View.VISIBLE : View.GONE}' />
+                        android:visibility='@{!pocfc1198.checked? View.VISIBLE : View.GONE}'
+                        app:maxValue="999999"
+                        app:minValue="5000"
+                        app:type="range" />
 
                     <CheckBox
                         android:id="@+id/pocfc1198"
@@ -705,7 +708,7 @@
                         android:maxLength="3"
                         app:maxValue="100"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
 
                 </LinearLayout>
