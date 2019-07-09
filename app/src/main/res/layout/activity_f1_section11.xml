@@ -173,21 +173,8 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk03" />
 
-                    <RadioGroup
-                        android:id="@+id/pocfk03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:id="@+id/pocfk03a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/yes" />
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/pocfk03a01"
+                            android:id="@+id/pocfk03a"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -195,13 +182,11 @@
                             android:inputType="number"
                             android:maxLength="2"
                             app:maxValue="99"
-                            app:minValue="33"
-                            app:type="range"
-                            android:text='@{pocfk03a.checked? pocfk03a01.getText.toString : "" }'
-                            android:visibility='@{pocfk03a.checked? View.VISIBLE : View.GONE}' />
+                            app:minValue="30"
+                            app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/pocfk03a02"
+                            android:id="@+id/pocfk03b"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -210,19 +195,7 @@
                             android:maxLength="2"
                             app:maxValue="99"
                             app:minValue="30"
-                            app:type="range"
-                            android:text='@{pocfk03a.checked? pocfk03a02.getText.toString : "" }'
-                            android:visibility='@{pocfk03a.checked? View.VISIBLE : View.GONE}' />
-
-                        <RadioButton
-                            android:id="@+id/pocfk03b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/no" />
-
-
-                    </RadioGroup>
+                            app:type="range" />
 
                 </LinearLayout>
 
@@ -384,47 +357,44 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk08" />
 
-                    <RadioGroup
-                        android:id="@+id/pocfk08"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/pocfk08a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/pocfk08a" />
+                        android:checked="@{pocfk0897.checked ? false : true}"
+                        android:text="@string/pocfk08a" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/pocfk08b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/pocfk08b" />
+                        android:checked="@{pocfk0897.checked ? false : true}"
+                        android:text="@string/pocfk08b" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/pocfk08c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/pocfk08c" />
+                        android:checked="@{pocfk0897.checked ? false : true}"
+                        android:text="@string/pocfk08c" />
 
-                        <RadioButton
+                    <CheckBox
                             android:id="@+id/pocfk08d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/pocfk08d" />
+                        android:checked="@{pocfk0897.checked ? false : true}"
+                        android:text="@string/pocfk08d" />
 
-                        <RadioButton
-                            android:id="@+id/pocfk0898"
+                    <CheckBox
+                        android:id="@+id/pocfk0897"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/dkn" />
-
-                    </RadioGroup>
+                        android:text="@string/none" />
 
                 </LinearLayout>
 
