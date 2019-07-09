@@ -593,34 +593,59 @@
     <string name="pocfk01c"> عوامي صحت جي سهولت(نالو) </string>
     <string name="pocfk01d"> پرائيويٽ (نجي) صحت جي سهولت(نالو) </string>
     <string name="pocfk02"> کنگھ يا ٿڌ </string>
-  <string name="pocfk03"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pocfk03"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
+  <string name="pocfk03h1"> 0 کان 2 مهينن تائين عمر وارا ٻار : </string>
+  <string name="pocfk03h2"> هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pocfk03h3"> 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ  </string>
+  <string name="pocfk03h4"> 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
 
-    <string name="pocfk04"> پاسيريون لڳڻ </string>
-    <string name="pocfk05"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو) (SpO2) </string>
-    <string name="pocfk06"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
-    <string name="pocfk07"> کر کر جو آواز </string>
-    <string name="pocfk08"> خطرناڪ نشانيون(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pocfk04"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
+  <string name="pocfk04a"> ھا </string>
+  <string name="pocfk04b"> نه </string>
+
+  <string name="pocfk05"> پاسيريون لڳڻ </string>
+  <string name="pocfk05a"> ھا </string>
+  <string name="pocfk05b"> نه </string>
+
+  <string name="pocfk06"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو (SpO2) </string>
+
+  <string name="pocfk07"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
+  <string name="pocfk07a"> ھا </string>
+  <string name="pocfk07b"> نه </string>
+
+  <string name="pocfk08"> خطرناڪ نشانيون(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pocfk08h"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfk08a"> ماءُ جي ٿڃ يا ڪجھ به پي نه سگھڻ </string>
     <string name="pocfk08b"> لڳاتار اُلٽي </string>
     <string name="pocfk08c"> غنودگي / بيهوشي </string>
     <string name="pocfk08d"> جھٽڪا لڳڻ </string>
-    <string name="pocfk09"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي. </string>
-    <string name="pocfk09h1"> نمونيه ناهي </string>
-    <string name="pocfk09a"> کنگھ ۽ ٿڌ </string>
-    <string name="pocfk09h2"> نمونيه </string>
-    <string name="pocfk09b"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
-    <string name="pocfk09c"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
-    <string name="pocfk09h3"> شديد نمونيه </string>
-    <string name="pocfk09d"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
-    <string name="pocfk09e"> 7ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
-    <string name="pocfk10"> ڇا آڪسيجن جي ريڊنگ ورتي وئي ليڊي هيلٿ ورڪر پاران ريفرل مهيا ڪرڻ کان اڳ ۾؟ </string>
-    <string name="pocfk11"> جيڪڏهن نه ته ڇو؟ </string>
+  <string name="pocfk08e"> کر کر جو آواز </string>
+
+  <string name="pocfk09"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي. </string>
+  <string name="pocfk09h1"> کنگھ ۽ ٿڌ </string>
+  <string name="pocfk09h2"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+  <string name="pocfk09h3"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
+  <string name="pocfk09h4"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pocfk09h5"> 7ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pocfk09a"> نمونيه ناهي </string>
+  <string name="pocfk09b"> نمونيه </string>
+  <string name="pocfk09c"> شديد نمونيه </string>
+
+  <string name="pocfk10"> ڇا آڪسيجن جي ريڊنگ ورتي وئي ليڊي هيلٿ ورڪر پاران ريفرل مهيا ڪرڻ کان اڳ ۾؟ </string>
+  <string name="pocfk10a"> ھا </string>
+  <string name="pocfk10b"> نه </string>
+
+  <string name="pocfk11"> جيڪڏهن نه ته ڇو؟ </string>
     <string name="pocfk11a"> ليڊي هليٿ ورڪر نه ورتي </string>
     <string name="pocfk11b"> خاندان جي طرفان اجازت نه ملي </string>
+
     <string name="pocfk12"> جيڪڏهن ها ته ريڊنگ ڇا هئي؟ </string>
     <string name="pocfk12a"> غيرمعمولي </string>
     <string name="pocfk12b"> معمولي </string>
-    <string name="pocfk13"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
+
+  <string name="pocfk13"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
+  <string name="pocfk13a"> ھا </string>
+  <string name="pocfk13b"> نه </string>
 
     <!--FORM THREE 03-->
     <string name="pofisec1"> سيڪشن1. رفرل جي معلومات </string>

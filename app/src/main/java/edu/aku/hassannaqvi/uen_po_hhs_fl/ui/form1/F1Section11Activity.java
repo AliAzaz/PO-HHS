@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -14,6 +16,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section11Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F1Section11Activity extends AppCompatActivity {
@@ -25,9 +28,32 @@ public class F1Section11Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section11);
         bi.setCallback(this);
-
         this.setTitle(R.string.pocfsec11);
+        setupSkips();
+
     }
+
+
+    private void setupSkips() {
+
+        bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.pocfk10a.getId()) {
+                    bi.cvpocfk11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.cvpocfk12, null);
+                    bi.cvpocfk12.setVisibility(View.GONE);
+                } else {
+                    bi.cvpocfk12.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.cvpocfk11, null);
+                    bi.cvpocfk11.setVisibility(View.GONE);
+                }
+            }
+        });
+
+    }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -98,19 +124,19 @@ public class F1Section11Activity extends AppCompatActivity {
         sK.put("pocfk08b", bi.pocfk08b.isChecked() ? "2" : "0");
         sK.put("pocfk08c", bi.pocfk08c.isChecked() ? "3" : "0");
         sK.put("pocfk08d", bi.pocfk08d.isChecked() ? "4" : "0");
+        sK.put("pocfk08e", bi.pocfk08e.isChecked() ? "5" : "0");
         sK.put("pocfk0897", bi.pocfk0897.isChecked() ? "97" : "0");
 
 
         sK.put("pocfk09", bi.pocfk09a.isChecked() ? "1"
                 : bi.pocfk09b.isChecked() ? "2"
                 : bi.pocfk09c.isChecked() ? "3"
-                : bi.pocfk09d.isChecked() ? "4"
-                : bi.pocfk09e.isChecked() ? "5"
                 : "0");
 
         sK.put("pocfk10", bi.pocfk10a.isChecked() ? "1"
                 : bi.pocfk10b.isChecked() ? "2"
                 : "0");
+
         sK.put("pocfk11", bi.pocfk11a.isChecked() ? "1"
                 : bi.pocfk11b.isChecked() ? "2"
                 : bi.pocfk1196.isChecked() ? "96"
@@ -120,6 +146,7 @@ public class F1Section11Activity extends AppCompatActivity {
         sK.put("pocfk12", bi.pocfk12a.isChecked() ? "1"
                 : bi.pocfk12b.isChecked() ? "2"
                 : "0");
+
         sK.put("pocfk13", bi.pocfk13a.isChecked() ? "1"
                 : bi.pocfk13b.isChecked() ? "2"
                 : "0");
