@@ -607,9 +607,9 @@
   <string name="pocfk05a"> ھا </string>
   <string name="pocfk05b"> نه </string>
 
-  <string name="pocfk06"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو (SpO2) </string>
+  <string name="pocfk06"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو (SpO2 %) </string>
 
-  <string name="pocfk07"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
+  <string name="pocfk07"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2 92%) </string>
   <string name="pocfk07a"> ھا </string>
   <string name="pocfk07b"> نه </string>
 

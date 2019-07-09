@@ -112,7 +112,6 @@
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
-
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:screenOrientation="portrait"
@@ -129,6 +128,7 @@
         <activity android:name=".FormsList" />
 
         <service android:name=".DownloadFileService" />
+
     </application>
 
 </manifest>

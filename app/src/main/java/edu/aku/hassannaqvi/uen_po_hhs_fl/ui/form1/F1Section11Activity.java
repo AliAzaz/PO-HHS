@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -34,7 +37,33 @@ public class F1Section11Activity extends AppCompatActivity {
     }
 
 
+    private TextWatcher generalTextWatcher = new TextWatcher() {
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (bi.pocfk06b.getText().hashCode() == s.hashCode()) {
+                if (bi.pocfk06b.getText().toString().trim().length() > 0 && Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92) {
+                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
+                    bi.cvpocfk07.setVisibility(View.GONE);
+                } else {
+                    bi.cvpocfk07.setVisibility(View.VISIBLE);
+                }
+            }
+        }
+
+    };
+
     private void setupSkips() {
+
+        bi.pocfk06b.addTextChangedListener(generalTextWatcher);
 
         bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -49,6 +78,17 @@ public class F1Section11Activity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.cvpocfk11, null);
                     bi.cvpocfk11.setVisibility(View.GONE);
                 }
+            }
+        });
+
+
+        bi.pocfk0897.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    ClearClass.ClearAllFields(bi.llpocfk08, false);
+                else
+                    ClearClass.ClearAllFields(bi.llpocfk08, true);
             }
         });
 
@@ -93,7 +133,8 @@ public class F1Section11Activity extends AppCompatActivity {
                 : bi.pocfk01b.isChecked() ? "2"
                 : bi.pocfk01c.isChecked() ? "3"
                 : bi.pocfk01d.isChecked() ? "4"
-                : bi.pocfk0196.isChecked() ? "96" : "0");
+                : bi.pocfk0196.isChecked() ? "96"
+                : "0");
 
         sK.put("pocfk01cx", bi.pocfk01cx.getText().toString());
         sK.put("pocfk01dx", bi.pocfk01dx.getText().toString());
@@ -110,12 +151,13 @@ public class F1Section11Activity extends AppCompatActivity {
                 : bi.pocfk04b.isChecked() ? "2"
                 : "0");
 
-        sK.put("pocfk05a", bi.pocfk05a.getText().toString());
-        sK.put("pocfk05b", bi.pocfk05b.getText().toString());
-
-        sK.put("pocfk06", bi.pocfk06a.isChecked() ? "1"
-                : bi.pocfk06b.isChecked() ? "2"
+        sK.put("pocfk05", bi.pocfk05a.isChecked() ? "1"
+                : bi.pocfk05b.isChecked() ? "2"
                 : "0");
+
+        sK.put("pocfk06a", bi.pocfk06a.getText().toString());
+        sK.put("pocfk06b", bi.pocfk06b.getText().toString());
+
         sK.put("pocfk07", bi.pocfk07a.isChecked() ? "1"
                 : bi.pocfk07b.isChecked() ? "2"
                 : "0");
