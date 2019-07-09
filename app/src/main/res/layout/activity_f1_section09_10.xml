@@ -153,7 +153,8 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfj01bx"
-                            android:visibility="@{pocfj01b.checked ? View.VISIBLE : View.GONE}"
+                            android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
+                            android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
                             style="@style/EditText_number"
                             android:maxLength="3"
                             android:hint="@string/pocfj01b"
@@ -237,7 +238,7 @@
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/none" />
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/pocfj0196x"
@@ -285,6 +286,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/yes" />
+
+                        <EditText
+                            android:id="@+id/pocfj02ax"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:tag="pocfj02a"
+                            android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
+                            android:visibility='@{pocfj02a.checked? View.VISIBLE : View.GONE}' />
+
 
                         <RadioButton
                             android:id="@+id/pocfj02b"

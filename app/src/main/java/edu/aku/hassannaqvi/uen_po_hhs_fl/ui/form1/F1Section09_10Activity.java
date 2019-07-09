@@ -108,7 +108,9 @@ public class F1Section09_10Activity extends AppCompatActivity {
         sIJ.put("pocfj0198", bi.pocfj0198.isChecked() ? "98" : "0");
 
         sIJ.put("pocfj02", bi.pocfj02a.isChecked() ? "1"
-                : bi.pocfj02b.isChecked() ? "2" : "0");
+                : bi.pocfj02b.isChecked() ? "2"
+                : "0");
+        sIJ.put("pocfj02ax", bi.pocfj02ax.getText().toString());
 
         MainApp.fc.setsG(String.valueOf(sIJ));
     }
