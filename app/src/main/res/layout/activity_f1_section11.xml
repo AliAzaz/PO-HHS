@@ -358,42 +358,42 @@
                         android:text="@string/pocfk08" />
 
                     <CheckBox
-                            android:id="@+id/pocfk08a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                        android:id="@+id/pocfk08a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
                         android:checked="@{pocfk0897.checked ? false : true}"
                         android:text="@string/pocfk08a" />
 
                     <CheckBox
-                            android:id="@+id/pocfk08b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                        android:id="@+id/pocfk08b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
                         android:checked="@{pocfk0897.checked ? false : true}"
                         android:text="@string/pocfk08b" />
 
                     <CheckBox
-                            android:id="@+id/pocfk08c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                        android:id="@+id/pocfk08c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
                         android:checked="@{pocfk0897.checked ? false : true}"
                         android:text="@string/pocfk08c" />
 
                     <CheckBox
-                            android:id="@+id/pocfk08d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                        android:id="@+id/pocfk08d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
                         android:checked="@{pocfk0897.checked ? false : true}"
                         android:text="@string/pocfk08d" />
 
                     <CheckBox
                         android:id="@+id/pocfk0897"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
                         android:text="@string/none" />
 
                 </LinearLayout>
