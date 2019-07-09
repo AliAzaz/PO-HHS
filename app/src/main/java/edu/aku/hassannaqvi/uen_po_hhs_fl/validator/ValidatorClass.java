@@ -120,6 +120,22 @@ public abstract class ValidatorClass {
 
     }
 
+    public static boolean EmptyCustomeTextBox(Context context, TextView txt, String msg) {
+        if (TextUtils.isEmpty(txt.getText().toString())) {
+            FancyToast.makeText(context, "ERROR: " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+            txt.setError("This data is not accurate! ");    // Set Error on last radio button
+            txt.setFocusableInTouchMode(true);
+            txt.requestFocus();
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": This data is not accurate!");
+            return false;
+        } else {
+            txt.setError(null);
+            txt.clearFocus();
+            return true;
+        }
+
+    }
+
     public static boolean RangeTextBox(Context context, EditText txt, int min, int max, String msg, String type) {
 
         if (Integer.valueOf(txt.getText().toString()) < min || Integer.valueOf(txt.getText().toString()) > max) {

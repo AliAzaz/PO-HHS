@@ -36,6 +36,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.otherClasses.SnackUtils;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F1Section01Activity extends AppCompatActivity {
@@ -64,6 +65,8 @@ public class F1Section01Activity extends AppCompatActivity {
     private void initializingComponents() {
         db = new DatabaseHelper(this);
         populateSpinner(this);
+
+        bi.pocfa12.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -5));
     }
 
     private void settingListeners() {
@@ -230,6 +233,19 @@ public class F1Section01Activity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        bi.pocfa03.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0) return;
+                bi.lhwcode.setText("LHW CODE: " + lhwCodes.get(i));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
