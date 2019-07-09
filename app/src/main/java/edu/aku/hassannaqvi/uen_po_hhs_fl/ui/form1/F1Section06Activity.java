@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -25,6 +26,14 @@ public class F1Section06Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section06);
         bi.setCallback(this);
         this.setTitle(R.string.pocfh6);
+
+        bi.pocff03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.pocff03a.getId())
+                    bi.pocff04.clearCheck();
+            }
+        });
 
     }
 
