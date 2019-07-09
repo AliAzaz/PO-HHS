@@ -35,6 +35,14 @@ public class F1Section06Activity extends AppCompatActivity {
             }
         });
 
+        bi.pocff06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.pocff06a.getId())
+                    bi.pocff07.clearCheck();
+            }
+        });
+
     }
 
     public void BtnContinue() {
@@ -89,11 +97,9 @@ public class F1Section06Activity extends AppCompatActivity {
                 : bi.pocff02j.isChecked() ? "9"
                 : bi.pocff02k.isChecked() ? "10"
                 : bi.pocff02l.isChecked() ? "11"
-                : bi.pocff02m.isChecked() ? "12"
                 : "0");
         sF.put("pocff02gx", bi.pocff02gx.getText().toString());
         sF.put("pocff02kx", bi.pocff02kx.getText().toString());
-        sF.put("pocff02mx", bi.pocff02mx.getText().toString());
 
         sF.put("pocff03", bi.pocff03a.isChecked() ? "1"
                 : bi.pocff03b.isChecked() ? "2"
@@ -129,12 +135,12 @@ public class F1Section06Activity extends AppCompatActivity {
                 : "0");
         sF.put("pocff09", bi.pocff09.getText().toString());
 
-        sF.put("pocff10", bi.pocff10a.isChecked() ? "1"
-                : bi.pocff10b.isChecked() ? "2"
-                : bi.pocff10c.isChecked() ? "3"
-                : bi.pocff10d.isChecked() ? "4"
-                : bi.pocff10e.isChecked() ? "5"
-                : "0");
+        sF.put("pocff10a", bi.pocff10a.isChecked() ? "1" : "0");
+        sF.put("pocff10b", bi.pocff10b.isChecked() ? "2" : "0");
+        sF.put("pocff10c", bi.pocff10c.isChecked() ? "3" : "0");
+        sF.put("pocff10d", bi.pocff10d.isChecked() ? "4" : "0");
+        sF.put("pocff10e", bi.pocff10e.isChecked() ? "5" : "0");
+
         sF.put("pocff11", bi.pocff11.getText().toString());
 
         MainApp.fc.setsD(String.valueOf(sF));

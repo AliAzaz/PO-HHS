@@ -489,8 +489,8 @@
     <string name="pocfgdoi"> Date of Immunization </string>
     <string name="pocfgheading"> سيڪشن07. ٽڪن جو رڪارڊ </string>
     <string name="pocfginfo"> اس سیکشن میں صرف ان بچوں کا اندراج ہوگا جو 5 سال سے چھوٹے ہیں </string>
-    <string name="pocfg01">۔C302 - ڇا توهان وٽ ٻار(چونڊيل ڪيس) جي سرڪاري ٽڪن جو ڪارڊ يا ٽڪن جو رڪارڊ جيڪو ڪنهن نجي صحت ڪارڪن طرفان مهيا ڪيو ويو آهي؟</string>
-    <string name="pocfg02">۔ڇا آئون ٽڪن وارو ڪارڊ يا ٻيا ڪي ڪاغذ ڏسي سگھان ٿي؟</string>
+    <string name="pocfg01">ڇا توهان وٽ ٻار(چونڊيل ڪيس) جي سرڪاري ٽڪن جو ڪارڊ يا ٽڪن جو رڪارڊ جيڪو ڪنهن نجي صحت ڪارڪن طرفان مهيا ڪيو ويو آهي؟</string>
+    <string name="pocfg02">ڇا آئون ٽڪن وارو ڪارڊ يا ٻيا ڪي ڪاغذ ڏسي سگھان ٿي؟</string>
     <string name="pocfg02a"> ها،  ڪارڊ ڏٺو </string>
     <string name="pocfg02b"> ها،  ٻيا ڪي ڪاغذ ڏٺا  </string>
     <string name="pocfg02c"> ها،  ڪارڊ ۽ ٻيا ڪي ڪاغذ ڏٺا </string>

@@ -223,7 +223,6 @@ public class SyncActivity extends AppCompatActivity {
                 }
             });
 
-
             return null;
         }
 
