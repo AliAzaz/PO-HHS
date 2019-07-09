@@ -69,6 +69,9 @@
     <string name="yes"> ھا </string>
     <string name="no"> نه </string>
     <string name="na"> لاڳو نٿو ٿئي </string>
+  <string name="yes1"> ها، ٽڪو لڳو </string>
+  <string name="no1"> نه،ٽڪو نه لڳو </string>
+  <string name="na1"> لاڳو نٿو ٿئي </string>
     <string name="dkn"> خبر نه آھي </string>
     <string name="day"> ڏينهن </string>
     <string name="month"> مهينو </string>
