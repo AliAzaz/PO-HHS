@@ -20,8 +20,6 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract.singleAreas;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract.singleChild;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
@@ -47,29 +45,16 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.otherClasses.MotherLst;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String SQL_CREATE_BL_RANDOM = "CREATE TABLE " + singleChild.TABLE_NAME + "("
-            + singleChild.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleChild.COLUMN_VILLAGE_CODE + " TEXT,"
-            + singleChild.COLUMN_LHW_CODE + " TEXT,"
-            + singleChild.COLUMN_LUID + " TEXT,"
-            + singleChild.COLUMN_HH + " TEXT,"
-            + singleChild.COLUMN_STRUCTURE_NO + " TEXT,"
-            + singleChild.COLUMN_FAMILY_EXT_CODE + " TEXT,"
-            + singleChild.COLUMN_HH_HEAD + " TEXT,"
-            + singleChild.COLUMN_HH_CONTACT + " TEXT,"
-            + singleChild.COLUMN_RANDOMDT + " TEXT );";
-
     public static final String SQL_CREATE_USERS = "CREATE TABLE " + singleUser.TABLE_NAME + "("
             + singleUser._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + singleUser.ROW_USERNAME + " TEXT,"
             + singleUser.ROW_PASSWORD + " TEXT,"
             + singleUser.FULL_NAME + " TEXT"
-//            + singleUser.REGION_DSS + " TEXT"
             + " );";
     public static final String DATABASE_NAME = "po_hhs.db";
     public static final String DB_NAME = "po_hhs_copy.db";
     public static final String PROJECT_NAME = "DMU-PO-HHS";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
             + FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -102,93 +87,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_SYNCED + " TEXT," +
             FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
-    //    private static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE "
-//            + familyMembers.TABLE_NAME + "("
-//            + familyMembers.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-//            + familyMembers.COLUMN_PROJECT_NAME + " TEXT," +
-//            familyMembers.COLUMN_DEVICETAGID + " TEXT," +
-//            familyMembers.COLUMN_UID + " TEXT," +
-//            familyMembers.COLUMN_UUID + " TEXT," +
-//            familyMembers.COLUMN_FORMDATE + " TEXT," +
-//            familyMembers.COLUMN_DEVICEID + " TEXT," +
-//            familyMembers.COLUMN_USER + " TEXT," +
-//            familyMembers.COLUMN_SB + " TEXT," +
-//            familyMembers.COLUMN_SERIAL_NO + " TEXT," +
-//            familyMembers.COLUMN_SYNCED + " TEXT," +
-//            familyMembers.COLUMN_SYNCED_DATE + " TEXT"
-//            + " );";
-//    private static final String SQL_CREATE_DECEASED_MOTHER = "CREATE TABLE "
-//            + DeceasedMotherContract.DeceasedMother.TABLE_NAME + "("
-//            + DeceasedMother.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-//            DeceasedMother.COLUMN_PROJECT_NAME + " TEXT," +
-//            DeceasedMother.COLUMN_DEVICETAGID + " TEXT," +
-//            DeceasedMother.COLUMN_UID + " TEXT," +
-//            DeceasedMother.COLUMN_UUID + " TEXT," +
-//            DeceasedMother.COLUMN_FORMDATE + " TEXT," +
-//            DeceasedMother.COLUMN_DEVICEID + " TEXT," +
-//            DeceasedMother.COLUMN_USER + " TEXT," +
-//            DeceasedMother.COLUMN_SE + " TEXT," +
-//            DeceasedMother.COLUMN_SYNCED + " TEXT," +
-//            DeceasedMother.COLUMN_SYNCED_DATE + " TEXT" +
-//            " );";
-//    private static final String SQL_CREATE_DECEASED_CHILD = "CREATE TABLE "
-//            + DeceasedChild.TABLE_NAME + "("
-//            + DeceasedChild.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-//            DeceasedChild.COLUMN_PROJECT_NAME + " TEXT," +
-//            DeceasedChild.COLUMN_DEVICETAGID + " TEXT," +
-//            DeceasedChild.COLUMN_UID + " TEXT," +
-//            DeceasedChild.COLUMN_UUID + " TEXT," +
-//            DeceasedChild.COLUMN_FORMDATE + " TEXT," +
-//            DeceasedChild.COLUMN_DEVICEID + " TEXT," +
-//            DeceasedChild.COLUMN_USER + " TEXT," +
-//            DeceasedChild.COLUMN_SF + " TEXT," +
-//            DeceasedChild.COLUMN_SYNCED + " TEXT," +
-//            DeceasedChild.COLUMN_SYNCED_DATE + " TEXT" +
-//            " );";
-    private static final String SQL_CREATE_MWRA = "CREATE TABLE "
-            + MWRATable.TABLE_NAME + "("
-            + MWRATable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-            MWRATable.COLUMN_PROJECT_NAME + " TEXT," +
-            MWRATable.COLUMN_UUID + " TEXT," +
-            MWRATable.COLUMN_UID + " TEXT," +
-            MWRATable.COLUMN_FORMDATE + " TEXT," +
-            MWRATable.COLUMN_USER + " TEXT," +
-            MWRATable.COLUMN_SD + " TEXT," +
-            MWRATable.COLUMN_DEVICEID + " TEXT," +
-            MWRATable.COLUMN_DEVICETAGID + " TEXT," +
-            MWRATable.COLUMN_SYNCED + " TEXT," +
-            MWRATable.COLUMN_SYNCED_DATE + " TEXT" +
-
-            " );";
-    //    private static final String SQL_DELETE_FAMILYMEMBERS =
-//            "DROP TABLE IF EXISTS " + familyMembers.TABLE_NAME;
-//    private static final String SQL_DELETE_DECEASED_CHILD =
-//            "DROP TABLE IF EXISTS " + DeceasedChild.TABLE_NAME;
-//    private static final String SQL_DELETE_SEC_I_IM =
-//            "DROP TABLE IF EXISTS " + singleIm.TABLE_NAME;
     private static final String SQL_SELECT_MOTHER_BY_CHILD =
             "SELECT c.agem cm, c.agey cy, c.aged cd, c.gender, c.serial serial, m.serial serialm, c.name child_name, c.dss_id_member child_id, m.name mother_name, c.dss_id_member mother_id, c.dob date_of_birth FROM census C join census m on c.dss_id_m = m.dss_id_member where c.member_type =? and c.uuid = m.uuid and c.current_status IN ('1', '2') and c.uuid = ? group by mother_id order by substr(c.dob, 7) desc, substr(c.dob, 4,2) desc, substr(c.dob, 1,2) desc;";
-    private static final String SQL_DELETE_BL_RANDOM =
-            "DROP TABLE IF EXISTS " + singleChild.TABLE_NAME;
     private static final String SQL_DELETE_USERS =
             "DROP TABLE IF EXISTS " + singleUser.TABLE_NAME;
     private static final String SQL_DELETE_FORMS =
             "DROP TABLE IF EXISTS " + FormsTable.TABLE_NAME;
-    //    private static final String SQL_CREATE_SEC_I_IM = "CREATE TABLE "
-//            + singleIm.TABLE_NAME + "("
-//            + singleIm.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-//            singleIm.COLUMN_PROJECT_NAME + " TEXT," +
-//            singleIm.COLUMN_DEVICETAGID + " TEXT," +
-//            singleIm.COLUMN_UUID + " TEXT," +
-//            singleIm.COLUMN_UID + " TEXT," +
-//            singleIm.COLUMN_SI + " TEXT," +
-//            singleIm.COLUMN_FORMDATE + " TEXT," +
-//            singleIm.COLUMN_USER + " TEXT," +
-//            singleIm.COLUMN_DEVICEID + " TEXT," +
-//            singleIm.COLUMN_ISTATUS + " TEXT," +
-//            singleIm.COLUMN_SYNCED + " TEXT," +
-//            singleIm.COLUMN_SYNCED_DATE + " TEXT" +
-//            " );";
     final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppTable.TABLE_NAME + " (" +
             VersionAppTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             VersionAppTable.COLUMN_VERSION_CODE + " TEXT, " +
@@ -252,35 +156,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-//        db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
-//        db.execSQL(SQL_CREATE_DECEASED_CHILD);
-//        db.execSQL(SQL_CREATE_SEC_I_IM);
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_LHW_TABLE);
-        db.execSQL(SQL_CREATE_BL_RANDOM);
         db.execSQL(SQL_CREATE_VERSIONAPP);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-  /*      db.execSQL(SQL_DELETE_USERS);
+        db.execSQL(SQL_DELETE_USERS);
         db.execSQL(SQL_DELETE_FORMS);
-        db.execSQL(SQL_DELETE_FAMILYMEMBERS);
-        db.execSQL(SQL_DELETE_DECEASED_CHILD);
-        db.execSQL(SQL_DELETE_SEC_I_IM);
         db.execSQL("DROP TABLE IF EXISTS " + lhwEntry.TABLE_NAME);
         db.execSQL(SQL_DELETE_VILLAGES);
         db.execSQL(SQL_DELETE_TALUKAS);
         db.execSQL(SQL_DELETE_UCS);
         db.execSQL(SQL_DELETE_AREAS);
-        db.execSQL(SQL_DELETE_BL_RANDOM);*/
-        switch (i) {
-            case 1:
-                db.execSQL(SQL_CREATE_VERSIONAPP);
-        }
+
     }
 
     public void syncVillages(JSONArray pcList) {
@@ -772,87 +665,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allVC;
     }
 
-    public Collection<BLRandomContract> getAllBLRandom(String lhwCode, String villageCode, String hh) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                singleChild.COLUMN_ID,
-                singleChild.COLUMN_LUID,
-                singleChild.COLUMN_STRUCTURE_NO,
-                singleChild.COLUMN_FAMILY_EXT_CODE,
-                singleChild.COLUMN_HH,
-                singleChild.COLUMN_LHW_CODE,
-                singleChild.COLUMN_VILLAGE_CODE,
-                singleChild.COLUMN_RANDOMDT,
-                singleChild.COLUMN_HH_HEAD,
-                singleChild.COLUMN_HH_CONTACT
-        };
-
-        String whereClause = singleChild.COLUMN_LHW_CODE + "=? AND " + singleChild.COLUMN_VILLAGE_CODE + "=? AND " + singleChild.COLUMN_HH + "=?";
-        String[] whereArgs = {lhwCode, villageCode, hh};
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                singleChild.COLUMN_ID + " ASC";
-
-        Collection<BLRandomContract> allBL = new ArrayList<>();
-        try {
-            c = db.query(
-                    singleChild.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                BLRandomContract dc = new BLRandomContract();
-                allBL.add(dc.Hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allBL;
-    }
-
-    public void syncBLRandom(JSONArray Areaslist) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(singleChild.TABLE_NAME, null, null);
-        try {
-            JSONArray jsonArray = Areaslist;
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
-
-                BLRandomContract Vc = new BLRandomContract();
-                Vc.Sync(jsonObjectCC);
-
-                ContentValues values = new ContentValues();
-
-                values.put(singleChild.COLUMN_LUID, Vc.getLUID());
-                values.put(singleChild.COLUMN_STRUCTURE_NO, Vc.getStructure());
-                values.put(singleChild.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
-                values.put(singleChild.COLUMN_HH, Vc.getHh());
-                values.put(singleChild.COLUMN_VILLAGE_CODE, Vc.getVillageCode());
-                values.put(singleChild.COLUMN_LHW_CODE, Vc.getLHWCode());
-                values.put(singleChild.COLUMN_RANDOMDT, Vc.getRandomDT());
-                values.put(singleChild.COLUMN_HH_HEAD, Vc.getHhhead());
-                values.put(singleChild.COLUMN_HH_CONTACT, Vc.gethhcontact());
-
-                db.insert(singleChild.TABLE_NAME, null, values);
-            }
-        } catch (Exception e) {
-        } finally {
-            db.close();
-        }
-    }
-
     public void syncUser(JSONArray userlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(UsersContract.singleUser.TABLE_NAME, null, null);
@@ -939,60 +751,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return memList;
     }
-
-//    public Collection<FamilyMembersContract> getChildFromMember(String dssID, String uuid) {
-//
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        Cursor c = null;
-//        // COLUMNS RETURNED: child_name, child_id, mother_name, mother_id, date_of_birth, serial
-//        Collection<FamilyMembersContract> memList = new ArrayList<>();
-//        try {
-//
-////            c = db.rawQuery(SQL_SELECT_CHILD, new String[]{"c", dssID, uuid, "('1', '2')"});
-//            c = db.rawQuery(SQL_SELECT_CHILD, new String[]{"c", dssID, uuid});
-//
-//            while (c.moveToNext()) {
-//                FamilyMembersContract mc = new FamilyMembersContract();
-//                memList.add(mc.Hydrate(c));
-//            }
-//        } finally {
-//            if (c != null) {
-//                c.close();
-//            }
-//            if (db != null) {
-//                db.close();
-//            }
-//        }
-//        return memList;
-//    }
-
-
-//    public Collection<FamilyMembersContract> getMWRA(String dssID, String uuid) {
-//
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        Cursor c = null;
-//        // COLUMNS RETURNED: child_name, child_id, mother_name, mother_id, date_of_birth, serial
-//        Collection<FamilyMembersContract> memList = new ArrayList<>();
-//        try {
-//
-////            c = db.rawQuery(SQL_SELECT_CHILD, new String[]{"c", dssID, uuid, "('1', '2')"});
-//            c = db.rawQuery(SQL_SELECT_CHILD, new String[]{"c", dssID, uuid});
-//
-//            while (c.moveToNext()) {
-//                FamilyMembersContract mc = new FamilyMembersContract();
-//                memList.add(mc.Hydrate(c));
-//            }
-//        } finally {
-//            if (c != null) {
-//                c.close();
-//            }
-//            if (db != null) {
-//                db.close();
-//            }
-//        }
-//        return memList;
-//    }
-
 
     public Long addForm(FormsContract fc) {
 

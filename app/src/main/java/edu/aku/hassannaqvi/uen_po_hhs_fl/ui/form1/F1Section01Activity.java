@@ -6,11 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,7 +22,6 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
@@ -35,7 +30,6 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section01Binding;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.otherClasses.SnackUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
@@ -45,9 +39,7 @@ public class F1Section01Activity extends AppCompatActivity {
 
     private List<String> ucName, talukaNames, villageNames, lhwNames;
     private List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
-    private Collection<BLRandomContract> selected;
     private DatabaseHelper db;
-    private BLRandomContract selectedHead;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -58,7 +50,6 @@ public class F1Section01Activity extends AppCompatActivity {
 
         this.setTitle(R.string.pocfh1);
 
-        settingListeners();
         initializingComponents();
     }
 
@@ -67,84 +58,6 @@ public class F1Section01Activity extends AppCompatActivity {
         populateSpinner(this);
 
         bi.pocfa12.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -5));
-    }
-
-    private void settingListeners() {
-        bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (!ValidatorClass.EmptyCheckingContainer(F1Section01Activity.this, bi.fldGrpSecA02))
-                    return;
-
-                final Snackbar snackbar = SnackUtils.showLoadingSnackbar(F1Section01Activity.this, "Searching HouseHold..");
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        snackbar.dismiss();
-                        setupViews();
-                    }
-                }, 3000);
-
-            }
-
-        });
-
-        bi.pocfa05.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                clearFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-    }
-
-    public void setupViews() {
-        selected = db.getAllBLRandom(
-                lhwCodes.get(bi.pocfa03.getSelectedItemPosition()),
-                villageCodes.get(bi.pocfa04.getSelectedItemPosition()),
-                bi.pocfa05.getText().toString().toUpperCase());
-
-        if (selected.size() != 0) {
-
-            Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
-
-            for (BLRandomContract rnd : selected) {
-                selectedHead = new BLRandomContract(rnd);
-            }
-            bi.contactdetails.setVisibility(View.VISIBLE);
-            bi.navbuttons.setVisibility(View.VISIBLE);
-            bi.hh08.setText(selectedHead.getHhhead().toUpperCase());
-            if (!selectedHead.gethhcontact().equals("99")) {
-                bi.hh09.setVisibility(View.VISIBLE);
-                bi.labelcontact.setVisibility(View.VISIBLE);
-                bi.hh09.setText(selectedHead.gethhcontact().toUpperCase());
-            } else {
-                bi.hh09.setText(null);
-                bi.hh09.setVisibility(View.GONE);
-                bi.labelcontact.setVisibility(View.GONE);
-            }
-
-        } else {
-            clearFields();
-            Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public void clearFields() {
-        bi.hh08.setText(null);
-        bi.hh09.setText(null);
-        bi.contactdetails.setVisibility(View.GONE);
-        bi.navbuttons.setVisibility(View.GONE);
     }
 
     public void populateSpinner(final Context context) {
@@ -293,14 +206,6 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         JSONObject form01_01 = new JSONObject();
 
-        form01_01.put("luid", selectedHead.getLUID());
-        form01_01.put("randDT", selectedHead.getRandomDT());
-        form01_01.put("hh03", selectedHead.getStructure());
-        form01_01.put("hh07", selectedHead.getExtension());
-        form01_01.put("hhhead", selectedHead.getHhhead());
-        form01_01.put("hh04village", selectedHead.getVillageCode());
-        form01_01.put("lhwcode", selectedHead.getLHWCode());
-
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
         form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
         form01_01.put("pocfa03", lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
@@ -332,7 +237,7 @@ public class F1Section01Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll01);
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01);
     }
 
     public void BtnEnd() {
