@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -37,19 +36,18 @@ public class F1Section07Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         bi.setCallback(this);
 
-
-        ArrayList<RadioGroup> pickers = new ArrayList<>(Arrays.asList(
+        final ArrayList<RadioGroup> pickers = new ArrayList<>(Arrays.asList(
                 bi.pocfgbcg, bi.pocfgopv0, bi.pocfgopv1, bi.pocfgp1, bi.pocfgpcv1
                 , bi.pocfgrt1, bi.pocfgopv2, bi.pocfgp2, bi.pocfgpcv2, bi.pocfgrt2
                 , bi.pocfgopv3, bi.pocfgp3, bi.pocfgpcv3, bi.pocfgipv, bi.pocfgm1
                 , bi.pocfgm2
         ));
 
-        final ArrayList<RadioButton> pickersOption = new ArrayList<>(Arrays.asList(
-                bi.pocfgbcga, bi.pocfgopv0a, bi.pocfgopv1a, bi.pocfgp1a, bi.pocfgpcv1a
-                , bi.pocfgrt1a, bi.pocfgopv2a, bi.pocfgp2a, bi.pocfgpcv2a, bi.pocfgrt2a
-                , bi.pocfgopv3a, bi.pocfgp3a, bi.pocfgpcv3a, bi.pocfgipva, bi.pocfgm1a
-                , bi.pocfgm2a
+        final ArrayList<Integer> pickersOption = new ArrayList<>(Arrays.asList(
+                bi.pocfgbcga.getId(), bi.pocfgopv0a.getId(), bi.pocfgopv1a.getId(), bi.pocfgp1a.getId(), bi.pocfgpcv1a.getId()
+                , bi.pocfgrt1a.getId(), bi.pocfgopv2a.getId(), bi.pocfgp2a.getId(), bi.pocfgpcv2a.getId(), bi.pocfgrt2a.getId()
+                , bi.pocfgopv3a.getId(), bi.pocfgp3a.getId(), bi.pocfgpcv3a.getId(), bi.pocfgipva.getId(), bi.pocfgm1a.getId()
+                , bi.pocfgm2a.getId()
         ));
 
         final ArrayList<DatePickerInputEditText> pickersEdittext = new ArrayList<>(Arrays.asList(
@@ -59,16 +57,27 @@ public class F1Section07Activity extends AppCompatActivity {
                 , bi.pocfgm2dt
         ));
 
-        for (byte i = 0; i < pickers.size(); i++) {
+        for (int i = 0; i < pickers.size(); i++) {
 
             pickers.get(i).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                    if (pickersOption.get(i).getId() != i)
-                        pickersEdittext.get(i).setText(null);
+                    int index = -1;
+                    for (RadioGroup rdg : pickers) {
+                        index++;
+                        if (rdg.getId() == radioGroup.getId())
+                            break;
+                    }
+
+                    if (pickersOption.get(index) != i)
+                        pickersEdittext.get(index).setText(null);
 
                 }
             });
+        }
+
+        for (DatePickerInputEditText datePickerEditText : pickersEdittext) {
+            datePickerEditText.setMinDate(F1Section01Activity.DOB);
         }
 
         bi.pocfgbcgdt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

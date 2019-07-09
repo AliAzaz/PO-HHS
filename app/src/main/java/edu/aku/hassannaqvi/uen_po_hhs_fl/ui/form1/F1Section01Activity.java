@@ -42,6 +42,8 @@ public class F1Section01Activity extends AppCompatActivity {
     private DatabaseHelper db;
     private String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
+    public static String DOB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -234,9 +236,22 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setsA(String.valueOf(form01_01));
         MainApp.setGPS(this);
 
+
+        DOB = getDOB();
+
+    }
+
+    private String getDOB() {
+        if (bi.pocfa11a.isChecked())
+            return DateUtils.convertDateFormat(bi.pocfa12.getText().toString());
+        else return DateUtils.getDOB("dd/MM/yyyy",
+                Integer.valueOf(bi.pocfa13y.getText().toString()),
+                Integer.valueOf(bi.pocfa13m.getText().toString()),
+                Integer.valueOf(bi.pocfa13d.getText().toString()));
     }
 
     private boolean formValidation() {
+
         return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01);
     }
 
