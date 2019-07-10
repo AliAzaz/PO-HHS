@@ -546,7 +546,9 @@
                         style="@style/i_textview"
                         android:text="@string/pocff10" />
 
-                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout
+                        style="@style/linearlayout_view_wt_bound"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/pocff10a"

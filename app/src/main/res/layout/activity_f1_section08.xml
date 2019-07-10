@@ -70,7 +70,7 @@
                         app:mask="###.##"
                         app:maxValue="140"
                         app:minValue="15.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                        app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
                         app:type="range" />
 
 
