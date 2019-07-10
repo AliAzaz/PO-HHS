@@ -39,7 +39,6 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh01"
                         style="@style/EditText_number"
-                        android:digits="0123456789."
                         android:hint="##.##"
                         android:layoutDirection="ltr"
                         app:mask="##.##"
@@ -66,13 +65,12 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh02"
                         style="@style/EditText_number"
-                        android:digits="0123456789."
-                        android:hint="###.##."
+                        android:hint="###.##"
                         android:layoutDirection="ltr"
-                        app:mask="###.##."
+                        app:mask="###.##"
                         app:maxValue="140"
                         app:minValue="15.0"
-                        app:pattern="^(\\d{2,2,2}\\.\\d{2,2})$"
+                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                         app:type="range" />
 
 
@@ -94,7 +92,6 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh03"
                         style="@style/EditText_number"
-                        android:digits="0123456789."
                         android:hint="##.##"
                         android:layoutDirection="ltr"
                         app:mask="##.##"
