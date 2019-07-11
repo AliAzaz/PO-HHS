@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.form1.F1Section04_05Activity">
 
     <data>
@@ -16,10 +16,10 @@
 
 
     <ScrollView
-        android:layoutDirection="rtl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dullWhile">
+        android:background="@color/dullWhile"
+        android:layoutDirection="rtl">
 
         <LinearLayout
             android:id="@+id/ll0405"
@@ -36,7 +36,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfd01"/>
+                        android:text="@string/pocfd01" />
 
                     <RadioGroup
                         android:id="@+id/pocfd01"
@@ -60,102 +60,106 @@
 
             <!--pocfd02-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:visibility='@{!pocfd01b.checked? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvpocfd02"
+                style="@style/cardView">
 
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfd02"/>
+                        android:text="@string/pocfd02" />
 
-                    <RadioGroup
-                        android:id="@+id/pocfd02"
-                        style="@style/i_radiogroup">
+                    <LinearLayout
+                        android:id="@+id/llpocfd02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+
+                        <CheckBox
                             android:id="@+id/pocfd02a"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocfd02a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd02b"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocfd02b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd02c"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocfd02c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/pocfd02d"
-                            style="@style/i_radiobutton"
+                            style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocfd02d" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd0297"
-                            style="@style/i_radiobutton"
-                            android:text="@string/none" />
+                    </LinearLayout>
 
-                    </RadioGroup>
+                    <CheckBox
+                        android:id="@+id/pocfd0297"
+                        style="@style/i_checkbox"
+                        android:text="@string/none" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
             <!--pocfd03-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvpocfd03"
+                style="@style/cardView">
 
                 <LinearLayout style="@style/linearlayout_view">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfd03"/>
+                        android:text="@string/pocfd03" />
 
-                    <RadioGroup
-                        android:id="@+id/pocfd03"
-                        style="@style/i_radiogroup">
+                    <CheckBox
+                        android:id="@+id/pocfd03a"
+                        style="@style/i_checkbox"
+                        android:text="@string/pocfd03a" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd03a"
-                            style="@style/i_radiobutton"
-                            android:text="@string/pocfd03a" />
+                    <CheckBox
+                        android:id="@+id/pocfd03b"
+                        style="@style/i_checkbox"
+                        android:text="@string/pocfd03b" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd03b"
-                            style="@style/i_radiobutton"
-                            android:text="@string/pocfd03b" />
+                    <CheckBox
+                        android:id="@+id/pocfd03c"
+                        style="@style/i_checkbox"
+                        android:text="@string/pocfd03c" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd03c"
-                            style="@style/i_radiobutton"
-                            android:text="@string/pocfd03c" />
+                    <CheckBox
+                        android:id="@+id/pocfd03d"
+                        style="@style/i_checkbox"
+                        android:text="@string/pocfd03d" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd03d"
-                            style="@style/i_radiobutton"
-                            android:text="@string/pocfd03d" />
+                    <CheckBox
+                        android:id="@+id/pocfd03e"
+                        style="@style/i_checkbox"
+                        android:text="@string/pocfd03e" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd03e"
-                            style="@style/i_radiobutton"
-                            android:text="@string/pocfd03e" />
+                    <CheckBox
+                        android:id="@+id/pocfd0396"
+                        style="@style/i_checkbox"
+                        android:text="@string/other" />
 
-                        <RadioButton
-                            android:id="@+id/pocfd0396"
-                            style="@style/i_radiobutton"
-                            android:text="@string/other" />
-
-                        <EditText
-                            android:id="@+id/pocfd0396x"
-                            style="@style/EditText"
-                            android:hint="@string/other"
-                            android:tag="pocfd0396"
-                            android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
-                            android:visibility='@{pocfd0396.checked? View.VISIBLE : View.GONE}' />
-
-                    </RadioGroup>
+                    <EditText
+                        android:id="@+id/pocfd0396x"
+                        style="@style/EditText"
+                        android:hint="@string/other"
+                        android:tag="pocfd0396"
+                        android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
+                        android:visibility='@{pocfd0396.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
 
@@ -173,16 +177,16 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe01"/>
+                        android:text="@string/pocfe01" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe01"
                         style="@style/EditText_number"
-                        android:maxLength="2"
                         android:hint="@string/pocfe01"
+                        android:maxLength="2"
                         app:maxValue="50"
                         app:minValue="2"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -195,16 +199,16 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe02"/>
+                        android:text="@string/pocfe02" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe02"
                         style="@style/EditText_number"
+                        android:hint="@string/pocfe02h"
                         android:maxLength="2"
-                        android:hint="@string/pocfe02"
                         app:maxValue="15"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -217,16 +221,16 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe03"/>
+                        android:text="@string/pocfe03" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe03"
                         style="@style/EditText_number"
-                        android:maxLength="2"
                         android:hint="@string/pocfe03"
+                        android:maxLength="2"
                         app:maxValue="50"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -239,7 +243,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe04"/>
+                        android:text="@string/pocfe04" />
 
                     <RadioGroup
                         android:id="@+id/pocfe04"
@@ -288,7 +292,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe05"/>
+                        android:text="@string/pocfe05" />
 
                     <RadioGroup
                         android:id="@+id/pocfe05"
@@ -319,18 +323,18 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe06"/>
+                        android:text="@string/pocfe06" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe06"
                         style="@style/EditText_number"
-                        android:maxLength="1"
                         android:hint="@string/pocfe06"
+                        android:maxLength="1"
+                        android:text='@{pocfe04c.checked || pocfe05b.checked ? "" : pocfe06.getText.toString }'
+                        android:visibility='@{pocfe04c.checked || pocfe05b.checked ? View.GONE : View.VISIBLE}'
                         app:maxValue="4"
                         app:minValue="1"
-                        app:type="range"
-                        android:text='@{pocfe04c.checked || pocfe05b.checked ? "" : pocfe06.getText.toString }'
-                        android:visibility='@{pocfe04c.checked || pocfe05b.checked ? View.GONE : View.VISIBLE}' />
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -431,7 +435,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe08"/>
+                        android:text="@string/pocfe08" />
 
                     <RadioGroup
                         android:id="@+id/pocfe08"
@@ -460,7 +464,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe09"/>
+                        android:text="@string/pocfe09" />
 
                     <RadioGroup
                         android:id="@+id/pocfe09"
@@ -489,7 +493,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe10"/>
+                        android:text="@string/pocfe10" />
 
                     <RadioGroup
                         android:id="@+id/pocfe10"
@@ -520,17 +524,17 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe11"/>
+                        android:text="@string/pocfe11" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe11"
                         style="@style/EditText_number"
-                        android:maxLength="2"
                         android:hint="@string/pocfe11"
+                        android:maxLength="2"
+                        android:text='@{pocfe10a.checked ? pocfe11.getText.toString : "" }'
                         app:maxValue="40"
                         app:minValue="1"
-                        app:type="range"
-                        android:text='@{pocfe10a.checked ? pocfe11.getText.toString : "" }'/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -545,7 +549,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe12"/>
+                        android:text="@string/pocfe12" />
 
                     <RadioGroup
                         android:id="@+id/pocfe12"
@@ -579,7 +583,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe13"/>
+                        android:text="@string/pocfe13" />
 
                     <RadioGroup
                         android:id="@+id/pocfe13"
@@ -610,17 +614,17 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe14"/>
+                        android:text="@string/pocfe14" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe14"
                         style="@style/EditText_number"
-                        android:maxLength="2"
                         android:hint="@string/pocfe14"
+                        android:maxLength="2"
+                        android:text='@{pocfe13a.checked ? pocfe14.getText.toString : "" }'
                         app:maxValue="40"
                         app:minValue="1"
-                        app:type="range"
-                        android:text='@{pocfe13a.checked ? pocfe14.getText.toString : "" }'/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -635,7 +639,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe15"/>
+                        android:text="@string/pocfe15" />
 
                     <RadioGroup
                         android:id="@+id/pocfe15"
@@ -669,7 +673,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe16"/>
+                        android:text="@string/pocfe16" />
 
                     <RadioGroup
                         android:id="@+id/pocfe16"
@@ -700,17 +704,17 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe17"/>
+                        android:text="@string/pocfe17" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe17"
                         style="@style/EditText_number"
-                        android:maxLength="2"
                         android:hint="@string/pocfe17"
+                        android:maxLength="2"
+                        android:text='@{pocfe16a.checked ? pocfe17.getText.toString : "" }'
                         app:maxValue="40"
                         app:minValue="1"
-                        app:type="range"
-                        android:text='@{pocfe16a.checked ? pocfe17.getText.toString : "" }'/>
+                        app:type="range" />
 
                 </LinearLayout>
 
@@ -725,7 +729,7 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/pocfe18"/>
+                        android:text="@string/pocfe18" />
 
                     <RadioGroup
                         android:id="@+id/pocfe18"

@@ -390,7 +390,8 @@
     <string name="pocfe"> سيڪشن 05. گھر جو ماحول  </string>
     <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
     <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
-    <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
+  <string name="pocfe02h"> ڪمرن جو تعداد </string>
+  <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جو تعداد ڪيترو آهي؟ </string>
     <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
     <string name="pocfe04a"> گھر ۾ </string>
     <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
