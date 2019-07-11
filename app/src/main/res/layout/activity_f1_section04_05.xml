@@ -79,31 +79,28 @@
                         <CheckBox
                             android:id="@+id/pocfd02a"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocfd02a" />
 
                         <CheckBox
                             android:id="@+id/pocfd02b"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocfd02b" />
 
                         <CheckBox
                             android:id="@+id/pocfd02c"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocfd02c" />
 
                         <CheckBox
                             android:id="@+id/pocfd02d"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocfd02d" />
 
                     </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/pocfd0297"
+                        android:tag="-1"
                         style="@style/i_checkbox"
                         android:text="@string/none" />
 
@@ -327,7 +324,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe06"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe06"
+                        android:hint="@string/num"
                         android:maxLength="1"
                         android:text='@{pocfe04c.checked || pocfe05b.checked ? "" : pocfe06.getText.toString }'
                         android:visibility='@{pocfe04c.checked || pocfe05b.checked ? View.GONE : View.VISIBLE}'
@@ -528,7 +525,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe11"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe11"
+                        android:hint="@string/num"
                         android:maxLength="2"
                         android:text='@{pocfe10a.checked ? pocfe11.getText.toString : "" }'
                         app:maxValue="40"
@@ -618,7 +615,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe14"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe14"
+                        android:hint="@string/num"
                         android:maxLength="2"
                         android:text='@{pocfe13a.checked ? pocfe14.getText.toString : "" }'
                         app:maxValue="40"
@@ -708,7 +705,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe17"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe17"
+                        android:hint="@string/num"
                         android:maxLength="2"
                         android:text='@{pocfe16a.checked ? pocfe17.getText.toString : "" }'
                         app:maxValue="40"

@@ -601,7 +601,7 @@
                     <EditText
                         android:id="@+id/pocff11"
                         style="@style/EditText_number"
-                        android:hint="@string/pocff11"
+                        android:hint="@string/num"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="15"
