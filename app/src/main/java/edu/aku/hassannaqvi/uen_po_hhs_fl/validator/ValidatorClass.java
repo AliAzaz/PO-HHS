@@ -121,19 +121,12 @@ public abstract class ValidatorClass {
     }
 
     public static boolean EmptyCustomeTextBox(Context context, TextView txt, String msg) {
-        if (TextUtils.isEmpty(txt.getText().toString())) {
-            FancyToast.makeText(context, "ERROR: " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
-            txt.setError("This data is not accurate! ");    // Set Error on last radio button
-            txt.setFocusableInTouchMode(true);
-            txt.requestFocus();
-            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": This data is not accurate!");
-            return false;
-        } else {
-            txt.setError(null);
-            txt.clearFocus();
-            return true;
-        }
-
+        FancyToast.makeText(context, "ERROR: " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+        txt.setError(msg);
+        txt.setFocusableInTouchMode(true);
+        txt.requestFocus();
+        Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": " + msg);
+        return false;
     }
 
     public static boolean RangeTextBox(Context context, EditText txt, int min, int max, String msg, String type) {
@@ -381,7 +374,7 @@ public abstract class ValidatorClass {
                 }
             } else if (view instanceof LinearLayout) {
 
-                /*int length = ((LinearLayout) view).getChildCount();
+                int length = ((LinearLayout) view).getChildCount();
 
                 if (length > 0) {
                     if (((LinearLayout) view).getChildAt(0) instanceof CheckBox) {
@@ -395,20 +388,7 @@ public abstract class ValidatorClass {
                     }
                 } else if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
                     return false;
-                }*/
-
-                if (view.getTag() != null && view.getTag().equals("0")) {
-                    if (!EmptyCheckBox(context, ((LinearLayout) view),
-                            (CheckBox) ((LinearLayout) view).getChildAt(0),
-                            getString(context, getIDComponent(((LinearLayout) view).getChildAt(0))))) {
-                        return false;
-                    }
-                } else {
-                    if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
-                        return false;
-                    }
                 }
-
             }
         }
         return true;
