@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
@@ -37,33 +35,33 @@ public class F1Section11Activity extends AppCompatActivity {
     }
 
 
-    private TextWatcher generalTextWatcher = new TextWatcher() {
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            if (bi.pocfk06b.getText().hashCode() == s.hashCode()) {
-                if (bi.pocfk06b.getText().toString().trim().length() > 0 && Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92) {
-                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
-                    bi.cvpocfk07.setVisibility(View.GONE);
-                } else {
-                    bi.cvpocfk07.setVisibility(View.VISIBLE);
-                }
-            }
-        }
-
-    };
+//    private TextWatcher generalTextWatcher = new TextWatcher() {
+//
+//        @Override
+//        public void onTextChanged(CharSequence s, int start, int before, int count) {
+//        }
+//
+//        @Override
+//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//        }
+//
+//        @Override
+//        public void afterTextChanged(Editable s) {
+//            if (bi.pocfk06b.getText().hashCode() == s.hashCode()) {
+//                if (bi.pocfk06b.getText().toString().trim().length() > 0 && Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92) {
+//                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
+//                    bi.cvpocfk07.setVisibility(View.GONE);
+//                } else {
+//                    bi.cvpocfk07.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        }
+//
+//    };
 
     private void setupSkips() {
 
-        bi.pocfk06b.addTextChangedListener(generalTextWatcher);
+//        bi.pocfk06b.addTextChangedListener(generalTextWatcher);
 
         bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

@@ -136,21 +136,20 @@
                         android:id="@+id/fldGrppocfj01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/pocfj01a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
+
                             android:text="@string/pocfj01a" />
 
                         <CheckBox
                             android:id="@+id/pocfj01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
+
                             android:text="@string/pocfj01b" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -168,14 +167,13 @@
                             android:id="@+id/pocfj01c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
+
                             android:text="@string/pocfj01c" />
 
                         <CheckBox
                             android:id="@+id/pocfj01d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01d" />
 
                         <CheckBox
@@ -188,77 +186,66 @@
                             android:id="@+id/pocfj01f"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01f" />
 
                         <CheckBox
                             android:id="@+id/pocfj01g"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01g" />
 
                         <CheckBox
                             android:id="@+id/pocfj01h"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01h" />
 
                         <CheckBox
                             android:id="@+id/pocfj01i"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01i" />
 
                         <CheckBox
                             android:id="@+id/pocfj01j"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01j" />
 
                         <CheckBox
                             android:id="@+id/pocfj01k"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01k" />
 
                         <CheckBox
                             android:id="@+id/pocfj01l"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01l" />
 
                         <CheckBox
                             android:id="@+id/pocfj01m"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01m" />
 
                         <CheckBox
                             android:id="@+id/pocfj01n"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01n" />
 
                         <CheckBox
                             android:id="@+id/pocfj01o"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/pocfj01o" />
 
                         <CheckBox
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:tag="0"
                             android:text="@string/other" />
 
                         <EditText
@@ -278,7 +265,6 @@
                         android:id="@+id/pocfj0198"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tag="-1"
                         android:text="@string/none" />
 
                 </LinearLayout>

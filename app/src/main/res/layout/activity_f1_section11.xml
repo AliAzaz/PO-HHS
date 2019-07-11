@@ -387,12 +387,10 @@
                         android:id="@+id/llpocfk08"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/pocfk08a"
-                            android:tag="0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -400,7 +398,6 @@
 
                         <CheckBox
                             android:id="@+id/pocfk08b"
-                            android:tag="0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -408,7 +405,6 @@
 
                         <CheckBox
                             android:id="@+id/pocfk08c"
-                            android:tag="0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -416,7 +412,6 @@
 
                         <CheckBox
                             android:id="@+id/pocfk08d"
-                            android:tag="0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -424,7 +419,6 @@
 
                         <CheckBox
                             android:id="@+id/pocfk08e"
-                            android:tag="0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -455,26 +449,6 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk09" />
 
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk09h1" />
-
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk09h2" />
-
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk09h3" />
-
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk09h4" />
-
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk09h5" />
-
                     <RadioGroup
                         android:id="@+id/pocfk09"
                         android:layout_width="match_parent"
@@ -487,12 +461,24 @@
                             android:layout_marginBottom="1dp"
                             android:text="@string/pocfk09a" />
 
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h1" />
+
                         <RadioButton
                             android:id="@+id/pocfk09b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/pocfk09b" />
+
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h2" />
+
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h3" />
 
 
                         <RadioButton
@@ -501,6 +487,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/pocfk09c" />
+
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h4" />
+
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h5" />
 
                     </RadioGroup>
 

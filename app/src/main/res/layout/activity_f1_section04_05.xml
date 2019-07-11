@@ -73,32 +73,31 @@
                         android:id="@+id/llpocfd02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
+                        android:orientation="vertical">
 
 
                         <CheckBox
                             android:id="@+id/pocfd02a"
                             style="@style/i_checkbox"
-                            android:tag="0"
+
                             android:text="@string/pocfd02a" />
 
                         <CheckBox
                             android:id="@+id/pocfd02b"
                             style="@style/i_checkbox"
-                            android:tag="0"
+
                             android:text="@string/pocfd02b" />
 
                         <CheckBox
                             android:id="@+id/pocfd02c"
                             style="@style/i_checkbox"
-                            android:tag="0"
+
                             android:text="@string/pocfd02c" />
 
                         <CheckBox
                             android:id="@+id/pocfd02d"
                             style="@style/i_checkbox"
-                            android:tag="0"
+
                             android:text="@string/pocfd02d" />
 
                     </LinearLayout>
