@@ -160,7 +160,7 @@
     <string name="pocfa12"> ٻار جي ڄمڻ جي تاريخ </string>
     <string name="pocfa13"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
     <string name="pocfa14"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
-    <string name="pocfa14c"> گھرو آف / اجازت دستياب ناهي. </string>
+  <string name="pocfa14c"> گھر بند آهي / اجازت دستياب ناهي. </string>
 
     <!--Section 02-->
     <string name="pocfbHeading">سيڪشن 02: گھر جي معلومات </string>
@@ -336,6 +336,7 @@
     <string name="pocfc01d"> سيپٽڪ ٽئنڪ ڏانهن وهي وڃي </string>
     <string name="pocfc01e"> ڪنهن کڏ ڏانهن وهي وڃي </string>
     <string name="pocfc01f"> ڪنهن ٻي جاءِ ڏانهن وهي وڃي </string>
+  <string name="pocfc01g"> اڻ سڃاتل جڳهه تي پڪ نه آهي خبر نه آهي ڪٿي </string>
     <string name="pocfc02"> توهان جي گهر ۾ پيئڻ کان علاوه ٻين ڪمن ڪارين جهڙوڪ رڌپچاءُ ۽ هٿ ڌوئڻ جي لاءِ پاڻيءَ جو مکيه ذريعو ڪهڙو آهي؟ </string>
     <string name="pocfc02a"> گھر جي اندر پاڻي جي لائين اچي ٿي </string>
     <string name="pocfc02b"> گھر جي ٻاهر پاڻي جي لائين اچي ٿي </string>

@@ -59,7 +59,7 @@ public class F1Section01Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         populateSpinner(this);
 
-        bi.pocfa12.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -5));
+        bi.pocfa12.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
     }
 
     public void populateSpinner(final Context context) {
@@ -156,7 +156,7 @@ public class F1Section01Activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
-                bi.lhwcode.setText("LHW CODE: " + lhwCodes.get(i));
+                bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
             }
 
             @Override
@@ -235,7 +235,6 @@ public class F1Section01Activity extends AppCompatActivity {
 
         MainApp.fc.setsA(String.valueOf(form01_01));
         MainApp.setGPS(this);
-
 
         DOB = getDOB();
 

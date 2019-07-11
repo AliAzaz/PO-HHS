@@ -92,6 +92,20 @@ public class F1Section11Activity extends AppCompatActivity {
             }
         });
 
+
+       /* if (bi.pocfk0897.isChecked()) {
+
+            bi.pocfk08a.setChecked(false);
+            bi.pocfk08b.setChecked(false);
+            bi.pocfk08c.setChecked(false);
+            bi.pocfk08d.setChecked(false);
+            bi.pocfk08e.setChecked(false);
+//            ed_A4255_4.setText("");
+
+        } else {
+            bi.pocfk0897.setChecked(false);
+        }*/
+
     }
 
 
