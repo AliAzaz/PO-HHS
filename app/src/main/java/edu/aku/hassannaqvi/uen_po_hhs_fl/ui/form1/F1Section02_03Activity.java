@@ -175,7 +175,8 @@ public class F1Section02_03Activity extends AppCompatActivity {
             return false;
 
         if (Integer.valueOf(bi.pocfb03a.getText().toString()) == 0 && Integer.valueOf(bi.pocfb03b.getText().toString()) == 0) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfb03a, "Both values can't be zero!!");
+            if (!ValidatorClass.EmptyCustomeTextBox(this, bi.pocfb03a, "Both values can't be zero!!"))
+                return false;
         }
 
         if (Integer.valueOf(bi.pocfb04a.getText().toString()) == 0 && Integer.valueOf(bi.pocfb04b.getText().toString()) == 0) {
