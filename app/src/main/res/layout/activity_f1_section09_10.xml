@@ -143,12 +143,14 @@
                             android:id="@+id/pocfj01a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01a" />
 
                         <CheckBox
                             android:id="@+id/pocfj01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01b" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -157,7 +159,7 @@
                             android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
                             style="@style/EditText_number"
                             android:maxLength="3"
-                            android:hint="@string/pocfj01b"
+                            android:hint="@string/pocfj01bt"
                             app:maxValue="105.0"
                             app:minValue="90.0"
                             app:type="range" />
@@ -166,12 +168,14 @@
                             android:id="@+id/pocfj01c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01c" />
 
                         <CheckBox
                             android:id="@+id/pocfj01d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01d" />
 
                         <CheckBox
@@ -184,60 +188,77 @@
                             android:id="@+id/pocfj01f"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01f" />
 
                         <CheckBox
                             android:id="@+id/pocfj01g"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01g" />
 
                         <CheckBox
                             android:id="@+id/pocfj01h"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01h" />
 
                         <CheckBox
                             android:id="@+id/pocfj01i"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01i" />
 
                         <CheckBox
                             android:id="@+id/pocfj01j"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01j" />
 
                         <CheckBox
                             android:id="@+id/pocfj01k"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01k" />
 
                         <CheckBox
                             android:id="@+id/pocfj01l"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01l" />
 
                         <CheckBox
                             android:id="@+id/pocfj01m"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01m" />
 
                         <CheckBox
                             android:id="@+id/pocfj01n"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/pocfj01n" />
+
+                        <CheckBox
+                            android:id="@+id/pocfj01o"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:tag="0"
+                            android:text="@string/pocfj01o" />
 
                         <CheckBox
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="0"
                             android:text="@string/other" />
 
                         <EditText
@@ -258,7 +279,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:tag="-1"
-                        android:text="@string/dkn" />
+                        android:text="@string/none" />
 
                 </LinearLayout>
 
@@ -292,7 +313,6 @@
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
                             android:tag="pocfj02a"
                             android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'

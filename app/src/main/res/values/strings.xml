@@ -70,9 +70,9 @@
     <string name="no"> نه </string>
     <string name="na"> لاڳو نٿو ٿئي </string>
   <string name="yes1"> ها، ٽڪو لڳو </string>
-  <string name="no1"> نه،ٽڪو نه لڳو </string>
+  <string name="no1"> نه، ٽڪو نه لڳو </string>
   <string name="na1"> لاڳو نٿو ٿئي </string>
-    <string name="dkn"> خبر نه آھي </string>
+  <string name="dkn"> خبر ناھي </string>
     <string name="day"> ڏينهن </string>
     <string name="month"> مهينو </string>
     <string name="year"> سال </string>
@@ -83,6 +83,8 @@
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
     <string name="none">ڪجهه به نه</string>
+  <string name="num"> تعداد لکو </string>
+  <string name="pocfe02h"> ڪمرن جو تعداد </string>
 
     <!-- Strings related to Sec
     ons Below -->
@@ -160,7 +162,7 @@
     <string name="pocfa12"> ٻار جي ڄمڻ جي تاريخ </string>
     <string name="pocfa13"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
     <string name="pocfa14"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
-    <string name="pocfa14c"> گھرو آف / اجازت دستياب ناهي. </string>
+  <string name="pocfa14c"> گھر بند آهي / اجازت دستياب ناهي. </string>
 
     <!--Section 02-->
     <string name="pocfbHeading">سيڪشن 02: گھر جي معلومات </string>
@@ -336,6 +338,7 @@
     <string name="pocfc01d"> سيپٽڪ ٽئنڪ ڏانهن وهي وڃي </string>
     <string name="pocfc01e"> ڪنهن کڏ ڏانهن وهي وڃي </string>
     <string name="pocfc01f"> ڪنهن ٻي جاءِ ڏانهن وهي وڃي </string>
+  <string name="pocfc01g"> اڻ سڃاتل جڳهه تي پڪ نه آهي خبر نه آهي ڪٿي </string>
     <string name="pocfc02"> توهان جي گهر ۾ پيئڻ کان علاوه ٻين ڪمن ڪارين جهڙوڪ رڌپچاءُ ۽ هٿ ڌوئڻ جي لاءِ پاڻيءَ جو مکيه ذريعو ڪهڙو آهي؟ </string>
     <string name="pocfc02a"> گھر جي اندر پاڻي جي لائين اچي ٿي </string>
     <string name="pocfc02b"> گھر جي ٻاهر پاڻي جي لائين اچي ٿي </string>
@@ -389,7 +392,7 @@
     <string name="pocfe"> سيڪشن 05. گھر جو ماحول  </string>
     <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
     <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
-    <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
+  <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جو تعداد ڪيترو آهي؟ </string>
     <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
     <string name="pocfe04a"> گھر ۾ </string>
     <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
@@ -573,6 +576,7 @@
     <string name="pocfj01"> ڇا ٻار کي هيٺين مان ڪنهن به بيماريءَ جي شڪايت آهي؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfj01a"> سوڄ </string>
     <string name="pocfj01b"> بخار </string>
+  <string name="pocfj01bt"> گرمي پد </string>
     <string name="pocfj01c"> سائي </string>
     <string name="pocfj01d"> زڪام </string>
     <string name="pocfj01e"> وهندڙ نڪ </string>
@@ -584,7 +588,8 @@
     <string name="pocfj01k"> چمڙي جو آهستي پوئتي وڃڻ </string>
     <string name="pocfj01l"> ڪن جي ڪا بيماري </string>
     <string name="pocfj01m"> اکين جي ڪا بيماري </string>
-    <string name="pocfj01n"> وات ۾ ٿرش </string>
+  <string name="pocfj01n"> وات ۾ ٿرش / زباني واڌايون </string>
+  <string name="pocfj01o"> اُلٽي </string>
     <string name="pocfj02"> ڇا توهان جو ٻار موجوده بيماري لاءِ ڪا دوا وٺي رهيو آهي؟ </string>
 
 

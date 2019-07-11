@@ -245,14 +245,25 @@
                             style="@style/i_textview"
                             android:text="@string/pocfa08" />
 
-                        <EditText
+                        <!-- <EditText
+                             android:id="@+id/pocfa08"
+                             style="@style/EditTextAlphaNumeric"
+                             android:hint="@string/pocfa08"
+                             android:inputType="number"
+                             android:maxLength="3" />-->
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfa08"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pocfa08"
                             android:inputType="number"
-                            android:maxLength="3" />
+                            android:maxLength="3"
+                            app:maxValue="500"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
+
                 </android.support.v7.widget.CardView>
 
                 <!--pocfa09-->
@@ -421,7 +432,7 @@
                             android:maxLength="2"
                             android:text='@{pocfa11b.checked ? pocfa13d.getText.toString : ""}'
                             app:maxValue="29"
-                            app:minValue="1"
+                            app:minValue="0"
                             app:type="range" />
 
                     </LinearLayout>

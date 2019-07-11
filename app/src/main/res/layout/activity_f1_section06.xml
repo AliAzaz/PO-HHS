@@ -509,7 +509,7 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardView"
-                android:visibility='@{pocff08d.checked? View.VISIBLE : View.GONE}'>
+                android:visibility='@{pocff08d.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -526,7 +526,7 @@
                         android:hint="@string/month"
                         android:inputType="number"
                         android:maxLength="2"
-                        android:text='@{pocff08d.checked? pocff09.getText.toString : "" }'
+                        android:text='@{pocff08d.checked? "" : pocff09.getText.toString }'
                         app:maxValue="30"
                         app:minValue="0"
                         app:type="range" />
@@ -553,26 +553,31 @@
                         <CheckBox
                             android:id="@+id/pocff10a"
                             style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocff10a" />
 
                         <CheckBox
                             android:id="@+id/pocff10b"
                             style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocff10b" />
 
                         <CheckBox
                             android:id="@+id/pocff10c"
                             style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocff10c" />
 
                         <CheckBox
                             android:id="@+id/pocff10d"
                             style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocff10d" />
 
                         <CheckBox
                             android:id="@+id/pocff10e"
                             style="@style/i_checkbox"
+                            android:tag="0"
                             android:text="@string/pocff10e" />
 
                     </LinearLayout>
