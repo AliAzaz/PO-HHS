@@ -182,7 +182,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe01"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe01"
+                        android:hint="@string/num"
                         android:maxLength="2"
                         app:maxValue="50"
                         app:minValue="2"
@@ -204,7 +204,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe02"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe02h"
+                        android:hint="@string/num"
                         android:maxLength="2"
                         app:maxValue="15"
                         app:minValue="1"
@@ -226,7 +226,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfe03"
                         style="@style/EditText_number"
-                        android:hint="@string/pocfe03"
+                        android:hint="@string/num"
                         android:maxLength="2"
                         app:maxValue="50"
                         app:minValue="1"
