@@ -29,7 +29,7 @@ public class F1Section11Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section11);
         bi.setCallback(this);
-        this.setTitle(R.string.pocfsec11);
+        this.setTitle("Form 01 (Case Reporting Form)");
         setupSkips();
 
     }

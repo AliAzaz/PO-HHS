@@ -30,8 +30,7 @@ public class F1Section07Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section07);
-
-        this.setTitle(getResources().getString(R.string.pocfgheading));
+        this.setTitle("Form 01 (Case Reporting Form)");
 
         db = new DatabaseHelper(this);
         bi.setCallback(this);

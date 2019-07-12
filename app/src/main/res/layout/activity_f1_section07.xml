@@ -21,6 +21,10 @@
 
         <LinearLayout style="@style/linearlayout_view">
 
+            <TextView
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pocfgheading" />
+
             <LinearLayout
                 android:id="@+id/fldGrppocfgA"
                 style="@style/linearlayout_view_wt_bound">

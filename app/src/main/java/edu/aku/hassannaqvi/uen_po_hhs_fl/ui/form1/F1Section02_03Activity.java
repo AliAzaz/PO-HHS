@@ -27,7 +27,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section02_03);
         bi.setCallback(this);
-
+        this.setTitle("Form 01 (Case Reporting Form)");
         setListeners();
     }
 

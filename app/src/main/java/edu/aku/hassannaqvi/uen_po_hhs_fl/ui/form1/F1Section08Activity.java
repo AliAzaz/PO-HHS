@@ -24,8 +24,7 @@ public class F1Section08Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section08);
         bi.setCallback(this);
-
-        this.setTitle(R.string.pocfsec8);
+        this.setTitle("Form 01 (Case Reporting Form)");
     }
 
     public void BtnContinue() {
