@@ -37,8 +37,10 @@ public class F2Section01Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section01);
         bi.setCallback(this);
 
+
         DAY = getIntent().getStringExtra("day");
         bi.dayHeading.setText("DAY " + (DAY.equals("7") ? "07" : "14"));
+        this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
 
         db = new DatabaseHelper(this);
 
@@ -84,7 +86,8 @@ public class F2Section01Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, F2Section02Activity.class));
+                startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
+
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
