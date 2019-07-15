@@ -489,14 +489,17 @@
                                 android:layout_weight="1"
                                 android:text="@string/pofpa11b" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa11b"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/pofpa11b"
                                 android:inputType="number"
-                                android:maxLength="1" />
+                                android:maxLength="1"
+                                app:maxValue="4"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
@@ -612,14 +615,17 @@
                                 android:layout_weight="1"
                                 android:text="@string/pofpa12b" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa12b"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/pofpa12b"
                                 android:inputType="number"
-                                android:maxLength="1" />
+                                android:maxLength="1"
+                                app:maxValue="4"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
@@ -764,7 +770,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:tag="-1">
 
                             <CheckBox
                                 android:id="@+id/pofpa14a"
@@ -862,7 +869,9 @@
                 </android.support.v7.widget.CardView>
 
                 <!--pofpa16-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvpofpa16"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -924,7 +933,9 @@
                 </android.support.v7.widget.CardView>
 
                 <!--pofpa17-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvpofpa17"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -970,14 +981,17 @@
                                 android:layout_weight="1"
                                 android:text="@string/pofpa17b" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa17b"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/pofpa17b"
                                 android:inputType="number"
-                                android:maxLength="1" />
+                                android:maxLength="1"
+                                app:maxValue="4"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 

@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -67,6 +68,22 @@ public class F2Section01Activity extends AppCompatActivity {
     private void initializingComponents() {
         db = new DatabaseHelper(this);
         populateSpinner(this);
+
+        bi.pofpa15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofpa15a.getId()) {
+                    bi.cvpofpa16.setVisibility(View.VISIBLE);
+                    bi.cvpofpa17.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.cvpofpa16, null);
+                    ClearClass.ClearAllFields(bi.cvpofpa17, null);
+                    bi.cvpofpa16.setVisibility(View.GONE);
+                    bi.cvpofpa17.setVisibility(View.GONE);
+                }
+            }
+        });
 
     }
 
