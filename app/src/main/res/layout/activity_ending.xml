@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity">
 
 
@@ -43,6 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus1" />
 
                 <RadioButton
@@ -50,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus2" />
 
                 <RadioButton
@@ -57,6 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus3" />
 
                 <RadioButton
@@ -64,6 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus4" />
 
                 <RadioButton
@@ -71,6 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus5" />
 
                 <RadioButton
@@ -78,6 +82,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus6" />
 
                 <RadioButton
@@ -85,6 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus7" />
 
                 <RadioButton
@@ -92,6 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/other" />
 
             </RadioGroup>

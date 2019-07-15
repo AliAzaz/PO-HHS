@@ -286,7 +286,6 @@ public class F1Section01Activity extends AppCompatActivity {
                     }
                 })
                 .show();
-
     }
 
 }
