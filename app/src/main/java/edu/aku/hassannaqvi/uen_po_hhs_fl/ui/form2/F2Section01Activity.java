@@ -268,58 +268,78 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa03", ucCode.get(bi.pofpa03.getSelectedItemPosition()));
         f02.put("pofpa04", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()));
 
+
+        f02.put("pofpa05", bi.pofpa05.getText().toString());
+        f02.put("pofpa06", bi.pofpa06.getText().toString());
+
 //        f02.put("pofpa01", bi.pofpa01.getText().toString());
-
-       /* f02.put("pofpa02", bi.pofpa02a.isChecked() ? "1"
-                : bi.pofpa02b.isChecked() ? "2"
-                : bi.pofpa02c.isChecked() ? "3"
-                : bi.pofpa02d.isChecked() ? "4"
-                : bi.pofpa0296.isChecked() ? "96"
-                : "0");
-        f02.put("pofpa02cx", bi.pofpa02cx.getText().toString());
-        f02.put("pofpa02dx", bi.pofpa02dx.getText().toString());
-        f02.put("pofpa0296x", bi.pofpa0296x.getText().toString());
-
-        f02.put("pofpa03", bi.pofpa03.getText().toString());
-
-        f02.put("pofpa04", bi.pofpa04a.isChecked() ? "1"
-                : bi.pofpa04b.isChecked() ? "2"
-                : "0");
-
-        f02.put("pofpa05a", bi.pofpa05a.isChecked() ? bi.pofpa05ax.getText().toString() : "0");
-        f02.put("pofpa05b", bi.pofpa05b.isChecked() ? bi.pofpa05bx.getText().toString() : "0");
-        f02.put("pofpa05c", bi.pofpa05b.isChecked() ? "1" : "0");
-
-        f02.put("pofpa06a", bi.pofpa06a.isChecked() ? bi.pofpa06ax.getText().toString() : "0");
-        f02.put("pofpa06b", bi.pofpa06b.isChecked() ? bi.pofpa06bx.getText().toString() : "0");
 
         f02.put("pofpa07", bi.pofpa07a.isChecked() ? "1"
                 : bi.pofpa07b.isChecked() ? "2"
                 : bi.pofpa07c.isChecked() ? "3"
                 : bi.pofpa07d.isChecked() ? "4"
-                : bi.pofpa07e.isChecked() ? "5" : "0"
-        );
-        f02.put("pofpa08a", bi.pofpa08a.isChecked() ? "1" : "0");
-        f02.put("pofpa08b", bi.pofpa08b.isChecked() ? "2" : "0");
-        f02.put("pofpa08c", bi.pofpa08c.isChecked() ? "3" : "0");
-        f02.put("pofpa0896", bi.pofpa0896.isChecked() ? "96" : "0");
-        f02.put("pofpa0896x", bi.pofpa0896x.getText().toString());
-        f02.put("pofpa09", bi.pofpa09a.isChecked() ? "1"
-                : bi.pofpa09b.isChecked() ? "2"
+                : bi.pofpa0796.isChecked() ? "96"
                 : "0");
-        f02.put("pofpa09ax", bi.pofpa09ax.getText().toString());
+        f02.put("pofpa07cx", bi.pofpa07cx.getText().toString());
+        f02.put("pofpa07dx", bi.pofpa07dx.getText().toString());
+        f02.put("pofpa0796x", bi.pofpa0796x.getText().toString());
+
+        f02.put("pofpa08", bi.pofpa08a.isChecked() ? "1"
+                : bi.pofpa08b.isChecked() ? "2"
+                : "0");
+
+        f02.put("pofpa09", bi.pofpa09.getText().toString());
 
         f02.put("pofpa10", bi.pofpa10a.isChecked() ? "1"
                 : bi.pofpa10b.isChecked() ? "2"
-                : bi.pofpa10c.isChecked() ? "3"
-                : bi.pofpa1096.isChecked() ? "96"
-                : "0"
-        );
-        f02.put("pofpa1096x", bi.pofpa1096x.getText().toString());
+                : "0");
+
+
         f02.put("pofpa11a", bi.pofpa11a.getText().toString());
         f02.put("pofpa11b", bi.pofpa11b.getText().toString());
         f02.put("pofpa11c", bi.pofpa11c.getText().toString());
-        f02.put("pofpa11d", bi.pofpa11d.getText().toString());*/
+        f02.put("pofpa111", bi.pofpa111a.isChecked() ? "1"
+                : bi.pofpa111b.isChecked() ? "2"
+                : "0");
+
+        f02.put("pofpa12a", bi.pofpa12a.getText().toString());
+        f02.put("pofpa12b", bi.pofpa12b.getText().toString());
+        f02.put("pofpa12c", bi.pofpa12c.getText().toString());
+        f02.put("pofpa121", bi.pofpa121a.isChecked() ? "1"
+                : bi.pofpa121b.isChecked() ? "2"
+                : "0");
+
+        f02.put("pofpa13", bi.pofpa13a.isChecked() ? "1"
+                : bi.pofpa13b.isChecked() ? "2"
+                : bi.pofpa13c.isChecked() ? "3"
+                : bi.pofpa13d.isChecked() ? "4"
+                : bi.pofpa13e.isChecked() ? "5"
+                : "0");
+
+        f02.put("pofpa14a", bi.pofpa14a.isChecked() ? "1" : "0");
+        f02.put("pofpa14b", bi.pofpa14b.isChecked() ? "2" : "0");
+        f02.put("pofpa14c", bi.pofpa14c.isChecked() ? "3" : "0");
+        f02.put("pofpa1496", bi.pofpa1496.isChecked() ? "96" : "0");
+        f02.put("pofpa1496x", bi.pofpa1496x.getText().toString());
+
+        f02.put("pofpa15", bi.pofpa15a.isChecked() ? "1"
+                : bi.pofpa15b.isChecked() ? "2"
+                : "0");
+        f02.put("pofpa15ax", bi.pofpa15ax.getText().toString());
+
+        f02.put("pofpa16", bi.pofpa16a.isChecked() ? "1"
+                : bi.pofpa16b.isChecked() ? "2"
+                : bi.pofpa16c.isChecked() ? "3"
+                : bi.pofpa1696.isChecked() ? "96"
+                : "0");
+        f02.put("pofpa1696x", bi.pofpa1696x.getText().toString());
+
+        f02.put("pofpa17a", bi.pofpa17a.getText().toString());
+        f02.put("pofpa17b", bi.pofpa17b.getText().toString());
+        f02.put("pofpa17c", bi.pofpa17c.getText().toString());
+        f02.put("pofpa171", bi.pofpa171a.isChecked() ? "1"
+                : bi.pofpa171b.isChecked() ? "2"
+                : "0");
 
         MainApp.fc.setsA(String.valueOf(f02));
         MainApp.setGPS(this);
@@ -327,7 +347,7 @@ public class F2Section01Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section01);
+        return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section011);
     }
 
     public void BtnEnd() {
@@ -346,7 +366,7 @@ public class F2Section01Activity extends AppCompatActivity {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }*/
 
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section01))
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section011))
             return;
 
         new AlertDialog.Builder(this)
