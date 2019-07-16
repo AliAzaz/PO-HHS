@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -14,6 +15,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF2Section02Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F2Section02Activity extends AppCompatActivity {
@@ -29,13 +31,27 @@ public class F2Section02Activity extends AppCompatActivity {
 
         DAY = getIntent().getStringExtra("day");
         this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
-
-
         settingListeners();
 
     }
 
     private void settingListeners() {
+
+        bi.pofpb05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofpb05a.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) >= 92) {
+                    bi.pofpb05a.setError("You are not supposed to select YES option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+
+
+                } else if (checkedId == bi.pofpb05b.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) < 92) {
+                    bi.pofpb05b.setError("You are not supposed to select NO option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                }
+            }
+        });
 
 
     }
@@ -73,26 +89,33 @@ public class F2Section02Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject f02 = new JSONObject();
-        f02.put("pofpb01", bi.pofpb01a.isChecked() ? "1"
-                : bi.pofpb01b.isChecked() ? "2" : "0");
-        f02.put("pofpb02", bi.pofpb02a.isChecked() ? "1"
-                : bi.pofpb02b.isChecked() ? "2" : "0");
 
-        f02.put("pofpb02a", bi.pofpb02a01.getText().toString());
-        f02.put("pofpb02b", bi.pofpb02a02.getText().toString());
+        f02.put("pofpb01", bi.pofpb01a.isChecked() ? "1"
+                : bi.pofpb01b.isChecked() ? "2"
+                : "0");
+
+        f02.put("pofpb02a", bi.pofpb02a.getText().toString());
+        f02.put("pofpb02b", bi.pofpb02a.getText().toString());
+
+        f02.put("pofpb021", bi.pofpb021a.isChecked() ? "1"
+                : bi.pofpb021b.isChecked() ? "2"
+                : "0");
 
         f02.put("pofpb03", bi.pofpb03a.isChecked() ? "1"
                 : bi.pofpb03b.isChecked() ? "2"
                 : "0");
+
         f02.put("pofpb04a", bi.pofpb04a.getText().toString());
         f02.put("pofpb04b", bi.pofpb04b.getText().toString());
 
         f02.put("pofpb05", bi.pofpb05a.isChecked() ? "1"
                 : bi.pofpb05b.isChecked() ? "2"
                 : "0");
+
         f02.put("pofpb06", bi.pofpb06a.isChecked() ? "1"
                 : bi.pofpb06b.isChecked() ? "2"
                 : "0");
+
         f02.put("pofpb07a", bi.pofpb07a.isChecked() ? "1" : "0");
         f02.put("pofpb07b", bi.pofpb07b.isChecked() ? "2" : "0");
         f02.put("pofpb07c", bi.pofpb07c.isChecked() ? "3" : "0");

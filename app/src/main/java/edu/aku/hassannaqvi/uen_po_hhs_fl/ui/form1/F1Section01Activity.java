@@ -239,6 +239,7 @@ public class F1Section01Activity extends AppCompatActivity {
 
     }
 
+
     private String getDOB() {
         if (bi.pocfa11a.isChecked())
             return DateUtils.convertDateFormat(bi.pocfa12.getText().toString());

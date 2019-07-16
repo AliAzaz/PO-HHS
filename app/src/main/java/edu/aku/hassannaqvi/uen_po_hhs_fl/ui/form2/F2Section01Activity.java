@@ -69,6 +69,20 @@ public class F2Section01Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         populateSpinner(this);
 
+        bi.pofpa08.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.pofpa08a.getId()) {
+                    bi.cvpofpa12.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.cvpofpa12, null);
+                    bi.cvpofpa12.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
         bi.pofpa15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
