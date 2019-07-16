@@ -28,15 +28,9 @@
 
             <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
@@ -46,37 +40,32 @@
                         <EditText
                             android:id="@+id/pocfb01"
                             style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/pocfb01" />
                         <requestFocus />
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+            </android.support.v7.widget.CardView>
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/pocfb02" />
+            <android.support.v7.widget.CardView style="@style/cardView">
 
-                        <EditText
-                            android:id="@+id/pocfb02"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                            android:hint="@string/pocfb02" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    </LinearLayout>
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfb02" />
 
+                    <EditText
+                        android:id="@+id/pocfb02"
+                        style="@style/textInput"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/pocfb02" />
 
                 </LinearLayout>
-
 
             </android.support.v7.widget.CardView>
 
@@ -101,7 +90,7 @@
                         android:maxLength="2"
                         app:maxValue="10"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb03b"
@@ -113,9 +102,10 @@
                         android:maxLength="2"
                         app:maxValue="10"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
 
@@ -142,7 +132,7 @@
                         android:maxLength="2"
                         app:maxValue="9"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfb04b"
@@ -154,7 +144,7 @@
                         android:maxLength="2"
                         app:maxValue="9"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -250,6 +240,11 @@
                             android:id="@+id/pocfc01f"
                             style="@style/i_radiobutton"
                             android:text="@string/pocfc01f" />
+
+                        <RadioButton
+                            android:id="@+id/pocfc01g"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfc01g" />
 
                         <RadioButton
                             android:id="@+id/pocfc0196"
@@ -633,12 +628,12 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/pocfc101"
                             android:maxLength="2"
-                            app:maxValue="16"
-                            app:minValue="1"
-                            app:type="range"
                             android:tag="pocfc10a"
                             android:text='@{pocfc10a.checked? pocfc10ax.getText.toString : "" }'
-                            android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{pocfc10a.checked? View.VISIBLE : View.GONE}'
+                            app:maxValue="16"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </RadioGroup>
 
@@ -676,7 +671,10 @@
                         app:type="range"
                         android:tag="pocfc1198"
                         android:text='@{!pocfc1198.checked? pocfc11.getText.toString : "" }'
-                        android:visibility='@{!pocfc1198.checked? View.VISIBLE : View.GONE}' />
+                        android:visibility='@{!pocfc1198.checked? View.VISIBLE : View.GONE}'
+                        app:maxValue="999999"
+                        app:minValue="5000"
+                        app:type="range" />
 
                     <CheckBox
                         android:id="@+id/pocfc1198"
@@ -709,7 +707,7 @@
                         android:maxLength="3"
                         app:maxValue="100"
                         app:minValue="0"
-                        app:type="range"/>
+                        app:type="range" />
 
 
                 </LinearLayout>

@@ -417,8 +417,7 @@
 
                         <LinearLayout
                             android:id="@+id/fldGrppofi11"
-                            style="@style/linearlayout_view"
-                            android:tag="0">
+                            style="@style/linearlayout_view">
 
                             <CheckBox
                                 android:id="@+id/pofi11a"
@@ -481,8 +480,7 @@
                             android:text="@string/pofi12" />
 
                         <LinearLayout
-                            style="@style/linearlayout_view"
-                            android:tag="0">
+                            style="@style/linearlayout_view">
 
                             <CheckBox
                                 android:id="@+id/pofi12a"

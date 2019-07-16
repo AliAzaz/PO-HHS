@@ -24,6 +24,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pocfh6" />
+
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
@@ -225,23 +229,6 @@
                             android:tag="pocff02l"
                             android:text='@{pocff02l.checked? pocff02lx.getText.toString : "" }'
                             android:visibility='@{pocff02l.checked? View.VISIBLE : View.GONE}' />
-
-                        <RadioButton
-                            android:id="@+id/pocff02m"
-                            style="@style/i_radiobutton"
-                            android:text="@string/pocff02m" />
-
-                        <EditText
-                            android:id="@+id/pocff02mx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                            android:hint="@string/other"
-                            android:tag="pocff02m"
-                            android:text='@{pocff02m.checked? pocff02mx.getText.toString : "" }'
-                            android:visibility='@{pocff02m.checked? View.VISIBLE : View.GONE}' />
-
 
                     </RadioGroup>
 
@@ -466,8 +453,8 @@
                             android:text='@{pocff07b.checked? pocff07bx.getText.toString : "" }'
                             android:visibility='@{pocff07b.checked? View.VISIBLE : View.GONE}'
                             app:mask="##.##"
-                            app:maxValue="40.0"
-                            app:minValue="0.5"
+                            app:maxValue="6.00"
+                            app:minValue="0.90"
                             app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                             app:type="range" />
 
@@ -537,15 +524,15 @@
                         style="@style/i_textview"
                         android:text="@string/pocff09" />
 
-
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocff09"
                         style="@style/EditText_number"
                         android:hint="@string/month"
                         android:inputType="number"
-                        android:maxLength="1"
-                        app:maxValue="59"
-                        app:minValue="1"
+                        android:maxLength="2"
+                        android:text='@{pocff08d.checked? "" : pocff09.getText.toString }'
+                        app:maxValue="30"
+                        app:minValue="0"
                         app:type="range" />
 
                 </LinearLayout>
@@ -563,29 +550,40 @@
                         style="@style/i_textview"
                         android:text="@string/pocff10" />
 
-
+                    <LinearLayout
+                        style="@style/linearlayout_view_wt_bound">
 
                         <CheckBox
                             android:id="@+id/pocff10a"
                             style="@style/i_checkbox"
+
                             android:text="@string/pocff10a" />
 
                         <CheckBox
                             android:id="@+id/pocff10b"
                             style="@style/i_checkbox"
+
                             android:text="@string/pocff10b" />
 
                         <CheckBox
                             android:id="@+id/pocff10c"
                             style="@style/i_checkbox"
+
                             android:text="@string/pocff10c" />
 
                         <CheckBox
                             android:id="@+id/pocff10d"
                             style="@style/i_checkbox"
+
                             android:text="@string/pocff10d" />
 
+                        <CheckBox
+                            android:id="@+id/pocff10e"
+                            style="@style/i_checkbox"
 
+                            android:text="@string/pocff10e" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -607,9 +605,12 @@
                     <EditText
                         android:id="@+id/pocff11"
                         style="@style/EditText_number"
-                        android:hint="@string/pocff11"
+                        android:hint="@string/num"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="15"
+                        app:minValue="2"
+                        app:type="range" />
 
                 </LinearLayout>
 

@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -26,38 +27,52 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section02_03);
         bi.setCallback(this);
+        this.setTitle("Form 01 (Case Reporting Form)");
+        setListeners();
+    }
+
+    private void setListeners() {
+
+        bi.pocfb03a.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (bi.pocfb03a.getText().toString().isEmpty()) return;
+                bi.pocfb04a.setMaxvalue(Integer.valueOf(bi.pocfb03a.getText().toString()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        bi.pocfb03b.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (bi.pocfb03b.getText().toString().isEmpty()) return;
+                bi.pocfb04b.setMaxvalue(Integer.valueOf(bi.pocfb03b.getText().toString()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
     }
 
     public void BtnContinue() {
         if (formValidation()) {
-
-            if(bi.pocfb03a.getText().toString().equals("0") && bi.pocfb03b.getText().toString().equals("0") )
-            {
-                Toast.makeText(this, "Q2.3a: Number of boyes + girls cann't be zero  ", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            if(bi.pocfb04a.getText().toString().equals("0") && bi.pocfb04b.getText().toString().equals("0") )
-            {
-                Toast.makeText(this, "Q2.4: Number of boyes + girls cann't be zero  ", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            if(!TextUtils.isEmpty(bi.pocfb03a.getText()) && !TextUtils.isEmpty(bi.pocfb04a.getText()) )
-            {
-                if(Integer.parseInt(bi.pocfb04a.getText().toString())>Integer.parseInt(bi.pocfb03a.getText().toString()))
-
-                    Toast.makeText(this, "Q2.4a: Can not be greater then Q2.3a  ", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            if(!TextUtils.isEmpty(bi.pocfb03b.getText()) && !TextUtils.isEmpty(bi.pocfb04b.getText()) )
-            {
-                if(Integer.parseInt(bi.pocfb04b.getText().toString())>Integer.parseInt(bi.pocfb03b.getText().toString()))
-
-                    Toast.makeText(this, "Q2.4b: Can not be greater then Q2.3b  ", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
             try {
                 SaveDraft();
             } catch (Exception e) {
@@ -104,6 +119,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
                 : bi.pocfc01d.isChecked() ? "4"
                 : bi.pocfc01e.isChecked() ? "5"
                 : bi.pocfc01f.isChecked() ? "6"
+                : bi.pocfc01g.isChecked() ? "7"
                 : bi.pocfc0196.isChecked() ? "96" : "0");
         sBC.put("pocfc0196x", bi.pocfc0196x.getText().toString());
 
@@ -155,7 +171,18 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll0203);
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll0203))
+            return false;
+
+        if (Integer.valueOf(bi.pocfb03a.getText().toString()) == 0 && Integer.valueOf(bi.pocfb03b.getText().toString()) == 0) {
+            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfb03a, "Both values can't be zero!!");
+        }
+
+        if (Integer.valueOf(bi.pocfb04a.getText().toString()) == 0 && Integer.valueOf(bi.pocfb04b.getText().toString()) == 0) {
+            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfb04a, "Both values can't be zero!!");
+        }
+
+        return true;
     }
 
     public void BtnEnd() {

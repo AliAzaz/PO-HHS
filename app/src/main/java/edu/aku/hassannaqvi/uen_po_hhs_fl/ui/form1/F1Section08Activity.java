@@ -24,8 +24,7 @@ public class F1Section08Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section08);
         bi.setCallback(this);
-
-        this.setTitle(R.string.pocfsec8);
+        this.setTitle("Form 01 (Case Reporting Form)");
     }
 
     public void BtnContinue() {
@@ -75,20 +74,7 @@ public class F1Section08Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
-//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
-
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
-        }
+        MainApp.endActivity(this, this);
     }
 
 

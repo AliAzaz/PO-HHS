@@ -11,11 +11,15 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section07Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
+import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
 public class F1Section07Activity extends AppCompatActivity {
 
@@ -26,11 +30,54 @@ public class F1Section07Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section07);
-
-        this.setTitle(getResources().getString(R.string.pocfgheading));
+        this.setTitle("Form 01 (Case Reporting Form)");
 
         db = new DatabaseHelper(this);
         bi.setCallback(this);
+
+        final ArrayList<RadioGroup> pickers = new ArrayList<>(Arrays.asList(
+                bi.pocfgbcg, bi.pocfgopv0, bi.pocfgopv1, bi.pocfgp1, bi.pocfgpcv1
+                , bi.pocfgrt1, bi.pocfgopv2, bi.pocfgp2, bi.pocfgpcv2, bi.pocfgrt2
+                , bi.pocfgopv3, bi.pocfgp3, bi.pocfgpcv3, bi.pocfgipv, bi.pocfgm1
+                , bi.pocfgm2
+        ));
+
+        final ArrayList<Integer> pickersOption = new ArrayList<>(Arrays.asList(
+                bi.pocfgbcga.getId(), bi.pocfgopv0a.getId(), bi.pocfgopv1a.getId(), bi.pocfgp1a.getId(), bi.pocfgpcv1a.getId()
+                , bi.pocfgrt1a.getId(), bi.pocfgopv2a.getId(), bi.pocfgp2a.getId(), bi.pocfgpcv2a.getId(), bi.pocfgrt2a.getId()
+                , bi.pocfgopv3a.getId(), bi.pocfgp3a.getId(), bi.pocfgpcv3a.getId(), bi.pocfgipva.getId(), bi.pocfgm1a.getId()
+                , bi.pocfgm2a.getId()
+        ));
+
+        final ArrayList<DatePickerInputEditText> pickersEdittext = new ArrayList<>(Arrays.asList(
+                bi.pocfgbcgdt, bi.pocfgopv0dt, bi.pocfgopv1dt, bi.pocfgp1dt, bi.pocfgpcv1dt
+                , bi.pocfgrt1dt, bi.pocfgopv2dt, bi.pocfgp2dt, bi.pocfgpcv2dt, bi.pocfgrt2dt
+                , bi.pocfgopv3dt, bi.pocfgp3dt, bi.pocfgpcv3dt, bi.pocfgipvdt, bi.pocfgm1dt
+                , bi.pocfgm2dt
+        ));
+
+        for (int i = 0; i < pickers.size(); i++) {
+
+            pickers.get(i).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                    int index = -1;
+                    for (RadioGroup rdg : pickers) {
+                        index++;
+                        if (rdg.getId() == radioGroup.getId())
+                            break;
+                    }
+
+                    if (pickersOption.get(index) != i)
+                        pickersEdittext.get(index).setText(null);
+
+                }
+            });
+        }
+
+        for (DatePickerInputEditText datePickerEditText : pickersEdittext) {
+            datePickerEditText.setMinDate(F1Section01Activity.DOB);
+        }
 
         bi.pocfgbcgdt98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

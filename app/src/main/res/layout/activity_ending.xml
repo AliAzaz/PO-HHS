@@ -22,10 +22,12 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/i_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
+                android:textSize="30dp"
                 android:text="@string/dcstatus"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
@@ -39,48 +41,64 @@
                     android:id="@+id/istatus1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus1" />
 
                 <RadioButton
                     android:id="@+id/istatus2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus2" />
 
                 <RadioButton
                     android:id="@+id/istatus3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus3" />
 
                 <RadioButton
                     android:id="@+id/istatus4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus4" />
 
                 <RadioButton
                     android:id="@+id/istatus5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus5" />
 
                 <RadioButton
                     android:id="@+id/istatus6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus6" />
 
                 <RadioButton
                     android:id="@+id/istatus7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus7" />
 
                 <RadioButton
                     android:id="@+id/istatus8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/other" />
 
             </RadioGroup>
@@ -103,6 +121,7 @@
                 android:layout_weight="1"
                 android:onClick="endInterview"
                 android:text="@string/end_interview"
+                android:textSize="30dp"
                 android:textColor="#ff1e1e" />
 
 

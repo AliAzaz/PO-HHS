@@ -136,27 +136,29 @@
                         android:id="@+id/fldGrppocfj01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/pocfj01a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+
                             android:text="@string/pocfj01a" />
 
                         <CheckBox
                             android:id="@+id/pocfj01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+
                             android:text="@string/pocfj01b" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfj01bx"
-                            android:visibility="@{pocfj01b.checked ? View.VISIBLE : View.GONE}"
+                            android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
+                            android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
                             style="@style/EditText_number"
                             android:maxLength="3"
-                            android:hint="@string/pocfj01b"
+                            android:hint="@string/pocfj01bt"
                             app:maxValue="105.0"
                             app:minValue="90.0"
                             app:type="range" />
@@ -165,6 +167,7 @@
                             android:id="@+id/pocfj01c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+
                             android:text="@string/pocfj01c" />
 
                         <CheckBox
@@ -234,10 +237,16 @@
                             android:text="@string/pocfj01n" />
 
                         <CheckBox
+                            android:id="@+id/pocfj01o"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pocfj01o" />
+
+                        <CheckBox
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/none" />
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/pocfj0196x"
@@ -256,8 +265,7 @@
                         android:id="@+id/pocfj0198"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:tag="-1"
-                        android:text="@string/dkn" />
+                        android:text="@string/none" />
 
                 </LinearLayout>
 
@@ -285,6 +293,17 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/yes" />
+
+                        <EditText
+                            android:id="@+id/pocfj02ax"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/other"
+                            android:tag="pocfj02a"
+                            android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
+                            android:visibility='@{pocfj02a.checked? View.VISIBLE : View.GONE}' />
+
 
                         <RadioButton
                             android:id="@+id/pocfj02b"

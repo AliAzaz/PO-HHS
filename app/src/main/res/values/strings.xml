@@ -69,7 +69,10 @@
     <string name="yes"> ھا </string>
     <string name="no"> نه </string>
     <string name="na"> لاڳو نٿو ٿئي </string>
-    <string name="dkn"> خبر نه آھي </string>
+  <string name="yes1"> ها، ٽڪو لڳو </string>
+  <string name="no1"> نه، ٽڪو نه لڳو </string>
+  <string name="na1"> لاڳو نٿو ٿئي </string>
+  <string name="dkn"> خبر ناھي </string>
     <string name="day"> ڏينهن </string>
     <string name="month"> مهينو </string>
     <string name="year"> سال </string>
@@ -80,6 +83,8 @@
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
     <string name="none">ڪجهه به نه</string>
+  <string name="num"> تعداد (ٻڌايو) لکو </string>
+  <string name="pocfe02h"> ڪمرن جو تعداد </string>
 
     <!-- Strings related to Sec
     ons Below -->
@@ -137,8 +142,8 @@
     <string name="pocfa02"> يونين ڪائونسل </string>
     <string name="pocfa03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو</string>
     <string name="pocfa04"> ڳوٺ/محلي جو نالو </string>
-    <string name="pocfa05"> گھر جو پتو(ايڊريس)  </string>
-    <string name="pocfa06"> گھر جو سڃاڻپ </string>
+    <string name="pocfa05"> گھر جو سڃاڻپ نمبر </string>
+    <string name="pocfa06"> گھر جو پتو(ايڊريس) </string>
     <string name="pocfa07"> جواب ڏيندڙ جو ٻار سان رشتو. </string>
     <string name="pocfa07a"> ماءُ </string>
     <string name="pocfa07b"> پيءُ </string>
@@ -157,7 +162,7 @@
     <string name="pocfa12"> ٻار جي ڄمڻ جي تاريخ </string>
     <string name="pocfa13"> ٻار جي عمرڏينهن / مهينن /سال ۾ </string>
     <string name="pocfa14"> ڇا ھاڻي آءٌ انٽرويو شروع ڪري سگھان ٿي/ٿو؟</string>
-    <string name="pocfa14c"> گھرو آف / اجازت دستياب ناهي. </string>
+  <string name="pocfa14c"> گھر بند آهي / اجازت دستياب ناهي. </string>
 
     <!--Section 02-->
     <string name="pocfbHeading">سيڪشن 02: گھر جي معلومات </string>
@@ -333,6 +338,7 @@
     <string name="pocfc01d"> سيپٽڪ ٽئنڪ ڏانهن وهي وڃي </string>
     <string name="pocfc01e"> ڪنهن کڏ ڏانهن وهي وڃي </string>
     <string name="pocfc01f"> ڪنهن ٻي جاءِ ڏانهن وهي وڃي </string>
+  <string name="pocfc01g"> اڻ سڃاتل جڳهه تي پڪ نه آهي خبر نه آهي ڪٿي </string>
     <string name="pocfc02"> توهان جي گهر ۾ پيئڻ کان علاوه ٻين ڪمن ڪارين جهڙوڪ رڌپچاءُ ۽ هٿ ڌوئڻ جي لاءِ پاڻيءَ جو مکيه ذريعو ڪهڙو آهي؟ </string>
     <string name="pocfc02a"> گھر جي اندر پاڻي جي لائين اچي ٿي </string>
     <string name="pocfc02b"> گھر جي ٻاهر پاڻي جي لائين اچي ٿي </string>
@@ -386,7 +392,7 @@
     <string name="pocfe"> سيڪشن 05. گھر جو ماحول  </string>
     <string name="pocfe01"> توهان سان گڏ گھر ۾ ٻيا ڪيترا ڀاتي رهن ٿا؟ </string>
     <string name="pocfe02"> هن گھر ۾ ڪيترا ڪمرا سُمهڻ لاءِ استعمال ٿيندا آهن </string>
-    <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جوتعداد ڪيترو آهي؟ </string>
+  <string name="pocfe03"> هڪ ئي ڪمري ۾ سمهڻ وارن جو تعداد ڪيترو آهي؟ </string>
     <string name="pocfe04"> ڇا کاڌو اڪثر ڪري گھر جي اندر، الڳ جاءِ تي يا گھر کان ٻاھر پچايو ويندو آھي؟ </string>
     <string name="pocfe04a"> گھر ۾ </string>
     <string name="pocfe04b"> گھر جي اندر الڳ ڪمرو آهي(رڌڻي لا۽) </string>
@@ -489,8 +495,8 @@
     <string name="pocfgdoi"> Date of Immunization </string>
     <string name="pocfgheading"> سيڪشن07. ٽڪن جو رڪارڊ </string>
     <string name="pocfginfo"> اس سیکشن میں صرف ان بچوں کا اندراج ہوگا جو 5 سال سے چھوٹے ہیں </string>
-    <string name="pocfg01">۔ڇا توهان وٽ ٻار(چونڊيل ڪيس) جي سرڪاري ٽڪن جو ڪارڊ يا ٽڪن جو رڪارڊ جيڪو ڪنهن نجي صحت ڪارڪن طرفان مهيا ڪيو ويو آهي؟</string>
-    <string name="pocfg02">ٻار(چونڊيل ڪيس)  جي پيدائش ڪٿي ٿي؟</string>
+    <string name="pocfg01">ڇا توهان وٽ ٻار(چونڊيل ڪيس) جي سرڪاري ٽڪن جو ڪارڊ يا ٽڪن جو رڪارڊ جيڪو ڪنهن نجي صحت ڪارڪن طرفان مهيا ڪيو ويو آهي؟</string>
+    <string name="pocfg02">ڇا آئون ٽڪن وارو ڪارڊ يا ٻيا ڪي ڪاغذ ڏسي سگھان ٿي؟</string>
     <string name="pocfg02a"> ها،  ڪارڊ ڏٺو </string>
     <string name="pocfg02b"> ها،  ٻيا ڪي ڪاغذ ڏٺا  </string>
     <string name="pocfg02c"> ها،  ڪارڊ ۽ ٻيا ڪي ڪاغذ ڏٺا </string>
@@ -528,7 +534,8 @@
     <string name="pocfgpcv3dt"> DD-MM-YYYY </string>
     <string name="pocfgipv"> آءِ پي وي (Injectable Polio vaccine) </string>
     <string name="pocfgipvdt"> DD-MM-YYYY </string>
-    <string name="at9m"> 9مهينن جي عمر ۾</string>
+
+  <string name="at9m"> 9مهينن جي عمر ۾</string>
     <string name="pocfgm1">ميزلس-1 Measels-1 </string>
     <string name="pocfgm1dt"> DD-MM-YYYY </string>
     <string name="at15m">     15مهينن جي عمر ۾ </string>
@@ -570,6 +577,7 @@
     <string name="pocfj01"> ڇا ٻار کي هيٺين مان ڪنهن به بيماريءَ جي شڪايت آهي؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfj01a"> سوڄ </string>
     <string name="pocfj01b"> بخار </string>
+  <string name="pocfj01bt"> گرمي پد </string>
     <string name="pocfj01c"> سائي </string>
     <string name="pocfj01d"> زڪام </string>
     <string name="pocfj01e"> وهندڙ نڪ </string>
@@ -581,7 +589,8 @@
     <string name="pocfj01k"> چمڙي جو آهستي پوئتي وڃڻ </string>
     <string name="pocfj01l"> ڪن جي ڪا بيماري </string>
     <string name="pocfj01m"> اکين جي ڪا بيماري </string>
-    <string name="pocfj01n"> وات ۾ ٿرش </string>
+  <string name="pocfj01n"> وات ۾ ٿرش / زباني واڌايون </string>
+  <string name="pocfj01o"> اُلٽي </string>
     <string name="pocfj02"> ڇا توهان جو ٻار موجوده بيماري لاءِ ڪا دوا وٺي رهيو آهي؟ </string>
 
 
@@ -593,35 +602,59 @@
     <string name="pocfk01c"> عوامي صحت جي سهولت(نالو) </string>
     <string name="pocfk01d"> پرائيويٽ (نجي) صحت جي سهولت(نالو) </string>
     <string name="pocfk02"> کنگھ يا ٿڌ </string>
-    <string name="pocfk03"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ
- </string>
+  <string name="pocfk03"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
+  <string name="pocfk03h1"> 0 کان 2 مهينن تائين عمر وارا ٻار : </string>
+  <string name="pocfk03h2"> هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pocfk03h3"> 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ  </string>
+  <string name="pocfk03h4"> 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
 
-    <string name="pocfk04"> پاسيريون لڳڻ </string>
-    <string name="pocfk05"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو) (SpO2) </string>
-    <string name="pocfk06"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
-    <string name="pocfk07"> کر کر جو آواز </string>
-    <string name="pocfk08"> خطرناڪ نشانيون(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pocfk04"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
+  <string name="pocfk04a"> ھا </string>
+  <string name="pocfk04b"> نه </string>
+
+  <string name="pocfk05"> پاسيريون لڳڻ </string>
+  <string name="pocfk05a"> ھا </string>
+  <string name="pocfk05b"> نه </string>
+
+  <string name="pocfk06"> پلس آڪسيميٽري جي ريڊنگ سيڪڙو (SpO2 %) </string>
+
+  <string name="pocfk07"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2 92%) </string>
+  <string name="pocfk07a"> ھا </string>
+  <string name="pocfk07b"> نه </string>
+
+  <string name="pocfk08"> خطرناڪ نشانيون(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pocfk08h"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfk08a"> ماءُ جي ٿڃ يا ڪجھ به پي نه سگھڻ </string>
     <string name="pocfk08b"> لڳاتار اُلٽي </string>
     <string name="pocfk08c"> غنودگي / بيهوشي </string>
     <string name="pocfk08d"> جھٽڪا لڳڻ </string>
-    <string name="pocfk09"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي. </string>
-    <string name="pocfk09h1"> نمونيه ناهي </string>
-    <string name="pocfk09a"> کنگھ ۽ ٿڌ </string>
-    <string name="pocfk09h2"> نمونيه </string>
-    <string name="pocfk09b"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
-    <string name="pocfk09c"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
-    <string name="pocfk09h3"> شديد نمونيه </string>
-    <string name="pocfk09d"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
-    <string name="pocfk09e"> 7ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
-    <string name="pocfk10"> ڇا آڪسيجن جي ريڊنگ ورتي وئي ليڊي هيلٿ ورڪر پاران ريفرل مهيا ڪرڻ کان اڳ ۾؟ </string>
-    <string name="pocfk11"> جيڪڏهن نه ته ڇو؟ </string>
+  <string name="pocfk08e"> کر کر جو آواز </string>
+
+  <string name="pocfk09"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي. </string>
+  <string name="pocfk09h1"> کنگھ ۽ ٿڌ </string>
+  <string name="pocfk09h2"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+  <string name="pocfk09h3"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
+  <string name="pocfk09h4"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pocfk09h5"> 7ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pocfk09a"> نمونيه ناهي </string>
+  <string name="pocfk09b"> نمونيه </string>
+  <string name="pocfk09c"> شديد نمونيه </string>
+
+  <string name="pocfk10"> ڇا آڪسيجن جي ريڊنگ ورتي وئي ليڊي هيلٿ ورڪر پاران ريفرل مهيا ڪرڻ کان اڳ ۾؟ </string>
+  <string name="pocfk10a"> ھا </string>
+  <string name="pocfk10b"> نه </string>
+
+  <string name="pocfk11"> جيڪڏهن نه ته ڇو؟ </string>
     <string name="pocfk11a"> ليڊي هليٿ ورڪر نه ورتي </string>
     <string name="pocfk11b"> خاندان جي طرفان اجازت نه ملي </string>
+
     <string name="pocfk12"> جيڪڏهن ها ته ريڊنگ ڇا هئي؟ </string>
     <string name="pocfk12a"> غيرمعمولي </string>
     <string name="pocfk12b"> معمولي </string>
-    <string name="pocfk13"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
+
+  <string name="pocfk13"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
+  <string name="pocfk13a"> ھا </string>
+  <string name="pocfk13b"> نه </string>
 
     <!--FORM THREE 03-->
     <string name="pofisec1"> سيڪشن1. رفرل جي معلومات </string>
@@ -669,43 +702,63 @@
     <!--Section 01 Follow Up-->
 
     <string name="pofpsec01"> سيڪشن1. فالواپ </string>
-    <string name="pofpa01"> موجوده دوري جي تاريخ ڏينهن-مهينو-سال </string>
+  <string name="pofpa01"> موجوده دوري جي تاريخ ڏينهن - مهينو - سال </string>
     <string name="pofpa01a">  </string>
-    <string name="pofpa02"> فالواپ ڪيو ويو؟ </string>
-    <string name="pofpa02a"> ٻار جو گھر </string>
-    <string name="pofpa02b"> ليڊي هيلٿ ورڪر جو هيلٿ هائوس </string>
-    <string name="pofpa02c"> عوامي صحت جي سهولت(نالو) </string>
-    <string name="pofpa02d"> پرائيوٽ(نجي) صحت جي سهولت(نالو) </string>
-    <string name="pofpa03"> جيڪڏهن رفرل قبول ڪيو ويو، ته ٻار اسپتال ۾ ڪيترا ڏينهن رهيو؟ </string>
-    <string name="pofpa03a">  </string>
-    <string name="pofpa04"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائديمند ثابت ٿيون؟ </string>
-    <string name="pofpa05"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
-    <string name="pofpa05a"> اينٽي بائيوٽڪ /شربت نالو </string>
-    <string name="pofpa05b"> وزن(ڪيترا دفعا ڏينهن ۾) </string>
-    <string name="pofpa05c"> آڪسيجن ٿيراپي </string>
-    <string name="pofpa06"> جيڪڏهن رفرل کان انڪار ڪيو ته ٻار گھر ۾ ڪهڙو علاج حاصل ڪيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
-    <string name="pofpa06a"> ينٽي بائيوٽڪ /شربت نالو </string>
-    <string name="pofpa06b"> وزن(ڪيترا دفعا ڏينهن ۾) </string>
-    <string name="pofpa07"> ٻار جي موجوده حالت؟ </string>
-    <string name="pofpa07a"> بلڪل ٺيڪ </string>
-    <string name="pofpa07b"> بهتر </string>
-    <string name="pofpa07c"> ساڳي </string>
-    <string name="pofpa07d"> خراب </string>
-    <string name="pofpa07e"> وفات ڪري ويو </string>
-    <string name="pofpa08"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
-    <string name="pofpa08a"> دست </string>
-    <string name="pofpa08b"> لڳا تار اُلٽي </string>
-    <string name="pofpa08c"> چمڙي تي داڻ داڻ </string>
-    <string name="pofpa09"> جيڪڏهن علاج ۾ ڪا تبديلي آهي ، ته موجوده علاج لکو </string>
-    <string name="pofpa10"> جيڪڏهن ها ته، علاج ۾ ڪنهن تبديلي ڪئي؟ </string>
-    <string name="pofpa10a"> ڊاڪٽر </string>
-    <string name="pofpa10b"> پاڻ </string>
-    <string name="pofpa10c"> ليڊي هليٿ ورڪر </string>
-    <string name="pofpa11"> نئي علاج جي وضاحت ڪريو. </string>
-    <string name="pofpa11a"> اينٽي بائيوٽڪ (نالو) </string>
+  <string name="pofpa02"> تعلقو </string>
+  <string name="pofpa03"> يونين ڪائونسل </string>
+  <string name="pofpa04"> هيلٿ ورڪر جو نالو </string>
+  <string name="pofpa05"> ٻار جو نالو </string>
+  <string name="pofpa06"> پيءُ جو نالو </string>
+  <string name="pofpa07"> فالواپ ڪيو ويو؟ </string>
+  <string name="pofpa07a"> ٻار جو گھر </string>
+  <string name="pofpa07b"> ليڊي هيلٿ ورڪر جو هيلٿ هائوس </string>
+  <string name="pofpa07c"> عوامي صحت جي سهولت(نالو) </string>
+  <string name="pofpa07d"> پرائيوٽ(نجي) صحت جي سهولت(نالو) </string>
+  <string name="pofpa08"> ڇا توهان ريفرل قبول ڪيو؟ </string>
+  <string name="pofpa08a"> ها </string>
+  <string name="pofpa08b"> نه </string>
+  <string name="pofpa09"> جيڪڏهن رفرل قبول ڪيو ويو، ته ٻار اسپتال ۾ ڪيترا ڏينهن رهيو؟ </string>
+  <string name="pofpa10"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون؟ </string>
+  <string name="pofpa10a"> ها </string>
+  <string name="pofpa10b"> نه </string>
+  <string name="pofpa11"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
+  <string name="pofpa11a"> دوا جو نالو </string>
     <string name="pofpa11b"> ڪيترا دفعا ڏينهن ۾ </string>
-    <string name="pofpa11c"> وات /رڳ ذريعي </string>
-    <string name="pofpa11d"> وزن </string>
+  <string name="pofpa11c"> وزن: </string>
+  <string name="pofpa111"> Route of administration (Oral/IV) </string>
+  <string name="pofpa111a"> وات ذريعي </string>
+  <string name="pofpa111b"> رڳ ذريعي </string>
+  <string name="pofpa12"> جيڪڏهن رفرل کان انڪار ڪيو ته ٻار گھر ۾ ڪهڙو علاج حاصل ڪيو؟ </string>
+  <string name="pofpa12a"> دوا جو نالو </string>
+  <string name="pofpa12b"> ڪيترا دفعا ڏينهن ۾ </string>
+  <string name="pofpa12c"> وزن: </string>
+  <string name="pofpa121"> Route of administration (Oral/IV) </string>
+  <string name="pofpa121a"> وات ذريعي </string>
+  <string name="pofpa121b"> رڳ ذريعي </string>
+  <string name="pofpa13"> ٻار جي موجوده حالت؟ </string>
+  <string name="pofpa13a"> بلڪل ٺيڪ </string>
+  <string name="pofpa13b"> بهتر </string>
+  <string name="pofpa13c"> ساڳي </string>
+  <string name="pofpa13d"> خراب </string>
+  <string name="pofpa13e"> وفات ڪري ويو </string>
+  <string name="pofpa14"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pofpa14a"> دست </string>
+  <string name="pofpa14b"> لڳا تار اُلٽي </string>
+  <string name="pofpa14c"> چمڙي تي داڻ داڻ </string>
+  <string name="pofpa15"> جيڪڏهن علاج ۾ ڪا تبديلي آهي ، ته موجوده علاج لکو </string>
+  <string name="pofpa15a"> ها </string>
+  <string name="pofpa15b"> نه </string>
+  <string name="pofpa16"> جيڪڏهن ها ته، علاج ۾ ڪنهن تبديلي ڪئي؟ </string>
+  <string name="pofpa16a"> ڊاڪٽر </string>
+  <string name="pofpa16b"> پاڻ </string>
+  <string name="pofpa16c"> ليڊي هليٿ ورڪر </string>
+  <string name="pofpa17"> نئي علاج جي وضاحت ڪريو. </string>
+  <string name="pofpa17a"> دوا جو نالو </string>
+  <string name="pofpa17b"> ڪيترا دفعا ڏينهن ۾ </string>
+  <string name="pofpa17c"> وزن: </string>
+  <string name="pofpa171"> Route of administration (Oral/IV) </string>
+  <string name="pofpa171a"> وات ذريعي </string>
+  <string name="pofpa171b"> رڳ ذريعي </string>
 
 
     <!--Section 02 Screening For Pneumonia-->

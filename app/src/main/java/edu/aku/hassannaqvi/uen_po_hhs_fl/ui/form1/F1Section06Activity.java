@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -24,7 +25,23 @@ public class F1Section06Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section06);
         bi.setCallback(this);
-        this.setTitle(R.string.pocfh6);
+        this.setTitle("Form 01 (Case Reporting Form)");
+
+        bi.pocff03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.pocff03a.getId())
+                    bi.pocff04.clearCheck();
+            }
+        });
+
+        bi.pocff06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.pocff06a.getId())
+                    bi.pocff07.clearCheck();
+            }
+        });
 
     }
 
@@ -80,11 +97,9 @@ public class F1Section06Activity extends AppCompatActivity {
                 : bi.pocff02j.isChecked() ? "9"
                 : bi.pocff02k.isChecked() ? "10"
                 : bi.pocff02l.isChecked() ? "11"
-                : bi.pocff02m.isChecked() ? "12"
                 : "0");
         sF.put("pocff02gx", bi.pocff02gx.getText().toString());
         sF.put("pocff02kx", bi.pocff02kx.getText().toString());
-        sF.put("pocff02mx", bi.pocff02mx.getText().toString());
 
         sF.put("pocff03", bi.pocff03a.isChecked() ? "1"
                 : bi.pocff03b.isChecked() ? "2"
@@ -120,11 +135,11 @@ public class F1Section06Activity extends AppCompatActivity {
                 : "0");
         sF.put("pocff09", bi.pocff09.getText().toString());
 
-
         sF.put("pocff10a", bi.pocff10a.isChecked() ? "1" : "0");
-        sF.put("pocff10b", bi.pocff10b.isChecked() ? "1" : "0");
-        sF.put("pocff10c", bi.pocff10c.isChecked() ? "1" : "0");
-        sF.put("pocff10d", bi.pocff10d.isChecked() ? "1" : "0");
+        sF.put("pocff10b", bi.pocff10b.isChecked() ? "2" : "0");
+        sF.put("pocff10c", bi.pocff10c.isChecked() ? "3" : "0");
+        sF.put("pocff10d", bi.pocff10d.isChecked() ? "4" : "0");
+        sF.put("pocff10e", bi.pocff10e.isChecked() ? "5" : "0");
 
         sF.put("pocff11", bi.pocff11.getText().toString());
 
@@ -134,25 +149,11 @@ public class F1Section06Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
         return ValidatorClass.EmptyCheckingContainer(this, bi.ll06);
     }
 
     public void BtnEnd() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
-//                MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
-
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
-        }
+        MainApp.endActivity(this, this);
     }
 
     @Override

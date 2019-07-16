@@ -219,21 +219,9 @@ public class SyncActivity extends AppCompatActivity {
                     }
                     new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
 
-//                    Getting BL Random
-                    Toast.makeText(SyncActivity.this, "Sync BL Random", Toast.LENGTH_SHORT).show();
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute();
-
-
-
                     listActivityCreated = false;
                 }
             });
-
 
             return null;
         }

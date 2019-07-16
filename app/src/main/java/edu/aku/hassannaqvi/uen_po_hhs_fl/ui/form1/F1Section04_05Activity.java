@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -14,6 +16,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section0405Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 
@@ -26,7 +29,7 @@ public class F1Section04_05Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section04_05);
         bi.setCallback(this);
-        this.setTitle("Command AND Control Centre");
+        this.setTitle("Form 01 (Case Reporting Form)");
         EventsCall();
     }
 
@@ -80,23 +83,22 @@ public class F1Section04_05Activity extends AppCompatActivity {
 
         JSONObject s0405 = new JSONObject();
 
-        s0405.put("pocfd01", bi.pocfd01a.isChecked() ? "1" : bi.pocfd01b.isChecked() ? "2" : "0");
+        s0405.put("pocfd01", bi.pocfd01a.isChecked() ? "1"
+                : bi.pocfd01b.isChecked() ? "2"
+                : "0");
 
-        s0405.put( "pocfd02a", bi.pocfd02a.isChecked() ? "1" : "0");
-        s0405.put( "pocfd02b", bi.pocfd02b.isChecked() ? "1" : "0");
-        s0405.put( "pocfd02c", bi.pocfd02c.isChecked() ? "1" : "0");
-        s0405.put( "pocfd02d", bi.pocfd02d.isChecked() ? "1" : "0");
-        s0405.put( "pocfd0298", bi.pocfd0298.isChecked() ? "98" : "0");
+        s0405.put("pocfd02a", bi.pocfd02a.isChecked() ? "1" : "0");
+        s0405.put("pocfd02b", bi.pocfd02b.isChecked() ? "2" : "0");
+        s0405.put("pocfd02c", bi.pocfd02c.isChecked() ? "3" : "0");
+        s0405.put("pocfd02d", bi.pocfd02d.isChecked() ? "4" : "0");
+        s0405.put("pocfd0297", bi.pocfd0297.isChecked() ? "97" : "0");
 
-
-        s0405.put( "pocfd03a", bi.pocfd03a.isChecked() ? "1" : "0");
-        s0405.put( "pocfd03b", bi.pocfd03b.isChecked() ? "1" : "0");
-        s0405.put( "pocfd03c", bi.pocfd03c.isChecked() ? "1" : "0");
-        s0405.put( "pocfd03d", bi.pocfd03d.isChecked() ? "1" : "0");
-        s0405.put( "pocfd03e", bi.pocfd03e.isChecked() ? "1" : "0");
-        s0405.put( "pocfd0396", bi.pocfd0396.isChecked() ? "96" : "0");
-
-
+        s0405.put("pocfd03a", bi.pocfd03a.isChecked() ? "1" : "0");
+        s0405.put("pocfd03b", bi.pocfd03b.isChecked() ? "2" : "0");
+        s0405.put("pocfd03c", bi.pocfd03c.isChecked() ? "3" : "0");
+        s0405.put("pocfd03d", bi.pocfd03d.isChecked() ? "4" : "0");
+        s0405.put("pocfd03e", bi.pocfd03e.isChecked() ? "5" : "0");
+        s0405.put("pocfd0396", bi.pocfd0396.isChecked() ? "96" : "0");
         s0405.put("pocfd0396x", bi.pocfd0396x.getText().toString());
 
         s0405.put("pocfe01", bi.pocfe01.getText().toString().trim().length() > 0 ? bi.pocfe01.getText().toString() : "0");
@@ -129,12 +131,31 @@ public class F1Section04_05Activity extends AppCompatActivity {
 
         bi.pocfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (!bi.pocfd01a.isChecked()) {
-                    bi.pocfd02.clearCheck();
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pocfd01a.getId()) {
+                    bi.cvpocfd02.setVisibility(View.VISIBLE);
+                    bi.cvpocfd03.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.cvpocfd02, null);
+                    ClearClass.ClearAllFields(bi.cvpocfd03, null);
+                    bi.cvpocfd02.setVisibility(View.GONE);
+                    bi.cvpocfd03.setVisibility(View.GONE);
                 }
             }
         });
+
+
+        bi.pocfd0297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    ClearClass.ClearAllFields(bi.llpocfd02, false);
+                else
+                    ClearClass.ClearAllFields(bi.llpocfd02, true);
+            }
+        });
+
 
         bi.pocfe04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

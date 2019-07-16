@@ -19,12 +19,17 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 public class F2Section02Activity extends AppCompatActivity {
 
     ActivityF2Section02Binding bi;
+    String DAY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section02);
         bi.setCallback(this);
+
+        DAY = getIntent().getStringExtra("day");
+        this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
+
 
         settingListeners();
 

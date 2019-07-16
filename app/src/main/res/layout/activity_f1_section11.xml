@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -71,16 +71,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/pocfk01c" />
-                        <EditText
-                            android:tag="pocfk01c"
-                            android:id="@+id/pocfk01cx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                            android:hint="@string/other"
-
-                            android:visibility='@{pocfk01c.checked? View.VISIBLE : View.GONE}' />
 
                         <EditText
                             android:tag="pocfk01c"
@@ -99,15 +89,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/pocfk01d" />
-                        <EditText
-                            android:tag="pocfk01dx"
-                            android:id="@+id/pocfk01dx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                            android:hint="@string/other"
-                            android:visibility='@{pocfk01d.checked? View.VISIBLE : View.GONE}' />
 
                         <EditText
                             android:tag="pocfk01d"
@@ -145,6 +126,7 @@
 
             </android.support.v7.widget.CardView>
 
+
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
@@ -181,6 +163,7 @@
 
             </android.support.v7.widget.CardView>
 
+
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
@@ -192,54 +175,50 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk03" />
 
-                    <RadioGroup
-                        android:id="@+id/pocfk03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/i_textviewHint"
+                        android:text="@string/pocfk03h1" />
 
-                        <RadioButton
+                    <TextView
+                        style="@style/i_textviewHint"
+                        android:text="@string/pocfk03h2" />
+
+                    <TextView
+                        style="@style/i_textviewHint"
+                        android:text="@string/pocfk03h3" />
+
+                    <TextView
+                        style="@style/i_textviewHint"
+                        android:text="@string/pocfk03h4" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfk03a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/yes" />
-
-
-                        <EditText
-                            android:id="@+id/pocfk03a01"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Respiratory Rate 01"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pocfk03a.checked? pocfk03a01.getText.toString : "" }'
-                            android:visibility='@{pocfk03a.checked? View.VISIBLE : View.GONE}' />
+                            app:maxValue="99"
+                            app:minValue="30"
+                            app:type="range" />
 
-                        <EditText
-                            android:id="@+id/pocfk03a02"
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pocfk03b"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Respiratory Rate 02"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pocfk03a.checked? pocfk03a02.getText.toString : "" }'
-                            android:visibility='@{pocfk03a.checked? View.VISIBLE : View.GONE}' />
-
-                        <RadioButton
-                            android:id="@+id/pocfk03b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/no" />
-
-
-                    </RadioGroup>
+                            app:maxValue="99"
+                            app:minValue="30"
+                            app:type="range" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -277,6 +256,7 @@
 
             </android.support.v7.widget.CardView>
 
+
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
@@ -288,24 +268,26 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk05" />
 
-                    <EditText
-                        android:id="@+id/pocfk05a"
-                        style="@style/textInput"
+                    <RadioGroup
+                        android:id="@+id/pocfk05"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="%"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/pocfk05b"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="%"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        <RadioButton
+                            android:id="@+id/pocfk05a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/yes" />
 
+                        <RadioButton
+                            android:id="@+id/pocfk05b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -323,33 +305,33 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk06" />
 
-                    <RadioGroup
-                        android:id="@+id/pocfk06"
+                    <EditText
+                        android:id="@+id/pocfk06a"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:hint="%"
+                        android:inputType="number"
+                        android:maxLength="2" />
 
-                        <RadioButton
-                            android:id="@+id/pocfk06a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/yes" />
+                    <EditText
+                        android:id="@+id/pocfk06b"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="%"
+                        android:inputType="number"
+                        android:maxLength="2" />
 
-                        <RadioButton
-                            android:id="@+id/pocfk06b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/no" />
-
-                    </RadioGroup>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
 
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvpocfk07"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -397,18 +379,21 @@
                         style="@style/i_textview"
                         android:text="@string/pocfk08" />
 
-                <LinearLayout
-                    android:id="@+id/fldGrppocfk08"
-                    style="@style/linearlayout_view"
-                    android:tag="0">
+                    <TextView
+                        style="@style/i_textviewHint"
+                        android:text="@string/pocfk08h" />
 
+                    <LinearLayout
+                        android:id="@+id/llpocfk08"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/pocfk08a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            style="@style/i_checkbox"
                             android:text="@string/pocfk08a" />
 
                         <CheckBox
@@ -416,7 +401,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            style="@style/i_checkbox"
                             android:text="@string/pocfk08b" />
 
                         <CheckBox
@@ -424,7 +408,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            style="@style/i_checkbox"
                             android:text="@string/pocfk08c" />
 
                         <CheckBox
@@ -432,22 +415,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            style="@style/i_checkbox"
                             android:text="@string/pocfk08d" />
 
                         <CheckBox
-                            android:id="@+id/pocfk0898"
+                            android:id="@+id/pocfk08e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            style="@style/i_checkbox"
-                            android:text="@string/none" />
+                            android:text="@string/pocfk08e" />
 
-                </LinearLayout>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/pocfk0897"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/none" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -459,12 +448,6 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/pocfk09" />
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:background="@color/colorPrimaryDark"
-                        android:gravity="center"
-                        android:text="@string/pocfk09h1" />
 
                     <RadioGroup
                         android:id="@+id/pocfk09"
@@ -479,10 +462,8 @@
                             android:text="@string/pocfk09a" />
 
                         <TextView
-                            style="@style/i_textview"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/pocfk09h2" />
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h1" />
 
                         <RadioButton
                             android:id="@+id/pocfk09b"
@@ -490,6 +471,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/pocfk09b" />
+
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h2" />
+
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h3" />
 
 
                         <RadioButton
@@ -500,31 +489,19 @@
                             android:text="@string/pocfk09c" />
 
                         <TextView
-                            style="@style/i_textview"
-                            android:background="@color/colorPrimaryDark"
-                            android:gravity="center"
-                            android:text="@string/pocfk09h3" />
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h4" />
 
-                        <RadioButton
-                            android:id="@+id/pocfk09d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pocfk09d" />
-
-                        <RadioButton
-                            android:id="@+id/pocfk09e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pocfk09e" />
-
+                        <TextView
+                            style="@style/i_textviewHint"
+                            android:text="@string/pocfk09h5" />
 
                     </RadioGroup>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -547,15 +524,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/yes" />
+                            android:text="@string/pocfk10a" />
 
                         <RadioButton
                             android:id="@+id/pocfk10b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
-                            android:text="@string/no" />
-
+                            android:text="@string/pocfk10b" />
 
                     </RadioGroup>
 
@@ -563,9 +539,10 @@
 
             </android.support.v7.widget.CardView>
 
+
             <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:visibility='@{pocfk10a.checked? View.VISIBLE : View.GONE}'>
+                android:id="@+id/cvpocfk11"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -620,10 +597,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView style="@style/cardView"
-
-                android:visibility='@{pocfk10a.checked? View.VISIBLE : View.GONE}'
-                >
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvpocfk12"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -659,10 +635,7 @@
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView style="@style/cardView"
-
-                android:visibility='@{pocfk10a.checked? View.VISIBLE : View.GONE}'
-                >
+            <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
