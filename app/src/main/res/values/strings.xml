@@ -774,19 +774,20 @@
   <string name="pofpb04"> (SpO2) پلس آڪسيميٽري جي ريڊنگ في سيڪڙو</string>
     <string name="pofpb05"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
     <string name="pofpb06"> کر کر جو آواز </string>
-    <string name="pofpb07"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pofpb07"> خطرناڪ نشانيون </string>
+  <string name="pofpb071"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pofpb07a"> ماءُ جي ٿڃ يا ڪجھ به پي نه سگھڻ </string>
     <string name="pofpb07b"> لڳاتار اُلٽي </string>
     <string name="pofpb07c"> غنودگي / بيهوشي </string>
     <string name="pofpb07d"> جھٽڪا لڳڻ </string>
     <string name="pofpb08"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي </string>
     <string name="pofpb08a"> نمونيه ناهي </string>
-    <string name="pofpb08b"> کنگھ ۽ ٿڌ </string>
-    <string name="pofpb08c"> نمونيه </string>
-    <string name="pofpb08d"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
-    <string name="pofpb08e"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
-    <string name="pofpb08f"> شديد نمونيه </string>
-    <string name="pofpb08g"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
-    <string name="pofpb08h"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pofpb08b"> نمونيه </string>
+  <string name="pofpb08c"> شديد نمونيه </string>
+  <string name="pofpb081"> کنگھ ۽ ٿڌ </string>
+  <string name="pofpb082"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+  <string name="pofpb083"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
+  <string name="pofpb084"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pofpb085"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
 
 </resources>

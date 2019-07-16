@@ -378,61 +378,75 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pofpb081"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
                         <RadioButton
                             android:id="@+id/pofpb08a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:layout_marginBottom="3dp"
                             android:text="@string/pofpb08a" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pofpb082"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pofpb083"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
 
                         <RadioButton
                             android:id="@+id/pofpb08b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:layout_marginBottom="3dp"
                             android:text="@string/pofpb08b" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pofpb084"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pofpb085"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
 
                         <RadioButton
                             android:id="@+id/pofpb08c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:layout_marginTop="3dp"
                             android:text="@string/pofpb08c" />
-
-                        <RadioButton
-                            android:id="@+id/pofpb08d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pofpb08d" />
-
-                        <RadioButton
-                            android:id="@+id/pofpb08e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pofpb08e" />
-
-                        <RadioButton
-                            android:id="@+id/pofpb08f"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pofpb08f" />
-
-                        <RadioButton
-                            android:id="@+id/pofpb08g"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pofpb08g" />
-
-                        <RadioButton
-                            android:id="@+id/pofpb08h"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pofpb08h" />
 
                     </RadioGroup>
 

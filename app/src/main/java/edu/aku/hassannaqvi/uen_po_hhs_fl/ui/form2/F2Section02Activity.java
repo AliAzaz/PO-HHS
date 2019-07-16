@@ -45,12 +45,12 @@ public class F2Section02Activity extends AppCompatActivity {
                 if (checkedId == bi.pofpb05a.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) >= 92) {
                     bi.pofpb05a.setError("You are not supposed to select YES option!");
 //                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
-//                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
 
 
                 } else if (checkedId == bi.pofpb05b.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) < 92) {
                     bi.pofpb05b.setError("You are not supposed to select NO option!");
-//                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
                 }
             }
         });
@@ -132,16 +132,11 @@ public class F2Section02Activity extends AppCompatActivity {
         f02.put("pofpb07b", bi.pofpb07b.isChecked() ? "2" : "0");
         f02.put("pofpb07c", bi.pofpb07c.isChecked() ? "3" : "0");
         f02.put("pofpb07d", bi.pofpb07d.isChecked() ? "4" : "0");
-        f02.put("pofpb0798", bi.pofpb0798.isChecked() ? "98" : "0");
+        f02.put("pofpb0797", bi.pofpb0797.isChecked() ? "97" : "0");
 
         f02.put("pofpb08", bi.pofpb08a.isChecked() ? "1"
                 : bi.pofpb08b.isChecked() ? "2"
                 : bi.pofpb08c.isChecked() ? "3"
-                : bi.pofpb08d.isChecked() ? "4"
-                : bi.pofpb08e.isChecked() ? "5"
-                : bi.pofpb08f.isChecked() ? "6"
-                : bi.pofpb08g.isChecked() ? "7"
-                : bi.pofpb08h.isChecked() ? "8"
                 : "0");
 
         MainApp.fc.setsB(String.valueOf(f02));
