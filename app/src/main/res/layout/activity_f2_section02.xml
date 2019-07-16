@@ -349,7 +349,7 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/pofpb0798"
+                        android:id="@+id/pofpb0797"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"

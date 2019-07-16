@@ -129,6 +129,15 @@ public abstract class ValidatorClass {
         return false;
     }
 
+    public static boolean EmptyCustomRadio(Context context, RadioButton rd, String msg) {
+        FancyToast.makeText(context, "ERROR: " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+        rd.setError(msg);
+        rd.setFocusableInTouchMode(true);
+        rd.requestFocus();
+        Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(rd.getId()) + ": " + msg);
+        return false;
+    }
+
     public static boolean RangeTextBox(Context context, EditText txt, int min, int max, String msg, String type) {
 
         if (Integer.valueOf(txt.getText().toString()) < min || Integer.valueOf(txt.getText().toString()) > max) {

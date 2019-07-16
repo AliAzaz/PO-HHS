@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -43,13 +44,24 @@ public class F2Section02Activity extends AppCompatActivity {
 
                 if (checkedId == bi.pofpb05a.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) >= 92) {
                     bi.pofpb05a.setError("You are not supposed to select YES option!");
-                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+//                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
+//                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
 
 
                 } else if (checkedId == bi.pofpb05b.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) < 92) {
                     bi.pofpb05b.setError("You are not supposed to select NO option!");
-                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+//                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
                 }
+            }
+        });
+
+        bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    ClearClass.ClearAllFields(bi.fldgrppofpb07, false);
+                else
+                    ClearClass.ClearAllFields(bi.fldgrppofpb07, true);
             }
         });
 
