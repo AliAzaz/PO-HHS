@@ -422,6 +422,24 @@
     </style>
     <!-- EditText Acept Number  Ends. -->
 
+    <!-- EditText Acept NumberDecimal  Starts. -->
+    <style name="EditText_numberDecimal" parent="android:Widget.Material.Light.EditText">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- EditText Acept NumberDecimal  Ends. -->
+
     <!-- Irfan RadioGroup  -->
     <style name="i_radiogroup">
         <item name="android:layout_width">match_parent</item>

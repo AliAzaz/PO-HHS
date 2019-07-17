@@ -339,6 +339,7 @@ public abstract class ValidatorClass {
                     ClearClass.ClearAllFields(view, null);
                 else if (view instanceof CheckBox)
                     ((CheckBox) view).setError(null);
+
                 continue;
             }
 
@@ -470,5 +471,6 @@ public abstract class ValidatorClass {
         }
         return "";
     }
+
 
 }
