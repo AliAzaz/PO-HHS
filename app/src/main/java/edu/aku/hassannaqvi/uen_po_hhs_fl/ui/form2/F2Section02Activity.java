@@ -38,22 +38,29 @@ public class F2Section02Activity extends AppCompatActivity {
 
     private void settingListeners() {
 
+//        bi.pofpb04b.addTextChangedListener(generalTextWatcher);
+
         bi.pofpb05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.pofpb05a.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) >= 92) {
-                    bi.pofpb05a.setError("You are not supposed to select YES option!");
+                    bi.pofpb05a.requestFocus();
+                    bi.pofpb05a.setError("Error");
+                    bi.pofpb05tv.setText("You are not supposed to select YES option!");
 //                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
                     ClearClass.ClearAllFields(bi.cvpofpb05, null);
 
 
                 } else if (checkedId == bi.pofpb05b.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) < 92) {
-                    bi.pofpb05b.setError("You are not supposed to select NO option!");
+                    bi.pofpb05b.requestFocus();
+                    bi.pofpb05b.setError("Error");
+                    bi.pofpb05tv.setText("You are not supposed to select NO option!");
                     ClearClass.ClearAllFields(bi.cvpofpb05, null);
                 }
             }
         });
+
 
         bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -67,6 +74,35 @@ public class F2Section02Activity extends AppCompatActivity {
 
 
     }
+
+
+    /*private TextWatcher generalTextWatcher = new TextWatcher() {
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (bi.pofpb04b.getText().hashCode() == s.hashCode()) {
+                if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92  && bi.pofpb05a.isChecked()) {
+                    bi.pofpb04b.requestFocus();
+                    bi.pofpb04b.setError("You are not supposed to select YES option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                } else if(Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92  && bi.pofpb05b.isChecked()) {
+                    bi.pofpb04b.requestFocus();
+                    bi.pofpb04b.setError("You are not supposed to select NO option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                }
+            }
+
+        }
+
+    };*/
 
     public void BtnContinue() {
         if (formValidation()) {

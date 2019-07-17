@@ -20,7 +20,6 @@
         android:layoutDirection="rtl"
         tools:context=".ui.form2.F2Section02Activity">
 
-
         <LinearLayout
             android:id="@+id/f2Section02"
             android:layout_width="match_parent"
@@ -254,6 +253,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/no" />
+
+                        <TextView
+                            android:id="@+id/pofpb05tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/darkRed" />
 
                     </RadioGroup>
 
