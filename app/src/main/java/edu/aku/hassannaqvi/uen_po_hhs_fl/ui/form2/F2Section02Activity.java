@@ -181,6 +181,7 @@ public class F2Section02Activity extends AppCompatActivity {
     private boolean formValidation() {
 
         return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02);
+
     }
 
     public void BtnEnd() {

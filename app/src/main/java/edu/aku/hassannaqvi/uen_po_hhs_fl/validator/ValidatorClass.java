@@ -341,6 +341,7 @@ public abstract class ValidatorClass {
                     ((CheckBox) view).setError(null);
 
                 continue;
+
             }
 
             if (view instanceof CardView) {
