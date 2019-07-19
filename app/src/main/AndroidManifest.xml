@@ -23,7 +23,7 @@
         android:windowSoftInputMode="adjustResize|stateHidden">
 
         <activity
-            android:name=".ui.other.SplashscreenActivity"
+            android:name=".ui.form1.F1Section09_10Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -83,7 +83,7 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name=".ui.form1.F1Section09_10Activity"
+            android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />

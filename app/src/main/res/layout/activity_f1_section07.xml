@@ -203,6 +203,7 @@
                                         android:layout_weight="30"
                                         android:checked="@{pocfgbcga.checked ? false : false}"
                                         android:padding="8dp"
+                                        android:tag="-1"
                                         android:text="@string/dkn" />
 
                                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText

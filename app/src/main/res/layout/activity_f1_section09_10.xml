@@ -142,33 +142,30 @@
                             android:id="@+id/pocfj01a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:text="@string/pocfj01a" />
 
                         <CheckBox
                             android:id="@+id/pocfj01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:text="@string/pocfj01b" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfj01bx"
                             android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
                             android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
+                            android:tag="pocfj01b"
                             style="@style/EditText_numberDecimal"
-                            android:maxLength="5"
                             android:hint="@string/pocfj01bt"
                             app:maxValue="105.0"
                             app:minValue="90.0"
-                            app:mask="XXX.X"
+                            app:mask="###.#"
                             app:type="range" />
 
                         <CheckBox
                             android:id="@+id/pocfj01c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:text="@string/pocfj01c" />
 
                         <CheckBox
@@ -266,6 +263,7 @@
                         android:id="@+id/pocfj0198"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:tag="-1"
                         android:text="@string/none" />
 
                 </LinearLayout>

@@ -246,6 +246,12 @@ public abstract class ValidatorClass {
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
             if (v instanceof CheckBox) {
+
+                if (v.getTag() != null && v.getTag().equals("-1")) {
+                    flag = true;
+                    continue;
+                }
+
                 CheckBox cb = (CheckBox) v;
                 cb.setError(null);
                 if (cb.isChecked()) {
