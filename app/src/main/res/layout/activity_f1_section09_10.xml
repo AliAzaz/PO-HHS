@@ -251,7 +251,7 @@
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
                             android:tag="pocfj0196"
                             android:text='@{pocfj0196.checked? pocfj0196x.getText.toString : "" }'
@@ -296,13 +296,13 @@
                         <EditText
                             android:id="@+id/pocfj02ax"
                             style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/other"
                             android:tag="pocfj02a"
                             android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
                             android:visibility='@{pocfj02a.checked? View.VISIBLE : View.GONE}' />
-
 
                         <RadioButton
                             android:id="@+id/pocfj02b"

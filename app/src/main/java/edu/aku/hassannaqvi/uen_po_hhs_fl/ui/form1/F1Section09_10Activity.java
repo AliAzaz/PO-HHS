@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -37,10 +38,13 @@ public class F1Section09_10Activity extends AppCompatActivity {
         bi.pocfj0198.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b) {
                     ClearClass.ClearAllFields(bi.fldGrppocfj01, false);
-                else
+                    bi.fldGrppocfj01.setVisibility(View.GONE);
+                } else {
                     ClearClass.ClearAllFields(bi.fldGrppocfj01, true);
+                    bi.fldGrppocfj01.setVisibility(View.VISIBLE);
+                }
             }
         });
 
