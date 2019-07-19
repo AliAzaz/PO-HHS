@@ -791,4 +791,287 @@
   <string name="pofpb084"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
   <string name="pofpb085"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
 
+
+
+  <!-- Hospital Registeration Form 4-->
+
+
+
+
+  <string name="pohr0a"> ھا </string>
+  <string name="pohr0b"> نه </string>
+  <string name="pohr96"> ٻيو ڪجھ (وضاحت ڪريو) </string>
+  <string name="pohr98"> خبر نه آھي </string>
+
+  <string name="pohr97"> ڪجھ به نه </string>
+  <string name="pohrnum"> number </string>
+  <string name="pohrchar"> varchar </string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <string name="pohrainfo"> ضلعي جامشوري ۾5 سالن کان ننڍن ٻارن ۾ شديد نمونيه جي لاءِ رفرل قبول ڪرڻ تي پلس آڪسيميٽر جو اثر </string>
+
+
+  <string name="pohra01"> تعلقو </string>
+
+  <string name="pohra02"> يونين ڪائونسل </string>
+
+  <string name="pohra03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو </string>
+
+  <string name="pohra04"> رفرل آءِ ڊي </string>
+
+  <string name="pohra05"> ڳوٺ/محلي جو نالو </string>
+
+  <string name="pohra06"> گھر جو پتو(ايڊريس) </string>
+
+  <string name="pohra07"> موجوده دوري جي تاريخ </string>
+
+  <string name="pohra08"> ڪيس آءِ ڊي </string>
+
+  <string name="pohra09"> داخلا جي تاريخ </string>
+  <string name="pohra09dd"> ڏينهن </string>
+  <string name="pohra09mm"> مهينو </string>
+  <string name="pohra09yyyy"> سال </string>
+
+
+
+  <string name="pohrb01"> داخلا جي مدت </string>
+
+  <string name="pohrb01a"> ڏينهن 1 </string>
+
+  <string name="pohrb01b"> ڏينهن 2 </string>
+
+  <string name="pohrb01c"> ڏينهن 3 </string>
+
+  <string name="pohrb01d"> ڏينهن 4 </string>
+
+  <string name="pohrb01e"> ڏينهن 5 </string>
+
+  <string name="pohrb01f"> ڏينهن 6 </string>
+
+  <string name="pohrb02"> ڄمڻ جي تاريخ </string>
+  <string name="pohrb02dd"> ڏينهن </string>
+  <string name="pohrb02mm"> مهينو </string>
+  <string name="pohrb02yyyy"> سال </string>
+
+  <string name="pohrb03"> جنس </string>
+  <string name="pohrb03a"> مرد </string>
+  <string name="pohrb03b"> عورت </string>
+
+  <string name="pohrb04"> وزن ڪلوگرام </string>
+
+  <string name="pohrb05"> قد (سينٽي ميٽر) </string>
+
+
+
+  <string name="pohrc01"> مريض ۾ علامتون ؛(گذريل 24 ڪلاڪن ۾) </string>
+
+  <string name="pohrc01a"> کنگھ </string>
+
+  <string name="pohrc01b"> بخار </string>
+
+  <string name="pohrc01c"> ساھ جي تيز رفتار </string>
+
+  <string name="pohrc01d"> هڪ کان وڌيڪ جواب ٿي سگھن ٿا </string>
+
+  <string name="pohrc01e"> پاسيريون لڳڻ </string>
+
+  <string name="pohrc01h1"> 0 کان 2 مهينن کان گھٽ عمر وارا ٻار؛ هڪ منٽ ۾ 60 يا 60 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+
+  <string name="pohrc01h2"> 2 کان 12 مهينن کان گھٽ عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+
+  <string name="pohrc01h3"> ڀيرا ساهه کڻڻ 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾40 يا 40 کان وڌيڪ </string>
+
+
+  <string name="pohrd01"> خطرناڪ نشانيون(گذريل 24 ڪلاڪن ۾) </string>
+
+  <string name="pohrd01a"> ڪجهه به کائي پئ نه سگهي </string>
+
+  <string name="pohrd01b"> لڳاتار اُلٽي </string>
+
+  <string name="pohrd01c"> جهٽڪا </string>
+
+  <string name="pohrd01d"> بيهوشي/ غنودگي </string>
+
+  <string name="pohrd01e">Hypoxemia (Sp02 less then 92%) </string>
+
+
+  <string name="pohre01"> صحت جي عالمي اداري مطابق نمونيا جي آخري درجابندي (مناسب باڪس تي نشان لڳايو علامتن جي موجودگي مطابق) </string>
+
+  <string name="pohre01a"> نمونيا ناهي </string>
+
+  <string name="pohre01h1"> کنگهه ۽ ٿد </string>
+
+  <string name="pohre01b"> نمونيا </string>
+
+  <string name="pohre01h2"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+
+  <string name="pohre01h2vv"> 2کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريولڳڻ </string>
+
+  <string name="pohre01c"> شديد نمونيه </string>
+
+  <string name="pohre01h3"> 7ڏينهن کان گھٽ عمر وارا ٻار:صرف تڪڙا ساھ </string>
+
+  <string name="pohre01h4"> 7ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+
+
+  <string name="pohrf01"> غير معمولي جسماني معائنو ڪرڻ </string>
+
+  <string name="pohrf01a"> سائينوسس </string>
+
+  <string name="pohrf01b"> گرنٽنگ </string>
+
+  <string name="pohrf01c"> هيڊ نوڊنگ </string>
+
+  <string name="pohrf01d"> تريڪيل ٽگ </string>
+
+  <string name="pohrf01e"> نڪ جو کُلڻ </string>
+
+  <string name="pohrf01f"> کرکر جو آواز </string>
+
+  <string name="pohrf01g"> سيٽي جھڙو آواز </string>
+
+  <string name="pohrf01h"> ڪو به نه </string>
+
+
+  <string name="pohrgh1"> اهم نشانيون </string>
+
+  <string name="pohrg01a"> ساهه جي رفتار/ منٽ 1 </string>
+
+  <string name="pohrg01b"> ساهه جي رفتار/ منٽ2 </string>
+
+  <string name="pohrg02"> گرمي پد(سينٽي ميٽر) </string>
+
+  <string name="pohrg03"> پلس/منٽ </string>
+
+  <string name="pohrg04a"> رت ۾ آڪسيجن جي ليول1 </string>
+
+  <string name="pohrg04b"> رت ۾ آڪسيجن جي ليول2 </string>
+
+
+  <string name="pohrhh1"> ليبارٽيري تحقيقات </string>
+  <string name="pohrhh2"> جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي لکو </string>
+
+  <string name="pohrh01"> ( آر بي سي) رت جا ڳا ڙها جزا </string>
+
+  <string name="pohrh02"> ايڇ بي (هيموگلوبن) </string>
+
+  <string name="pohrh03"> ايڇ سي ٽي </string>
+
+  <string name="pohrh04"> ( رت جا اڇا جزا) ڊبليو بي سي </string>
+
+  <string name="pohrh05"> نيوٽروفلس </string>
+
+  <string name="pohrh06"> لمفوسائيٽس </string>
+
+  <string name="pohrh07"> پي ايل ٽي ڪاوُنٽ </string>
+
+  <string name="pohrh08"> سي آر پي </string>
+
+  <string name="pohrh09"> اي ايس آر </string>
+
+  <string name="pohrh10"> پي سي ٽي </string>
+
+  <string name="pohrh11"> بلڊ ڪلچر </string>
+
+  <string name="pohrh12"> ٻيو ڪجهه </string>
+
+  <string name="pohrih1"> ريڊيولوجيڪل تحقيقات .7 </string>
+  <string name="pohrih2"> (جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي لکو) </string>
+
+  <string name="pohri01"> چيسٽ ايڪسري </string>
+
+  <string name="pohri02"> ڦڦڙن جو الٽرا ساونڊ </string>
+
+  <string name="pohri03"> سي ٽي/ ايم آر آءَ </string>
+
+  <string name="pohri04"> اي بي جي </string>
+
+  <string name="pohri05"> ٻيو ڪجھ </string>
+
+  <string name="pohrjh1"> علاج ڏنو ويو .8 </string>
+
+  <string name="pohrj01"> اينٽي بائيوٽڪ </string>
+  <string name="pohrj01a"> ھا </string>
+  <string name="pohrj01b"> نه </string>
+
+  <string name="pohrj02"> جيڪڏهن ها ته </string>
+
+  <string name="pohrj02a"> وضاحت ڪريو عام نالو </string>
+
+  <string name="pohrj02b"> وزن(ملي گرام) </string>
+
+  <string name="pohrj02c"> روزانو </string>
+
+  <string name="pohrj02d"> سئي ذريعي </string>
+
+  <string name="pohrj02e"> وات ذريعي </string>
+
+  <string name="pohrj03"> ڇا ٻار کي ساهه کڻڻ لاءِ ڪنهن سپورٽ جي ضرورت آهي؟ </string>
+  <string name="pohrj03a"> ھا </string>
+  <string name="pohrj03b"> نه </string>
+
+  <string name="pohrj04"> جيڪڏهن ها ته،ذريعو </string>
+  <string name="pohrj04a"> ماسڪ </string>
+  <string name="pohrj04b"> نيزل پرونگ </string>
+  <string name="pohrj04c"> ببل سي پيپ </string>
+  <string name="pohrj04d"> ٻيو ڪجهه (سي پيپ،ايڇ ايف اين سي) </string>
+  <string name="pohrj04e"> انٽيوبيشن(انٽيوبيشن جي تاريخ) </string>
+
+
+
+  <string name="pohrk01"> ڪلينيڪل معلومات .9 </string>
+
+  <string name="pohrk01a"> بهتر </string>
+
+  <string name="pohrk01b"> بيمار </string>
+
+  <string name="pohrk01c"> تشويشناڪ حالت </string>
+
+
+  <string name="pohrl01"> ڊچارج جي معلومات (صرف داخل شده مريضن لاءِ – جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي) .10 </string>
+
+  <string name="pohrl01a"> ڊسچارج </string>
+
+  <string name="pohrl02"> (جيڪڏهن ها ته ) ڊسچارج/ منتقل ڪرڻ جي تاريخ </string>
+  <string name="pohrl02dd"> ڏينهن </string>
+  <string name="pohrl02mm"> مهينو </string>
+  <string name="pohrl02yyyy"> سال </string>
+
+  <string name="pohrl03a"> منتقل </string>
+
+  <string name="pohrl03b"> جيڪڏهن ها ته سبب </string>
+
+  <string name="pohrl04a"> اڃا داخل آهي </string>
+
+  <string name="pohrl05"> ڊسچارج جي تشخيص </string>
+
+  <string name="pohrl06"> ڊسچارج جي وقت حالت </string>
+
+  <string name="pohrl06a"> بهتر </string>
+
+  <string name="pohrl06b"> بيمار </string>
+
+  <string name="pohrl06c"> مري ويو </string>
+
+
+
+
+
+
+
+
+
+
+
 </resources>
