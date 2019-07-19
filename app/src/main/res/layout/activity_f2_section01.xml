@@ -804,7 +804,6 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/other" />
 
-
                             <EditText
                                 android:id="@+id/pofpa1496x"
                                 style="@style/textInput"
