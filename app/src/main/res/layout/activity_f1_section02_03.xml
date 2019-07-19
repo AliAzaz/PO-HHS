@@ -42,6 +42,7 @@
                             style="@style/textInput"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/pocfb01" />
+                        <requestFocus />
 
                     </LinearLayout>
 
@@ -664,7 +665,10 @@
                         android:id="@+id/pocfc11"
                         style="@style/EditText_number"
                         android:hint="@string/pocfc11"
-                        android:maxLength="6"
+                        android:maxLength="7"
+
+                        app:minValue="5000"
+                        app:type="range"
                         android:tag="pocfc1198"
                         android:text='@{!pocfc1198.checked? pocfc11.getText.toString : "" }'
                         android:visibility='@{!pocfc1198.checked? View.VISIBLE : View.GONE}'

@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2.F2Section01Activity" />
+
+    </data>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        tools:context=".ui.form2.F2Section01Activity">
+
+
+        <LinearLayout
+            android:id="@+id/f2Section011"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--Header-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout
+                    style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="@string/pohrainfo"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Info Section A startd -->
+            <android.support.v7.widget.CardView style="@style/cardView">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+
+                    <!--pohra01-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra01" />
+
+                            <Spinner
+                                android:id="@+id/pohra01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pohra02-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra02" />
+
+                            <Spinner
+                                android:id="@+id/pohra02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pohra03-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra03" />
+
+                            <Spinner
+                                android:id="@+id/pohra03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:background="@android:color/darker_gray"
+                                android:paddingTop="5dp" />
+
+                            <TextView
+                                android:id="@+id/lhwcode"
+                                style="@style/textview_fm_lst_h" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pohra04-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra06" />
+
+
+
+
+                            <Spinner
+                                android:id="@+id/pohra04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!--pohra05-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra05" />
+
+                            <Spinner
+                                android:id="@+id/pohra05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:background="@android:color/darker_gray"
+                                android:paddingTop="5dp" />
+
+                            <TextView
+
+                                style="@style/textview_fm_lst_h" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!--pohra06-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra06" />
+
+
+                            <EditText
+                                android:id="@+id/pohra06"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/pohra06"
+                               />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pohra07-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra07" />
+
+
+
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pohra07"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/pohra07"
+                                android:inputType="number"
+                                android:maxLength="3"
+
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pohra08-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra08" />
+
+
+
+
+                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                android:id="@+id/pohra08"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="70"
+                                android:focusable="false"
+                                android:hint="DD/MM/YYYY"
+                                android:textColor="@android:color/black"
+                                app:dateFormat="dd-MM-yyyy"
+                                app:maxDate="CR_DATE"
+                                app:minDate="01/01/1981" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--Info Section A Ends -->
+
+
+
+            <LinearLayout
+                android:id="@+id/f4Section01b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+
+
+
+
+
+
+                <!--pohrb01-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrb01" />
+
+
+                        <RadioGroup
+                            android:id="@+id/pohrb01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/pohrb01a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrb01a" />
+
+                            <RadioButton
+                                android:id="@+id/pohrb01b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrb01b" />
+
+
+                            <RadioButton
+                                android:id="@+id/pohrb01c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrb01c" />
+
+
+
+
+                            <RadioButton
+                                android:id="@+id/pohrb01d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrb01d" />
+
+
+                            <RadioButton
+                                android:id="@+id/pohrb01e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrb01e" />
+                            <RadioButton
+                                android:id="@+id/pohrb01f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrb01f" />
+
+
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <!--pohrb02-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrb02" />
+
+
+
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/pohrb02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/01/1981" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pohrb03-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrb03" />
+
+
+                        <RadioGroup
+                            android:id="@+id/pohrb03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/pohrb03a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohr0a" />
+
+                            <RadioButton
+                                android:id="@+id/pohrb03b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohr0b" />
+
+
+
+
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!--pohrb04-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrb04" />
+
+
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrb04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="100"
+                            app:minValue="10"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <!--pohrb05-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrb05" />
+
+
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrb05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="100"
+                            app:minValue="10"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!--pohrc01-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrc01" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/pohrc01a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrc01a" />
+
+                            <CheckBox
+                                android:id="@+id/pohrc01b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrc01b" />
+
+                            <CheckBox
+                                android:id="@+id/pohrc01c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrc01c" />
+
+
+
+
+                            <TextView
+                                style="@style/textview"
+                                android:text="@string/pohrc01h1"
+                                android:textSize="18sp"
+                                android:textStyle="italic"
+                                />
+                            <TextView
+                                style="@style/textview"
+                                android:text="@string/pohrc01h2"
+                                android:textSize="18sp"
+                                android:textStyle="italic"
+                                />
+                            <TextView
+                                style="@style/textview"
+                                android:text="@string/pohrc01h3"
+                                android:textSize="18sp"
+                                android:textStyle="italic"
+                                />
+
+                            <CheckBox
+                                android:id="@+id/pohrc01e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrc01e" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+
+                <!--pohrd01-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrc01" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/pohrd01a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrd01a" />
+
+                            <CheckBox
+                                android:id="@+id/pohrd01b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrd01b" />
+
+                            <CheckBox
+                                android:id="@+id/pohrd01c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrd01c" />
+
+                            <CheckBox
+                                android:id="@+id/pohrd01d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrd01d" />
+
+                            <CheckBox
+                                android:id="@+id/pohrd01e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrd01e" />
+
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pohre01-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohre01" />
+
+
+                        <RadioGroup
+                            android:id="@+id/pohre01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <RadioButton
+                                android:id="@+id/pohre01a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:text="@string/pohre01a" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:paddingRight="10dp"
+                                android:text="@string/pohre01h1"
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
+
+
+
+
+                            <RadioButton
+                                android:id="@+id/pohre01b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:text="@string/pohre01b" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:paddingRight="10dp"
+                                android:text="@string/pohre01h2"
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:paddingRight="10dp"
+                                android:text="@string/pohre01h2"
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
+
+
+                            <RadioButton
+                                android:id="@+id/pohre01c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="@string/pohre01c" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:paddingRight="10dp"
+                                android:text="@string/pohre01h3"
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:paddingRight="10dp"
+                                android:text="@string/pohre01h4"
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <!--pohrf01-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrf01" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/pohrf01a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01a" />
+
+                            <CheckBox
+                                android:id="@+id/pohrf01b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01b" />
+
+                            <CheckBox
+                                android:id="@+id/pohrf01c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01c" />
+
+
+                            <CheckBox
+                                android:id="@+id/pohrf01d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01d" />
+
+
+                            <CheckBox
+                                android:id="@+id/pohrf01e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01e" />
+
+
+
+                            <CheckBox
+                                android:id="@+id/pohrf01f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01f" />
+
+
+                            <CheckBox
+                                android:id="@+id/pohrf01g"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01g" />
+
+
+
+                            <CheckBox
+                                android:id="@+id/pohrf01h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrf01h" />
+
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <!--pohrgh1-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrgh1" />
+
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <!--pohrg01a-& b -->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrg01a" />
+
+
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrg01a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="110"
+                            app:minValue="20"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrg01b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="110"
+                            app:minValue="20"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <!--pohrg02 -->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrg02" />
+
+
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrg02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="99"
+                            app:maxValue="42"
+                            app:minValue="33"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!--pohrg03-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrg03" />
+
+
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrg03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="40"
+                            app:minValue="10"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!--pohrg04a-& b -->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrg04a" />
+
+
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrg04a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="105"
+                            app:minValue="80"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/pohrg04b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:defaultValue="999"
+                            app:maxValue="105"
+                            app:minValue="80"
+                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            app:type="range" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="32dp">
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:text="@string/nextSection"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnEnd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_red_light"
+                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:text="@string/end_interview"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
+
