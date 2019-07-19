@@ -129,6 +129,15 @@ public abstract class ValidatorClass {
         return false;
     }
 
+    public static boolean EmptyCustomRadio(Context context, RadioButton rd, String msg) {
+        FancyToast.makeText(context, "ERROR: " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+        rd.setError(msg);
+        rd.setFocusableInTouchMode(true);
+        rd.requestFocus();
+        Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(rd.getId()) + ": " + msg);
+        return false;
+    }
+
     public static boolean RangeTextBox(Context context, EditText txt, int min, int max, String msg, String type) {
 
         if (Integer.valueOf(txt.getText().toString()) < min || Integer.valueOf(txt.getText().toString()) > max) {
@@ -330,7 +339,9 @@ public abstract class ValidatorClass {
                     ClearClass.ClearAllFields(view, null);
                 else if (view instanceof CheckBox)
                     ((CheckBox) view).setError(null);
+
                 continue;
+
             }
 
             if (view instanceof CardView) {
@@ -344,7 +355,18 @@ public abstract class ValidatorClass {
                 }
             } else if (view instanceof RadioGroup) {
 
-                View v = ((RadioGroup) view).getChildAt(0);
+                boolean radioFlag = false;
+                View v = null;
+                for (byte j = 0; j < ((RadioGroup) view).getChildCount(); j++) {
+                    if (((RadioGroup) view).getChildAt(j) instanceof RadioButton) {
+                        v = ((RadioGroup) view).getChildAt(j);
+                        radioFlag = true;
+                        break;
+                    }
+                }
+
+                if (!radioFlag) continue;
+
                 if (v != null) {
 
                     String asNamed = getString(context, getIDComponent(view));
@@ -353,6 +375,7 @@ public abstract class ValidatorClass {
                         return false;
                     }
                 }
+
             } else if (view instanceof Spinner) {
                 if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
                     return false;
@@ -449,5 +472,6 @@ public abstract class ValidatorClass {
         }
         return "";
     }
+
 
 }

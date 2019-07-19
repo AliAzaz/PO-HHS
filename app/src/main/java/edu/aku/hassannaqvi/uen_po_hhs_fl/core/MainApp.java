@@ -38,8 +38,10 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
 public class MainApp extends Application {
 
     //  public static final String _IP = "f49461"; // Test PHP server
-    public static final String _IP = "43.245.131.159"; // Test PHP server
-    public static final Integer _PORT = 8080; // Port - with colon (:)
+//    public static final String _IP = "43.245.131.159"; // Test PHP server
+//    public static final Integer _PORT = 8080; // Port - with colon (:)
+    public static final String _IP = "f38158"; // Test PHP server
+    public static final Integer _PORT = 80; // Port - with colon (:)
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";
     //    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/tmk/api/";
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po_hhs/app/app-debug.apk";

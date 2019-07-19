@@ -73,7 +73,8 @@
                         android:id="@+id/llpocfd02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
 
                         <CheckBox
@@ -113,7 +114,9 @@
                 android:id="@+id/cvpocfd03"
                 style="@style/cardView">
 
-                <LinearLayout style="@style/linearlayout_view">
+                <LinearLayout
+                    style="@style/linearlayout_view"
+                    android:tag="0">
 
                     <TextView
                         style="@style/i_textview"

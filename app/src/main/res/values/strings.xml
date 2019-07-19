@@ -84,6 +84,7 @@
     <string name="name"> نالو</string>
     <string name="none">ڪجهه به نه</string>
   <string name="num"> تعداد (ٻڌايو) لکو </string>
+  <string name="treat"> موجوده علاج لکو </string>
   <string name="pocfe02h"> ڪمرن جو تعداد </string>
 
     <!-- Strings related to Sec
@@ -764,26 +765,30 @@
     <!--Section 02 Screening For Pneumonia-->
     <string name="pofpsec02"> سيڪشن2. نمونيا جي معلومات </string>
     <string name="pofpb01"> کنگھ يا ٿڌ </string>
-    <string name="pofpb02"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ 2 کان 12 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pofpb02"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
+  <string name="pofpb021"> 0 کان 2 مهينن تائين عمر وارا ٻار :  n\هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pofpb022"> 2 کان 12 مهينن تائين عمر وارا ٻار :  n\هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pofpb023"> 12 کان 59 مهينن تائين عمر وارا ٻار :  n\هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
     <string name="pofpb02a"> Respiratory Rate (01): </string>
     <string name="pofpb02b"> Respiratory Rate (02): </string>
     <string name="pofpb03"> پاسيريون لڳڻ </string>
-    <string name="pofpb04"> (SpO2) پلس آڪسيميٽري جي ريڊنگ (في سيڪڙو) </string>
+  <string name="pofpb04"> (SpO2) پلس آڪسيميٽري جي ريڊنگ في سيڪڙو</string>
     <string name="pofpb05"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
     <string name="pofpb06"> کر کر جو آواز </string>
-    <string name="pofpb07"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+  <string name="pofpb07"> خطرناڪ نشانيون </string>
+  <string name="pofpb071"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pofpb07a"> ماءُ جي ٿڃ يا ڪجھ به پي نه سگھڻ </string>
     <string name="pofpb07b"> لڳاتار اُلٽي </string>
     <string name="pofpb07c"> غنودگي / بيهوشي </string>
     <string name="pofpb07d"> جھٽڪا لڳڻ </string>
     <string name="pofpb08"> صحت جي عالمي اداري مطابق نمونيه جي آخري درجه بندي </string>
     <string name="pofpb08a"> نمونيه ناهي </string>
-    <string name="pofpb08b"> کنگھ ۽ ٿڌ </string>
-    <string name="pofpb08c"> نمونيه </string>
-    <string name="pofpb08d"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
-    <string name="pofpb08e"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
-    <string name="pofpb08f"> شديد نمونيه </string>
-    <string name="pofpb08g"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
-    <string name="pofpb08h"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pofpb08b"> نمونيه </string>
+  <string name="pofpb08c"> شديد نمونيه </string>
+  <string name="pofpb081"> کنگھ ۽ ٿڌ </string>
+  <string name="pofpb082"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+  <string name="pofpb083"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
+  <string name="pofpb084"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+  <string name="pofpb085"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
 
 </resources>

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -14,6 +16,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF2Section02Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F2Section02Activity extends AppCompatActivity {
@@ -29,16 +32,77 @@ public class F2Section02Activity extends AppCompatActivity {
 
         DAY = getIntent().getStringExtra("day");
         this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
-
-
         settingListeners();
 
     }
 
     private void settingListeners() {
 
+//        bi.pofpb04b.addTextChangedListener(generalTextWatcher);
+
+        bi.pofpb05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofpb05a.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) >= 92) {
+                    bi.pofpb05a.requestFocus();
+                    bi.pofpb05a.setError("Error");
+                    bi.pofpb05tv.setText("You are not supposed to select YES option!");
+//                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+
+
+                } else if (checkedId == bi.pofpb05b.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) < 92) {
+                    bi.pofpb05b.requestFocus();
+                    bi.pofpb05b.setError("Error");
+                    bi.pofpb05tv.setText("You are not supposed to select NO option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                }
+            }
+        });
+
+
+        bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    ClearClass.ClearAllFields(bi.fldgrppofpb07, false);
+                else
+                    ClearClass.ClearAllFields(bi.fldgrppofpb07, true);
+            }
+        });
+
 
     }
+
+
+    /*private TextWatcher generalTextWatcher = new TextWatcher() {
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (bi.pofpb04b.getText().hashCode() == s.hashCode()) {
+                if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92  && bi.pofpb05a.isChecked()) {
+                    bi.pofpb04b.requestFocus();
+                    bi.pofpb04b.setError("You are not supposed to select YES option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                } else if(Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92  && bi.pofpb05b.isChecked()) {
+                    bi.pofpb04b.requestFocus();
+                    bi.pofpb04b.setError("You are not supposed to select NO option!");
+                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
+                }
+            }
+
+        }
+
+    };*/
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -73,40 +137,42 @@ public class F2Section02Activity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject f02 = new JSONObject();
-        f02.put("pofpb01", bi.pofpb01a.isChecked() ? "1"
-                : bi.pofpb01b.isChecked() ? "2" : "0");
-        f02.put("pofpb02", bi.pofpb02a.isChecked() ? "1"
-                : bi.pofpb02b.isChecked() ? "2" : "0");
 
-        f02.put("pofpb02a", bi.pofpb02a01.getText().toString());
-        f02.put("pofpb02b", bi.pofpb02a02.getText().toString());
+        f02.put("pofpb01", bi.pofpb01a.isChecked() ? "1"
+                : bi.pofpb01b.isChecked() ? "2"
+                : "0");
+
+        f02.put("pofpb02a", bi.pofpb02a.getText().toString());
+        f02.put("pofpb02b", bi.pofpb02a.getText().toString());
+
+        f02.put("pofpb021", bi.pofpb021a.isChecked() ? "1"
+                : bi.pofpb021b.isChecked() ? "2"
+                : "0");
 
         f02.put("pofpb03", bi.pofpb03a.isChecked() ? "1"
                 : bi.pofpb03b.isChecked() ? "2"
                 : "0");
+
         f02.put("pofpb04a", bi.pofpb04a.getText().toString());
         f02.put("pofpb04b", bi.pofpb04b.getText().toString());
 
         f02.put("pofpb05", bi.pofpb05a.isChecked() ? "1"
                 : bi.pofpb05b.isChecked() ? "2"
                 : "0");
+
         f02.put("pofpb06", bi.pofpb06a.isChecked() ? "1"
                 : bi.pofpb06b.isChecked() ? "2"
                 : "0");
+
         f02.put("pofpb07a", bi.pofpb07a.isChecked() ? "1" : "0");
         f02.put("pofpb07b", bi.pofpb07b.isChecked() ? "2" : "0");
         f02.put("pofpb07c", bi.pofpb07c.isChecked() ? "3" : "0");
         f02.put("pofpb07d", bi.pofpb07d.isChecked() ? "4" : "0");
-        f02.put("pofpb0798", bi.pofpb0798.isChecked() ? "98" : "0");
+        f02.put("pofpb0797", bi.pofpb0797.isChecked() ? "97" : "0");
 
         f02.put("pofpb08", bi.pofpb08a.isChecked() ? "1"
                 : bi.pofpb08b.isChecked() ? "2"
                 : bi.pofpb08c.isChecked() ? "3"
-                : bi.pofpb08d.isChecked() ? "4"
-                : bi.pofpb08e.isChecked() ? "5"
-                : bi.pofpb08f.isChecked() ? "6"
-                : bi.pofpb08g.isChecked() ? "7"
-                : bi.pofpb08h.isChecked() ? "8"
                 : "0");
 
         MainApp.fc.setsB(String.valueOf(f02));
@@ -115,6 +181,7 @@ public class F2Section02Activity extends AppCompatActivity {
     private boolean formValidation() {
 
         return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02);
+
     }
 
     public void BtnEnd() {

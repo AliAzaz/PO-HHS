@@ -35,33 +35,30 @@ public class F1Section11Activity extends AppCompatActivity {
     }
 
 
-//    private TextWatcher generalTextWatcher = new TextWatcher() {
-//
-//        @Override
-//        public void onTextChanged(CharSequence s, int start, int before, int count) {
-//        }
-//
-//        @Override
-//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//        }
-//
-//        @Override
-//        public void afterTextChanged(Editable s) {
-//            if (bi.pocfk06b.getText().hashCode() == s.hashCode()) {
-//                if (bi.pocfk06b.getText().toString().trim().length() > 0 && Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92) {
-//                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
-//                    bi.cvpocfk07.setVisibility(View.GONE);
-//                } else {
-//                    bi.cvpocfk07.setVisibility(View.VISIBLE);
-//                }
-//            }
-//        }
-//
-//    };
+
 
     private void setupSkips() {
 
-//        bi.pocfk06b.addTextChangedListener(generalTextWatcher);
+        bi.pocfk07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pocfk07a.getId() && Integer.parseInt(bi.pocfk06b.getText().toString()) >= 92) {
+                    bi.pocfk07a.requestFocus();
+                    bi.pocfk07a.setError("Error");
+                    bi.pocfk07tv.setText("You are not supposed to select YES option!");
+//                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
+                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
+
+
+                } else if (checkedId == bi.pocfk07b.getId() && Integer.parseInt(bi.pocfk06b.getText().toString()) < 92) {
+                    bi.pocfk07b.requestFocus();
+                    bi.pocfk07b.setError("Error");
+                    bi.pocfk07tv.setText("You are not supposed to select NO option!");
+                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
+                }
+            }
+        });
 
         bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -90,19 +87,6 @@ public class F1Section11Activity extends AppCompatActivity {
             }
         });
 
-
-       /* if (bi.pocfk0897.isChecked()) {
-
-            bi.pocfk08a.setChecked(false);
-            bi.pocfk08b.setChecked(false);
-            bi.pocfk08c.setChecked(false);
-            bi.pocfk08d.setChecked(false);
-            bi.pocfk08e.setChecked(false);
-//            ed_A4255_4.setText("");
-
-        } else {
-            bi.pocfk0897.setChecked(false);
-        }*/
 
     }
 
