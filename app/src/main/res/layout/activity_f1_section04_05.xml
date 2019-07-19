@@ -73,8 +73,7 @@
                         android:id="@+id/llpocfd02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
+                        android:orientation="vertical">
 
 
                         <CheckBox
@@ -101,8 +100,8 @@
 
                     <CheckBox
                         android:id="@+id/pocfd0297"
-                        android:tag="-1"
                         style="@style/i_checkbox"
+                        android:tag="-1"
                         android:text="@string/none" />
 
                 </LinearLayout>
@@ -114,13 +113,11 @@
                 android:id="@+id/cvpocfd03"
                 style="@style/cardView">
 
-                <LinearLayout
-                    style="@style/linearlayout_view"
-                    android:tag="0">
+                <TextView
+                    style="@style/i_textview"
+                    android:text="@string/pocfd03" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/pocfd03" />
+                <LinearLayout style="@style/linearlayout_view">
 
                     <CheckBox
                         android:id="@+id/pocfd03a"
