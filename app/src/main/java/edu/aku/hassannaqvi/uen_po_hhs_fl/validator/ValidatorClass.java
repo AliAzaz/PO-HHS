@@ -248,13 +248,6 @@ public abstract class ValidatorClass {
             if (v instanceof CheckBox) {
                 CheckBox cb = (CheckBox) v;
                 cb.setError(null);
-
-                if (!cb.isEnabled()) {
-                    flag = true;
-                    continue;
-                } else
-                    flag = false;
-
                 if (cb.isChecked()) {
                     flag = true;
 
@@ -269,7 +262,6 @@ public abstract class ValidatorClass {
                             }
                         }
                     }
-//                    break;
                 }
             }
         }
@@ -323,7 +315,7 @@ public abstract class ValidatorClass {
         });
     }
 
-    public static boolean EmptyCheckingContainer(Context context, LinearLayout lv) {
+    public static boolean EmptyCheckingContainer(Context context, ViewGroup lv) {
 
         for (int i = 0; i < lv.getChildCount(); i++) {
             View view = lv.getChildAt(i);
@@ -345,13 +337,8 @@ public abstract class ValidatorClass {
             }
 
             if (view instanceof CardView) {
-                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
-                    View view1 = ((CardView) view).getChildAt(j);
-                    if (view1 instanceof LinearLayout) {
-                        if (!EmptyCheckingContainer(context, (LinearLayout) view1)) {
-                            return false;
-                        }
-                    }
+                if (!EmptyCheckingContainer(context, (ViewGroup) view)) {
+                    return false;
                 }
             } else if (view instanceof RadioGroup) {
 
