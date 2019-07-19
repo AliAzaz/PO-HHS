@@ -12,9 +12,7 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-    completions."
-  </string>
+  <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
     <string name="talukaname"> تعلقي جو نالو</string>
     <string name="ucname">يونين ڪائونسل جو نالو</string>
     <string name="lhwname"> ليڊي هيلٿ ورڪر جو نالو</string>
@@ -766,9 +764,9 @@
     <string name="pofpsec02"> سيڪشن2. نمونيا جي معلومات </string>
     <string name="pofpb01"> کنگھ يا ٿڌ </string>
   <string name="pofpb02"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
-  <string name="pofpb021"> 0 کان 2 مهينن تائين عمر وارا ٻار :  n\هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
-  <string name="pofpb022"> 2 کان 12 مهينن تائين عمر وارا ٻار :  n\هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
-  <string name="pofpb023"> 12 کان 59 مهينن تائين عمر وارا ٻار :  n\هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pofpb021"> 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pofpb022"> 2 کان 12 مهينن تائين عمر وارا ٻار :  هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+  <string name="pofpb023"> 12 کان 59 مهينن تائين عمر وارا ٻار :  هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
     <string name="pofpb02a"> Respiratory Rate (01): </string>
     <string name="pofpb02b"> Respiratory Rate (02): </string>
     <string name="pofpb03"> پاسيريون لڳڻ </string>

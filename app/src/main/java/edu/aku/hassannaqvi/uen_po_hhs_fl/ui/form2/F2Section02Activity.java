@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -38,30 +37,6 @@ public class F2Section02Activity extends AppCompatActivity {
 
     private void settingListeners() {
 
-//        bi.pofpb04b.addTextChangedListener(generalTextWatcher);
-
-        bi.pofpb05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.pofpb05a.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) >= 92) {
-                    bi.pofpb05a.requestFocus();
-                    bi.pofpb05a.setError("Error");
-                    bi.pofpb05tv.setText("You are not supposed to select YES option!");
-//                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
-                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
-
-
-                } else if (checkedId == bi.pofpb05b.getId() && Integer.parseInt(bi.pofpb04b.getText().toString()) < 92) {
-                    bi.pofpb05b.requestFocus();
-                    bi.pofpb05b.setError("Error");
-                    bi.pofpb05tv.setText("You are not supposed to select NO option!");
-                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
-                }
-            }
-        });
-
-
         bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -74,35 +49,6 @@ public class F2Section02Activity extends AppCompatActivity {
 
 
     }
-
-
-    /*private TextWatcher generalTextWatcher = new TextWatcher() {
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            if (bi.pofpb04b.getText().hashCode() == s.hashCode()) {
-                if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92  && bi.pofpb05a.isChecked()) {
-                    bi.pofpb04b.requestFocus();
-                    bi.pofpb04b.setError("You are not supposed to select YES option!");
-                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
-                } else if(Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92  && bi.pofpb05b.isChecked()) {
-                    bi.pofpb04b.requestFocus();
-                    bi.pofpb04b.setError("You are not supposed to select NO option!");
-                    ClearClass.ClearAllFields(bi.cvpofpb05, null);
-                }
-            }
-
-        }
-
-    };*/
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -180,7 +126,18 @@ public class F2Section02Activity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02);
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02))
+            return false;
+
+        if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92 && bi.pofpb05a.isChecked()) {
+            return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+        }
+
+        if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92 && bi.pofpb05b.isChecked()) {
+            return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+        }
+
+        return true;
 
     }
 
