@@ -151,8 +151,10 @@ public class F1Section04_05Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     ClearClass.ClearAllFields(bi.llpocfd02, false);
+                    bi.llpocfd02.setTag("-1");
                 } else {
                     ClearClass.ClearAllFields(bi.llpocfd02, true);
+                    bi.llpocfd02.setTag("0");
                 }
             }
         });

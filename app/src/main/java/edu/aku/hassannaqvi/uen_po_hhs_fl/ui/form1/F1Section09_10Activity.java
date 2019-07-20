@@ -39,8 +39,10 @@ public class F1Section09_10Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     ClearClass.ClearAllFields(bi.fldGrppocfj01, false);
+                    bi.fldGrppocfj01.setTag("-1");
                 } else {
                     ClearClass.ClearAllFields(bi.fldGrppocfj01, true);
+                    bi.fldGrppocfj01.setTag("0");
                 }
             }
         });
