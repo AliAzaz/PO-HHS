@@ -61,10 +61,8 @@ public class F1Section11Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     ClearClass.ClearAllFields(bi.llpocfk08, false);
-                    bi.llpocfk08.setVisibility(View.GONE);
                 } else {
                     ClearClass.ClearAllFields(bi.llpocfk08, true);
-                    bi.llpocfk08.setVisibility(View.VISIBLE);
                 }
             }
         });
