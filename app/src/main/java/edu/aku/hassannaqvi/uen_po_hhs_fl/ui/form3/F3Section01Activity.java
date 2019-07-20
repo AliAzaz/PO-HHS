@@ -37,7 +37,7 @@ public class F3Section01Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section01);
         bi.setCallback(this);
-        this.setTitle(R.string.pofisec1);
+        this.setTitle("Form 03 (Referral Form)");
 
         db = new DatabaseHelper(this);
         events_call();

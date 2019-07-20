@@ -26,6 +26,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <TextView
+                style="@style/textview_fm_lst_h"
+                android:text="@string/pofisec1" />
+
             <!--Check HH button-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -47,6 +52,7 @@
                                 android:maxLength="4" />
 
                         </LinearLayout>
+
                     </android.support.v7.widget.CardView>
 
                     <Button
@@ -421,37 +427,51 @@
 
                             <CheckBox
                                 android:id="@+id/pofi11a"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi11a" />
 
                             <CheckBox
                                 android:id="@+id/pofi11b"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi11b" />
 
                             <CheckBox
                                 android:id="@+id/pofi11c"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi11c" />
 
                             <CheckBox
                                 android:id="@+id/pofi11d"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi11d" />
 
                             <CheckBox
                                 android:id="@+id/pofi11e"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi11e" />
 
                             <CheckBox
                                 android:id="@+id/pofi11f"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi11f" />
 
                             <CheckBox
                                 android:id="@+id/pofi1196"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/other" />
 
                             <EditText
@@ -484,52 +504,72 @@
 
                             <CheckBox
                                 android:id="@+id/pofi12a"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12a" />
 
                             <CheckBox
                                 android:id="@+id/pofi12b"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12b" />
 
                             <CheckBox
                                 android:id="@+id/pofi12c"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12c" />
 
                             <CheckBox
                                 android:id="@+id/pofi12d"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12d" />
 
                             <CheckBox
                                 android:id="@+id/pofi12e"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12e" />
 
                             <CheckBox
                                 android:id="@+id/pofi12f"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12f" />
 
                             <CheckBox
                                 android:id="@+id/pofi12g"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12g" />
 
                             <CheckBox
                                 android:id="@+id/pofi12h"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12h" />
 
                             <CheckBox
                                 android:id="@+id/pofi12i"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/pofi12i" />
 
                             <CheckBox
                                 android:id="@+id/pofi1296"
-                                style="@style/i_radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
                                 android:text="@string/other" />
 
                             <EditText

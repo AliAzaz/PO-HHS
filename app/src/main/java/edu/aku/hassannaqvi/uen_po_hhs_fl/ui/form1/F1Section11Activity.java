@@ -81,6 +81,7 @@ public class F1Section11Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+                finish();
                 startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
 
             } else {
