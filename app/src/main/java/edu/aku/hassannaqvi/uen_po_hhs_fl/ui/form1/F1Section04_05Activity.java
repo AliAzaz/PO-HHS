@@ -149,10 +149,13 @@ public class F1Section04_05Activity extends AppCompatActivity {
         bi.pocfd0297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b) {
                     ClearClass.ClearAllFields(bi.llpocfd02, false);
-                else
+                    bi.llpocfd02.setVisibility(View.GONE);
+                } else {
                     ClearClass.ClearAllFields(bi.llpocfd02, true);
+                    bi.llpocfd02.setVisibility(View.VISIBLE);
+                }
             }
         });
 
