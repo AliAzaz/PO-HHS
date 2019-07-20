@@ -1012,21 +1012,24 @@
 
   <string name="pohrj02c"> روزانو </string>
 
-  <string name="pohrj02d"> سئي ذريعي </string>
+  <string name="pohrj02da"> سئي ذريعي </string>
 
-  <string name="pohrj02e"> وات ذريعي </string>
+  <string name="pohrj02db"> وات ذريعي </string>
 
   <string name="pohrj03"> ڇا ٻار کي ساهه کڻڻ لاءِ ڪنهن سپورٽ جي ضرورت آهي؟ </string>
   <string name="pohrj03a"> ھا </string>
   <string name="pohrj03b"> نه </string>
 
   <string name="pohrj04"> جيڪڏهن ها ته،ذريعو </string>
-  <string name="pohrj04a"> ماسڪ </string>
+
+  <string name="pohrj04ad"> ماسڪ </string>
+
   <string name="pohrj04b"> نيزل پرونگ </string>
   <string name="pohrj04c"> ببل سي پيپ </string>
   <string name="pohrj04d"> ٻيو ڪجهه (سي پيپ،ايڇ ايف اين سي) </string>
   <string name="pohrj04e"> انٽيوبيشن(انٽيوبيشن جي تاريخ) </string>
 
+  <string name="pohrj05"> آڪسيجن ٿيراپي مهيا ڪرڻ جو دورانيو </string>
 
 
   <string name="pohrk01"> ڪلينيڪل معلومات .9 </string>
@@ -1038,30 +1041,31 @@
   <string name="pohrk01c"> تشويشناڪ حالت </string>
 
 
+
   <string name="pohrl01"> ڊچارج جي معلومات (صرف داخل شده مريضن لاءِ – جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي) .10 </string>
 
   <string name="pohrl01a"> ڊسچارج </string>
 
-  <string name="pohrl02"> (جيڪڏهن ها ته ) ڊسچارج/ منتقل ڪرڻ جي تاريخ </string>
-  <string name="pohrl02dd"> ڏينهن </string>
-  <string name="pohrl02mm"> مهينو </string>
-  <string name="pohrl02yyyy"> سال </string>
+  <string name="pohrl01ax"> (جيڪڏهن ها ته ) ڊسچارج/ منتقل ڪرڻ جي تاريخ </string>
 
-  <string name="pohrl03a"> منتقل </string>
+  <string name="pohrl01b"> منتقل </string>
 
-  <string name="pohrl03b"> جيڪڏهن ها ته سبب </string>
+  <string name="pohrl01bx"> جيڪڏهن ها ته سبب </string>
 
-  <string name="pohrl04a"> اڃا داخل آهي </string>
+  <string name="pohrl01c"> اڃا داخل آهي </string>
+
+  <string name="pohrl01cx"> ڊسچارج جي تشخيص </string>
+
 
   <string name="pohrl05"> ڊسچارج جي تشخيص </string>
 
-  <string name="pohrl06"> ڊسچارج جي وقت حالت </string>
+  <string name="pohrl02"> ڊسچارج جي وقت حالت </string>
 
-  <string name="pohrl06a"> بهتر </string>
+  <string name="pohrl02a"> بهتر </string>
 
-  <string name="pohrl06b"> بيمار </string>
+  <string name="pohrl02b"> بيمار </string>
 
-  <string name="pohrl06c"> مري ويو </string>
+  <string name="pohrl02c"> مري ويو </string>
 
 
 
