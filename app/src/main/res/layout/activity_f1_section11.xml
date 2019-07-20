@@ -358,12 +358,6 @@
                             android:layout_marginBottom="1dp"
                             android:text="@string/no" />
 
-                        <TextView
-                            android:id="@+id/pocfk07tv"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/darkRed" />
-
                     </RadioGroup>
 
                 </LinearLayout>
@@ -431,6 +425,7 @@
 
                     <CheckBox
                         android:id="@+id/pocfk0897"
+                        android:tag="-1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
@@ -457,47 +452,77 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk09h1"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+
                         <RadioButton
                             android:id="@+id/pocfk09a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:layout_marginBottom="3dp"
                             android:text="@string/pocfk09a" />
 
+
                         <TextView
-                            style="@style/i_textviewHint"
-                            android:text="@string/pocfk09h1" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk09h2"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk09h3"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
 
                         <RadioButton
                             android:id="@+id/pocfk09b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:layout_marginBottom="3dp"
                             android:text="@string/pocfk09b" />
 
-                        <TextView
-                            style="@style/i_textviewHint"
-                            android:text="@string/pocfk09h2" />
 
                         <TextView
-                            style="@style/i_textviewHint"
-                            android:text="@string/pocfk09h3" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk09h4"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk09h5"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
 
 
                         <RadioButton
                             android:id="@+id/pocfk09c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
+                            android:layout_marginTop="3dp"
                             android:text="@string/pocfk09c" />
-
-                        <TextView
-                            style="@style/i_textviewHint"
-                            android:text="@string/pocfk09h4" />
-
-                        <TextView
-                            style="@style/i_textviewHint"
-                            android:text="@string/pocfk09h5" />
 
                     </RadioGroup>
 

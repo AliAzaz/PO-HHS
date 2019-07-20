@@ -396,23 +396,25 @@ public class MainActivity extends Activity {
 
     public void openForm(View v) {
 
+        if (!MainApp._IP.equals("f38158")) {
+
 //        if (spAreas.getSelectedItemPosition() != 0) {
 
-        /*     if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {*/
-        if (versionAppContract.getVersioncode() != null) {
-            if (MainApp.versionCode < Integer.valueOf(versionAppContract.getVersioncode())) {
-                if (sharedPrefDownload.getBoolean("flag", true) && file.exists()) {
+            /*     if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {*/
+            if (versionAppContract.getVersioncode() != null) {
+                if (MainApp.versionCode < Integer.valueOf(versionAppContract.getVersioncode())) {
+                    if (sharedPrefDownload.getBoolean("flag", true) && file.exists()) {
 //                    InstallNewApp(newVer, preVer);
-                    showDialog(newVer, preVer);
+                        showDialog(newVer, preVer);
+                    } else {
+                        OpenFormFunc(v.getId());
+                    }
                 } else {
                     OpenFormFunc(v.getId());
                 }
             } else {
-                OpenFormFunc(v.getId());
+                Toast.makeText(this, "Sync data!!", Toast.LENGTH_SHORT).show();
             }
-        } else {
-            Toast.makeText(this, "Sync data!!", Toast.LENGTH_SHORT).show();
-        }
 
      /*   } else {
 
@@ -453,6 +455,9 @@ public class MainActivity extends Activity {
 //        } else {
 //            Toast.makeText(getApplicationContext(), "Please select data from combobox!!", Toast.LENGTH_LONG).show();
 //        }
+        } else {
+            OpenFormFunc(v.getId());
+        }
     }
 
     private void OpenFormFunc(int id) {

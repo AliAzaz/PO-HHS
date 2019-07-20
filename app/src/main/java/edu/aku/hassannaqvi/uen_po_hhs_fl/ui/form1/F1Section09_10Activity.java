@@ -37,10 +37,13 @@ public class F1Section09_10Activity extends AppCompatActivity {
         bi.pocfj0198.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b) {
                     ClearClass.ClearAllFields(bi.fldGrppocfj01, false);
-                else
+                    bi.fldGrppocfj01.setTag("-1");
+                } else {
                     ClearClass.ClearAllFields(bi.fldGrppocfj01, true);
+                    bi.fldGrppocfj01.setTag("0");
+                }
             }
         });
 

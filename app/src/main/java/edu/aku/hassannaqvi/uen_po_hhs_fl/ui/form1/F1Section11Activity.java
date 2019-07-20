@@ -39,27 +39,6 @@ public class F1Section11Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.pocfk07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (checkedId == bi.pocfk07a.getId() && Integer.parseInt(bi.pocfk06b.getText().toString()) >= 92) {
-                    bi.pocfk07a.requestFocus();
-                    bi.pocfk07a.setError("Error");
-                    bi.pocfk07tv.setText("You are not supposed to select YES option!");
-//                    return ValidatorClass.EmptyCustomRadio(F2Section02Activity.this, bi.pofpb05a, "Both values can't be zero!!");
-                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
-
-
-                } else if (checkedId == bi.pocfk07b.getId() && Integer.parseInt(bi.pocfk06b.getText().toString()) < 92) {
-                    bi.pocfk07b.requestFocus();
-                    bi.pocfk07b.setError("Error");
-                    bi.pocfk07tv.setText("You are not supposed to select NO option!");
-                    ClearClass.ClearAllFields(bi.cvpocfk07, null);
-                }
-            }
-        });
-
         bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -80,10 +59,13 @@ public class F1Section11Activity extends AppCompatActivity {
         bi.pocfk0897.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b) {
                     ClearClass.ClearAllFields(bi.llpocfk08, false);
-                else
+                    bi.llpocfk08.setTag("-1");
+                } else {
                     ClearClass.ClearAllFields(bi.llpocfk08, true);
+                    bi.llpocfk08.setTag("0");
+                }
             }
         });
 
@@ -195,7 +177,18 @@ public class F1Section11Activity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll11);
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll11))
+            return false;
+
+        if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) >= 92 && bi.pocfk07a.isChecked()) {
+            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+        }
+
+        if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92 && bi.pocfk07b.isChecked()) {
+            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+        }
+
+        return true;
     }
 
     public void BtnEnd() {

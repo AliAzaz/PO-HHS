@@ -370,7 +370,6 @@
                         style="@style/i_textview"
                         android:text="@string/pofpb08" />
 
-
                     <RadioGroup
                         android:id="@+id/pofpb08"
                         android:layout_width="match_parent"

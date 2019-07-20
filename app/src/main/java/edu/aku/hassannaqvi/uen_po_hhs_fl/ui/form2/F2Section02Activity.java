@@ -40,10 +40,13 @@ public class F2Section02Activity extends AppCompatActivity {
         bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b) {
                     ClearClass.ClearAllFields(bi.fldgrppofpb07, false);
-                else
+                    bi.fldgrppofpb07.setTag("-1");
+                } else {
                     ClearClass.ClearAllFields(bi.fldgrppofpb07, true);
+                    bi.fldgrppofpb07.setTag("0");
+                }
             }
         });
 
