@@ -209,7 +209,7 @@
 
 
             <LinearLayout
-                android:id="@+id/f4Section01b"
+                android:id="@+id/llform04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -424,7 +424,7 @@
                             app:maxValue="140"
                             app:mask="##.##"
                             app:minValue="60"
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            
                             app:type="range" />
 
                     </LinearLayout>
@@ -805,11 +805,9 @@
                             android:layout_height="wrap_content"
                             android:hint="###.##"
                             android:inputType="number"
-                            app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="110"
                             app:minValue="20"
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -818,12 +816,10 @@
                             android:layout_height="wrap_content"
                             android:hint="##.##"
                             android:inputType="number"
-                            app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="110"
                             app:minValue="20"
-
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            
                             app:type="range" />
 
 
@@ -855,7 +851,7 @@
                             app:maxValue="42"
                             app:minValue="33"
                             app:mask="##.##"
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            
                             app:type="range" />
 
 
@@ -888,7 +884,7 @@
                             app:maxValue="60"
                             app:minValue="1"
                             app:mask="##.##"
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            
                             app:type="range" />
 
 
@@ -921,7 +917,7 @@
                             app:maxValue="105"
                             app:minValue="80"
                             app:mask="###.##"
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -934,7 +930,7 @@
                             app:defaultValue="999"
                             app:maxValue="105"
                             app:minValue="80"
-                            app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                            
                             app:type="range" />
 
 
@@ -999,7 +995,7 @@
                                 app:maxValue="10"
                                 app:minValue="0"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh01.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1021,7 +1017,7 @@
                                 app:maxValue="18"
                                 app:minValue="4"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh02.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1043,7 +1039,7 @@
                                 app:maxValue="70"
                                 app:minValue="15"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh03.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1064,7 +1060,7 @@
                                 app:maxValue="45"
                                 app:minValue="1"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh04.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1086,7 +1082,7 @@
                                 app:maxValue="99"
                                 app:minValue="10"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh05.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1108,7 +1104,7 @@
                                 app:maxValue="70"
                                 app:minValue="10"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh06.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1130,7 +1126,7 @@
                                 app:maxValue="900"
                                 app:minValue="50"
                                 app:mask="###.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh07.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1153,7 +1149,7 @@
                                 app:maxValue="10"
                                 app:minValue="0"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh08.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1177,7 +1173,7 @@
                                 app:maxValue="30"
                                 app:minValue="0"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh09.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1198,7 +1194,7 @@
                                 app:maxValue="22"
                                 app:minValue="0"
                                 app:mask="##.##"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
                                 android:visibility='@{pohrh10.checked? View.VISIBLE : View.GONE}'
                                 />
@@ -1418,7 +1414,7 @@
                                 app:defaultValue="999"
                                 app:maxValue="30"
                                 app:minValue="0"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
 
                                 />
@@ -1438,7 +1434,7 @@
                                 android:inputType="number"
                                 app:maxValue="4"
                                 app:minValue="1"
-                                app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                                
                                 app:type="range"
 
                                 />
