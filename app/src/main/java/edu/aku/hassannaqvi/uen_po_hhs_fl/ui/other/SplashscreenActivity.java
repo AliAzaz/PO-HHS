@@ -109,8 +109,8 @@ public class SplashscreenActivity extends Activity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-           //     Intent i = new Intent(SplashscreenActivity.this, LoginActivity.class);
-                Intent i = new Intent(SplashscreenActivity.this, F4Section01Activity.class);
+               Intent i = new Intent(SplashscreenActivity.this, LoginActivity.class);
+           //     Intent i = new Intent(SplashscreenActivity.this, F4Section01Activity.class);
                 toggle();
                 startActivity(i);
 

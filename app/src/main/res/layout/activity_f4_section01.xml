@@ -685,6 +685,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:id="@+id/lvpohrf01"
                             android:orientation="vertical">
 
                             <CheckBox
@@ -976,7 +977,9 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:id="@+id/lvpohrhh2"
+                            >
 
                             <CheckBox
                                 android:id="@+id/pohrh01"
@@ -997,7 +1000,8 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
-                                android:visibility='@{pohrh01.checked? View.VISIBLE : View.GONE}'
+                                android:text='@{pohrh01.checked? pohrh01x.getText.toString : "" }'
+                                android:visibility='@{pohrh01.checked? View.VISIBLE : View.GONE }'
                                 />
 
                             <CheckBox
@@ -1019,6 +1023,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh02.checked? pohrh02x.getText.toString : "" }'
                                 android:visibility='@{pohrh02.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1041,6 +1046,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh03.checked? pohrh03x.getText.toString : "" }'
                                 android:visibility='@{pohrh03.checked? View.VISIBLE : View.GONE}'
                                 />
                             <CheckBox
@@ -1062,6 +1068,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh04.checked? pohrh04x.getText.toString : "" }'
                                 android:visibility='@{pohrh04.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1084,6 +1091,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh05.checked? pohrh05x.getText.toString : "" }'
                                 android:visibility='@{pohrh05.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1106,6 +1114,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh06.checked? pohrh06x.getText.toString : "" }'
                                 android:visibility='@{pohrh06.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1128,6 +1137,7 @@
                                 app:mask="###.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh07.checked? pohrh07x.getText.toString : "" }'
                                 android:visibility='@{pohrh07.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1151,6 +1161,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh08.checked? pohrh08x.getText.toString : "" }'
                                 android:visibility='@{pohrh08.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1175,6 +1186,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh09.checked? pohrh09x.getText.toString : "" }'
                                 android:visibility='@{pohrh09.checked? View.VISIBLE : View.GONE}'
                                 />
                             <CheckBox
@@ -1196,6 +1208,7 @@
                                 app:mask="##.##"
                                 
                                 app:type="range"
+                                android:text='@{pohrh10.checked? pohrh10x.getText.toString : "" }'
                                 android:visibility='@{pohrh10.checked? View.VISIBLE : View.GONE}'
                                 />
 
@@ -1213,6 +1226,7 @@
                             android:layout_height="wrap_content"
                                                        android:hint="@string/other"
                             android:tag="pohri05x"
+                               android:text='@{pohrh11.checked? pohrh11x.getText.toString : "" }'
                             android:visibility='@{pohrh11.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -1785,7 +1799,6 @@
 
 
                         <CheckBox
-                            android:tag="-1"
                             android:id="@+id/pohrl0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
