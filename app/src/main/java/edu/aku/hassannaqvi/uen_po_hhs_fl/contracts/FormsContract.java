@@ -433,6 +433,6 @@ public class FormsContract {
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
 
-        public static String _URL = "form.php";
+        public static String _URL = "forms.php";
     }
 }
