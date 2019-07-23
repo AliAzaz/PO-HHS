@@ -188,7 +188,9 @@ public class F3Section01Activity extends AppCompatActivity {
         form03_01.put("pofi1296", bi.pofi1296.isChecked() ? "96" : "0");
         form03_01.put("pofi1296x", bi.pofi1296x.getText().toString());
 
-        form03_01.put("pofi13", bi.pofi13a.isChecked() ? "1" : bi.pofi13b.isChecked() ? "2" : "0");
+        form03_01.put("pofi13", bi.pofi13a.isChecked() ? "1"
+                : bi.pofi13b.isChecked() ? "2"
+                : "0");
 
         MainApp.fc.setsA(String.valueOf(form03_01));
         MainApp.setGPS(this);

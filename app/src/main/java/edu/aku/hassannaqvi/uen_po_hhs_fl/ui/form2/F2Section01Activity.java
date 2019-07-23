@@ -325,7 +325,6 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa10b.isChecked() ? "2"
                 : "0");
 
-
         f02.put("pofpa11a", bi.pofpa11a.getText().toString());
         f02.put("pofpa11b", bi.pofpa11b.getText().toString());
         f02.put("pofpa11c", bi.pofpa11c.getText().toString());

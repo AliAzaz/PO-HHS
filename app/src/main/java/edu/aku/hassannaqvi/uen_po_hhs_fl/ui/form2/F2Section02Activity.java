@@ -50,7 +50,6 @@ public class F2Section02Activity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public void BtnContinue() {

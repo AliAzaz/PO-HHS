@@ -44,7 +44,9 @@
                         android:textSize="22sp" />
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
+
 
             <!--Info Section A startd -->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -130,17 +132,15 @@
                                 style="@style/i_textview"
                                 android:text="@string/pohra04" />
 
-
-                            <Spinner
-                                android:id="@+id/pohra04"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="20dp" />
+                            <!-- <Spinner
+                                 android:id="@+id/pohra04"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:padding="20dp" />-->
 
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
-
 
                     <!--pohra05-->
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -157,22 +157,9 @@
                                 android:layout_height="wrap_content"
                                 android:padding="20dp" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginEnd="30dp"
-                                android:background="@android:color/darker_gray"
-                                android:paddingTop="5dp" />
-
-                            <TextView
-
-                                style="@style/textview_fm_lst_h" />
-
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
-
 
                     <!--pohra06-->
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -183,7 +170,6 @@
                                 style="@style/i_textview"
                                 android:text="@string/pohra06" />
 
-
                             <EditText
                                 android:id="@+id/pohra06"
                                 style="@style/EditTextAlphaNumeric"
@@ -193,17 +179,43 @@
 
                     </android.support.v7.widget.CardView>
 
-
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
             <!--Info Section A Ends -->
+
+
             <LinearLayout
                 android:id="@+id/llform04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <!--pohra09-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohra09" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/pohra09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/08/2014" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
 
                 <!--pohrb01-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -216,7 +228,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrb01" />
-
 
                         <RadioGroup
                             android:id="@+id/pohrb01"
@@ -296,7 +307,7 @@
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy"
                             app:maxDate="CR_DATE"
-                            app:minDate="01/01/1981" />
+                            app:minDate="01/08/2014" />
 
                     </LinearLayout>
 
@@ -314,7 +325,6 @@
                             style="@style/i_textview"
                             android:text="@string/pohrb03" />
 
-
                         <RadioGroup
                             android:id="@+id/pohrb03"
                             android:layout_width="match_parent"
@@ -325,15 +335,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohr0a" />
+                                android:text="@string/pohrb03a" />
 
                             <RadioButton
                                 android:id="@+id/pohrb03b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohr0b" />
-
+                                android:text="@string/pohrb03b" />
 
                         </RadioGroup>
 
@@ -350,14 +359,12 @@
                             style="@style/i_textview"
                             android:text="@string/pohrb04" />
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrb04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="##.##"
                             android:inputType="number"
-
                             app:mask="##.##"
                             app:maxValue="40.00"
                             app:minValue="02.00"
@@ -431,30 +438,39 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrc01c" />
 
+
                             <TextView
-                                style="@style/textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:paddingStart="10dp"
                                 android:text="@string/pohrc01h1"
-                                android:textSize="18sp"
-                                android:textStyle="italic" />
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
 
                             <TextView
-                                style="@style/textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
                                 android:text="@string/pohrc01h2"
-                                android:textSize="18sp"
-                                android:textStyle="italic" />
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
 
                             <TextView
-                                style="@style/textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:paddingStart="10dp"
                                 android:text="@string/pohrc01h3"
-                                android:textSize="18sp"
-                                android:textStyle="italic" />
+                                android:textColor="@color/gray"
+                                android:textSize="16dp" />
 
                             <CheckBox
-                                android:id="@+id/pohrc01e"
+                                android:id="@+id/pohrc01d"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohrc01e" />
+                                android:text="@string/pohrc01d" />
 
                         </LinearLayout>
 
@@ -472,7 +488,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/pohrc01" />
+                            android:text="@string/pohrd01" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -533,18 +549,15 @@
                             style="@style/i_textview"
                             android:text="@string/pohre01" />
 
-
                         <RadioGroup
                             android:id="@+id/pohre01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-
                             <TextView
                                 style="@style/textview"
                                 android:text="@string/pohre01h1"
-                                android:textSize="18sp"
-                                android:textStyle="italic" />
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/pohre01a"
@@ -553,21 +566,15 @@
                                 android:layout_marginBottom="3dp"
                                 android:text="@string/pohre01a" />
 
-
                             <TextView
                                 style="@style/textview"
                                 android:text="@string/pohre01h2"
-                                android:textSize="18sp"
-
-                                android:textStyle="italic" />
+                                android:textSize="18sp" />
 
                             <TextView
                                 style="@style/textview"
-                                android:text="@string/pohre01h2"
-                                android:textSize="18sp"
-
-                                android:textStyle="italic" />
-
+                                android:text="@string/pohre01h3"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/pohre01b"
@@ -576,19 +583,15 @@
                                 android:layout_marginBottom="3dp"
                                 android:text="@string/pohre01b" />
 
-
-                            <TextView
-                                style="@style/textview"
-                                android:text="@string/pohre01h3"
-                                android:textSize="18sp"
-                                android:textStyle="italic" />
-
                             <TextView
                                 style="@style/textview"
                                 android:text="@string/pohre01h4"
-                                android:textSize="18sp"
+                                android:textSize="18sp" />
 
-                                android:textStyle="italic" />
+                            <TextView
+                                style="@style/textview"
+                                android:text="@string/pohre01h5"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/pohre01c"
@@ -597,9 +600,7 @@
                                 android:layout_marginTop="3dp"
                                 android:text="@string/pohre01c" />
 
-
                         </RadioGroup>
-
 
                     </LinearLayout>
 
@@ -676,7 +677,7 @@
                         </LinearLayout>
 
                         <CheckBox
-                            android:id="@+id/pohrf0198"
+                            android:id="@+id/pohrf0197"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
@@ -712,11 +713,9 @@
                             style="@style/i_textview"
                             android:text="@string/pohrg01a" />
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg01a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:hint="###.##"
                             android:inputType="number"
                             app:mask="###.##"
@@ -726,16 +725,13 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg01b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:hint="##.##"
                             android:inputType="number"
                             app:mask="###.##"
                             app:maxValue="110"
                             app:minValue="20"
-
                             app:type="range" />
-
 
                     </LinearLayout>
 
@@ -750,20 +746,16 @@
                             style="@style/i_textview"
                             android:text="@string/pohrg02" />
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="99"
                             app:mask="##.##"
                             app:maxValue="42"
                             app:minValue="33"
-
                             app:type="range" />
-
 
                     </LinearLayout>
 
@@ -778,25 +770,20 @@
                             style="@style/i_textview"
                             android:text="@string/pohrg03" />
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="999"
                             app:mask="##.##"
                             app:maxValue="60"
                             app:minValue="1"
-
                             app:type="range" />
-
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <!--pohrg04a-& b -->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -807,38 +794,31 @@
                             style="@style/i_textview"
                             android:text="@string/pohrg04a" />
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="105"
                             app:minValue="80"
-
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="105"
                             app:minValue="80"
-
                             app:type="range" />
-
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <!--pohrhh1-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -852,7 +832,6 @@
                             style="@style/i_textview"
                             android:background="@color/colorPrimaryDark"
                             android:text="@string/pohrhh1" />
-
 
                     </LinearLayout>
 
@@ -886,8 +865,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh01x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh01"
@@ -908,8 +886,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh02x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh02"
@@ -930,8 +907,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh03x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh03"
@@ -952,8 +928,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh04x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh04"
@@ -974,8 +949,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh05x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh05"
@@ -996,8 +970,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh06x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh06"
@@ -1018,8 +991,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh07x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh07"
@@ -1040,8 +1012,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh08x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh08"
@@ -1063,8 +1034,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh09x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh09"
@@ -1085,8 +1055,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh10x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 android:tag="pohrh10"
@@ -1108,13 +1077,10 @@
                             <EditText
                                 android:id="@+id/pohrh11x"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
                                 android:hint="@string/other"
-                                android:tag="pohri05x"
+                                android:tag="pohrh11"
                                 android:text='@{pohrh11.checked? pohrh11x.getText.toString : "" }'
                                 android:visibility='@{pohrh11.checked? View.VISIBLE : View.GONE}' />
-
 
                         </LinearLayout>
 
@@ -1128,7 +1094,6 @@
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
 
                 <!--pohri01-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -1190,8 +1155,6 @@
                             <EditText
                                 android:id="@+id/pohri05x"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
                                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                 android:hint="@string/other"
                                 android:tag="pohri05"
@@ -1207,7 +1170,6 @@
                             android:layout_marginBottom="1dp"
                             android:tag="-1"
                             android:text="NA" />
-
 
                     </LinearLayout>
 
@@ -1227,7 +1189,6 @@
                             android:background="@color/colorPrimaryDark"
                             android:text="@string/pohrjh1" />
 
-
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -1244,7 +1205,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrj01" />
-
 
                         <RadioGroup
                             android:id="@+id/pohrj01"
@@ -1265,7 +1225,6 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrj01b" />
 
-
                         </RadioGroup>
 
 
@@ -1284,8 +1243,6 @@
                             <EditText
                                 android:id="@+id/pohrj02a"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
                                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                 android:hint="@string/other" />
 
@@ -1296,18 +1253,14 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrj02b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 app:defaultValue="999"
                                 app:mask="##.##"
                                 app:maxValue="30"
                                 app:minValue="0"
-
-                                app:type="range"
-
-                                />
+                                app:type="range" />
 
                             <TextView
                                 style="@style/i_textview"
@@ -1316,17 +1269,13 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrj02c"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/EditText_number"
                                 android:hint="##.##"
                                 android:inputType="number"
                                 app:mask="#.##"
                                 app:maxValue="4"
                                 app:minValue="1"
-
-                                app:type="range"
-
-                                />
+                                app:type="range" />
 
 
                             <RadioGroup
@@ -1348,11 +1297,10 @@
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/pohrj02db" />
 
-
                             </RadioGroup>
 
-
                         </LinearLayout>
+
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -1369,7 +1317,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrj03" />
-
 
                         <RadioGroup
                             android:id="@+id/pohrj03"
@@ -1390,9 +1337,7 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrj03b" />
 
-
                         </RadioGroup>
-
 
                     </LinearLayout>
 
@@ -1454,14 +1399,12 @@
                                 android:hint="@string/pohrj04d"
                                 android:visibility='@{pohrj04d.checked? View.VISIBLE : View.GONE}' />
 
-
                             <CheckBox
                                 android:id="@+id/pohrj04e"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrj04e" />
-
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                                 android:id="@+id/pohrj04ex"
@@ -1475,14 +1418,9 @@
                                 android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}'
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE"
-
-                                app:minDate="01/01/1981"
-
-
-                                />
+                                app:minDate="01/08/2014" />
 
                         </LinearLayout>
-
 
                     </LinearLayout>
 
@@ -1501,16 +1439,13 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrj05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditText_number"
                             android:inputType="number"
                             android:maxLength="2"
                             app:defaultValue="99"
                             app:maxValue="20"
                             app:minValue="1"
-
                             app:type="range" />
-
 
                     </LinearLayout>
 
@@ -1528,7 +1463,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrk01" />
-
 
                         <RadioGroup
                             android:id="@+id/pohrk01"
@@ -1549,14 +1483,12 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrk01b" />
 
-
                             <RadioButton
                                 android:id="@+id/pohrk01c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrk01c" />
-
 
                         </RadioGroup>
 
@@ -1607,7 +1539,7 @@
                                     android:visibility='@{pohrl01a.checked? View.VISIBLE : View.GONE}'
                                     app:dateFormat="dd-MM-yyyy"
                                     app:maxDate="CR_DATE"
-                                    app:minDate="01/01/1981" />
+                                    app:minDate="01/08/2014" />
 
                                 <RadioButton
                                     android:id="@+id/pohrl01b"
@@ -1629,7 +1561,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/pohrl01c" />
-
 
                             </RadioGroup>
 
@@ -1677,7 +1608,6 @@
                             style="@style/i_textview"
                             android:text="@string/pohrl03" />
 
-
                         <RadioGroup
                             android:id="@+id/pohrl03"
                             android:layout_width="match_parent"
@@ -1697,7 +1627,6 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrl03b" />
 
-
                             <RadioButton
                                 android:id="@+id/pohrl03c"
                                 android:layout_width="match_parent"
@@ -1705,9 +1634,7 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrl03c" />
 
-
                         </RadioGroup>
-
 
                     </LinearLayout>
 

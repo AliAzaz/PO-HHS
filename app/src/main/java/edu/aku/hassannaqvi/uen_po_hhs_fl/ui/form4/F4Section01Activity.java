@@ -151,6 +151,19 @@ public class F4Section01Activity extends AppCompatActivity {
             }
         });
 
+        bi.pohra03.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0) return;
+                bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
     }
 
@@ -228,14 +241,17 @@ public class F4Section01Activity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         JSONObject form04_01 = new JSONObject();
 
-        form04_01.put("pocfa01", talukaCodes.get(bi.pohra01.getSelectedItemPosition()));
+        form04_01.put("pohra01", talukaCodes.get(bi.pohra01.getSelectedItemPosition()));
         form04_01.put("pohra02", ucCode.get(bi.pohra02.getSelectedItemPosition()));
         form04_01.put("pohra03", lhwCodes.get(bi.pohra03.getSelectedItemPosition()));
         form04_01.put("pohra05", villageCodes.get(bi.pohra05.getSelectedItemPosition()));
-        form04_01.put("pohra04", bi.pohra04.getSelectedItemPosition());
+//        form04_01.put("pohra04", bi.pohra04.getSelectedItemPosition());
         form04_01.put("pohra06", bi.pohra06.getText().toString());
 
-        form04_01.put("pocfa07", bi.pohrb01a.isChecked() ? "1"
+
+        form04_01.put("pohra09", bi.pohra09.getText().toString());
+
+        form04_01.put("pohrb01", bi.pohrb01a.isChecked() ? "1"
                 : bi.pohrb01b.isChecked() ? "2"
                 : bi.pohrb01c.isChecked() ? "3"
                 : bi.pohrb01d.isChecked() ? "4"
@@ -277,9 +293,7 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrf01e", bi.pohrf01e.isChecked() ? "5" : "0");
         form04_01.put("pohrf01f", bi.pohrf01f.isChecked() ? "6" : "0");
         form04_01.put("pohrf01g", bi.pohrf01g.isChecked() ? "7" : "0");
-
-        form04_01.put("pohrf0198", bi.pohrf0198.isChecked() ? "98" : "0");
-
+        form04_01.put("pohrf0197", bi.pohrf0197.isChecked() ? "97" : "0");
 
         form04_01.put("pohrg01a", bi.pohrg01a.getText().toString());
 
@@ -398,7 +412,7 @@ public class F4Section01Activity extends AppCompatActivity {
 
     void events_call() {
 
-        bi.pohrf0198.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        bi.pohrf0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
