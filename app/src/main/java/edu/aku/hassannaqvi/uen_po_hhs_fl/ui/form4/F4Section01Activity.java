@@ -343,23 +343,18 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohri02", bi.pohri02.isChecked() ? "2" : "0");
         form04_01.put("pohri03", bi.pohri03.isChecked() ? "3" : "0");
         form04_01.put("pohri04", bi.pohri04.isChecked() ? "4" : "0");
-        form04_01.put("pohri05", bi.pohri05.isChecked() ? "5" : "0");
-
-        form04_01.put("pohri05x", bi.pohri05x.getText().toString());
         form04_01.put("pohri96", bi.pohri96.isChecked() ? "96" : "0");
+
+        form04_01.put("pohri96x", bi.pohri96x.getText().toString());
+        form04_01.put("pohri97", bi.pohri97.isChecked() ? "97" : "0");
 
 
         form04_01.put("pohrj01", bi.pohrj01a.isChecked() ? "1"
                         : bi.pohrj01b.isChecked() ? "2"
                         : "0");
-
         form04_01.put("pohrj02a", bi.pohrj02a.getText().toString());
-
         form04_01.put("pohrj02b", bi.pohrj02b.getText().toString());
-
         form04_01.put("pohrj02c", bi.pohrj02c.getText().toString());
-
-
         form04_01.put("pohrj02d", bi.pohrj02da.isChecked() ? "1"
                         : bi.pohrj02db.isChecked() ? "2"
                         : "0");
@@ -425,7 +420,7 @@ public class F4Section01Activity extends AppCompatActivity {
         });
 
 
-        bi.pohrh96.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        bi.pohrh97.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 

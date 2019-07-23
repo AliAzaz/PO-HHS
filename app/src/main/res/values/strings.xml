@@ -1132,7 +1132,7 @@
     <string name="pohrf01e"> نڪ جو کُلڻ </string>
     <string name="pohrf01f"> کرکر جو آواز </string>
     <string name="pohrf01g"> سيٽي جھڙو آواز </string>
-    <string name="pohrf01h"> ڪو به نه </string>
+  <string name="pohrf0197"> ڪو به نه </string>
 
     <string name="pohrgh1"> اهم نشانيون </string>
     <string name="pohrg01a"> ساهه جي رفتار/ منٽ </string>
@@ -1142,45 +1142,28 @@
     <string name="pohrg04a"> رت ۾ آڪسيجن جي ليول </string>
     <string name="pohrg04b"> رت ۾ آڪسيجن جي ليول </string>
 
-    <string name="pohrhh1"> ليبارٽيري تحقيقات </string>
-    <string name="pohrhh2"> جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي لکو </string>
-
+  <string name="pohrh"> ليبارٽيري تحقيقات </string>
     <string name="pohrh01"> ( آر بي سي) رت جا ڳاڙها جزا </string>
-
     <string name="pohrh02"> ايڇ بي (هيموگلوبن) </string>
-
     <string name="pohrh03"> ايڇ سي ٽي </string>
-
     <string name="pohrh04"> ( رت جا اڇا جزا) ڊبليو بي سي </string>
-
     <string name="pohrh05"> نيوٽروفلس </string>
-
     <string name="pohrh06"> لمفوسائيٽس </string>
-
     <string name="pohrh07"> پي ايل ٽي ڪاوُنٽ </string>
-
     <string name="pohrh08"> سي آر پي </string>
-
     <string name="pohrh09"> اي ايس آر </string>
-
     <string name="pohrh10"> پي سي ٽي </string>
-
     <string name="pohrh11"> بلڊ ڪلچر </string>
+  <string name="pohrh96"> ٻيو ڪجهه </string>
+  <string name="pohrh97"> لاڳو نه ٿو ٿئي </string>
 
-    <string name="pohrh12"> ٻيو ڪجهه </string>
-
-    <string name="pohrih1"> ريڊيولوجيڪل تحقيقات </string>
-    <string name="pohrih2"> (جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي لکو) </string>
-
+  <string name="pohri"> ريڊيولوجيڪل تحقيقات </string>
     <string name="pohri01"> چيسٽ ايڪسري </string>
-
     <string name="pohri02"> ڦڦڙن جو الٽرا ساونڊ </string>
-
-    <string name="pohri03"> سي ٽي/ ايم آر آءَ </string>
-
+  <string name="pohri03"> سي ٽي / ايم آر آءَ </string>
     <string name="pohri04"> اي بي جي </string>
-
-    <string name="pohri05"> ٻيو ڪجھ </string>
+  <string name="pohri96"> ٻيو ڪجھ </string>
+  <string name="pohri97"> لاڳو نه ٿو ٿئي </string>
 
     <string name="pohrjh1"> علاج ڏنو ويو </string>
 
@@ -1189,15 +1172,10 @@
     <string name="pohrj01b"> نه </string>
 
     <string name="pohrj02"> جيڪڏهن ها ته </string>
-
     <string name="pohrj02a"> وضاحت ڪريو عام نالو </string>
-
     <string name="pohrj02b"> وزن(ملي گرام) </string>
-
     <string name="pohrj02c"> روزانو </string>
-
     <string name="pohrj02da"> سئي ذريعي </string>
-
     <string name="pohrj02db"> وات ذريعي </string>
 
     <string name="pohrj03"> ڇا ٻار کي ساهه کڻڻ لاءِ ڪنهن سپورٽ جي ضرورت آهي؟ </string>
