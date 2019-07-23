@@ -246,14 +246,17 @@ public abstract class ValidatorClass {
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
             if (v instanceof CheckBox) {
-
-                if (v.getTag() != null && v.getTag().equals("-1")) {
-                    flag = true;
-                    continue;
-                }
-
                 CheckBox cb = (CheckBox) v;
                 cb.setError(null);
+
+                if (!cb.isEnabled()) {
+                    flag = true;
+                    continue;
+                } else {
+                    if (!flag)
+                        flag = false;
+                }
+
                 if (cb.isChecked()) {
                     flag = true;
 
@@ -268,18 +271,18 @@ public abstract class ValidatorClass {
                             }
                         }
                     }
+//                    break;
                 }
             }
         }
-        if (flag) {
-            return true;
-        } else {
+        if (!flag) {
             FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
             cbx.setError("This data is Required!");    // Set Error on last radio button
 
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
             return false;
         }
+        return true;
     }
 
     public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, EditText txt, String msg) {
@@ -390,21 +393,18 @@ public abstract class ValidatorClass {
                 }
             } else if (view instanceof LinearLayout) {
 
-                int length = ((LinearLayout) view).getChildCount();
-
-                if (length > 0) {
-                    if (((LinearLayout) view).getChildAt(0) instanceof CheckBox) {
-                        if (!EmptyCheckBox(context, ((LinearLayout) view),
-                                (CheckBox) ((LinearLayout) view).getChildAt(0),
-                                getString(context, getIDComponent(((LinearLayout) view).getChildAt(0))))) {
-                            return false;
-                        }
-                    } else if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
+                if (view.getTag() != null && view.getTag().equals("0")) {
+                    if (!EmptyCheckBox(context, ((LinearLayout) view),
+                            (CheckBox) ((LinearLayout) view).getChildAt(0),
+                            getString(context, getIDComponent(((LinearLayout) view).getChildAt(0))))) {
                         return false;
                     }
-                } else if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
-                    return false;
+                } else {
+                    if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
+                        return false;
+                    }
                 }
+
             }
         }
         return true;

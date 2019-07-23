@@ -31,8 +31,7 @@
             <!--Header-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout
-                    style="@style/linearlayout_view_wt_bound">
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -50,6 +49,7 @@
 
             <!--Info Section A startd -->
             <android.support.v7.widget.CardView style="@style/cardView">
+
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
 
 
@@ -132,8 +132,6 @@
                                 android:text="@string/pohra04" />
 
 
-
-
                             <Spinner
                                 android:id="@+id/pohra04"
                                 android:layout_width="match_parent"
@@ -190,13 +188,11 @@
                             <EditText
                                 android:id="@+id/pohra06"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/pohra06"
-                               />
+                                android:hint="@string/pohra06" />
 
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
-
 
 
                 </LinearLayout>
@@ -207,7 +203,6 @@
             <!--Info Section A Ends -->
 
 
-
             <LinearLayout
                 android:id="@+id/llform04"
                 android:layout_width="match_parent"
@@ -215,11 +210,6 @@
                 android:orientation="vertical"
 
                 >
-
-
-
-
-
 
 
                 <!--pohrb01-->
@@ -263,8 +253,6 @@
                                 android:text="@string/pohrb01c" />
 
 
-
-
                             <RadioButton
                                 android:id="@+id/pohrb01d"
                                 android:layout_width="match_parent"
@@ -279,6 +267,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrb01e" />
+
                             <RadioButton
                                 android:id="@+id/pohrb01f"
                                 android:layout_width="match_parent"
@@ -287,15 +276,11 @@
                                 android:text="@string/pohrb01f" />
 
 
-
-
                         </RadioGroup>
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
 
 
                 <!--pohrb02-->
@@ -306,8 +291,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrb02" />
-
-
 
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
@@ -360,10 +343,6 @@
                                 android:text="@string/pohr0b" />
 
 
-
-
-
-
                         </RadioGroup>
 
                     </LinearLayout>
@@ -381,8 +360,6 @@
                             android:text="@string/pohrb04" />
 
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrb04"
                             android:layout_width="wrap_content"
@@ -390,16 +367,14 @@
                             android:hint="##.##"
                             android:inputType="number"
 
+                            app:mask="##.##"
                             app:maxValue="40.00"
                             app:minValue="02.00"
-                            app:mask="##.##"
                             app:type="range" />
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
 
 
                 <!--pohrb05-->
@@ -412,8 +387,6 @@
                             android:text="@string/pohrb05" />
 
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrb05"
                             android:layout_width="match_parent"
@@ -421,10 +394,10 @@
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="999"
-                            app:maxValue="140"
                             app:mask="##.##"
+                            app:maxValue="140"
                             app:minValue="60"
-                            
+
                             app:type="range" />
 
                     </LinearLayout>
@@ -471,26 +444,23 @@
                                 android:text="@string/pohrc01c" />
 
 
-
-
                             <TextView
                                 style="@style/textview"
                                 android:text="@string/pohrc01h1"
                                 android:textSize="18sp"
-                                android:textStyle="italic"
-                                />
+                                android:textStyle="italic" />
+
                             <TextView
                                 style="@style/textview"
                                 android:text="@string/pohrc01h2"
                                 android:textSize="18sp"
-                                android:textStyle="italic"
-                                />
+                                android:textStyle="italic" />
+
                             <TextView
                                 style="@style/textview"
                                 android:text="@string/pohrc01h3"
                                 android:textSize="18sp"
-                                android:textStyle="italic"
-                                />
+                                android:textStyle="italic" />
 
                             <CheckBox
                                 android:id="@+id/pohrc01e"
@@ -505,9 +475,6 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
-
 
 
                 <!--pohrd01-->
@@ -563,10 +530,6 @@
                                 android:text="@string/pohrd01e" />
 
 
-
-
-
-
                         </LinearLayout>
 
                     </LinearLayout>
@@ -592,13 +555,12 @@
                             android:layout_height="wrap_content">
 
 
-
                             <TextView
                                 style="@style/textview"
-                                android:textSize="18sp"
-                                android:textStyle="italic"
                                 android:text="@string/pohre01h1"
-                                />
+                                android:textSize="18sp"
+                                android:textStyle="italic" />
+
                             <RadioButton
                                 android:id="@+id/pohre01a"
                                 android:layout_width="match_parent"
@@ -607,23 +569,19 @@
                                 android:text="@string/pohre01a" />
 
 
+                            <TextView
+                                style="@style/textview"
+                                android:text="@string/pohre01h2"
+                                android:textSize="18sp"
+
+                                android:textStyle="italic" />
 
                             <TextView
                                 style="@style/textview"
-                                android:textSize="18sp"
-                                android:textStyle="italic"
-
                                 android:text="@string/pohre01h2"
-                                />
-
-                            <TextView
-                                style="@style/textview"
                                 android:textSize="18sp"
-                                android:textStyle="italic"
 
-                                android:text="@string/pohre01h2"
-                                />
-
+                                android:textStyle="italic" />
 
 
                             <RadioButton
@@ -634,22 +592,18 @@
                                 android:text="@string/pohre01b" />
 
 
-
-
                             <TextView
                                 style="@style/textview"
-                                android:textSize="18sp"
-                                android:textStyle="italic"
                                 android:text="@string/pohre01h3"
-                                />
+                                android:textSize="18sp"
+                                android:textStyle="italic" />
 
                             <TextView
                                 style="@style/textview"
-                                android:textSize="18sp"
-                                android:textStyle="italic"
-
                                 android:text="@string/pohre01h4"
-                                />
+                                android:textSize="18sp"
+
+                                android:textStyle="italic" />
 
                             <RadioButton
                                 android:id="@+id/pohre01c"
@@ -659,15 +613,12 @@
                                 android:text="@string/pohre01c" />
 
 
-
                         </RadioGroup>
 
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
 
 
                 <!--pohrf01-->
@@ -683,10 +634,11 @@
                             android:text="@string/pohrf01" />
 
                         <LinearLayout
+                            android:id="@+id/lvpohrf01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/lvpohrf01"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:tag="0">
 
                             <CheckBox
                                 android:id="@+id/pohrf01a"
@@ -726,7 +678,6 @@
                                 android:text="@string/pohrf01e" />
 
 
-
                             <CheckBox
                                 android:id="@+id/pohrf01f"
                                 android:layout_width="match_parent"
@@ -742,30 +693,20 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrf01g" />
 
-
-
-
-
-
-
-
-
-
                         </LinearLayout>
+
                         <CheckBox
-                            android:tag="-1"
                             android:id="@+id/pohrf01h"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
+                            android:tag="-1"
                             android:text="@string/pohrf01h" />
-
 
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
 
                 <!--pohrgh1-->
@@ -779,13 +720,9 @@
                             android:text="@string/pohrgh1" />
 
 
-
-
-
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
 
                 <!--pohrg01a-& b -->
@@ -796,8 +733,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrg01a" />
-
-
 
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -820,14 +755,13 @@
                             app:mask="###.##"
                             app:maxValue="110"
                             app:minValue="20"
-                            
+
                             app:type="range" />
 
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
 
                 <!--pohrg02 -->
@@ -840,8 +774,6 @@
                             android:text="@string/pohrg02" />
 
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg02"
                             android:layout_width="match_parent"
@@ -849,13 +781,11 @@
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="99"
+                            app:mask="##.##"
                             app:maxValue="42"
                             app:minValue="33"
-                            app:mask="##.##"
-                            
+
                             app:type="range" />
-
-
 
 
                     </LinearLayout>
@@ -873,8 +803,6 @@
                             android:text="@string/pohrg03" />
 
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg03"
                             android:layout_width="match_parent"
@@ -882,13 +810,11 @@
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="999"
+                            app:mask="##.##"
                             app:maxValue="60"
                             app:minValue="1"
-                            app:mask="##.##"
-                            
+
                             app:type="range" />
-
-
 
 
                     </LinearLayout>
@@ -906,8 +832,6 @@
                             android:text="@string/pohrg04a" />
 
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04a"
                             android:layout_width="match_parent"
@@ -915,10 +839,10 @@
                             android:hint="##.##"
                             android:inputType="number"
                             app:defaultValue="999"
+                            app:mask="###.##"
                             app:maxValue="105"
                             app:minValue="80"
-                            app:mask="###.##"
-                            
+
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -926,21 +850,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="##.##"
-                            app:mask="###.##"
                             android:inputType="number"
                             app:defaultValue="999"
+                            app:mask="###.##"
                             app:maxValue="105"
                             app:minValue="80"
-                            
+
                             app:type="range" />
 
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
-
 
 
                 <!--pohrhh1-->
@@ -953,9 +874,8 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/pohrhh1"
                             android:background="@color/colorPrimaryDark"
-                            />
+                            android:text="@string/pohrhh1" />
 
 
                     </LinearLayout>
@@ -975,11 +895,11 @@
                             android:text="@string/pohrhh2" />
 
                         <LinearLayout
+                            android:id="@+id/lvpohrhh2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:id="@+id/lvpohrhh2"
-                            >
+                            android:tag="0">
 
                             <CheckBox
                                 android:id="@+id/pohrh01"
@@ -994,15 +914,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="10"
-                                app:minValue="0"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh01"
                                 android:text='@{pohrh01.checked? pohrh01x.getText.toString : "" }'
                                 android:visibility='@{pohrh01.checked? View.VISIBLE : View.GONE }'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="10"
+                                app:minValue="0"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh02"
@@ -1017,15 +936,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="18"
-                                app:minValue="4"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh02"
                                 android:text='@{pohrh02.checked? pohrh02x.getText.toString : "" }'
                                 android:visibility='@{pohrh02.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="18"
+                                app:minValue="4"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh03"
@@ -1040,15 +958,15 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="70"
-                                app:minValue="15"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh03"
                                 android:text='@{pohrh03.checked? pohrh03x.getText.toString : "" }'
                                 android:visibility='@{pohrh03.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="70"
+                                app:minValue="15"
+                                app:type="range" />
+
                             <CheckBox
                                 android:id="@+id/pohrh04"
                                 android:layout_width="match_parent"
@@ -1062,15 +980,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="45"
-                                app:minValue="1"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh04"
                                 android:text='@{pohrh04.checked? pohrh04x.getText.toString : "" }'
                                 android:visibility='@{pohrh04.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="45"
+                                app:minValue="1"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh05"
@@ -1085,15 +1002,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="99"
-                                app:minValue="10"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh05"
                                 android:text='@{pohrh05.checked? pohrh05x.getText.toString : "" }'
                                 android:visibility='@{pohrh05.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="99"
+                                app:minValue="10"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh06"
@@ -1108,15 +1024,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="70"
-                                app:minValue="10"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh06"
                                 android:text='@{pohrh06.checked? pohrh06x.getText.toString : "" }'
                                 android:visibility='@{pohrh06.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="70"
+                                app:minValue="10"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh07"
@@ -1131,16 +1046,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="900"
-                                app:minValue="50"
-                                app:mask="###.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh07"
                                 android:text='@{pohrh07.checked? pohrh07x.getText.toString : "" }'
                                 android:visibility='@{pohrh07.checked? View.VISIBLE : View.GONE}'
-                                />
-
+                                app:defaultValue="999"
+                                app:mask="###.##"
+                                app:maxValue="900"
+                                app:minValue="50"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh08"
@@ -1155,16 +1068,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="10"
-                                app:minValue="0"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh08"
                                 android:text='@{pohrh08.checked? pohrh08x.getText.toString : "" }'
                                 android:visibility='@{pohrh08.checked? View.VISIBLE : View.GONE}'
-                                />
-
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="10"
+                                app:minValue="0"
+                                app:type="range" />
 
 
                             <CheckBox
@@ -1180,15 +1091,15 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="30"
-                                app:minValue="0"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh09"
                                 android:text='@{pohrh09.checked? pohrh09x.getText.toString : "" }'
                                 android:visibility='@{pohrh09.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="30"
+                                app:minValue="0"
+                                app:type="range" />
+
                             <CheckBox
                                 android:id="@+id/pohrh10"
                                 android:layout_width="match_parent"
@@ -1202,15 +1113,14 @@
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
                                 android:inputType="number"
-                                app:defaultValue="999"
-                                app:maxValue="22"
-                                app:minValue="0"
-                                app:mask="##.##"
-                                
-                                app:type="range"
+                                android:tag="pohrh10"
                                 android:text='@{pohrh10.checked? pohrh10x.getText.toString : "" }'
                                 android:visibility='@{pohrh10.checked? View.VISIBLE : View.GONE}'
-                                />
+                                app:defaultValue="999"
+                                app:mask="##.##"
+                                app:maxValue="22"
+                                app:minValue="0"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/pohrh11"
@@ -1219,35 +1129,29 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrh11" />
 
-                           <EditText
-                            android:id="@+id/pohrh11x"
-                            style="@style/textInput"
+                            <EditText
+                                android:id="@+id/pohrh11x"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/other"
+                                android:tag="pohri05x"
+                                android:text='@{pohrh11.checked? pohrh11x.getText.toString : "" }'
+                                android:visibility='@{pohrh11.checked? View.VISIBLE : View.GONE}' />
+
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/pohrh96"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                                                       android:hint="@string/other"
-                            android:tag="pohri05x"
-                               android:text='@{pohrh11.checked? pohrh11x.getText.toString : "" }'
-                            android:visibility='@{pohrh11.checked? View.VISIBLE : View.GONE}' />
-
-
-
-
-
-
-
-                    </LinearLayout>
-                    <CheckBox
-                        android:tag="-1"
-                        android:id="@+id/pohrh96"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:text="NA" />
+                            android:layout_marginBottom="1dp"
+                            android:tag="-1"
+                            android:text="NA" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
-
 
 
                 <!--pohri01-->
@@ -1263,11 +1167,11 @@
                             android:text="@string/pohri01" />
 
                         <LinearLayout
+                            android:id="@+id/lvpohri01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:id="@+id/lvpohri01"
-                            >
+                            android:tag="0">
 
                             <CheckBox
                                 android:id="@+id/pohri01"
@@ -1307,7 +1211,6 @@
                                 android:text="@string/pohri05" />
 
 
-
                             <EditText
                                 android:id="@+id/pohri05x"
                                 style="@style/textInput"
@@ -1315,20 +1218,19 @@
                                 android:layout_height="wrap_content"
                                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                 android:hint="@string/other"
-                                android:tag="pohri05x"
+                                android:tag="pohri05"
                                 android:visibility='@{pohri05.checked? View.VISIBLE : View.GONE}' />
 
 
-
                         </LinearLayout>
+
                         <CheckBox
-                            android:tag="-1"
                             android:id="@+id/pohri96"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
+                            android:tag="-1"
                             android:text="NA" />
-
 
 
                     </LinearLayout>
@@ -1388,21 +1290,19 @@
                                 android:text="@string/pohrj01b" />
 
 
-
                         </RadioGroup>
 
 
                         <LinearLayout
+                            android:id="@+id/pohrjlv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/pohrjlv"
                             android:orientation="vertical"
-                            android:visibility='@{pohrj01a.checked? View.VISIBLE : View.GONE}'
-                            >
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/pohrj02a" />
+                            android:visibility='@{pohrj01a.checked? View.VISIBLE : View.GONE}'>
 
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohrj02a" />
 
 
                             <EditText
@@ -1411,13 +1311,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                android:hint="@string/other"
-                                />
+                                android:hint="@string/other" />
 
                             <TextView
                                 style="@style/i_textview"
                                 android:text="@string/pohrj02b" />
-
 
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1425,12 +1323,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
-                                app:mask="##.##"
                                 android:inputType="number"
                                 app:defaultValue="999"
+                                app:mask="##.##"
                                 app:maxValue="30"
                                 app:minValue="0"
-                                
+
                                 app:type="range"
 
                                 />
@@ -1440,17 +1338,16 @@
                                 android:text="@string/pohrj02c" />
 
 
-
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrj02c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="##.##"
-                                app:mask="#.##"
                                 android:inputType="number"
+                                app:mask="#.##"
                                 app:maxValue="4"
                                 app:minValue="1"
-                                
+
                                 app:type="range"
 
                                 />
@@ -1476,16 +1373,13 @@
                                     android:text="@string/pohrj02db" />
 
 
-
                             </RadioGroup>
-
 
 
                         </LinearLayout>
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
 
                 <!--pohrj03-->
@@ -1521,9 +1415,7 @@
                                 android:text="@string/pohrj03b" />
 
 
-
                         </RadioGroup>
-
 
 
                     </LinearLayout>
@@ -1531,105 +1423,86 @@
                 </android.support.v7.widget.CardView>
 
 
-
                 <!--pohrj03-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/pohrj8alv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohrj03" />
+
+
+                        <CheckBox
+                            android:id="@+id/pohrj04a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/pohrj8alv"
-                            android:orientation="vertical"
-                            >
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pohrj04a" />
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/pohrj03" />
+                        <CheckBox
+                            android:id="@+id/pohrj04b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pohrj04b" />
 
+                        <CheckBox
+                            android:id="@+id/pohrj04c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pohrj04c" />
 
-
-                            <CheckBox
-                                android:id="@+id/pohrj04a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrj04a" />
-
-                            <CheckBox
-                                android:id="@+id/pohrj04b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrj04b" />
-
-                            <CheckBox
-                                android:id="@+id/pohrj04c"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrj04c" />
-
-                            <CheckBox
-                                android:id="@+id/pohrj04d"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrj04d" />
+                        <CheckBox
+                            android:id="@+id/pohrj04d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pohrj04d" />
 
 
+                        <EditText
+                            android:id="@+id/pohrj04dx"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pohrj04d"
+                            android:visibility='@{pohrj04d.checked? View.VISIBLE : View.GONE}' />
 
 
+                        <CheckBox
+                            android:id="@+id/pohrj04e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/pohrj04e" />
 
 
-                            <EditText
-                                android:id="@+id/pohrj04dx"
-                                style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/pohrj04d"
-                                android:visibility='@{pohrj04d.checked? View.VISIBLE : View.GONE}'
-                                />
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/pohrj04ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+
+                            app:minDate="01/01/1981"
 
 
-                            <CheckBox
-                                android:id="@+id/pohrj04e"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrj04e" />
+                            />
 
 
-
-
-
-                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                                android:id="@+id/pohrj04ex"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:layout_weight="70"
-                                android:focusable="false"
-                                android:hint="DD/MM/YYYY"
-                                android:textColor="@android:color/black"
-                                app:dateFormat="dd-MM-yyyy"
-                                app:maxDate="CR_DATE"
-                                app:minDate="01/01/1981"
-
-                                android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}'
-
-
-                                />
-
-
-
-
-
-
-
-                        </LinearLayout>
+                    </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
-
 
 
                 <!--pohrj05 -->
@@ -1642,27 +1515,22 @@
                             android:text="@string/pohrj05" />
 
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrj05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            app:defaultValue="99"
                             android:maxLength="2"
+                            app:defaultValue="99"
                             app:maxValue="20"
                             app:minValue="1"
 
                             app:type="range" />
 
 
-
-
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
 
                 <!--pohrk01-->
@@ -1706,19 +1574,11 @@
                                 android:text="@string/pohrk01c" />
 
 
-
-
-
-
-
-
                         </RadioGroup>
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
 
 
                 <!--pohrl01-->
@@ -1735,79 +1595,67 @@
 
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:id="@+id/pohrl01lv"
-                            >
-                        <RadioGroup
-                            android:id="@+id/pohrl01"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
-                            <RadioButton
-                                android:id="@+id/pohrl01a"
+                            <RadioGroup
+                                android:id="@+id/pohrl01"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrl01a" />
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/pohrl01a"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/pohrl01a" />
 
 
+                                <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                    android:id="@+id/pohrl01ax"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_weight="70"
+                                    android:focusable="false"
+                                    android:hint="DD/MM/YYYY"
+                                    android:textColor="@android:color/black"
+                                    android:visibility='@{pohrl01a.checked? View.VISIBLE : View.GONE}'
+                                    app:dateFormat="dd-MM-yyyy"
+                                    app:maxDate="CR_DATE"
+
+                                    app:minDate="01/01/1981"
 
 
-                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                                android:id="@+id/pohrl01ax"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:layout_weight="70"
-                                android:focusable="false"
-                                android:hint="DD/MM/YYYY"
-                                android:textColor="@android:color/black"
-                                app:dateFormat="dd-MM-yyyy"
-                                app:maxDate="CR_DATE"
-                                app:minDate="01/01/1981"
+                                    />
 
-                                android:visibility='@{pohrl01a.checked? View.VISIBLE : View.GONE}'
+                                <RadioButton
+                                    android:id="@+id/pohrl01b"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/pohrl01b" />
 
 
-                                />
-
-                            <RadioButton
-                                android:id="@+id/pohrl01b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrl01b" />
+                                <EditText
+                                    android:id="@+id/pohrl01bx"
+                                    style="@style/EditTextAlphaNumeric"
+                                    android:hint="@string/pohrj04d"
+                                    android:visibility='@{pohrl01b.checked? View.VISIBLE : View.GONE}' />
 
 
-
-                            <EditText
-                                android:id="@+id/pohrl01bx"
-                                style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/pohrj04d"
-                                android:visibility='@{pohrl01b.checked? View.VISIBLE : View.GONE}'
-                                />
-
-
-                            <RadioButton
-                                android:id="@+id/pohrl01c"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:text="@string/pohrl01c" />
+                                <RadioButton
+                                    android:id="@+id/pohrl01c"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/pohrl01c" />
 
 
-
-
-
-
-
-
-                        </RadioGroup>
+                            </RadioGroup>
 
                         </LinearLayout>
-
-
 
                         <CheckBox
                             android:id="@+id/pohrl0196"
@@ -1815,6 +1663,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="NA" />
+
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -1833,14 +1682,11 @@
                         <EditText
                             android:id="@+id/pohrl02"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/pohrl02"
-                            />
+                            android:hint="@string/pohrl02" />
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
-
 
 
                 <!--pohrl03-->
@@ -1851,7 +1697,6 @@
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/pohrl03" />
-
 
 
                         <RadioGroup
@@ -1882,19 +1727,12 @@
                                 android:text="@string/pohrl03c" />
 
 
-
-
-
-
-
-
                         </RadioGroup>
 
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
 
                 <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

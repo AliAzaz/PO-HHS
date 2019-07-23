@@ -5,13 +5,10 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -31,10 +28,8 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.UCsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF3Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF4Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
@@ -157,13 +152,10 @@ public class F4Section01Activity extends AppCompatActivity {
         });
 
 
-
     }
 
 
-
     private void clickListener() {
-
 
 
     }
@@ -206,7 +198,6 @@ public class F4Section01Activity extends AppCompatActivity {
     }
 
 
-
     private boolean UpdateDB() {
         long updcount = db.addForm(MainApp.fc);
 
@@ -221,8 +212,6 @@ public class F4Section01Activity extends AppCompatActivity {
             return false;
         }
     }
-
-
 
 
     public boolean formValidation() {
@@ -259,23 +248,23 @@ public class F4Section01Activity extends AppCompatActivity {
 
 
         form04_01.put("pohrb03",
-                  bi.pohrb03a.isChecked() ? "1"
-                : bi.pohrb03b.isChecked() ? "2"
-                : "0");
+                bi.pohrb03a.isChecked() ? "1"
+                        : bi.pohrb03b.isChecked() ? "2"
+                        : "0");
 
         form04_01.put("pohrb04", bi.pohrb04.getText().toString());
 
         form04_01.put("pohrb05", bi.pohrb05.getText().toString());
 
-        form04_01.put("pohrc01a", bi.pohrc01a.isChecked() ? "1":"0");
-        form04_01.put("pohrc01b", bi.pohrc01b.isChecked() ? "1":"0");
-        form04_01.put("pohrc01c", bi.pohrc01c.isChecked() ? "1":"0");
+        form04_01.put("pohrc01a", bi.pohrc01a.isChecked() ? "1" : "0");
+        form04_01.put("pohrc01b", bi.pohrc01b.isChecked() ? "1" : "0");
+        form04_01.put("pohrc01c", bi.pohrc01c.isChecked() ? "1" : "0");
 
-        form04_01.put("pohrd01a", bi.pohrd01a.isChecked() ? "1":"0");
-        form04_01.put("pohrd01b", bi.pohrd01b.isChecked() ? "1":"0");
-        form04_01.put("pohrd01c", bi.pohrd01c.isChecked() ? "1":"0");
-        form04_01.put("pohrd01d", bi.pohrd01d.isChecked() ? "1":"0");
-        form04_01.put("pohrd01e", bi.pohrd01e.isChecked() ? "1":"0");
+        form04_01.put("pohrd01a", bi.pohrd01a.isChecked() ? "1" : "0");
+        form04_01.put("pohrd01b", bi.pohrd01b.isChecked() ? "1" : "0");
+        form04_01.put("pohrd01c", bi.pohrd01c.isChecked() ? "1" : "0");
+        form04_01.put("pohrd01d", bi.pohrd01d.isChecked() ? "1" : "0");
+        form04_01.put("pohrd01e", bi.pohrd01e.isChecked() ? "1" : "0");
 
 
         form04_01.put("pohre01",
@@ -284,18 +273,15 @@ public class F4Section01Activity extends AppCompatActivity {
                         : bi.pohre01c.isChecked() ? "3"
                         : "0");
 
-        form04_01.put("pohrf01a", bi.pohrf01a.isChecked() ? "1":"0");
-        form04_01.put("pohrf01b", bi.pohrf01b.isChecked() ? "1":"0");
-        form04_01.put("pohrf01c", bi.pohrf01c.isChecked() ? "1":"0");
-        form04_01.put("pohrf01d", bi.pohrf01d.isChecked() ? "1":"0");
-        form04_01.put("pohrf01e", bi.pohrf01e.isChecked() ? "1":"0");
-        form04_01.put("pohrf01f", bi.pohrf01f.isChecked() ? "1":"0");
-        form04_01.put("pohrf01g", bi.pohrf01g.isChecked() ? "1":"0");
+        form04_01.put("pohrf01a", bi.pohrf01a.isChecked() ? "1" : "0");
+        form04_01.put("pohrf01b", bi.pohrf01b.isChecked() ? "1" : "0");
+        form04_01.put("pohrf01c", bi.pohrf01c.isChecked() ? "1" : "0");
+        form04_01.put("pohrf01d", bi.pohrf01d.isChecked() ? "1" : "0");
+        form04_01.put("pohrf01e", bi.pohrf01e.isChecked() ? "1" : "0");
+        form04_01.put("pohrf01f", bi.pohrf01f.isChecked() ? "1" : "0");
+        form04_01.put("pohrf01g", bi.pohrf01g.isChecked() ? "1" : "0");
 
-        form04_01.put("pohrf01h", bi.pohrf01h.isChecked() ? "1":"0");
-
-
-
+        form04_01.put("pohrf01h", bi.pohrf01h.isChecked() ? "1" : "0");
 
 
         form04_01.put("pohrg01a", bi.pohrg01a.getText().toString());
@@ -311,50 +297,45 @@ public class F4Section01Activity extends AppCompatActivity {
 
         form04_01.put("pohrg04b", bi.pohrg04b.getText().toString());
 
-        form04_01.put("pohrh01", bi.pohrh01.isChecked() ? "1":"0");
+        form04_01.put("pohrh01", bi.pohrh01.isChecked() ? "1" : "0");
         form04_01.put("pohrh01x", bi.pohrh01x.getText().toString());
 
-        form04_01.put("pohrh02", bi.pohrh02.isChecked() ? "1":"0");
-        form04_01.put("pohrh02x",bi.pohrh02x.getText().toString());
+        form04_01.put("pohrh02", bi.pohrh02.isChecked() ? "1" : "0");
+        form04_01.put("pohrh02x", bi.pohrh02x.getText().toString());
 
-        form04_01.put("pohrh03", bi.pohrh03.isChecked() ? "1":"0");
-        form04_01.put("pohrh03x",bi.pohrh03x.getText().toString());
+        form04_01.put("pohrh03", bi.pohrh03.isChecked() ? "1" : "0");
+        form04_01.put("pohrh03x", bi.pohrh03x.getText().toString());
 
-        form04_01.put("pohrh04", bi.pohrh04.isChecked() ? "1":"0");
-        form04_01.put("pohrh04x",bi.pohrh04x.getText().toString());
+        form04_01.put("pohrh04", bi.pohrh04.isChecked() ? "1" : "0");
+        form04_01.put("pohrh04x", bi.pohrh04x.getText().toString());
 
-        form04_01.put("pohrh05", bi.pohrh05.isChecked() ? "1":"0");
-        form04_01.put("pohrh05x",bi.pohrh05x.getText().toString());
+        form04_01.put("pohrh05", bi.pohrh05.isChecked() ? "1" : "0");
+        form04_01.put("pohrh05x", bi.pohrh05x.getText().toString());
 
-        form04_01.put("pohrh06", bi.pohrh06.isChecked() ? "1":"0");
-        form04_01.put("pohrh06x",bi.pohrh06x.getText().toString());
+        form04_01.put("pohrh06", bi.pohrh06.isChecked() ? "1" : "0");
+        form04_01.put("pohrh06x", bi.pohrh06x.getText().toString());
 
-        form04_01.put("pohrh07", bi.pohrh07.isChecked() ? "1":"0");
-        form04_01.put("pohrh07x",bi.pohrh07x.getText().toString());
+        form04_01.put("pohrh07", bi.pohrh07.isChecked() ? "1" : "0");
+        form04_01.put("pohrh07x", bi.pohrh07x.getText().toString());
 
-        form04_01.put("pohrh08", bi.pohrh08.isChecked() ? "1":"0");
-        form04_01.put("pohrh08x",bi.pohrh08x.getText().toString());
+        form04_01.put("pohrh08", bi.pohrh08.isChecked() ? "1" : "0");
+        form04_01.put("pohrh08x", bi.pohrh08x.getText().toString());
 
-        form04_01.put("pohrh09", bi.pohrh09.isChecked() ? "1":"0");
-        form04_01.put("pohrh09x",bi.pohrh09x.getText().toString());
+        form04_01.put("pohrh09", bi.pohrh09.isChecked() ? "1" : "0");
+        form04_01.put("pohrh09x", bi.pohrh09x.getText().toString());
 
-        form04_01.put("pohrh10", bi.pohrh10.isChecked() ? "1":"0");
-        form04_01.put("pohrh10x",bi.pohrh10x.getText().toString());
-
-
+        form04_01.put("pohrh10", bi.pohrh10.isChecked() ? "1" : "0");
+        form04_01.put("pohrh10x", bi.pohrh10x.getText().toString());
 
 
+        form04_01.put("pohri01", bi.pohri01.isChecked() ? "1" : "0");
+        form04_01.put("pohri02", bi.pohri02.isChecked() ? "1" : "0");
+        form04_01.put("pohri03", bi.pohri03.isChecked() ? "1" : "0");
+        form04_01.put("pohri04", bi.pohri04.isChecked() ? "1" : "0");
+        form04_01.put("pohri05", bi.pohri05.isChecked() ? "1" : "0");
 
-        form04_01.put("pohri01", bi.pohri01.isChecked() ? "1":"0");
-        form04_01.put("pohri02", bi.pohri02.isChecked() ? "1":"0");
-        form04_01.put("pohri03", bi.pohri03.isChecked() ? "1":"0");
-        form04_01.put("pohri04", bi.pohri04.isChecked() ? "1":"0");
-        form04_01.put("pohri05", bi.pohri05.isChecked() ? "1":"0");
-
-        form04_01.put("pohri05x",bi.pohri05x.getText().toString());
-        form04_01.put("pohri96", bi.pohri96.isChecked() ? "1":"0");
-
-
+        form04_01.put("pohri05x", bi.pohri05x.getText().toString());
+        form04_01.put("pohri96", bi.pohri96.isChecked() ? "1" : "0");
 
 
         form04_01.put("pohrj01",
@@ -363,12 +344,11 @@ public class F4Section01Activity extends AppCompatActivity {
 
                         : "0");
 
-        form04_01.put("pohrj02a",bi.pohrj02a.getText().toString());
+        form04_01.put("pohrj02a", bi.pohrj02a.getText().toString());
 
-        form04_01.put("pohrj02b",bi.pohrj02b.getText().toString());
+        form04_01.put("pohrj02b", bi.pohrj02b.getText().toString());
 
-        form04_01.put("pohrj02c",bi.pohrj02c.getText().toString());
-
+        form04_01.put("pohrj02c", bi.pohrj02c.getText().toString());
 
 
         form04_01.put("pohrj02d",
@@ -384,24 +364,23 @@ public class F4Section01Activity extends AppCompatActivity {
                         : "0");
 
 
-        form04_01.put("pohrj04a", bi.pohrj04a.isChecked() ? "1":"0");
-        form04_01.put("pohrj04b", bi.pohrj04b.isChecked() ? "1":"0");
-        form04_01.put("pohrj04c", bi.pohrj04c.isChecked() ? "1":"0");
-        form04_01.put("pohrj04d", bi.pohrj04d.isChecked() ? "1":"0");
+        form04_01.put("pohrj04a", bi.pohrj04a.isChecked() ? "1" : "0");
+        form04_01.put("pohrj04b", bi.pohrj04b.isChecked() ? "1" : "0");
+        form04_01.put("pohrj04c", bi.pohrj04c.isChecked() ? "1" : "0");
+        form04_01.put("pohrj04d", bi.pohrj04d.isChecked() ? "1" : "0");
 
-        form04_01.put("pohrj04dx",bi.pohrj04dx.getText().toString());
+        form04_01.put("pohrj04dx", bi.pohrj04dx.getText().toString());
 
-        form04_01.put("pohrj04e", bi.pohrj04e.isChecked() ? "1":"0");
-        form04_01.put("pohrj04ex",bi.pohrj04ex.getText().toString());
+        form04_01.put("pohrj04e", bi.pohrj04e.isChecked() ? "1" : "0");
+        form04_01.put("pohrj04ex", bi.pohrj04ex.getText().toString());
 
-        form04_01.put("pohrj05",bi.pohrj05.getText().toString());
+        form04_01.put("pohrj05", bi.pohrj05.getText().toString());
 
 
         form04_01.put("pohrk01",
                 bi.pohrk01a.isChecked() ? "1"
                         : bi.pohrk01b.isChecked() ? "2"
                         : bi.pohrk01c.isChecked() ? "3"
-
 
 
                         : "0");
@@ -412,14 +391,13 @@ public class F4Section01Activity extends AppCompatActivity {
                         : bi.pohrl01c.isChecked() ? "3"
                         : "0");
 
-        form04_01.put("pohrl01ax",bi.pohrl01ax.getText().toString());
-        form04_01.put("pohrl01bx",bi.pohrl01bx.getText().toString());
+        form04_01.put("pohrl01ax", bi.pohrl01ax.getText().toString());
+        form04_01.put("pohrl01bx", bi.pohrl01bx.getText().toString());
 
         form04_01.put("pohrl0196",
-                bi.pohrl0196.isChecked() ? "1":"0");
+                bi.pohrl0196.isChecked() ? "1" : "0");
 
-        form04_01.put("pohrl02",bi.pohrl02.getText().toString());
-
+        form04_01.put("pohrl02", bi.pohrl02.getText().toString());
 
 
         form04_01.put("pohrl03",
@@ -432,26 +410,19 @@ public class F4Section01Activity extends AppCompatActivity {
         MainApp.setGPS(this);
 
 
-
     }
 
 
-    void events_call()
-    {
+    void events_call() {
 
         bi.pohrf01h.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(buttonView.isChecked())
-                {
-                    ClearClass.ClearAllFields(bi.lvpohrf01,false);
-                    bi.lvpohrf01.setVisibility(View.GONE);
-                }
-                else
-                {
-                    ClearClass.ClearAllFields(bi.lvpohrf01,true);
-                    bi.lvpohrf01.setVisibility(View.VISIBLE);
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrf01, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrf01, true);
                 }
             }
         });
@@ -461,16 +432,10 @@ public class F4Section01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(buttonView.isChecked())
-                {
-                    ClearClass.ClearAllFields(bi.lvpohrhh2,false);
-                    bi.lvpohrhh2.setVisibility(View.GONE);
-                }
+                if (isChecked)
+                    ClearClass.ClearAllFields(bi.lvpohrhh2, false);
                 else
-                {
-                    ClearClass.ClearAllFields(bi.lvpohrhh2,true);
-                    bi.lvpohrhh2.setVisibility(View.VISIBLE);
-                }
+                    ClearClass.ClearAllFields(bi.lvpohrhh2, true);
             }
         });
 
@@ -479,15 +444,10 @@ public class F4Section01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(buttonView.isChecked())
-                {
-                    ClearClass.ClearAllFields(bi.lvpohri01,false);
-                    bi.lvpohri01.setVisibility(View.GONE);
-                }
-                else
-                {
-                    ClearClass.ClearAllFields(bi.lvpohri01,true);
-                    bi.lvpohri01.setVisibility(View.VISIBLE);
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohri01, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohri01, true);
                 }
             }
         });
@@ -496,22 +456,14 @@ public class F4Section01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(buttonView.isChecked())
-                {
-                    ClearClass.ClearAllFields(bi.pohrl01lv,false);
-                    bi.pohrl01lv.setVisibility(View.GONE);
-                }
-                else
-                {
-                    ClearClass.ClearAllFields(bi.pohrl01lv,true);
-                    bi.pohrl01lv.setVisibility(View.VISIBLE);
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.pohrl01lv, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.pohrl01lv, true);
                 }
             }
         });
     }
-
-
-
 
 
 }
