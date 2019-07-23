@@ -446,10 +446,12 @@ public class F4Section01Activity extends AppCompatActivity {
                 if(buttonView.isChecked())
                 {
                     ClearClass.ClearAllFields(bi.lvpohrf01,false);
+                    bi.lvpohrf01.setVisibility(View.GONE);
                 }
                 else
                 {
                     ClearClass.ClearAllFields(bi.lvpohrf01,true);
+                    bi.lvpohrf01.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -462,14 +464,50 @@ public class F4Section01Activity extends AppCompatActivity {
                 if(buttonView.isChecked())
                 {
                     ClearClass.ClearAllFields(bi.lvpohrhh2,false);
+                    bi.lvpohrhh2.setVisibility(View.GONE);
                 }
                 else
                 {
                     ClearClass.ClearAllFields(bi.lvpohrhh2,true);
+                    bi.lvpohrhh2.setVisibility(View.VISIBLE);
                 }
             }
         });
 
+
+        bi.pohri96.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(buttonView.isChecked())
+                {
+                    ClearClass.ClearAllFields(bi.lvpohri01,false);
+                    bi.lvpohri01.setVisibility(View.GONE);
+                }
+                else
+                {
+                    ClearClass.ClearAllFields(bi.lvpohri01,true);
+                    bi.lvpohri01.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.pohrl0196.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(buttonView.isChecked())
+                {
+                    ClearClass.ClearAllFields(bi.pohrl01lv,false);
+                    bi.pohrl01lv.setVisibility(View.GONE);
+                }
+                else
+                {
+                    ClearClass.ClearAllFields(bi.pohrl01lv,true);
+                    bi.pohrl01lv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
 

@@ -1265,7 +1265,9 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:id="@+id/lvpohri01"
+                            >
 
                             <CheckBox
                                 android:id="@+id/pohri01"
@@ -1523,6 +1525,16 @@
                         </RadioGroup>
 
 
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <!--pohrj03-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1613,7 +1625,6 @@
 
 
                         </LinearLayout>
-                    </LinearLayout>
 
                 </android.support.v7.widget.CardView>
 
@@ -1738,7 +1749,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohrk01a" />
+                                android:text="@string/pohrl01a" />
 
 
 
@@ -1766,7 +1777,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohrk01b" />
+                                android:text="@string/pohrl01b" />
 
 
 
@@ -1783,7 +1794,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohrk01c" />
+                                android:text="@string/pohrl01c" />
 
 
 
