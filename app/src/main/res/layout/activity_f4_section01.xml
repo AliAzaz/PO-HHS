@@ -1047,6 +1047,7 @@
                                 app:minValue="0"
                                 app:type="range" />
 
+
                             <CheckBox
                                 android:id="@+id/pohrh11"
                                 android:layout_width="match_parent"
@@ -1056,11 +1057,26 @@
 
                             <EditText
                                 android:id="@+id/pohrh11x"
-                                style="@style/textInput"
-                                android:hint="@string/other"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/pohrh11"
                                 android:tag="pohrh11"
                                 android:text='@{pohrh11.checked? pohrh11x.getText.toString : "" }'
                                 android:visibility='@{pohrh11.checked? View.VISIBLE : View.GONE}' />
+
+                            <CheckBox
+                                android:id="@+id/pohrh96"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrh96" />
+
+                            <EditText
+                                android:id="@+id/pohrh96x"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/other"
+                                android:tag="pohrh96"
+                                android:text='@{pohrh96.checked? pohrh96x.getText.toString : "" }'
+                                android:visibility='@{pohrh96.checked? View.VISIBLE : View.GONE}' />
 
                         </LinearLayout>
 
@@ -1073,9 +1089,10 @@
                             android:text="@string/pohrh97" />
 
                     </LinearLayout>
+
                 </android.support.v7.widget.CardView>
 
-                <!--pohri01-->
+                <!--pohri-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
@@ -1088,7 +1105,7 @@
                             android:text="@string/pohri" />
 
                         <LinearLayout
-                            android:id="@+id/lvpohri01"
+                            android:id="@+id/lvpohri"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -1148,7 +1165,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:tag="-1"
-                            android:text="pohri97" />
+                            android:text="@string/pohri97" />
 
                     </LinearLayout>
 
@@ -1243,7 +1260,6 @@
                                 style="@style/i_textview"
                                 android:text="@string/pohrj02c" />
 
-
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrj02c"
                                 style="@style/EditText_number"
@@ -1253,7 +1269,6 @@
                                 app:maxValue="4"
                                 app:minValue="1"
                                 app:type="range" />
-
 
                             <RadioGroup
                                 android:id="@+id/pohrj02d"
@@ -1485,7 +1500,7 @@
                             android:text="@string/pohrl01" />
 
                         <LinearLayout
-                            android:id="@+id/pohrl01lv"
+                            android:id="@+id/lvpohrl"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
@@ -1542,12 +1557,12 @@
                         </LinearLayout>
 
                         <CheckBox
-                            android:id="@+id/pohrl0196"
+                            android:id="@+id/pohrl0197"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:tag="-1"
-                            android:text="NA" />
+                            android:text="@string/pohrl0197" />
 
                     </LinearLayout>
 
