@@ -1126,7 +1126,7 @@
     <string name="pohrgh1"> اهم نشانيون </string>
     <string name="pohrg01a"> ساهه جي رفتار/ منٽ </string>
     <string name="pohrg01b"> ساهه جي رفتار/ منٽ </string>
-    <string name="pohrg02"> گرمي پد(سينٽي ميٽر) </string>
+    <string name="pohrg02"> گرمي پد(سينٽي گريڊ) </string>
     <string name="pohrg03"> پلس/منٽ </string>
     <string name="pohrg04a"> رت ۾ آڪسيجن جي ليول </string>
     <string name="pohrg04b"> رت ۾ آڪسيجن جي ليول </string>
@@ -1185,7 +1185,7 @@
     <string name="pohrk01b"> بيمار </string>
     <string name="pohrk01c"> تشويشناڪ حالت </string>
 
-    <string name="pohrl01"> ڊچارج جي معلومات (صرف داخل شده مريضن لاءِ – جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي) </string>
+    <string name="pohrl01"> ڊسچارج جي معلومات (صرف داخل شده مريضن لاءِ – جيڪڏهن موجود ناهي ته لاڳو نه ٿو ٿئي) </string>
     <string name="pohrl01a"> ڊسچارج </string>
     <string name="pohrl01ax"> (جيڪڏهن ها ته ) ڊسچارج/ منتقل ڪرڻ جي تاريخ </string>
     <string name="pohrl01b"> منتقل </string>

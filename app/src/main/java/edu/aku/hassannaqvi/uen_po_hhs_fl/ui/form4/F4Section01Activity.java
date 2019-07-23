@@ -452,17 +452,6 @@ public class F4Section01Activity extends AppCompatActivity {
             }
         });
 
-        bi.pohrl0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (isChecked)
-                    ClearClass.ClearAllFields(bi.lvpohrl, false);
-                else
-                    ClearClass.ClearAllFields(bi.lvpohrl, true);
-            }
-        });
-
 
         /*bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

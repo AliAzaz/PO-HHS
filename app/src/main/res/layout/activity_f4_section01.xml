@@ -1155,6 +1155,7 @@
                                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                 android:hint="@string/other"
                                 android:tag="pohri96"
+                                android:text='@{pohri96.checked? pohri96x.getText.toString : "" }'
                                 android:visibility='@{pohri96.checked? View.VISIBLE : View.GONE}' />
 
                         </LinearLayout>
@@ -1499,11 +1500,6 @@
                             style="@style/i_textview"
                             android:text="@string/pohrl01" />
 
-                        <LinearLayout
-                            android:id="@+id/lvpohrl"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
                             <RadioGroup
                                 android:id="@+id/pohrl01"
                                 android:layout_width="match_parent"
@@ -1527,6 +1523,7 @@
                                     android:tag="pohrl01a"
                                     android:textColor="@android:color/black"
                                     android:visibility='@{pohrl01a.checked? View.VISIBLE : View.GONE}'
+                                    android:text='@{pohrl01a.checked? pohrl01ax.getText.toString : ""}'
                                     app:dateFormat="dd-MM-yyyy"
                                     app:maxDate="CR_DATE"
                                     app:minDate="01/08/2014" />
@@ -1543,6 +1540,7 @@
                                     style="@style/EditTextAlphaNumeric"
                                     android:hint="@string/pohrj04d"
                                     android:tag="pohrl01b"
+                                    android:text='@{pohrl01b.checked? pohrl01bx.getText.toString : ""}'
                                     android:visibility='@{pohrl01b.checked? View.VISIBLE : View.GONE}' />
 
                                 <RadioButton
@@ -1552,17 +1550,14 @@
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/pohrl01c" />
 
+                                <RadioButton
+                                    android:id="@+id/pohrl0197"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/pohrl0197" />
+
                             </RadioGroup>
-
-                        </LinearLayout>
-
-                        <CheckBox
-                            android:id="@+id/pohrl0197"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:tag="-1"
-                            android:text="@string/pohrl0197" />
 
                     </LinearLayout>
 
