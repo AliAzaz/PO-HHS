@@ -60,6 +60,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1.F1Section01Activity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2.F2Section01Activity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form3.F3Section01Activity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form4.F4Section01Activity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.sync.SyncActivity;
 
 public class MainActivity extends Activity {
@@ -479,6 +480,10 @@ public class MainActivity extends Activity {
                 case R.id.form03:
                     oF = new Intent(MainActivity.this, F3Section01Activity.class);
                     MainApp.formtype = "f3";
+                    break;
+                case R.id.form04:
+                    oF = new Intent(MainActivity.this, F4Section01Activity.class);
+                    MainApp.formtype = "f4";
                     break;
 
             }

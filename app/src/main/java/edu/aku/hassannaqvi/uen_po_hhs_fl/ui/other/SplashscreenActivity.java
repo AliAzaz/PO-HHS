@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form4.F4Section01Activity;
 
 
 /**
@@ -108,7 +109,8 @@ public class SplashscreenActivity extends Activity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashscreenActivity.this, LoginActivity.class);
+               Intent i = new Intent(SplashscreenActivity.this, LoginActivity.class);
+           //     Intent i = new Intent(SplashscreenActivity.this, F4Section01Activity.class);
                 toggle();
                 startActivity(i);
 

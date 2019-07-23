@@ -106,6 +106,13 @@
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
+
+        <activity
+            android:name=".ui.form4.F4Section01Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
         <activity
             android:name=".ui.form3.F3Section01Activity"
             android:screenOrientation="portrait"
