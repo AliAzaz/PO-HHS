@@ -713,7 +713,6 @@
                             android:id="@+id/pohrg01a"
                             style="@style/EditText_number"
                             android:hint="###.##"
-                            android:inputType="number"
                             app:mask="###.##"
                             app:maxValue="110"
                             app:minValue="20"
@@ -722,8 +721,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg01b"
                             style="@style/EditText_number"
-                            android:hint="##.##"
-                            android:inputType="number"
+                            android:hint="###.##"
                             app:mask="###.##"
                             app:maxValue="110"
                             app:minValue="20"
@@ -746,7 +744,6 @@
                             android:id="@+id/pohrg02"
                             style="@style/EditText_number"
                             android:hint="##.##"
-                            android:inputType="number"
                             app:defaultValue="99"
                             app:mask="##.##"
                             app:maxValue="42"
@@ -770,7 +767,6 @@
                             android:id="@+id/pohrg03"
                             style="@style/EditText_number"
                             android:hint="###.##"
-                            android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="120"
@@ -794,7 +790,6 @@
                             android:id="@+id/pohrg04a"
                             style="@style/EditText_number"
                             android:hint="###.##"
-                            android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="105"
@@ -805,7 +800,6 @@
                             android:id="@+id/pohrg04b"
                             style="@style/EditText_number"
                             android:hint="###.##"
-                            android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
                             app:maxValue="105"
@@ -846,7 +840,6 @@
                                 android:id="@+id/pohrh01x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh01"
                                 android:text='@{pohrh01.checked? pohrh01x.getText.toString : "" }'
                                 android:visibility='@{pohrh01.checked? View.VISIBLE : View.GONE }'
@@ -867,7 +860,6 @@
                                 android:id="@+id/pohrh02x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh02"
                                 android:text='@{pohrh02.checked? pohrh02x.getText.toString : "" }'
                                 android:visibility='@{pohrh02.checked? View.VISIBLE : View.GONE}'
@@ -888,7 +880,6 @@
                                 android:id="@+id/pohrh03x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh03"
                                 android:text='@{pohrh03.checked? pohrh03x.getText.toString : "" }'
                                 android:visibility='@{pohrh03.checked? View.VISIBLE : View.GONE}'
@@ -909,7 +900,6 @@
                                 android:id="@+id/pohrh04x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh04"
                                 android:text='@{pohrh04.checked? pohrh04x.getText.toString : "" }'
                                 android:visibility='@{pohrh04.checked? View.VISIBLE : View.GONE}'
@@ -930,7 +920,6 @@
                                 android:id="@+id/pohrh05x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh05"
                                 android:text='@{pohrh05.checked? pohrh05x.getText.toString : "" }'
                                 android:visibility='@{pohrh05.checked? View.VISIBLE : View.GONE}'
@@ -951,7 +940,6 @@
                                 android:id="@+id/pohrh06x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh06"
                                 android:text='@{pohrh06.checked? pohrh06x.getText.toString : "" }'
                                 android:visibility='@{pohrh06.checked? View.VISIBLE : View.GONE}'
@@ -972,7 +960,6 @@
                                 android:id="@+id/pohrh07x"
                                 style="@style/EditText_number"
                                 android:hint="###.##"
-                                android:inputType="number"
                                 android:tag="pohrh07"
                                 android:text='@{pohrh07.checked? pohrh07x.getText.toString : "" }'
                                 android:visibility='@{pohrh07.checked? View.VISIBLE : View.GONE}'
@@ -993,7 +980,6 @@
                                 android:id="@+id/pohrh08x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh08"
                                 android:text='@{pohrh08.checked? pohrh08x.getText.toString : "" }'
                                 android:visibility='@{pohrh08.checked? View.VISIBLE : View.GONE}'
@@ -1015,7 +1001,6 @@
                                 android:id="@+id/pohrh09x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh09"
                                 android:text='@{pohrh09.checked? pohrh09x.getText.toString : "" }'
                                 android:visibility='@{pohrh09.checked? View.VISIBLE : View.GONE}'
@@ -1036,7 +1021,6 @@
                                 android:id="@+id/pohrh10x"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 android:tag="pohrh10"
                                 android:text='@{pohrh10.checked? pohrh10x.getText.toString : "" }'
                                 android:visibility='@{pohrh10.checked? View.VISIBLE : View.GONE}'
@@ -1150,8 +1134,7 @@
 
                             <EditText
                                 android:id="@+id/pohri96x"
-                                style="@style/textInput"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pohri96"
                                 android:text='@{pohri96.checked? pohri96x.getText.toString : "" }'
@@ -1248,7 +1231,6 @@
                                 android:id="@+id/pohrj02b"
                                 style="@style/EditText_number"
                                 android:hint="##.##"
-                                android:inputType="number"
                                 app:defaultValue="999"
                                 app:mask="##.##"
                                 app:maxValue="30"

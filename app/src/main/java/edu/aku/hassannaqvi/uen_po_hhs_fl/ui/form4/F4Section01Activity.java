@@ -54,7 +54,6 @@ public class F4Section01Activity extends AppCompatActivity {
         this.setTitle("Form 4 Hospital Physician");
         db = new DatabaseHelper(this);
 
-
         populateSpinner(this);
         events_call();
 
