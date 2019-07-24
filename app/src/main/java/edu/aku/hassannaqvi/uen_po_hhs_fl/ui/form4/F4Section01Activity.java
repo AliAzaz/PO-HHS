@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -57,8 +58,84 @@ public class F4Section01Activity extends AppCompatActivity {
         populateSpinner(this);
         events_call();
 
-        clickListener();
+    }
 
+
+    void events_call() {
+
+        bi.pohrf0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrf01, false);
+                    bi.lvpohrf01.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrf01, true);
+                    bi.lvpohrf01.setTag("0");
+                }
+            }
+        });
+
+
+        bi.pohrh97.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrhh2, false);
+                    bi.lvpohrhh2.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrhh2, true);
+                    bi.lvpohrhh2.setTag("0");
+                }
+            }
+        });
+
+
+        bi.pohri97.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohri, false);
+                    bi.lvpohri.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohri, true);
+                    bi.lvpohri.setTag("0");
+                }
+            }
+        });
+
+
+        bi.pohrj01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pohrj01a.getId()) {
+                    bi.pohrjlv.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.pohrjlv, null);
+                    bi.pohrjlv.setVisibility(View.GONE);
+                }
+
+            }
+
+        });
+
+
+        /*bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    ClearClass.ClearAllFields(bi.fldgrppofpb07, false);
+                    bi.fldgrppofpb07.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.fldgrppofpb07, true);
+                    bi.fldgrppofpb07.setTag("0");
+                }
+            }
+        });*/
     }
 
     public void populateSpinner(final Context context) {
@@ -168,12 +245,6 @@ public class F4Section01Activity extends AppCompatActivity {
     }
 
 
-    private void clickListener() {
-
-
-    }
-
-
     public void BtnContinue() {
 
         if (formValidation()) {
@@ -226,10 +297,6 @@ public class F4Section01Activity extends AppCompatActivity {
         }
     }
 
-
-    public boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section011);
-    }
 
     private void SaveDraft() throws JSONException {
 
@@ -391,12 +458,11 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrl01", bi.pohrl01a.isChecked() ? "1"
                         : bi.pohrl01b.isChecked() ? "2"
                         : bi.pohrl01c.isChecked() ? "3"
-                        : "0");
+                : bi.pohrl0197.isChecked() ? "97"
+                : "0");
 
         form04_01.put("pohrl01ax", bi.pohrl01ax.getText().toString());
         form04_01.put("pohrl01bx", bi.pohrl01bx.getText().toString());
-
-        form04_01.put("pohrl0197", bi.pohrl0197.isChecked() ? "97" : "0");
 
         form04_01.put("pohrl02", bi.pohrl02.getText().toString());
 
@@ -413,58 +479,8 @@ public class F4Section01Activity extends AppCompatActivity {
     }
 
 
-    void events_call() {
-
-        bi.pohrf0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (isChecked) {
-                    ClearClass.ClearAllFields(bi.lvpohrf01, false);
-                } else {
-                    ClearClass.ClearAllFields(bi.lvpohrf01, true);
-                }
-            }
-        });
-
-
-        bi.pohrh97.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (isChecked)
-                    ClearClass.ClearAllFields(bi.lvpohrhh2, false);
-                else
-                    ClearClass.ClearAllFields(bi.lvpohrhh2, true);
-            }
-        });
-
-
-        bi.pohri97.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (isChecked) {
-                    ClearClass.ClearAllFields(bi.lvpohri, false);
-                } else {
-                    ClearClass.ClearAllFields(bi.lvpohri, true);
-                }
-            }
-        });
-
-
-        /*bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    ClearClass.ClearAllFields(bi.fldgrppofpb07, false);
-                    bi.fldgrppofpb07.setTag("-1");
-                } else {
-                    ClearClass.ClearAllFields(bi.fldgrppofpb07, true);
-                    bi.fldgrppofpb07.setTag("0");
-                }
-            }
-        });*/
+    public boolean formValidation() {
+        return ValidatorClass.EmptyCheckingContainer(this, bi.f2Section011);
     }
 
 

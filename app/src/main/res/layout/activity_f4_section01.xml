@@ -385,9 +385,9 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrb05"
                             style="@style/EditText_number"
-                            android:hint="##.##"
+                            android:hint="###.##"
                             android:inputType="number"
-                            app:mask="##.##"
+                            app:mask="###.##"
                             app:maxValue="140"
                             app:minValue="60"
                             app:type="range" />
@@ -692,8 +692,7 @@
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                         <TextView
-                            style="@style/i_textview"
-                            android:background="@color/colorPrimaryDark"
+                            style="@style/i_textview2"
                             android:text="@string/pohrgh1" />
 
 
@@ -770,12 +769,12 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg03"
                             style="@style/EditText_number"
-                            android:hint="##.##"
+                            android:hint="###.##"
                             android:inputType="number"
                             app:defaultValue="999"
-                            app:mask="##.##"
-                            app:maxValue="60"
-                            app:minValue="1"
+                            app:mask="###.##"
+                            app:maxValue="120"
+                            app:minValue="40"
                             app:type="range" />
 
                     </LinearLayout>
@@ -794,7 +793,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04a"
                             style="@style/EditText_number"
-                            android:hint="##.##"
+                            android:hint="###.##"
                             android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
@@ -805,7 +804,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04b"
                             style="@style/EditText_number"
-                            android:hint="##.##"
+                            android:hint="###.##"
                             android:inputType="number"
                             app:defaultValue="999"
                             app:mask="###.##"
@@ -972,7 +971,7 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh07x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="###.##"
                                 android:inputType="number"
                                 android:tag="pohrh07"
                                 android:text='@{pohrh07.checked? pohrh07x.getText.toString : "" }'
@@ -1181,8 +1180,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
-                            android:background="@color/colorPrimaryDark"
+                            style="@style/i_textview2"
                             android:text="@string/pohrjh1" />
 
                     </LinearLayout>
@@ -1237,9 +1235,9 @@
 
                             <EditText
                                 android:id="@+id/pohrj02a"
-                                style="@style/textInput"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                android:hint="@string/other" />
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/nameW"
+                                android:text='@{pohrj01a.checked? pohrj02a.getText.toString : "" }' />
 
                             <TextView
                                 style="@style/i_textview"
@@ -1255,6 +1253,7 @@
                                 app:mask="##.##"
                                 app:maxValue="30"
                                 app:minValue="0"
+                                android:text='@{pohrj01a.checked? pohrj02b.getText.toString : "" }'
                                 app:type="range" />
 
                             <TextView
@@ -1264,11 +1263,11 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrj02c"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
-                                android:inputType="number"
-                                app:mask="#.##"
+                                android:hint="#"
+                                android:text='@{pohrj01a.checked? pohrj02c.getText.toString : "" }'
                                 app:maxValue="4"
                                 app:minValue="1"
+                                app:mask="#"
                                 app:type="range" />
 
                             <RadioGroup
@@ -1388,6 +1387,7 @@
                                 android:id="@+id/pohrj04dx"
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/pohrj04d"
+                                android:text='@{pohrj04d.checked? pohrj04dx.getText.toString : "" }'
                                 android:visibility='@{pohrj04d.checked? View.VISIBLE : View.GONE}' />
 
                             <CheckBox
@@ -1406,9 +1406,10 @@
                                 android:focusable="false"
                                 android:hint="DD/MM/YYYY"
                                 android:textColor="@android:color/black"
-                                android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}'
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE"
+                                android:text='@{pohrj04e.checked? pohrj04ex.getText.toString : "" }'
+                                android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}'
                                 app:minDate="01/08/2014" />
 
                         </LinearLayout>
@@ -1431,8 +1432,8 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrj05"
                             style="@style/EditText_number"
-                            android:inputType="number"
-                            android:maxLength="2"
+                            android:hint="##"
+                            app:mask="##"
                             app:defaultValue="99"
                             app:maxValue="20"
                             app:minValue="1"
