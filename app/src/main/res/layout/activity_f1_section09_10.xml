@@ -153,14 +153,14 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfj01bx"
+                            style="@style/EditText_number"
                             android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
                             android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
                             android:tag="pocfj01b"
-                            style="@style/EditText_numberDecimal"
                             android:hint="@string/pocfj01bt"
-                            app:maxValue="105.0"
-                            app:minValue="90.0"
-                            app:mask="###.#"
+                            app:mask="##.#"
+                            app:maxValue="43.0"
+                            app:minValue="33.0"
                             app:type="range" />
 
                         <CheckBox
@@ -249,10 +249,7 @@
 
                         <EditText
                             android:id="@+id/pocfj0196x"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocfj0196"
                             android:text='@{pocfj0196.checked? pocfj0196x.getText.toString : "" }'
@@ -296,10 +293,7 @@
 
                         <EditText
                             android:id="@+id/pocfj02ax"
-                            style="@style/textInput"
-                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocfj02a"
                             android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
