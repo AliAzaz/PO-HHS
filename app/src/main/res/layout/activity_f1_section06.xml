@@ -551,36 +551,32 @@
                         android:text="@string/pocff10" />
 
                     <LinearLayout
+                        android:tag="0"
                         style="@style/linearlayout_view_wt_bound">
 
                         <CheckBox
                             android:id="@+id/pocff10a"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocff10a" />
 
                         <CheckBox
                             android:id="@+id/pocff10b"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocff10b" />
 
                         <CheckBox
                             android:id="@+id/pocff10c"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocff10c" />
 
                         <CheckBox
                             android:id="@+id/pocff10d"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocff10d" />
 
                         <CheckBox
                             android:id="@+id/pocff10e"
                             style="@style/i_checkbox"
-
                             android:text="@string/pocff10e" />
 
                     </LinearLayout>
