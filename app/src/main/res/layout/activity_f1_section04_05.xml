@@ -114,51 +114,60 @@
                 android:id="@+id/cvpocfd03"
                 style="@style/cardView">
 
-                <TextView
-                    style="@style/i_textview"
-                    android:text="@string/pocfd03" />
-
                 <LinearLayout
-                    style="@style/linearlayout_view"
-                    android:tag="0">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <CheckBox
-                        android:id="@+id/pocfd03a"
-                        style="@style/i_checkbox"
-                        android:text="@string/pocfd03a" />
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/pocfd03" />
 
-                    <CheckBox
-                        android:id="@+id/pocfd03b"
-                        style="@style/i_checkbox"
-                        android:text="@string/pocfd03b" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                    <CheckBox
-                        android:id="@+id/pocfd03c"
-                        style="@style/i_checkbox"
-                        android:text="@string/pocfd03c" />
+                        <CheckBox
+                            android:id="@+id/pocfd03a"
+                            style="@style/i_checkbox"
+                            android:text="@string/pocfd03a" />
 
-                    <CheckBox
-                        android:id="@+id/pocfd03d"
-                        style="@style/i_checkbox"
-                        android:text="@string/pocfd03d" />
+                        <CheckBox
+                            android:id="@+id/pocfd03b"
+                            style="@style/i_checkbox"
+                            android:text="@string/pocfd03b" />
 
-                    <CheckBox
-                        android:id="@+id/pocfd03e"
-                        style="@style/i_checkbox"
-                        android:text="@string/pocfd03e" />
+                        <CheckBox
+                            android:id="@+id/pocfd03c"
+                            style="@style/i_checkbox"
+                            android:text="@string/pocfd03c" />
 
-                    <CheckBox
-                        android:id="@+id/pocfd0396"
-                        style="@style/i_checkbox"
-                        android:text="@string/other" />
+                        <CheckBox
+                            android:id="@+id/pocfd03d"
+                            style="@style/i_checkbox"
+                            android:text="@string/pocfd03d" />
 
-                    <EditText
-                        android:id="@+id/pocfd0396x"
-                        style="@style/EditText"
-                        android:hint="@string/other"
-                        android:tag="pocfd0396"
-                        android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
-                        android:visibility='@{pocfd0396.checked? View.VISIBLE : View.GONE}' />
+                        <CheckBox
+                            android:id="@+id/pocfd03e"
+                            style="@style/i_checkbox"
+                            android:text="@string/pocfd03e" />
+
+                        <CheckBox
+                            android:id="@+id/pocfd0396"
+                            style="@style/i_checkbox"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/pocfd0396x"
+                            style="@style/EditText"
+                            android:hint="@string/other"
+                            android:tag="pocfd0396"
+                            android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
+                            android:visibility='@{pocfd0396.checked? View.VISIBLE : View.GONE}' />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

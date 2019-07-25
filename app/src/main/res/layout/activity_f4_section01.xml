@@ -1411,7 +1411,6 @@
                             style="@style/i_textview"
                             android:text="@string/pohrj05" />
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrj05"
                             style="@style/EditText_number"

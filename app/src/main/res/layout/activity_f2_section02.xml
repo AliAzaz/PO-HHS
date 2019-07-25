@@ -307,7 +307,6 @@
 
                     <TextView
                         style="@style/i_textview"
-
                         android:text="@string/pofpb07" />
 
                     <LinearLayout
@@ -392,7 +391,6 @@
                             android:layout_marginBottom="3dp"
                             android:text="@string/pofpb08a" />
 
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -410,7 +408,6 @@
                             android:text="@string/pofpb083"
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
-
 
                         <RadioButton
                             android:id="@+id/pofpb08b"
