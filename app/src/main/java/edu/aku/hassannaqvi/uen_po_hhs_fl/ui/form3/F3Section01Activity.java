@@ -201,18 +201,56 @@ public class F3Section01Activity extends AppCompatActivity {
 
         bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofi05b.getId()) {
+                    bi.cvpofi06.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.cvpofi07, null);
+                    bi.cvpofi07.setVisibility(View.GONE);
+                } else {
+                    bi.cvpofi07.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.cvpofi06, null);
+                    bi.cvpofi06.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+       /* bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (!bi.pofi05a.isChecked()) {
                     bi.pofi06.clearCheck();
                 }
             }
-        });
+        });*/
 
-        bi.pofi09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        /*bi.pofi09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (bi.pofi09b.isChecked()) {
                     ClearClass.ClearAllFields(bi.fldGrppofi11, null);
+                }
+            }
+        });*/
+
+
+        bi.pofi09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofi09a.getId()) {
+                    bi.pofi10cv.setVisibility(View.VISIBLE);
+                    bi.pofi11cv.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.pofi12cv, null);
+                    bi.pofi12cv.setVisibility(View.GONE);
+                } else {
+                    bi.pofi12cv.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.pofi10cv, null);
+                    ClearClass.ClearAllFields(bi.pofi11cv, null);
+                    bi.pofi10cv.setVisibility(View.GONE);
+                    bi.pofi11cv.setVisibility(View.GONE);
                 }
             }
         });

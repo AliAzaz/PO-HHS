@@ -249,8 +249,8 @@
 
                 <!--pofi06-->
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
-                    android:visibility='@{!pofi05a.checked? View.VISIBLE : View.GONE}'>
+                    android:id="@+id/cvpofi06"
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view">
 
@@ -292,7 +292,9 @@
                 </android.support.v7.widget.CardView>
 
                 <!--pofi07-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvpofi07"
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view">
 
@@ -380,6 +382,7 @@
 
                 <!--pofi10-->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/pofi10cv"
                     style="@style/cardView"
                     android:visibility='@{pofi09a.checked ? View.VISIBLE : View.GONE}'>
 
@@ -477,7 +480,7 @@
 
                             <EditText
                                 android:id="@+id/pofi1196x"
-                                style="@style/i_radiobutton"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pofi1196"
                                 android:text='@{pofi1196.checked? pofi1196x.getText.toString : "" }'
@@ -491,6 +494,7 @@
 
                 <!--pofi12-->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/pofi12cv"
                     style="@style/cardView"
                     android:visibility='@{pofi09a.checked? View.GONE : View.VISIBLE}'>
 
@@ -576,7 +580,7 @@
 
                             <EditText
                                 android:id="@+id/pofi1296x"
-                                style="@style/i_radiobutton"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pofi1296"
                                 android:text='@{pofi1296.checked? pofi1296x.getText.toString : "" }'
