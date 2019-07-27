@@ -98,22 +98,20 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pofpb02a"
                         style="@style/EditText_number"
-                        android:hint="Respiratory Rate 01 in %"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="99"
-                        app:minValue="30"
+                        android:hint="###"
+                        app:mask="###"
+                        app:maxValue="110"
+                        app:minValue="20"
                         app:type="range" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pofpb02b"
                         style="@style/EditText_number"
-                        android:hint="Respiratory Rate 02 in %"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="99"
-                        app:minValue="30"
+                        android:hint="###"
+                        app:mask="###"
+                        app:maxValue="110"
+                        app:minValue="20"
                         app:type="range" />
 
 
@@ -200,23 +198,23 @@
                         style="@style/i_textview"
                         android:text="@string/pofpb04" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pofpb04a"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditText_number"
                         android:hint="%"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="###"
+                        app:maxValue="105"
+                        app:minValue="80"
+                        app:type="range" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pofpb04b"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditText_number"
                         android:hint="%"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        app:mask="###"
+                        app:maxValue="105"
+                        app:minValue="80"
+                        app:type="range" />
 
                 </LinearLayout>
 

@@ -852,10 +852,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa15ax"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/treat"
                                 android:tag="pofpa15a"
                                 android:text='@{pofpa15a.checked? pofpa15ax.getText.toString : "" }'
