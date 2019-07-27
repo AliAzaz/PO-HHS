@@ -73,11 +73,20 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId != bi.pofpa08a.getId()) {
-                    bi.cvpofpa12.setVisibility(View.VISIBLE);
+                if (checkedId == bi.pofpa08a.getId()) {
+                    bi.pofpa09cv.setVisibility(View.VISIBLE);
+                    bi.pofpa10cv.setVisibility(View.VISIBLE);
+                    bi.pofpa11cv.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.pofpa12cv, null);
+                    bi.pofpa12cv.setVisibility(View.GONE);
                 } else {
-                    ClearClass.ClearAllFields(bi.cvpofpa12, null);
-                    bi.cvpofpa12.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.pofpa09cv, null);
+                    ClearClass.ClearAllFields(bi.pofpa10cv, null);
+                    ClearClass.ClearAllFields(bi.pofpa11cv, null);
+                    bi.pofpa09cv.setVisibility(View.GONE);
+                    bi.pofpa10cv.setVisibility(View.GONE);
+                    bi.pofpa11cv.setVisibility(View.GONE);
+                    bi.pofpa12cv.setVisibility(View.VISIBLE);
                 }
             }
         });
