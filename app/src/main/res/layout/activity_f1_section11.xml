@@ -300,7 +300,7 @@
                         android:id="@+id/pocfk06a"
                         style="@style/EditText_number"
                         android:hint="%"
-                        android:maxLength="3"
+                        app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
                         app:type="range" />
@@ -309,7 +309,7 @@
                         android:id="@+id/pocfk06b"
                         style="@style/EditText_number"
                         android:hint="%"
-                        android:maxLength="3"
+                        app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
                         app:type="range" />
