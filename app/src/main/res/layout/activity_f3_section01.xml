@@ -117,7 +117,7 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="Referral ID" />
+                                android:text="@string/pofi00" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofi00"

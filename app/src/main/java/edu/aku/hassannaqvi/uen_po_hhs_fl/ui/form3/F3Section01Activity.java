@@ -51,6 +51,7 @@ public class F3Section01Activity extends AppCompatActivity {
         this.setTitle("Form 03 (Referral Form)");
 
         db = new DatabaseHelper(this);
+        populateSpinner(this);
         events_call();
 
         clickListener();
@@ -166,10 +167,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
 
     private void clickListener() {
-
-        db = new DatabaseHelper(this);
-        populateSpinner(this);
-
 
         bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
             @Override

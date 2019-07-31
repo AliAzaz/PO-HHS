@@ -18,11 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
-        tools:context=".ui.form2.F2Section01Activity">
+        tools:context=".ui.form4.F4Section01Activity">
 
 
         <LinearLayout
-            android:id="@+id/f2Section011"
+            android:id="@+id/llF4S1A"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -51,7 +51,9 @@
             <!--Info Section A startd -->
             <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
+                <LinearLayout
+                    android:id="@+id/llF4S1B"
+                    style="@style/linearlayout_view_wt_bound">
 
 
                     <!--pohra01-->
@@ -123,25 +125,6 @@
 
                     </android.support.v7.widget.CardView>
 
-                    <!--pohra04-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
-
-                        <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/pohra04" />
-
-                            <!-- <Spinner
-                                 android:id="@+id/pohra04"
-                                 android:layout_width="match_parent"
-                                 android:layout_height="wrap_content"
-                                 android:padding="20dp" />-->
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
                     <!--pohra05-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -179,6 +162,47 @@
 
                     </android.support.v7.widget.CardView>
 
+                    <!--pohra04-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohra04" />
+
+                            <!-- <Spinner
+                                 android:id="@+id/pohra04"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:padding="20dp" />-->
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pohra04"
+                                style="@style/EditText_number"
+                                android:hint="###"
+                                app:mask="###"
+                                app:maxValue="500"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <Button
+                        android:id="@+id/checkHHBtn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:elevation="5dp"
+                        android:text="CHECK"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -187,9 +211,9 @@
 
             <LinearLayout
                 android:id="@+id/llform04"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                style="@style/linearlayout_view"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <!--pohra09-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -712,8 +736,8 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg01a"
                             style="@style/EditText_number"
-                            android:hint="###.##"
-                            app:mask="###.##"
+                            android:hint="###"
+                            app:mask="###"
                             app:maxValue="110"
                             app:minValue="20"
                             app:type="range" />
@@ -721,8 +745,8 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg01b"
                             style="@style/EditText_number"
-                            android:hint="###.##"
-                            app:mask="###.##"
+                            android:hint="###"
+                            app:mask="###"
                             app:maxValue="110"
                             app:minValue="20"
                             app:type="range" />
@@ -743,9 +767,9 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg02"
                             style="@style/EditText_number"
-                            android:hint="##.##"
+                            android:hint="##.#"
                             app:defaultValue="99"
-                            app:mask="##.##"
+                            app:mask="##.#"
                             app:maxValue="42"
                             app:minValue="33"
                             app:type="range" />
@@ -766,9 +790,9 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg03"
                             style="@style/EditText_number"
-                            android:hint="###.##"
+                            android:hint="###"
                             app:defaultValue="999"
-                            app:mask="###.##"
+                            app:mask="###"
                             app:maxValue="120"
                             app:minValue="40"
                             app:type="range" />
@@ -789,9 +813,9 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04a"
                             style="@style/EditText_number"
-                            android:hint="###.##"
+                            android:hint="###"
                             app:defaultValue="999"
-                            app:mask="###.##"
+                            app:mask="###"
                             app:maxValue="105"
                             app:minValue="80"
                             app:type="range" />
@@ -799,9 +823,9 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pohrg04b"
                             style="@style/EditText_number"
-                            android:hint="###.##"
+                            android:hint="###"
                             app:defaultValue="999"
-                            app:mask="###.##"
+                            app:mask="###"
                             app:maxValue="105"
                             app:minValue="80"
                             app:type="range" />
@@ -846,7 +870,7 @@
                                 app:defaultValue="999"
                                 app:mask="##.##"
                                 app:maxValue="10"
-                                app:minValue="0"
+                                app:minValue="0.1"
                                 app:type="range" />
 
                             <CheckBox
@@ -879,12 +903,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh03x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="##.#"
                                 android:tag="pohrh03"
                                 android:text='@{pohrh03.checked? pohrh03x.getText.toString : "" }'
                                 android:visibility='@{pohrh03.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="##.##"
+                                app:mask="##.#"
                                 app:maxValue="70"
                                 app:minValue="15"
                                 app:type="range" />
@@ -919,12 +943,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh05x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="##.#"
                                 android:tag="pohrh05"
                                 android:text='@{pohrh05.checked? pohrh05x.getText.toString : "" }'
                                 android:visibility='@{pohrh05.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="##.##"
+                                app:mask="##.#"
                                 app:maxValue="99"
                                 app:minValue="10"
                                 app:type="range" />
@@ -939,12 +963,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh06x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="##.#"
                                 android:tag="pohrh06"
                                 android:text='@{pohrh06.checked? pohrh06x.getText.toString : "" }'
                                 android:visibility='@{pohrh06.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="##.##"
+                                app:mask="##.#"
                                 app:maxValue="70"
                                 app:minValue="10"
                                 app:type="range" />
@@ -959,12 +983,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh07x"
                                 style="@style/EditText_number"
-                                android:hint="###.##"
+                                android:hint="###"
                                 android:tag="pohrh07"
                                 android:text='@{pohrh07.checked? pohrh07x.getText.toString : "" }'
                                 android:visibility='@{pohrh07.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="###.##"
+                                app:mask="###"
                                 app:maxValue="900"
                                 app:minValue="50"
                                 app:type="range" />
@@ -979,12 +1003,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh08x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="##.#"
                                 android:tag="pohrh08"
                                 android:text='@{pohrh08.checked? pohrh08x.getText.toString : "" }'
                                 android:visibility='@{pohrh08.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="##.##"
+                                app:mask="##.#"
                                 app:maxValue="10"
                                 app:minValue="0"
                                 app:type="range" />
@@ -1000,12 +1024,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh09x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="##"
                                 android:tag="pohrh09"
                                 android:text='@{pohrh09.checked? pohrh09x.getText.toString : "" }'
                                 android:visibility='@{pohrh09.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="##.##"
+                                app:mask="##"
                                 app:maxValue="30"
                                 app:minValue="0"
                                 app:type="range" />
@@ -1020,12 +1044,12 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrh10x"
                                 style="@style/EditText_number"
-                                android:hint="##.##"
+                                android:hint="##"
                                 android:tag="pohrh10"
                                 android:text='@{pohrh10.checked? pohrh10x.getText.toString : "" }'
                                 android:visibility='@{pohrh10.checked? View.VISIBLE : View.GONE}'
                                 app:defaultValue="999"
-                                app:mask="##.##"
+                                app:mask="##"
                                 app:maxValue="22"
                                 app:minValue="0"
                                 app:type="range" />
@@ -1234,7 +1258,7 @@
                                 app:defaultValue="999"
                                 app:mask="##.##"
                                 app:maxValue="30"
-                                app:minValue="0"
+                                app:minValue="0.5"
                                 android:text='@{pohrj01a.checked? pohrj02b.getText.toString : "" }'
                                 app:type="range" />
 
@@ -1316,10 +1340,10 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--pohrj03-->
+                <!--pohrj04-->
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
-                    android:visibility='@{pohrj03a.checked? View.VISIBLE : View.GONE}'>
+                    android:id="@+id/pohrj04cv"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:id="@+id/pohrj8alv"
@@ -1329,7 +1353,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/pohrj03" />
+                            android:text="@string/pohrj04" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1384,7 +1408,7 @@
                                 android:id="@+id/pohrj04ex"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
+                                android:layout_marginStart="20dp"
                                 android:layout_weight="70"
                                 android:focusable="false"
                                 android:hint="DD/MM/YYYY"
@@ -1401,9 +1425,10 @@
 
                 </android.support.v7.widget.CardView>
 
-
                 <!--pohrj05 -->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pohrj05cv"
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
@@ -1640,8 +1665,7 @@
                         android:text="@string/end_interview"
                         android:textColor="@color/white"
                         android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
