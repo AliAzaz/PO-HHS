@@ -22,6 +22,7 @@
         android:layoutDirection="rtl">
 
         <LinearLayout
+            android:id="@+id/llF3S1A"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -34,22 +35,98 @@
             <!--Check HH button-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
+                <LinearLayout
+                    android:id="@+id/llF3S1B"
+                    style="@style/linearlayout_view_wt_bound">
 
-                    <!--pocfa06-->
+
+                    <!--pofi001-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="Case ID" />
+                                android:text="@string/pofi001" />
 
-                            <EditText
+                            <Spinner
+                                android:id="@+id/pofi001"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pofi002-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pofi002" />
+
+                            <Spinner
+                                android:id="@+id/pofi002"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--pofi003-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pofi003" />
+
+                            <Spinner
+                                android:id="@+id/pofi003"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:background="@android:color/darker_gray"
+                                android:paddingTop="5dp" />
+
+                            <TextView
+                                android:id="@+id/lhwcode"
+                                style="@style/textview_fm_lst_h" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!--pofi00-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="Referral ID" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofi00"
                                 style="@style/EditText_number"
-                                android:hint="XXXX"
-                                android:maxLength="4" />
+                                android:hint="###"
+                                app:mask="###"
+                                app:maxValue="500"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
@@ -70,6 +147,7 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
             <LinearLayout
                 android:id="@+id/llform03"
@@ -100,6 +178,42 @@
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy"
                             app:minDate="CR_DATE" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi004-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi004" />
+
+                        <EditText
+                            android:id="@+id/pofi004"
+                            style="@style/EditText"
+                            android:hint="@string/pofi004" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pofi005-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pofi005" />
+
+                        <EditText
+                            android:id="@+id/pofi005"
+                            style="@style/EditText"
+                            android:hint="@string/pofi005" />
 
                     </LinearLayout>
 
@@ -279,7 +393,7 @@
 
                             <EditText
                                 android:id="@+id/pofi0696x"
-                                style="@style/EditText"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pofi0696"
                                 android:text='@{pofi0696.checked? pofi0696x.getText.toString : "" }'
@@ -383,8 +497,7 @@
                 <!--pofi10-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/pofi10cv"
-                    style="@style/cardView"
-                    android:visibility='@{pofi09a.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
@@ -402,11 +515,10 @@
                             android:layout_height="wrap_content"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
-                            android:text='@{pofi09a.checked ? pofi10.getText.toString : ""}'
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy"
                             app:maxDate="CR_DATE"
-                            app:minDate="01/01/1981" />
+                            app:minDate="01/08/2014" />
 
                     </LinearLayout>
 
@@ -415,8 +527,7 @@
                 <!--pofi11-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/pofi11cv"
-                    style="@style/cardView"
-                    android:visibility='@{pofi09a.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view">
 
@@ -495,8 +606,7 @@
                 <!--pofi12-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/pofi12cv"
-                    style="@style/cardView"
-                    android:visibility='@{pofi09a.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view">
 

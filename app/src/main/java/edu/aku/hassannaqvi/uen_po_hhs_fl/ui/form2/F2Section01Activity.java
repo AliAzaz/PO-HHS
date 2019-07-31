@@ -1,8 +1,6 @@
 package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form2;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -392,7 +390,10 @@ public class F2Section01Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        /*if (!ValidatorClass.EmptyTextBox(this, bi.pofpa00, getString(R.string.pocfa06))) return;
+//        if (!ValidatorClass.EmptyTextBox(this, bi.pofpa00, getString(R.string.pocfa06))) return;
+
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.llF2S1))
+            return;
 
         try {
             SaveDraft();
@@ -404,9 +405,9 @@ public class F2Section01Activity extends AppCompatActivity {
             startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }*/
+        }
 
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section011))
+        /*if (!ValidatorClass.EmptyCheckingContainer(this, bi.llF2S1))
             return;
 
         new AlertDialog.Builder(this)
@@ -436,7 +437,7 @@ public class F2Section01Activity extends AppCompatActivity {
                         dialogInterface.dismiss();
                     }
                 })
-                .show();
+                .show();*/
     }
 
 }

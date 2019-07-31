@@ -139,7 +139,7 @@
     <string name="pocfh1"> سيڪشن01. گھر جي سڃاڻپ واري معلومات </string>
     <string name="pocfa01"> تعلقو </string>
     <string name="pocfa02"> يونين ڪائونسل </string>
-    <string name="pocfa03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو</string>
+    <string name="pocfa03"> ڪيس رپورٽ ڪندڙ ليڊي هيلٿ ورڪر جو نالو </string>
     <string name="pocfa04"> ڳوٺ/محلي جو نالو </string>
     <string name="pocfa05"> گھر جو سڃاڻپ نمبر </string>
     <string name="pocfa06"> گھر جو پتو(ايڊريس) </string>
@@ -657,6 +657,11 @@
 
     <!--FORM THREE 03-->
     <string name="pofisec1"> سيڪشن1. رفرل جي معلومات </string>
+    <string name="pofi001"> تعلقو </string>
+    <string name="pofi002"> يونين ڪائونسل </string>
+    <string name="pofi003"> هيلٿ ورڪر جو نالو </string>
+    <string name="pofi004"> ٻار جو نالو </string>
+    <string name="pofi005"> پيءُ جو نالو </string>
     <string name="pofi01"> موجوده دوري جي تاريخ ڏينهن-مهينو-سال </string>
     <string name="pofi02"> ڇا توهان رفرل سلپ ورتي؟ </string>
     <string name="pofi02bx"> جيڪڏهن نه، ته ڇو نه </string>
