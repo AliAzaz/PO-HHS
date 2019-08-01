@@ -104,10 +104,8 @@
             </RadioGroup>
 
             <EditText
-                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                 android:id="@+id/istatus888x"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/EditTextAlphaNumeric"
                 android:layout_marginBottom="1dp"
                 android:hint="@string/other"
                 android:inputType="textCapWords"

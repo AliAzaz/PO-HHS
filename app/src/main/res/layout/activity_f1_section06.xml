@@ -88,10 +88,7 @@
 
                         <EditText
                             android:id="@+id/pocff0196x"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocff0196"
                             android:text='@{pocff0196.checked? pocff0196x.getText.toString : "" }'
@@ -168,10 +165,7 @@
 
                         <EditText
                             android:id="@+id/pocff02gx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocff02g"
                             android:text='@{pocff02g.checked? pocff02gx.getText.toString : "" }'
@@ -205,10 +199,7 @@
 
                         <EditText
                             android:id="@+id/pocff02kx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocff02k"
                             android:text='@{pocff02k.checked? pocff02kx.getText.toString : "" }'
@@ -221,10 +212,7 @@
 
                         <EditText
                             android:id="@+id/pocff02lx"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocff02l"
                             android:text='@{pocff02l.checked? pocff02lx.getText.toString : "" }'
@@ -446,7 +434,6 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocff07bx"
                             style="@style/EditText_number"
-                            android:digits="0123456789."
                             android:hint="##.##"
                             android:layoutDirection="ltr"
                             android:tag="pocff07b"
@@ -528,8 +515,7 @@
                         android:id="@+id/pocff09"
                         style="@style/EditText_number"
                         android:hint="@string/month"
-                        android:inputType="number"
-                        android:maxLength="2"
+                        app:mask="##"
                         android:text='@{pocff08d.checked? "" : pocff09.getText.toString }'
                         app:maxValue="30"
                         app:minValue="0"
@@ -600,8 +586,7 @@
                         android:id="@+id/pocff11"
                         style="@style/EditText_number"
                         android:hint="@string/num"
-                        android:inputType="number"
-                        android:maxLength="2"
+                        app:mask="##"
                         app:maxValue="15"
                         app:minValue="2"
                         app:type="range" />

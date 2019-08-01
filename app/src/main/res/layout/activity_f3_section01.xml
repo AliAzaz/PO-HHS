@@ -192,7 +192,7 @@
 
                         <EditText
                             android:id="@+id/pofi004"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pofi004" />
 
                     </LinearLayout>
@@ -210,7 +210,7 @@
 
                         <EditText
                             android:id="@+id/pofi005"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pofi005" />
 
                     </LinearLayout>
@@ -242,7 +242,7 @@
 
                             <EditText
                                 android:id="@+id/pofi02bx"
-                                style="@style/EditText"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/pofi02bx"
                                 android:tag="pofi02b"
                                 android:text='@{pofi02b.checked? pofi02bx.getText.toString : "" }'
@@ -280,7 +280,7 @@
 
                             <EditText
                                 android:id="@+id/pofi03bx"
-                                style="@style/EditText"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/pofi02bx"
                                 android:tag="pofi03b"
                                 android:text='@{pofi03b.checked? pofi03bx.getText.toString : "" }'
@@ -318,7 +318,7 @@
 
                             <EditText
                                 android:id="@+id/pofi04ax"
-                                style="@style/EditText"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/pofi04ax"
                                 android:tag="pofi04a"
                                 android:text='@{pofi04a.checked? pofi04ax.getText.toString : "" }'

@@ -161,7 +161,7 @@
 
                         <EditText
                             android:id="@+id/pocfd0396x"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocfd0396"
                             android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
@@ -279,7 +279,7 @@
 
                         <EditText
                             android:id="@+id/pocfe0496x"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocfe0496"
                             android:text='@{pocfe0496.checked? pocfe0496x.getText.toString : "" }'
@@ -423,7 +423,7 @@
 
                         <EditText
                             android:id="@+id/pocfe0796x"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/other"
                             android:tag="pocfe0796"
                             android:text='@{pocfe0796.checked? pocfe0796x.getText.toString : "" }'
@@ -537,7 +537,7 @@
                         android:id="@+id/pocfe11"
                         style="@style/EditText_number"
                         android:hint="@string/num"
-                        android:maxLength="2"
+                        app:mask="##"
                         android:text='@{pocfe10a.checked ? pocfe11.getText.toString : "" }'
                         app:maxValue="40"
                         app:minValue="1"
@@ -627,7 +627,7 @@
                         android:id="@+id/pocfe14"
                         style="@style/EditText_number"
                         android:hint="@string/num"
-                        android:maxLength="2"
+                        app:mask="##"
                         android:text='@{pocfe13a.checked ? pocfe14.getText.toString : "" }'
                         app:maxValue="40"
                         app:minValue="1"
@@ -717,7 +717,7 @@
                         android:id="@+id/pocfe17"
                         style="@style/EditText_number"
                         android:hint="@string/num"
-                        android:maxLength="2"
+                        app:mask="##"
                         android:text='@{pocfe16a.checked ? pocfe17.getText.toString : "" }'
                         app:maxValue="40"
                         app:minValue="1"

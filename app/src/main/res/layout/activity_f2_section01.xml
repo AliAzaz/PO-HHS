@@ -118,9 +118,8 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa00"
                                 style="@style/EditText_number"
-                                android:hint="XXX"
-                                android:inputType="number"
-                                android:maxLength="3"
+                                android:hint="###"
+                                app:mask="###"
                                 app:maxValue="500"
                                 app:minValue="1"
                                 app:type="range" />
@@ -215,7 +214,7 @@
 
                         <EditText
                             android:id="@+id/pofpa05"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pofpa05" />
 
                     </LinearLayout>
@@ -233,7 +232,7 @@
 
                         <EditText
                             android:id="@+id/pofpa06"
-                            style="@style/EditText"
+                            style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pofpa06" />
 
                     </LinearLayout>
@@ -282,10 +281,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa07cx"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/name"
                                 android:tag="pofpa07c"
                                 android:text='@{pofpa07c.checked? pofpa07cx.getText.toString : "" }'
@@ -301,10 +297,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa07dx"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/name"
                                 android:tag="pofpa07d"
                                 android:text='@{pofpa07d.checked? pofpa07dx.getText.toString : "" }'
@@ -321,10 +314,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa0796x"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pofpa0796"
                                 android:text='@{pofpa0796.checked? pofpa0796x.getText.toString : "" }'
@@ -394,8 +384,7 @@
                             android:id="@+id/pofpa09"
                             style="@style/EditText_number"
                             android:hint="@string/num"
-                            android:inputType="number"
-                            android:maxLength="2"
+                            app:mask="##"
                             app:maxValue="14"
                             app:minValue="1"
                             app:type="range"
@@ -477,6 +466,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa11a"
+                                style="@style/textInput"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -499,12 +489,12 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa11b"
+                                style="@style/EditText_number"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/pofpa11b"
-                                android:inputType="number"
-                                android:maxLength="1"
+                                app:mask="#"
                                 app:maxValue="4"
                                 app:minValue="1"
                                 app:type="range" />
@@ -528,6 +518,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa11c"
+                                style="@style/EditTextAlphaNumeric"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -607,6 +598,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa12a"
+                                style="@style/EditTextAlphaNumeric"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -627,12 +619,12 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa12b"
+                                style="@style/EditText_number"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/pofpa12b"
-                                android:inputType="number"
-                                android:maxLength="1"
+                                app:mask="#"
                                 app:maxValue="4"
                                 app:minValue="1"
                                 app:type="range" />
@@ -655,6 +647,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa12c"
+                                style="@style/EditTextAlphaNumeric"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -813,10 +806,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa1496x"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pofpa1496"
                                 android:text='@{pofpa1496.checked? pofpa1496x.getText.toString : "" }'
@@ -922,10 +912,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa1696x"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/other"
                                 android:tag="pofpa1696"
                                 android:text='@{pofpa1696.checked? pofpa1696x.getText.toString : "" }'
@@ -967,6 +954,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa17a"
+                                style="@style/EditTextAlphaNumeric"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -988,12 +976,12 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa17b"
+                                style="@style/EditText_number"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/pofpa17b"
-                                android:inputType="number"
-                                android:maxLength="1"
+                                app:mask="#"
                                 app:maxValue="4"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1013,6 +1001,7 @@
 
                             <EditText
                                 android:id="@+id/pofpa17c"
+                                style="@style/EditTextAlphaNumeric"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
