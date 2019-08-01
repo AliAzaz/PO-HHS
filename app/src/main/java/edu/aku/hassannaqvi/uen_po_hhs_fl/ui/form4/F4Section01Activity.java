@@ -358,6 +358,7 @@ public class F4Section01Activity extends AppCompatActivity {
         MainApp.fc.setDeviceID(MainApp.deviceId);
         MainApp.fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         MainApp.fc.setFormType(MainApp.formtype);
+        MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
         JSONObject form04_01 = new JSONObject();
@@ -465,7 +466,7 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrh96", bi.pohrh96.isChecked() ? "96" : "0");
         form04_01.put("pohrh96x", bi.pohrh96x.getText().toString());
 
-        form04_01.put("pohrh97", bi.pohrh97.getText().toString());
+        form04_01.put("pohrh97", bi.pohrh97.isChecked() ? "97" : "0");
 
 
         form04_01.put("pohri01", bi.pohri01.isChecked() ? "1" : "0");
