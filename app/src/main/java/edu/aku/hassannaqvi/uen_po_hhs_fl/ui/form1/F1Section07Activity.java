@@ -300,6 +300,7 @@ public class F1Section07Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
+
         MainApp.endActivity(this, this);
     }
 

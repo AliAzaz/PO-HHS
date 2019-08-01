@@ -87,6 +87,12 @@ public class F1Section02_03Activity extends AppCompatActivity {
         }
     }
 
+
+    public void BtnEnd() {
+        MainApp.endActivity(this, this);
+    }
+
+
     private boolean UpdateDB() {
 
         DatabaseHelper db = new DatabaseHelper(this);
@@ -174,9 +180,6 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
     }
 
-    public void BtnEnd() {
-        MainApp.endActivity(this, this);
-    }
 
     @Override
     public void onBackPressed() {

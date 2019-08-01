@@ -258,11 +258,12 @@ public class F2Section01Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                finish();
 
                 if (DAY.equals("7")) {
+                    finish();
                     startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
                 } else {
+                    finish();
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
                 }
 

@@ -1,8 +1,6 @@
 package edu.aku.hassannaqvi.uen_po_hhs_fl.ui.form1;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -30,6 +28,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section01Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
@@ -174,12 +173,33 @@ public class F1Section01Activity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
+                finish();
                 startActivity(new Intent(this, F1Section02_03Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
+
+
+    public void BtnEnd() {
+
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA02))
+            return;
+
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     private boolean UpdateDB() {
 
@@ -250,43 +270,7 @@ public class F1Section01Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
         return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01);
-    }
-
-    public void BtnEnd() {
-
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA02))
-            return;
-
-        new AlertDialog.Builder(this)
-                .setTitle("END INTERVIEW")
-                .setIcon(R.drawable.ic_power_settings_new_black_24dp)
-                .setCancelable(false)
-                .setCancelable(false)
-                .setMessage("Do you want to End Interview??")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        try {
-                            SaveDraft();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        if (!UpdateDB()) {
-                            Toast.makeText(F1Section01Activity.this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                        MainApp.endActivity(F1Section01Activity.this, F1Section01Activity.this);
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                })
-                .show();
     }
 
 }
