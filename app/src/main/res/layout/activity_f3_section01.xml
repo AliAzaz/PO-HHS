@@ -171,8 +171,6 @@
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/pofi01"
                             style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
@@ -511,8 +509,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/pofi10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/textInput"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"

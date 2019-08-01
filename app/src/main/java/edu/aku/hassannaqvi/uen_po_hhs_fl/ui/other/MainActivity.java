@@ -212,7 +212,6 @@ public class MainActivity extends Activity {
         editorDownload = sharedPrefDownload.edit();
 
 
-
 //        Version Checking
         versionAppContract = db.getVersionApp();
         if (versionAppContract.getVersioncode() != null) {
@@ -301,7 +300,7 @@ public class MainActivity extends Activity {
 
 
         Collection<FormsContract> todaysForms = db.getTodayForms();
-        Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
+        Collection<FormsContract> unsyncedForms = db.getUnsyncedForms(null);
 
         rSumText += "TODAY'S RECORDS SUMMARY\r\n";
 

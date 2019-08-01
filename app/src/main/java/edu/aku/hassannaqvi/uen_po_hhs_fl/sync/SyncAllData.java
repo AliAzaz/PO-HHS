@@ -59,6 +59,7 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
         TAG = "Get" + syncClass;
         uploadlist.get(position).settableName(syncClass);
     }
+
     public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, String url, Collection dbData, int position, UploadListAdapter adapter, List<SyncModel> uploadlist) {
         mContext = context;
         this.syncClass = syncClass;

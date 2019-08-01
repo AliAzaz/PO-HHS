@@ -83,6 +83,7 @@ public class SyncActivity extends AppCompatActivity {
         setAdapter();
         setUploadAdapter();
     }
+
     public void onSyncDataClick() {
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
@@ -132,6 +133,7 @@ public class SyncActivity extends AppCompatActivity {
             bi.noItem.setVisibility(View.VISIBLE);
         }
     }
+
     void setUploadAdapter() {
         uploadListAdapter = new UploadListAdapter(uploadlist);
         RecyclerView.LayoutManager mLayoutManager2 = new LinearLayoutManager(getApplicationContext());
@@ -146,103 +148,90 @@ public class SyncActivity extends AppCompatActivity {
         }
     }
 
-    public class syncData extends AsyncTask<String, String, String> {
+    public void syncServer() {
+//        if(true) return;
 
-        private Context mContext;
+        // Require permissions INTERNET & ACCESS_NETWORK_STATE
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
 
-        public syncData(Context mContext) {
-            this.mContext = mContext;
+            DatabaseHelper db = new DatabaseHelper(this);
+            //syncStatus.setText(null);
+            new SyncDevice(this).execute();
+//  *******************************************************Forms*********************************
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Forms-1",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "01.php"),
+                    db.getUnsyncedForms("f1"), 0, uploadListAdapter, uploadlist
+            ).execute();
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Forms-2",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "02.php"),
+                    db.getUnsyncedForms("f2"), 1, uploadListAdapter, uploadlist
+            ).execute();
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Forms-3",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "03.php"),
+                    db.getUnsyncedForms("f3"), 2, uploadListAdapter, uploadlist
+            ).execute();
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            if (uploadlistActivityCreated) {
+                uploadmodel = new SyncModel();
+                uploadmodel.setstatusID(0);
+                uploadlist.add(uploadmodel);
+            }
+            new SyncAllData(
+                    this,
+                    "Forms-4",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "04.php"),
+                    db.getUnsyncedForms("f4"), 3, uploadListAdapter, uploadlist
+            ).execute();
+            bi.noDataItem.setVisibility(View.GONE);
+
+            uploadlistActivityCreated = false;
+
+            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = syncPref.edit();
+
+            editor.putString("LastUpSyncServer", dtToday);
+
+            editor.apply();
+
+        } else {
+            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
 
-        @Override
-        protected String doInBackground(String... strings) {
-            runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    new SyncDevice(SyncActivity.this).execute();
-//                  getting VersionApp
-                    Toast.makeText(SyncActivity.this, "Sync VersionApp", Toast.LENGTH_SHORT).show();
-
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
-                    bi.noItem.setVisibility(View.GONE);
-
-//                 getting Users
-                    Toast.makeText(SyncActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
-
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "Users", syncListAdapter, list).execute();
-
-//                  getting UCs!!
-                    Toast.makeText(SyncActivity.this, "Sync UCs", Toast.LENGTH_SHORT).show();
-
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "UCs", syncListAdapter, list).execute();
-
-//                   getting LHW
-                    Toast.makeText(SyncActivity.this, "Sync LHW", Toast.LENGTH_SHORT).show();
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "LHW", syncListAdapter, list).execute();
-
-//                    Getting Taluka
-                    Toast.makeText(SyncActivity.this, "Sync Taluka", Toast.LENGTH_SHORT).show();
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "Taluka", syncListAdapter, list).execute();
-
-//                    Getting Villages
-                    Toast.makeText(SyncActivity.this, "Sync Villages", Toast.LENGTH_SHORT).show();
-                    if (listActivityCreated){
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
-
-                    listActivityCreated = false;
-                }
-            });
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-
-//                    populateSpinner(mContext);
-
-                    editor.putBoolean("flag", true);
-                    editor.commit();
-
-                    dbBackup();
-
-                }
-            }, 1200);
-        }
     }
 
     public void dbBackup() {
@@ -304,50 +293,105 @@ public class SyncActivity extends AppCompatActivity {
         }
 
     }
-    public void syncServer() {
-//        if(true) return;
 
-        // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
+    public class syncData extends AsyncTask<String, String, String> {
 
-            DatabaseHelper db = new DatabaseHelper(this);
-            //syncStatus.setText(null);
-            new SyncDevice(this).execute();
-//  *******************************************************Forms*********************************
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
-            if (uploadlistActivityCreated){
-                uploadmodel = new SyncModel();
-                uploadmodel.setstatusID(0);
-                uploadlist.add(uploadmodel);
-            }
-            new SyncAllData(
-                    this,
-                    "Forms",
-                    "updateSyncedForms",
-                    FormsContract.class,
-                    MainApp._HOST_URL + FormsContract.FormsTable._URL,
-                    db.getUnsyncedForms(),0,uploadListAdapter,uploadlist
-            ).execute();
-            bi.noDataItem.setVisibility(View.GONE);
+        private Context mContext;
 
-            uploadlistActivityCreated = false;
-
-            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = syncPref.edit();
-
-            editor.putString("LastUpSyncServer", dtToday);
-
-            editor.apply();
-
-        } else {
-            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+        public syncData(Context mContext) {
+            this.mContext = mContext;
         }
 
-    }
+        @Override
+        protected String doInBackground(String... strings) {
+            runOnUiThread(new Runnable() {
 
+                @Override
+                public void run() {
+                    new SyncDevice(SyncActivity.this).execute();
+//                  getting VersionApp
+                    Toast.makeText(SyncActivity.this, "Sync VersionApp", Toast.LENGTH_SHORT).show();
+
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
+                    bi.noItem.setVisibility(View.GONE);
+
+//                 getting Users
+                    Toast.makeText(SyncActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
+
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Users", syncListAdapter, list).execute();
+
+//                  getting UCs!!
+                    Toast.makeText(SyncActivity.this, "Sync UCs", Toast.LENGTH_SHORT).show();
+
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "UCs", syncListAdapter, list).execute();
+
+//                   getting LHW
+                    Toast.makeText(SyncActivity.this, "Sync LHW", Toast.LENGTH_SHORT).show();
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "LHW", syncListAdapter, list).execute();
+
+//                    Getting Taluka
+                    Toast.makeText(SyncActivity.this, "Sync Taluka", Toast.LENGTH_SHORT).show();
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Taluka", syncListAdapter, list).execute();
+
+//                    Getting Villages
+                    Toast.makeText(SyncActivity.this, "Sync Villages", Toast.LENGTH_SHORT).show();
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
+
+                    listActivityCreated = false;
+                }
+            });
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+
+//                    populateSpinner(mContext);
+
+                    editor.putBoolean("flag", true);
+                    editor.commit();
+
+                    dbBackup();
+
+                }
+            }, 1200);
+        }
+    }
 
 
 }

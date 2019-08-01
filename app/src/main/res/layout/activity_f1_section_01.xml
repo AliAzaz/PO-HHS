@@ -392,8 +392,6 @@
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/pocfa12"
                             style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
                             android:text='@{pocfa11a.checked ? pocfa12.getText.toString : ""}'

@@ -226,8 +226,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/pohra09"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/textInput"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="70"
                             android:focusable="false"
@@ -322,8 +321,7 @@
 
                         <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/pohrb02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            style="@style/textInput"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="70"
                             android:focusable="false"
@@ -1406,8 +1404,7 @@
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                                 android:id="@+id/pohrj04ex"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                style="@style/textInput"
                                 android:layout_marginStart="20dp"
                                 android:layout_weight="70"
                                 android:focusable="false"
@@ -1522,8 +1519,7 @@
 
                                 <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                                     android:id="@+id/pohrl01ax"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    style="@style/textInput"
                                     android:layout_marginLeft="20dp"
                                     android:layout_weight="70"
                                     android:focusable="false"
