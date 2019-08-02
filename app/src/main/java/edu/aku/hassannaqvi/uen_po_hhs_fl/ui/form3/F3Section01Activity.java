@@ -31,6 +31,7 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF3Section01Binding;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
@@ -328,6 +329,8 @@ public class F3Section01Activity extends AppCompatActivity {
 
 
     void events_call() {
+
+        bi.pofi10.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
 
         bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
