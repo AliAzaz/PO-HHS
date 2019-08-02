@@ -105,6 +105,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
     private static final String SQL_SELECT_MWRA =
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
+    private static final String SQL_DELETE_CHILDREN = "DROP TABLE IF EXISTS " + singleChild.TABLE_NAME;
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + singleUCs.TABLE_NAME;
@@ -143,6 +144,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleAreas.COLUMN_AREACODE + " TEXT,"
             + singleAreas.COLUMN_UC_CODE + " TEXT,"
             + singleAreas.COLUMN_AREA + " TEXT );";
+    final String SQL_CREATE_CHILDREN = "CREATE TABLE " + singleChild.TABLE_NAME + "("
+            + singleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + singleChild.COLUMN_F_NAME + " TEXT,"
+            + singleChild.COLUMN_CASEID + " TEXT,"
+            + singleChild.COLUMN_CHILD_NAME + " TEXT, "
+            + singleChild.COLUMN_REP_DATE + " TEXT, "
+            + singleChild.COLUMN_LUID + " TEXT );";
     private final String TAG = "DatabaseHelper";
 
 
@@ -160,6 +168,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_FORMS);
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
+        db.execSQL(SQL_CREATE_CHILDREN);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_LHW_TABLE);
@@ -171,6 +180,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_USERS);
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL("DROP TABLE IF EXISTS " + lhwEntry.TABLE_NAME);
+        db.execSQL(SQL_DELETE_CHILDREN);
         db.execSQL(SQL_DELETE_VILLAGES);
         db.execSQL(SQL_DELETE_TALUKAS);
         db.execSQL(SQL_DELETE_UCS);
