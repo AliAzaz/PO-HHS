@@ -23,7 +23,7 @@ public class ChildrenContract {
         return f_name;
     }
 
-    public String getCaseide() {
+    public String getCaseid() {
         return caseid;
     }
 
@@ -63,13 +63,12 @@ public class ChildrenContract {
     public static abstract class singleChild implements BaseColumns {
 
         public static final String TABLE_NAME = "children";
-        public static final String COLUMN_NAME_NULLABLE = "nullColumnHack";
         public static final String _ID = "_ID";
-        public static final String COLUMN_F_NAME = "taluka_code";
-        public static final String COLUMN_CASEID = "taluka_name";
-        public static final String COLUMN_CHILD_NAME = "uc_code";
-        public static final String COLUMN_REP_DATE = "uc_name";
-        public static final String COLUMN_LUID = "village_code";
+        public static final String COLUMN_F_NAME = "f_name";
+        public static final String COLUMN_CASEID = "caseid";
+        public static final String COLUMN_CHILD_NAME = "child_name";
+        public static final String COLUMN_REP_DATE = "rep_date";
+        public static final String COLUMN_LUID = "luid";
 
         public static final String _URI = "children.php";
     }

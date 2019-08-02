@@ -367,6 +367,15 @@ public class SyncActivity extends AppCompatActivity {
                     }
                     new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
 
+//                    Getting Children
+                    Toast.makeText(SyncActivity.this, "Sync Children", Toast.LENGTH_SHORT).show();
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Children", syncListAdapter, list).execute();
+
                     listActivityCreated = false;
                 }
             });

@@ -20,6 +20,8 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract.singleAreas;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract.singleChild;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
@@ -174,6 +176,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_UCS);
         db.execSQL(SQL_DELETE_AREAS);
 
+    }
+
+    public void syncChildren(JSONArray pcList) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(singleChild.TABLE_NAME, null, null);
+
+        try {
+            JSONArray jsonArray = pcList;
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectPSU = jsonArray.getJSONObject(i);
+
+                ChildrenContract cc = new ChildrenContract();
+                cc.sync(jsonObjectPSU);
+                Log.i(TAG, "syncChildren: " + jsonObjectPSU.toString());
+
+                ContentValues values = new ContentValues();
+
+                values.put(singleChild.COLUMN_F_NAME, cc.getF_name());
+                values.put(singleChild.COLUMN_CASEID, cc.getCaseid());
+                values.put(singleChild.COLUMN_CHILD_NAME, cc.getChild_name());
+                values.put(singleChild.COLUMN_REP_DATE, cc.getRep_date());
+                values.put(singleChild.COLUMN_LUID, cc.getLuid());
+
+                db.insert(singleVillage.TABLE_NAME, null, values);
+            }
+            db.close();
+
+        } catch (Exception e) {
+
+        }
     }
 
     public void syncVillages(JSONArray pcList) {

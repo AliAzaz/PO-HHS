@@ -243,7 +243,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             break;
                         case "Children":
                             db.syncVillages(jsonArray);
-                            position = 5;
+                            position = 6;
                             break;
                     }
 
