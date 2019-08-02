@@ -57,6 +57,7 @@
                 android:background="@color/black"
                 android:padding="20dp"
                 android:text="Records Summary"
+                android:textAlignment="center"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:typeface="monospace" />

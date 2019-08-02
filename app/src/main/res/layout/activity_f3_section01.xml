@@ -175,7 +175,7 @@
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy"
-                            app:minDate="CR_DATE" />
+                            app:maxDate="CR_DATE" />
 
                     </LinearLayout>
 

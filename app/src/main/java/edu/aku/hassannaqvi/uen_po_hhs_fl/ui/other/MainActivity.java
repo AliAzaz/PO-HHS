@@ -70,6 +70,7 @@ public class MainActivity extends Activity {
     private final String TAG = "MainActivity";
 
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    String dtToday1 = new SimpleDateFormat("dd-MMM-yyyy").format(new Date());
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
     AlertDialog.Builder builder;
@@ -306,7 +307,7 @@ public class MainActivity extends Activity {
 
         rSumText += "=======================\r\n";
         rSumText += "\r\n";
-        rSumText += "Total Forms Today: " + todaysForms.size() + "\r\n";
+        rSumText += "Total Forms Today" + "(" + dtToday1 + "): " + todaysForms.size() + "\r\n";
         rSumText += "\r\n";
         if (todaysForms.size() > 0) {
             rSumText += "\tFORMS' LIST: \r\n";

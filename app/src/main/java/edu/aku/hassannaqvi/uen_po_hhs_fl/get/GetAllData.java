@@ -17,6 +17,7 @@ import java.net.URL;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.adapter.SyncListAdapter;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.UCsContract;
@@ -75,8 +76,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "Villages":
                 position = 5;
                 break;
-            case "BLRandom":
+            case "Children":
                 position = 6;
+                break;
+            case "BLRandom":
+                position = 7;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -118,8 +122,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "Villages":
                 position = 5;
                 break;
-            case "BLRandom":
+            case "Children":
                 position = 6;
+                break;
+            case "BLRandom":
+                position = 7;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -159,6 +166,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 case "Villages":
                     url = new URL(MainApp._HOST_URL + VillagesContract.singleVillage._URI);
                     position = 5;
+                    break;
+                case "Children":
+                    url = new URL(MainApp._HOST_URL + ChildrenContract.singleChild._URI);
+                    position = 6;
                     break;
 
             }
@@ -227,6 +238,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             position = 4;
                             break;
                         case "Villages":
+                            db.syncVillages(jsonArray);
+                            position = 5;
+                            break;
+                        case "Children":
                             db.syncVillages(jsonArray);
                             position = 5;
                             break;

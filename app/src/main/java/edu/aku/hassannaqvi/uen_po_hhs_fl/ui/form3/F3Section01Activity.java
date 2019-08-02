@@ -226,8 +226,7 @@ public class F3Section01Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            MainApp.endActivity(this, this);
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
@@ -330,6 +329,7 @@ public class F3Section01Activity extends AppCompatActivity {
 
     void events_call() {
 
+        bi.pofi01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
         bi.pofi10.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
 
         bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
