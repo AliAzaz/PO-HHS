@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.aku.hassannaqvi.uen_po_hhs.activities.EndingActivity">
+    tools:context="edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity">
+
 
     <ScrollView
+        android:layoutDirection="rtl"
         android:id="@+id/scrollView01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,14 +18,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layoutDirection="ltr"
+            android:layoutDirection="rtl"
             android:orientation="vertical">
 
             <TextView
+                style="@style/i_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
+                android:textSize="30dp"
                 android:text="@string/dcstatus"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
@@ -37,56 +41,71 @@
                     android:id="@+id/istatus1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus1" />
 
                 <RadioButton
                     android:id="@+id/istatus2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus2" />
 
                 <RadioButton
                     android:id="@+id/istatus3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus3" />
 
                 <RadioButton
                     android:id="@+id/istatus4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus4" />
 
                 <RadioButton
                     android:id="@+id/istatus5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus5" />
 
                 <RadioButton
                     android:id="@+id/istatus6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus6" />
 
                 <RadioButton
                     android:id="@+id/istatus7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/istatus7" />
 
                 <RadioButton
                     android:id="@+id/istatus8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="25sp"
                     android:text="@string/other" />
 
             </RadioGroup>
 
             <EditText
                 android:id="@+id/istatus888x"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/EditTextAlphaNumeric"
                 android:layout_marginBottom="1dp"
                 android:hint="@string/other"
                 android:inputType="textCapWords"
@@ -100,6 +119,7 @@
                 android:layout_weight="1"
                 android:onClick="endInterview"
                 android:text="@string/end_interview"
+                android:textSize="30dp"
                 android:textColor="#ff1e1e" />
 
 

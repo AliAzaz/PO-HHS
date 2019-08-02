@@ -2,12 +2,9 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
-        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <item name="android:textViewStyle">@style/labels</item>
-        <item name="android:editTextStyle">@style/textInput</item>
-        <item name="android:buttonStyle">@style/buttons</item>
-        <item name="android:checkboxStyle">@style/checkbox</item>
-        <item name="android:radioButtonStyle">@style/radiobutton</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -18,12 +15,18 @@
         <item name="android:buttonStyle">@style/buttons</item>
         <item name="android:checkboxStyle">@style/checkbox</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
+        <!--<item name="android:toolbarStyle">@style/ActionBar</item>
+        <item name="actionBarStyle">@style/ActionBar</item>-->
         <!-- Customize your theme here. -->
     </style>
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
         <item name="android:background">#efefef</item>
-        <item name="android:padding">24dp</item>
+        <item name="android:padding">18dp</item>
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
     <style name="SpinnerItem">
@@ -35,10 +38,10 @@
         <item name="android:typeface">serif</item>
     </style>
 
-    <style name="ActionBarTheme" parent="Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@drawable/background_grad</item>
-        <item name="background">@drawable/background_grad</item>
-    </style>
+    <!--<style name="ActionBarTheme" parent="Widget.AppCompat.Light.ActionBar">-->
+        <!--<item name="android:background">@drawable/background_grad</item>-->
+        <!--<item name="background">@drawable/background_grad</item>-->
+    <!--</style>-->
 
 
     <!-- Form Styles -->
@@ -46,10 +49,9 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
-        <item name="android:background">@color/colorPrimary</item>
         <item name="android:drawable">@drawable/textview_background_grad</item>
-
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">#000000</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:paddingTop">16dp</item>
@@ -93,19 +95,33 @@
         <item name="android:typeface">serif</item>
         <item name="android:visibility">invisible</item>
         <item name="android:padding">16dp</item>
-        <item name="android:textStyle">italic</item>
-
     </style>
 
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
-        <item name="android:textSize">24sp</item>
-        <item name="android:background">#d6d6d6</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
-        <item name="android:textColorHint">@color/colorPrimaryAlpha</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="EditTextVarchar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <!--  <item name="android:digits">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</item> -->
+        <item name="android:digits">[a-zA-Z]+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            abcdefghijklmnopqrstuvwxyz0123456789
+        </item>
 
     </style>
+    ​
 
     <style name="spinner">
         <item name="android:layout_width">match_parent</item>
@@ -138,7 +154,7 @@
     <style name="radiogroup">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">right</item>
+        <item name="android:gravity">left</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:background">#d6d6d6</item>
@@ -148,15 +164,17 @@
 
     </style>
 
-    <style name="radiobutton" parent="android:Widget.Material.Light.CompoundButton.RadioButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:button">@null</item>
-        <item name="android:drawableLeft">@android:drawable/btn_radio</item>
+    <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
-        <item name="android:background">#d6d6d6</item>
-        <item name="android:padding">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:elevation">1dp</item>
     </style>
 
     <style name="buttons" parent="android:Widget.Material.Light.Button">
@@ -171,15 +189,18 @@
     </style>
 
     <style name="checkbox" parent="android:Widget.Material.Light.CompoundButton.CheckBox">
-        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_gravity">right</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:button">@null</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
-        <item name="android:drawableLeft">?android:attr/listChoiceIndicatorMultiple</item>
-        <item name="android:background">#d6d6d6</item>
-        <item name="android:padding">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:drawableStart">?android:attr/listChoiceIndicatorMultiple</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">12dp</item>
 
 
     </style>
@@ -259,5 +280,219 @@
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
 
+    <style name="linearlayout_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="linearlayout_view_wt_bound">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="i_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <style name="i_textview2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <style name="i_textviewHint">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/colorPrimaryBeta</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+
+    <style name="h_textview">
+        <item name="android:background">@color/dullWhile</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Textview List  -->
+    <style name="textview">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textview_fm_lst_h">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <!--Card View Start-->
+    <style name="cardView">
+        <item name="android:background">@color/dullWhileOverlay</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <!--<item name="android:layout_marginRight">10dp</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+    <!--Card View End-->
+
+    <!-- EditText Acept Characters Starts. -->
+    <style name="EditText">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="EditTextAlphaNumeric">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+        </item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- EditText Acept Number  Ends. -->
+
+    <!-- EditText Acept Number  Starts. -->
+    <style name="EditText_number" parent="android:Widget.Material.Light.EditText">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- EditText Acept Number  Ends. -->
+
+    <!-- EditText Acept NumberDecimal  Starts. -->
+    <style name="EditText_numberDecimal" parent="android:Widget.Material.Light.EditText">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- EditText Acept NumberDecimal  Ends. -->
+
+    <!-- Irfan RadioGroup  -->
+    <style name="i_radiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Irfan RadioButton  -->
+    <style name="i_radiobutton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <!-- Irfan CheckBox  -->
+    <style name="i_checkbox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_weight">1</item>
+
+    </style>
 
 </resources>
