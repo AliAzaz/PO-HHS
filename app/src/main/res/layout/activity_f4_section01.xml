@@ -327,8 +327,7 @@
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy"
-                            app:maxDate="CR_DATE"
-                            app:minDate="01/08/2014" />
+                            app:maxDate="CR_DATE" />
 
                     </LinearLayout>
 
@@ -1410,8 +1409,7 @@
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE"
                                 android:text='@{pohrj04e.checked? pohrj04ex.getText.toString : "" }'
-                                android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}'
-                                app:minDate="01/08/2014" />
+                                android:visibility='@{pohrj04e.checked? View.VISIBLE : View.GONE}' />
 
                         </LinearLayout>
 
@@ -1526,8 +1524,7 @@
                                     android:visibility='@{pohrl01a.checked? View.VISIBLE : View.GONE}'
                                     android:text='@{pohrl01a.checked? pohrl01ax.getText.toString : ""}'
                                     app:dateFormat="dd-MM-yyyy"
-                                    app:maxDate="CR_DATE"
-                                    app:minDate="01/08/2014" />
+                                    app:maxDate="CR_DATE" />
 
                                 <RadioButton
                                     android:id="@+id/pohrl01b"

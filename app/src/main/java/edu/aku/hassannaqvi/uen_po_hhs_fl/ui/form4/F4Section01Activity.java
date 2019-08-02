@@ -66,6 +66,9 @@ public class F4Section01Activity extends AppCompatActivity {
     void events_call() {
 
         bi.pohra09.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohrb02.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohrj04ex.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohrl01ax.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
 
         bi.pohrf0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
