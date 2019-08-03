@@ -174,18 +174,24 @@ public class F3Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (!formValidation())
+                    return;
+
                 cContract = db.getChildById(lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
 
-                if (cContract != null) {
-                    ClearClass.ClearAllFields(bi.llform03, true);
-                    bi.llform03.setVisibility(View.VISIBLE);
-
-                    bi.pofi004.setText(cContract.getChild_name());
-                    bi.pofi005.setText(cContract.getF_name());
-                    bi.pofi004.setEnabled(false);
-                    bi.pofi005.setEnabled(false);
-
+                if (cContract == null) {
+                    Toast.makeText(F3Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.llform03, null);
+                    bi.llform03.setVisibility(View.GONE);
+                    return;
                 }
+                bi.llform03.setVisibility(View.VISIBLE);
+                bi.pofi004.setText(cContract.getChild_name());
+                bi.pofi005.setText(cContract.getF_name());
+                bi.pofi004.setEnabled(false);
+                bi.pofi005.setEnabled(false);
+
+
 
 
             }
