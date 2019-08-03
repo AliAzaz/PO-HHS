@@ -244,22 +244,49 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (!formValidation())
+                    return;
+
                 cContract = db.getChildById(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
 
-                if (cContract != null) {
-                    ClearClass.ClearAllFields(bi.f2Section01, true);
-                    bi.f2Section01.setVisibility(View.VISIBLE);
+                if (cContract == null) {
 
-                    bi.pofpa05.setText(cContract.getChild_name());
-                    bi.pofpa06.setText(cContract.getF_name());
-                    bi.pofpa05.setEnabled(false);
-                    bi.pofpa06.setEnabled(false);
-
+                    Toast.makeText(F2Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.f2Section01, null);
+                    bi.f2Section01.setVisibility(View.GONE);
+                    return;
                 }
-
+                bi.f2Section01.setVisibility(View.VISIBLE);
+                bi.pofpa05.setText(cContract.getChild_name());
+                bi.pofpa06.setText(cContract.getF_name());
+                bi.pofpa05.setEnabled(false);
+                bi.pofpa06.setEnabled(false);
             }
         });
     }
+
+
+
+/*
+
+                if (!formValidation())
+                    return;
+
+                cContract = db.getChildById(lhwCodes.get(bi.pohra03.getSelectedItemPosition()), bi.pohra04.getText().toString());
+
+                if (cContract == null) {
+
+                    Toast.makeText(F4Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.llform04, null);
+                    bi.llform04.setVisibility(View.GONE);
+                    return;
+                }
+
+                bi.llform04.setVisibility(View.VISIBLE);
+
+            */
+
+
 
 
     public void BtnContinue() {

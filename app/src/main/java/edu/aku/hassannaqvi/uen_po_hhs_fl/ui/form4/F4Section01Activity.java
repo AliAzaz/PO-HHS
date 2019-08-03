@@ -293,12 +293,6 @@ public class F4Section01Activity extends AppCompatActivity {
 
                 bi.llform04.setVisibility(View.VISIBLE);
 
-                    /*bi.pofi004.setText(cContract.getChild_name());
-                    bi.pofi005.setText(cContract.getF_name());
-                    bi.pofi004.setEnabled(false);
-                    bi.pofi005.setEnabled(false);*/
-
-
             }
         });
 
