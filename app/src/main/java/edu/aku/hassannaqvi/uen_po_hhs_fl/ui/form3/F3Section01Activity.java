@@ -23,6 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
@@ -41,7 +42,8 @@ public class F3Section01Activity extends AppCompatActivity {
     ActivityF3Section01Binding bi;
     private List<String> talukaNames, ucName, lhwNames;
     private List<String> talukaCodes, ucCode, lhwCodes;
-    DatabaseHelper db;
+    private DatabaseHelper db;
+    private ChildrenContract cContract;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -51,7 +53,6 @@ public class F3Section01Activity extends AppCompatActivity {
         bi.setCallback(this);
         this.setTitle("Form 03 (Referral Form)");
 
-        db = new DatabaseHelper(this);
         populateSpinner(this);
         events_call();
 
@@ -175,6 +176,21 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 bi.llform03.setVisibility(View.VISIBLE);
                 ClearClass.ClearAllFields(bi.llform03, true);
+
+                cContract = db.getChildById(lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
+
+                if (cContract != null) {
+                    ClearClass.ClearAllFields(bi.llform03, true);
+                    bi.llform03.setVisibility(View.VISIBLE);
+
+                    bi.pofi004.setText(cContract.getChild_name());
+                    bi.pofi005.setText(cContract.getF_name());
+                    bi.pofi004.setEnabled(false);
+                    bi.pofi005.setEnabled(false);
+
+                }
+
+
             }
         });
 

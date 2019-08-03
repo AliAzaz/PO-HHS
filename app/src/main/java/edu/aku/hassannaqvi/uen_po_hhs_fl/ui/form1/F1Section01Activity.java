@@ -183,7 +183,7 @@ public class F1Section01Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA02))
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01))
             return;
 
         try {
@@ -192,7 +192,6 @@ public class F1Section01Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            finish();
             MainApp.endActivity(this, this);
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

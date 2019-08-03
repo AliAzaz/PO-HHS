@@ -23,6 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
@@ -40,9 +41,10 @@ public class F2Section01Activity extends AppCompatActivity {
 
     private List<String> talukaNames, ucName, lhwNames;
     private List<String> talukaCodes, ucCode, lhwCodes;
+    private DatabaseHelper db;
+    private ChildrenContract cContract;
 
     String DAY;
-    private DatabaseHelper db;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -219,16 +221,6 @@ public class F2Section01Activity extends AppCompatActivity {
 
     private void clickListener() {
 
-        bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                bi.f2Section01.setVisibility(View.VISIBLE);
-                ClearClass.ClearAllFields(bi.f2Section01, true);
-            }
-        });
-
-
         bi.pofpa00.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -244,6 +236,26 @@ public class F2Section01Activity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        bi.checkHHBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                cContract = db.getChildById(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
+
+                if (cContract != null) {
+                    ClearClass.ClearAllFields(bi.f2Section01, true);
+                    bi.f2Section01.setVisibility(View.VISIBLE);
+
+                    bi.pofpa05.setText(cContract.getChild_name());
+                    bi.pofpa06.setText(cContract.getF_name());
+                    bi.pofpa05.setEnabled(false);
+                    bi.pofpa06.setEnabled(false);
+
+                }
 
             }
         });

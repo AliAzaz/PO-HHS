@@ -266,7 +266,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfa08"
                             style="@style/EditText_number"
-                            android:hint="@string/pocfa08"
+                            android:hint="###"
                             app:mask="###"
                             app:maxValue="500"
                             app:minValue="1"

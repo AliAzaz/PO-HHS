@@ -264,7 +264,7 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(mContext, "Failed Sync " + result, Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "Sync Result:" + result, Toast.LENGTH_SHORT).show();
 
             pd.setMessage(result);
             pd.setTitle(syncClass + " Sync Failed");

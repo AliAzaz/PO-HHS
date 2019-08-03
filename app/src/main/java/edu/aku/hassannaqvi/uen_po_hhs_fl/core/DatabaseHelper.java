@@ -146,9 +146,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleAreas.COLUMN_AREA + " TEXT );";
     final String SQL_CREATE_CHILDREN = "CREATE TABLE " + singleChild.TABLE_NAME + "("
             + singleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + singleChild.COLUMN_F_NAME + " TEXT,"
+            + singleChild.COLUMN_LHW_CODE + " TEXT,"
             + singleChild.COLUMN_CASEID + " TEXT,"
             + singleChild.COLUMN_CHILD_NAME + " TEXT, "
+            + singleChild.COLUMN_F_NAME + " TEXT,"
             + singleChild.COLUMN_REP_DATE + " TEXT, "
             + singleChild.COLUMN_LUID + " TEXT );";
     private final String TAG = "DatabaseHelper";
@@ -196,21 +197,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             JSONArray jsonArray = pcList;
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectPSU = jsonArray.getJSONObject(i);
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
 
                 ChildrenContract cc = new ChildrenContract();
-                cc.sync(jsonObjectPSU);
-                Log.i(TAG, "syncChildren: " + jsonObjectPSU.toString());
+                cc.sync(jsonObjectCC);
+                Log.i(TAG, "syncChildren: " + jsonObjectCC.toString());
 
                 ContentValues values = new ContentValues();
 
-                values.put(singleChild.COLUMN_F_NAME, cc.getF_name());
+                values.put(singleChild.COLUMN_LHW_CODE, cc.getLhw_code());
                 values.put(singleChild.COLUMN_CASEID, cc.getCaseid());
                 values.put(singleChild.COLUMN_CHILD_NAME, cc.getChild_name());
+                values.put(singleChild.COLUMN_F_NAME, cc.getF_name());
                 values.put(singleChild.COLUMN_REP_DATE, cc.getRep_date());
                 values.put(singleChild.COLUMN_LUID, cc.getLuid());
 
-                db.insert(singleVillage.TABLE_NAME, null, values);
+                db.insert(singleChild.TABLE_NAME, null, values);
             }
             db.close();
 
@@ -555,6 +557,102 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allDC;
     }
+
+    public Collection<ChildrenContract> getChildBy(String lhw_code, String caseid) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                singleChild._ID,
+                singleChild.COLUMN_LHW_CODE,
+                singleChild.COLUMN_CASEID,
+                singleChild.COLUMN_CHILD_NAME,
+                singleChild.COLUMN_F_NAME,
+                singleChild.COLUMN_REP_DATE,
+                singleChild.COLUMN_LUID
+        };
+
+        String whereClause = singleChild.COLUMN_LHW_CODE + " = ? AND " + singleChild.COLUMN_CASEID + " = ?";
+        String[] whereArgs = {lhw_code, caseid};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                singleChild.COLUMN_LHW_CODE + " ASC";
+
+        Collection<ChildrenContract> allCC = new ArrayList<>();
+        try {
+            c = db.query(
+                    singleChild.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                ChildrenContract cc = new ChildrenContract();
+                allCC.add(cc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allCC;
+    }
+
+
+    public ChildrenContract getChildById(String lhw_code, String caseid) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                singleChild._ID,
+                singleChild.COLUMN_LHW_CODE,
+                singleChild.COLUMN_CASEID,
+                singleChild.COLUMN_CHILD_NAME,
+                singleChild.COLUMN_F_NAME,
+                singleChild.COLUMN_REP_DATE,
+                singleChild.COLUMN_LUID,
+        };
+
+        String whereClause = singleChild.COLUMN_LHW_CODE + " =? AND " + singleChild.COLUMN_CASEID + " =?";
+        String[] whereArgs = {lhw_code, caseid};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = singleChild.COLUMN_LHW_CODE + " ASC";
+
+        ChildrenContract allEB = null;
+
+        try {
+            c = db.query(
+                    singleChild.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEB = new ChildrenContract().hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEB;
+    }
+
 
     public Collection<UCsContract> getAllUCs(String talukaCode) {
         SQLiteDatabase db = this.getReadableDatabase();
