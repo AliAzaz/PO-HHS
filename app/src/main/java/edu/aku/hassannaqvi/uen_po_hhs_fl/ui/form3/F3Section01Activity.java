@@ -174,9 +174,6 @@ public class F3Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                bi.llform03.setVisibility(View.VISIBLE);
-                ClearClass.ClearAllFields(bi.llform03, true);
-
                 cContract = db.getChildById(lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
 
                 if (cContract != null) {
@@ -286,7 +283,7 @@ public class F3Section01Activity extends AppCompatActivity {
         form03_01.put("pofi003", lhwCodes.get(bi.pofi003.getSelectedItemPosition()));
 
         form03_01.put("pofi00", bi.pofi00.getText().toString());
-        form03_01.put("pofi01", bi.pofi01.getText().toString());
+        //form03_01.put("pofi01", bi.pofi01.getText().toString());
 
         form03_01.put("pofi004", bi.pofi004.getText().toString());
         form03_01.put("pofi005", bi.pofi005.getText().toString());
@@ -345,7 +342,7 @@ public class F3Section01Activity extends AppCompatActivity {
 
     void events_call() {
 
-        bi.pofi01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
+        //bi.pofi01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
         bi.pofi10.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
 
         bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

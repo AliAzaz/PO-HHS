@@ -24,6 +24,7 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
@@ -43,8 +44,8 @@ public class F4Section01Activity extends AppCompatActivity {
     ActivityF4Section01Binding bi;
     private List<String> ucName, talukaNames, villageNames, lhwNames;
     private List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
-
-    DatabaseHelper db;
+    private DatabaseHelper db;
+    private ChildrenContract cContract;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     public static String DOB;
@@ -277,8 +278,27 @@ public class F4Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (!formValidation())
+                    return;
+
+                cContract = db.getChildById(lhwCodes.get(bi.pohra03.getSelectedItemPosition()), bi.pohra04.getText().toString());
+
+                if (cContract == null) {
+
+                    Toast.makeText(F4Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.llform04, null);
+                    bi.llform04.setVisibility(View.GONE);
+                    return;
+                }
+
                 bi.llform04.setVisibility(View.VISIBLE);
-                ClearClass.ClearAllFields(bi.llform04, true);
+
+                    /*bi.pofi004.setText(cContract.getChild_name());
+                    bi.pofi005.setText(cContract.getF_name());
+                    bi.pofi004.setEnabled(false);
+                    bi.pofi005.setEnabled(false);*/
+
+
             }
         });
 
