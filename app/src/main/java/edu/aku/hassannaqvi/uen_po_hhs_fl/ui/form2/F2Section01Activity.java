@@ -207,6 +207,8 @@ public class F2Section01Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
                 bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+                ClearClass.ClearAllFields(bi.f2Section01, null);
+                bi.f2Section01.setVisibility(View.GONE);
             }
 
             @Override

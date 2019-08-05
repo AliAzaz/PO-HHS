@@ -52,10 +52,7 @@ public class F3Section01Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section01);
         bi.setCallback(this);
         this.setTitle("Form 03 (Referral Form)");
-
-        populateSpinner(this);
         events_call();
-
         clickListener();
 
     }
@@ -157,6 +154,8 @@ public class F3Section01Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
                 bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+                ClearClass.ClearAllFields(bi.llform03, null);
+                bi.llform03.setVisibility(View.GONE);
             }
 
             @Override
@@ -351,6 +350,9 @@ public class F3Section01Activity extends AppCompatActivity {
 
 
     void events_call() {
+
+        db = new DatabaseHelper(this);
+        populateSpinner(this);
 
         //bi.pofi01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
         bi.pofi10.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));

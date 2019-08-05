@@ -260,6 +260,8 @@ public class F4Section01Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
                 bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+                ClearClass.ClearAllFields(bi.llform04, null);
+                bi.llform04.setVisibility(View.GONE);
             }
 
             @Override
@@ -391,7 +393,6 @@ public class F4Section01Activity extends AppCompatActivity {
 
         form04_01.put("pohra01", talukaCodes.get(bi.pohra01.getSelectedItemPosition()));
         form04_01.put("pohra02", ucCode.get(bi.pohra02.getSelectedItemPosition()));
-        form04_01.put("pohra03", lhwCodes.get(bi.pohra03.getSelectedItemPosition()));
         form04_01.put("pohra05", villageCodes.get(bi.pohra05.getSelectedItemPosition()));
         form04_01.put("pohra06", bi.pohra06.getText().toString());
 
