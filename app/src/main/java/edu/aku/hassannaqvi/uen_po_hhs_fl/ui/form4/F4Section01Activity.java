@@ -286,11 +286,11 @@ public class F4Section01Activity extends AppCompatActivity {
                 if (cContract == null) {
 
                     Toast.makeText(F4Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
-                    ClearClass.ClearAllFields(bi.llform04, null);
+                    ClearClass.ClearAllFields(bi.llform04, false);
                     bi.llform04.setVisibility(View.GONE);
                     return;
                 }
-
+                ClearClass.ClearAllFields(bi.llform04, true);
                 bi.llform04.setVisibility(View.VISIBLE);
 
             }

@@ -181,10 +181,11 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 if (cContract == null) {
                     Toast.makeText(F3Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
-                    ClearClass.ClearAllFields(bi.llform03, null);
+                    ClearClass.ClearAllFields(bi.llform03, false);
                     bi.llform03.setVisibility(View.GONE);
                     return;
                 }
+                ClearClass.ClearAllFields(bi.llform03, true);
                 bi.llform03.setVisibility(View.VISIBLE);
                 bi.pofi004.setText(cContract.getChild_name());
                 bi.pofi005.setText(cContract.getF_name());

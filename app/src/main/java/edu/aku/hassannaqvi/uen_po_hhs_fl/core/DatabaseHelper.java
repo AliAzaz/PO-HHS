@@ -654,6 +654,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public ChildrenContract getChildById(String sType, String codeLhw, String refId) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable.COLUMN_FORMTYPE,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_CODE_LHW,
+                FormsTable.COLUMN_REF_ID
+        };
+
+        String whereClause = FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsTable.COLUMN_CODE_LHW + " =? AND " + FormsTable.COLUMN_REF_ID + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?";
+        String[] whereArgs = {sType, codeLhw, refId, "1"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = FormsTable.COLUMN_FORMTYPE + " ASC";
+
+        ChildrenContract allEB = null;
+
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEB = new ChildrenContract().hydrateForm(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEB;
+    }
+
+
     public Collection<UCsContract> getAllUCs(String talukaCode) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -1685,6 +1730,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_CODE_LHW,
+                FormsTable.COLUMN_REF_ID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,

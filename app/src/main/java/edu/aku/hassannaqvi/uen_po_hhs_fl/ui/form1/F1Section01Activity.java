@@ -225,6 +225,10 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pocfa08.getText().toString());
+
         JSONObject form01_01 = new JSONObject();
 
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));

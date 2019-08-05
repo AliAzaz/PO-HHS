@@ -249,13 +249,16 @@ public class F2Section01Activity extends AppCompatActivity {
 
                 cContract = db.getChildById(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
 
-                if (cContract == null) {
+                if (cContract == null)
+                    cContract = db.getChildById("form-1", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
 
+                if (cContract == null) {
                     Toast.makeText(F2Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
-                    ClearClass.ClearAllFields(bi.f2Section01, null);
+                    ClearClass.ClearAllFields(bi.f2Section01, false);
                     bi.f2Section01.setVisibility(View.GONE);
                     return;
                 }
+                ClearClass.ClearAllFields(bi.f2Section01, true);
                 bi.f2Section01.setVisibility(View.VISIBLE);
                 bi.pofpa05.setText(cContract.getChild_name());
                 bi.pofpa06.setText(cContract.getF_name());
