@@ -342,14 +342,14 @@ public class F2Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pofpa00.getText().toString());
+
         JSONObject f02 = new JSONObject();
         f02.put("pofp_survey", DAY);
-        f02.put("pofpa00", bi.pofpa00.getText().toString());
 
         f02.put("pofpa02", talukaCodes.get(bi.pofpa02.getSelectedItemPosition()));
         f02.put("pofpa03", ucCode.get(bi.pofpa03.getSelectedItemPosition()));
-        f02.put("pofpa04", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()));
-
 
         f02.put("pofpa05", bi.pofpa05.getText().toString());
         f02.put("pofpa06", bi.pofpa06.getText().toString());

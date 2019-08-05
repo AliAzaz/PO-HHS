@@ -380,6 +380,10 @@ public class F4Section01Activity extends AppCompatActivity {
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pohra03.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pohra04.getText().toString());
+
         JSONObject form04_01 = new JSONObject();
 
         form04_01.put("pohra01", talukaCodes.get(bi.pohra01.getSelectedItemPosition()));
@@ -387,8 +391,6 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohra03", lhwCodes.get(bi.pohra03.getSelectedItemPosition()));
         form04_01.put("pohra05", villageCodes.get(bi.pohra05.getSelectedItemPosition()));
         form04_01.put("pohra06", bi.pohra06.getText().toString());
-        form04_01.put("pohra04", bi.pohra04.getText().toString());
-
 
         form04_01.put("pohra09", bi.pohra09.getText().toString());
 

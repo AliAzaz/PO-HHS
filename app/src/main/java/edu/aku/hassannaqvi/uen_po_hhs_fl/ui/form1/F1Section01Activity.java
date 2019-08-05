@@ -233,7 +233,6 @@ public class F1Section01Activity extends AppCompatActivity {
 
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
         form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-        form01_01.put("pocfa03", lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
         form01_01.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
         form01_01.put("pocfa05", bi.pocfa05.getText().toString());
         form01_01.put("pocfa06", bi.pocfa06.getText().toString());
@@ -246,7 +245,6 @@ public class F1Section01Activity extends AppCompatActivity {
                 : bi.pocfa0796.isChecked() ? "96"
                 : "0");
         form01_01.put("pocfa0796x", bi.pocfa0796x.getText().toString());
-        form01_01.put("pocfa08", bi.pocfa08.getText().toString());
         form01_01.put("pocfa09", bi.pocfa09.getText().toString());
         form01_01.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
         form01_01.put("pocfa11", bi.pocfa11a.isChecked() ? "1" : bi.pocfa11b.isChecked() ? "2" : "0");

@@ -283,13 +283,13 @@ public class F3Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pofi003.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pofi00.getText().toString());
+
         JSONObject form03_01 = new JSONObject();
 
         form03_01.put("pofi001", talukaCodes.get(bi.pofi001.getSelectedItemPosition()));
         form03_01.put("pofi002", ucCode.get(bi.pofi002.getSelectedItemPosition()));
-        form03_01.put("pofi003", lhwCodes.get(bi.pofi003.getSelectedItemPosition()));
-
-        form03_01.put("pofi00", bi.pofi00.getText().toString());
         //form03_01.put("pofi01", bi.pofi01.getText().toString());
 
         form03_01.put("pofi004", bi.pofi004.getText().toString());
