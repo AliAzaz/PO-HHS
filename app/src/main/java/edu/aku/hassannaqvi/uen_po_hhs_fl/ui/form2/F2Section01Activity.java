@@ -250,7 +250,7 @@ public class F2Section01Activity extends AppCompatActivity {
                 cContract = db.getChildById(lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
 
                 if (cContract == null)
-                    cContract = db.getChildById("form-1", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
+                    cContract = db.getChildById("f1", lhwCodes.get(bi.pofpa04.getSelectedItemPosition()), bi.pofpa00.getText().toString());
 
                 if (cContract == null) {
                     Toast.makeText(F2Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();

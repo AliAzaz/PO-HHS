@@ -179,6 +179,9 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 cContract = db.getChildById(lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
 
+                if (cContract == null)
+                    cContract = db.getChildById("f1", lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
+
                 if (cContract == null) {
                     Toast.makeText(F3Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
                     ClearClass.ClearAllFields(bi.llform03, false);

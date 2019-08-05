@@ -283,6 +283,9 @@ public class F4Section01Activity extends AppCompatActivity {
 
                 cContract = db.getChildById(lhwCodes.get(bi.pohra03.getSelectedItemPosition()), bi.pohra04.getText().toString());
 
+                if (cContract == null)
+                    cContract = db.getChildById("f1", lhwCodes.get(bi.pohra03.getSelectedItemPosition()), bi.pohra04.getText().toString());
+
                 if (cContract == null) {
 
                     Toast.makeText(F4Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();

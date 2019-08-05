@@ -110,8 +110,6 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        MainApp.fc.setCode_lhw(bi.pocfb02.getText().toString());
-
         JSONObject sBC = new JSONObject();
 
         sBC.put("pocfb01", bi.pocfb01.getText().toString());

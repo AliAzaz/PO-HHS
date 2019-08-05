@@ -13,6 +13,7 @@ public class ChildrenContract {
     private String luid;
     private String formType;
     private String Sa;
+    private String Sb;
     private String iStatus;
     private String lhw_code;
     private String caseid;
@@ -89,14 +90,12 @@ public class ChildrenContract {
         //this.luid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_UID));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMTYPE));
         this.iStatus = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS));
-        this.iStatus = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_CODE_LHW));
-        this.iStatus = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_REF_ID));
+        this.lhw_code = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_CODE_LHW));
+        this.caseid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_REF_ID));
 
         CrfChild formSa = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SA)), CrfChild.class);
         CrfChild formSb = new Gson().fromJson(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SB)), CrfChild.class);
 
-        this.lhw_code = formSa.getPocfa03();
-        this.caseid = formSa.getPocfa08();
         this.child_name = formSa.getPocfa09();
         this.f_name = formSb.getPocfb02();
         //this.rep_date = formSa.getKapr09();
@@ -105,24 +104,21 @@ public class ChildrenContract {
     }
 
 
+    /*public JSONObject toJSONObject() throws JSONException {
+        JSONObject json = new JSONObject();
+        json.put(singleChild.COLUMN_LUID, this.luid == null ? JSONObject.NULL : this.luid);
+        json.put(singleChild.COLUMN_LHW_CODE, this.lhw_code == null ? JSONObject.NULL : this.lhw_code);
+        json.put(singleChild.COLUMN_CASEID, this.caseid == null ? JSONObject.NULL : this.caseid);
+        json.put(singleChild.COLUMN_CHILD_NAME, this.child_name == null ? JSONObject.NULL : this.child_name);
+        json.put(singleChild.COLUMN_F_NAME, this.f_name == null ? JSONObject.NULL : this.f_name);
+        json.put(singleChild.COLUMN_REP_DATE, this.rep_date == null ? JSONObject.NULL : this.rep_date);
+
+        return json;
+    }*/
+
+
     private class CrfChild {
-        String pocfa03, pocfa08, pocfa09, pocfb02;
-
-        public String getPocfa03() {
-            return pocfa03;
-        }
-
-        public void setPocfa03(String pocfa03) {
-            this.pocfa03 = pocfa03;
-        }
-
-        public String getPocfa08() {
-            return pocfa08;
-        }
-
-        public void setPocfa08(String pocfa08) {
-            this.pocfa08 = pocfa08;
-        }
+        String pocfa09, pocfb02;
 
         public String getPocfa09() {
             return pocfa09;
