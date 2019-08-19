@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -39,7 +37,7 @@ public class F1Section11Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.pocfk10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
@@ -53,7 +51,7 @@ public class F1Section11Activity extends AppCompatActivity {
                     bi.cvpocfk11.setVisibility(View.GONE);
                 }
             }
-        });
+        });*/
 
 
         bi.pocfk0897.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -154,6 +152,8 @@ public class F1Section11Activity extends AppCompatActivity {
                 : bi.pocfk09c.isChecked() ? "3"
                 : "0");
 
+/*
+
         sK.put("pocfk10", bi.pocfk10a.isChecked() ? "1"
                 : bi.pocfk10b.isChecked() ? "2"
                 : "0");
@@ -171,6 +171,8 @@ public class F1Section11Activity extends AppCompatActivity {
         sK.put("pocfk13", bi.pocfk13a.isChecked() ? "1"
                 : bi.pocfk13b.isChecked() ? "2"
                 : "0");
+
+*/
 
         MainApp.fc.setsH(String.valueOf(sK));
 
