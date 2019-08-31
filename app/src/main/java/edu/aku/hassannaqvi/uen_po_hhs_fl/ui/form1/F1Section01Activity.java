@@ -28,7 +28,6 @@ import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.VillagesContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section01Binding;
-import edu.aku.hassannaqvi.uen_po_hhs_fl.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
@@ -184,7 +183,7 @@ public class F1Section01Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA02))
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecA01))
             return;
 
         try {
@@ -193,8 +192,7 @@ public class F1Section01Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            MainApp.endActivity(this, this);
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
@@ -217,6 +215,7 @@ public class F1Section01Activity extends AppCompatActivity {
         }
     }
 
+
     private void SaveDraft() throws JSONException {
 
         MainApp.fc = new FormsContract();
@@ -226,11 +225,14 @@ public class F1Section01Activity extends AppCompatActivity {
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pocfa08.getText().toString());
+
         JSONObject form01_01 = new JSONObject();
 
         form01_01.put("pocfa01", talukaCodes.get(bi.pocfa01.getSelectedItemPosition()));
         form01_01.put("pocfa02", ucCode.get(bi.pocfa02.getSelectedItemPosition()));
-        form01_01.put("pocfa03", lhwCodes.get(bi.pocfa03.getSelectedItemPosition()));
         form01_01.put("pocfa04", villageCodes.get(bi.pocfa04.getSelectedItemPosition()));
         form01_01.put("pocfa05", bi.pocfa05.getText().toString());
         form01_01.put("pocfa06", bi.pocfa06.getText().toString());
@@ -243,7 +245,6 @@ public class F1Section01Activity extends AppCompatActivity {
                 : bi.pocfa0796.isChecked() ? "96"
                 : "0");
         form01_01.put("pocfa0796x", bi.pocfa0796x.getText().toString());
-        form01_01.put("pocfa08", bi.pocfa08.getText().toString());
         form01_01.put("pocfa09", bi.pocfa09.getText().toString());
         form01_01.put("pocfa10", bi.pocfa10a.isChecked() ? "1" : bi.pocfa10b.isChecked() ? "2" : "0");
         form01_01.put("pocfa11", bi.pocfa11a.isChecked() ? "1" : bi.pocfa11b.isChecked() ? "2" : "0");

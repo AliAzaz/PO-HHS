@@ -109,6 +109,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
         JSONObject sBC = new JSONObject();
 
         sBC.put("pocfb01", bi.pocfb01.getText().toString());

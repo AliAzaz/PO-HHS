@@ -61,4 +61,6 @@ dependencies {
 
     //Ali mask
     implementation 'com.github.AliAzaz:Edittext-Library:1.0.4'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

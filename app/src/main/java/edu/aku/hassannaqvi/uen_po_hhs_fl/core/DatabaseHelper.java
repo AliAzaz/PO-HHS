@@ -20,6 +20,8 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.AreasContract.singleAreas;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract.singleChild;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
@@ -63,6 +65,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_FORMDATE + " TEXT," +
             FormsTable.COLUMN_APPVERSION + " TEXT," +
             FormsTable.COLUMN_FORMTYPE + " TEXT," +
+            FormsTable.COLUMN_CODE_LHW + " TEXT," +
+            FormsTable.COLUMN_REF_ID + " TEXT," +
             FormsTable.COLUMN_USER + " TEXT," +
             FormsTable.COLUMN_SA + " TEXT," +
             FormsTable.COLUMN_SB + " TEXT," +
@@ -103,6 +107,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
     private static final String SQL_SELECT_MWRA =
             "SELECT * from census where member_type =? and dss_id_hh =? and uuid =? and current_status IN ('1', '2')";
+    private static final String SQL_DELETE_CHILDREN = "DROP TABLE IF EXISTS " + singleChild.TABLE_NAME;
     private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillage.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + singleTalukas.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + singleUCs.TABLE_NAME;
@@ -141,6 +146,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleAreas.COLUMN_AREACODE + " TEXT,"
             + singleAreas.COLUMN_UC_CODE + " TEXT,"
             + singleAreas.COLUMN_AREA + " TEXT );";
+    final String SQL_CREATE_CHILDREN = "CREATE TABLE " + singleChild.TABLE_NAME + "("
+            + singleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + singleChild.COLUMN_LHW_CODE + " TEXT,"
+            + singleChild.COLUMN_CASEID + " TEXT,"
+            + singleChild.COLUMN_CHILD_NAME + " TEXT, "
+            + singleChild.COLUMN_F_NAME + " TEXT,"
+            + singleChild.COLUMN_REP_DATE + " TEXT, "
+            + singleChild.COLUMN_LUID + " TEXT );";
     private final String TAG = "DatabaseHelper";
 
 
@@ -158,6 +171,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_FORMS);
         db.execSQL(SQL_CREATE_TALUKAS);
         db.execSQL(SQL_CREATE_UCS);
+        db.execSQL(SQL_CREATE_CHILDREN);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_LHW_TABLE);
@@ -169,11 +183,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_USERS);
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL("DROP TABLE IF EXISTS " + lhwEntry.TABLE_NAME);
+        db.execSQL(SQL_DELETE_CHILDREN);
         db.execSQL(SQL_DELETE_VILLAGES);
         db.execSQL(SQL_DELETE_TALUKAS);
         db.execSQL(SQL_DELETE_UCS);
         db.execSQL(SQL_DELETE_AREAS);
 
+    }
+
+    public void syncChildren(JSONArray pcList) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(singleChild.TABLE_NAME, null, null);
+
+        try {
+            JSONArray jsonArray = pcList;
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+
+                ChildrenContract cc = new ChildrenContract();
+                cc.sync(jsonObjectCC);
+                Log.i(TAG, "syncChildren: " + jsonObjectCC.toString());
+
+                ContentValues values = new ContentValues();
+
+                values.put(singleChild.COLUMN_LHW_CODE, cc.getLhw_code());
+                values.put(singleChild.COLUMN_CASEID, cc.getCaseid());
+                values.put(singleChild.COLUMN_CHILD_NAME, cc.getChild_name());
+                values.put(singleChild.COLUMN_F_NAME, cc.getF_name());
+                values.put(singleChild.COLUMN_REP_DATE, cc.getRep_date());
+                values.put(singleChild.COLUMN_LUID, cc.getLuid());
+
+                db.insert(singleChild.TABLE_NAME, null, values);
+            }
+            db.close();
+
+        } catch (Exception e) {
+
+        }
     }
 
     public void syncVillages(JSONArray pcList) {
@@ -513,6 +560,149 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allDC;
     }
 
+    public Collection<ChildrenContract> getChildBy(String lhw_code, String caseid) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                singleChild._ID,
+                singleChild.COLUMN_LHW_CODE,
+                singleChild.COLUMN_CASEID,
+                singleChild.COLUMN_CHILD_NAME,
+                singleChild.COLUMN_F_NAME,
+                singleChild.COLUMN_REP_DATE,
+                singleChild.COLUMN_LUID
+        };
+
+        String whereClause = singleChild.COLUMN_LHW_CODE + " = ? AND " + singleChild.COLUMN_CASEID + " = ?";
+        String[] whereArgs = {lhw_code, caseid};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                singleChild.COLUMN_LHW_CODE + " ASC";
+
+        Collection<ChildrenContract> allCC = new ArrayList<>();
+        try {
+            c = db.query(
+                    singleChild.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                ChildrenContract cc = new ChildrenContract();
+                allCC.add(cc.hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allCC;
+    }
+
+
+    public ChildrenContract getChildById(String lhw_code, String caseid) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                singleChild._ID,
+                singleChild.COLUMN_LHW_CODE,
+                singleChild.COLUMN_CASEID,
+                singleChild.COLUMN_CHILD_NAME,
+                singleChild.COLUMN_F_NAME,
+                singleChild.COLUMN_REP_DATE,
+                singleChild.COLUMN_LUID,
+        };
+
+        String whereClause = singleChild.COLUMN_LHW_CODE + " =? AND " + singleChild.COLUMN_CASEID + " =?";
+        String[] whereArgs = {lhw_code, caseid};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = singleChild.COLUMN_LHW_CODE + " ASC";
+
+        ChildrenContract allEB = null;
+
+        try {
+            c = db.query(
+                    singleChild.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEB = new ChildrenContract().hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEB;
+    }
+
+
+    public ChildrenContract getChildById(String sType, String codeLhw, String refId) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable.COLUMN_FORMTYPE,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_CODE_LHW,
+                FormsTable.COLUMN_REF_ID,
+                FormsTable.COLUMN_SA,
+                FormsTable.COLUMN_SB,
+        };
+
+        String whereClause = FormsTable.COLUMN_FORMTYPE + " =? AND " + FormsTable.COLUMN_CODE_LHW + " =? AND " + FormsTable.COLUMN_REF_ID + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?";
+        String[] whereArgs = {sType, codeLhw, refId, "1"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = FormsTable.COLUMN_FORMTYPE + " ASC";
+
+        ChildrenContract allEB = null;
+
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEB = new ChildrenContract().hydrateForm(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEB;
+    }
+
+
     public Collection<UCsContract> getAllUCs(String talukaCode) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -762,6 +952,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_PROJECT_NAME, fc.getProjectName());
         values.put(FormsTable.COLUMN_UID, fc.get_UID());
         values.put(FormsTable.COLUMN_FORMDATE, fc.getFormDate());
+        values.put(FormsTable.COLUMN_CODE_LHW, fc.getCode_lhw());
+        values.put(FormsTable.COLUMN_REF_ID, fc.getRef_ID());
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
@@ -1544,6 +1736,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_CODE_LHW,
+                FormsTable.COLUMN_REF_ID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,

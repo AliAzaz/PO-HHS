@@ -161,7 +161,7 @@ public class SyncActivity extends AppCompatActivity {
             //syncStatus.setText(null);
             new SyncDevice(this).execute();
 //  *******************************************************Forms*********************************
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Form One", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -169,13 +169,13 @@ public class SyncActivity extends AppCompatActivity {
             }
             new SyncAllData(
                     this,
-                    "Forms-1",
+                    "Form One",
                     "updateSyncedForms",
                     FormsContract.class,
                     MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "01.php"),
                     db.getUnsyncedForms("f1"), 0, uploadListAdapter, uploadlist
             ).execute();
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Form Two", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -183,13 +183,13 @@ public class SyncActivity extends AppCompatActivity {
             }
             new SyncAllData(
                     this,
-                    "Forms-2",
+                    "Form Two ",
                     "updateSyncedForms",
                     FormsContract.class,
                     MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "02.php"),
                     db.getUnsyncedForms("f2"), 1, uploadListAdapter, uploadlist
             ).execute();
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Form Three", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -197,13 +197,13 @@ public class SyncActivity extends AppCompatActivity {
             }
             new SyncAllData(
                     this,
-                    "Forms-3",
+                    "Form Three",
                     "updateSyncedForms",
                     FormsContract.class,
                     MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "03.php"),
                     db.getUnsyncedForms("f3"), 2, uploadListAdapter, uploadlist
             ).execute();
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Form Four", Toast.LENGTH_SHORT).show();
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
@@ -211,7 +211,7 @@ public class SyncActivity extends AppCompatActivity {
             }
             new SyncAllData(
                     this,
-                    "Forms-4",
+                    "Form Four",
                     "updateSyncedForms",
                     FormsContract.class,
                     MainApp._HOST_URL + FormsContract.FormsTable._URL.replace(".php", "04.php"),
@@ -366,6 +366,15 @@ public class SyncActivity extends AppCompatActivity {
                         list.add(model);
                     }
                     new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
+
+//                    Getting Children
+                    Toast.makeText(SyncActivity.this, "Sync Children", Toast.LENGTH_SHORT).show();
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Children", syncListAdapter, list).execute();
 
                     listActivityCreated = false;
                 }

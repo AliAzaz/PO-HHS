@@ -112,7 +112,7 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="Case ID" />
+                                android:text="@string/pofpa00" />
 
 
                             <com.edittextpicker.aliazaz.EditTextPicker

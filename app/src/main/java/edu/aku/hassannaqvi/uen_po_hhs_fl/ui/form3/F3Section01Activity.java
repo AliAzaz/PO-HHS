@@ -23,6 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
@@ -41,7 +42,8 @@ public class F3Section01Activity extends AppCompatActivity {
     ActivityF3Section01Binding bi;
     private List<String> talukaNames, ucName, lhwNames;
     private List<String> talukaCodes, ucCode, lhwCodes;
-    DatabaseHelper db;
+    private DatabaseHelper db;
+    private ChildrenContract cContract;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
@@ -50,11 +52,7 @@ public class F3Section01Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section01);
         bi.setCallback(this);
         this.setTitle("Form 03 (Referral Form)");
-
-        db = new DatabaseHelper(this);
-        populateSpinner(this);
         events_call();
-
         clickListener();
 
     }
@@ -156,6 +154,8 @@ public class F3Section01Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
                 bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+                ClearClass.ClearAllFields(bi.llform03, null);
+                bi.llform03.setVisibility(View.GONE);
             }
 
             @Override
@@ -173,8 +173,30 @@ public class F3Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                bi.llform03.setVisibility(View.VISIBLE);
+                if (!formValidation())
+                    return;
+
+                cContract = db.getChildById(lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
+
+                if (cContract == null)
+                    cContract = db.getChildById("f1", lhwCodes.get(bi.pofi003.getSelectedItemPosition()), bi.pofi00.getText().toString());
+
+                if (cContract == null) {
+                    Toast.makeText(F3Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.llform03, false);
+                    bi.llform03.setVisibility(View.GONE);
+                    return;
+                }
                 ClearClass.ClearAllFields(bi.llform03, true);
+                bi.llform03.setVisibility(View.VISIBLE);
+                bi.pofi004.setText(cContract.getChild_name());
+                bi.pofi005.setText(cContract.getF_name());
+                bi.pofi004.setEnabled(false);
+                bi.pofi005.setEnabled(false);
+
+
+
+
             }
         });
 
@@ -226,8 +248,7 @@ public class F3Section01Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            MainApp.endActivity(this, this);
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
@@ -264,14 +285,14 @@ public class F3Section01Activity extends AppCompatActivity {
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
 
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pofi003.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pofi00.getText().toString());
+
         JSONObject form03_01 = new JSONObject();
 
         form03_01.put("pofi001", talukaCodes.get(bi.pofi001.getSelectedItemPosition()));
         form03_01.put("pofi002", ucCode.get(bi.pofi002.getSelectedItemPosition()));
-        form03_01.put("pofi003", lhwCodes.get(bi.pofi003.getSelectedItemPosition()));
-
-        form03_01.put("pofi00", bi.pofi00.getText().toString());
-        form03_01.put("pofi01", bi.pofi01.getText().toString());
+        //form03_01.put("pofi01", bi.pofi01.getText().toString());
 
         form03_01.put("pofi004", bi.pofi004.getText().toString());
         form03_01.put("pofi005", bi.pofi005.getText().toString());
@@ -330,6 +351,10 @@ public class F3Section01Activity extends AppCompatActivity {
 
     void events_call() {
 
+        db = new DatabaseHelper(this);
+        populateSpinner(this);
+
+        //bi.pofi01.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -6));
         bi.pofi10.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
 
         bi.pofi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

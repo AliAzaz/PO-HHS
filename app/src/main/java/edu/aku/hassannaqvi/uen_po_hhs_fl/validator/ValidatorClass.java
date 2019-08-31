@@ -172,7 +172,7 @@ public abstract class ValidatorClass {
     }
 
     public static boolean EmptySpinner(Context context, Spinner spin, String msg) {
-        if (spin.getSelectedItem() == "....") {
+        if (spin.getSelectedItemPosition() == 0) {
             FancyToast.makeText(context, "ERROR(Empty)" + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             ((TextView) spin.getSelectedView()).setText("This Data is Required");
             ((TextView) spin.getSelectedView()).setTextColor(Color.RED);

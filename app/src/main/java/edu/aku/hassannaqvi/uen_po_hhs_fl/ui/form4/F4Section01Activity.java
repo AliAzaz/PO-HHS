@@ -24,6 +24,7 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.ChildrenContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.FormsContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.LHWContract;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.contracts.TalukasContract;
@@ -43,8 +44,8 @@ public class F4Section01Activity extends AppCompatActivity {
     ActivityF4Section01Binding bi;
     private List<String> ucName, talukaNames, villageNames, lhwNames;
     private List<String> ucCode, talukaCodes, villageCodes, lhwCodes;
-
-    DatabaseHelper db;
+    private DatabaseHelper db;
+    private ChildrenContract cContract;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     public static String DOB;
@@ -259,6 +260,8 @@ public class F4Section01Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) return;
                 bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
+                ClearClass.ClearAllFields(bi.llform04, null);
+                bi.llform04.setVisibility(View.GONE);
             }
 
             @Override
@@ -277,8 +280,24 @@ public class F4Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                bi.llform04.setVisibility(View.VISIBLE);
+                if (!formValidation())
+                    return;
+
+                cContract = db.getChildById(lhwCodes.get(bi.pohra03.getSelectedItemPosition()), bi.pohra04.getText().toString());
+
+                if (cContract == null)
+                    cContract = db.getChildById("f1", lhwCodes.get(bi.pohra03.getSelectedItemPosition()), bi.pohra04.getText().toString());
+
+                if (cContract == null) {
+
+                    Toast.makeText(F4Section01Activity.this, "Referral ID not Found!", Toast.LENGTH_SHORT).show();
+                    ClearClass.ClearAllFields(bi.llform04, false);
+                    bi.llform04.setVisibility(View.GONE);
+                    return;
+                }
                 ClearClass.ClearAllFields(bi.llform04, true);
+                bi.llform04.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -333,8 +352,7 @@ public class F4Section01Activity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            MainApp.endActivity(this, this);
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
@@ -367,15 +385,16 @@ public class F4Section01Activity extends AppCompatActivity {
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setFormDate(dtToday);
         MainApp.fc.setDevicetagID(getSharedPreferences("tagName", MODE_PRIVATE).getString("tagName", ""));
+
+        MainApp.fc.setCode_lhw(lhwCodes.get(bi.pohra03.getSelectedItemPosition()));
+        MainApp.fc.setRef_ID(bi.pohra04.getText().toString());
+
         JSONObject form04_01 = new JSONObject();
 
         form04_01.put("pohra01", talukaCodes.get(bi.pohra01.getSelectedItemPosition()));
         form04_01.put("pohra02", ucCode.get(bi.pohra02.getSelectedItemPosition()));
-        form04_01.put("pohra03", lhwCodes.get(bi.pohra03.getSelectedItemPosition()));
         form04_01.put("pohra05", villageCodes.get(bi.pohra05.getSelectedItemPosition()));
         form04_01.put("pohra06", bi.pohra06.getText().toString());
-        form04_01.put("pohra04", bi.pohra04.getText().toString());
-
 
         form04_01.put("pohra09", bi.pohra09.getText().toString());
 
