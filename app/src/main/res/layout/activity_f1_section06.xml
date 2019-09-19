@@ -218,8 +218,8 @@
                         <EditText
                             android:id="@+id/pocff02lx"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/specify"
-                            android:tag="pocff02lx"
+                            android:hint="@string/pocff02lx"
+                            android:tag="pocff02l"
                             android:text='@{pocff02l.checked? pocff02lx.getText.toString : "" }'
                             android:visibility='@{pocff02l.checked? View.VISIBLE : View.GONE}' />
 
@@ -542,6 +542,7 @@
                         android:id="@+id/pocff09C"
                         style="@style/i_checkbox"
                         android:tag="-1"
+                        android:checked='@{pocff08d.checked ? false : false }'
                         android:text="@string/pocff09C" />
 
                 </LinearLayout>

@@ -1074,7 +1074,7 @@
                             <EditText
                                 android:id="@+id/pohrh96x"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/other"
+                                android:hint="@string/specify"
                                 android:tag="pohrh96"
                                 android:text='@{pohrh96.checked? pohrh96x.getText.toString : "" }'
                                 android:visibility='@{pohrh96.checked? View.VISIBLE : View.GONE}' />
@@ -1153,7 +1153,7 @@
                             <EditText
                                 android:id="@+id/pohri96x"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/other"
+                                android:hint="@string/specify"
                                 android:tag="pohri96"
                                 android:text='@{pohri96.checked? pohri96x.getText.toString : "" }'
                                 android:visibility='@{pohri96.checked? View.VISIBLE : View.GONE}' />
@@ -1387,7 +1387,7 @@
                             <EditText
                                 android:id="@+id/pohrj04dx"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/pohrj04d"
+                                android:hint="@string/specify"
                                 android:text='@{pohrj04d.checked? pohrj04dx.getText.toString : "" }'
                                 android:visibility='@{pohrj04d.checked? View.VISIBLE : View.GONE}' />
 
