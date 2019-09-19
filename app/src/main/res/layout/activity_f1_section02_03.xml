@@ -302,6 +302,11 @@
                             android:text="@string/pocfc02g" />
 
                         <RadioButton
+                            android:id="@+id/pocfc02h"
+                            style="@style/i_radiobutton"
+                            android:text="@string/pocfc02h" />
+
+                        <RadioButton
                             android:id="@+id/pocfc0296"
                             style="@style/i_radiobutton"
                             android:text="@string/other" />
