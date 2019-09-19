@@ -89,10 +89,15 @@
                         <EditText
                             android:id="@+id/pocff0196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocff0196"
                             android:text='@{pocff0196.checked? pocff0196x.getText.toString : "" }'
                             android:visibility='@{pocff0196.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/pocff0197"
+                            style="@style/i_radiobutton"
+                            android:text="@string/none1" />
 
                     </RadioGroup>
 
@@ -200,7 +205,7 @@
                         <EditText
                             android:id="@+id/pocff02kx"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocff02k"
                             android:text='@{pocff02k.checked? pocff02kx.getText.toString : "" }'
                             android:visibility='@{pocff02k.checked? View.VISIBLE : View.GONE}' />
@@ -213,8 +218,8 @@
                         <EditText
                             android:id="@+id/pocff02lx"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
-                            android:tag="pocff02l"
+                            android:hint="@string/specify"
+                            android:tag="pocff02lx"
                             android:text='@{pocff02l.checked? pocff02lx.getText.toString : "" }'
                             android:visibility='@{pocff02l.checked? View.VISIBLE : View.GONE}' />
 
@@ -512,14 +517,32 @@
                         android:text="@string/pocff09" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/pocff09"
+                        android:id="@+id/pocff09D"
+                        style="@style/EditText_number"
+                        android:hint="@string/day"
+                        app:mask="##"
+                        android:text='@{pocff08d.checked || pocff09C.checked ? "" : pocff09D.getText.toString }'
+                        android:visibility='@{pocff08d.checked || pocff09C.checked ? View.GONE : View.VISIBLE }'
+                        app:maxValue="29"
+                        app:minValue="0"
+                        app:type="range" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/pocff09M"
                         style="@style/EditText_number"
                         android:hint="@string/month"
+                        android:text='@{pocff08d.checked || pocff09C.checked ? "" : pocff09M.getText.toString }'
+                        android:visibility='@{pocff08d.checked || pocff09C.checked ? View.GONE : View.VISIBLE }'
                         app:mask="##"
-                        android:text='@{pocff08d.checked? "" : pocff09.getText.toString }'
                         app:maxValue="30"
                         app:minValue="0"
                         app:type="range" />
+
+                    <CheckBox
+                        android:id="@+id/pocff09C"
+                        style="@style/i_checkbox"
+                        android:tag="-1"
+                        android:text="@string/pocff09C" />
 
                 </LinearLayout>
 

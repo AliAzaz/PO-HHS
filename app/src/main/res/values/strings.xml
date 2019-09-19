@@ -76,7 +76,8 @@
     <string name="year"> سال </string>
     <string name="hour"> ڪلاڪ </string>
     <string name="min"> منٽ </string>
-    <string name="other"> ٻيو ڪجھ وضاحت ڪريو</string>
+    <string name="other"> ٻيو ڪجھ </string>
+    <string name="specify"> وضاحت ڪريو </string>
     <string name="kg"> ڪلوگرام</string>
     <string name="cm"> سينٽي ميٽر</string>
     <string name="name"> نالو</string>
@@ -443,8 +444,9 @@
     <string name="pocff01c"> دائي </string>
     <string name="pocff01d"> ليڊي هيلٿ ورڪر </string>
     <string name="pocff01e"> رشتيدار / دوست </string>
+    <string name="none1"> ڪو به نه </string>
 
-    <string name="pocff02"> ٻار(چونڊيل ڪيس) جي پيدائش ڪٿي ٿي؟ </string>
+    <string name="pocff02"> ٻار (چونڊيل ڪيس) جي پيدائش ڪٿي ٿي؟ </string>
     <string name="pocff02h1"> گھر </string>
     <string name="pocff02a"> جواب ڏيندڙ جي گھر ۾ </string>
     <string name="pocff02b"> ٻئي ڪنهن جي گھر ۾ </string>
@@ -460,7 +462,7 @@
     <string name="pocff02j"> پرائيوٽ ميٽرنٽي هوم </string>
     <string name="pocff02k"> ٻيو پرائيوٽ صحت جو شعبو (وضاحت ڪريو) </string>
     <string name="pocff02l"> ٻيو ڪجھ وضاحت ڪريو </string>
-    <string name="pocff02m"> جڳھ جو نالو </string>
+    <string name="pocff02lx"> جڳھ جو نالو </string>
     <string name="pocff03"> ڇا ٻار(چونڊيل ڪيس) پيٽ جي مڪمل مهينن (مڪمل 9 مهينن) ۾ ڄائو. </string>
     <string name="pocff04"> جيڪڏهن نه ته ٻار(چونڊيل ڪيس) پيدائش وقت پيٽ جي ڪيترن مهينن ۾ ڄائو هو؟ </string>
     <string name="pocff04a"> 6 کان 6.5 مهينا </string>
@@ -477,13 +479,14 @@
     <string name="pocff07"> ٻار(چونڊيل ڪيس) جو وزن ڪيترو هو؟ جيڪڏهن ڪارڊ موجود آهي ته ڪارد تان ڏسي لکو </string>
     <string name="pocff07a"> ڪارڊ تان (kg ڪلوگرام) </string>
     <string name="pocff07b"> يادائشت جي ذريعي (kg ڪلوگرام) </string>
-    <string name="pocff08"> ٻار(چونڊيل ڪيس) جي پيدائش کان پوءِ ڪيتري دير بعد توهان ٻار کي پهريون دفعو ٿڃ پياري؟ </string>
+    <string name="pocff08"> ٻار (چونڊيل ڪيس) جي پيدائش کان پوءِ ڪيتري دير بعد توهان ٻار کي پهريون دفعو ٿڃ پياري؟ </string>
     <string name="pocff08a"> هڪ ڪلاڪ اندر </string>
-    <string name="pocff08b"> 24ڪلاڪن اندر </string>
-    <string name="pocff08c"> 24ڪلاڪن کان پوءِ </string>
+    <string name="pocff08b"> 24 ڪلاڪن اندر </string>
+    <string name="pocff08c"> 24 ڪلاڪن کان پوءِ </string>
     <string name="pocff08d"> ڪڏهن به ٿڃ ناهي پياري </string>
     <string name="pocff09"> ٻار (چونڊيل ڪيس) ڪيترو وقت صرف ماءُ جي ٿڃ پيتي؟ </string>
-    <string name="pocff10"> هن وقت توهان ٻار (چونڊيل ڪيس) کي ڇا کارائي پياري رهيا آهيو؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
+    <string name="pocff09C"> جاري آهي </string>
+    <string name="pocff10"> هن وقت توهان ٻار (چونڊيل ڪيس) کي ڇا کارائي پياري رهيا آهيو؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocff10a"> صرف ماءُ جي ٿڃ </string>
     <string name="pocff10b"> ماءُ جي ٿڃ </string>
     <string name="pocff10c"> جانور جو کير </string>
