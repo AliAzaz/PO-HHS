@@ -242,6 +242,12 @@
                             android:text="@string/pocfj01o" />
 
                         <CheckBox
+                            android:id="@+id/pocfj01p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pocfj01p" />
+
+                        <CheckBox
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -294,7 +300,7 @@
                         <EditText
                             android:id="@+id/pocfj02ax"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfj02a"
                             android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
                             android:visibility='@{pocfj02a.checked? View.VISIBLE : View.GONE}' />
