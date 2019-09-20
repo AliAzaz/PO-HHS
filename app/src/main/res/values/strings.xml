@@ -744,6 +744,7 @@
     <string name="pofpa111"> Route of administration (Oral/IV) </string>
     <string name="pofpa111a"> وات ذريعي </string>
     <string name="pofpa111b"> رڳ ذريعي </string>
+
     <string name="pofpa12"> جيڪڏهن رفرل کان انڪار ڪيو ته ٻار گھر ۾ ڪهڙو علاج حاصل ڪيو؟ </string>
     <string name="pofpa12a"> دوا جو نالو </string>
     <string name="pofpa12b"> ڪيترا دفعا ڏينهن ۾ </string>
@@ -751,30 +752,41 @@
     <string name="pofpa121"> Route of administration (Oral/IV) </string>
     <string name="pofpa121a"> وات ذريعي </string>
     <string name="pofpa121b"> رڳ ذريعي </string>
-    <string name="pofpa13"> ٻار جي موجوده حالت؟ </string>
-    <string name="pofpa13a"> بلڪل ٺيڪ </string>
-    <string name="pofpa13b"> بهتر </string>
-    <string name="pofpa13c"> ساڳي </string>
-    <string name="pofpa13d"> خراب </string>
-    <string name="pofpa13e"> وفات ڪري ويو </string>
-    <string name="pofpa14"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا؟ (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
-    <string name="pofpa14a"> دست </string>
-    <string name="pofpa14b"> لڳا تار اُلٽي </string>
-    <string name="pofpa14c"> چمڙي تي داڻ داڻ </string>
-    <string name="pofpa15"> جيڪڏهن علاج ۾ ڪا تبديلي آهي ، ته موجوده علاج لکو </string>
-    <string name="pofpa15a"> ها </string>
-    <string name="pofpa15b"> نه </string>
-    <string name="pofpa16"> جيڪڏهن ها ته، علاج ۾ ڪنهن تبديلي ڪئي؟ </string>
-    <string name="pofpa16a"> ڊاڪٽر </string>
-    <string name="pofpa16b"> پاڻ </string>
-    <string name="pofpa16c"> ليڊي هليٿ ورڪر </string>
-    <string name="pofpa17"> نئي علاج جي وضاحت ڪريو. </string>
-    <string name="pofpa17a"> دوا جو نالو </string>
-    <string name="pofpa17b"> ڪيترا دفعا ڏينهن ۾ </string>
-    <string name="pofpa17c"> وزن: </string>
-    <string name="pofpa171"> Route of administration (Oral/IV) </string>
-    <string name="pofpa171a"> وات ذريعي </string>
-    <string name="pofpa171b"> رڳ ذريعي </string>
+
+    <string name="pofpa17"> ٻار گھر ۾ ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
+
+    <string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
+    <string name="pofpa18a"> بلڪل ٺيڪ </string>
+    <string name="pofpa18b"> بهتر </string>
+    <string name="pofpa18c"> ساڳي </string>
+    <string name="pofpa18d"> خراب </string>
+    <string name="pofpa18e"> وفات ڪري ويو </string>
+
+    <string name="pofpa19"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا ؟ </string>
+    <string name="pofpa19a"> ها </string>
+    <string name="pofpa19b"> نه </string>
+
+    <string name="pofpa20"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا؟ </string>
+    <string name="pofpa20a"> دست </string>
+    <string name="pofpa20b"> لڳا تار اُلٽي </string>
+    <string name="pofpa20c"> چمڙي تي داڻ داڻ </string>
+
+    <string name="pofpa21"> ڇا علاج  ۾ ڪا تبديلي ڪئي وئي آهي ؟ </string>
+    <string name="pofpa21a"> ها </string>
+    <string name="pofpa21b"> نه </string>
+
+    <string name="pofpa22"> جيڪڏهن ها ته، علاج ۾ ڪنهن تبديلي ڪئي؟ </string>
+    <string name="pofpa22a"> ڊاڪٽر </string>
+    <string name="pofpa22b"> پاڻ </string>
+    <string name="pofpa22c"> ليڊي هليٿ ورڪر </string>
+
+    <string name="pofpa23"> نئي علاج جي وضاحت ڪريو. </string>
+    <string name="pofpa23a"> دوا جو نالو </string>
+    <string name="pofpa23b"> ڪيترا دفعا ڏينهن ۾ </string>
+    <string name="pofpa23c"> وزن: </string>
+    <string name="pofpa231"> Route of administration (Oral/IV) </string>
+    <string name="pofpa231a"> وات ذريعي </string>
+    <string name="pofpa231b"> رڳ ذريعي </string>
 
 
     <!--Section 02 Screening For Pneumonia-->

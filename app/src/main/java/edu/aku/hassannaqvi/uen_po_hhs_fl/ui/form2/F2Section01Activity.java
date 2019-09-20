@@ -91,19 +91,32 @@ public class F2Section01Activity extends AppCompatActivity {
             }
         });
 
-
-        bi.pofpa15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pofpa19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == bi.pofpa15a.getId()) {
-                    bi.cvpofpa16.setVisibility(View.VISIBLE);
-                    bi.cvpofpa17.setVisibility(View.VISIBLE);
+                if (checkedId == bi.pofpa19a.getId()) {
+                    bi.pofpa20cv.setVisibility(View.VISIBLE);
                 } else {
-                    ClearClass.ClearAllFields(bi.cvpofpa16, null);
-                    ClearClass.ClearAllFields(bi.cvpofpa17, null);
-                    bi.cvpofpa16.setVisibility(View.GONE);
-                    bi.cvpofpa17.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.pofpa20cv, null);
+                    bi.pofpa20cv.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bi.pofpa21.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofpa21a.getId()) {
+                    bi.cvpofpa22.setVisibility(View.VISIBLE);
+                    bi.cvpofpa23.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.cvpofpa22, null);
+                    ClearClass.ClearAllFields(bi.cvpofpa23, null);
+                    bi.cvpofpa22.setVisibility(View.GONE);
+                    bi.cvpofpa23.setVisibility(View.GONE);
                 }
             }
         });
@@ -392,36 +405,41 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa121b.isChecked() ? "2"
                 : "0");
 
-        f02.put("pofpa13", bi.pofpa13a.isChecked() ? "1"
-                : bi.pofpa13b.isChecked() ? "2"
-                : bi.pofpa13c.isChecked() ? "3"
-                : bi.pofpa13d.isChecked() ? "4"
-                : bi.pofpa13e.isChecked() ? "5"
+        f02.put("pofpa17", bi.pofpa17.getText().toString());
+
+        f02.put("pofpa18", bi.pofpa18a.isChecked() ? "1"
+                : bi.pofpa18b.isChecked() ? "2"
+                : bi.pofpa18c.isChecked() ? "3"
+                : bi.pofpa18d.isChecked() ? "4"
+                : bi.pofpa18e.isChecked() ? "5"
                 : "0");
 
-        f02.put("pofpa14a", bi.pofpa14a.isChecked() ? "1" : "0");
-        f02.put("pofpa14b", bi.pofpa14b.isChecked() ? "2" : "0");
-        f02.put("pofpa14c", bi.pofpa14c.isChecked() ? "3" : "0");
-        f02.put("pofpa1496", bi.pofpa1496.isChecked() ? "96" : "0");
-        f02.put("pofpa1496x", bi.pofpa1496x.getText().toString());
-
-        f02.put("pofpa15", bi.pofpa15a.isChecked() ? "1"
-                : bi.pofpa15b.isChecked() ? "2"
+        f02.put("pofpa19", bi.pofpa19a.isChecked() ? "1"
+                : bi.pofpa19b.isChecked() ? "2"
                 : "0");
-        f02.put("pofpa15ax", bi.pofpa15ax.getText().toString());
 
-        f02.put("pofpa16", bi.pofpa16a.isChecked() ? "1"
-                : bi.pofpa16b.isChecked() ? "2"
-                : bi.pofpa16c.isChecked() ? "3"
-                : bi.pofpa1696.isChecked() ? "96"
+        f02.put("pofpa20a", bi.pofpa20a.isChecked() ? "1" : "0");
+        f02.put("pofpa20b", bi.pofpa20b.isChecked() ? "2" : "0");
+        f02.put("pofpa20c", bi.pofpa20c.isChecked() ? "3" : "0");
+        f02.put("pofpa2096", bi.pofpa2096.isChecked() ? "96" : "0");
+        f02.put("pofpa2096x", bi.pofpa2096x.getText().toString());
+
+        f02.put("pofpa21", bi.pofpa21a.isChecked() ? "1"
+                : bi.pofpa21b.isChecked() ? "2"
                 : "0");
-        f02.put("pofpa1696x", bi.pofpa1696x.getText().toString());
 
-        f02.put("pofpa17a", bi.pofpa17a.getText().toString());
-        f02.put("pofpa17b", bi.pofpa17b.getText().toString());
-        f02.put("pofpa17c", bi.pofpa17c.getText().toString());
-        f02.put("pofpa171", bi.pofpa171a.isChecked() ? "1"
-                : bi.pofpa171b.isChecked() ? "2"
+        f02.put("pofpa22", bi.pofpa22a.isChecked() ? "1"
+                : bi.pofpa22b.isChecked() ? "2"
+                : bi.pofpa22c.isChecked() ? "3"
+                : bi.pofpa2296.isChecked() ? "96"
+                : "0");
+        f02.put("pofpa2296x", bi.pofpa2296x.getText().toString());
+
+        f02.put("pofpa23a", bi.pofpa23a.getText().toString());
+        f02.put("pofpa23b", bi.pofpa23b.getText().toString());
+        f02.put("pofpa23c", bi.pofpa23c.getText().toString());
+        f02.put("pofpa231", bi.pofpa231a.isChecked() ? "1"
+                : bi.pofpa231b.isChecked() ? "2"
                 : "0");
 
         MainApp.fc.setsA(String.valueOf(f02));
