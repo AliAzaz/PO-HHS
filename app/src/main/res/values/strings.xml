@@ -68,7 +68,9 @@
     <string name="no"> نه </string>
     <string name="na"> لاڳو نٿو ٿئي </string>
     <string name="yes1"> ها، ٽڪو لڳو </string>
+    <string name="yes2"> ها، ڦڙا پيتا </string>
     <string name="no1"> نه، ٽڪو نه لڳو </string>
+    <string name="no2"> نه، ڦڙا نه پيتا </string>
     <string name="na1"> لاڳو نٿو ٿئي </string>
     <string name="dkn"> خبر ناھي </string>
     <string name="day"> ڏينهن </string>
