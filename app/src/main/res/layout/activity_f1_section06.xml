@@ -589,6 +589,11 @@
                             style="@style/i_checkbox"
                             android:text="@string/pocff10e" />
 
+                        <CheckBox
+                            android:id="@+id/pocff10f"
+                            style="@style/i_checkbox"
+                            android:text="@string/pocff10f" />
+
                     </LinearLayout>
 
                 </LinearLayout>

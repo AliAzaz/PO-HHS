@@ -492,7 +492,8 @@
     <string name="pocff10c"> جانور جو کير </string>
     <string name="pocff10d"> فارمولا وارو کير </string>
     <string name="pocff10e"> ٺوس غذا </string>
-    <string name="pocff11"> گذريل 24 ڪلاڪن اندر ٻار(چونڊيل ڪيس) کي ڪيترا دفعا کاڌو کارايو پياريو؟ </string>
+    <string name="pocff10f"> نيم ٺوس غذا </string>
+    <string name="pocff11"> گذريل 24 ڪلاڪن اندر ٻار (چونڊيل ڪيس) کي ڪيترا دفعا کاڌو کارايو پياريو؟ </string>
 
     <!--07-->
     <string name="response"> Response </string>
