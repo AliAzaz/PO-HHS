@@ -106,6 +106,15 @@ public class DateUtils {
         return ageInYears;
     }
 
+    public static long ageInMonthsByDOB(Calendar cal) {
+        Date dob = cal.getTime();
+        Date today = new Date();
+        Long diff = today.getTime() - dob.getTime();
+        double ageInMonths = (diff / (24 * 60 * 60 * 1000)) / 30.4375;
+        long age = (long) Math.floor(ageInMonths);
+        return age;
+    }
+
     public static String getYearsAndMonthsBack(String format, int month, int year) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(cal.getTime());

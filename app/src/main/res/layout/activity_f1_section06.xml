@@ -503,6 +503,7 @@
 
             </android.support.v7.widget.CardView>
 
+
             <android.support.v7.widget.CardView
                 style="@style/cardView"
                 android:visibility='@{pocff08d.checked? View.GONE : View.VISIBLE}'>
@@ -520,9 +521,9 @@
                         android:id="@+id/pocff09D"
                         style="@style/EditText_number"
                         android:hint="@string/day"
-                        app:mask="##"
                         android:text='@{pocff08d.checked || pocff09C.checked ? "" : pocff09D.getText.toString }'
                         android:visibility='@{pocff08d.checked || pocff09C.checked ? View.GONE : View.VISIBLE }'
+                        app:mask="##"
                         app:maxValue="29"
                         app:minValue="0"
                         app:type="range" />
@@ -530,6 +531,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocff09M"
                         style="@style/EditText_number"
+                        android:layout_weight="1"
                         android:hint="@string/month"
                         android:text='@{pocff08d.checked || pocff09C.checked ? "" : pocff09M.getText.toString }'
                         android:visibility='@{pocff08d.checked || pocff09C.checked ? View.GONE : View.VISIBLE }'
@@ -541,13 +543,14 @@
                     <CheckBox
                         android:id="@+id/pocff09C"
                         style="@style/i_checkbox"
-                        android:tag="-1"
                         android:checked='@{pocff08d.checked ? false : false }'
+                        android:tag="-1"
                         android:text="@string/pocff09C" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -561,8 +564,8 @@
                         android:text="@string/pocff10" />
 
                     <LinearLayout
-                        android:tag="0"
-                        style="@style/linearlayout_view_wt_bound">
+                        style="@style/linearlayout_view_wt_bound"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/pocff10a"
@@ -660,7 +663,8 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

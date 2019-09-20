@@ -583,8 +583,8 @@
 
     <string name="pocfj01"> ڇا ٻار کي هيٺين مان ڪنهن به بيماريءَ جي شڪايت آهي؟(هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
     <string name="pocfj01a"> سوڄ </string>
-    <string name="pocfj01b"> بخار </string>
-    <string name="pocfj01bt"> گرمي پد </string>
+    <string name="pocfj01b"> بخار C°  </string>
+    <string name="pocfj01bt"> گرمي پد لکو </string>
     <string name="pocfj01c"> سائي </string>
     <string name="pocfj01d"> زڪام </string>
     <string name="pocfj01e"> وهندڙ نڪ </string>
@@ -596,9 +596,11 @@
     <string name="pocfj01k"> چمڙي جو آهستي پوئتي وڃڻ </string>
     <string name="pocfj01l"> ڪن جي ڪا بيماري </string>
     <string name="pocfj01m"> اکين جي ڪا بيماري </string>
-    <string name="pocfj01n"> وات ۾ ٿرش / زباني واڌايون </string>
+    <string name="pocfj01n"> وات ۾ ٿرش </string>
     <string name="pocfj01o"> اُلٽي </string>
-    <string name="pocfj02"> ڇا توهان جو ٻار موجوده بيماري لاءِ ڪا دوا وٺي رهيو آهي؟ </string>
+    <string name="pocfj01p"> الرجي </string>
+
+    <string name="pocfj02">ڇا توهان جو ٻار موجوده بيماري لاءِ ڪا دوا وٺي رهيو آهي؟ </string>
 
 
     <!--Section 11-->
