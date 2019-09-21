@@ -737,21 +737,25 @@
     <string name="pofpa10"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون؟ </string>
     <string name="pofpa10a"> ها </string>
     <string name="pofpa10b"> نه </string>
-    <string name="pofpa11"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
-    <string name="pofpa11a"> دوا جو نالو </string>
-    <string name="pofpa11b"> ڪيترا دفعا ڏينهن ۾ </string>
-    <string name="pofpa11c"> وزن: </string>
-    <string name="pofpa111"> Route of administration (Oral/IV) </string>
-    <string name="pofpa111a"> وات ذريعي </string>
-    <string name="pofpa111b"> رڳ ذريعي </string>
 
-    <string name="pofpa12"> جيڪڏهن رفرل کان انڪار ڪيو ته ٻار گھر ۾ ڪهڙو علاج حاصل ڪيو؟ </string>
-    <string name="pofpa12a"> دوا جو نالو </string>
-    <string name="pofpa12b"> ڪيترا دفعا ڏينهن ۾ </string>
-    <string name="pofpa12c"> وزن: </string>
-    <string name="pofpa121"> Route of administration (Oral/IV) </string>
-    <string name="pofpa121a"> وات ذريعي </string>
-    <string name="pofpa121b"> رڳ ذريعي </string>
+    <string name="pofpa15"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
+    <string name="pofpa151a"> دوا جو نالو </string>
+    <string name="pofpa151b"> ڪيترا دفعا ڏينهن ۾ </string>
+    <string name="pofpa151c"> وزن: </string>
+    <string name="pofpa151d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa151da"> وات ذريعي </string>
+    <string name="pofpa151db"> رڳ ذريعي </string>
+    <string name="pofpa152"> آڪسيجن ٿيراپي </string>
+    <string name="pofpa1597"> لاڳو نه ٿو ٿئ </string>
+
+    <string name="pofpa16"> جيڪڏهن رفرل کان انڪار ڪيو ته ٻار گھر ۾ ڪهڙو علاج حاصل ڪيو؟ </string>
+    <string name="pofpa161a"> دوا جو نالو </string>
+    <string name="pofpa161b"> ڪيترا دفعا ڏينهن ۾ </string>
+    <string name="pofpa161c"> وزن: </string>
+    <string name="pofpa161d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa161da"> وات ذريعي </string>
+    <string name="pofpa161db"> رڳ ذريعي </string>
+    <string name="pofpa162"> آڪسيجن ٿيراپي </string>
 
     <string name="pofpa17"> ٻار گھر ۾ ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
 
@@ -783,8 +787,8 @@
     <string name="pofpa23"> نئي علاج جي وضاحت ڪريو. </string>
     <string name="pofpa23a"> دوا جو نالو </string>
     <string name="pofpa23b"> ڪيترا دفعا ڏينهن ۾ </string>
-    <string name="pofpa23c"> وزن: </string>
-    <string name="pofpa231"> Route of administration (Oral/IV) </string>
+    <string name="pofpa23c"> وزن: (OD, BD, TID, QID)  </string>
+    <string name="pofpa231"> :Route of administration (Oral/IV) </string>
     <string name="pofpa231a"> وات ذريعي </string>
     <string name="pofpa231b"> رڳ ذريعي </string>
 
