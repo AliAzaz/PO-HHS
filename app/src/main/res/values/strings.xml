@@ -725,18 +725,45 @@
     <string name="pofpa00"> رفرل آءِ ڊي </string>
     <string name="pofpa05"> ٻار جو نالو </string>
     <string name="pofpa06"> پيءُ جو نالو </string>
+
     <string name="pofpa07"> فالواپ ڪيو ويو؟ </string>
-    <string name="pofpa07a"> ٻار جو گھر </string>
-    <string name="pofpa07b"> ليڊي هيلٿ ورڪر جو هيلٿ هائوس </string>
-    <string name="pofpa07c"> عوامي صحت جي سهولت(نالو) </string>
-    <string name="pofpa07d"> پرائيوٽ(نجي) صحت جي سهولت(نالو) </string>
-    <string name="pofpa08"> ڇا توهان ريفرل قبول ڪيو؟ </string>
-    <string name="pofpa08a"> ها </string>
-    <string name="pofpa08b"> نه </string>
-    <string name="pofpa09"> جيڪڏهن رفرل قبول ڪيو ويو، ته ٻار اسپتال ۾ ڪيترا ڏينهن رهيو؟ </string>
-    <string name="pofpa10"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون؟ </string>
+    <string name="pofpa07a"> ها </string>
+    <string name="pofpa07b"> نه </string>
+
+    <string name="pofpa08"> فالواپ نه ڪرڻ جا سبب </string>
+    <string name="pofpa08a"> گھر بند هو </string>
+    <string name="pofpa08b"> انڪار ڪيو </string>
+    <string name="pofpa08c"> ٻار موجود نه هو </string>
+    <string name="pofpa08d"> ٻار وفات ڪري ويو </string>
+
+    <string name="pofpa09"> فالواپ ڪٿي ڪيو ويو ؟ </string>
+    <string name="pofpa09a"> ٻار جو گھر </string>
+    <string name="pofpa09b"> ليڊي هيلٿ ورڪر جو هيلٿ هائوس </string>
+    <string name="pofpa09c"> عوامي صحت جي سهولت </string>
+    <string name="pofpa09d"> پرائيوٽ(نجي) صحت جي سهولت </string>
+
+    <string name="pofpa10"> ڇا توهان ريفرل قبول ڪيو ؟ </string>
     <string name="pofpa10a"> ها </string>
     <string name="pofpa10b"> نه </string>
+
+    <string name="pofpa11"> جيڪڏهن نه ته ڇو ؟ </string>
+    <string name="pofpa11a"> ايڏو وڏو مسئلو نه هو </string>
+    <string name="pofpa11b"> پئسا نه هئا </string>
+    <string name="pofpa11c"> سواري نه هئي </string>
+    <string name="pofpa11d"> مرد جي غير موجودگي جي ڪري </string>
+    <string name="pofpa11e"> گھر جي سربراهه/ مڙس / سس / جي اجازت نه هُئ </string>
+    <string name="pofpa11f"> ريفرل اسپتال پري آهي </string>
+    <string name="pofpa11g"> غير معياري صحت جون  سهولتون </string>
+
+    <string name="pofpa12"> ڇا  ٻار اسپتال ۾ داخل ٿيو ؟ </string>
+    <string name="pofpa12a"> ها </string>
+    <string name="pofpa12b"> نه </string>
+
+    <string name="pofpa13"> ٻار اسپتال ۾ ڪيترا ڏينهن رهيو ؟ </string>
+
+    <string name="pofpa14"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون ؟ </string>
+    <string name="pofpa14a"> ها </string>
+    <string name="pofpa14b"> نه </string>
 
     <string name="pofpa15"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
     <string name="pofpa151a"> دوا جو نالو </string>
