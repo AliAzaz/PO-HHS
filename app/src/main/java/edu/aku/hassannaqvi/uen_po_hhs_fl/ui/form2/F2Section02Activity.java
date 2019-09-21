@@ -116,6 +116,7 @@ public class F2Section02Activity extends AppCompatActivity {
         f02.put("pofpb07b", bi.pofpb07b.isChecked() ? "2" : "0");
         f02.put("pofpb07c", bi.pofpb07c.isChecked() ? "3" : "0");
         f02.put("pofpb07d", bi.pofpb07d.isChecked() ? "4" : "0");
+        f02.put("pofpb07e", bi.pofpb07d.isChecked() ? "5" : "0");
         f02.put("pofpb0797", bi.pofpb0797.isChecked() ? "97" : "0");
 
         f02.put("pofpb08", bi.pofpb08a.isChecked() ? "1"
