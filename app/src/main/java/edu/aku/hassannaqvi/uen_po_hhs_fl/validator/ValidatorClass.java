@@ -199,6 +199,11 @@ public abstract class ValidatorClass {
             boolean rdbFlag = true;
             for (int j = 0; j < rdGrp.getChildCount(); j++) {
                 View innerV = rdGrp.getChildAt(j);
+
+                if (innerV instanceof RadioButton) {
+                    if (!((RadioButton) innerV).isChecked()) continue;
+                }
+
                 if (innerV instanceof EditText) {
                     if (getIDComponent(rdGrp.findViewById(rdGrp.getCheckedRadioButtonId())).equals(innerV.getTag()))
                         if (innerV instanceof EditTextPicker)
@@ -206,6 +211,7 @@ public abstract class ValidatorClass {
                         else
                             rdbFlag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
                 }
+                if (!rdbFlag) break;
             }
 
             if (rdbFlag) {
