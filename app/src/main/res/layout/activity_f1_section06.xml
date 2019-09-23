@@ -211,17 +211,17 @@
                             android:visibility='@{pocff02k.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
-                            android:id="@+id/pocff02l"
+                            android:id="@+id/pocff0296"
                             style="@style/i_radiobutton"
-                            android:text="@string/pocff02l" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/pocff02lx"
+                            android:id="@+id/pocff0296x"
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pocff02lx"
-                            android:tag="pocff02l"
-                            android:text='@{pocff02l.checked? pocff02lx.getText.toString : "" }'
-                            android:visibility='@{pocff02l.checked? View.VISIBLE : View.GONE}' />
+                            android:tag="pocff0296"
+                            android:text='@{pocff0296.checked? pocff0296x.getText.toString : "" }'
+                            android:visibility='@{pocff0296.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 

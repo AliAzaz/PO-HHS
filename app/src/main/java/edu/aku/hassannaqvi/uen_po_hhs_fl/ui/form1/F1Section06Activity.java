@@ -101,11 +101,11 @@ public class F1Section06Activity extends AppCompatActivity {
                 : bi.pocff02i.isChecked() ? "9"
                 : bi.pocff02j.isChecked() ? "10"
                 : bi.pocff02k.isChecked() ? "11"
-                : bi.pocff02l.isChecked() ? "12"
+                : bi.pocff0296.isChecked() ? "96"
                 : "0");
         sF.put("pocff02gx", bi.pocff02gx.getText().toString());
         sF.put("pocff02kx", bi.pocff02kx.getText().toString());
-        sF.put("pocff02lx", bi.pocff02lx.getText().toString());
+        sF.put("pocff0296x", bi.pocff0296x.getText().toString());
 
         sF.put("pocff03", bi.pocff03a.isChecked() ? "1"
                 : bi.pocff03b.isChecked() ? "2"
