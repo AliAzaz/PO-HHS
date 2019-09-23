@@ -71,6 +71,22 @@ public class F4Section01Activity extends AppCompatActivity {
         bi.pohrj04ex.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrl01ax.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
 
+
+        bi.pohrd0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrd01, false);
+                    bi.lvpohrd01.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrd01, true);
+                    bi.lvpohrd01.setTag("0");
+                }
+            }
+        });
+
+
         bi.pohrf0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -426,6 +442,7 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrd01c", bi.pohrd01c.isChecked() ? "3" : "0");
         form04_01.put("pohrd01d", bi.pohrd01d.isChecked() ? "4" : "0");
         form04_01.put("pohrd01e", bi.pohrd01e.isChecked() ? "5" : "0");
+        form04_01.put("pohrd0197", bi.pohrd0197.isChecked() ? "97" : "0");
 
 
         form04_01.put("pohre01", bi.pohre01a.isChecked() ? "1"
@@ -452,8 +469,8 @@ public class F4Section01Activity extends AppCompatActivity {
 
 
         form04_01.put("pohrg04a", bi.pohrg04a.getText().toString());
-
         form04_01.put("pohrg04b", bi.pohrg04b.getText().toString());
+        form04_01.put("pohrg0497", bi.pohrg0497.isChecked() ? "97" : "0");
 
         form04_01.put("pohrh01", bi.pohrh01.isChecked() ? "1" : "0");
         form04_01.put("pohrh01x", bi.pohrh01x.getText().toString());
@@ -508,10 +525,14 @@ public class F4Section01Activity extends AppCompatActivity {
                 : bi.pohrj01b.isChecked() ? "2"
                 : "0");
         form04_01.put("pohrj02a", bi.pohrj02a.getText().toString());
+        form04_01.put("pohrj02a98", bi.pohrj02a98.isChecked() ? "98" : "0");
         form04_01.put("pohrj02b", bi.pohrj02b.getText().toString());
+        form04_01.put("pohrj02b98", bi.pohrj02b98.isChecked() ? "98" : "0");
         form04_01.put("pohrj02c", bi.pohrj02c.getText().toString());
+        form04_01.put("pohrj02c98", bi.pohrj02c98.isChecked() ? "98" : "0");
         form04_01.put("pohrj02d", bi.pohrj02da.isChecked() ? "1"
                 : bi.pohrj02db.isChecked() ? "2"
+                : bi.pohrj02d98.isChecked() ? "98"
                 : "0");
 
         form04_01.put("pohrj03", bi.pohrj03a.isChecked() ? "1"

@@ -1193,6 +1193,7 @@
     <string name="pohrd01c"> جهٽڪا </string>
     <string name="pohrd01d"> بيهوشي/ غنودگي </string>
     <string name="pohrd01e"> رت ۾ آڪسيجن جي ڪمي (SpO2 &lt; 92)  </string>
+    <string name="pohrd0197"> ڪو به نه </string>
 
 
     <string name="pohre01"> صحت جي عالمي اداري مطابق نمونيا جي آخري درجابندي (مناسب باڪس تي نشان لڳايو علامتن جي موجودگي مطابق) </string>
@@ -1223,6 +1224,7 @@
     <string name="pohrg03"> پلس/منٽ </string>
     <string name="pohrg04a"> رت ۾ آڪسيجن جي ليول </string>
     <string name="pohrg04b"> رت ۾ آڪسيجن جي ليول </string>
+    <string name="pohrg0497"> Skip if control group </string>
 
     <string name="pohrh"> ليبارٽيري تحقيقات </string>
     <string name="pohrh01"> ( آر بي سي) رت جا ڳاڙها جزا </string>
@@ -1256,7 +1258,8 @@
     <string name="pohrj02"> جيڪڏهن ها ته </string>
     <string name="pohrj02a"> وضاحت ڪريو عام نالو </string>
     <string name="pohrj02b"> وزن(ملي گرام) </string>
-    <string name="pohrj02c"> روزانو </string>
+    <string name="pohrj02c"> روزانو: (OD, BD, TID, QID) </string>
+    <string name="pohrj02d"> دوا ڪيئن ڏني </string>
     <string name="pohrj02da"> سئي ذريعي </string>
     <string name="pohrj02db"> وات ذريعي </string>
 

@@ -506,6 +506,7 @@
                             android:text="@string/pohrd01" />
 
                         <LinearLayout
+                            android:id="@+id/lvpohrd01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -547,6 +548,14 @@
                                 android:text="@string/pohrd01e" />
 
                         </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/pohrd0197"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:tag="-1"
+                            android:text="@string/pohrd0197" />
 
                     </LinearLayout>
 
@@ -795,7 +804,7 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--pohrg04a-& b -->
+                <!--pohrg04a, b, 97 -->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -812,6 +821,8 @@
                             app:mask="###"
                             app:maxValue="105"
                             app:minValue="80"
+                            android:text='@{pohrg0497.checked ? "" : pohrg04a.getText.toString }'
+                            android:visibility='@{pohrg0497.checked ? View.GONE : View.VISIBLE }'
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -822,7 +833,18 @@
                             app:mask="###"
                             app:maxValue="105"
                             app:minValue="80"
+                            android:text='@{pohrg0497.checked ? "" : pohrg04b.getText.toString }'
+                            android:visibility='@{pohrg0497.checked ? View.GONE : View.VISIBLE }'
                             app:type="range" />
+
+                        <CheckBox
+                            android:id="@+id/pohrg0497"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:tag="-1"
+                            android:text="@string/na"
+                            android:textAlignment="viewStart" />
 
                     </LinearLayout>
 
@@ -1233,17 +1255,25 @@
                                 style="@style/i_textview"
                                 android:text="@string/pohrj02a" />
 
-
                             <EditText
                                 android:id="@+id/pohrj02a"
                                 style="@style/EditTextAlphaNumeric"
                                 android:hint="@string/nameW"
-                                android:text='@{pohrj01a.checked? pohrj02a.getText.toString : "" }' />
+                                android:text='@{pohrj01a.checked &amp;&amp; !pohrj02a98.checked ? pohrj02a.getText.toString : ""}'
+                                android:visibility='@{pohrj02a98.checked? View.GONE : View.VISIBLE}' />
+
+                            <CheckBox
+                                android:id="@+id/pohrj02a98"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
+
 
                             <TextView
                                 style="@style/i_textview"
                                 android:text="@string/pohrj02b" />
-
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pohrj02b"
@@ -1253,8 +1283,18 @@
                                 app:mask="##.##"
                                 app:maxValue="30"
                                 app:minValue="0.5"
-                                android:text='@{pohrj01a.checked? pohrj02b.getText.toString : "" }'
+                                android:text='@{pohrj01a.checked &amp;&amp; !pohrj02b98.checked ? pohrj02b.getText.toString : ""}'
+                                android:visibility='@{pohrj02b98.checked? View.GONE : View.VISIBLE}'
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/pohrj02b98"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
+
 
                             <TextView
                                 style="@style/i_textview"
@@ -1264,11 +1304,25 @@
                                 android:id="@+id/pohrj02c"
                                 style="@style/EditText_number"
                                 android:hint="#"
-                                android:text='@{pohrj01a.checked? pohrj02c.getText.toString : "" }'
+                                android:text='@{pohrj01a.checked &amp;&amp; !pohrj02c98.checked ? pohrj02c.getText.toString : ""}'
+                                android:visibility='@{pohrj02c98.checked? View.GONE : View.VISIBLE}'
                                 app:maxValue="4"
                                 app:minValue="1"
                                 app:mask="#"
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/pohrj02c98"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
+
+
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/pohrj02d" />
 
                             <RadioGroup
                                 android:id="@+id/pohrj02d"
@@ -1288,6 +1342,13 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/pohrj02db" />
+
+                                <RadioButton
+                                    android:id="@+id/pohrj02d98"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/dkn" />
 
                             </RadioGroup>
 
