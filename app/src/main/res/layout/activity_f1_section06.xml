@@ -536,7 +536,7 @@
                         android:text='@{pocff08d.checked || pocff09C.checked ? "" : pocff09M.getText.toString }'
                         android:visibility='@{pocff08d.checked || pocff09C.checked ? View.GONE : View.VISIBLE }'
                         app:mask="##"
-                        app:maxValue="30"
+                        app:maxValue="24"
                         app:minValue="0"
                         app:type="range" />
 

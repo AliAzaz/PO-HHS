@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -135,9 +136,11 @@ public class F1Section11Activity extends AppCompatActivity {
 
         sK.put("pocfk06a", bi.pocfk06a.getText().toString());
         sK.put("pocfk06b", bi.pocfk06b.getText().toString());
+        sK.put("pocfk0697", bi.pocfk0697.isChecked() ? "97" : "0");
 
         sK.put("pocfk07", bi.pocfk07a.isChecked() ? "1"
                 : bi.pocfk07b.isChecked() ? "2"
+                : bi.pocfk0797.isChecked() ? "97"  //Not applicable for control group(23-Sep-19, Hassan Bhai)
                 : "0");
 
         sK.put("pocfk08a", bi.pocfk08a.isChecked() ? "1" : "0");
@@ -184,12 +187,13 @@ public class F1Section11Activity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll11))
             return false;
 
-        if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) >= 92 && bi.pocfk07a.isChecked()) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
-        }
-
-        if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92 && bi.pocfk07b.isChecked()) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+        if (bi.pocfk06b.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) >= 92 && bi.pocfk07a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92 && bi.pocfk07b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+            }
+            //return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
         }
 
         return true;

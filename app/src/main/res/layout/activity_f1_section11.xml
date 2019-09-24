@@ -297,6 +297,8 @@
                         app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
+                        android:text='@{pocfk0697.checked? "" : pocfk06a.getText.toString }'
+                        android:visibility='@{pocfk0697.checked? View.GONE : View.VISIBLE}'
                         app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -306,7 +308,18 @@
                         app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
+                        android:text='@{pocfk0697.checked? "" : pocfk06b.getText.toString }'
+                        android:visibility='@{pocfk0697.checked? View.GONE : View.VISIBLE}'
                         app:type="range" />
+
+                    <!--Skip for Control Group (23-Sep-19, Hassan Bhai)-->
+                    <CheckBox
+                        android:id="@+id/pocfk0697"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:tag="-1"
+                        android:text="@string/na" />
 
                 </LinearLayout>
 
@@ -344,6 +357,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/pocfk0797"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/na" />
 
                     </RadioGroup>
 
@@ -440,7 +460,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -450,14 +469,12 @@
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
 
-
                         <RadioButton
                             android:id="@+id/pocfk09a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="@string/pocfk09a" />
-
 
                         <TextView
                             android:layout_width="match_parent"
@@ -477,14 +494,12 @@
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
 
-
                         <RadioButton
                             android:id="@+id/pocfk09b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="@string/pocfk09b" />
-
 
                         <TextView
                             android:layout_width="match_parent"
@@ -503,7 +518,6 @@
                             android:text="@string/pocfk09h5"
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
-
 
                         <RadioButton
                             android:id="@+id/pocfk09c"
