@@ -205,6 +205,8 @@
                         app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
+                        android:text='@{pofpb0497.checked ? "" : pofpb04a.getText().toString()}'
+                        android:visibility='@{pofpb0497.checked ? View.GONE : View.VISIBLE}'
                         app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -214,7 +216,17 @@
                         app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
+                        android:text='@{pofpb0497.checked ? "" : pofpb04b.getText().toString()}'
+                        android:visibility='@{pofpb0497.checked ? View.GONE : View.VISIBLE}'
                         app:type="range" />
+
+                    <CheckBox
+                        android:id="@+id/pofpb0497"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:tag="-1"
+                        android:text="@string/na" />
 
                 </LinearLayout>
 
@@ -251,6 +263,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/pofpb0597"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/na" />
 
                     </RadioGroup>
 

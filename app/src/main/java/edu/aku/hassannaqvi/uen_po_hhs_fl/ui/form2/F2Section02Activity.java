@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -103,9 +104,11 @@ public class F2Section02Activity extends AppCompatActivity {
 
         f02.put("pofpb04a", bi.pofpb04a.getText().toString());
         f02.put("pofpb04b", bi.pofpb04b.getText().toString());
+        f02.put("pofpb0497", bi.pofpb0497.isChecked() ? "97" : "0");
 
         f02.put("pofpb05", bi.pofpb05a.isChecked() ? "1"
                 : bi.pofpb05b.isChecked() ? "2"
+                : bi.pofpb0597.isChecked() ? "97"
                 : "0");
 
         f02.put("pofpb06", bi.pofpb06a.isChecked() ? "1"
@@ -132,12 +135,12 @@ public class F2Section02Activity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02))
             return false;
 
-        if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92 && bi.pofpb05a.isChecked()) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
-        }
-
-        if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92 && bi.pofpb05b.isChecked()) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+        if (bi.pofpb04b.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92 && bi.pofpb05a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92 && bi.pofpb05b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+            }
         }
 
         return true;
