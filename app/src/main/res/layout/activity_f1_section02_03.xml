@@ -238,7 +238,7 @@
                         <EditText
                             android:id="@+id/pocfc0196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfc0196"
                             android:text='@{pocfc0196.checked? pocfc0196x.getText.toString : "" }'
                             android:visibility='@{pocfc0196.checked? View.VISIBLE : View.GONE}' />
@@ -314,7 +314,7 @@
                         <EditText
                             android:id="@+id/pocfc0296x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfc0296"
                             android:text='@{pocfc0296.checked? pocfc0296x.getText.toString : "" }'
                             android:visibility='@{pocfc0296.checked? View.VISIBLE : View.GONE}' />
@@ -598,11 +598,6 @@
                             style="@style/i_radiobutton"
                             android:text="@string/yes" />
 
-                        <RadioButton
-                            android:id="@+id/pocfc10b"
-                            style="@style/i_radiobutton"
-                            android:text="@string/no" />
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfc10ax"
                             style="@style/EditText_number"
@@ -614,6 +609,11 @@
                             app:maxValue="16"
                             app:minValue="1"
                             app:type="range" />
+
+                        <RadioButton
+                            android:id="@+id/pocfc10b"
+                            style="@style/i_radiobutton"
+                            android:text="@string/no" />
 
                     </RadioGroup>
 

@@ -107,7 +107,7 @@
                             android:tag="pocfk0196"
                             android:id="@+id/pocfk0196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:text='@{pocfk0196.checked? pocfk0196x.getText.toString : "" }'
                             android:visibility='@{pocfk0196.checked? View.VISIBLE : View.GONE}' />
 
@@ -615,7 +615,7 @@
                             android:tag="pocfk1196"
                             android:id="@+id/pocfk1196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:text='@{pocfk1196.checked? pocfk1196x.getText.toString : "" }'
                             android:visibility='@{pocfk1196.checked? View.VISIBLE : View.GONE}' />
 
