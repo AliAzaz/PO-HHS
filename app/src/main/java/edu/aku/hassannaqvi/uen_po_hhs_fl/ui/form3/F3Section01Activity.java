@@ -326,6 +326,7 @@ public class F3Section01Activity extends AppCompatActivity {
 
         form03_01.put("pofi07", bi.pofi07a.isChecked() ? "1"
                 : bi.pofi07b.isChecked() ? "2"
+                : bi.pofi0797.isChecked() ? "97"
                 : "0");
 
         form03_01.put("pofi08", bi.pofi08a.isChecked() ? "1"
@@ -336,6 +337,7 @@ public class F3Section01Activity extends AppCompatActivity {
 
         form03_01.put("pofi09", bi.pofi09a.isChecked() ? "1"
                 : bi.pofi09b.isChecked() ? "2"
+                : bi.pofi0997.isChecked() ? "97"
                 : "0");
 
         form03_01.put("pofi10", bi.pofi10a.isChecked() ? "1"

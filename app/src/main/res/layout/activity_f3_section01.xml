@@ -429,6 +429,7 @@
                                 style="@style/EditText_number"
                                 android:hint="@string/pofi06ay"
                                 android:tag="pofi06a"
+                                android:maxLength="2"
                                 android:text='@{pofi06a.checked? pofi06ay.getText.toString : "" }'
                                 android:visibility='@{pofi06a.checked? View.VISIBLE : View.GONE}' />
 
@@ -465,6 +466,11 @@
                                 android:id="@+id/pofi07b"
                                 style="@style/i_radiobutton"
                                 android:text="@string/no" />
+
+                            <RadioButton
+                                android:id="@+id/pofi0797"
+                                style="@style/i_radiobutton"
+                                android:text="@string/na" />
 
                         </RadioGroup>
 
@@ -540,6 +546,11 @@
                                 android:id="@+id/pofi09b"
                                 style="@style/i_radiobutton"
                                 android:text="@string/pofi09b" />
+
+                            <RadioButton
+                                android:id="@+id/pofi0997"
+                                style="@style/i_radiobutton"
+                                android:text="@string/na" />
 
                         </RadioGroup>
 
