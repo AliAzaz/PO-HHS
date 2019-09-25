@@ -97,9 +97,9 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh03"
                         style="@style/EditText_number"
-                        android:hint="##.##"
+                        android:hint="##.#"
                         android:layoutDirection="ltr"
-                        app:mask="##.##"
+                        app:mask="##.#"
                         app:maxValue="25.0"
                         app:minValue="5.0"
                         app:pattern="^(\\d{2,2}\\.\\d{2,2})$"

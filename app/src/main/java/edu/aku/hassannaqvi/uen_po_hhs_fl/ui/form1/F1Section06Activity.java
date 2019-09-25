@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -161,7 +162,18 @@ public class F1Section06Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll06);
+
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll06))
+            return false;
+
+        if (bi.pocff09M.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pocff09M.getText().toString().trim()) + Integer.parseInt(bi.pocff09D.getText().toString().trim()) == 0) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocff09M, "Days & Month both can't be Zero!!");
+            }
+            //return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+        }
+        return true;
+
     }
 
     public void BtnEnd() {

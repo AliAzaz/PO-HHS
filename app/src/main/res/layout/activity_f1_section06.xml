@@ -171,7 +171,7 @@
                         <EditText
                             android:id="@+id/pocff02gx"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/specify"
+                            android:hint="@string/pocff02lx"
                             android:tag="pocff02g"
                             android:text='@{pocff02g.checked? pocff02gx.getText.toString : "" }'
                             android:visibility='@{pocff02g.checked? View.VISIBLE : View.GONE}' />
@@ -205,7 +205,7 @@
                         <EditText
                             android:id="@+id/pocff02kx"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/specify"
+                            android:hint="@string/pocff02lx"
                             android:tag="pocff02k"
                             android:text='@{pocff02k.checked? pocff02kx.getText.toString : "" }'
                             android:visibility='@{pocff02k.checked? View.VISIBLE : View.GONE}' />
