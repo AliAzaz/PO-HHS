@@ -157,13 +157,14 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.llpofpa151c.setVisibility(View.GONE);
                     bi.llpofpa151d.setVisibility(View.GONE);
                     bi.pofpa152.setChecked(false);
-                    bi.pofpa152.setTag("-1");
+                    bi.pofpa152.setVisibility(View.GONE);
                 } else {
                     bi.llpofpa151a.setVisibility(View.VISIBLE);
                     bi.llpofpa151b.setVisibility(View.VISIBLE);
                     bi.llpofpa151c.setVisibility(View.VISIBLE);
                     bi.llpofpa151d.setVisibility(View.VISIBLE);
                     bi.pofpa152.setChecked(false);
+                    bi.pofpa152.setVisibility(View.VISIBLE);
                     bi.pofpa152.setTag("-1");
                 }
             }
