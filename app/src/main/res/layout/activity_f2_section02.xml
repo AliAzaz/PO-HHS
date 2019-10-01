@@ -74,7 +74,6 @@
 
             </android.support.v7.widget.CardView>
 
-
             <!--pofpb02-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -112,7 +111,6 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
 
             <!--pofpb03-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -178,7 +176,6 @@
 
             </android.support.v7.widget.CardView>
 
-
             <!--pofpb04-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -216,7 +213,6 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
 
             <!--pofpb05-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -264,7 +260,6 @@
 
             </android.support.v7.widget.CardView>
 
-
             <!--pofpb06-->
             <android.support.v7.widget.CardView
                 android:id="@+id/cvpofpb06"
@@ -311,7 +306,6 @@
 
             </android.support.v7.widget.CardView>
 
-
             <!--pofpb06-->
             <!--<android.support.v7.widget.CardView style="@style/cardView">
 
@@ -349,7 +343,6 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>-->
-
 
             <!--pofpb07-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -418,7 +411,6 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
 
             <!--pofpb08-->
             <android.support.v7.widget.CardView style="@style/cardView">
