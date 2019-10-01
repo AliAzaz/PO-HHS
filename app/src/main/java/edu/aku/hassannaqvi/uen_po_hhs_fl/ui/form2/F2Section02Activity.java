@@ -92,34 +92,30 @@ public class F2Section02Activity extends AppCompatActivity {
                 : "0");
 
         f02.put("pofpb02a", bi.pofpb02a.getText().toString());
-        f02.put("pofpb02b", bi.pofpb02a.getText().toString());
-
-        f02.put("pofpb021", bi.pofpb021a.isChecked() ? "1"
-                : bi.pofpb021b.isChecked() ? "2"
-                : "0");
+        f02.put("pofpb02b", bi.pofpb02b.getText().toString());
 
         f02.put("pofpb03", bi.pofpb03a.isChecked() ? "1"
                 : bi.pofpb03b.isChecked() ? "2"
                 : "0");
 
-        f02.put("pofpb04a", bi.pofpb04a.getText().toString());
-        f02.put("pofpb04b", bi.pofpb04b.getText().toString());
-        f02.put("pofpb0497", bi.pofpb0497.isChecked() ? "97" : "0");
-
-        f02.put("pofpb05", bi.pofpb05a.isChecked() ? "1"
-                : bi.pofpb05b.isChecked() ? "2"
-                : bi.pofpb0597.isChecked() ? "97"
+        f02.put("pofpb04", bi.pofpb04a.isChecked() ? "1"
+                : bi.pofpb04b.isChecked() ? "2"
                 : "0");
+
+        f02.put("pofpb05", bi.pofpb05a.getText().toString());
+        f02.put("pofpb05", bi.pofpb05b.getText().toString());
+        f02.put("pofpb0597", bi.pofpb0597.isChecked() ? "97" : "0");
 
         f02.put("pofpb06", bi.pofpb06a.isChecked() ? "1"
                 : bi.pofpb06b.isChecked() ? "2"
+                : bi.pofpb0697.isChecked() ? "97"
                 : "0");
 
         f02.put("pofpb07a", bi.pofpb07a.isChecked() ? "1" : "0");
         f02.put("pofpb07b", bi.pofpb07b.isChecked() ? "2" : "0");
         f02.put("pofpb07c", bi.pofpb07c.isChecked() ? "3" : "0");
         f02.put("pofpb07d", bi.pofpb07d.isChecked() ? "4" : "0");
-        f02.put("pofpb07e", bi.pofpb07d.isChecked() ? "5" : "0");
+        f02.put("pofpb07e", bi.pofpb07e.isChecked() ? "5" : "0");
         f02.put("pofpb0797", bi.pofpb0797.isChecked() ? "97" : "0");
 
         f02.put("pofpb08", bi.pofpb08a.isChecked() ? "1"
@@ -135,11 +131,11 @@ public class F2Section02Activity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02))
             return false;
 
-        if (bi.pofpb04b.getVisibility() == View.VISIBLE) {
-            if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92 && bi.pofpb05a.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
-            } else if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92 && bi.pofpb05b.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+        if (bi.pofpb02b.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) >= 92 && bi.pofpb03a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) < 92 && bi.pofpb03b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
             }
         }
 

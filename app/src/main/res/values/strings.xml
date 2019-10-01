@@ -848,22 +848,23 @@
 
     <string name="pofpb01"> کنگھ يا ٿڌ </string>
 
-    <string name="pofpb02"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
-    <string name="pofpb021"> 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
-    <string name="pofpb022"> 2 کان 12 مهينن تائين عمر وارا ٻار :  هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
-    <string name="pofpb023"> 12 کان 59 مهينن تائين عمر وارا ٻار :  هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
-    <string name="pofpb02a"> Respiratory Rate (01): </string>
-    <string name="pofpb02b"> Respiratory Rate (02): </string>
+    <string name="pofpb02a"> ٻار جي ساھ جي رفتار ڳڻيو هڪ منٽ ۾ </string>
+    <string name="pofpb02b">  2 دفعا ۽ ٻئي ريڊنگس نوٽ ڪيو </string>
 
-    <string name="pofpb03"> پاسيريون لڳڻ </string>
+    <string name="pofpb03"> ساھ جي تيز رفتار يا ساھ کڻڻ ۾ تڪليف </string>
+    <string name="pofpb031"> 0 کان 2 مهينن تائين عمر وارا ٻار : هڪ منٽ ۾ 60 يا 60 کان وڌڪ ڀيرا ساھ کڻڻ </string>
+    <string name="pofpb032"> 2 کان 12 مهينن تائين عمر وارا ٻار :  هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+    <string name="pofpb033"> 12 کان 59 مهينن تائين عمر وارا ٻار :  هڪ منٽ ۾ 40 يا 40 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
 
-    <string name="pofpb04"> پلس آڪسيميٽري جي ريڊنگ (سيڪڙو) (SpO2) </string>
+    <string name="pofpb04"> پاسيريون لڳڻ </string>
+
+    <string name="pofpb05"> پلس آڪسيميٽري جي ريڊنگ (سيڪڙو) (SpO2) </string>
 
     <!--<string name="pofpb04">   (SpO2)  پلس آڪسيميٽري جي ريڊنگ (في سيڪڙو)</string>-->
 
-    <string name="pofpb05"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
+    <string name="pofpb06"> هائيپوگزميا (رت ۾ آڪسيجن جي ڪمي) (SpO2  92%) </string>
 
-    <string name="pofpb06"> کر کر جو آواز </string>
+    <!--<string name="pofpb06"> کر کر جو آواز </string>-->
 
     <string name="pofpb07"> خطرناڪ نشانيون </string>
     <string name="pofpb071"> (هڪ کان وڌيڪ جواب ٿي سگھن ٿا) </string>
