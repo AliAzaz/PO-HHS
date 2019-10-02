@@ -32,12 +32,29 @@ public class F2Section02Activity extends AppCompatActivity {
 
         DAY = getIntent().getStringExtra("day");
         this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
-        settingListeners();
 
-    }
 
-    private void settingListeners() {
+        //pofpb0597
+        bi.pofpb0597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pofpb05a.setText("");
+                    bi.pofpb05b.setText("");
+                    ClearClass.ClearAllFields(bi.pofpb06cv, null);
+                    bi.pofpb05a.setVisibility(View.GONE);
+                    bi.pofpb05b.setVisibility(View.GONE);
+                    bi.pofpb06cv.setVisibility(View.GONE);
+                } else {
+                    bi.pofpb05a.setVisibility(View.VISIBLE);
+                    bi.pofpb05b.setVisibility(View.VISIBLE);
+                    bi.pofpb06cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
+
+        //pofpb0797
         bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -51,7 +68,9 @@ public class F2Section02Activity extends AppCompatActivity {
             }
         });
 
+
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {

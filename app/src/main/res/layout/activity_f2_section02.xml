@@ -188,7 +188,6 @@
                         style="@style/i_textview"
                         android:text="@string/pofpb04" />
 
-
                     <RadioGroup
                         android:id="@+id/pofpb04"
                         android:layout_width="match_parent"
@@ -233,8 +232,6 @@
                         app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
-                        android:text='@{pofpb0597.checked ? "" : pofpb05a.getText().toString()}'
-                        android:visibility='@{pofpb0597.checked ? View.GONE : View.VISIBLE}'
                         app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -244,8 +241,6 @@
                         app:mask="###"
                         app:maxValue="105"
                         app:minValue="80"
-                        android:text='@{pofpb0597.checked ? "" : pofpb05b.getText().toString()}'
-                        android:visibility='@{pofpb0597.checked ? View.GONE : View.VISIBLE}'
                         app:type="range" />
 
                     <CheckBox
@@ -262,7 +257,7 @@
 
             <!--pofpb06-->
             <android.support.v7.widget.CardView
-                android:id="@+id/cvpofpb06"
+                android:id="@+id/pofpb06cv"
                 style="@style/cardView">
 
                 <LinearLayout
