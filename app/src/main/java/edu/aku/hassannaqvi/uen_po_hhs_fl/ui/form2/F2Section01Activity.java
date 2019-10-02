@@ -190,13 +190,13 @@ public class F2Section01Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.pofpa21a.getId()) {
-                    bi.cvpofpa22.setVisibility(View.VISIBLE);
-                    bi.cvpofpa23.setVisibility(View.VISIBLE);
+                    bi.pofpa22cv.setVisibility(View.VISIBLE);
+                    bi.pofpa23cv.setVisibility(View.VISIBLE);
                 } else {
-                    ClearClass.ClearAllFields(bi.cvpofpa22, null);
-                    ClearClass.ClearAllFields(bi.cvpofpa23, null);
-                    bi.cvpofpa22.setVisibility(View.GONE);
-                    bi.cvpofpa23.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.pofpa22cv, null);
+                    ClearClass.ClearAllFields(bi.pofpa23cv, null);
+                    bi.pofpa22cv.setVisibility(View.GONE);
+                    bi.pofpa23cv.setVisibility(View.GONE);
                 }
             }
         });
