@@ -424,12 +424,15 @@
                                 android:text='@{pofi06a.checked? pofi06ax.getText.toString : "" }'
                                 android:visibility='@{pofi06a.checked? View.VISIBLE : View.GONE}' />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofi06ay"
+                                android:tag="pofi06a"
                                 style="@style/EditText_number"
                                 android:hint="@string/pofi06ay"
-                                android:tag="pofi06a"
-                                android:maxLength="2"
+                                app:mask="#"
+                                app:maxValue="8"
+                                app:minValue="1"
+                                app:type="range"
                                 android:text='@{pofi06a.checked? pofi06ay.getText.toString : "" }'
                                 android:visibility='@{pofi06a.checked? View.VISIBLE : View.GONE}' />
 
