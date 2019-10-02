@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -32,7 +33,12 @@ public class F2Section02Activity extends AppCompatActivity {
 
         DAY = getIntent().getStringExtra("day");
         this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
+        settingListeners();
 
+    }
+
+
+    private void settingListeners() {
 
         //pofpb0597
         bi.pofpb0597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -54,6 +60,21 @@ public class F2Section02Activity extends AppCompatActivity {
         });
 
 
+        //pofpb06
+        bi.pofpb06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofpb0697.getId()) {
+                    ClearClass.ClearAllFields(bi.pofpb05cv, null);
+                    bi.pofpb05cv.setVisibility(View.GONE);
+                } else {
+                    bi.pofpb05cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
         //pofpb0797
         bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -67,7 +88,6 @@ public class F2Section02Activity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 
