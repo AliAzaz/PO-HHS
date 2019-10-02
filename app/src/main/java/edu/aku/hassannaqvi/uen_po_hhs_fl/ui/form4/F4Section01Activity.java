@@ -581,6 +581,8 @@ public class F4Section01Activity extends AppCompatActivity {
                 : bi.pohrl03c.isChecked() ? "3"
                 : "0");
 
+        form04_01.put("comment", bi.comment.getText().toString());
+
         MainApp.fc.setsA(String.valueOf(form04_01));
         MainApp.setGPS(this);
 

@@ -1268,7 +1268,7 @@
     <string name="pohrj03a"> ھا </string>
     <string name="pohrj03b"> نه </string>
 
-    <string name="pohrj04"> جيڪڏهن ها ته،ذريعو </string>
+    <string name="pohrj04"> جيڪڏهن ها ته، ذريعو </string>
     <string name="pohrj04a"> ماسڪ </string>
     <string name="pohrj04b"> نيزل پرونگ </string>
     <string name="pohrj04c"> ببل سي پيپ </string>
@@ -1276,6 +1276,7 @@
     <string name="pohrj04e"> انٽيوبيشن(انٽيوبيشن جي تاريخ) </string>
 
     <string name="pohrj05"> آڪسيجن ٿيراپي مهيا ڪرڻ جو دورانيو </string>
+    <string name="pohrj051"> دورانيو </string>
 
     <string name="pohrk01"> ڪلينيڪل معلومات </string>
     <string name="pohrk01a"> بهتر </string>
@@ -1297,6 +1298,7 @@
     <string name="pohrl03b"> بيمار </string>
     <string name="pohrl03c"> مري ويو </string>
     <string name="nameW"> عام نالو ڏيو </string>
+    <string name="comment">Comments</string>
 
 
 </resources>
