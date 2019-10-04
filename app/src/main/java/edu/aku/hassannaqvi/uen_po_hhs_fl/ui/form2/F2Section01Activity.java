@@ -338,7 +338,7 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                bi.f2Section01.setVisibility(View.VISIBLE);
+                bi.f2Section01.setVisibility(View.GONE);
                 ClearClass.ClearAllFields(bi.f2Section01, false);
             }
 
