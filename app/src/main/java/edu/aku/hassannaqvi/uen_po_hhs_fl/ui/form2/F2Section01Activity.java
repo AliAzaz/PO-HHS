@@ -564,7 +564,6 @@ public class F2Section01Activity extends AppCompatActivity {
                     : pofpa15Binding.pofpa151db.isChecked() ? "2"
                     : "0");
             f02.put("pofpa152" + String.format("%02d", counter), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
-            f02.put("pofpa15" + String.format("%02d", counter) + "97", pofpa15Binding.pofpa1597.isChecked() ? "97" : "0");
 
             counter++;
         }
