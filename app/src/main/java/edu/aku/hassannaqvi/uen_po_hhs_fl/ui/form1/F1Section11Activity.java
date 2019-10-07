@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -53,6 +54,41 @@ public class F1Section11Activity extends AppCompatActivity {
                 }
             }
         });*/
+
+
+        //pocfk0697
+        bi.pocfk0697.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pocfk06a.setText("");
+                    bi.pocfk06b.setText("");
+                    bi.pocfk06a.setVisibility(View.GONE);
+                    bi.pocfk06b.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.pocfk07cv, null);
+                    bi.pocfk07cv.setVisibility(View.GONE);
+                } else {
+                    bi.pocfk06a.setVisibility(View.VISIBLE);
+                    bi.pocfk06b.setVisibility(View.VISIBLE);
+                    bi.pocfk07cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        //pocfk07
+        bi.pocfk07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pocfk0797.getId()) {
+                    ClearClass.ClearAllFields(bi.pocfk06cv, null);
+                    bi.pocfk06cv.setVisibility(View.GONE);
+                } else {
+                    bi.pocfk06cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
 
         bi.pocfk0897.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

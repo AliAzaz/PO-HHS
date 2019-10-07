@@ -315,7 +315,7 @@ public class F2Section01Activity extends AppCompatActivity {
                 if (i == 0) return;
                 bi.lhwcode.setText("LHW Code: " + lhwCodes.get(i));
                 ClearClass.ClearAllFields(bi.f2Section01, null);
-                bi.f2Section01.setVisibility(View.VISIBLE);
+                bi.f2Section01.setVisibility(View.GONE);
             }
 
             @Override
@@ -380,7 +380,7 @@ public class F2Section01Activity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (pofpa15List.size() == 4) {
-                    Toast.makeText(F2Section01Activity.this, "Can't able to add more Tablet", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(F2Section01Activity.this, "Can't add more than 5 medicine", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    #99a3ff
-
     <color name="colorPrimaryDark">#42a5f5</color>
     <!--<color name="colorPrimary">#880E4F</color>-->
     <color name="colorPrimary">#3f51b5</color>
@@ -36,4 +34,5 @@
 
     <color name="darkRed">#D50000</color>
     <color name="lightOrange">#FFE0B2</color>
+
 </resources>
