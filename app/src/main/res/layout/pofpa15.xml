@@ -161,14 +161,6 @@
                     android:tag="-1"
                     android:text="@string/pofpa152" />
 
-                <CheckBox
-                    android:id="@+id/pofpa1597"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:tag="-1"
-                    android:text="@string/pofpa1597" />
-
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

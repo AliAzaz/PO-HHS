@@ -836,8 +836,9 @@
                         <Button
                             android:id="@+id/pofpa15Btn"
                             style="@style/buttons"
-                            android:text="Add more"
-                            android:textColor="@color/white" />
+                            android:text="Add medicine"
+                            android:textColor="@color/black" />
+
                     </LinearLayout>
 
 

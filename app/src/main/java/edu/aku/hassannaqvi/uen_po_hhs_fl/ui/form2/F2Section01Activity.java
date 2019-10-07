@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -152,7 +153,7 @@ public class F2Section01Activity extends AppCompatActivity {
         });
 
 
- /*       bi.pofpa1597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        bi.pofpa1597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
@@ -166,6 +167,8 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.llpofpa151d.setVisibility(View.GONE);
                     bi.pofpa152.setChecked(false);
                     bi.pofpa152.setVisibility(View.GONE);
+                    bi.pofpa15Items.setVisibility(View.GONE);
+                    bi.pofpa15Btn.setVisibility(View.GONE);
                 } else {
                     bi.llpofpa151a.setVisibility(View.VISIBLE);
                     bi.llpofpa151b.setVisibility(View.VISIBLE);
@@ -174,9 +177,11 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.pofpa152.setChecked(false);
                     bi.pofpa152.setVisibility(View.VISIBLE);
                     bi.pofpa152.setTag("-1");
+                    bi.pofpa15Items.setVisibility(View.VISIBLE);
+                    bi.pofpa15Btn.setVisibility(View.VISIBLE);
                 }
             }
-        });*/
+        });
 
 
         bi.pofpa19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
