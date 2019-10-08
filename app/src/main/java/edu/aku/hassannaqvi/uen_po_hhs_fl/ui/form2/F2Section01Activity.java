@@ -125,11 +125,11 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.pofpa13cv.setVisibility(View.VISIBLE);
                     bi.pofpa14cv.setVisibility(View.VISIBLE);
                     bi.pofpa15View.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.pofpa16cv, null);
+                    ClearClass.ClearAllFields(bi.pofpa16View, null);
                     bi.pofpa16Items.removeAllViews();
                     pofpa16List.clear();
                     ClearClass.ClearAllFields(bi.pofpa17cv, null);
-                    bi.pofpa16cv.setVisibility(View.GONE);
+                    bi.pofpa16View.setVisibility(View.GONE);
                     bi.pofpa17cv.setVisibility(View.GONE);
                 } else {
                     bi.pofpa11cv.setVisibility(View.VISIBLE);
@@ -143,7 +143,7 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.pofpa15Items.removeAllViews();
                     pofpa15List.clear();
                     bi.pofpa15View.setVisibility(View.GONE);
-                    bi.pofpa16cv.setVisibility(View.VISIBLE);
+                    bi.pofpa16View.setVisibility(View.VISIBLE);
                     bi.pofpa17cv.setVisibility(View.VISIBLE);
                 }
             }
@@ -220,14 +220,14 @@ public class F2Section01Activity extends AppCompatActivity {
 
                 if (checkedId == bi.pofpa21a.getId()) {
                     bi.pofpa22cv.setVisibility(View.VISIBLE);
-                    bi.pofpa23cv.setVisibility(View.VISIBLE);
+                    bi.pofpa23View.setVisibility(View.VISIBLE);
                 } else {
                     ClearClass.ClearAllFields(bi.pofpa22cv, null);
-                    ClearClass.ClearAllFields(bi.pofpa23cv, null);
+                    ClearClass.ClearAllFields(bi.pofpa23View, null);
                     bi.pofpa23Items.removeAllViews();
                     pofpa23List.clear();
                     bi.pofpa22cv.setVisibility(View.GONE);
-                    bi.pofpa23cv.setVisibility(View.GONE);
+                    bi.pofpa23View.setVisibility(View.GONE);
                 }
             }
         });
