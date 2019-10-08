@@ -65,12 +65,12 @@ public class F2Section01Activity extends AppCompatActivity {
         bi.dayHeading.setText("DAY " + (DAY.equals("7") ? "07" : "14"));
         this.setTitle(DAY.equals("7") ? "Form 02 (Follow Ups - 7 Day)" : "Form 02 (Follow Ups - 14 Day)");
 
-/*        if (DAY.equals("14")) {
+        if (DAY.equals("14")) {
             bi.pofpa1597.setVisibility(View.VISIBLE);
         } else {
             bi.pofpa1597.setChecked(false);
             bi.pofpa1597.setVisibility(View.GONE);
-        }*/
+        }
 
         initializingComponents();
 
@@ -98,6 +98,8 @@ public class F2Section01Activity extends AppCompatActivity {
                 } else {
                     bi.pofpa08cv.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.llpofpa09ALL, null);
+                    bi.pofpa15Items.removeAllViews();
+                    pofpa15List.clear();
                     bi.llpofpa09ALL.setVisibility(View.GONE);
                 }
             }
@@ -128,6 +130,8 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.pofpa12cv.setVisibility(View.GONE);
                     bi.pofpa13cv.setVisibility(View.GONE);
                     bi.pofpa14cv.setVisibility(View.GONE);
+                    bi.pofpa15Items.removeAllViews();
+                    pofpa15List.clear();
                     bi.pofpa15View.setVisibility(View.GONE);
                     bi.pofpa16cv.setVisibility(View.VISIBLE);
                     bi.pofpa17cv.setVisibility(View.VISIBLE);
@@ -167,6 +171,8 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.llpofpa151d.setVisibility(View.GONE);
                     bi.pofpa152.setChecked(false);
                     bi.pofpa152.setVisibility(View.GONE);
+                    bi.pofpa15Items.removeAllViews();
+                    pofpa15List.clear();
                     bi.pofpa15Items.setVisibility(View.GONE);
                     bi.pofpa15Btn.setVisibility(View.GONE);
                 } else {
