@@ -410,8 +410,12 @@ public abstract class ValidatorClass {
                         return false;
                     }
                 }
-
+            } else if (view instanceof ViewGroup) {
+                if (!EmptyCheckingContainer(context, (ViewGroup) view)) {
+                    return false;
+                }
             }
+
         }
         return true;
     }
