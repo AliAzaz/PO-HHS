@@ -843,88 +843,15 @@
 
 
                     <!--pofpa16-->
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/pofpa16cv"
-                        style="@style/cardView">
+                    <LinearLayout
+                        android:id="@+id/pofpa16View"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/pofpa16" />
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10sp"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/pofpa161a" />
-
-
-                                <EditText
-                                    android:id="@+id/pofpa161a"
-                                    style="@style/EditTextAlphaNumeric"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:hint="@string/pofpa161a" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/pofpa161c" />
-
-                                <EditText
-                                    android:id="@+id/pofpa161c"
-                                    style="@style/EditTextAlphaNumeric"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:hint="@string/pofpa161c" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/pofpa161b" />
-
-                                <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/pofpa161b"
-                                    style="@style/EditText_number"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:hint="@string/pofpa161b"
-                                    app:mask="#"
-                                    app:maxValue="4"
-                                    app:minValue="1"
-                                    app:type="range" />
-
-                            </LinearLayout>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/pofpa16cv"
+                            style="@style/cardView">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -932,46 +859,139 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/i_textview1"
-                                    android:text="@string/pofpa161d" />
+                                    style="@style/i_textview"
+                                    android:text="@string/pofpa16" />
 
-                                <RadioGroup
-                                    android:id="@+id/pofpa161d"
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/pofpa161a" />
+
+
+                                    <EditText
+                                        android:id="@+id/pofpa161a"
+                                        style="@style/EditTextAlphaNumeric"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:hint="@string/pofpa161a" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
-                                    <RadioButton
-                                        android:id="@+id/pofpa161da"
+                                    <TextView
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="1dp"
                                         android:layout_weight="1"
-                                        android:text="@string/pofpa161da" />
+                                        android:text="@string/pofpa161c" />
 
-                                    <RadioButton
-                                        android:id="@+id/pofpa161db"
+                                    <EditText
+                                        android:id="@+id/pofpa161c"
+                                        style="@style/EditTextAlphaNumeric"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="1dp"
                                         android:layout_weight="1"
-                                        android:text="@string/pofpa161db" />
+                                        android:hint="@string/pofpa161c" />
 
-                                </RadioGroup>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/pofpa161b" />
+
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        android:id="@+id/pofpa161b"
+                                        style="@style/EditText_number"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:hint="@string/pofpa161b"
+                                        app:mask="#"
+                                        app:maxValue="4"
+                                        app:minValue="1"
+                                        app:type="range" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/i_textview1"
+                                        android:text="@string/pofpa161d" />
+
+                                    <RadioGroup
+                                        android:id="@+id/pofpa161d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/pofpa161da"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="1dp"
+                                            android:layout_weight="1"
+                                            android:text="@string/pofpa161da" />
+
+                                        <RadioButton
+                                            android:id="@+id/pofpa161db"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="1dp"
+                                            android:layout_weight="1"
+                                            android:text="@string/pofpa161db" />
+
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                                <CheckBox
+                                    android:id="@+id/pofpa162"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:tag="-1"
+                                    android:text="@string/pofpa162" />
 
                             </LinearLayout>
 
-                            <CheckBox
-                                android:id="@+id/pofpa162"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:tag="-1"
-                                android:text="@string/pofpa162" />
+                        </android.support.v7.widget.CardView>
 
-                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/pofpa16Items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
 
-                    </android.support.v7.widget.CardView>
+                        <Button
+                            android:id="@+id/pofpa16Btn"
+                            style="@style/buttons"
+                            android:text="Add medicine"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
 
                     <!--pofpa17-->
                     <android.support.v7.widget.CardView
@@ -1256,66 +1276,15 @@
                     </android.support.v7.widget.CardView>
 
                     <!--pofpa23-->
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/pofpa23cv"
-                        style="@style/cardView">
+                    <LinearLayout
+                        android:id="@+id/pofpa23View"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/pofpa23" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10sp"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/pofpa23a" />
-
-
-                                <EditText
-                                    android:id="@+id/pofpa23a"
-                                    style="@style/EditTextAlphaNumeric"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:hint="@string/pofpa23a" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/pofpa23b" />
-
-                                <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/pofpa23b"
-                                    style="@style/EditText_number"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:hint="@string/pofpa23b"
-                                    app:mask="#"
-                                    app:maxValue="4"
-                                    app:minValue="1"
-                                    app:type="range" />
-
-                            </LinearLayout>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/pofpa23cv"
+                            style="@style/cardView">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -1323,59 +1292,130 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/i_textview1"
-                                    android:text="@string/pofpa231" />
+                                    style="@style/i_textview"
+                                    android:text="@string/pofpa23" />
 
-                                <RadioGroup
-                                    android:id="@+id/pofpa231"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/pofpa23a" />
+
+
+                                    <EditText
+                                        android:id="@+id/pofpa23a"
+                                        style="@style/EditTextAlphaNumeric"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:hint="@string/pofpa23a" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
-                                    <RadioButton
-                                        android:id="@+id/pofpa231a"
+                                    <TextView
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="1dp"
                                         android:layout_weight="1"
-                                        android:text="@string/pofpa231a" />
+                                        android:text="@string/pofpa23b" />
 
-                                    <RadioButton
-                                        android:id="@+id/pofpa231b"
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        android:id="@+id/pofpa23b"
+                                        style="@style/EditText_number"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="1dp"
                                         android:layout_weight="1"
-                                        android:text="@string/pofpa231b" />
+                                        android:hint="@string/pofpa23b"
+                                        app:mask="#"
+                                        app:maxValue="4"
+                                        app:minValue="1"
+                                        app:type="range" />
 
-                                </RadioGroup>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/i_textview1"
+                                        android:text="@string/pofpa231" />
+
+                                    <RadioGroup
+                                        android:id="@+id/pofpa23d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/pofpa23da"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="1dp"
+                                            android:layout_weight="1"
+                                            android:text="@string/pofpa231a" />
+
+                                        <RadioButton
+                                            android:id="@+id/pofpa23db"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="1dp"
+                                            android:layout_weight="1"
+                                            android:text="@string/pofpa231b" />
+
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/pofpa23c" />
+
+                                    <EditText
+                                        android:id="@+id/pofpa23c"
+                                        style="@style/EditTextAlphaNumeric"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:hint="@string/pofpa23c" />
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                        </android.support.v7.widget.CardView>
 
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/pofpa23c" />
+                        <LinearLayout
+                            android:id="@+id/pofpa23Items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
 
-                                <EditText
-                                    android:id="@+id/pofpa23c"
-                                    style="@style/EditTextAlphaNumeric"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:hint="@string/pofpa23c" />
+                        <Button
+                            android:id="@+id/pofpa23Btn"
+                            style="@style/buttons"
+                            android:text="Add medicine"
+                            android:textColor="@color/black" />
 
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
+                    </LinearLayout>
 
                 </LinearLayout>
 

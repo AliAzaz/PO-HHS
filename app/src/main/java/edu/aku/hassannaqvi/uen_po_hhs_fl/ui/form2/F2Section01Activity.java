@@ -51,6 +51,8 @@ public class F2Section01Activity extends AppCompatActivity {
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     List<View> pofpa15List;
+    List<View> pofpa16List;
+    List<View> pofpa23List;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +78,8 @@ public class F2Section01Activity extends AppCompatActivity {
 
 
         pofpa15List = new ArrayList<>();
+        pofpa16List = new ArrayList<>();
+        pofpa23List = new ArrayList<>();
         clickListener();
 
 
@@ -100,6 +104,10 @@ public class F2Section01Activity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.llpofpa09ALL, null);
                     bi.pofpa15Items.removeAllViews();
                     pofpa15List.clear();
+                    bi.pofpa16Items.removeAllViews();
+                    pofpa16List.clear();
+                    bi.pofpa23Items.removeAllViews();
+                    pofpa23List.clear();
                     bi.llpofpa09ALL.setVisibility(View.GONE);
                 }
             }
@@ -118,6 +126,8 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.pofpa14cv.setVisibility(View.VISIBLE);
                     bi.pofpa15View.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.pofpa16cv, null);
+                    bi.pofpa16Items.removeAllViews();
+                    pofpa16List.clear();
                     ClearClass.ClearAllFields(bi.pofpa17cv, null);
                     bi.pofpa16cv.setVisibility(View.GONE);
                     bi.pofpa17cv.setVisibility(View.GONE);
@@ -214,6 +224,8 @@ public class F2Section01Activity extends AppCompatActivity {
                 } else {
                     ClearClass.ClearAllFields(bi.pofpa22cv, null);
                     ClearClass.ClearAllFields(bi.pofpa23cv, null);
+                    bi.pofpa23Items.removeAllViews();
+                    pofpa23List.clear();
                     bi.pofpa22cv.setVisibility(View.GONE);
                     bi.pofpa23cv.setVisibility(View.GONE);
                 }
@@ -400,6 +412,34 @@ public class F2Section01Activity extends AppCompatActivity {
             }
         });
 
+        bi.pofpa16Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (pofpa16List.size() == 4) {
+                    Toast.makeText(F2Section01Activity.this, "Can't add more than 5 medicine", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                addViewInPof16();
+
+            }
+        });
+
+        bi.pofpa23Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (pofpa23List.size() == 4) {
+                    Toast.makeText(F2Section01Activity.this, "Can't add more than 5 medicine", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                addViewInPof23();
+
+            }
+        });
+
     }
 
     private void addViewInPof15() {
@@ -413,6 +453,38 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bi.pofpa15Items.removeView(rowView);
+            }
+        });
+
+    }
+
+    private void addViewInPof16() {
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View rowView = inflater.inflate(R.layout.pofpa15, null);
+        bi.pofpa16Items.addView(rowView);
+        pofpa16List.add(rowView);
+
+        Pofpa15Binding pofpa15Binding = DataBindingUtil.bind(rowView);
+        pofpa15Binding.btnClearView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bi.pofpa16Items.removeView(rowView);
+            }
+        });
+
+    }
+
+    private void addViewInPof23() {
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View rowView = inflater.inflate(R.layout.pofpa15, null);
+        bi.pofpa23Items.addView(rowView);
+        pofpa23List.add(rowView);
+
+        Pofpa15Binding pofpa15Binding = DataBindingUtil.bind(rowView);
+        pofpa15Binding.btnClearView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bi.pofpa23Items.removeView(rowView);
             }
         });
 
@@ -560,27 +632,41 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa15201", bi.pofpa152.isChecked() ? "1" : "0");
         f02.put("pofpa150197", bi.pofpa1597.isChecked() ? "97" : "0");
 
-        int counter = 2;
+        int counter15 = 2;
         for (View view : pofpa15List) {
             Pofpa15Binding pofpa15Binding = DataBindingUtil.bind(view);
-            f02.put("pofpa151" + String.format("%02d", counter) + "a", pofpa15Binding.pofpa151a.getText().toString());
-            f02.put("pofpa151" + String.format("%02d", counter) + "b", pofpa15Binding.pofpa151b.getText().toString());
-            f02.put("pofpa151" + String.format("%02d", counter) + "c", pofpa15Binding.pofpa151c.getText().toString());
-            f02.put("pofpa151" + String.format("%02d", counter) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
+            f02.put("pofpa151" + String.format("%02d", counter15) + "a", pofpa15Binding.pofpa151a.getText().toString());
+            f02.put("pofpa151" + String.format("%02d", counter15) + "b", pofpa15Binding.pofpa151b.getText().toString());
+            f02.put("pofpa151" + String.format("%02d", counter15) + "c", pofpa15Binding.pofpa151c.getText().toString());
+            f02.put("pofpa151" + String.format("%02d", counter15) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
                     : pofpa15Binding.pofpa151db.isChecked() ? "2"
                     : "0");
-            f02.put("pofpa152" + String.format("%02d", counter), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
+            f02.put("pofpa152" + String.format("%02d", counter15), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
 
-            counter++;
+            counter15++;
         }
 
-        f02.put("pofpa161a", bi.pofpa161a.getText().toString());
-        f02.put("pofpa161b", bi.pofpa161b.getText().toString());
-        f02.put("pofpa161c", bi.pofpa161c.getText().toString());
-        f02.put("pofpa161d", bi.pofpa161da.isChecked() ? "1"
+        f02.put("pofpa16101a", bi.pofpa161a.getText().toString());
+        f02.put("pofpa16101b", bi.pofpa161b.getText().toString());
+        f02.put("pofpa16101c", bi.pofpa161c.getText().toString());
+        f02.put("pofpa16101d", bi.pofpa161da.isChecked() ? "1"
                 : bi.pofpa161db.isChecked() ? "2"
                 : "0");
-        f02.put("pofpa162", bi.pofpa162.isChecked() ? "1" : "0");
+        f02.put("pofpa16201", bi.pofpa162.isChecked() ? "1" : "0");
+
+        int counter16 = 2;
+        for (View view : pofpa16List) {
+            Pofpa15Binding pofpa15Binding = DataBindingUtil.bind(view);
+            f02.put("pofpa161" + String.format("%02d", counter16) + "a", pofpa15Binding.pofpa151a.getText().toString());
+            f02.put("pofpa161" + String.format("%02d", counter16) + "b", pofpa15Binding.pofpa151b.getText().toString());
+            f02.put("pofpa161" + String.format("%02d", counter16) + "c", pofpa15Binding.pofpa151c.getText().toString());
+            f02.put("pofpa161" + String.format("%02d", counter16) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
+                    : pofpa15Binding.pofpa151db.isChecked() ? "2"
+                    : "0");
+            f02.put("pofpa162" + String.format("%02d", counter16), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
+
+            counter16++;
+        }
 
         f02.put("pofpa17", bi.pofpa17.getText().toString());
 
@@ -615,9 +701,23 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa23a", bi.pofpa23a.getText().toString());
         f02.put("pofpa23b", bi.pofpa23b.getText().toString());
         f02.put("pofpa23c", bi.pofpa23c.getText().toString());
-        f02.put("pofpa231", bi.pofpa231a.isChecked() ? "1"
-                : bi.pofpa231b.isChecked() ? "2"
+        f02.put("pofpa23d", bi.pofpa23da.isChecked() ? "1"
+                : bi.pofpa23db.isChecked() ? "2"
                 : "0");
+
+        int counter23 = 2;
+        for (View view : pofpa23List) {
+            Pofpa15Binding pofpa15Binding = DataBindingUtil.bind(view);
+            f02.put("pofpa231" + String.format("%02d", counter23) + "a", pofpa15Binding.pofpa151a.getText().toString());
+            f02.put("pofpa231" + String.format("%02d", counter23) + "b", pofpa15Binding.pofpa151b.getText().toString());
+            f02.put("pofpa231" + String.format("%02d", counter23) + "c", pofpa15Binding.pofpa151c.getText().toString());
+            f02.put("pofpa231" + String.format("%02d", counter23) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
+                    : pofpa15Binding.pofpa151db.isChecked() ? "2"
+                    : "0");
+            f02.put("pofpa232" + String.format("%02d", counter23), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
+
+            counter23++;
+        }
 
         MainApp.fc.setsA(String.valueOf(f02));
         MainApp.setGPS(this);
