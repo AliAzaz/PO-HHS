@@ -453,6 +453,7 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bi.pofpa15Items.removeView(rowView);
+                pofpa15List.remove(rowView);
             }
         });
 
@@ -469,6 +470,7 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bi.pofpa16Items.removeView(rowView);
+                pofpa16List.remove(rowView);
             }
         });
 
@@ -485,6 +487,7 @@ public class F2Section01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bi.pofpa23Items.removeView(rowView);
+                pofpa23List.remove(rowView);
             }
         });
 
