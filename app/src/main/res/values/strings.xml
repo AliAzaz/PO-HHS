@@ -707,6 +707,9 @@
     <string name="pofi10"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
 
     <string name="pofi11"> ڇا توهان ٻار کي رفرل اسپتال ڏانهن وٺي ويا؟ </string>
+    <string name="pofi11a"> ها </string>
+    <string name="pofi11ax"> اسپتال جو نالو لکو </string>
+    <string name="pofi11b"> نه </string>
 
     <string name="pofi12"> تاريخ جنهن تي ٻار اسپتال ويو. </string>
     <string name="pofi12a"> ڏينهن </string>

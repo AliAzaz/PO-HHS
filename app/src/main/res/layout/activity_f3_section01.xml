@@ -606,12 +606,20 @@
                             <RadioButton
                                 android:id="@+id/pofi11a"
                                 style="@style/i_radiobutton"
-                                android:text="@string/yes" />
+                                android:text="@string/pofi11a" />
+
+                            <EditText
+                                android:id="@+id/pofi11ax"
+                                style="@style/EditTextAlphaNumeric"
+                                android:hint="@string/pofi11ax"
+                                android:tag="pofi11a"
+                                android:text='@{pofi11a.checked? pofi11ax.getText.toString : "" }'
+                                android:visibility='@{pofi11a.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
                                 android:id="@+id/pofi11b"
                                 style="@style/i_radiobutton"
-                                android:text="@string/no" />
+                                android:text="@string/pofi11b" />
 
                         </RadioGroup>
 
