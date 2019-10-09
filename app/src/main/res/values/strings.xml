@@ -767,6 +767,7 @@
 
     <string name="pofpa10"> ڇا توهان ريفرل قبول ڪيو ؟ </string>
     <string name="pofpa10a"> ها </string>
+    <string name="pofpa10ax"> اسپتال جو نالو لکو </string>
     <string name="pofpa10b"> نه </string>
 
     <string name="pofpa11"> جيڪڏهن نه ته ڇو ؟ </string>
@@ -780,6 +781,7 @@
 
     <string name="pofpa12"> ڇا  ٻار اسپتال ۾ داخل ٿيو ؟ </string>
     <string name="pofpa12a"> ها </string>
+    <string name="pofpa12ax"> اسپتال جو نالو لکو </string>
     <string name="pofpa12b"> نه </string>
 
     <string name="pofpa13"> ٻار اسپتال ۾ ڪيترا ڏينهن رهيو ؟ </string>

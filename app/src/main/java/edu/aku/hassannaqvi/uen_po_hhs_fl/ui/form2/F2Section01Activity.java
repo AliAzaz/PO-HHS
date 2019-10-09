@@ -604,6 +604,7 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa10", bi.pofpa10a.isChecked() ? "1"
                 : bi.pofpa10b.isChecked() ? "2"
                 : "0");
+        f02.put("pofpa10ax", bi.pofpa10ax.getText().toString());
 
         f02.put("pofpa11", bi.pofpa11a.isChecked() ? "1"
                 : bi.pofpa11b.isChecked() ? "2"
@@ -619,6 +620,7 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa12", bi.pofpa12a.isChecked() ? "1"
                 : bi.pofpa12b.isChecked() ? "2"
                 : "0");
+        f02.put("pofpa12ax", bi.pofpa12ax.getText().toString());
 
         f02.put("pofpa13", bi.pofpa13.getText().toString());
 

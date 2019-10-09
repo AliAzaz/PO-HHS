@@ -463,6 +463,14 @@
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/pofpa10a" />
 
+                                <EditText
+                                    android:id="@+id/pofpa10ax"
+                                    style="@style/EditTextAlphaNumeric"
+                                    android:hint="@string/pofpa10ax"
+                                    android:tag="pofpa10a"
+                                    android:text='@{pofpa10a.checked ? pofpa10ax.getText.toString : "" }'
+                                    android:visibility='@{pofpa10a.checked? View.VISIBLE : View.GONE}' />
+
                                 <RadioButton
                                     android:id="@+id/pofpa10b"
                                     android:layout_width="match_parent"
@@ -593,6 +601,14 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="1dp"
                                     android:text="@string/pofpa12a" />
+
+                                <EditText
+                                    android:id="@+id/pofpa12ax"
+                                    style="@style/EditTextAlphaNumeric"
+                                    android:hint="@string/pofpa12ax"
+                                    android:tag="pofpa12a"
+                                    android:text='@{pofpa12a.checked ? pofpa12ax.getText.toString : "" }'
+                                    android:visibility='@{pofpa12a.checked? View.VISIBLE : View.GONE}' />
 
                                 <RadioButton
                                     android:id="@+id/pofpa12b"
