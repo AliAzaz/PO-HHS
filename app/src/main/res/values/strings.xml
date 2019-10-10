@@ -74,6 +74,7 @@
     <string name="na1"> لاڳو نٿو ٿئي </string>
     <string name="dkn"> خبر ناھي </string>
     <string name="day"> ڏينهن </string>
+    <string name="date"> تاريخ </string>
     <string name="month"> مهينو </string>
     <string name="year"> سال </string>
     <string name="hour"> ڪلاڪ </string>
@@ -1154,13 +1155,21 @@
     <string name="pohra04"> رفرل آءِ ڊي </string>
     <string name="pohra05"> ڳوٺ/محلي جو نالو </string>
     <string name="pohra06"> گھر جو پتو(ايڊريس) </string>
-    <string name="pohra07"> موجوده دوري جي تاريخ </string>
-    <string name="pohra08"> ڪيس آءِ ڊي </string>
+    <!--<string name="pohra07"> موجوده دوري جي تاريخ </string>-->
+    <!--<string name="pohra08"> ڪيس آءِ ڊي </string>-->
 
-    <string name="pohra09"> داخلا جي تاريخ </string>
-    <string name="pohra09dd"> ڏينهن </string>
-    <string name="pohra09mm"> مهينو </string>
-    <string name="pohra09yyyy"> سال </string>
+    <string name="pohra07"> داخلا جي تاريخ </string>
+    <string name="pohra07dd"> ڏينهن </string>
+    <string name="pohra07mm"> مهينو </string>
+    <string name="pohra07yyyy"> سال </string>
+
+    <string name="pohra08"> ريفرل جي تاريخ </string>
+    <string name="pohra09"> ٻار جو نالو </string>
+    <string name="pohra10"> پئ جو نالو </string>
+    <string name="pohra11"> ڊاڪٽر جو نالو </string>
+    <string name="pohra12"> دوري جي جڳ </string>
+    <string name="pohra12a"> اسپتال </string>
+    <string name="pohra12b"> گھر </string>
 
     <string name="pohrb01"> داخلا جي مدت </string>
     <string name="pohrb01a"> هڪ ڏينهن </string>

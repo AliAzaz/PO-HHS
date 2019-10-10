@@ -215,6 +215,48 @@
                 android:visibility="gone"
                 tools:visibility="visible">
 
+                <!--pohra07-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohra07" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/pohra07"
+                            style="@style/textInput"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="70"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pohra08-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohra08" />
+
+                        <EditText
+                            android:id="@+id/pohra08"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pohra08" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
                 <!--pohra09-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -224,16 +266,83 @@
                             style="@style/i_textview"
                             android:text="@string/pohra09" />
 
-                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                        <EditText
                             android:id="@+id/pohra09"
-                            style="@style/textInput"
-                            android:layout_marginLeft="20dp"
-                            android:layout_weight="70"
-                            android:focusable="false"
-                            android:hint="DD/MM/YYYY"
-                            android:textColor="@android:color/black"
-                            app:dateFormat="dd-MM-yyyy"
-                            app:maxDate="CR_DATE" />
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pohra09" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pohra10-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohra10" />
+
+                        <EditText
+                            android:id="@+id/pohra10"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pohra10" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pohra11-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohra11" />
+
+                        <EditText
+                            android:id="@+id/pohra11"
+                            style="@style/EditTextAlphaNumeric"
+                            android:hint="@string/pohra11" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--pohra12-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/pohra12" />
+
+                        <RadioGroup
+                            android:id="@+id/pohra12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/pohra12a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohra12a" />
+
+                            <RadioButton
+                                android:id="@+id/pohra12b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohra12b" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -270,7 +379,6 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrb01b" />
 
-
                             <RadioButton
                                 android:id="@+id/pohrb01c"
                                 android:layout_width="match_parent"
@@ -278,14 +386,12 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrb01c" />
 
-
                             <RadioButton
                                 android:id="@+id/pohrb01d"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrb01d" />
-
 
                             <RadioButton
                                 android:id="@+id/pohrb01e"
@@ -301,6 +407,18 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrb01f" />
 
+                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                                android:id="@+id/pohrb01x"
+                                style="@style/textInput"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="70"
+                                android:focusable="false"
+                                android:hint="@string/date"
+                                android:text='@{pohrb01a.checked || pohrb01b.checked || pohrb01c.checked || pohrb01d.checked || pohrb01e.checked || pohrb01f.checked ? pohrb01x.getText().toString() : "" }'
+                                android:textColor="@android:color/black"
+                                android:visibility='@{pohrb01a.checked || pohrb01b.checked || pohrb01c.checked || pohrb01d.checked || pohrb01e.checked || pohrb01f.checked ? View.VISIBLE : View.GONE }'
+                                app:dateFormat="dd-MM-yyyy"
+                                app:maxDate="CR_DATE" />
 
                         </RadioGroup>
 

@@ -66,7 +66,8 @@ public class F4Section01Activity extends AppCompatActivity {
 
     void events_call() {
 
-        bi.pohra09.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohra07.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohrb01x.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrb02.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrj04ex.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrl01ax.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
@@ -321,6 +322,12 @@ public class F4Section01Activity extends AppCompatActivity {
                 }
                 ClearClass.ClearAllFields(bi.llform04, true);
                 bi.llform04.setVisibility(View.VISIBLE);
+                bi.pohra08.setText(cContract.getRep_date());
+                bi.pohra09.setText(cContract.getChild_name());
+                bi.pohra10.setText(cContract.getF_name());
+                bi.pohra08.setEnabled(false);
+                bi.pohra09.setEnabled(false);
+                bi.pohra10.setEnabled(false);
 
             }
         });
@@ -419,8 +426,15 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohra02", ucCode.get(bi.pohra02.getSelectedItemPosition()));
         form04_01.put("pohra05", villageCodes.get(bi.pohra05.getSelectedItemPosition()));
         form04_01.put("pohra06", bi.pohra06.getText().toString());
-
+        form04_01.put("pohra07", bi.pohra07.getText().toString());
+        form04_01.put("pohra08", bi.pohra08.getText().toString());
         form04_01.put("pohra09", bi.pohra09.getText().toString());
+        form04_01.put("pohra10", bi.pohra10.getText().toString());
+        form04_01.put("pohra11", bi.pohra11.getText().toString());
+
+        form04_01.put("pohra12", bi.pohra12a.isChecked() ? "1"
+                : bi.pohra12b.isChecked() ? "2"
+                : "0");
 
         form04_01.put("pohrb01", bi.pohrb01a.isChecked() ? "1"
                 : bi.pohrb01b.isChecked() ? "2"
@@ -429,6 +443,7 @@ public class F4Section01Activity extends AppCompatActivity {
                 : bi.pohrb01e.isChecked() ? "5"
                 : bi.pohrb01f.isChecked() ? "6"
                 : "0");
+        form04_01.put("pohrb01x", bi.pohrb01x.getText().toString());
 
         form04_01.put("pohrb02", bi.pohrb02.getText().toString());
 
