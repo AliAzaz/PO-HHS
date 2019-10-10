@@ -322,7 +322,7 @@ public class F4Section01Activity extends AppCompatActivity {
                 }
                 ClearClass.ClearAllFields(bi.llform04, true);
                 bi.llform04.setVisibility(View.VISIBLE);
-                bi.pohra08.setText(cContract.getRep_date());
+                bi.pohra08.setText(cContract.getRef_date());
                 bi.pohra09.setText(cContract.getChild_name());
                 bi.pohra10.setText(cContract.getF_name());
                 bi.pohra08.setEnabled(false);

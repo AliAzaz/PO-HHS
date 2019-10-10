@@ -414,9 +414,7 @@
                                 android:layout_weight="70"
                                 android:focusable="false"
                                 android:hint="@string/date"
-                                android:text='@{pohrb01a.checked || pohrb01b.checked || pohrb01c.checked || pohrb01d.checked || pohrb01e.checked || pohrb01f.checked ? pohrb01x.getText().toString() : "" }'
                                 android:textColor="@android:color/black"
-                                android:visibility='@{pohrb01a.checked || pohrb01b.checked || pohrb01c.checked || pohrb01d.checked || pohrb01e.checked || pohrb01f.checked ? View.VISIBLE : View.GONE }'
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE" />
 
