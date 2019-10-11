@@ -10,7 +10,6 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -39,11 +38,11 @@ public class F1Section08Activity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-        try {
+        /*try {
             cal.setTime(sdf.parse(F1Section01Activity.DOB));
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
         DOBinMonths = DateUtils.ageInMonthsByDOB(cal);
 
         if (DOBinMonths >= 6) {

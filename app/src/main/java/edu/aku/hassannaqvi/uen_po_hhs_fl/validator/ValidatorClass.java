@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
@@ -13,7 +12,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -246,7 +244,7 @@ public abstract class ValidatorClass {
         }
     }
 
-    public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, String msg) {
+    /*public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, String msg) {
 
         Boolean flag = false;
         for (int i = 0; i < container.getChildCount(); i++) {
@@ -315,20 +313,118 @@ public abstract class ValidatorClass {
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
             return false;
         }
+    }*/
+
+
+    public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, EditText txt, String msg) {
+
+        Boolean flag = false;
+        for (int i = 0; i < container.getChildCount(); i++) {
+            View v = container.getChildAt(i);
+            if (v instanceof CheckBox) {
+                CheckBox cb = (CheckBox) v;
+                if (cb.isChecked()) {
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        if (flag) {
+            cbx.setError(null);
+            if (cbx.isChecked()) {
+                return EmptyTextBox(context, txt, msg);
+            } else {
+                txt.setError(null);
+                txt.clearFocus();
+                return true;
+            }
+        } else {
+            cbx.setError("This data is Required!");    // Set Error on last radio button
+
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
+            return false;
+        }
     }
 
-    public static void setScrollViewFocus(ScrollView scrollView) {
-        scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
-        scrollView.setFocusable(true);
-        scrollView.setFocusableInTouchMode(true);
-        scrollView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.requestFocusFromTouch();
-                return false;
+    public static boolean EmptyCheckBox(Context context, ViewGroup container, CheckBox cbx, String msg) {
+
+        Boolean flag = false;
+        for (int i = 0; i < container.getChildCount(); i++) {
+            View v = container.getChildAt(i);
+            if (v instanceof CheckBox) {
+                CheckBox cb = (CheckBox) v;
+                cb.setError(null);
+                if (cb.isChecked()) {
+                    flag = true;
+
+                    for (int j = 0; j < container.getChildCount(); j++) {
+                        View innerV = container.getChildAt(j);
+                        if (innerV instanceof EditText) {
+                            if (getIDComponent(cb).equals(innerV.getTag())) {
+                                if (innerV instanceof EditTextPicker)
+                                    flag = EmptyEditTextPicker(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                                else
+                                    flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                            }
+                        }
+                    }
+                }
             }
-        });
+        }
+        if (flag) {
+            return true;
+        } else {
+            cbx.setError("This data is Required!");    // Set Error on last radio button
+
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
+            return false;
+        }
     }
+
+    public static boolean EmptyCheckBox02(Context context, LinearLayout container, CheckBox cbx, String msg) {
+        boolean flag = false;
+        for (int i = 0; i < container.getChildCount(); i++) {
+            View v = container.getChildAt(i);
+            if (v instanceof CheckBox) {
+                CheckBox cb = (CheckBox) v;
+                cb.setError(null);
+
+                if (!cb.isEnabled()) {
+                    flag = true;
+                    continue;
+                } else {
+                    if (!flag)
+                        flag = false;
+                }
+
+                if (cb.isChecked()) {
+                    flag = true;
+
+                    for (int m = 0; m < container.getChildCount(); m++) {
+                        View innerV = container.getChildAt(m);
+                        if (innerV instanceof EditText) {
+                            if (getIDComponent(cb).equals(innerV.getTag())) {
+                                if (innerV instanceof EditTextPicker)
+                                    flag = EmptyEditTextPicker(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                                else
+                                    flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
+                            }
+                        }
+                    }
+//                    break;
+                }
+            }
+        }
+        if (!flag) {
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
+            cbx.setError("This data is Required!");    // Set Error on last radio button
+
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
+            return false;
+        }
+        return true;
+    }​
+
 
     public static boolean EmptyCheckingContainer(Context context, ViewGroup lv) {
 
@@ -475,6 +571,5 @@ public abstract class ValidatorClass {
         }
         return "";
     }
-
 
 }
