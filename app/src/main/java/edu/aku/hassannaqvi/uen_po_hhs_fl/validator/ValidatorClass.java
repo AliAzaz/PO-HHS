@@ -381,7 +381,7 @@ public abstract class ValidatorClass {
         }
     }
 
-    public static boolean EmptyCheckBox02(Context context, LinearLayout container, CheckBox cbx, String msg) {
+    /*public static boolean EmptyCheckBox02(Context context, LinearLayout container, CheckBox cbx, String msg) {
         boolean flag = false;
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
@@ -423,7 +423,7 @@ public abstract class ValidatorClass {
             return false;
         }
         return true;
-    }​
+    }​*/
 
 
     public static boolean EmptyCheckingContainer(Context context, ViewGroup lv) {
