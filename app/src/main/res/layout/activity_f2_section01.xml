@@ -1027,8 +1027,8 @@
                                 android:id="@+id/pofpa17"
                                 style="@style/EditText_number"
                                 android:hint="@string/day"
-                                app:mask="###"
-                                app:maxValue="999"
+                                app:mask="##"
+                                app:maxValue="20"
                                 app:minValue="1"
                                 app:type="range" />
 
