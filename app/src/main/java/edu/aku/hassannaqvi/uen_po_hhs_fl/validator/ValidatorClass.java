@@ -63,11 +63,11 @@ public abstract class ValidatorClass {
         if (!flag) {
             FancyToast.makeText(context, messageConv + ": " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": " + messageConv);
-            return false;
+            return flag;
         } else {
             txt.setError(null);
             txt.clearFocus();
-            return true;
+            return flag;
         }
 
     }
@@ -244,7 +244,7 @@ public abstract class ValidatorClass {
         }
     }
 
-    /*public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, String msg) {
+    public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, String msg) {
 
         Boolean flag = false;
         for (int i = 0; i < container.getChildCount(); i++) {
@@ -313,112 +313,6 @@ public abstract class ValidatorClass {
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
             return false;
         }
-    }*/
-
-
-    public static boolean EmptyCheckBox(Context context, LinearLayout container, CheckBox cbx, EditText txt, String msg) {
-
-        Boolean flag = false;
-        for (int i = 0; i < container.getChildCount(); i++) {
-            View v = container.getChildAt(i);
-            if (v instanceof CheckBox) {
-                CheckBox cb = (CheckBox) v;
-                if (cb.isChecked()) {
-                    flag = true;
-                    break;
-                }
-            }
-        }
-        if (flag) {
-            cbx.setError(null);
-            if (cbx.isChecked()) {
-                return EmptyTextBox(context, txt, msg);
-            } else {
-                txt.setError(null);
-                txt.clearFocus();
-                return true;
-            }
-        } else {
-            cbx.setError("This data is Required!");    // Set Error on last radio button
-
-            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
-            return false;
-        }
-    }
-
-    public static boolean EmptyCheckBox(Context context, ViewGroup container, CheckBox cbx, String msg) {
-
-        Boolean flag = false;
-        for (int i = 0; i < container.getChildCount(); i++) {
-            View v = container.getChildAt(i);
-            if (v instanceof CheckBox) {
-                CheckBox cb = (CheckBox) v;
-                cb.setError(null);
-                if (cb.isChecked()) {
-                    flag = true;
-
-                    for (int j = 0; j < container.getChildCount(); j++) {
-                        View innerV = container.getChildAt(j);
-                        if (innerV instanceof EditText) {
-                            if (getIDComponent(cb).equals(innerV.getTag())) {
-                                if (innerV instanceof EditTextPicker)
-                                    flag = EmptyEditTextPicker(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
-                                else
-                                    flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (flag) {
-            return true;
-        } else {
-            cbx.setError("This data is Required!");    // Set Error on last radio button
-
-            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
-            return false;
-        }
-    }
-
-    public static boolean EmptyCheckBox02(Context context, LinearLayout container, CheckBox cbx, String msg) {
-        boolean flag = false;
-        for (int i = 0; i < container.getChildCount(); i++) {
-            View v = container.getChildAt(i);
-            if (v instanceof CheckBox) {
-                CheckBox cb = (CheckBox) v;
-                cb.setError(null);
-                if (!cb.isEnabled()) {
-                    flag = true;
-                    continue;
-                } else {
-                    if (!flag)
-                        flag = false;
-                }
-                if (cb.isChecked()) {
-                    flag = true;
-
-                    for (int m = 0; m < container.getChildCount(); m++) {
-                        View innerV = container.getChildAt(m);
-                        if (innerV instanceof EditText) {
-                            if (getIDComponent(cb).equals(innerV.getTag())) {
-                                if (innerV instanceof EditTextPicker)
-                                    flag = EmptyEditTextPicker(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
-                                else
-                                    flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (!flag) {
-            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
-            cbx.setError("This data is Required!");    // Set Error on last radio button
-            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
-            return false;
-        }
-        return true;
     }
 
     public static boolean EmptyCheckingContainer(Context context, ViewGroup lv) {
@@ -517,9 +411,7 @@ public abstract class ValidatorClass {
         for (int i = 0; i < lv.getChildCount(); i++) {
             View view = lv.getChildAt(i);
 
-          /*  if (view.getVisibility() == View.GONE || !view.isEnabled())
-                continue;*/
-            if (view.getVisibility() == View.GONE)
+            if (view.getVisibility() == View.GONE || !view.isEnabled())
                 continue;
 
             if (view instanceof CardView) {
@@ -566,5 +458,4 @@ public abstract class ValidatorClass {
         }
         return "";
     }
-
 }

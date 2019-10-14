@@ -34,7 +34,7 @@ public class F1Section09_10Activity extends AppCompatActivity {
 
     private void settingListener() {
 
-        bi.pocfj0198.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        bi.pocfj0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
@@ -112,7 +112,7 @@ public class F1Section09_10Activity extends AppCompatActivity {
 
         sIJ.put("pocfj01bx", bi.pocfj01bx.getText().toString());
         sIJ.put("pocfj0196x", bi.pocfj0196x.getText().toString());
-        sIJ.put("pocfj0198", bi.pocfj0198.isChecked() ? "98" : "0");
+        sIJ.put("pocfj0197", bi.pocfj0197.isChecked() ? "97" : "0");
 
         sIJ.put("pocfj02", bi.pocfj02a.isChecked() ? "1"
                 : bi.pocfj02b.isChecked() ? "2"

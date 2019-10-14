@@ -158,6 +158,7 @@
                             app:mask="##.#"
                             app:maxValue="43.0"
                             app:minValue="33.0"
+                            app:defaultValue="0.0"
                             android:tag="pocfj01b"
                             android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
                             android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
@@ -264,7 +265,7 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/pocfj0198"
+                        android:id="@+id/pocfj0197"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:tag="-1"
