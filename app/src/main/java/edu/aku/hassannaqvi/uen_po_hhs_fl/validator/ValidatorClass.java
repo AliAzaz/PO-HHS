@@ -264,7 +264,7 @@ public abstract class ValidatorClass {
                 if (cb.isChecked()) {
                     flag = true;
 
-                    for (int j = 0; j < container.getChildCount(); j++) {
+                    for (int j = 1; j < container.getChildCount(); j++) {
                         View innerV = container.getChildAt(j);
                         if (innerV instanceof EditText) {
                             if (getIDComponent(cb).equals(innerV.getTag())) {
@@ -274,8 +274,9 @@ public abstract class ValidatorClass {
                                     flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
                             }
                         }
+                        if (!flag) break;
                     }
-//                    break;
+                    if (!flag) break;
                 }
             }
         }
@@ -404,35 +405,6 @@ public abstract class ValidatorClass {
         }
         return true;
     }
-
-    public static boolean EmptyCheckingContainerForButtons(Context context, LinearLayout lv) {
-
-
-        for (int i = 0; i < lv.getChildCount(); i++) {
-            View view = lv.getChildAt(i);
-
-            if (view.getVisibility() == View.GONE || !view.isEnabled())
-                continue;
-
-            if (view instanceof CardView) {
-                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
-                    View view1 = ((CardView) view).getChildAt(j);
-                    if (view1 instanceof LinearLayout) {
-                        if (!EmptyCheckingContainerForButtons(context, (LinearLayout) view1)) {
-                            return false;
-                        }
-                    }
-                }
-            } else if (view instanceof EditText) {
-                if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
-                    return false;
-                }
-            }
-
-        }
-        return true;
-    }
-
 
     public static String getIDComponent(View view) {
         String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
