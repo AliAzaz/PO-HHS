@@ -105,12 +105,10 @@ public class F2Section01Activity extends AppCompatActivity {
                     bi.pofpa23Items.removeAllViews();
                     pofpa23List.clear();
                     bi.llpofpa09ALL.setVisibility(View.GONE);
-                    bi.btnNext.setVisibility(View.GONE);
                 } else {
                     ClearClass.ClearAllFields(bi.pofpa08cv, null);
                     bi.pofpa08cv.setVisibility(View.GONE);
                     bi.llpofpa09ALL.setVisibility(View.VISIBLE);
-                    bi.btnNext.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -526,7 +524,7 @@ public class F2Section01Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                if (DAY.equals("7")) {
+                if (DAY.equals("7") && !bi.pofpa07b.isChecked()) {
                     finish();
                     startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
                 } else {
