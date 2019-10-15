@@ -135,8 +135,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="openForm"
-                android:text="Form 04 (Hospital Physician Form)"
-                android:visibility="gone" />
+                android:text="Form 04 (Hospital Physician Form)" />
 
             <Button
                 android:id="@+id/syncServer"

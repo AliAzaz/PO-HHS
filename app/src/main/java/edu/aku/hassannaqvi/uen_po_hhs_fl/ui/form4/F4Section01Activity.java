@@ -459,6 +459,8 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrc01a", bi.pohrc01a.isChecked() ? "1" : "0");
         form04_01.put("pohrc01b", bi.pohrc01b.isChecked() ? "2" : "0");
         form04_01.put("pohrc01c", bi.pohrc01c.isChecked() ? "3" : "0");
+        form04_01.put("pohrc01d", bi.pohrc01d.isChecked() ? "4" : "0");
+        form04_01.put("pohrc01e", bi.pohrc01e.isChecked() ? "5" : "0");
 
         form04_01.put("pohrd01a", bi.pohrd01a.isChecked() ? "1" : "0");
         form04_01.put("pohrd01b", bi.pohrd01b.isChecked() ? "2" : "0");
@@ -483,7 +485,6 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrf0197", bi.pohrf0197.isChecked() ? "97" : "0");
 
         form04_01.put("pohrg01a", bi.pohrg01a.getText().toString());
-
         form04_01.put("pohrg01b", bi.pohrg01b.getText().toString());
 
         form04_01.put("pohrg02", bi.pohrg02.getText().toString());

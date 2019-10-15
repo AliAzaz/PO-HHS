@@ -569,6 +569,13 @@
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/pohrc01c" />
 
+                            <CheckBox
+                                android:id="@+id/pohrc01d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pohrc01d" />
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -597,11 +604,11 @@
                                 android:textSize="16dp" />
 
                             <CheckBox
-                                android:id="@+id/pohrc01d"
+                                android:id="@+id/pohrc01e"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
-                                android:text="@string/pohrc01d" />
+                                android:text="@string/pohrc01e" />
 
                         </LinearLayout>
 

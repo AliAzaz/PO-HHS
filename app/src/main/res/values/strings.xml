@@ -1194,9 +1194,10 @@
 
     <string name="pohrc01"> مريض ۾ علامتون ؛(گذريل 24 ڪلاڪن ۾) </string>
     <string name="pohrc01a"> کنگھ </string>
-    <string name="pohrc01b"> بخار </string>
-    <string name="pohrc01c"> ساھ جي تيز رفتار </string>
-    <string name="pohrc01d"> پاسيريون لڳڻ </string>
+    <string name="pohrc01b"> ساهه کڻڻ ۾ ڏکيائي </string>
+    <string name="pohrc01c"> بخار </string>
+    <string name="pohrc01d"> ساھ جي تيز رفتار </string>
+    <string name="pohrc01e"> پاسيريون لڳڻ </string>
     <string name="pohrc01h"> هڪ کان وڌيڪ جواب ٿي سگھن ٿا </string>
     <string name="pohrc01h1"> 0 کان 2 مهينن کان گھٽ عمر وارا ٻار؛ هڪ منٽ ۾ 60 يا 60 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
     <string name="pohrc01h2"> 2 کان 12 مهينن کان گھٽ عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
