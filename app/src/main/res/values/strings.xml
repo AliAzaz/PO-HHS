@@ -1203,22 +1203,6 @@
     <string name="pohrc01h2"> 2 کان 12 مهينن کان گھٽ عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
     <string name="pohrc01h3"> 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾40 يا 40 کان وڌيڪ ڀيرا ساهه کڻڻ </string>
 
-    <string name="pohrc02"> مريض ۾ علامتون ؛(گذريل 24 ڪلاڪن ۾) ( ڇا اسپتال جو رڪارڊ موجود آهي ؟ ) </string>
-    <string name="pohrc02a"> ها </string>
-    <string name="pohrc02b"> نه </string>
-
-    <string name="pohrc03"> مريض ۾ علامتون ؛(گذريل 24 ڪلاڪن ۾) (اسپتال جو رڪارڊ) </string>
-    <string name="pohrc03a"> کنگھ </string>
-    <string name="pohrc03b"> ساهه کڻڻ ۾ ڏکيائي </string>
-    <string name="pohrc03c"> بخار </string>
-    <string name="pohrc03d"> ساھ جي تيز رفتار </string>
-    <string name="pohrc03e"> پاسيريون لڳڻ </string>
-    <string name="pohrc03h"> هڪ کان وڌيڪ جواب ٿي سگھن ٿا </string>
-    <string name="pohrc03h1"> 0 کان 2 مهينن کان گھٽ عمر وارا ٻار؛ هڪ منٽ ۾ 60 يا 60 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
-    <string name="pohrc03h2"> 2 کان 12 مهينن کان گھٽ عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
-    <string name="pohrc03h3"> 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾40 يا 40 کان وڌيڪ ڀيرا ساهه کڻڻ </string>
-
-
     <string name="pohrd01"> خطرناڪ نشانيون (گذريل 24 ڪلاڪن ۾) </string>
     <string name="pohrd01a"> ڪجهه به کائي پئ نه سگهي </string>
     <string name="pohrd01b"> لڳاتار اُلٽي </string>
@@ -1226,19 +1210,6 @@
     <string name="pohrd01d"> بيهوشي/ غنودگي </string>
     <string name="pohrd01e"> رت ۾ آڪسيجن جي ڪمي (SpO2 &lt; 92)  </string>
     <string name="pohrd0197"> ڪو به نه </string>
-
-    <string name="pohrd02"> خطرناڪ نشانيون (گذريل 24 ڪلاڪن ۾) ( ڇا اسپتال جو رڪارڊ موجود آهي ؟ ) </string>
-    <string name="pohrd02a"> ها </string>
-    <string name="pohrd02b"> نه </string>
-
-    <string name="pohrd03"> خطرناڪ نشانيون (گذريل 24 ڪلاڪن ۾) (اسپتال جو رڪارڊ) </string>
-    <string name="pohrd03a"> ڪجهه به کائي پئ نه سگهي </string>
-    <string name="pohrd03b"> لڳاتار اُلٽي </string>
-    <string name="pohrd03c"> جهٽڪا </string>
-    <string name="pohrd03d"> بيهوشي/ غنودگي </string>
-    <string name="pohrd03e"> رت ۾ آڪسيجن جي ڪمي (SpO2 &lt; 92)  </string>
-    <string name="pohrd0397"> ڪو به نه </string>
-
 
     <string name="pohre01"> صحت جي عالمي اداري مطابق نمونيا جي آخري درجابندي </string>
     <string name="pohre01a"> نمونيا ناهي </string>
@@ -1250,21 +1221,6 @@
     <string name="pohre01h4"> 7 ڏينهن کان گھٽ عمر وارا ٻار:  صرف تڪڙا ساھ </string>
     <string name="pohre01h5"> 7 ڏينهن کان 59 مهينن وارا ٻار:  نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽/ يا رت ۾ آڪسيجن جي ڪمي </string>
 
-    <string name="pohre02"> صحت جي عالمي اداري مطابق نمونيا جي آخري درجابندي ( ڇا اسپتال جو رڪارڊ موجود آهي ؟ ) </string>
-    <string name="pohre02a"> ها </string>
-    <string name="pohre02b"> نه </string>
-
-    <string name="pohre03"> صحت جي عالمي اداري مطابق نمونيا جي آخري درجابندي  (اسپتال جو رڪارڊ) </string>
-    <string name="pohre03a"> نمونيا ناهي </string>
-    <string name="pohre03h1"> کنگهه ۽ ٿد </string>
-    <string name="pohre03b"> نمونيا </string>
-    <string name="pohre03h2"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
-    <string name="pohre03h3"> 2 کان 59 مهينن وارا ٻار:  تڪڙا ساھ ۽/يا پاسيريون لڳڻ </string>
-    <string name="pohre03c"> شديد نمونيه </string>
-    <string name="pohre03h4"> 7 ڏينهن کان گھٽ عمر وارا ٻار:  صرف تڪڙا ساھ </string>
-    <string name="pohre03h5"> 7 ڏينهن کان 59 مهينن وارا ٻار:  نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽/ يا رت ۾ آڪسيجن جي ڪمي </string>
-
-
     <string name="pohrf01"> غير معمولي جسماني معائنو ڪرڻ </string>
     <string name="pohrf01a"> سائينوسس </string>
     <string name="pohrf01b"> گرنٽنگ </string>
@@ -1275,19 +1231,49 @@
     <string name="pohrf01g"> سيٽي جھڙو آواز </string>
     <string name="pohrf0197"> ڪو به نه </string>
 
-    <string name="pohrf02"> غير معمولي جسماني معائنو ڪرڻ  ( ڇا اسپتال جو رڪارڊ موجود آهي ؟ )  </string>
-    <string name="pohrf02a"> ها </string>
-    <string name="pohrf02b"> نه </string>
 
-    <string name="pohrf03"> غير معمولي جسماني معائنو ڪرڻ  (اسپتال جو رڪارڊ)  </string>
-    <string name="pohrf03a"> سائينوسس </string>
-    <string name="pohrf03b"> گرنٽنگ </string>
-    <string name="pohrf03c"> هيڊ نوڊنگ </string>
-    <string name="pohrf03d"> تريڪيل ٽگ </string>
-    <string name="pohrf03e"> نڪ جو کُلڻ </string>
-    <string name="pohrf03f"> کرکر جو آواز </string>
-    <string name="pohrf03g"> سيٽي جھڙو آواز </string>
-    <string name="pohrf0397"> ڪو به نه </string>
+    <string name="pohrc0212"> ڇا اسپتال جو رڪارڊ موجود آهي ؟ </string>
+    <string name="pohrc0212a"> ها </string>
+    <string name="pohrc0212b"> نه </string>
+
+    <string name="pohrc02"> مريض ۾ علامتون ؛(گذريل 24 ڪلاڪن ۾) (اسپتال جو رڪارڊ) </string>
+    <string name="pohrc02a"> کنگھ </string>
+    <string name="pohrc02b"> ساهه کڻڻ ۾ ڏکيائي </string>
+    <string name="pohrc02c"> بخار </string>
+    <string name="pohrc02d"> ساھ جي تيز رفتار </string>
+    <string name="pohrc02e"> پاسيريون لڳڻ </string>
+    <string name="pohrc02h"> هڪ کان وڌيڪ جواب ٿي سگھن ٿا </string>
+    <string name="pohrc02h1"> 0 کان 2 مهينن کان گھٽ عمر وارا ٻار؛ هڪ منٽ ۾ 60 يا 60 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+    <string name="pohrc02h2"> 2 کان 12 مهينن کان گھٽ عمر وارا ٻار: هڪ منٽ ۾ 50 يا 50 کان وڌيڪ ڀيرا ساھ کڻڻ </string>
+    <string name="pohrc02h3"> 12 کان 59 مهينن تائين عمر وارا ٻار: هڪ منٽ ۾40 يا 40 کان وڌيڪ ڀيرا ساهه کڻڻ </string>
+
+    <string name="pohrd02"> خطرناڪ نشانيون (گذريل 24 ڪلاڪن ۾) (اسپتال جو رڪارڊ) </string>
+    <string name="pohrd02a"> ڪجهه به کائي پئ نه سگهي </string>
+    <string name="pohrd02b"> لڳاتار اُلٽي </string>
+    <string name="pohrd02c"> جهٽڪا </string>
+    <string name="pohrd02d"> بيهوشي/ غنودگي </string>
+    <string name="pohrd02e"> رت ۾ آڪسيجن جي ڪمي (SpO2 &lt; 92)  </string>
+    <string name="pohrd0297"> ڪو به نه </string>
+
+    <string name="pohre02"> صحت جي عالمي اداري مطابق نمونيا جي آخري درجابندي  (اسپتال جو رڪارڊ) </string>
+    <string name="pohre02a"> نمونيا ناهي </string>
+    <string name="pohre02h1"> کنگهه ۽ ٿد </string>
+    <string name="pohre02b"> نمونيا </string>
+    <string name="pohre02h2"> 2 مهينن کان ننڍا ٻار: تڪڙا ساھ </string>
+    <string name="pohre02h3"> 2 کان 59 مهينن وارا ٻار:  تڪڙا ساھ ۽/يا پاسيريون لڳڻ </string>
+    <string name="pohre02c"> شديد نمونيه </string>
+    <string name="pohre02h4"> 7 ڏينهن کان گھٽ عمر وارا ٻار:  صرف تڪڙا ساھ </string>
+    <string name="pohre02h5"> 7 ڏينهن کان 59 مهينن وارا ٻار:  نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽/ يا رت ۾ آڪسيجن جي ڪمي </string>
+
+    <string name="pohrf02"> غير معمولي جسماني معائنو ڪرڻ  (اسپتال جو رڪارڊ)  </string>
+    <string name="pohrf02a"> سائينوسس </string>
+    <string name="pohrf02b"> گرنٽنگ </string>
+    <string name="pohrf02c"> هيڊ نوڊنگ </string>
+    <string name="pohrf02d"> تريڪيل ٽگ </string>
+    <string name="pohrf02e"> نڪ جو کُلڻ </string>
+    <string name="pohrf02f"> کرکر جو آواز </string>
+    <string name="pohrf02g"> سيٽي جھڙو آواز </string>
+    <string name="pohrf0297"> ڪو به نه </string>
 
     <string name="pohrgh1"> اهم نشانيون </string>
     <string name="pohrg01a"> ساهه جي رفتار/ منٽ </string>
