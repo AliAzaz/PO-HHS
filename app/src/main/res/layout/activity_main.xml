@@ -172,6 +172,7 @@
                         android:layout_height="wrap_content"
                         android:onClick="CheckCluster"
                         android:text="Check Block" />
+
                 </LinearLayout>
 
 

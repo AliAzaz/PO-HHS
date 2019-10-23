@@ -66,10 +66,42 @@ public class F4Section01Activity extends AppCompatActivity {
 
     void events_call() {
 
-        bi.pohra09.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohra07.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+        bi.pohrb01x.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrb02.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrj04ex.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
         bi.pohrl01ax.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -5));
+
+
+        bi.pohrd0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrd01, false);
+                    bi.lvpohrd01.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrd01, true);
+                    bi.lvpohrd01.setTag("0");
+                }
+            }
+        });
+
+
+        bi.pohrd0297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrd02, false);
+                    bi.lvpohrd02.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrd02, true);
+                    bi.lvpohrd02.setTag("0");
+                }
+            }
+        });
+
 
         bi.pohrf0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -81,6 +113,21 @@ public class F4Section01Activity extends AppCompatActivity {
                 } else {
                     ClearClass.ClearAllFields(bi.lvpohrf01, true);
                     bi.lvpohrf01.setTag("0");
+                }
+            }
+        });
+
+
+        bi.pohrf0297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.lvpohrf02, false);
+                    bi.lvpohrf02.setTag("-1");
+                } else {
+                    ClearClass.ClearAllFields(bi.lvpohrf02, true);
+                    bi.lvpohrf02.setTag("0");
                 }
             }
         });
@@ -151,6 +198,22 @@ public class F4Section01Activity extends AppCompatActivity {
         });
 
 
+        bi.pohrc0212.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pohrc0212a.getId()) {
+                    bi.llform05.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllFields(bi.llform05, null);
+                    bi.llform05.setVisibility(View.GONE);
+                }
+
+            }
+
+        });
+
+
         /*bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -172,6 +235,8 @@ public class F4Section01Activity extends AppCompatActivity {
 
         talukaNames.add("....");
         talukaCodes.add("....");
+        talukaNames.add("TESTTeshsil");
+        talukaCodes.add("1010");
 
         Collection<TalukasContract> dc = db.getAllTalukas();
 
@@ -193,6 +258,8 @@ public class F4Section01Activity extends AppCompatActivity {
 
                 ucCode.add("....");
                 ucName.add("....");
+                ucCode.add("101010");
+                ucName.add("TESTUC");
 
                 Collection<UCsContract> pc = db.getAllUCsbyTaluka(talukaCodes.get(position));
                 for (UCsContract p : pc) {
@@ -222,6 +289,8 @@ public class F4Section01Activity extends AppCompatActivity {
 
                 villageCodes.add("....");
                 villageNames.add("....");
+                villageCodes.add("10101010");
+                villageNames.add("TestVillage");
 
                 Collection<VillagesContract> pc =
                         db.getAllPSUsByTaluka(talukaCodes.get(bi.pohra01.getSelectedItemPosition()),
@@ -236,6 +305,8 @@ public class F4Section01Activity extends AppCompatActivity {
 
                 lhwCodes.add("....");
                 lhwNames.add("....");
+                lhwCodes.add("1010101010");
+                lhwNames.add("TestLHW");
 
                 Collection<LHWContract> lhw =
                         db.getAllLHWsByTaluka(talukaCodes.get(bi.pohra01.getSelectedItemPosition()),
@@ -297,6 +368,12 @@ public class F4Section01Activity extends AppCompatActivity {
                 }
                 ClearClass.ClearAllFields(bi.llform04, true);
                 bi.llform04.setVisibility(View.VISIBLE);
+                bi.pohra08.setText(cContract.getRef_date());
+                bi.pohra09.setText(cContract.getChild_name());
+                bi.pohra10.setText(cContract.getF_name());
+                bi.pohra08.setEnabled(false);
+                bi.pohra09.setEnabled(false);
+                bi.pohra10.setEnabled(false);
 
             }
         });
@@ -395,8 +472,15 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohra02", ucCode.get(bi.pohra02.getSelectedItemPosition()));
         form04_01.put("pohra05", villageCodes.get(bi.pohra05.getSelectedItemPosition()));
         form04_01.put("pohra06", bi.pohra06.getText().toString());
-
+        form04_01.put("pohra07", bi.pohra07.getText().toString());
+        form04_01.put("pohra08", bi.pohra08.getText().toString());
         form04_01.put("pohra09", bi.pohra09.getText().toString());
+        form04_01.put("pohra10", bi.pohra10.getText().toString());
+        form04_01.put("pohra11", bi.pohra11.getText().toString());
+
+        form04_01.put("pohra12", bi.pohra12a.isChecked() ? "1"
+                : bi.pohra12b.isChecked() ? "2"
+                : "0");
 
         form04_01.put("pohrb01", bi.pohrb01a.isChecked() ? "1"
                 : bi.pohrb01b.isChecked() ? "2"
@@ -405,6 +489,7 @@ public class F4Section01Activity extends AppCompatActivity {
                 : bi.pohrb01e.isChecked() ? "5"
                 : bi.pohrb01f.isChecked() ? "6"
                 : "0");
+        form04_01.put("pohrb01x", bi.pohrb01x.getText().toString());
 
         form04_01.put("pohrb02", bi.pohrb02.getText().toString());
 
@@ -420,13 +505,15 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrc01a", bi.pohrc01a.isChecked() ? "1" : "0");
         form04_01.put("pohrc01b", bi.pohrc01b.isChecked() ? "2" : "0");
         form04_01.put("pohrc01c", bi.pohrc01c.isChecked() ? "3" : "0");
+        form04_01.put("pohrc01d", bi.pohrc01d.isChecked() ? "4" : "0");
+        form04_01.put("pohrc01e", bi.pohrc01e.isChecked() ? "5" : "0");
 
         form04_01.put("pohrd01a", bi.pohrd01a.isChecked() ? "1" : "0");
         form04_01.put("pohrd01b", bi.pohrd01b.isChecked() ? "2" : "0");
         form04_01.put("pohrd01c", bi.pohrd01c.isChecked() ? "3" : "0");
         form04_01.put("pohrd01d", bi.pohrd01d.isChecked() ? "4" : "0");
         form04_01.put("pohrd01e", bi.pohrd01e.isChecked() ? "5" : "0");
-
+        form04_01.put("pohrd0197", bi.pohrd0197.isChecked() ? "97" : "0");
 
         form04_01.put("pohre01", bi.pohre01a.isChecked() ? "1"
                 : bi.pohre01b.isChecked() ? "2"
@@ -443,7 +530,6 @@ public class F4Section01Activity extends AppCompatActivity {
         form04_01.put("pohrf0197", bi.pohrf0197.isChecked() ? "97" : "0");
 
         form04_01.put("pohrg01a", bi.pohrg01a.getText().toString());
-
         form04_01.put("pohrg01b", bi.pohrg01b.getText().toString());
 
         form04_01.put("pohrg02", bi.pohrg02.getText().toString());
@@ -452,8 +538,63 @@ public class F4Section01Activity extends AppCompatActivity {
 
 
         form04_01.put("pohrg04a", bi.pohrg04a.getText().toString());
-
         form04_01.put("pohrg04b", bi.pohrg04b.getText().toString());
+        form04_01.put("pohrg0497", bi.pohrg0497.isChecked() ? "97" : "0");
+
+
+        form04_01.put("pohrk01", bi.pohrk01a.isChecked() ? "1"
+                : bi.pohrk01b.isChecked() ? "2"
+                : bi.pohrk01c.isChecked() ? "3"
+                : "0");
+
+        form04_01.put("pohrl01", bi.pohrl01a.isChecked() ? "1"
+                : bi.pohrl01b.isChecked() ? "2"
+                : bi.pohrl01c.isChecked() ? "3"
+                : bi.pohrl0197.isChecked() ? "97"
+                : "0");
+
+        form04_01.put("pohrl01ax", bi.pohrl01ax.getText().toString());
+        form04_01.put("pohrl01bx", bi.pohrl01bx.getText().toString());
+
+        form04_01.put("pohrl02", bi.pohrl02.getText().toString());
+
+
+        form04_01.put("pohrl03", bi.pohrl03a.isChecked() ? "1"
+                : bi.pohrl03b.isChecked() ? "2"
+                : bi.pohrl03c.isChecked() ? "3"
+                : "0");
+
+
+        form04_01.put("pohrc0212", bi.pohrc0212a.isChecked() ? "1"
+                : bi.pohrc0212b.isChecked() ? "2"
+                : "0");
+
+        form04_01.put("pohrc02a", bi.pohrc02a.isChecked() ? "1" : "0");
+        form04_01.put("pohrc02b", bi.pohrc02b.isChecked() ? "2" : "0");
+        form04_01.put("pohrc02c", bi.pohrc02c.isChecked() ? "3" : "0");
+        form04_01.put("pohrc02d", bi.pohrc02d.isChecked() ? "4" : "0");
+        form04_01.put("pohrc02e", bi.pohrc02e.isChecked() ? "5" : "0");
+
+        form04_01.put("pohrd02a", bi.pohrd02a.isChecked() ? "1" : "0");
+        form04_01.put("pohrd02b", bi.pohrd02b.isChecked() ? "2" : "0");
+        form04_01.put("pohrd02c", bi.pohrd02c.isChecked() ? "3" : "0");
+        form04_01.put("pohrd02d", bi.pohrd02d.isChecked() ? "4" : "0");
+        form04_01.put("pohrd02e", bi.pohrd02e.isChecked() ? "5" : "0");
+        form04_01.put("pohrd0297", bi.pohrd0297.isChecked() ? "97" : "0");
+
+        form04_01.put("pohre02", bi.pohre02a.isChecked() ? "1"
+                : bi.pohre02b.isChecked() ? "2"
+                : bi.pohre02c.isChecked() ? "3"
+                : "0");
+
+        form04_01.put("pohrf02a", bi.pohrf02a.isChecked() ? "1" : "0");
+        form04_01.put("pohrf02b", bi.pohrf02b.isChecked() ? "2" : "0");
+        form04_01.put("pohrf02c", bi.pohrf02c.isChecked() ? "3" : "0");
+        form04_01.put("pohrf02d", bi.pohrf02d.isChecked() ? "4" : "0");
+        form04_01.put("pohrf02e", bi.pohrf02e.isChecked() ? "5" : "0");
+        form04_01.put("pohrf02f", bi.pohrf02f.isChecked() ? "6" : "0");
+        form04_01.put("pohrf02g", bi.pohrf02g.isChecked() ? "7" : "0");
+        form04_01.put("pohrf0297", bi.pohrf0297.isChecked() ? "97" : "0");
 
         form04_01.put("pohrh01", bi.pohrh01.isChecked() ? "1" : "0");
         form04_01.put("pohrh01x", bi.pohrh01x.getText().toString());
@@ -508,10 +649,14 @@ public class F4Section01Activity extends AppCompatActivity {
                 : bi.pohrj01b.isChecked() ? "2"
                 : "0");
         form04_01.put("pohrj02a", bi.pohrj02a.getText().toString());
+        form04_01.put("pohrj02a98", bi.pohrj02a98.isChecked() ? "98" : "0");
         form04_01.put("pohrj02b", bi.pohrj02b.getText().toString());
+        form04_01.put("pohrj02b98", bi.pohrj02b98.isChecked() ? "98" : "0");
         form04_01.put("pohrj02c", bi.pohrj02c.getText().toString());
+        form04_01.put("pohrj02c98", bi.pohrj02c98.isChecked() ? "98" : "0");
         form04_01.put("pohrj02d", bi.pohrj02da.isChecked() ? "1"
                 : bi.pohrj02db.isChecked() ? "2"
+                : bi.pohrj02d98.isChecked() ? "98"
                 : "0");
 
         form04_01.put("pohrj03", bi.pohrj03a.isChecked() ? "1"
@@ -529,28 +674,7 @@ public class F4Section01Activity extends AppCompatActivity {
 
         form04_01.put("pohrj05", bi.pohrj05.getText().toString());
 
-
-        form04_01.put("pohrk01", bi.pohrk01a.isChecked() ? "1"
-                : bi.pohrk01b.isChecked() ? "2"
-                : bi.pohrk01c.isChecked() ? "3"
-                : "0");
-
-        form04_01.put("pohrl01", bi.pohrl01a.isChecked() ? "1"
-                : bi.pohrl01b.isChecked() ? "2"
-                : bi.pohrl01c.isChecked() ? "3"
-                : bi.pohrl0197.isChecked() ? "97"
-                : "0");
-
-        form04_01.put("pohrl01ax", bi.pohrl01ax.getText().toString());
-        form04_01.put("pohrl01bx", bi.pohrl01bx.getText().toString());
-
-        form04_01.put("pohrl02", bi.pohrl02.getText().toString());
-
-
-        form04_01.put("pohrl03", bi.pohrl03a.isChecked() ? "1"
-                : bi.pohrl03b.isChecked() ? "2"
-                : bi.pohrl03c.isChecked() ? "3"
-                : "0");
+        form04_01.put("comment", bi.comment.getText().toString());
 
         MainApp.fc.setsA(String.valueOf(form04_01));
         MainApp.setGPS(this);

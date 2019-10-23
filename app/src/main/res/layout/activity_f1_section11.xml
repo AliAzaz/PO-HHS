@@ -107,7 +107,7 @@
                             android:tag="pocfk0196"
                             android:id="@+id/pocfk0196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:text='@{pocfk0196.checked? pocfk0196x.getText.toString : "" }'
                             android:visibility='@{pocfk0196.checked? View.VISIBLE : View.GONE}' />
 
@@ -279,7 +279,10 @@
             </android.support.v7.widget.CardView>
 
 
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <!--pocfk06-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/pocfk06cv"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -308,13 +311,23 @@
                         app:minValue="80"
                         app:type="range" />
 
+                    <!--Skip for Control Group (23-Sep-19, Hassan Bhai)-->
+                    <CheckBox
+                        android:id="@+id/pocfk0697"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:tag="-1"
+                        android:text="@string/na" />
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
 
+            <!--pocfk07-->
             <android.support.v7.widget.CardView
-                android:id="@+id/cvpocfk07"
+                android:id="@+id/pocfk07cv"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -344,6 +357,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/pocfk0797"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/na" />
 
                     </RadioGroup>
 
@@ -440,7 +460,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -450,14 +469,12 @@
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
 
-
                         <RadioButton
                             android:id="@+id/pocfk09a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="@string/pocfk09a" />
-
 
                         <TextView
                             android:layout_width="match_parent"
@@ -477,14 +494,12 @@
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
 
-
                         <RadioButton
                             android:id="@+id/pocfk09b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="@string/pocfk09b" />
-
 
                         <TextView
                             android:layout_width="match_parent"
@@ -503,7 +518,6 @@
                             android:text="@string/pocfk09h5"
                             android:textColor="@color/gray"
                             android:textSize="16dp" />
-
 
                         <RadioButton
                             android:id="@+id/pocfk09c"
@@ -601,7 +615,7 @@
                             android:tag="pocfk1196"
                             android:id="@+id/pocfk1196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:text='@{pocfk1196.checked? pocfk1196x.getText.toString : "" }'
                             android:visibility='@{pocfk1196.checked? View.VISIBLE : View.GONE}' />
 

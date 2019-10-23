@@ -255,7 +255,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/yes1" />
+                                android:text="@string/yes2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv0b"
@@ -263,7 +263,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/no1" />
+                                android:text="@string/no2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv097"
@@ -372,7 +372,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/yes1" />
+                                android:text="@string/yes2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv1b"
@@ -380,7 +380,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/no1" />
+                                android:text="@string/no2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv197"
@@ -787,7 +787,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/yes1" />
+                                android:text="@string/yes2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv2b"
@@ -795,7 +795,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/no1" />
+                                android:text="@string/no2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv297"
@@ -1201,7 +1201,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/yes1" />
+                                android:text="@string/yes2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv3b"
@@ -1209,7 +1209,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginBottom="1dp"
                                 android:layout_weight="1"
-                                android:text="@string/no1" />
+                                android:text="@string/no2" />
 
                             <RadioButton
                                 android:id="@+id/pocfgopv397"

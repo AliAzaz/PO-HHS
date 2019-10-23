@@ -236,7 +236,7 @@
                             <EditText
                                 android:id="@+id/pocfa0796x"
                                 style="@style/EditTextAlphaNumeric"
-                                android:hint="@string/other"
+                                android:hint="@string/specify"
                                 android:tag="pocfa0796"
                                 android:text='@{pocfa0796.checked? pocfa0796x.getText.toString : "" }'
                                 android:visibility='@{pocfa0796.checked? View.VISIBLE : View.GONE}' />

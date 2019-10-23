@@ -4,20 +4,30 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 import edu.aku.hassannaqvi.uen_po_hhs_fl.R;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.DatabaseHelper;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.core.MainApp;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.databinding.ActivityF1Section08Binding;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.utils.DateUtils;
+import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ClearClass;
 import edu.aku.hassannaqvi.uen_po_hhs_fl.validator.ValidatorClass;
 
 public class F1Section08Activity extends AppCompatActivity {
 
     ActivityF1Section08Binding bi;
+
+    public static long DOBinMonths;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +35,24 @@ public class F1Section08Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section08);
         bi.setCallback(this);
         this.setTitle("Form 01 (Case Reporting Form)");
+
+
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+        try {
+            cal.setTime(sdf.parse(F1Section01Activity.DOB));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        DOBinMonths = DateUtils.ageInMonthsByDOB(cal);
+
+        if (DOBinMonths >= 6) {
+            bi.pocfh03cv.setVisibility(View.VISIBLE);
+        } else {
+            ClearClass.ClearAllFields(bi.pocfh03cv, null);
+            bi.pocfh03cv.setVisibility(View.GONE);
+        }
+
     }
 
     public void BtnContinue() {

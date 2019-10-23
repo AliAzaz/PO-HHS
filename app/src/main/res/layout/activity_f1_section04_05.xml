@@ -162,7 +162,7 @@
                         <EditText
                             android:id="@+id/pocfd0396x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfd0396"
                             android:text='@{pocfd0396.checked? pocfd0396x.getText.toString : "" }'
                             android:visibility='@{pocfd0396.checked? View.VISIBLE : View.GONE}' />
@@ -280,7 +280,7 @@
                         <EditText
                             android:id="@+id/pocfe0496x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfe0496"
                             android:text='@{pocfe0496.checked? pocfe0496x.getText.toString : "" }'
                             android:visibility='@{pocfe0496.checked? View.VISIBLE : View.GONE}' />
@@ -424,7 +424,7 @@
                         <EditText
                             android:id="@+id/pocfe0796x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfe0796"
                             android:text='@{pocfe0796.checked? pocfe0796x.getText.toString : "" }'
                             android:visibility='@{pocfe0796.checked? View.VISIBLE : View.GONE}' />

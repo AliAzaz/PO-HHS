@@ -107,7 +107,7 @@
                 android:id="@+id/istatus888x"
                 style="@style/EditTextAlphaNumeric"
                 android:layout_marginBottom="1dp"
-                android:hint="@string/other"
+                android:hint="@string/specify"
                 android:inputType="textCapWords"
                 android:visibility="gone" />
 

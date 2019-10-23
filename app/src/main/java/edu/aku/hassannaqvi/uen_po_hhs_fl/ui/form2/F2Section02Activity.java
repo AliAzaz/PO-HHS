@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -35,8 +37,45 @@ public class F2Section02Activity extends AppCompatActivity {
 
     }
 
+
     private void settingListeners() {
 
+        //pofpb0597
+        bi.pofpb0597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.pofpb05a.setText("");
+                    bi.pofpb05b.setText("");
+                    ClearClass.ClearAllFields(bi.pofpb06cv, null);
+                    bi.pofpb05a.setVisibility(View.GONE);
+                    bi.pofpb05b.setVisibility(View.GONE);
+                    bi.pofpb06cv.setVisibility(View.GONE);
+                } else {
+                    bi.pofpb05a.setVisibility(View.VISIBLE);
+                    bi.pofpb05b.setVisibility(View.VISIBLE);
+                    bi.pofpb06cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        //pofpb06
+        bi.pofpb06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pofpb0697.getId()) {
+                    ClearClass.ClearAllFields(bi.pofpb05cv, null);
+                    bi.pofpb05cv.setVisibility(View.GONE);
+                } else {
+                    bi.pofpb05cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        //pofpb0797
         bi.pofpb0797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -51,6 +90,7 @@ public class F2Section02Activity extends AppCompatActivity {
         });
 
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -91,31 +131,30 @@ public class F2Section02Activity extends AppCompatActivity {
                 : "0");
 
         f02.put("pofpb02a", bi.pofpb02a.getText().toString());
-        f02.put("pofpb02b", bi.pofpb02a.getText().toString());
-
-        f02.put("pofpb021", bi.pofpb021a.isChecked() ? "1"
-                : bi.pofpb021b.isChecked() ? "2"
-                : "0");
+        f02.put("pofpb02b", bi.pofpb02b.getText().toString());
 
         f02.put("pofpb03", bi.pofpb03a.isChecked() ? "1"
                 : bi.pofpb03b.isChecked() ? "2"
                 : "0");
 
-        f02.put("pofpb04a", bi.pofpb04a.getText().toString());
-        f02.put("pofpb04b", bi.pofpb04b.getText().toString());
-
-        f02.put("pofpb05", bi.pofpb05a.isChecked() ? "1"
-                : bi.pofpb05b.isChecked() ? "2"
+        f02.put("pofpb04", bi.pofpb04a.isChecked() ? "1"
+                : bi.pofpb04b.isChecked() ? "2"
                 : "0");
+
+        f02.put("pofpb05a", bi.pofpb05a.getText().toString());
+        f02.put("pofpb05b", bi.pofpb05b.getText().toString());
+        f02.put("pofpb0597", bi.pofpb0597.isChecked() ? "97" : "0");
 
         f02.put("pofpb06", bi.pofpb06a.isChecked() ? "1"
                 : bi.pofpb06b.isChecked() ? "2"
+                : bi.pofpb0697.isChecked() ? "97"
                 : "0");
 
         f02.put("pofpb07a", bi.pofpb07a.isChecked() ? "1" : "0");
         f02.put("pofpb07b", bi.pofpb07b.isChecked() ? "2" : "0");
         f02.put("pofpb07c", bi.pofpb07c.isChecked() ? "3" : "0");
         f02.put("pofpb07d", bi.pofpb07d.isChecked() ? "4" : "0");
+        f02.put("pofpb07e", bi.pofpb07e.isChecked() ? "5" : "0");
         f02.put("pofpb0797", bi.pofpb0797.isChecked() ? "97" : "0");
 
         f02.put("pofpb08", bi.pofpb08a.isChecked() ? "1"
@@ -131,12 +170,12 @@ public class F2Section02Activity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02))
             return false;
 
-        if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) >= 92 && bi.pofpb05a.isChecked()) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
-        }
-
-        if (Integer.parseInt(bi.pofpb04b.getText().toString().trim()) < 92 && bi.pofpb05b.isChecked()) {
-            return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb04b, "please check below question!!");
+        if (bi.pofpb02b.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) >= 92 && bi.pofpb03a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) < 92 && bi.pofpb03b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
+            }
         }
 
         return true;

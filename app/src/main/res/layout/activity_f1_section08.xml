@@ -28,6 +28,8 @@
                 style="@style/textview_fm_lst_h"
                 android:text="@string/pocfsec8" />
 
+
+            <!--pocfh01-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
@@ -40,20 +42,31 @@
                         android:text="@string/pocfh01" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                         android:id="@+id/pocfh01"
+                         style="@style/EditText_number"
+                         android:hint="##.##"
+                         android:layoutDirection="ltr"
+                         app:mask="##.##"
+                         app:maxValue="40.00"
+                         app:minValue="00.90"
+                         app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                        app:type="range" />
+
+                    <!--<com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh01"
                         style="@style/EditText_number"
                         android:hint="##.##"
                         android:layoutDirection="ltr"
                         app:mask="##.##"
-                        app:maxValue="40.00"
-                        app:minValue="00.90"
-                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
-                        app:type="range" />
+                        app:maxValue="40"
+                        app:minValue="0.9"
+                        app:type="range" />-->
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
+            <!--pocfh02-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout
@@ -68,20 +81,33 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh02"
                         style="@style/EditText_number"
-                        android:hint="###.##"
+                        android:hint="###.#"
                         android:layoutDirection="ltr"
-                        app:mask="###.##"
-                        app:maxValue="140"
-                        app:minValue="15.0"
-                        app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                        app:mask="###.#"
+                        app:maxValue="140.0"
+                        app:minValue="015.0"
+                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="range" />
+
+                    <!--<com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/pocfh02"
+                        style="@style/EditText_number"
+                        android:hint="###.#"
+                        android:layoutDirection="ltr"
+                        app:mask="###.#"
+                        app:maxValue="140"
+                        app:minValue="15"
+                        app:type="range" />-->
 
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <!--pocfh03-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/pocfh03cv"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -95,14 +121,23 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh03"
                         style="@style/EditText_number"
-                        android:hint="##.##"
+                        android:hint="##.#"
                         android:layoutDirection="ltr"
-                        app:mask="##.##"
+                        app:mask="##.#"
                         app:maxValue="25.0"
-                        app:minValue="5.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                        app:minValue="05.0"
+                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         app:type="range" />
 
+                    <!-- <com.edittextpicker.aliazaz.EditTextPicker
+                         android:id="@+id/pocfh03"
+                         style="@style/EditText_number"
+                         android:hint="##.#"
+                         android:layoutDirection="ltr"
+                         app:mask="##.#"
+                         app:maxValue="25"
+                         app:minValue="5"
+                         app:type="range" />-->
 
                 </LinearLayout>
 

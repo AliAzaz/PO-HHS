@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
@@ -13,7 +12,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -65,11 +63,11 @@ public abstract class ValidatorClass {
         if (!flag) {
             FancyToast.makeText(context, messageConv + ": " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": " + messageConv);
-            return false;
+            return flag;
         } else {
             txt.setError(null);
             txt.clearFocus();
-            return true;
+            return flag;
         }
 
     }
@@ -199,6 +197,11 @@ public abstract class ValidatorClass {
             boolean rdbFlag = true;
             for (int j = 0; j < rdGrp.getChildCount(); j++) {
                 View innerV = rdGrp.getChildAt(j);
+
+                if (innerV instanceof RadioButton) {
+                    if (!((RadioButton) innerV).isChecked()) continue;
+                }
+
                 if (innerV instanceof EditText) {
                     if (getIDComponent(rdGrp.findViewById(rdGrp.getCheckedRadioButtonId())).equals(innerV.getTag()))
                         if (innerV instanceof EditTextPicker)
@@ -206,6 +209,7 @@ public abstract class ValidatorClass {
                         else
                             rdbFlag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
                 }
+                if (!rdbFlag) break;
             }
 
             if (rdbFlag) {
@@ -260,7 +264,7 @@ public abstract class ValidatorClass {
                 if (cb.isChecked()) {
                     flag = true;
 
-                    for (int j = 0; j < container.getChildCount(); j++) {
+                    for (int j = 1; j < container.getChildCount(); j++) {
                         View innerV = container.getChildAt(j);
                         if (innerV instanceof EditText) {
                             if (getIDComponent(cb).equals(innerV.getTag())) {
@@ -270,8 +274,9 @@ public abstract class ValidatorClass {
                                     flag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
                             }
                         }
+                        if (!flag) break;
                     }
-//                    break;
+                    if (!flag) break;
                 }
             }
         }
@@ -309,19 +314,6 @@ public abstract class ValidatorClass {
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
             return false;
         }
-    }
-
-    public static void setScrollViewFocus(ScrollView scrollView) {
-        scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
-        scrollView.setFocusable(true);
-        scrollView.setFocusableInTouchMode(true);
-        scrollView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.requestFocusFromTouch();
-                return false;
-            }
-        });
     }
 
     public static boolean EmptyCheckingContainer(Context context, ViewGroup lv) {
@@ -404,34 +396,8 @@ public abstract class ValidatorClass {
                         return false;
                     }
                 }
-
-            }
-        }
-        return true;
-    }
-
-    public static boolean EmptyCheckingContainerForButtons(Context context, LinearLayout lv) {
-
-
-        for (int i = 0; i < lv.getChildCount(); i++) {
-            View view = lv.getChildAt(i);
-
-          /*  if (view.getVisibility() == View.GONE || !view.isEnabled())
-                continue;*/
-            if (view.getVisibility() == View.GONE)
-                continue;
-
-            if (view instanceof CardView) {
-                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
-                    View view1 = ((CardView) view).getChildAt(j);
-                    if (view1 instanceof LinearLayout) {
-                        if (!EmptyCheckingContainerForButtons(context, (LinearLayout) view1)) {
-                            return false;
-                        }
-                    }
-                }
-            } else if (view instanceof EditText) {
-                if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+            } else if (view instanceof ViewGroup) {
+                if (!EmptyCheckingContainer(context, (ViewGroup) view)) {
                     return false;
                 }
             }
@@ -439,7 +405,6 @@ public abstract class ValidatorClass {
         }
         return true;
     }
-
 
     public static String getIDComponent(View view) {
         String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
@@ -465,6 +430,4 @@ public abstract class ValidatorClass {
         }
         return "";
     }
-
-
 }

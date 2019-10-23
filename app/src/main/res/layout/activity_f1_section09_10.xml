@@ -154,13 +154,14 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/pocfj01bx"
                             style="@style/EditText_number"
-                            android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
-                            android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
-                            android:tag="pocfj01b"
                             android:hint="@string/pocfj01bt"
                             app:mask="##.#"
                             app:maxValue="43.0"
                             app:minValue="33.0"
+                            app:defaultValue="0.0"
+                            android:tag="pocfj01b"
+                            android:text='@{pocfj01b.checked ? pocfj01bx.getText.toString : "" }'
+                            android:visibility='@{pocfj01b.checked ? View.VISIBLE : View.GONE}'
                             app:type="range" />
 
                         <CheckBox
@@ -242,6 +243,12 @@
                             android:text="@string/pocfj01o" />
 
                         <CheckBox
+                            android:id="@+id/pocfj01p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pocfj01p" />
+
+                        <CheckBox
                             android:id="@+id/pocfj0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -250,7 +257,7 @@
                         <EditText
                             android:id="@+id/pocfj0196x"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfj0196"
                             android:text='@{pocfj0196.checked? pocfj0196x.getText.toString : "" }'
                             android:visibility='@{pocfj0196.checked? View.VISIBLE : View.GONE}' />
@@ -258,7 +265,7 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/pocfj0198"
+                        android:id="@+id/pocfj0197"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:tag="-1"
@@ -294,7 +301,7 @@
                         <EditText
                             android:id="@+id/pocfj02ax"
                             style="@style/EditTextAlphaNumeric"
-                            android:hint="@string/other"
+                            android:hint="@string/specify"
                             android:tag="pocfj02a"
                             android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
                             android:visibility='@{pocfj02a.checked? View.VISIBLE : View.GONE}' />

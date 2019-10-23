@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -81,29 +82,36 @@ public class F1Section06Activity extends AppCompatActivity {
 
         sF.put("pocff01", bi.pocff01a.isChecked() ? "1"
                 : bi.pocff01b.isChecked() ? "2"
-                : bi.pocff01d.isChecked() ? "3"
-                : bi.pocff01e.isChecked() ? "4"
-                : bi.pocff0196.isChecked() ? "96" : "0");
+                : bi.pocff01c.isChecked() ? "3"
+                : bi.pocff01d.isChecked() ? "4"
+                : bi.pocff01e.isChecked() ? "5"
+                : bi.pocff0196.isChecked() ? "96"
+                : bi.pocff0197.isChecked() ? "97"
+                : "0");
+        sF.put("pocff0196x", bi.pocff0196x.getText().toString());
 
 
         sF.put("pocff02", bi.pocff02a.isChecked() ? "1"
                 : bi.pocff02b.isChecked() ? "2"
-                : bi.pocff02d.isChecked() ? "3"
-                : bi.pocff02e.isChecked() ? "4"
-                : bi.pocff02f.isChecked() ? "5"
-                : bi.pocff02g.isChecked() ? "6"
-                : bi.pocff02h.isChecked() ? "7"
-                : bi.pocff02i.isChecked() ? "8"
-                : bi.pocff02j.isChecked() ? "9"
-                : bi.pocff02k.isChecked() ? "10"
-                : bi.pocff02l.isChecked() ? "11"
+                : bi.pocff02c.isChecked() ? "3"
+                : bi.pocff02d.isChecked() ? "4"
+                : bi.pocff02e.isChecked() ? "5"
+                : bi.pocff02f.isChecked() ? "6"
+                : bi.pocff02g.isChecked() ? "7"
+                : bi.pocff02h.isChecked() ? "8"
+                : bi.pocff02i.isChecked() ? "9"
+                : bi.pocff02j.isChecked() ? "10"
+                : bi.pocff02k.isChecked() ? "11"
+                : bi.pocff0296.isChecked() ? "96"
                 : "0");
         sF.put("pocff02gx", bi.pocff02gx.getText().toString());
         sF.put("pocff02kx", bi.pocff02kx.getText().toString());
+        sF.put("pocff0296x", bi.pocff0296x.getText().toString());
 
         sF.put("pocff03", bi.pocff03a.isChecked() ? "1"
                 : bi.pocff03b.isChecked() ? "2"
                 : "0");
+
         sF.put("pocff04", bi.pocff04a.isChecked() ? "1"
                 : bi.pocff04b.isChecked() ? "2"
                 : bi.pocff04c.isChecked() ? "3"
@@ -112,8 +120,9 @@ public class F1Section06Activity extends AppCompatActivity {
 
         sF.put("pocff05", bi.pocff05a.isChecked() ? "1"
                 : bi.pocff05b.isChecked() ? "2"
-                : bi.pocff05d.isChecked() ? "3"
-                : bi.pocff05e.isChecked() ? "4"
+                : bi.pocff05c.isChecked() ? "3"
+                : bi.pocff05d.isChecked() ? "4"
+                : bi.pocff05e.isChecked() ? "5"
                 : bi.pocff0598.isChecked() ? "98"
                 : "0");
 
@@ -133,13 +142,17 @@ public class F1Section06Activity extends AppCompatActivity {
                 : bi.pocff08c.isChecked() ? "3"
                 : bi.pocff08d.isChecked() ? "4"
                 : "0");
-        sF.put("pocff09", bi.pocff09.getText().toString());
+
+        sF.put("pocff09D", bi.pocff09D.getText().toString());
+        sF.put("pocff09M", bi.pocff09M.getText().toString());
+        sF.put("pocff09C", bi.pocff09C.isChecked() ? "1" : "0");
 
         sF.put("pocff10a", bi.pocff10a.isChecked() ? "1" : "0");
         sF.put("pocff10b", bi.pocff10b.isChecked() ? "2" : "0");
         sF.put("pocff10c", bi.pocff10c.isChecked() ? "3" : "0");
         sF.put("pocff10d", bi.pocff10d.isChecked() ? "4" : "0");
         sF.put("pocff10e", bi.pocff10e.isChecked() ? "5" : "0");
+        sF.put("pocff10f", bi.pocff10f.isChecked() ? "6" : "0");
 
         sF.put("pocff11", bi.pocff11.getText().toString());
 
@@ -149,7 +162,18 @@ public class F1Section06Activity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.ll06);
+
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.ll06))
+            return false;
+
+        if (bi.pocff09M.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pocff09M.getText().toString().trim()) + Integer.parseInt(bi.pocff09D.getText().toString().trim()) == 0) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocff09M, "Days & Month both can't be Zero!!");
+            }
+            //return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+        }
+        return true;
+
     }
 
     public void BtnEnd() {

@@ -152,7 +152,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleChild.COLUMN_CASEID + " TEXT,"
             + singleChild.COLUMN_CHILD_NAME + " TEXT, "
             + singleChild.COLUMN_F_NAME + " TEXT,"
-            + singleChild.COLUMN_REP_DATE + " TEXT, "
+            + singleChild.COLUMN_REF_DATE + " TEXT, "
             + singleChild.COLUMN_LUID + " TEXT );";
     private final String TAG = "DatabaseHelper";
 
@@ -211,7 +211,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(singleChild.COLUMN_CASEID, cc.getCaseid());
                 values.put(singleChild.COLUMN_CHILD_NAME, cc.getChild_name());
                 values.put(singleChild.COLUMN_F_NAME, cc.getF_name());
-                values.put(singleChild.COLUMN_REP_DATE, cc.getRep_date());
+                values.put(singleChild.COLUMN_REF_DATE, cc.getRef_date());
                 values.put(singleChild.COLUMN_LUID, cc.getLuid());
 
                 db.insert(singleChild.TABLE_NAME, null, values);
@@ -569,7 +569,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleChild.COLUMN_CASEID,
                 singleChild.COLUMN_CHILD_NAME,
                 singleChild.COLUMN_F_NAME,
-                singleChild.COLUMN_REP_DATE,
+                singleChild.COLUMN_REF_DATE,
                 singleChild.COLUMN_LUID
         };
 
@@ -618,7 +618,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 singleChild.COLUMN_CASEID,
                 singleChild.COLUMN_CHILD_NAME,
                 singleChild.COLUMN_F_NAME,
-                singleChild.COLUMN_REP_DATE,
+                singleChild.COLUMN_REF_DATE,
                 singleChild.COLUMN_LUID,
         };
 
@@ -665,6 +665,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_CODE_LHW,
                 FormsTable.COLUMN_REF_ID,
+                FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_SA,
                 FormsTable.COLUMN_SB,
         };
