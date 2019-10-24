@@ -36,6 +36,8 @@ public class F1Section04_05Activity extends AppCompatActivity {
 
     void EventsCall() {
 
+        bi.pocfe03.setMaxvalue(Integer.valueOf(bi.pocfe01.getText().toString()));
+
         bi.pocfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

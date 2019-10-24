@@ -170,11 +170,11 @@ public class F2Section02Activity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02))
             return false;
 
-        if (bi.pofpb02b.getVisibility() == View.VISIBLE) {
-            if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) >= 92 && bi.pofpb03a.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
-            } else if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) < 92 && bi.pofpb03b.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
+        if (bi.pofpb05b.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pofpb05b.getText().toString().trim()) >= 92 && bi.pofpb06a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb05b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pofpb05b.getText().toString().trim()) < 92 && bi.pofpb06b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb05b, "please check below question!!");
             }
         }
 
