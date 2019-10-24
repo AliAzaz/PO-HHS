@@ -65,8 +65,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
         talukaNames.add("....");
         talukaCodes.add("....");
-        talukaNames.add("TESTTeshsil");
-        talukaCodes.add("1010");
 
         Collection<TalukasContract> dc = db.getAllTalukas();
 
@@ -88,8 +86,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 ucCode.add("....");
                 ucName.add("....");
-                ucCode.add("101010");
-                ucName.add("TESTUC");
 
                 Collection<UCsContract> pc = db.getAllUCsbyTaluka(talukaCodes.get(position));
                 for (UCsContract p : pc) {
@@ -134,8 +130,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 lhwCodes.add("....");
                 lhwNames.add("....");
-                lhwCodes.add("1010101010");
-                lhwNames.add("TestLHW");
 
                 Collection<LHWContract> lhw =
                         db.getAllLHWsByTaluka(talukaCodes.get(bi.pofi001.getSelectedItemPosition()),
