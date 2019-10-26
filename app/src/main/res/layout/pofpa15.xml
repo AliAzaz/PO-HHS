@@ -84,7 +84,7 @@
 
                     <EditText
                         android:id="@+id/pofpa151c"
-                        style="@style/EditTextAlphaNumeric"
+                        style="@style/EditTextAlphaNumericc"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
