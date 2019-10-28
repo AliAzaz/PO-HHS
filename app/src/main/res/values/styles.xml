@@ -454,8 +454,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:digits">abcdefghijklmnopqrstuvwxyz .
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+        <item name="android:digits">
+            1Aa2Bb3Cc4Dd5Ee6Ff7Gg8Hh9Ii0JjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz.
         </item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
