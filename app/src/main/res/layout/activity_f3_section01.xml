@@ -405,7 +405,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/pofi05" />
+                            android:text="@string/pofi051" />
 
                         <RadioGroup
                             android:id="@+id/pofi051"
