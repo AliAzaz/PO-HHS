@@ -793,6 +793,16 @@
     <string name="pofpa12ax"> اسپتال جو نالو لکو </string>
     <string name="pofpa12b"> نه </string>
 
+    <string name="pofpa121"> جيڪڏهن نه ته ڇو نه ؟ </string>
+    <string name="pofpa121a"> ايڏو وڏو مسئلو نه هو </string>
+    <string name="pofpa121b"> ڊاڪٽر داخلا جو نه چيو </string>
+    <string name="pofpa121c"> ڊاڪٽر او پي ڊي جو علاج ڏنو </string>
+    <string name="pofpa121d"> خاندان جي طرف کان تعاون نه هجڻ ڪري </string>
+    <string name="pofpa121e"> پئسا نه هئا </string>
+    <string name="pofpa121f"> غير معياري سهولتون </string>
+    <string name="pofpa121g"> صحت مرڪز پري آهي </string>
+    <string name="pofpa12196"> ٻيو ڪو وضاحت ڪريو </string>
+
     <string name="pofpa13"> ٻار اسپتال ۾ ڪيترا ڏينهن رهيو ؟ </string>
 
     <string name="pofpa14"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون ؟ </string>
@@ -821,12 +831,12 @@
 
     <string name="pofpa17"> ٻار گھر ۾ ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
 
-    <string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
+    <!--<string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
     <string name="pofpa18a"> بلڪل ٺيڪ </string>
     <string name="pofpa18b"> بهتر </string>
     <string name="pofpa18c"> ساڳي </string>
     <string name="pofpa18d"> خراب </string>
-    <string name="pofpa18e"> وفات ڪري ويو </string>
+    <string name="pofpa18e"> وفات ڪري ويو </string>-->
 
     <string name="pofpa19"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا ؟ </string>
     <string name="pofpa19a"> ها </string>
@@ -895,6 +905,13 @@
     <string name="pofpb083"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
     <string name="pofpb084"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
     <string name="pofpb085"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+
+    <string name="pofpb09"> ٻار جي موجوده حالت ؟ </string>
+    <string name="pofpb09a"> بلڪل ٺيڪ </string>
+    <string name="pofpb09b"> بهتر </string>
+    <string name="pofpb09c"> ساڳي </string>
+    <string name="pofpb09d"> خراب </string>
+    <string name="pofpb09e"> وفات ڪري ويو </string>
 
 
     <!-- Hospital Registeration Form 4-->

@@ -155,11 +155,14 @@ public class F2Section01Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.pofpa12b.getId()) {
+                    bi.pofpa121cv.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.pofpa13cv, null);
                     ClearClass.ClearAllFields(bi.pofpa14cv, null);
                     bi.pofpa13cv.setVisibility(View.GONE);
                     bi.pofpa14cv.setVisibility(View.GONE);
                 } else {
+                    ClearClass.ClearAllFields(bi.pofpa121cv, null);
+                    bi.pofpa121cv.setVisibility(View.GONE);
                     bi.pofpa13cv.setVisibility(View.VISIBLE);
                     bi.pofpa14cv.setVisibility(View.VISIBLE);
                 }
@@ -616,6 +619,16 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa12b.isChecked() ? "2"
                 : "0");
         f02.put("pofpa12ax", bi.pofpa12ax.getText().toString());
+
+        f02.put("pofpa121a", bi.pofpa121a.isChecked() ? "1" : "0");
+        f02.put("pofpa121b", bi.pofpa121b.isChecked() ? "2" : "0");
+        f02.put("pofpa121c", bi.pofpa121c.isChecked() ? "3" : "0");
+        f02.put("pofpa121d", bi.pofpa121d.isChecked() ? "4" : "0");
+        f02.put("pofpa121e", bi.pofpa121e.isChecked() ? "5" : "0");
+        f02.put("pofpa121f", bi.pofpa121f.isChecked() ? "6" : "0");
+        f02.put("pofpa121g", bi.pofpa121g.isChecked() ? "7" : "0");
+        f02.put("pofpa12196", bi.pofpa12196.isChecked() ? "96" : "0");
+        f02.put("pofpa12196x", bi.pofpa12196x.getText().toString());
 
         f02.put("pofpa13", bi.pofpa13.getText().toString());
 
