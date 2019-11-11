@@ -195,8 +195,6 @@ public class F3Section01Activity extends AppCompatActivity {
                 bi.pofi005.setEnabled(false);
 
 
-
-
             }
         });
 
@@ -349,6 +347,10 @@ public class F3Section01Activity extends AppCompatActivity {
                 : bi.pofi10b.isChecked() ? "2"
                 : "0");
 
+        form03_01.put("pofi101", bi.pofi101a.isChecked() ? "1"
+                : bi.pofi101b.isChecked() ? "2"
+                : "0");
+
         form03_01.put("pofi11", bi.pofi11a.isChecked() ? "1"
                 : bi.pofi11b.isChecked() ? "2"
                 : "0");
@@ -456,6 +458,30 @@ public class F3Section01Activity extends AppCompatActivity {
                 }
             }
         });*/
+
+        bi.pofi101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+
+                ClearClass.ClearAllFields(bi.pofi11cv, null);
+                ClearClass.ClearAllFields(bi.pofi12cv, null);
+                ClearClass.ClearAllFields(bi.pofi13cv, null);
+                ClearClass.ClearAllFields(bi.pofi14cv, null);
+                bi.pofi11cv.setVisibility(View.GONE);
+                bi.pofi12cv.setVisibility(View.GONE);
+                bi.pofi13cv.setVisibility(View.GONE);
+                bi.pofi14cv.setVisibility(View.GONE);
+
+                if (checkedId == bi.pofi101a.getId()) {
+                    bi.pofi11cv.setVisibility(View.VISIBLE);
+                    bi.pofi12cv.setVisibility(View.VISIBLE);
+                    bi.pofi13cv.setVisibility(View.VISIBLE);
+                } else if (checkedId == bi.pofi101b.getId()) {
+                    bi.pofi14cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
 
         bi.pofi11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
