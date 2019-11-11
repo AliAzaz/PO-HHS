@@ -518,12 +518,12 @@ public class F2Section01Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                if (!bi.pofpa07b.isChecked() || !bi.pofpa08d.isChecked()) {
-                    finish();
-                    startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
-                } else {
+                if (bi.pofpa07b.isChecked() || bi.pofpa08d.isChecked()) {
                     finish();
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    finish();
+                    startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
                 }
 
             } else {
@@ -607,6 +607,7 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa11e.isChecked() ? "5"
                 : bi.pofpa11f.isChecked() ? "6"
                 : bi.pofpa11g.isChecked() ? "7"
+                : bi.pofpa11h.isChecked() ? "8"
                 : bi.pofpa1196.isChecked() ? "96"
                 : "0");
         f02.put("pofpa1196x", bi.pofpa1196x.getText().toString());

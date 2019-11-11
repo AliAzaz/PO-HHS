@@ -554,6 +554,13 @@
                                     android:text="@string/pofpa11g" />
 
                                 <RadioButton
+                                    android:id="@+id/pofpa11h"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:text="@string/pofpa11h" />
+
+                                <RadioButton
                                     android:id="@+id/pofpa1196"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
