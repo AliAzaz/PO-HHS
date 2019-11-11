@@ -1849,7 +1849,7 @@
                                     android:visibility='@{pocfg0397.checked ? View.GONE : View.VISIBLE}'
                                     app:mask="##"
                                     app:maxValue="20"
-                                    app:minValue="0"
+                                    app:minValue="1"
                                     app:type="range" />
 
                             </LinearLayout>
