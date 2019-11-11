@@ -563,6 +563,10 @@
 
     <string name="pocfg15">۔C315- کیا بچہ(۔Name) نےکبھی پولیو سے بچاؤ کے قطر ے پیے ہیں </string>
 
+    <string name="pocfg03"> روٽين جي ٽڪن کان سواءِ توهان جي ٻار ڪيترا دفعا پوليو جا ڦڙا پيتا آهن </string>
+    <string name="pocfg03x"> ڪيترا دفعا </string>
+    <string name="pocfg0397"> ڪڏهن به نه </string>
+
     <!--Section 08-->
     <string name="pocfsec8"> سيڪشن08. اينٿروپوميٽري </string>
     <string name="pocfh01"> ٻار جو وزن (ڪلوگرام) </string>
