@@ -518,7 +518,7 @@ public class F2Section01Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                if (DAY.equals("7") && !bi.pofpa07b.isChecked()) {
+                if (!bi.pofpa07b.isChecked() || !bi.pofpa08d.isChecked()) {
                     finish();
                     startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
                 } else {
