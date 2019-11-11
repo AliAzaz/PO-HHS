@@ -695,6 +695,11 @@
     <string name="pofi05c"> ٻار ٻي دوا پي رهيو آهي </string>
     <string name="pofi05d"> اسان انڪار ڪيو </string>
 
+    <string name="pofi051"> ڇا توهان جو ٻار ايل ايڇ ڊبليو جي ريفرل کان اڳ ۾ زير علاج آهي ؟ </string>
+    <string name="pofi051a"> ها </string>
+    <string name="pofi051ax"> اسپتال/ڪلنڪ/ڊاڪٽر جو نالو </string>
+    <string name="pofi051b"> نه </string>
+
     <string name="pofi06"> ڇا توهان ايل ايڇ ڊبليو جي رفرل کان اڳ ۾ ڪا دوا ورتي؟ </string>
     <string name="pofi06ax"> جيڪڏهن ها، ته دوا جا نالا </string>
     <string name="pofi06ay"> ڪيترا ڏينهن </string>
