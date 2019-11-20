@@ -642,7 +642,7 @@
 
                             <TextView
                                 style="@style/i_textview"
-                                android:text="@string/pofpa12" />
+                                android:text="@string/pofpa121" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
