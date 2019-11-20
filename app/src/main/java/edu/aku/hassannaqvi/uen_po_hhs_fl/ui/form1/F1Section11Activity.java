@@ -224,10 +224,10 @@ public class F1Section11Activity extends AppCompatActivity {
             return false;
 
         if (bi.pocfk06b.getVisibility() == View.VISIBLE) {
-            if (Integer.parseInt(bi.pocfk03b.getText().toString().trim()) >= 92 && bi.pocfk04a.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk03b, "please check below question!!");
-            } else if (Integer.parseInt(bi.pocfk03b.getText().toString().trim()) < 92 && bi.pocfk04b.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk03b, "please check below question!!");
+            if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) >= 92 && bi.pocfk07a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pocfk06b.getText().toString().trim()) < 92 && bi.pocfk07b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
             }
             //return ValidatorClass.EmptyCustomeTextBox(this, bi.pocfk06b, "please check below question!!");
         }

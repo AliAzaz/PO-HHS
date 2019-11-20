@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
@@ -35,6 +37,24 @@ public class F1Section04_05Activity extends AppCompatActivity {
 
 
     void EventsCall() {
+
+        bi.pocfe01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (bi.pocfe01.getText().toString().isEmpty()) return;
+                bi.pocfe03.setMaxvalue(Integer.valueOf(bi.pocfe01.getText().toString()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
         bi.pocfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

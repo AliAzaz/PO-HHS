@@ -167,20 +167,9 @@
                         android:text="@string/pocfk03" />
 
                     <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk03h1" />
+                        style="@style/i_textview"
+                        android:text="@string/pofpb02b" />
 
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk03h2" />
-
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk03h3" />
-
-                    <TextView
-                        style="@style/i_textviewHint"
-                        android:text="@string/pocfk03h4" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfk03a"
@@ -220,6 +209,42 @@
                         android:id="@+id/pocfk04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk03h1"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk03h2"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk03h3"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/pocfk03h4"
+                            android:textColor="@color/gray"
+                            android:textSize="16dp" />
 
                         <RadioButton
                             android:id="@+id/pocfk04a"

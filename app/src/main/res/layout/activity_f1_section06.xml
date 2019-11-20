@@ -173,8 +173,8 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pocff02lx"
                             android:tag="pocff02g"
-                            android:text='@{pocff02g.checked? pocff02gx.getText.toString : "" }'
-                            android:visibility='@{pocff02g.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{pocff02c.checked || pocff02d.checked || pocff02e.checked || pocff02f.checked || pocff02g.checked ? pocff02gx.getText.toString : "" }'
+                            android:visibility='@{pocff02c.checked || pocff02d.checked || pocff02e.checked || pocff02f.checked || pocff02g.checked ? View.VISIBLE : View.GONE}' />
 
                         <TextView
                             style="@style/i_textview"
@@ -207,8 +207,8 @@
                             style="@style/EditTextAlphaNumeric"
                             android:hint="@string/pocff02lx"
                             android:tag="pocff02k"
-                            android:text='@{pocff02k.checked? pocff02kx.getText.toString : "" }'
-                            android:visibility='@{pocff02k.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{pocff02h.checked || pocff02i.checked || pocff02j.checked || pocff02k.checked ? pocff02kx.getText.toString : "" }'
+                            android:visibility='@{pocff02h.checked || pocff02i.checked || pocff02j.checked || pocff02k.checked ? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
                             android:id="@+id/pocff0296"

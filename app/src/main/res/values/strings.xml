@@ -563,6 +563,10 @@
 
     <string name="pocfg15">۔C315- کیا بچہ(۔Name) نےکبھی پولیو سے بچاؤ کے قطر ے پیے ہیں </string>
 
+    <string name="pocfg03"> روٽين جي ٽڪن کان سواءِ توهان جي ٻار ڪيترا دفعا پوليو جا ڦڙا پيتا آهن </string>
+    <string name="pocfg03x"> ڪيترا دفعا </string>
+    <string name="pocfg0397"> ڪڏهن به نه </string>
+
     <!--Section 08-->
     <string name="pocfsec8"> سيڪشن08. اينٿروپوميٽري </string>
     <string name="pocfh01"> ٻار جو وزن (ڪلوگرام) </string>
@@ -691,6 +695,11 @@
     <string name="pofi05c"> ٻار ٻي دوا پي رهيو آهي </string>
     <string name="pofi05d"> اسان انڪار ڪيو </string>
 
+    <string name="pofi051"> ڇا توهان جو ٻار ايل ايڇ ڊبليو جي ريفرل کان اڳ ۾ زير علاج آهي ؟ </string>
+    <string name="pofi051a"> ها </string>
+    <string name="pofi051ax"> اسپتال/ڪلنڪ/ڊاڪٽر جو نالو </string>
+    <string name="pofi051b"> نه </string>
+
     <string name="pofi06"> ڇا توهان ايل ايڇ ڊبليو جي رفرل کان اڳ ۾ ڪا دوا ورتي؟ </string>
     <string name="pofi06ax"> جيڪڏهن ها، ته دوا جا نالا </string>
     <string name="pofi06ay"> ڪيترا ڏينهن </string>
@@ -706,6 +715,8 @@
     <string name="pofi09b"> معمولي </string>
 
     <string name="pofi10"> ڇا توهان کي امڪاني طبي نتيجن جي باري ۾ آگاھ ڪيو ويو هو؟ </string>
+
+    <string name="pofi101"> ڇا توهان ريفرل قبول ڪيو ؟ </string>
 
     <string name="pofi11"> ڇا توهان ٻار کي رفرل اسپتال ڏانهن وٺي ويا؟ </string>
     <string name="pofi11a"> ها </string>
@@ -782,11 +793,22 @@
     <string name="pofpa11e"> گھر جي سربراهه/ مڙس / سس / جي اجازت نه هُئ </string>
     <string name="pofpa11f"> ريفرل اسپتال پري آهي </string>
     <string name="pofpa11g"> غير معياري صحت جون  سهولتون </string>
+    <string name="pofpa11h"> ٻار اڳ ۾ ئي علاج هيٺ آهي </string>
 
     <string name="pofpa12"> ڇا  ٻار اسپتال ۾ داخل ٿيو ؟ </string>
     <string name="pofpa12a"> ها </string>
     <string name="pofpa12ax"> اسپتال جو نالو لکو </string>
     <string name="pofpa12b"> نه </string>
+
+    <string name="pofpa121"> جيڪڏهن نه ته ڇو نه ؟ </string>
+    <string name="pofpa121a"> ايڏو وڏو مسئلو نه هو </string>
+    <string name="pofpa121b"> ڊاڪٽر داخلا جو نه چيو </string>
+    <string name="pofpa121c"> ڊاڪٽر او پي ڊي جو علاج ڏنو </string>
+    <string name="pofpa121d"> خاندان جي طرف کان تعاون نه هجڻ ڪري </string>
+    <string name="pofpa121e"> پئسا نه هئا </string>
+    <string name="pofpa121f"> غير معياري سهولتون </string>
+    <string name="pofpa121g"> صحت مرڪز پري آهي </string>
+    <string name="pofpa12196"> ٻيو ڪو وضاحت ڪريو </string>
 
     <string name="pofpa13"> ٻار اسپتال ۾ ڪيترا ڏينهن رهيو ؟ </string>
 
@@ -816,12 +838,12 @@
 
     <string name="pofpa17"> ٻار گھر ۾ ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
 
-    <string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
+    <!--<string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
     <string name="pofpa18a"> بلڪل ٺيڪ </string>
     <string name="pofpa18b"> بهتر </string>
     <string name="pofpa18c"> ساڳي </string>
     <string name="pofpa18d"> خراب </string>
-    <string name="pofpa18e"> وفات ڪري ويو </string>
+    <string name="pofpa18e"> وفات ڪري ويو </string>-->
 
     <string name="pofpa19"> انهن 7 ڏينهن جي دوران ڪي به منفي اثرات ٿيا ؟ </string>
     <string name="pofpa19a"> ها </string>
@@ -890,6 +912,13 @@
     <string name="pofpb083"> 2 کان 59 مهينن وارا ٻار: تڪڙا ساھ ۽ / يا پاسيريون لڳڻ </string>
     <string name="pofpb084"> 0 کان 6 ڏينهن وارا ٻار:تڪڙا ساھ صرف ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
     <string name="pofpb085"> 7 ڏينهن کان 59 مهينن وارا ٻار:نمونيه ۽ ڪي عام خطرناڪ نشانيون ۽ / يا رت ۾ آڪسيجن جي ڪمي </string>
+
+    <string name="pofpb09"> ٻار جي موجوده حالت ؟ </string>
+    <string name="pofpb09a"> بلڪل ٺيڪ </string>
+    <string name="pofpb09b"> بهتر </string>
+    <string name="pofpb09c"> ساڳي </string>
+    <string name="pofpb09d"> خراب </string>
+    <string name="pofpb09e"> وفات ڪري ويو </string>
 
 
     <!-- Hospital Registeration Form 4-->

@@ -65,8 +65,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
         talukaNames.add("....");
         talukaCodes.add("....");
-        talukaNames.add("TESTTeshsil");
-        talukaCodes.add("1010");
 
         Collection<TalukasContract> dc = db.getAllTalukas();
 
@@ -88,8 +86,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 ucCode.add("....");
                 ucName.add("....");
-                ucCode.add("101010");
-                ucName.add("TESTUC");
 
                 Collection<UCsContract> pc = db.getAllUCsbyTaluka(talukaCodes.get(position));
                 for (UCsContract p : pc) {
@@ -134,8 +130,6 @@ public class F3Section01Activity extends AppCompatActivity {
 
                 lhwCodes.add("....");
                 lhwNames.add("....");
-                lhwCodes.add("1010101010");
-                lhwNames.add("TestLHW");
 
                 Collection<LHWContract> lhw =
                         db.getAllLHWsByTaluka(talukaCodes.get(bi.pofi001.getSelectedItemPosition()),
@@ -199,8 +193,6 @@ public class F3Section01Activity extends AppCompatActivity {
                 bi.pofi005.setText(cContract.getF_name());
                 bi.pofi004.setEnabled(false);
                 bi.pofi005.setEnabled(false);
-
-
 
 
             }
@@ -324,6 +316,11 @@ public class F3Section01Activity extends AppCompatActivity {
         form03_01.put("pofi0596", bi.pofi0596.isChecked() ? "96" : "0");
         form03_01.put("pofi0596x", bi.pofi0596x.getText().toString());
 
+        form03_01.put("pofi051", bi.pofi051a.isChecked() ? "1"
+                : bi.pofi051b.isChecked() ? "2"
+                : "0");
+        form03_01.put("pofi051ax", bi.pofi051ax.getText().toString());
+
         form03_01.put("pofi06", bi.pofi06a.isChecked() ? "1"
                 : bi.pofi06b.isChecked() ? "2"
                 : "0");
@@ -348,6 +345,10 @@ public class F3Section01Activity extends AppCompatActivity {
 
         form03_01.put("pofi10", bi.pofi10a.isChecked() ? "1"
                 : bi.pofi10b.isChecked() ? "2"
+                : "0");
+
+        form03_01.put("pofi101", bi.pofi101a.isChecked() ? "1"
+                : bi.pofi101b.isChecked() ? "2"
                 : "0");
 
         form03_01.put("pofi11", bi.pofi11a.isChecked() ? "1"
@@ -457,6 +458,30 @@ public class F3Section01Activity extends AppCompatActivity {
                 }
             }
         });*/
+
+        bi.pofi101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+
+                ClearClass.ClearAllFields(bi.pofi11cv, null);
+                ClearClass.ClearAllFields(bi.pofi12cv, null);
+                ClearClass.ClearAllFields(bi.pofi13cv, null);
+                ClearClass.ClearAllFields(bi.pofi14cv, null);
+                bi.pofi11cv.setVisibility(View.GONE);
+                bi.pofi12cv.setVisibility(View.GONE);
+                bi.pofi13cv.setVisibility(View.GONE);
+                bi.pofi14cv.setVisibility(View.GONE);
+
+                if (checkedId == bi.pofi101a.getId()) {
+                    bi.pofi11cv.setVisibility(View.VISIBLE);
+                    bi.pofi12cv.setVisibility(View.VISIBLE);
+                    bi.pofi13cv.setVisibility(View.VISIBLE);
+                } else if (checkedId == bi.pofi101b.getId()) {
+                    bi.pofi14cv.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
 
         bi.pofi11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

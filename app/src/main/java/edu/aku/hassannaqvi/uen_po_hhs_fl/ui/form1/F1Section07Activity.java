@@ -460,6 +460,9 @@ public class F1Section07Activity extends AppCompatActivity {
         sG.put("pocfgm2dt98", bi.pocfgm2dt98.isChecked() ? "1" : "0");
         sG.put("pocfgm2dt", bi.pocfgm2dt.getText().toString());
 
+        sG.put("pocfg03", bi.pocfg03.getText().toString());
+        sG.put("pocfg0397", bi.pocfg0397.isChecked() ? "97" : "0");
+
         MainApp.fc.setsE(String.valueOf(sG));
 
     }

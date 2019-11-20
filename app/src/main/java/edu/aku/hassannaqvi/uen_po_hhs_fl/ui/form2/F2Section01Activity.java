@@ -155,11 +155,14 @@ public class F2Section01Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.pofpa12b.getId()) {
+                    bi.pofpa121cv.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.pofpa13cv, null);
                     ClearClass.ClearAllFields(bi.pofpa14cv, null);
                     bi.pofpa13cv.setVisibility(View.GONE);
                     bi.pofpa14cv.setVisibility(View.GONE);
                 } else {
+                    ClearClass.ClearAllFields(bi.pofpa121cv, null);
+                    bi.pofpa121cv.setVisibility(View.GONE);
                     bi.pofpa13cv.setVisibility(View.VISIBLE);
                     bi.pofpa14cv.setVisibility(View.VISIBLE);
                 }
@@ -242,8 +245,6 @@ public class F2Section01Activity extends AppCompatActivity {
 
         talukaNames.add("....");
         talukaCodes.add("....");
-        talukaNames.add("TESTTeshsil");
-        talukaCodes.add("1010");
 
         Collection<TalukasContract> dc = db.getAllTalukas();
 
@@ -265,8 +266,6 @@ public class F2Section01Activity extends AppCompatActivity {
 
                 ucCode.add("....");
                 ucName.add("....");
-                ucCode.add("101010");
-                ucName.add("TESTUC");
 
                 Collection<UCsContract> pc = db.getAllUCsbyTaluka(talukaCodes.get(position));
                 for (UCsContract p : pc) {
@@ -311,8 +310,6 @@ public class F2Section01Activity extends AppCompatActivity {
 
                 lhwCodes.add("....");
                 lhwNames.add("....");
-                lhwCodes.add("1010101010");
-                lhwNames.add("TestLHW");
 
                 Collection<LHWContract> lhw =
                         db.getAllLHWsByTaluka(talukaCodes.get(bi.pofpa02.getSelectedItemPosition()),
@@ -524,12 +521,12 @@ public class F2Section01Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                if (DAY.equals("7") && !bi.pofpa07b.isChecked()) {
-                    finish();
-                    startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
-                } else {
+                if (bi.pofpa07b.isChecked() || bi.pofpa08d.isChecked()) {
                     finish();
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                } else {
+                    finish();
+                    startActivity(new Intent(this, F2Section02Activity.class).putExtra("day", DAY));
                 }
 
             } else {
@@ -613,6 +610,7 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa11e.isChecked() ? "5"
                 : bi.pofpa11f.isChecked() ? "6"
                 : bi.pofpa11g.isChecked() ? "7"
+                : bi.pofpa11h.isChecked() ? "8"
                 : bi.pofpa1196.isChecked() ? "96"
                 : "0");
         f02.put("pofpa1196x", bi.pofpa1196x.getText().toString());
@@ -621,6 +619,16 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa12b.isChecked() ? "2"
                 : "0");
         f02.put("pofpa12ax", bi.pofpa12ax.getText().toString());
+
+        f02.put("pofpa121a", bi.pofpa121a.isChecked() ? "1" : "0");
+        f02.put("pofpa121b", bi.pofpa121b.isChecked() ? "2" : "0");
+        f02.put("pofpa121c", bi.pofpa121c.isChecked() ? "3" : "0");
+        f02.put("pofpa121d", bi.pofpa121d.isChecked() ? "4" : "0");
+        f02.put("pofpa121e", bi.pofpa121e.isChecked() ? "5" : "0");
+        f02.put("pofpa121f", bi.pofpa121f.isChecked() ? "6" : "0");
+        f02.put("pofpa121g", bi.pofpa121g.isChecked() ? "7" : "0");
+        f02.put("pofpa12196", bi.pofpa12196.isChecked() ? "96" : "0");
+        f02.put("pofpa12196x", bi.pofpa12196x.getText().toString());
 
         f02.put("pofpa13", bi.pofpa13.getText().toString());
 
@@ -675,12 +683,12 @@ public class F2Section01Activity extends AppCompatActivity {
 
         f02.put("pofpa17", bi.pofpa17.getText().toString());
 
-        f02.put("pofpa18", bi.pofpa18a.isChecked() ? "1"
+       /* f02.put("pofpa18", bi.pofpa18a.isChecked() ? "1"
                 : bi.pofpa18b.isChecked() ? "2"
                 : bi.pofpa18c.isChecked() ? "3"
                 : bi.pofpa18d.isChecked() ? "4"
                 : bi.pofpa18e.isChecked() ? "5"
-                : "0");
+                : "0");*/
 
         f02.put("pofpa19", bi.pofpa19a.isChecked() ? "1"
                 : bi.pofpa19b.isChecked() ? "2"

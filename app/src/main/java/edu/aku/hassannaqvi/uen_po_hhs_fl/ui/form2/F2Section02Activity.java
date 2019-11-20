@@ -162,6 +162,13 @@ public class F2Section02Activity extends AppCompatActivity {
                 : bi.pofpb08c.isChecked() ? "3"
                 : "0");
 
+        f02.put("pofpb09", bi.pofpb09a.isChecked() ? "1"
+                : bi.pofpb09b.isChecked() ? "2"
+                : bi.pofpb09c.isChecked() ? "3"
+                : bi.pofpb09d.isChecked() ? "4"
+                : bi.pofpb09e.isChecked() ? "5"
+                : "0");
+
         MainApp.fc.setsB(String.valueOf(f02));
     }
 
@@ -170,11 +177,11 @@ public class F2Section02Activity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.f2Section02))
             return false;
 
-        if (bi.pofpb02b.getVisibility() == View.VISIBLE) {
-            if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) >= 92 && bi.pofpb03a.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
-            } else if (Integer.parseInt(bi.pofpb02b.getText().toString().trim()) < 92 && bi.pofpb03b.isChecked()) {
-                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb02b, "please check below question!!");
+        if (bi.pofpb05b.getVisibility() == View.VISIBLE) {
+            if (Integer.parseInt(bi.pofpb05b.getText().toString().trim()) >= 92 && bi.pofpb06a.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb05b, "please check below question!!");
+            } else if (Integer.parseInt(bi.pofpb05b.getText().toString().trim()) < 92 && bi.pofpb06b.isChecked()) {
+                return ValidatorClass.EmptyCustomeTextBox(this, bi.pofpb05b, "please check below question!!");
             }
         }
 
