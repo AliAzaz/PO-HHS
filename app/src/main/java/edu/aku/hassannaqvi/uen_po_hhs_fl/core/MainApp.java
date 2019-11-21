@@ -41,14 +41,14 @@ public class MainApp extends Application {
     public static final String _IP = "43.245.131.159"; // Test PHP server*/
 
     /*VCOE1 LIVE SERVER*/
-   /* public static final String _IP = "vcoe1.aku.edu"; // .Net server
+    public static final String _IP = "vcoe1.aku.edu"; // .Net server
     public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "https://" + MainApp._IP + "/pulseox/api/";// .VOC server*/
+    public static final String _HOST_URL = "https://" + MainApp._IP + "/pulseox/api/";// .VOC server
 
     /*F38158 TEST SERVER*/
-    public static final String _IP = "f38158";// .TEST server
+/*    public static final String _IP = "f38158";// .TEST server
     public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";// .TEST server;
+    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/po/api/";// .TEST server;*/
 
 
     public static final String _UPDATE_URL = "https://" + MainApp._IP + "/pulseox/app/app-debug.apk";
