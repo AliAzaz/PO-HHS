@@ -135,17 +135,19 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         ButterKnife.bind(this);
 
         try {
+            String packageName = getApplicationContext().getPackageName();
+
             long installedOn = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.uen_po_hhs_fl", 0)
+                    .getPackageInfo(packageName, 0)
                     .lastUpdateTime;
             MainApp.versionCode = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.uen_po_hhs_fl", 0)
+                    .getPackageInfo(packageName, 0)
                     .versionCode;
             MainApp.versionName = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.uen_po_hhs_fl", 0)
+                    .getPackageInfo(packageName, 0)
                     .versionName;
             txtinstalldate.setText("Ver. " + MainApp.versionName + "." + MainApp.versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
         } catch (PackageManager.NameNotFoundException e) {
