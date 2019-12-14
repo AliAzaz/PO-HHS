@@ -883,6 +883,13 @@
                                 android:text="@string/pofi14i" />
 
                             <CheckBox
+                                android:id="@+id/pofi14j"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofi14i" />
+
+                            <CheckBox
                                 android:id="@+id/pofi1496"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
