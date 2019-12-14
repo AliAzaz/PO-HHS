@@ -816,12 +816,12 @@
     <string name="pofpa14a"> ها </string>
     <string name="pofpa14b"> نه </string>
 
-    <string name="pofpa15"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
+    <string name="pofpa15"> ٻار ڪهڙو علاج حاصل ڪيو ؟ </string>
     <string name="pofpa1500"> دوا بابت تفصيل </string>
     <string name="pofpa151a"> دوا جو نالو </string>
     <string name="pofpa151b"> ڪيترا دفعا ڏينهن ۾ </string>
     <string name="pofpa151c"> وزن: </string>
-    <string name="pofpa151d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa151d"> Route of administration (Oral/IV/Nasal) </string>
     <string name="pofpa151da"> وات ذريعي </string>
     <string name="pofpa151db"> رڳ ذريعي </string>
     <string name="pofpa152"> آڪسيجن ٿيراپي </string>
@@ -831,12 +831,12 @@
     <string name="pofpa161a"> دوا جو نالو </string>
     <string name="pofpa161b"> ڪيترا دفعا ڏينهن ۾ </string>
     <string name="pofpa161c"> وزن: </string>
-    <string name="pofpa161d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa161d"> Route of administration (Oral/IV/Nasal) </string>
     <string name="pofpa161da"> وات ذريعي </string>
     <string name="pofpa161db"> رڳ ذريعي </string>
     <string name="pofpa162"> آڪسيجن ٿيراپي </string>
 
-    <string name="pofpa17"> ٻار گھر ۾ ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
+    <string name="pofpa17"> ٻار ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
 
     <!--<string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
     <string name="pofpa18a"> بلڪل ٺيڪ </string>
