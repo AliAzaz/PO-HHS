@@ -812,6 +812,7 @@
     <string name="pofpa12196"> ٻيو ڪو وضاحت ڪريو </string>
 
     <string name="pofpa13"> ٻار اسپتال ۾ ڪيترا ڏينهن رهيو ؟ </string>
+    <string name="pofpa1301"> اڃا تائين داخل آهي ؟ </string>
 
     <string name="pofpa14"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون ؟ </string>
     <string name="pofpa14a"> ها </string>
@@ -825,6 +826,7 @@
     <string name="pofpa151d"> Route of administration (Oral/IV/Nasal) </string>
     <string name="pofpa151da"> وات ذريعي </string>
     <string name="pofpa151db"> رڳ ذريعي </string>
+    <string name="pofpa151dc"> نڪ ذريعي </string>
     <string name="pofpa152"> آڪسيجن ٿيراپي </string>
     <string name="pofpa1597"> لاڳو نه ٿو ٿئ </string>
 
@@ -835,7 +837,9 @@
     <string name="pofpa161d"> Route of administration (Oral/IV/Nasal) </string>
     <string name="pofpa161da"> وات ذريعي </string>
     <string name="pofpa161db"> رڳ ذريعي </string>
+    <string name="pofpa161dc"> نڪ ذريعي </string>
     <string name="pofpa162"> آڪسيجن ٿيراپي </string>
+    <string name="pofpa1697"> لاڳو نه ٿو ٿئ </string>
 
     <string name="pofpa17"> ٻار ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
 
