@@ -741,16 +741,25 @@
                                 app:mask="##"
                                 app:maxValue="14"
                                 app:minValue="1"
+                                android:text='@{pofpa1301.checked? pofpa13.getText.toString : "" }'
+                                android:visibility='@{pofpa1301.checked? View.GONE : View.VISIBLE}'
                                 app:type="range" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <!--<com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pofpa1301"
                                 style="@style/EditText_number"
                                 android:hint="@string/pofpa1301"
                                 app:mask="##"
                                 app:maxValue="14"
                                 app:minValue="1"
-                                app:type="range" />
+                                app:type="range" />-->
+
+                            <CheckBox
+                                android:id="@+id/pofpa1301"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofpa1301" />
 
                         </LinearLayout>
 

@@ -437,6 +437,16 @@ public class F2Section01Activity extends AppCompatActivity {
             }
         });
 
+        /*bi.te03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (bi.te03b.isChecked()) {
+                    ClearClass.ClearAllFields(bi.te04sos, null);
+                }
+            }
+        });*/
+
     }
 
     private void addViewInPof15() {
@@ -631,7 +641,7 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa12196x", bi.pofpa12196x.getText().toString());
 
         f02.put("pofpa13", bi.pofpa13.getText().toString());
-        f02.put("pofpa1301", bi.pofpa1301.getText().toString());
+        f02.put("pofpa1301", bi.pofpa1301.isChecked() ? "1" : "0");
 
         f02.put("pofpa14", bi.pofpa14a.isChecked() ? "1"
                 : bi.pofpa14b.isChecked() ? "2"
