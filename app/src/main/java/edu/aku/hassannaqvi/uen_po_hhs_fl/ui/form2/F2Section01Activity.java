@@ -437,6 +437,16 @@ public class F2Section01Activity extends AppCompatActivity {
             }
         });
 
+        /*bi.te03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (bi.te03b.isChecked()) {
+                    ClearClass.ClearAllFields(bi.te04sos, null);
+                }
+            }
+        });*/
+
     }
 
     private void addViewInPof15() {
@@ -631,6 +641,7 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa12196x", bi.pofpa12196x.getText().toString());
 
         f02.put("pofpa13", bi.pofpa13.getText().toString());
+        f02.put("pofpa1301", bi.pofpa1301.isChecked() ? "1" : "0");
 
         f02.put("pofpa14", bi.pofpa14a.isChecked() ? "1"
                 : bi.pofpa14b.isChecked() ? "2"
@@ -641,6 +652,7 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa15101c", bi.pofpa151c.getText().toString());
         f02.put("pofpa15101d", bi.pofpa151da.isChecked() ? "1"
                 : bi.pofpa151db.isChecked() ? "2"
+                : bi.pofpa151dc.isChecked() ? "3"
                 : "0");
         f02.put("pofpa15201", bi.pofpa152.isChecked() ? "1" : "0");
         f02.put("pofpa150197", bi.pofpa1597.isChecked() ? "97" : "0");
@@ -653,8 +665,10 @@ public class F2Section01Activity extends AppCompatActivity {
             f02.put("pofpa151" + String.format("%02d", counter15) + "c", pofpa15Binding.pofpa151c.getText().toString());
             f02.put("pofpa151" + String.format("%02d", counter15) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
                     : pofpa15Binding.pofpa151db.isChecked() ? "2"
+                    : pofpa15Binding.pofpa151dc.isChecked() ? "3"
                     : "0");
             f02.put("pofpa152" + String.format("%02d", counter15), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
+            f02.put("pofpa1597" + String.format("%02d", counter15), pofpa15Binding.pofpa1597.isChecked() ? "2" : "0");
 
             counter15++;
         }
@@ -664,8 +678,10 @@ public class F2Section01Activity extends AppCompatActivity {
         f02.put("pofpa16101c", bi.pofpa161c.getText().toString());
         f02.put("pofpa16101d", bi.pofpa161da.isChecked() ? "1"
                 : bi.pofpa161db.isChecked() ? "2"
+                : bi.pofpa161dc.isChecked() ? "3"
                 : "0");
         f02.put("pofpa16201", bi.pofpa162.isChecked() ? "1" : "0");
+        f02.put("pofpa16202", bi.pofpa1697.isChecked() ? "2" : "0");
 
         int counter16 = 2;
         for (View view : pofpa16List) {
@@ -675,8 +691,10 @@ public class F2Section01Activity extends AppCompatActivity {
             f02.put("pofpa161" + String.format("%02d", counter16) + "c", pofpa15Binding.pofpa151c.getText().toString());
             f02.put("pofpa161" + String.format("%02d", counter16) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
                     : pofpa15Binding.pofpa151db.isChecked() ? "2"
+                    : pofpa15Binding.pofpa151dc.isChecked() ? "3"
                     : "0");
             f02.put("pofpa162" + String.format("%02d", counter16), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
+            f02.put("pofpa1697" + String.format("%02d", counter16), pofpa15Binding.pofpa1597.isChecked() ? "2" : "0");
 
             counter16++;
         }
@@ -726,8 +744,10 @@ public class F2Section01Activity extends AppCompatActivity {
             f02.put("pofpa231" + String.format("%02d", counter23) + "c", pofpa15Binding.pofpa151c.getText().toString());
             f02.put("pofpa231" + String.format("%02d", counter23) + "d", pofpa15Binding.pofpa151da.isChecked() ? "1"
                     : pofpa15Binding.pofpa151db.isChecked() ? "2"
+                    : pofpa15Binding.pofpa151dc.isChecked() ? "3"
                     : "0");
             f02.put("pofpa232" + String.format("%02d", counter23), pofpa15Binding.pofpa152.isChecked() ? "1" : "0");
+            f02.put("pofpa2397" + String.format("%02d", counter23), pofpa15Binding.pofpa1597.isChecked() ? "2" : "0");
 
             counter23++;
         }

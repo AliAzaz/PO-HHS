@@ -152,6 +152,14 @@
                             android:layout_weight="1"
                             android:text="@string/pofpa151db" />
 
+                        <RadioButton
+                            android:id="@+id/pofpa151dc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pofpa151dc" />
+
                     </RadioGroup>
 
                 </LinearLayout>
@@ -163,6 +171,14 @@
                     android:layout_marginBottom="1dp"
                     android:tag="-1"
                     android:text="@string/pofpa152" />
+
+                <CheckBox
+                    android:id="@+id/pofpa1597"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:tag="-1"
+                    android:text="@string/pofpa1597" />
 
             </LinearLayout>
 

@@ -323,8 +323,8 @@
                         style="@style/EditText_number"
                         android:hint="%"
                         app:mask="###"
-                        app:maxValue="105"
-                        app:minValue="80"
+                        app:maxValue="100"
+                        app:minValue="40"
                         app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -332,8 +332,8 @@
                         style="@style/EditText_number"
                         android:hint="%"
                         app:mask="###"
-                        app:maxValue="105"
-                        app:minValue="80"
+                        app:maxValue="100"
+                        app:minValue="40"
                         app:type="range" />
 
                     <!--Skip for Control Group (23-Sep-19, Hassan Bhai)-->

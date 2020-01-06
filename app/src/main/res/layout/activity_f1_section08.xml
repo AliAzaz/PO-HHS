@@ -78,7 +78,7 @@
                         style="@style/i_textview"
                         android:text="@string/pocfh02" />
 
-                    <!--<com.edittextpicker.aliazaz.EditTextPicker
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh02"
                         style="@style/EditText_number"
                         android:hint="###.#"
@@ -87,9 +87,9 @@
                         app:maxValue="140.0"
                         app:minValue="015.0"
                         app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                        app:type="range" />-->
+                        app:type="range" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
+                    <!--<com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/pocfh02"
                         style="@style/EditText_number"
                         android:hint="###"
@@ -97,7 +97,7 @@
                         app:mask="###"
                         app:maxValue="140"
                         app:minValue="15"
-                        app:type="range" />
+                        app:type="range" />-->
 
                 </LinearLayout>
 

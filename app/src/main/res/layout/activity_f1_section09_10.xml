@@ -300,8 +300,9 @@
 
                         <EditText
                             android:id="@+id/pocfj02ax"
-                            style="@style/EditTextAlphaNumeric"
+                            style="@style/textInput"
                             android:hint="@string/specify"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.,"
                             android:tag="pocfj02a"
                             android:text='@{pocfj02a.checked? pocfj02ax.getText.toString : "" }'
                             android:visibility='@{pocfj02a.checked? View.VISIBLE : View.GONE}' />

@@ -376,6 +376,7 @@ public class F3Section01Activity extends AppCompatActivity {
         form03_01.put("pofi14g", bi.pofi14g.isChecked() ? "7" : "0");
         form03_01.put("pofi14h", bi.pofi14h.isChecked() ? "8" : "0");
         form03_01.put("pofi14i", bi.pofi14i.isChecked() ? "9" : "0");
+        form03_01.put("pofi14j", bi.pofi14j.isChecked() ? "10" : "0");
         form03_01.put("pofi1496", bi.pofi1496.isChecked() ? "96" : "0");
         form03_01.put("pofi1496x", bi.pofi1496x.getText().toString());
 

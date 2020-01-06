@@ -741,7 +741,25 @@
                                 app:mask="##"
                                 app:maxValue="14"
                                 app:minValue="1"
+                                android:text='@{pofpa1301.checked? pofpa13.getText.toString : "" }'
+                                android:visibility='@{pofpa1301.checked? View.GONE : View.VISIBLE}'
                                 app:type="range" />
+
+                            <!--<com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/pofpa1301"
+                                style="@style/EditText_number"
+                                android:hint="@string/pofpa1301"
+                                app:mask="##"
+                                app:maxValue="14"
+                                app:minValue="1"
+                                app:type="range" />-->
+
+                            <CheckBox
+                                android:id="@+id/pofpa1301"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/pofpa1301" />
 
                         </LinearLayout>
 
@@ -916,6 +934,14 @@
                                             android:layout_weight="1"
                                             android:text="@string/pofpa151db" />
 
+                                        <RadioButton
+                                            android:id="@+id/pofpa151dc"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="1dp"
+                                            android:layout_weight="1"
+                                            android:text="@string/pofpa151dc" />
+
                                     </RadioGroup>
 
                                 </LinearLayout>
@@ -1076,6 +1102,14 @@
                                             android:layout_weight="1"
                                             android:text="@string/pofpa161db" />
 
+                                        <RadioButton
+                                            android:id="@+id/pofpa161dc"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="1dp"
+                                            android:layout_weight="1"
+                                            android:text="@string/pofpa161dc" />
+
                                     </RadioGroup>
 
                                 </LinearLayout>
@@ -1087,6 +1121,14 @@
                                     android:layout_marginBottom="1dp"
                                     android:tag="-1"
                                     android:text="@string/pofpa162" />
+
+                                <CheckBox
+                                    android:id="@+id/pofpa1697"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="1dp"
+                                    android:tag="-1"
+                                    android:text="@string/pofpa1697" />
 
                             </LinearLayout>
 

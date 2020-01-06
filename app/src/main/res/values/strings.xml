@@ -746,6 +746,7 @@
     <string name="pofi14g"> ٻار جي پيءُ جو تعاون نه هجڻ ڪري </string>
     <string name="pofi14h"> سرڪاري صحت جي سهولتن تي ڀروسو نه هجڻ ڪري </string>
     <string name="pofi14i"> ريفرل واري سهولت گھڻو پري آهي </string>
+    <string name="pofi14j"> ٻار اڳ ۾ ئي علاج هيٺ آهي </string>
 
     <string name="pofi15"> وڌيڪ تفصيلي انٽرويو لاءِ راضي نامو وٺو ته جيئن (رفرل) قبول يا انڪار جي سببن جو تجزيو ڪري سگھجي. (جيڪڏهن راضي نامو مليو ته مهرباني ڪري وڌيڪ تفصيلي فارم ڀريو) </string>
     <string name="pofi15a"> اجازت نامو قبول ڪيو </string>
@@ -811,19 +812,21 @@
     <string name="pofpa12196"> ٻيو ڪو وضاحت ڪريو </string>
 
     <string name="pofpa13"> ٻار اسپتال ۾ ڪيترا ڏينهن رهيو ؟ </string>
+    <string name="pofpa1301"> اڃا تائين داخل آهي ؟ </string>
 
     <string name="pofpa14"> ڇا توهان کي لڳو ته اسپتال ۾ رهڻ واريون ڪوششون فائدي مند ثابت ٿيون ؟ </string>
     <string name="pofpa14a"> ها </string>
     <string name="pofpa14b"> نه </string>
 
-    <string name="pofpa15"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
+    <string name="pofpa15"> ٻار ڪهڙو علاج حاصل ڪيو ؟ </string>
     <string name="pofpa1500"> دوا بابت تفصيل </string>
     <string name="pofpa151a"> دوا جو نالو </string>
     <string name="pofpa151b"> ڪيترا دفعا ڏينهن ۾ </string>
     <string name="pofpa151c"> وزن: </string>
-    <string name="pofpa151d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa151d"> Route of administration (Oral/IV/Nasal) </string>
     <string name="pofpa151da"> وات ذريعي </string>
     <string name="pofpa151db"> رڳ ذريعي </string>
+    <string name="pofpa151dc"> نڪ ذريعي </string>
     <string name="pofpa152"> آڪسيجن ٿيراپي </string>
     <string name="pofpa1597"> لاڳو نه ٿو ٿئ </string>
 
@@ -831,12 +834,14 @@
     <string name="pofpa161a"> دوا جو نالو </string>
     <string name="pofpa161b"> ڪيترا دفعا ڏينهن ۾ </string>
     <string name="pofpa161c"> وزن: </string>
-    <string name="pofpa161d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa161d"> Route of administration (Oral/IV/Nasal) </string>
     <string name="pofpa161da"> وات ذريعي </string>
     <string name="pofpa161db"> رڳ ذريعي </string>
+    <string name="pofpa161dc"> نڪ ذريعي </string>
     <string name="pofpa162"> آڪسيجن ٿيراپي </string>
+    <string name="pofpa1697"> لاڳو نه ٿو ٿئ </string>
 
-    <string name="pofpa17"> ٻار گھر ۾ ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
+    <string name="pofpa17"> ٻار ڪيترا ڏينهن علاج حاصل ڪيو ؟ </string>
 
     <!--<string name="pofpa18"> ٻار جي موجوده حالت ؟ </string>
     <string name="pofpa18a"> بلڪل ٺيڪ </string>
