@@ -681,7 +681,8 @@ public class F2Section01Activity extends AppCompatActivity {
                 : bi.pofpa161dc.isChecked() ? "3"
                 : "0");
         f02.put("pofpa16201", bi.pofpa162.isChecked() ? "1" : "0");
-        f02.put("pofpa16202", bi.pofpa1697.isChecked() ? "2" : "0");
+        //f02.put("pofpa16202", bi.pofpa1697.isChecked() ? "2" : "0");
+        f02.put("pofpa169701", bi.pofpa1697.isChecked() ? "2" : "0");
 
         int counter16 = 2;
         for (View view : pofpa16List) {
