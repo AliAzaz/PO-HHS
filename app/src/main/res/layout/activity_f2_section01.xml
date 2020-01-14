@@ -741,8 +741,8 @@
                                 app:mask="##"
                                 app:maxValue="14"
                                 app:minValue="1"
-                                android:text='@{pofpa1301.checked? pofpa13.getText.toString : "" }'
-                                android:visibility='@{pofpa1301.checked? View.GONE : View.VISIBLE}'
+                                android:text='@{pofpa1301.checked ?  "" : pofpa13.getText.toString}'
+                                android:visibility='@{pofpa1301.checked ? View.GONE : View.VISIBLE}'
                                 app:type="range" />
 
                             <!--<com.edittextpicker.aliazaz.EditTextPicker
@@ -759,6 +759,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
+                                android:tag="-1"
                                 android:text="@string/pofpa1301" />
 
                         </LinearLayout>
@@ -1003,6 +1004,7 @@
 
 
                                 <LinearLayout
+                                    android:id="@+id/llpofpa161a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10sp"
@@ -1026,6 +1028,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/llpofpa161c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
@@ -1047,6 +1050,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/llpofpa161b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
@@ -1072,6 +1076,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/llpofpa161d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical">

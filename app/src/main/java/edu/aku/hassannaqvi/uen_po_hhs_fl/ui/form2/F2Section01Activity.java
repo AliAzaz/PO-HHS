@@ -203,6 +203,39 @@ public class F2Section01Activity extends AppCompatActivity {
         });
 
 
+        bi.pofpa1697.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    ClearClass.ClearAllFields(bi.llpofpa161a, null);
+                    ClearClass.ClearAllFields(bi.llpofpa161b, null);
+                    ClearClass.ClearAllFields(bi.llpofpa161c, null);
+                    ClearClass.ClearAllFields(bi.llpofpa161d, null);
+                    bi.llpofpa161a.setVisibility(View.GONE);
+                    bi.llpofpa161b.setVisibility(View.GONE);
+                    bi.llpofpa161c.setVisibility(View.GONE);
+                    bi.llpofpa161d.setVisibility(View.GONE);
+                    bi.pofpa162.setChecked(false);
+                    bi.pofpa162.setVisibility(View.GONE);
+                    bi.pofpa16Items.removeAllViews();
+                    pofpa16List.clear();
+                    bi.pofpa16Items.setVisibility(View.GONE);
+                    bi.pofpa16Btn.setVisibility(View.GONE);
+                } else {
+                    bi.llpofpa161a.setVisibility(View.VISIBLE);
+                    bi.llpofpa161b.setVisibility(View.VISIBLE);
+                    bi.llpofpa161c.setVisibility(View.VISIBLE);
+                    bi.llpofpa161d.setVisibility(View.VISIBLE);
+                    bi.pofpa162.setChecked(false);
+                    bi.pofpa162.setVisibility(View.VISIBLE);
+                    bi.pofpa162.setTag("-1");
+                    bi.pofpa16Items.setVisibility(View.VISIBLE);
+                    bi.pofpa16Btn.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
         bi.pofpa19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
