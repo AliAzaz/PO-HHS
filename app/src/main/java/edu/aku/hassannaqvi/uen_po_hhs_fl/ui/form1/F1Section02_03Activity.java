@@ -29,7 +29,9 @@ public class F1Section02_03Activity extends AppCompatActivity {
         bi.setCallback(this);
         this.setTitle("Form 01 (Case Reporting Form)");
         setListeners();
+
     }
+
 
     private void setListeners() {
 
@@ -71,6 +73,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
 
     }
 
+
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -107,6 +110,7 @@ public class F1Section02_03Activity extends AppCompatActivity {
             return false;
         }
     }
+
 
     private void SaveDraft() throws JSONException {
 
